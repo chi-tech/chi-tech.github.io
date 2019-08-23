@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['partition_5fmethod_5ffrom_5fsurface',['PARTITION_METHOD_FROM_SURFACE',['../de/d9d/chi__npt__structs_8h_a0d3145f04a54a8660e1f3ee713965af6.html#a0d3145f04a54a8660e1f3ee713965af6',1,'chi_npt_structs.h']]],
+  ['partition_5fmethod_5fserial',['PARTITION_METHOD_SERIAL',['../de/d9d/chi__npt__structs_8h_aac7e524c72cd8d4c9627613bf013b959.html#aac7e524c72cd8d4c9627613bf013b959',1,'chi_npt_structs.h']]],
+  ['pdt_5fxsfile',['PDT_XSFILE',['../d8/d40/chi__physics__namespace_8h_aedbfd60d5ac00860b5ac81f7cec934b4.html#aedbfd60d5ac00860b5ac81f7cec934b4',1,'chi_physics_namespace.h']]],
+  ['pi',['PI',['../d6/d27/spherical__harmonics_8cpp_a598a3330b3c21701223ee0ca14316eca.html#a598a3330b3c21701223ee0ca14316eca',1,'spherical_harmonics.cpp']]],
+  ['pi3_5fbaud_5f1200',['PI3_BAUD_1200',['../d5/d43/chi__pi3_8h_a37c85d997531ebdc9350dea50207d5b8.html#a37c85d997531ebdc9350dea50207d5b8',1,'chi_pi3.h']]],
+  ['pi3_5fbaud_5f19200',['PI3_BAUD_19200',['../d5/d43/chi__pi3_8h_aa3f1ba8517764f5b629942062e194b00.html#aa3f1ba8517764f5b629942062e194b00',1,'chi_pi3.h']]],
+  ['pi3_5fbaud_5f2400',['PI3_BAUD_2400',['../d5/d43/chi__pi3_8h_a6645659eb633046b640ff248535e35f8.html#a6645659eb633046b640ff248535e35f8',1,'chi_pi3.h']]],
+  ['pi3_5fbaud_5f38400',['PI3_BAUD_38400',['../d5/d43/chi__pi3_8h_a982cd4fa70f97713d461791f224bf139.html#a982cd4fa70f97713d461791f224bf139',1,'chi_pi3.h']]],
+  ['pi3_5fbaud_5f4800',['PI3_BAUD_4800',['../d5/d43/chi__pi3_8h_aeebfb9a29e5900c473ade937d85f0784.html#aeebfb9a29e5900c473ade937d85f0784',1,'chi_pi3.h']]],
+  ['pi3_5fbaud_5f9600',['PI3_BAUD_9600',['../d5/d43/chi__pi3_8h_ae434586348d92fd7ade18cd0b5660dfe.html#ae434586348d92fd7ade18cd0b5660dfe',1,'chi_pi3.h']]],
+  ['pi3_5fhigh',['PI3_HIGH',['../d5/d43/chi__pi3_8h_a231d2edc52c73f327ff95ca81e525980.html#a231d2edc52c73f327ff95ca81e525980',1,'chi_pi3.h']]],
+  ['pi3_5flow',['PI3_LOW',['../d5/d43/chi__pi3_8h_a20a66ca2b54ca58e0074d0d1df9805b8.html#a20a66ca2b54ca58e0074d0d1df9805b8',1,'chi_pi3.h']]],
+  ['pi3_5fread',['PI3_READ',['../d5/d43/chi__pi3_8h_a5672c819194c9dac60a65bc552ed205e.html#a5672c819194c9dac60a65bc552ed205e',1,'chi_pi3.h']]],
+  ['pi3_5fwrite',['PI3_WRITE',['../d5/d43/chi__pi3_8h_a1182a7b0b6f084e82befcdb68d2d5e00.html#a1182a7b0b6f084e82befcdb68d2d5e00',1,'chi_pi3.h']]],
+  ['process_5fboundary',['PROCESS_BOUNDARY',['../da/d6e/chi__diffusion__bndry_8h_a1282ccdedfb6ec7426d68dd2ca8a43bd.html#a1282ccdedfb6ec7426d68dd2ca8a43bd',1,'chi_diffusion_bndry.h']]],
+  ['property_5fd_5fmap',['PROPERTY_D_MAP',['../d9/d4b/diffusion__solver_8h_af98e4bfa92fc01b08ecb298452a2e86b.html#af98e4bfa92fc01b08ecb298452a2e86b',1,'diffusion_solver.h']]],
+  ['property_5fq_5fmap',['PROPERTY_Q_MAP',['../d9/d4b/diffusion__solver_8h_ae85ab3cf8cdf335be19121741095e1c5.html#ae85ab3cf8cdf335be19121741095e1c5',1,'diffusion_solver.h']]],
+  ['pwlc',['PWLC',['../d9/d4b/diffusion__solver_8h_a6342ec1104ec69735ef79a50593776b2.html#a6342ec1104ec69735ef79a50593776b2',1,'diffusion_solver.h']]],
+  ['pwlc_5fgrps',['PWLC_GRPS',['../d9/d4b/diffusion__solver_8h_a1830e7c844c4d15fdebc1cf52d1d5df9.html#a1830e7c844c4d15fdebc1cf52d1d5df9',1,'diffusion_solver.h']]],
+  ['pwld_5fmip',['PWLD_MIP',['../d9/d4b/diffusion__solver_8h_a6d1f1b59344f5a0a68c5bcbf56e87034.html#a6d1f1b59344f5a0a68c5bcbf56e87034',1,'diffusion_solver.h']]],
+  ['pwld_5fmip_5fgagg',['PWLD_MIP_GAGG',['../d9/d4b/diffusion__solver_8h_aae93b41fe262f6756e705190ef843c8f.html#aae93b41fe262f6756e705190ef843c8f',1,'diffusion_solver.h']]],
+  ['pwld_5fmip_5fgrps',['PWLD_MIP_GRPS',['../d9/d4b/diffusion__solver_8h_ac2f12349d7a044866b0412c3def04ddf.html#ac2f12349d7a044866b0412c3def04ddf',1,'diffusion_solver.h']]]
+];
