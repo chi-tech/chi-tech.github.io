@@ -20,12 +20,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX","output/HTML-CSS"],
-});
-</script><script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -136,9 +130,9 @@ $(document).ready(function(){initNavTree('de/db1/class_c_h_i___m_a_t_h_a2750ddf1
       </table>
 </div><div class="memdoc">
 <p>This routine creates a test matrix of a strictly diagonally dominant matrix. The matrix has the following form: </p><p class="formulaDsp">
-\[ A= \begin{bmatrix} k_0+k_1 &amp; -k_1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\ -k_1 &amp; k_1+k_2 &amp; -k_2 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; -k_{n-1} &amp; k_{n-1}+k_n \end{bmatrix} \ b= \begin{bmatrix} 0 \\ 0 \\ \vdots \\ k_n \end{bmatrix} \]
+<img class="formulaDsp" alt="\[ A= \begin{bmatrix} k_0+k_1 &amp; -k_1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\ -k_1 &amp; k_1+k_2 &amp; -k_2 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; -k_{n-1} &amp; k_{n-1}+k_n \end{bmatrix} \ b= \begin{bmatrix} 0 \\ 0 \\ \vdots \\ k_n \end{bmatrix} \]" src="../../form_26.png"/>
 </p>
-<p> In this form, the \(k_n\) coefficients can either be formed from a linear representation (linear=true) or a piecewise constant function. For the linear case: where \( h=\frac{1}{size+1}\) the values \( k_i = 1+(i+0.5)h \) are assigned. For the non-linear case: \( t=(i+0.5)h \) and \( k(t) = 1 \) when \( 0\le t &lt; 0.5 \) and \( k(t)=K \) when \( 0.5\le t &lt; 1 \). For \( K=2,100, 1000 \). </p>
+<p> In this form, the <img class="formulaInl" alt="$k_n$" src="../../form_27.png"/> coefficients can either be formed from a linear representation (linear=true) or a piecewise constant function. For the linear case: where <img class="formulaInl" alt="$ h=\frac{1}{size+1}$" src="../../form_28.png"/> the values <img class="formulaInl" alt="$ k_i = 1+(i+0.5)h $" src="../../form_29.png"/> are assigned. For the non-linear case: <img class="formulaInl" alt="$ t=(i+0.5)h $" src="../../form_30.png"/> and <img class="formulaInl" alt="$ k(t) = 1 $" src="../../form_31.png"/> when <img class="formulaInl" alt="$ 0\le t &lt; 0.5 $" src="../../form_32.png"/> and <img class="formulaInl" alt="$ k(t)=K $" src="../../form_33.png"/> when <img class="formulaInl" alt="$ 0.5\le t &lt; 1 $" src="../../form_34.png"/>. For <img class="formulaInl" alt="$ K=2,100, 1000 $" src="../../form_35.png"/>. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/df0/chi__math__01__utility_8cpp_source.html#l00183">183</a> of file <a class="el" href="../../d7/df0/chi__math__01__utility_8cpp_source.html">chi_math_01_utility.cpp</a>.</p>
 

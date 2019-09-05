@@ -20,12 +20,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX","output/HTML-CSS"],
-});
-</script><script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -153,7 +147,7 @@ PROPERTY_Q_MAP<br />
  Followed by an integer, sets the property index of a material from where the solver will collect the volumetric source value.<br />
 <br />
 PROPERTY_SIGMAA_MAP<br />
- Followed by an integer, sets the property index of a material from where the solver will collect the absorbtion cross-section \( \sigma_a \).<br />
+ Followed by an integer, sets the property index of a material from where the solver will collect the absorbtion cross-section <img class="formulaInl" alt="$ \sigma_a $" src="../../form_7.png"/>.<br />
 <br />
 </p><div class="fragment"><div class="line"><a class="code" href="../../de/d15/group___lua_diffusion_ga5c6d2bdff1c9301cd13d0c5e9f22f763.html#ga5c6d2bdff1c9301cd13d0c5e9f22f763">chiDiffusionSetProperty</a>(solver,BOUNDARY_TYPE,2,DIFFUSION_DIRICHLET,1.0)</div></div><!-- fragment --> <h3>DiscretizationMethod</h3>
 <p>PWLC<br />
@@ -164,31 +158,31 @@ PROPERTY_SIGMAA_MAP<br />
 <br />
 </p><h3>BoundaryTypeIndex</h3>
 <p>DIFFUSION_REFLECTING Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_8.png"/>
 </p>
 <p><br />
 <br />
 DIFFUSION_DIRICHLET<br />
- Constant value boundary condition. Expects to be followed by a value \( f \) associated with \( \phi \). </p><p class="formulaDsp">
-\[ \phi = f \]
+ Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_9.png"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_10.png"/>. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_11.png"/>
 </p>
 <p><br />
 <br />
 DIFFUSION_NEUMANN<br />
- Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = f \]
+ Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_9.png"/> representing </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_12.png"/>
 </p>
 <p><br />
 <br />
 DIFFUSION_VACUUM<br />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_13.png"/>
 </p>
 <p><br />
 <br />
 DIFFUSION_ROBIN<br />
  Robin boundary condition of the form </p><p class="formulaDsp">
-\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
+<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_14.png"/>
 </p>
 <p><br />
 <br />

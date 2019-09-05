@@ -20,12 +20,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX","output/HTML-CSS"],
-});
-</script><script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -137,7 +131,7 @@ $(document).ready(function(){initNavTree('dc/d58/namespacechi__math_a46211d1897a
 <li>bin 8 = 1.0</li>
 <li>bin 9 = 1.0</li>
 </ul>
-<p>Supplying a random number between 0 and 1 should indicate sampling one of the bins 0,1,5 or 8. The most inefficient way to do this is to linearly loop through the cdf and check \( cdf_{i-1} \ge \theta &lt; cdf_i \). An optimized version of this sampling would be to perform a recursive block search which starts with a course view of the cdf and then gradually refines the view until the final linear search can be performed. </p>
+<p>Supplying a random number between 0 and 1 should indicate sampling one of the bins 0,1,5 or 8. The most inefficient way to do this is to linearly loop through the cdf and check <img class="formulaInl" alt="$ cdf_{i-1} \ge \theta &lt; cdf_i $" src="../../form_66.png"/>. An optimized version of this sampling would be to perform a recursive block search which starts with a course view of the cdf and then gradually refines the view until the final linear search can be performed. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d3b/cdfsampler_8cc_source.html#l00273">273</a> of file <a class="el" href="../../d5/d3b/cdfsampler_8cc_source.html">cdfsampler.cc</a>.</p>
 

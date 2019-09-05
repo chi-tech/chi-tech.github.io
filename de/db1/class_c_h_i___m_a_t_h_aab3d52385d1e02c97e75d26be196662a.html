@@ -20,12 +20,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX","output/HTML-CSS"],
-});
-</script><script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -138,10 +132,10 @@ $(document).ready(function(){initNavTree('de/db1/class_c_h_i___m_a_t_h_aab3d5238
 <li>Subs = 3, 506ms</li>
 <li>Subs = 2, 500ms</li>
 </ul>
-<p>What is the math behind this? For n amount of values, with no recursive subdivision there would be \(2(n-1)\approx 2n\) comparison operations. Now, with each interval, we divide the interval into \(x\) amount of sub-intervals which results in \(y\approx 2n/x\) sub-evaluations. Now suppose this happens recursively up to the point where there is less than or equal to \(x\) lookup values left, we will have the final linear lookup requiring \( x\) amount of lookups. Therefore, with level \(l=1,\cdots,L\), we get: </p><p class="formulaDsp">
-\[ y_{total}=\sum_{l=1}^L \biggr( \frac{2n}{x^l} \biggr) + x \]
+<p>What is the math behind this? For n amount of values, with no recursive subdivision there would be <img class="formulaInl" alt="$2(n-1)\approx 2n$" src="../../form_17.png"/> comparison operations. Now, with each interval, we divide the interval into <img class="formulaInl" alt="$x$" src="../../form_18.png"/> amount of sub-intervals which results in <img class="formulaInl" alt="$y\approx 2n/x$" src="../../form_19.png"/> sub-evaluations. Now suppose this happens recursively up to the point where there is less than or equal to <img class="formulaInl" alt="$x$" src="../../form_18.png"/> lookup values left, we will have the final linear lookup requiring <img class="formulaInl" alt="$ x$" src="../../form_20.png"/> amount of lookups. Therefore, with level <img class="formulaInl" alt="$l=1,\cdots,L$" src="../../form_21.png"/>, we get: </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ y_{total}=\sum_{l=1}^L \biggr( \frac{2n}{x^l} \biggr) + x \]" src="../../form_22.png"/>
 </p>
-<p> So, from this formula, we can see that the minimum efficiency is linearly determined by \(x\) and inversely by \(n\). However, another competing effect is preset. This formulation does not account for the effect of randomized interval hits. In other words, the probality of hitting the appropriate interval in each substep is \(\frac{1}{x}\) and in terms of this relation, the efficiency is inversely determined by \(x\). From numerical analysis, for \(n&gt;1000\) it can be shown that the probability effect is a much more accurate reflection of the behavior, especially taking into consideration that successive multiplication of the probabilities results in a small number.</p>
+<p> So, from this formula, we can see that the minimum efficiency is linearly determined by <img class="formulaInl" alt="$x$" src="../../form_18.png"/> and inversely by <img class="formulaInl" alt="$n$" src="../../form_23.png"/>. However, another competing effect is preset. This formulation does not account for the effect of randomized interval hits. In other words, the probality of hitting the appropriate interval in each substep is <img class="formulaInl" alt="$\frac{1}{x}$" src="../../form_24.png"/> and in terms of this relation, the efficiency is inversely determined by <img class="formulaInl" alt="$x$" src="../../form_18.png"/>. From numerical analysis, for <img class="formulaInl" alt="$n&gt;1000$" src="../../form_25.png"/> it can be shown that the probability effect is a much more accurate reflection of the behavior, especially taking into consideration that successive multiplication of the probabilities results in a small number.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Table indexColumn must be sorted in increasing order. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/df0/chi__math__01__utility_8cpp_source.html#l00036">36</a> of file <a class="el" href="../../d7/df0/chi__math__01__utility_8cpp_source.html">chi_math_01_utility.cpp</a>.</p>

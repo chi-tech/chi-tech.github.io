@@ -20,12 +20,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX","output/HTML-CSS"],
-});
-</script><script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -128,19 +122,19 @@ Data Fields</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Blanket object for doing repeated linear interpolations.</p>
-<p>When the Optimize routine is called, this object creates an array of indexer objects. Each indexer object contains pointers to values of the index column in the main matrix. In other words, let \( a_{i,1} = a_{1,1},...,a_{n,1} \) be the values of the index column in the main optimization matrix, then when the optimize routine is called, it creates \( x_i \biggr |_{a}^{b} = a_{a,1},...,a_{b,1} \) where \(i\) ranges over the number of intervals per level. Each indexer object has the option to procure another level of indexer. Such that the effective amount of search operations can be reduced.</p>
+<p>When the Optimize routine is called, this object creates an array of indexer objects. Each indexer object contains pointers to values of the index column in the main matrix. In other words, let <img class="formulaInl" alt="$ a_{i,1} = a_{1,1},...,a_{n,1} $" src="../../form_43.png"/> be the values of the index column in the main optimization matrix, then when the optimize routine is called, it creates <img class="formulaInl" alt="$ x_i \biggr |_{a}^{b} = a_{a,1},...,a_{b,1} $" src="../../form_44.png"/> where <img class="formulaInl" alt="$i$" src="../../form_45.png"/> ranges over the number of intervals per level. Each indexer object has the option to procure another level of indexer. Such that the effective amount of search operations can be reduced.</p>
 <h2>Efficiency</h2>
-<p>The efficiency is defined in the index value search. For an unoptimized search routine, the code needs to start from \(k=1\) through \(k=n-1\) and search for the index values that lay above and below the lookup value. Therefore, each time the function is called, \(n\) amount of comparison operations are performed at maximum. With this optimization, The code will first perform comparisons on the first level, for which the default amount of intervals \(x=10\), and therefore the first level will have \(n/10\) comparisons after which the code will run through the remainder n/10 indexes to find the value of interest. So for \(n&gt;&gt;\) large, and multiple levels \(M\), each level will have the following amount of search operations:</p>
+<p>The efficiency is defined in the index value search. For an unoptimized search routine, the code needs to start from <img class="formulaInl" alt="$k=1$" src="../../form_46.png"/> through <img class="formulaInl" alt="$k=n-1$" src="../../form_47.png"/> and search for the index values that lay above and below the lookup value. Therefore, each time the function is called, <img class="formulaInl" alt="$n$" src="../../form_23.png"/> amount of comparison operations are performed at maximum. With this optimization, The code will first perform comparisons on the first level, for which the default amount of intervals <img class="formulaInl" alt="$x=10$" src="../../form_48.png"/>, and therefore the first level will have <img class="formulaInl" alt="$n/10$" src="../../form_49.png"/> comparisons after which the code will run through the remainder n/10 indexes to find the value of interest. So for <img class="formulaInl" alt="$n&gt;&gt;$" src="../../form_50.png"/> large, and multiple levels <img class="formulaInl" alt="$M$" src="../../form_51.png"/>, each level will have the following amount of search operations:</p>
 <p class="formulaDsp">
-\[ n/10 + (n/10)/10 + ... + n/{10}^M = n \sum_{l=1}^{M} 1/{10}^l \]
+<img class="formulaDsp" alt="\[ n/10 + (n/10)/10 + ... + n/{10}^M = n \sum_{l=1}^{M} 1/{10}^l \]" src="../../form_52.png"/>
 </p>
 <p> And therefore, there is a limit to having the level approach:</p><ul>
-<li>\(x=10\), 0.111111 reduction</li>
-<li>\(x=20\), 0.0526 reduction</li>
-<li>\(x=30\), 0.0344 reduction</li>
-<li>\(x=100\), 0.0101 reduction</li>
-<li>\(x=1000\), 0.001001 reduction</li>
-<li>\(x=10^n\), \(1/{10}^n\) reduction </li>
+<li><img class="formulaInl" alt="$x=10$" src="../../form_48.png"/>, 0.111111 reduction</li>
+<li><img class="formulaInl" alt="$x=20$" src="../../form_53.png"/>, 0.0526 reduction</li>
+<li><img class="formulaInl" alt="$x=30$" src="../../form_54.png"/>, 0.0344 reduction</li>
+<li><img class="formulaInl" alt="$x=100$" src="../../form_55.png"/>, 0.0101 reduction</li>
+<li><img class="formulaInl" alt="$x=1000$" src="../../form_56.png"/>, 0.001001 reduction</li>
+<li><img class="formulaInl" alt="$x=10^n$" src="../../form_57.png"/>, <img class="formulaInl" alt="$1/{10}^n$" src="../../form_58.png"/> reduction </li>
 </ul>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/df8/chi__math__linear__interpolation_8h_source.html#l00047">47</a> of file <a class="el" href="../../d8/df8/chi__math__linear__interpolation_8h_source.html">chi_math_linear_interpolation.h</a>.</p>

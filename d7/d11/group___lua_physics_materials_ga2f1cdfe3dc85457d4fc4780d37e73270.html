@@ -20,12 +20,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX","output/HTML-CSS"],
-});
-</script><script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -151,18 +145,18 @@ Sets the property based on a single value. Requires a single value as additional
 FROM_ARRAY<br />
 Sets a property based on a Lua array indexed from 1 to N. Internally will be converted to 0 to N-1. This method can be used to set mutligroup cross-sections or sources. <br />
 SIMPLEXS0<br />
-Makes a simple material with no transfer matrix just \(\sigma_t \). Expects two values: <br />
+Makes a simple material with no transfer matrix just <img class="formulaInl" alt="$\sigma_t $" src="../../form_4.png"/>. Expects two values: <br />
 </p><ul>
-<li>int number of groups \(G \),</li>
-<li>float \(\sigma_t \). <h4>_</h4>
+<li>int number of groups <img class="formulaInl" alt="$G $" src="../../form_5.png"/>,</li>
+<li>float <img class="formulaInl" alt="$\sigma_t $" src="../../form_4.png"/>. <h4>_</h4>
 </li>
 </ul>
 <p>SIMPLEXS1<br />
 Makes a simple material with isotropic transfer matrix (L=0) and mostly down scattering but with a few of the last groups subject to up-scattering. Expects three values values: <br />
 </p><ul>
-<li>int number of groups ( \(G \)),</li>
-<li>float \(\sigma_t \),</li>
-<li>float scattering to total ratio ( \(c \)) <h4>_</h4>
+<li>int number of groups ( <img class="formulaInl" alt="$G $" src="../../form_5.png"/>),</li>
+<li>float <img class="formulaInl" alt="$\sigma_t $" src="../../form_4.png"/>,</li>
+<li>float scattering to total ratio ( <img class="formulaInl" alt="$c $" src="../../form_6.png"/>) <h4>_</h4>
 </li>
 </ul>
 <p>PDT_XSFILE<br />
