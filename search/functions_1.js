@@ -8,11 +8,11 @@ var searchData=
   ['broadcastcellsets',['BroadcastCellSets',['../d4/dc9/class_c_h_i___m_p_i_a01f09d389fd0add9ce6f77bd693c25b7.html#a01f09d389fd0add9ce6f77bd693c25b7',1,'CHI_MPI']]],
   ['broadcastnodes',['BroadcastNodes',['../d4/dc9/class_c_h_i___m_p_i_a92259ae94655dac5c6ff9576d52cac45.html#a92259ae94655dac5c6ff9576d52cac45',1,'CHI_MPI']]],
   ['broadcasttrifaces',['BroadcastTriFaces',['../d4/dc9/class_c_h_i___m_p_i_a55ea8900384eb2f0c78e0dbf80948bb6.html#a55ea8900384eb2f0c78e0dbf80948bb6',1,'CHI_MPI']]],
-  ['builddiscmomoperator',['BuildDiscMomOperator',['../df/d4f/class_n_p_t___g_r_o_u_p_s_e_t_a5f8b9761c1a04e08215696246718ba60.html#a5f8b9761c1a04e08215696246718ba60',1,'NPT_GROUPSET']]],
+  ['builddiscmomoperator',['BuildDiscMomOperator',['../df/d48/class_l_b_s___g_r_o_u_p_s_e_t_aad80929965c8422533e97cbf929e1aac.html#aad80929965c8422533e97cbf929e1aac',1,'LBS_GROUPSET']]],
   ['buildfixedspline',['BuildFixedSpline',['../d2/da0/class_c_h_i___m_a_t_h___s_p_l_i_n_e_a2b3ceeb1a7a60b9b71881284d33a2f3d.html#a2b3ceeb1a7a60b9b71881284d33a2f3d',1,'CHI_MATH_SPLINE']]],
   ['buildleftfixedspline',['BuildLeftFixedSpline',['../d2/da0/class_c_h_i___m_a_t_h___s_p_l_i_n_e_a229bfa402aec1c011b43614687c16fb8.html#a229bfa402aec1c011b43614687c16fb8',1,'CHI_MATH_SPLINE']]],
-  ['buildmomdiscoperator',['BuildMomDiscOperator',['../df/d4f/class_n_p_t___g_r_o_u_p_s_e_t_a521ec7819c463952ec447cb5a3135278.html#a521ec7819c463952ec447cb5a3135278',1,'NPT_GROUPSET']]],
+  ['buildmomdiscoperator',['BuildMomDiscOperator',['../df/d48/class_l_b_s___g_r_o_u_p_s_e_t_a9292d391483a4758bca1e6c7cf50cc83.html#a9292d391483a4758bca1e6c7cf50cc83',1,'LBS_GROUPSET']]],
   ['buildnaturalspline',['BuildNaturalSpline',['../d2/da0/class_c_h_i___m_a_t_h___s_p_l_i_n_e_a07f014880b8ed6e57262beeea34464af.html#a07f014880b8ed6e57262beeea34464af',1,'CHI_MATH_SPLINE']]],
   ['buildrightfixedspline',['BuildRightFixedSpline',['../d2/da0/class_c_h_i___m_a_t_h___s_p_l_i_n_e_a735b03c8ccc0bfaf3fe4169c719ae603.html#a735b03c8ccc0bfaf3fe4169c719ae603',1,'CHI_MATH_SPLINE']]],
-  ['buildsubsets',['BuildSubsets',['../df/d4f/class_n_p_t___g_r_o_u_p_s_e_t_a1765683063d9f5e6134fa784a98ba981.html#a1765683063d9f5e6134fa784a98ba981',1,'NPT_GROUPSET']]]
+  ['buildsubsets',['BuildSubsets',['../df/d48/class_l_b_s___g_r_o_u_p_s_e_t_acb534d15e6b8a27ad5cfe5d0e692d279.html#acb534d15e6b8a27ad5cfe5d0e692d279',1,'LBS_GROUPSET']]]
 ];

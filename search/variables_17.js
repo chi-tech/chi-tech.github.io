@@ -13,7 +13,7 @@ var searchData=
   ['xmin',['xmin',['../da/d7f/classchil_camera_object_a969f8dc1a2755e952c27ab520833728c.html#a969f8dc1a2755e952c27ab520833728c',1,'chilCameraObject::xmin()'],['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume_af0e11f3acf780a7290ce6be1f8e5fafa.html#af0e11f3acf780a7290ce6be1f8e5fafa',1,'chi_mesh::RPPLogicalVolume::xmin()'],['../d3/d8e/structchi__mesh_1_1_c_e_l_l___s_e_t_a60af5f3267fde065c3ef2ef017d28225.html#a60af5f3267fde065c3ef2ef017d28225',1,'chi_mesh::CELL_SET::xmin()']]],
   ['xn_5fwn',['xn_wn',['../d5/d5e/class_golub_fischer_a4f4e9eede67964c8cd810aa3c5ba92a4.html#a4f4e9eede67964c8cd810aa3c5ba92a4',1,'GolubFischer']]],
   ['xref',['xref',['../d6/d32/classchi__diffusion_1_1_solver_a76f92051696cc6f831ea486dd0e6c857.html#a76f92051696cc6f831ea486dd0e6c857',1,'chi_diffusion::Solver']]],
-  ['xs_5fid',['xs_id',['../d4/d1f/class_n_p_t___c_e_l_l_v_i_e_w___f_u_l_l_aaa4c88ce95c18a68b6bf2a9d4afe329a.html#aaa4c88ce95c18a68b6bf2a9d4afe329a',1,'NPT_CELLVIEW_FULL']]],
+  ['xs_5fid',['xs_id',['../db/d12/class_l_b_s___c_e_l_l_v_i_e_w___f_u_l_l_a48596c15929e2dd180a4b979de36f4c9.html#a48596c15929e2dd180a4b979de36f4c9',1,'LBS_CELLVIEW_FULL']]],
   ['xsize',['xSize',['../dc/d82/class_c_h_i___c_o_n_s_o_l_e_a1f50518fc8052ab921c92968dad627a2.html#a1f50518fc8052ab921c92968dad627a2',1,'CHI_CONSOLE']]],
   ['xy_5fpartition_5findices',['xy_partition_indices',['../d8/d7c/classchi__mesh_1_1_cell_a11cec3e31fd9a0b8a3b0c105bcaa241c.html#a11cec3e31fd9a0b8a3b0c105bcaa241c',1,'chi_mesh::Cell']]],
   ['xyz_5fpartition_5findices',['xyz_partition_indices',['../d8/d7c/classchi__mesh_1_1_cell_aa51051eb505b7f7bb7e0dba1a6bc7497.html#aa51051eb505b7f7bb7e0dba1a6bc7497',1,'chi_mesh::Cell']]]

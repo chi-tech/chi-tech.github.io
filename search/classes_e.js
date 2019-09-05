@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['qpoint_5fphitheta',['QPOINT_PHITHETA',['../d2/d02/struct_q_p_o_i_n_t___p_h_i_t_h_e_t_a.html',1,'']]],
-  ['qpointxy',['QPointXY',['../d1/dae/struct_q_point_x_y.html',1,'']]],
-  ['qpointxyz',['QPointXYZ',['../d5/d4a/struct_q_point_x_y_z.html',1,'']]]
+  ['randomnumbergenerator',['RandomNumberGenerator',['../de/d32/classchi__montecarlon_1_1_random_number_generator.html',1,'chi_montecarlon']]],
+  ['rcclogicalvolume',['RCCLogicalVolume',['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html',1,'chi_mesh']]],
+  ['region',['Region',['../d1/d9a/classchi__mesh_1_1_region.html',1,'chi_mesh']]],
+  ['residualsource',['ResidualSource',['../d7/d03/classchi__montecarlon_1_1_residual_source.html',1,'chi_montecarlon']]],
+  ['rpplogicalvolume',['RPPLogicalVolume',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html',1,'chi_mesh']]]
 ];

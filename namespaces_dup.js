@@ -9,6 +9,5 @@ var namespaces_dup =
     [ "chi_math", "dc/d58/namespacechi__math.html", null ],
     [ "chi_mesh", "d0/d81/namespacechi__mesh.html", "d0/d81/namespacechi__mesh" ],
     [ "chi_montecarlon", "d1/db5/namespacechi__montecarlon.html", null ],
-    [ "chi_physics", "d6/d5f/namespacechi__physics.html", null ],
-    [ "chiSurfaceMeshing", "d3/d7e/namespacechi_surface_meshing.html", null ]
+    [ "chi_physics", "d6/d5f/namespacechi__physics.html", null ]
 ];

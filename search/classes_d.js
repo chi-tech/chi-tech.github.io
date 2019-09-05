@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['particle',['Particle',['../d0/d40/structchi__montecarlon_1_1_particle.html',1,'chi_montecarlon']]],
-  ['polyface',['PolyFace',['../d4/ddb/structchi__mesh_1_1_poly_face.html',1,'chi_mesh']]],
-  ['polygonfeview',['PolygonFEView',['../d7/db8/class_polygon_f_e_view.html',1,'']]],
-  ['polygonfvview',['PolygonFVView',['../d4/dc6/class_polygon_f_v_view.html',1,'']]],
-  ['polyhedronfeview',['PolyhedronFEView',['../dd/da4/class_polyhedron_f_e_view.html',1,'']]]
+  ['qpoint_5fphitheta',['QPOINT_PHITHETA',['../d2/d02/struct_q_p_o_i_n_t___p_h_i_t_h_e_t_a.html',1,'']]],
+  ['qpointxy',['QPointXY',['../d1/dae/struct_q_point_x_y.html',1,'']]],
+  ['qpointxyz',['QPointXYZ',['../d5/d4a/struct_q_point_x_y_z.html',1,'']]]
 ];

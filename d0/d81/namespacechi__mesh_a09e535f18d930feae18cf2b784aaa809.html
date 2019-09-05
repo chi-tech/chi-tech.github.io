@@ -142,10 +142,23 @@ $(document).ready(function(){initNavTree('d0/d81/namespacechi__mesh_a09e535f18d9
       </table>
 </div><div class="memdoc">
 <p>Computes the intersection of a line with a plane.</p>
-<p>The first step of this algorithm is to compute v0 and v1. These are vectors from the plane's reference point to each of the line-points, respectively. We then take the dot-products of these vectors with the plane normals. We then say that the vectors have a positive sense if the dot-product is positive and a negative sense if the dot-product is negative. If the senses are not equal then the line intersects the plane.</p>
-<p>Since the face normal is a normalized vector the dot-product of v0 or v1 will give the projection of the relevant vector along the normal to the plane. We can use this projection to compute a weight associated with each vector. This also then allows us to compute the intersection point. </p>
+<p>The first step of this algorithm is to compute v0 and v1. These are vectors from the plane's reference point to each of the line-points, respectively. We then take the dot-products of these vectors with the plane normal. We then say that the vectors have a positive sense if the dot-product is positive and a negative sense if the dot-product is negative. If the senses are not equal then the line intersects the plane.</p>
+<p>Since the face normal is a normalized vector the dot-product of v0 or v1 will give the projection of the relevant vector along the normal to the plane. We can use this projection to compute a weight associated with each vector. This also then allows us to compute the intersection point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plane_normal</td><td>The normal associated with the plane </td></tr>
+    <tr><td class="paramname">plane_point</td><td>The reference point for the plane </td></tr>
+    <tr><td class="paramname">line_point_0</td><td>The line's initial point </td></tr>
+    <tr><td class="paramname">line_point_1</td><td>The line's destination point </td></tr>
+    <tr><td class="paramname">intersection_point</td><td>The point to be populated with the intersection point </td></tr>
+    <tr><td class="paramname">weights</td><td>The weights associated with this intersection</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the line intersects the plane and false otherwise.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d56/raytrace__utils_8cc_source.html#l00020">20</a> of file <a class="el" href="../../d6/d56/raytrace__utils_8cc_source.html">raytrace_utils.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d56/raytrace__utils_8cc_source.html#l00032">32</a> of file <a class="el" href="../../d6/d56/raytrace__utils_8cc_source.html">raytrace_utils.cc</a>.</p>
 
 </div>
 </div>

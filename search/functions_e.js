@@ -35,5 +35,6 @@ var searchData=
   ['pwld_5fb_5fpolyhedron_5fgagg',['PWLD_b_Polyhedron_GAGG',['../d6/d32/classchi__diffusion_1_1_solver_adcdf8e8052e4538f6cfb005056728857.html#adcdf8e8052e4538f6cfb005056728857',1,'chi_diffusion::Solver']]],
   ['pwld_5fb_5fslab',['PWLD_b_Slab',['../d6/d32/classchi__diffusion_1_1_solver_a5be6b70b501b8eca9eb21434c6a72561.html#a5be6b70b501b8eca9eb21434c6a72561',1,'chi_diffusion::Solver']]],
   ['pwld_5fb_5fslab_5fgagg',['PWLD_b_Slab_GAGG',['../d6/d32/classchi__diffusion_1_1_solver_af443e1065637e27b4e341215feb80fef.html#af443e1065637e27b4e341215feb80fef',1,'chi_diffusion::Solver']]],
+  ['pwldbuildsparsitypattern',['PWLDBuildSparsityPattern',['../d6/d32/classchi__diffusion_1_1_solver_a8bbb98d3fc3aa2d079f79c501972d0fd.html#a8bbb98d3fc3aa2d079f79c501972d0fd',1,'chi_diffusion::Solver']]],
   ['pwldinterpolate',['PWLDInterpolate',['../db/dd5/classchi__mesh_1_1_field_function_interpolation_volume_a8252bbdb151560269ed6dc02102d98c1.html#a8252bbdb151560269ed6dc02102d98c1',1,'chi_mesh::FieldFunctionInterpolationVolume']]]
 ];

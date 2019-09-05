@@ -2,7 +2,6 @@ var searchData=
 [
   ['b',['b',['../d6/d58/classchi__diffusion_1_1_boundary_robin_a613d6cd5448bf3db2095e6723a1f6b68.html#a613d6cd5448bf3db2095e6723a1f6b68',1,'chi_diffusion::BoundaryRobin::b()'],['../d6/d32/classchi__diffusion_1_1_solver_a03441a07ee0fc2548871885a134d2612.html#a03441a07ee0fc2548871885a134d2612',1,'chi_diffusion::Solver::b()']]],
   ['backward',['backward',['../da/d7f/classchil_camera_object_a6c825a8568c8055094f2b22554d633dc.html#a6c825a8568c8055094f2b22554d633dc',1,'chilCameraObject']]],
-  ['basesize',['baseSize',['../dd/da5/class_c_h_i___s_u_r_f_a_c_e_r_e_m_e_s_h_e_r_a5f0288885491295b70a7918981db5424.html#a5f0288885491295b70a7918981db5424',1,'CHI_SURFACEREMESHER']]],
   ['beta',['beta',['../d7/db8/class_polygon_f_e_view_a5ab4deba969ff90fb094229837d78b2c.html#a5ab4deba969ff90fb094229837d78b2c',1,'PolygonFEView::beta()'],['../d5/d5e/class_golub_fischer_aad502b85e7aba2c9a726a1614baba7af.html#aad502b85e7aba2c9a726a1614baba7af',1,'GolubFischer::beta()']]],
   ['bg',['bg',['../d6/d32/classchi__diffusion_1_1_solver_a6e223270f197b36af7de643f6b308885.html#a6e223270f197b36af7de643f6b308885',1,'chi_diffusion::Solver']]],
   ['binorm',['binorm',['../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice_ab1618061f0cf961b4ce05eda15e85942.html#ab1618061f0cf961b4ce05eda15e85942',1,'chi_mesh::FieldFunctionInterpolationSlice']]],
@@ -12,7 +11,7 @@ var searchData=
   ['boundary',['Boundary',['../db/dc8/classchi__mesh_1_1_boundary.html',1,'chi_mesh::Boundary'],['../d7/dae/classchi__diffusion_1_1_boundary.html',1,'chi_diffusion::Boundary'],['../db/dc8/classchi__mesh_1_1_boundary_a380663b55d7ad8e2cda17e83d8a69a30.html#a380663b55d7ad8e2cda17e83d8a69a30',1,'chi_mesh::Boundary::Boundary()']]],
   ['boundary_5fcell_5findices',['boundary_cell_indices',['../d3/d1c/classchi__mesh_1_1_mesh_continuum_a14217121baae72422059d050263b249c.html#a14217121baae72422059d050263b249c',1,'chi_mesh::MeshContinuum']]],
   ['boundary_5fdependencies',['boundary_dependencies',['../d3/d5e/classchi__mesh_1_1_sweep_management_1_1_f_l_u_d_s_a16243152bc9f9e801bfc73cfdb3d89b7.html#a16243152bc9f9e801bfc73cfdb3d89b7',1,'chi_mesh::SweepManagement::FLUDS']]],
-  ['boundary_5ftypes',['boundary_types',['../dc/d6d/class_c_h_i___n_p_t_r_a_n_s_p_o_r_t_a4856fe32e7dea7656571375ac6fd64e8.html#a4856fe32e7dea7656571375ac6fd64e8',1,'CHI_NPTRANSPORT']]],
+  ['boundary_5ftypes',['boundary_types',['../d9/db8/class_linear_boltzman_solver_aa5a629be4c324aa8aa4129b212c4058e.html#aa5a629be4c324aa8aa4129b212c4058e',1,'LinearBoltzmanSolver']]],
   ['boundary_5fvalue',['boundary_value',['../de/d2e/classchi__diffusion_1_1_boundary_dirichlet_a44694bc42156f28b97a92c6a0ea7b8ea.html#a44694bc42156f28b97a92c6a0ea7b8ea',1,'chi_diffusion::BoundaryDirichlet']]],
   ['boundarydirichlet',['BoundaryDirichlet',['../de/d2e/classchi__diffusion_1_1_boundary_dirichlet.html',1,'chi_diffusion::BoundaryDirichlet'],['../de/d2e/classchi__diffusion_1_1_boundary_dirichlet_abaf44d08e2972703abbab1563b28435e.html#abaf44d08e2972703abbab1563b28435e',1,'chi_diffusion::BoundaryDirichlet::BoundaryDirichlet()']]],
   ['boundaryreflecting',['BoundaryReflecting',['../d1/d0c/classchi__diffusion_1_1_boundary_reflecting.html',1,'chi_diffusion::BoundaryReflecting'],['../d1/d0c/classchi__diffusion_1_1_boundary_reflecting_a395c9e96099d8f9b2e9a78d465fb0783.html#a395c9e96099d8f9b2e9a78d465fb0783',1,'chi_diffusion::BoundaryReflecting::BoundaryReflecting()']]],
@@ -28,12 +27,12 @@ var searchData=
   ['buffermcp3008spi',['bufferMCP3008SPI',['../d4/d1c/class_c_h_i___p_i3_a7598973cb376d317713ead61ae1dce16.html#a7598973cb376d317713ead61ae1dce16',1,'CHI_PI3']]],
   ['bufferpos',['bufferPos',['../d1/d9d/class_m_c_p3008_s_p_i_a42c1c95e2e71a3f94a86c9d1826cd29a.html#a42c1c95e2e71a3f94a86c9d1826cd29a',1,'MCP3008SPI']]],
   ['bufseconds',['bufSeconds',['../da/df7/class_c_h_i___a_u_d_i_o_a995fae05ca8c456758c975f9ef75ba8d.html#a995fae05ca8c456758c975f9ef75ba8d',1,'CHI_AUDIO']]],
-  ['builddiscmomoperator',['BuildDiscMomOperator',['../df/d4f/class_n_p_t___g_r_o_u_p_s_e_t_a5f8b9761c1a04e08215696246718ba60.html#a5f8b9761c1a04e08215696246718ba60',1,'NPT_GROUPSET']]],
+  ['builddiscmomoperator',['BuildDiscMomOperator',['../df/d48/class_l_b_s___g_r_o_u_p_s_e_t_aad80929965c8422533e97cbf929e1aac.html#aad80929965c8422533e97cbf929e1aac',1,'LBS_GROUPSET']]],
   ['buildfixedspline',['BuildFixedSpline',['../d2/da0/class_c_h_i___m_a_t_h___s_p_l_i_n_e_a2b3ceeb1a7a60b9b71881284d33a2f3d.html#a2b3ceeb1a7a60b9b71881284d33a2f3d',1,'CHI_MATH_SPLINE']]],
   ['buildleftfixedspline',['BuildLeftFixedSpline',['../d2/da0/class_c_h_i___m_a_t_h___s_p_l_i_n_e_a229bfa402aec1c011b43614687c16fb8.html#a229bfa402aec1c011b43614687c16fb8',1,'CHI_MATH_SPLINE']]],
-  ['buildmomdiscoperator',['BuildMomDiscOperator',['../df/d4f/class_n_p_t___g_r_o_u_p_s_e_t_a521ec7819c463952ec447cb5a3135278.html#a521ec7819c463952ec447cb5a3135278',1,'NPT_GROUPSET']]],
+  ['buildmomdiscoperator',['BuildMomDiscOperator',['../df/d48/class_l_b_s___g_r_o_u_p_s_e_t_a9292d391483a4758bca1e6c7cf50cc83.html#a9292d391483a4758bca1e6c7cf50cc83',1,'LBS_GROUPSET']]],
   ['buildnaturalspline',['BuildNaturalSpline',['../d2/da0/class_c_h_i___m_a_t_h___s_p_l_i_n_e_a07f014880b8ed6e57262beeea34464af.html#a07f014880b8ed6e57262beeea34464af',1,'CHI_MATH_SPLINE']]],
   ['buildrightfixedspline',['BuildRightFixedSpline',['../d2/da0/class_c_h_i___m_a_t_h___s_p_l_i_n_e_a735b03c8ccc0bfaf3fe4169c719ae603.html#a735b03c8ccc0bfaf3fe4169c719ae603',1,'CHI_MATH_SPLINE']]],
-  ['buildsubsets',['BuildSubsets',['../df/d4f/class_n_p_t___g_r_o_u_p_s_e_t_a1765683063d9f5e6134fa784a98ba981.html#a1765683063d9f5e6134fa784a98ba981',1,'NPT_GROUPSET']]],
+  ['buildsubsets',['BuildSubsets',['../df/d48/class_l_b_s___g_r_o_u_p_s_e_t_acb534d15e6b8a27ad5cfe5d0e692d279.html#acb534d15e6b8a27ad5cfe5d0e692d279',1,'LBS_GROUPSET']]],
   ['b_20math',['B Math',['../d0/d4d/group___lua_math.html',1,'']]]
 ];

@@ -42,6 +42,7 @@ var classchi__diffusion_1_1_solver =
     [ "PWLD_b_Polyhedron_GAGG", "d6/d32/classchi__diffusion_1_1_solver_adcdf8e8052e4538f6cfb005056728857.html#adcdf8e8052e4538f6cfb005056728857", null ],
     [ "PWLD_b_Slab", "d6/d32/classchi__diffusion_1_1_solver_a5be6b70b501b8eca9eb21434c6a72561.html#a5be6b70b501b8eca9eb21434c6a72561", null ],
     [ "PWLD_b_Slab_GAGG", "d6/d32/classchi__diffusion_1_1_solver_af443e1065637e27b4e341215feb80fef.html#af443e1065637e27b4e341215feb80fef", null ],
+    [ "PWLDBuildSparsityPattern", "d6/d32/classchi__diffusion_1_1_solver_a8bbb98d3fc3aa2d079f79c501972d0fd.html#a8bbb98d3fc3aa2d079f79c501972d0fd", null ],
     [ "ReorderNodesPWLC", "d6/d32/classchi__diffusion_1_1_solver_a83f2fc4e4b5565aec2af617061d0d521.html#a83f2fc4e4b5565aec2af617061d0d521", null ],
     [ "ReorderNodesPWLD", "d6/d32/classchi__diffusion_1_1_solver_ac08236ca6507264499cab97b855bfd02.html#ac08236ca6507264499cab97b855bfd02", null ],
     [ "SpawnBorderCell", "d6/d32/classchi__diffusion_1_1_solver_a3a283aab85e5786e075d614071f10be8.html#a3a283aab85e5786e075d614071f10be8", null ],

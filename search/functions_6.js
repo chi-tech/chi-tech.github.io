@@ -36,7 +36,7 @@ var searchData=
   ['gettime',['GetTime',['../da/db3/class_c_h_i___t_i_m_e_r_ac70ed0c439e60f5bed0e84c21f133ff1.html#ac70ed0c439e60f5bed0e84c21f133ff1',1,'CHI_TIMER']]],
   ['getverbosity',['GetVerbosity',['../d2/df4/class_c_h_i___l_o_g_a5349b0d7fa6b237818714a39e7246cbd.html#a5349b0d7fa6b237818714a39e7246cbd',1,'CHI_LOG']]],
   ['getwords',['GetWords',['../da/d2e/namespace_c_h_i___l_i_b_a38801fd7e216b4b8e12b5c0d8b7383a4.html#a38801fd7e216b4b8e12b5c0d8b7383a4',1,'CHI_LIB']]],
-  ['gmres',['GMRES',['../dc/d6d/class_c_h_i___n_p_t_r_a_n_s_p_o_r_t_a4656c0f02cf5029bcf9b9a9e75cfd6c9.html#a4656c0f02cf5029bcf9b9a9e75cfd6c9',1,'CHI_NPTRANSPORT']]],
+  ['gmres',['GMRES',['../d9/db8/class_linear_boltzman_solver_a8dfa61dc0c02a8489bbeecac02958a3e.html#a8dfa61dc0c02a8489bbeecac02958a3e',1,'LinearBoltzmanSolver']]],
   ['gradshape_5fxy',['GradShape_xy',['../d7/db8/class_polygon_f_e_view_a88a3b63a56c7b3f31c9fb0b39d5a3c9e.html#a88a3b63a56c7b3f31c9fb0b39d5a3c9e',1,'PolygonFEView']]],
   ['gradshape_5fxyz',['GradShape_xyz',['../dd/da4/class_polyhedron_f_e_view_a23d9eaea32a70d3f64d64abaf94f73e1.html#a23d9eaea32a70d3f64d64abaf94f73e1',1,'PolyhedronFEView']]],
   ['gradvarphi_5fx',['GradVarphi_x',['../d4/d77/class_triangle_f_e_view_ad13667680c333b2ea42961ec989273c5.html#ad13667680c333b2ea42961ec989273c5',1,'TriangleFEView']]],
