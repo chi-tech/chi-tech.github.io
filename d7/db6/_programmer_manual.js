@@ -1,5 +1,15 @@
 var _programmer_manual =
 [
+    [ "Development  Cycle", "d7/db6/_programmer_manual.html#devman_sec0", [
+      [ "Package update cycle - Primary: August", "d7/db6/_programmer_manual.html#devman_sec0_1", null ],
+      [ "Development update cycle - Every 2 weeks", "d7/db6/_programmer_manual.html#devman_sec0_2", null ],
+      [ "Regression tests", "d7/db6/_programmer_manual.html#devman_sec0_4", null ],
+      [ "Code review criterion", "d7/db6/_programmer_manual.html#devman_sec0_5", null ]
+    ] ],
+    [ "Documentation quality", "d7/db6/_programmer_manual.html#devman_sec0_6", [
+      [ "Code annotation", "d7/db6/_programmer_manual.html#devman_sec0_7", null ],
+      [ "Technical documentation", "d7/db6/_programmer_manual.html#devman_sec0_8", null ]
+    ] ],
     [ "Adding code to the system", "dc/d4c/_dev_man_adding_code.html", [
       [ "So you want to add your own code", "dc/d4c/_dev_man_adding_code.html#devman0_sec0", [
         [ "Step 1 - Create your directory", "dc/d4c/_dev_man_adding_code.html#devman0_sec0_1", null ],
@@ -13,8 +23,8 @@ var _programmer_manual =
       [ "Coding conventions", "db/d7b/_dev_man_code_conventions.html#sec0", [
         [ "File names", "db/d7b/_dev_man_code_conventions.html#devman1_sec0_1", null ],
         [ "General code", "db/d7b/_dev_man_code_conventions.html#devman1_sec0_2", null ],
-        [ "Tabs and spaces", "db/d7b/_dev_man_code_conventions.html#devman1_sec0_3", null ],
-        [ "Constants", "db/d7b/_dev_man_code_conventions.html#devman1_sec0_4", null ],
+        [ "Tabs, spaces and braces", "db/d7b/_dev_man_code_conventions.html#devman1_sec0_3", null ],
+        [ "Constants and Enumerators", "db/d7b/_dev_man_code_conventions.html#devman1_sec0_4", null ],
         [ "Comments", "db/d7b/_dev_man_code_conventions.html#devman1_sec0_5", null ]
       ] ],
       [ "Header files", "db/d7b/_dev_man_code_conventions.html#devman1_sec1", [
@@ -37,5 +47,8 @@ var _programmer_manual =
         [ "Connecting to MPI", "d6/dfd/_dev_man_global_vars.html#devman2_sec0_4", null ],
         [ "Connecting to the parallel logging utility", "d6/dfd/_dev_man_global_vars.html#devman2_sec0_5", null ]
       ] ]
+    ] ],
+    [ "Adding Lua-input to the system", "d1/d86/_dev_man_adding_lua.html", [
+      [ "Adding Lua-input", "d1/d86/_dev_man_adding_lua.html#devman03_sec0", null ]
     ] ]
 ];

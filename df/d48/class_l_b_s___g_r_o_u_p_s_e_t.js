@@ -22,7 +22,7 @@ var class_l_b_s___g_r_o_u_p_s_e_t =
     [ "master_num_ang_subsets", "df/d48/class_l_b_s___g_r_o_u_p_s_e_t_ab7cb7247f8d8f1d787caf804bbde2690.html#ab7cb7247f8d8f1d787caf804bbde2690", null ],
     [ "master_num_grp_subsets", "df/d48/class_l_b_s___g_r_o_u_p_s_e_t_aec190705c276fbfceef43b2e6a618bec.html#aec190705c276fbfceef43b2e6a618bec", null ],
     [ "max_iterations", "df/d48/class_l_b_s___g_r_o_u_p_s_e_t_aa2402adec1a77d11ba63b4a464082ec5.html#aa2402adec1a77d11ba63b4a464082ec5", null ],
-    [ "quadrature", "df/d48/class_l_b_s___g_r_o_u_p_s_e_t_afda2de83472a2222bc7baca56515cebf.html#afda2de83472a2222bc7baca56515cebf", null ],
+    [ "quadrature", "df/d48/class_l_b_s___g_r_o_u_p_s_e_t_a4db94f8236939ee7a514d646fe30cdc8.html#a4db94f8236939ee7a514d646fe30cdc8", null ],
     [ "residual_tolerance", "df/d48/class_l_b_s___g_r_o_u_p_s_e_t_a274c214879a1029e160c57af73d739fe.html#a274c214879a1029e160c57af73d739fe", null ],
     [ "tgdsa_max_iters", "df/d48/class_l_b_s___g_r_o_u_p_s_e_t_ad6b93d3f743799418d1f2977fc5afbbc.html#ad6b93d3f743799418d1f2977fc5afbbc", null ],
     [ "tgdsa_solver", "df/d48/class_l_b_s___g_r_o_u_p_s_e_t_a627fb9e1ede2b4288f97b45e7d6e7db7.html#a627fb9e1ede2b4288f97b45e7d6e7db7", null ],

@@ -1,20 +1,12 @@
 var searchData=
 [
-  ['decompose2ddomain',['Decompose2DDomain',['../d2/dbb/namespace_c_h_i___d_o_m_d_e_c_o_m_p_a32d1ca45cebfda814e2401975a5c0e02.html#a32d1ca45cebfda814e2401975a5c0e02',1,'CHI_DOMDECOMP']]],
+  ['decompose2ddomain',['Decompose2DDomain',['../d0/d81/namespacechi__mesh_a09a1b5323c101137dd05c907c0556a37.html#a09a1b5323c101137dd05c907c0556a37',1,'chi_mesh']]],
   ['decomposesurfacemeshpxpy',['DecomposeSurfaceMeshPxPy',['../d0/d81/namespacechi__mesh_a2476700f984e701b1cdb6de573748b84.html#a2476700f984e701b1cdb6de573748b84',1,'chi_mesh']]],
   ['delaunaypatch',['DelaunayPatch',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch_a0555b95cb97dea9fa0977a06eaa8e1e3.html#a0555b95cb97dea9fa0977a06eaa8e1e3',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
-  ['deletedirectory',['DeleteDirectory',['../da/d2e/namespace_c_h_i___l_i_b_aa7100e88fbdba5c6f2c5a0002caaea78.html#aa7100e88fbdba5c6f2c5a0002caaea78',1,'CHI_LIB']]],
-  ['deletedirectorycontents',['DeleteDirectoryContents',['../da/d2e/namespace_c_h_i___l_i_b_a1a6e554bdfe12bf2b32c85768dcc7c3f.html#a1a6e554bdfe12bf2b32c85768dcc7c3f',1,'CHI_LIB']]],
-  ['derivative',['Derivative',['../d2/da0/class_c_h_i___m_a_t_h___s_p_l_i_n_e_a8659720eb3f61ce95bda47461d3bfdb2.html#a8659720eb3f61ce95bda47461d3bfdb2',1,'CHI_MATH_SPLINE']]],
   ['deserializecellinfo',['DeSerializeCellInfo',['../d3/d5e/classchi__mesh_1_1_sweep_management_1_1_f_l_u_d_s_af9e9596eaaad9c4cbb6e17098f1a5d13.html#af9e9596eaaad9c4cbb6e17098f1a5d13',1,'chi_mesh::SweepManagement::FLUDS']]],
-  ['destroyentries',['DestroyEntries',['../da/dd6/class_c_h_i___m_a_t_h___m_a_t_r_i_x_a6eef77158b8109491303df8bcf245764.html#a6eef77158b8109491303df8bcf245764',1,'CHI_MATH_MATRIX']]],
   ['det',['Det',['../d0/dec/structchi__mesh_1_1_matrix3x3_aeb57ad21857c8093807797c6e5baa6ce.html#aeb57ad21857c8093807797c6e5baa6ce',1,'chi_mesh::Matrix3x3']]],
   ['detj',['DetJ',['../d7/db8/class_polygon_f_e_view_aa523620743509871dcca7fa8770408f4.html#aa523620743509871dcca7fa8770408f4',1,'PolygonFEView::DetJ()'],['../d4/d77/class_triangle_f_e_view_ad1b07fbeda9ffeefd1ec48684d7f1b0e.html#ad1b07fbeda9ffeefd1ec48684d7f1b0e',1,'TriangleFEView::DetJ()']]],
-  ['disassembletgdsadeltaphivector',['DisAssembleTGDSADeltaPhiVector',['../d9/db8/class_linear_boltzman_solver_aaecece7cc790c58d1ddb0b25abb5ad9a.html#aaecece7cc790c58d1ddb0b25abb5ad9a',1,'LinearBoltzmanSolver']]],
-  ['disassemblevector',['DisAssembleVector',['../d9/db8/class_linear_boltzman_solver_a9a679f6bd0c30c06b70e5c9b7d18aff8.html#a9a679f6bd0c30c06b70e5c9b7d18aff8',1,'LinearBoltzmanSolver']]],
-  ['disassemblevectorlocaltolocal',['DisAssembleVectorLocalToLocal',['../d9/db8/class_linear_boltzman_solver_a23dd39774aeb9ce1c262c3ffae89fed1.html#a23dd39774aeb9ce1c262c3ffae89fed1',1,'LinearBoltzmanSolver']]],
-  ['disassemblewgdsadeltaphivector',['DisAssembleWGDSADeltaPhiVector',['../d9/db8/class_linear_boltzman_solver_a9519f7ddfcb5a9cee92f27111c1f1747.html#a9519f7ddfcb5a9cee92f27111c1f1747',1,'LinearBoltzmanSolver']]],
-  ['dlegendredx',['dLegendredx',['../d7/dd3/namespace_c_h_i___l_e_g_e_n_d_r_e___p_o_l_y_n_o_m_i_a_l_s_abdd0fefbe7fc972a361ef2dea13cbe86.html#abdd0fefbe7fc972a361ef2dea13cbe86',1,'CHI_LEGENDRE_POLYNOMIALS']]],
+  ['dlegendredx',['dLegendredx',['../dc/d58/namespacechi__math_a233da0ccc5c47afa5d1bf072babbe8dc.html#a233da0ccc5c47afa5d1bf072babbe8dc',1,'chi_math']]],
   ['dot',['Dot',['../da/d85/structchi__mesh_1_1_vector_a0d7439bd2fd1d4254473ea902aa8bb91.html#a0d7439bd2fd1d4254473ea902aa8bb91',1,'chi_mesh::Vector']]],
   ['dummystream',['DummyStream',['../d9/d4e/struct_dummy_stream_ad9fb8961b1f0ef004352759c58494747.html#ad9fb8961b1f0ef004352759c58494747',1,'DummyStream']]],
   ['dumptoscilab',['DumpToScilab',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch_a3427f65605ea305c5200f6bfae55722c.html#a3427f65605ea305c5200f6bfae55722c',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]]

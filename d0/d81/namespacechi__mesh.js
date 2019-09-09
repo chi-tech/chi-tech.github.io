@@ -4,7 +4,6 @@ var namespacechi__mesh =
     [ "BooleanLogicalVolume", "da/dca/classchi__mesh_1_1_boolean_logical_volume.html", "da/dca/classchi__mesh_1_1_boolean_logical_volume" ],
     [ "Boundary", "db/dc8/classchi__mesh_1_1_boundary.html", "db/dc8/classchi__mesh_1_1_boundary" ],
     [ "Cell", "d8/d7c/classchi__mesh_1_1_cell.html", "d8/d7c/classchi__mesh_1_1_cell" ],
-    [ "CELL_SET", "d3/d8e/structchi__mesh_1_1_c_e_l_l___s_e_t.html", "d3/d8e/structchi__mesh_1_1_c_e_l_l___s_e_t" ],
     [ "CellIndexMap", "dd/da7/structchi__mesh_1_1_cell_index_map.html", "dd/da7/structchi__mesh_1_1_cell_index_map" ],
     [ "CellPolygon", "dc/d11/classchi__mesh_1_1_cell_polygon.html", "dc/d11/classchi__mesh_1_1_cell_polygon" ],
     [ "CellPolyhedron", "d6/d71/classchi__mesh_1_1_cell_polyhedron.html", "d6/d71/classchi__mesh_1_1_cell_polyhedron" ],

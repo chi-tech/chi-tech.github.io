@@ -1,10 +1,10 @@
 var group___lua_region =
 [
-    [ "chiRegionAddLineBoundary", "df/dda/group___lua_region_ga38021490f4606ccd7a12e16e4c9492bf.html#ga38021490f4606ccd7a12e16e4c9492bf", null ],
-    [ "chiRegionAddSurfaceBoundary", "df/dda/group___lua_region_ga88d006b2cf5cf7021f9d0c64d30a156a.html#ga88d006b2cf5cf7021f9d0c64d30a156a", null ],
-    [ "chiRegionCreate", "df/dda/group___lua_region_ga12d91bac4cbde16ef605143f6437e806.html#ga12d91bac4cbde16ef605143f6437e806", null ],
-    [ "chiRegionExportMeshToObj", "df/dda/group___lua_region_gadf6f74ed713e24ef8c44516fc2a44772.html#gadf6f74ed713e24ef8c44516fc2a44772", null ],
-    [ "chiRegionExportMeshToPython", "df/dda/group___lua_region_gacfff400bd0a550f9febeabeec94fe788.html#gacfff400bd0a550f9febeabeec94fe788", null ],
-    [ "chiRegionExportMeshToVTK", "df/dda/group___lua_region_gab40753e530692db209d658df4e2ca09b.html#gab40753e530692db209d658df4e2ca09b", null ],
-    [ "chiRegionGetBoundarySurfaceMesh", "df/dda/group___lua_region_gae7fd7d25cb95a4a54be2742071e64658.html#gae7fd7d25cb95a4a54be2742071e64658", null ]
+    [ "chiRegionAddLineBoundary", "df/dda/group___lua_region_ga6ec0426adb51bd6d8956df8655823d9f.html#ga6ec0426adb51bd6d8956df8655823d9f", null ],
+    [ "chiRegionAddSurfaceBoundary", "df/dda/group___lua_region_ga893d680fbdbe760b270dc2eaa47d02db.html#ga893d680fbdbe760b270dc2eaa47d02db", null ],
+    [ "chiRegionCreate", "df/dda/group___lua_region_ga43a351b3c89be7a78be0fd2572fcda99.html#ga43a351b3c89be7a78be0fd2572fcda99", null ],
+    [ "chiRegionExportMeshToObj", "df/dda/group___lua_region_ga3d61784a8e14101485ffaa59297c5a8c.html#ga3d61784a8e14101485ffaa59297c5a8c", null ],
+    [ "chiRegionExportMeshToPython", "df/dda/group___lua_region_gab59275926eda99c5a06fb29b1b36c753.html#gab59275926eda99c5a06fb29b1b36c753", null ],
+    [ "chiRegionExportMeshToVTK", "df/dda/group___lua_region_ga82a0a331649e3a6083a9c3e0436cfbe5.html#ga82a0a331649e3a6083a9c3e0436cfbe5", null ],
+    [ "chiRegionGetBoundarySurfaceMesh", "df/dda/group___lua_region_gaa4935302b5aba138be3c9bfcf44c6dc2.html#gaa4935302b5aba138be3c9bfcf44c6dc2", null ]
 ];

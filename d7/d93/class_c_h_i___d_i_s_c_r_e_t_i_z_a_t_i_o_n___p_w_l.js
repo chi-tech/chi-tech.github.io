@@ -1,6 +1,6 @@
 var class_c_h_i___d_i_s_c_r_e_t_i_z_a_t_i_o_n___p_w_l =
 [
-    [ "CHI_DISCRETIZATION_PWL", "d7/d93/class_c_h_i___d_i_s_c_r_e_t_i_z_a_t_i_o_n___p_w_l_a2049d3e233700f69cd0720345228a074.html#a2049d3e233700f69cd0720345228a074", null ],
+    [ "PiecewiseLinear", "d7/d93/class_c_h_i___d_i_s_c_r_e_t_i_z_a_t_i_o_n___p_w_l_a2049d3e233700f69cd0720345228a074.html#a2049d3e233700f69cd0720345228a074", null ],
     [ "AddViewOfLocalContinuum", "d7/d93/class_c_h_i___d_i_s_c_r_e_t_i_z_a_t_i_o_n___p_w_l_a3ee9dfe2adf23759878ed28dd6591678.html#a3ee9dfe2adf23759878ed28dd6591678", null ],
     [ "MapFeView", "d7/d93/class_c_h_i___d_i_s_c_r_e_t_i_z_a_t_i_o_n___p_w_l_aa46e145e74de696a528f1285753dc241.html#aa46e145e74de696a528f1285753dc241", null ],
     [ "cell_fe_views", "d7/d93/class_c_h_i___d_i_s_c_r_e_t_i_z_a_t_i_o_n___p_w_l_a46acd17b5b434aa489bdff7306bf220e.html#a46acd17b5b434aa489bdff7306bf220e", null ],

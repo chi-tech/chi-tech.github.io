@@ -1,5 +1,5 @@
 var group___lua_quadrature =
 [
-    [ "chiCreateProductQuadrature", "de/d37/group___lua_quadrature_gae40b4f9db8e78423ff850a2b7b51fc48.html#gae40b4f9db8e78423ff850a2b7b51fc48", null ],
-    [ "chiCreateQuadrature", "de/d37/group___lua_quadrature_ga6e5f347ef6a500b7d0180050c4f4b24c.html#ga6e5f347ef6a500b7d0180050c4f4b24c", null ]
+    [ "chiCreateProductQuadrature", "de/d37/group___lua_quadrature_ga09519b0cd9acba1733c0b16e1e032129.html#ga09519b0cd9acba1733c0b16e1e032129", null ],
+    [ "chiCreateQuadrature", "de/d37/group___lua_quadrature_ga3a7a47b6f96398f795d4564ca202a891.html#ga3a7a47b6f96398f795d4564ca202a891", null ]
 ];

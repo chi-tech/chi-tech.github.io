@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quadrature_20rules',['Quadrature rules',['../de/d37/group___lua_quadrature.html',1,'']]]
+  ['regions',['Regions',['../df/dda/group___lua_region.html',1,'']]]
 ];

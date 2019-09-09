@@ -9,5 +9,5 @@ var group___lua_mesh =
     [ "Surface Meshes", "db/dc8/group___lua_surface_mesh.html", "db/dc8/group___lua_surface_mesh" ],
     [ "Surface Re-meshers", "d1/d9b/group___lua_surface_mesher.html", "d1/d9b/group___lua_surface_mesher" ],
     [ "Volume Meshers", "d4/d3a/group___lua_volume_mesher.html", "d4/d3a/group___lua_volume_mesher" ],
-    [ "chiEdgeLoopSplitByAngle", "d9/d53/group___lua_mesh_ga9ceb594308336258cef2980a9dac2a48.html#ga9ceb594308336258cef2980a9dac2a48", null ]
+    [ "chiEdgeLoopSplitByAngle", "d9/d53/group___lua_mesh_ga11ba7bfa75925eedaad8b0520f0d5167.html#ga11ba7bfa75925eedaad8b0520f0d5167", null ]
 ];

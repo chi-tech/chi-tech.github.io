@@ -1,8 +1,8 @@
 var searchData=
 [
   ['face',['Face',['../d4/dd2/structchi__mesh_1_1_face_a95dcab7876f85adff9df5f0f5132305f.html#a95dcab7876f85adff9df5f0f5132305f',1,'chi_mesh::Face']]],
-  ['ffi_5fcell_5fintersection',['FFI_CELL_INTERSECTION',['../da/dfb/struct_f_f_i___c_e_l_l___i_n_t_e_r_s_e_c_t_i_o_n_a425b3633a1e7963366ec1a2162815778.html#a425b3633a1e7963366ec1a2162815778',1,'FFI_CELL_INTERSECTION']]],
-  ['ffi_5fface_5fedge_5fintersection',['FFI_FACE_EDGE_INTERSECTION',['../d6/dfa/struct_f_f_i___f_a_c_e___e_d_g_e___i_n_t_e_r_s_e_c_t_i_o_n_a7bd729254b80a0dd7f37b86caaa0a5ec.html#a7bd729254b80a0dd7f37b86caaa0a5ec',1,'FFI_FACE_EDGE_INTERSECTION']]],
+  ['fficellintersection',['FFICellIntersection',['../d1/da1/struct_f_f_i_cell_intersection_a22f75ab9ac344456c714f7d076c6f416.html#a22f75ab9ac344456c714f7d076c6f416',1,'FFICellIntersection']]],
+  ['ffifaceedgeintersection',['FFIFaceEdgeIntersection',['../db/d9e/struct_f_f_i_face_edge_intersection_a4dccf621555198e5c385e3d1de67d793.html#a4dccf621555198e5c385e3d1de67d793',1,'FFIFaceEdgeIntersection']]],
   ['fieldfunction',['FieldFunction',['../df/de9/classchi__physics_1_1_field_function_a39310a7cf70920006ae77970eb7b6c25.html#a39310a7cf70920006ae77970eb7b6c25',1,'chi_physics::FieldFunction']]],
   ['fieldfunctioninterpolation',['FieldFunctionInterpolation',['../d5/dd4/classchi__mesh_1_1_field_function_interpolation_ae1ce2fa2c8f8faeab246a8c563c29756.html#ae1ce2fa2c8f8faeab246a8c563c29756',1,'chi_mesh::FieldFunctionInterpolation']]],
   ['fieldfunctioninterpolationline',['FieldFunctionInterpolationLine',['../d5/d14/classchi__mesh_1_1_field_function_interpolation_line_ac60bfac65dd64c217f51b2ec13069b57.html#ac60bfac65dd64c217f51b2ec13069b57',1,'chi_mesh::FieldFunctionInterpolationLine']]],
@@ -13,8 +13,7 @@ var searchData=
   ['findassociatedvertices',['FindAssociatedVertices',['../d3/d1c/classchi__mesh_1_1_mesh_continuum_a14bcff0369b148702ef7a39eacd389f2.html#a14bcff0369b148702ef7a39eacd389f2',1,'chi_mesh::MeshContinuum']]],
   ['findboundary2d',['FindBoundary2D',['../d8/d7c/classchi__mesh_1_1_cell_a6efd14e8bc9f5a029e0c032c4c81b9a5.html#a6efd14e8bc9f5a029e0c032c4c81b9a5',1,'chi_mesh::Cell::FindBoundary2D()'],['../dc/d11/classchi__mesh_1_1_cell_polygon_ada924f2396d2a78dd4c4eed5f5689cf8.html#ada924f2396d2a78dd4c4eed5f5689cf8',1,'chi_mesh::CellPolygon::FindBoundary2D()'],['../d1/d1f/classchi__mesh_1_1_cell_triangle_a9e453afdb992148328db760d03ea6aa7.html#a9e453afdb992148328db760d03ea6aa7',1,'chi_mesh::CellTriangle::FindBoundary2D()']]],
   ['findcircumcircle',['FindCircumCircle',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch_a8f9854933f218670eb3de56e762e25a5.html#a8f9854933f218670eb3de56e762e25a5',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
-  ['findindexranges',['FindIndexRanges',['../d0/d20/class_c_h_i___m_a_t_h___l_i_n_e_a_r___i_n_d_e_x_e_r_a653431a888804e6e942054fdd1f425c0.html#a653431a888804e6e942054fdd1f425c0',1,'CHI_MATH_LINEAR_INDEXER']]],
   ['findnonlocdeledge',['FindNonLocDelEdge',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch_aa497facfbe96ba59e020f78c000d45c3.html#aa497facfbe96ba59e020f78c000d45c3',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
   ['fluds',['FLUDS',['../d3/d5e/classchi__mesh_1_1_sweep_management_1_1_f_l_u_d_s_a2c7e31a426b9bc16539d4e00fe8e78f8.html#a2c7e31a426b9bc16539d4e00fe8e78f8',1,'chi_mesh::SweepManagement::FLUDS']]],
-  ['flushconsole',['flushConsole',['../dc/d82/class_c_h_i___c_o_n_s_o_l_e_ab8bbf5eb9bd105ab01032b9383c4e59d.html#ab8bbf5eb9bd105ab01032b9383c4e59d',1,'CHI_CONSOLE']]]
+  ['flushconsole',['flushConsole',['../dd/d62/class_chi_console_aabfd9f0b7337efc789a016033367a95c.html#aabfd9f0b7337efc789a016033367a95c',1,'ChiConsole']]]
 ];

@@ -19,7 +19,7 @@ var classchi__physics_1_1_field_function =
     [ "mom", "df/de9/classchi__physics_1_1_field_function_adb2bb9712016607e376b8810bd2cb1f6.html#adb2bb9712016607e376b8810bd2cb1f6", null ],
     [ "num_grps", "df/de9/classchi__physics_1_1_field_function_ab641b89fe1fcc0ee38a8174f31be16e2.html#ab641b89fe1fcc0ee38a8174f31be16e2", null ],
     [ "num_moms", "df/de9/classchi__physics_1_1_field_function_ae0f0dc1557f664eccdfab983bf1315b2.html#ae0f0dc1557f664eccdfab983bf1315b2", null ],
-    [ "spatial_discretization", "df/de9/classchi__physics_1_1_field_function_aaec422e9a09187f104e0292bd1e4e8b2.html#aaec422e9a09187f104e0292bd1e4e8b2", null ],
+    [ "spatial_discretization", "df/de9/classchi__physics_1_1_field_function_aeff0fc9e298aa96c5871f0e746eb02b3.html#aeff0fc9e298aa96c5871f0e746eb02b3", null ],
     [ "text_name", "df/de9/classchi__physics_1_1_field_function_aebf52347d456a63704b688734a69e67b.html#aebf52347d456a63704b688734a69e67b", null ],
     [ "type", "df/de9/classchi__physics_1_1_field_function_aebb32604fe1248f1a6d5f4fba1607907.html#aebb32604fe1248f1a6d5f4fba1607907", null ]
 ];

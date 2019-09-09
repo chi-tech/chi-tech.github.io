@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['q_5ffield',['q_field',['../d6/d32/classchi__diffusion_1_1_solver_a1f2f462ebb5504e72b91cb208c38ac19.html#a1f2f462ebb5504e72b91cb208c38ac19',1,'chi_diffusion::Solver']]],
-  ['q_5ffixed',['q_fixed',['../d9/db8/class_linear_boltzman_solver_a592d7410016f46d74318bdc115a7a4a7.html#a592d7410016f46d74318bdc115a7a4a7',1,'LinearBoltzmanSolver']]],
-  ['q_5ffixed_5flocal',['q_fixed_local',['../d9/db8/class_linear_boltzman_solver_ac34be014460e7ee55b9ea5e5704ee53f.html#ac34be014460e7ee55b9ea5e5704ee53f',1,'LinearBoltzmanSolver']]],
-  ['q_5fmoments_5flocal',['q_moments_local',['../d9/db8/class_linear_boltzman_solver_a7d6cd07b0bd2acb2f511d02099492a9a.html#a7d6cd07b0bd2acb2f511d02099492a9a',1,'LinearBoltzmanSolver']]],
-  ['q_5fpoints',['q_points',['../d3/ddc/class_c_h_i___q_u_a_d_r_a_t_u_r_e_ad3805635d145feccf0a9b25f4509e37a.html#ad3805635d145feccf0a9b25f4509e37a',1,'CHI_QUADRATURE']]],
-  ['q_5fweights',['q_weights',['../d3/ddc/class_c_h_i___q_u_a_d_r_a_t_u_r_e_aa85759d53c4000ad238e6b129db14158.html#aa85759d53c4000ad238e6b129db14158',1,'CHI_QUADRATURE']]],
+  ['q_5fpoints',['q_points',['../d3/dbf/classchi__math_1_1_quadrature_a8ad08c43025fe9306070846122fab9a9.html#a8ad08c43025fe9306070846122fab9a9',1,'chi_math::Quadrature']]],
+  ['q_5fweights',['q_weights',['../d3/dbf/classchi__math_1_1_quadrature_a709400ade1473a99bbf6c90898ea108e.html#a709400ade1473a99bbf6c90898ea108e',1,'chi_math::Quadrature']]],
   ['qp_5fdata',['qp_data',['../d5/d8e/struct_f_eside__data2d_a7369838003eb7d843c63e9d696c69fa7.html#a7369838003eb7d843c63e9d696c69fa7',1,'FEside_data2d::qp_data()'],['../de/d04/struct_f_eside__data3d_a9d88f81306f3c433d66ad9296013b3c2.html#a9d88f81306f3c433d66ad9296013b3c2',1,'FEside_data3d::qp_data()']]],
-  ['qpoints',['qpoints',['../d4/d77/class_triangle_f_e_view_a7576dcf5f014dc4593667861705ce536.html#a7576dcf5f014dc4593667861705ce536',1,'TriangleFEView::qpoints()'],['../d4/d5d/class_c_h_i___q_u_a_d_r_a_t_u_r_e___t_e_t_r_a_h_e_d_r_o_n_a05ede77bab098d889cd62bf53181b61d.html#a05ede77bab098d889cd62bf53181b61d',1,'CHI_QUADRATURE_TETRAHEDRON::qpoints()'],['../db/d4f/class_c_h_i___q_u_a_d_r_a_t_u_r_e___t_r_i_a_n_g_l_e_a06ca8a32207e483ea824a31bf8a1cb91.html#a06ca8a32207e483ea824a31bf8a1cb91',1,'CHI_QUADRATURE_TRIANGLE::qpoints()']]],
-  ['quadrature',['quadrature',['../df/d48/class_l_b_s___g_r_o_u_p_s_e_t_afda2de83472a2222bc7baca56515cebf.html#afda2de83472a2222bc7baca56515cebf',1,'LBS_GROUPSET']]],
-  ['quadratures',['quadratures',['../de/db1/class_c_h_i___m_a_t_h_ad6c2e2fea3b047075ed7acbfd0ac2c6f.html#ad6c2e2fea3b047075ed7acbfd0ac2c6f',1,'CHI_MATH']]],
+  ['qpoints',['qpoints',['../d8/d57/classchi__math_1_1_quadrature_tetrahedron_af4e6de6ffdf31b56add3dab2d697aab4.html#af4e6de6ffdf31b56add3dab2d697aab4',1,'chi_math::QuadratureTetrahedron::qpoints()'],['../d0/d61/classchi__math_1_1_quadrature_triangle_a56170b96156db66ff3ee7a946e482ae0.html#a56170b96156db66ff3ee7a946e482ae0',1,'chi_math::QuadratureTriangle::qpoints()'],['../d4/d77/class_triangle_f_e_view_ab4b24b223692942297ab607501f7525e.html#ab4b24b223692942297ab607501f7525e',1,'TriangleFEView::qpoints()']]],
+  ['quadratures',['quadratures',['../d9/d9f/class_chi_math_a184b62539d22623423ff32d67182db4a.html#a184b62539d22623423ff32d67182db4a',1,'ChiMath']]],
   ['quality_5ffactor1',['quality_factor1',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch_a4fb8b861004082068f5b8878ee3d196c.html#a4fb8b861004082068f5b8878ee3d196c',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]]
 ];

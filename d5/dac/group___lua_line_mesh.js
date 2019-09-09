@@ -1,5 +1,5 @@
 var group___lua_line_mesh =
 [
-    [ "chiLineMeshCreateFromArray", "d5/dac/group___lua_line_mesh_ga00537255b19fb1d7e13254b81d63c65e.html#ga00537255b19fb1d7e13254b81d63c65e", null ],
-    [ "chiLineMeshCreateFromLoop", "d5/dac/group___lua_line_mesh_ga5c3944042b6a627f1839861e3135338e.html#ga5c3944042b6a627f1839861e3135338e", null ]
+    [ "chiLineMeshCreateFromArray", "d5/dac/group___lua_line_mesh_ga3ec7ef07f330a4f62aaaaa2e5b1231cf.html#ga3ec7ef07f330a4f62aaaaa2e5b1231cf", null ],
+    [ "chiLineMeshCreateFromLoop", "d5/dac/group___lua_line_mesh_ga8c45007cb7b9d892ccb4d660e0c574a8.html#ga8c45007cb7b9d892ccb4d660e0c574a8", null ]
 ];

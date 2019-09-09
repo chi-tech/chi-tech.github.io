@@ -1,6 +1,6 @@
 var class_c_h_i___m_p_i =
 [
-    [ "CHI_MPI", "d4/dc9/class_c_h_i___m_p_i_a0b21970118a08916b2db58e2add71277.html#a0b21970118a08916b2db58e2add71277", null ],
+    [ "ChiMPI", "d4/dc9/class_c_h_i___m_p_i_a0b21970118a08916b2db58e2add71277.html#a0b21970118a08916b2db58e2add71277", null ],
     [ "BroadcastCellSets", "d4/dc9/class_c_h_i___m_p_i_a01f09d389fd0add9ce6f77bd693c25b7.html#a01f09d389fd0add9ce6f77bd693c25b7", null ],
     [ "BroadcastNodes", "d4/dc9/class_c_h_i___m_p_i_a92259ae94655dac5c6ff9576d52cac45.html#a92259ae94655dac5c6ff9576d52cac45", null ],
     [ "BroadcastTriFaces", "d4/dc9/class_c_h_i___m_p_i_a55ea8900384eb2f0c78e0dbf80948bb6.html#a55ea8900384eb2f0c78e0dbf80948bb6", null ],

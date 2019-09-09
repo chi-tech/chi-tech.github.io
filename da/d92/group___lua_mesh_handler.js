@@ -1,6 +1,6 @@
 var group___lua_mesh_handler =
 [
-    [ "chiMeshHandlerCreate", "da/d92/group___lua_mesh_handler_ga7d6dee3f32f771fa919138ab80dcdcf4.html#ga7d6dee3f32f771fa919138ab80dcdcf4", null ],
-    [ "chiMeshHandlerGetSurfaceFromCollection", "da/d92/group___lua_mesh_handler_ga72db94105bbdd25abd4fbd824fc1c74b.html#ga72db94105bbdd25abd4fbd824fc1c74b", null ],
-    [ "chiMeshHandlerSetCurrent", "da/d92/group___lua_mesh_handler_gab7e690e6dafc70ac9b8b94ba1bf11fde.html#gab7e690e6dafc70ac9b8b94ba1bf11fde", null ]
+    [ "chiMeshHandlerCreate", "da/d92/group___lua_mesh_handler_ga57ff5c2bfc92cd5cf102d26a3611bd3e.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e", null ],
+    [ "chiMeshHandlerGetSurfaceFromCollection", "da/d92/group___lua_mesh_handler_ga53866f6ba77f93ba5d15fe9d13eb3986.html#ga53866f6ba77f93ba5d15fe9d13eb3986", null ],
+    [ "chiMeshHandlerSetCurrent", "da/d92/group___lua_mesh_handler_ga01c22aafd561a48846ad2807a5c2f647.html#ga01c22aafd561a48846ad2807a5c2f647", null ]
 ];

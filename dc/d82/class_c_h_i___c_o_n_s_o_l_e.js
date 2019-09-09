@@ -1,6 +1,6 @@
 var class_c_h_i___c_o_n_s_o_l_e =
 [
-    [ "CHI_CONSOLE", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_aeb2282ab47ad4c902d058480533274a7.html#aeb2282ab47ad4c902d058480533274a7", null ],
+    [ "ChiConsole", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_aeb2282ab47ad4c902d058480533274a7.html#aeb2282ab47ad4c902d058480533274a7", null ],
     [ "CopyConsole", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_a4bf550322b032d19c44842f1b8c40ef6.html#a4bf550322b032d19c44842f1b8c40ef6", null ],
     [ "ExecuteFile", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_aa652fe623b24bf864e3114c9cef56136.html#aa652fe623b24bf864e3114c9cef56136", null ],
     [ "flushConsole", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_ab8bbf5eb9bd105ab01032b9383c4e59d.html#ab8bbf5eb9bd105ab01032b9383c4e59d", null ],
@@ -15,7 +15,6 @@ var class_c_h_i___c_o_n_s_o_l_e =
     [ "buffer", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_a75cbc89f954736be204422ee0920b77e.html#a75cbc89f954736be204422ee0920b77e", null ],
     [ "consoleState", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_a9feb2933e77014cbe399225446964c0f.html#a9feb2933e77014cbe399225446964c0f", null ],
     [ "currentSize", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_a524e90c73184706cbdb0811718ffa959.html#a524e90c73184706cbdb0811718ffa959", null ],
-    [ "eventsStack", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_a83cc981cb6aa9fd12124bbd06ce74619.html#a83cc981cb6aa9fd12124bbd06ce74619", null ],
     [ "exitLoop", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_a6f8f7f7d5ea32d77dc24ac5197792c7b.html#a6f8f7f7d5ea32d77dc24ac5197792c7b", null ],
     [ "numberOfLines", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_aaf26ea3992f7877529b066e859d0f388.html#aaf26ea3992f7877529b066e859d0f388", null ],
     [ "previousSize", "dc/d82/class_c_h_i___c_o_n_s_o_l_e_a9d1a6c3a5630f6a753ce7019613ed2c5.html#a9d1a6c3a5630f6a753ce7019613ed2c5", null ],

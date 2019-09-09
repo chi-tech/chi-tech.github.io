@@ -1,6 +1,6 @@
 var class_c_h_i___p_h_y_s_i_c_s =
 [
-    [ "CHI_PHYSICS", "d8/da5/class_c_h_i___p_h_y_s_i_c_s_a7f3d5f9221e7a74d2a44f0accc07d808.html#a7f3d5f9221e7a74d2a44f0accc07d808", null ],
+    [ "ChiPhysics", "d8/da5/class_c_h_i___p_h_y_s_i_c_s_a7f3d5f9221e7a74d2a44f0accc07d808.html#a7f3d5f9221e7a74d2a44f0accc07d808", null ],
     [ "InitPetSc", "d8/da5/class_c_h_i___p_h_y_s_i_c_s_a1337e90a8bfbb478d7283c1693baa2bc.html#a1337e90a8bfbb478d7283c1693baa2bc", null ],
     [ "PrintPerformanceData", "d8/da5/class_c_h_i___p_h_y_s_i_c_s_ab0a54185dd57cd5a4148731959eb9bd5.html#ab0a54185dd57cd5a4148731959eb9bd5", null ],
     [ "RunPhysicsLoop", "d8/da5/class_c_h_i___p_h_y_s_i_c_s_aaf9f79c8bb30d1ae5c639e96141aefc2.html#aaf9f79c8bb30d1ae5c639e96141aefc2", null ],

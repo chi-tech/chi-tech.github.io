@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['interface',['Interface',['../d9/d39/structchi__mesh_1_1_interface.html',1,'chi_mesh']]],
-  ['isotropicmultigrpsource',['IsotropicMultiGrpSource',['../dc/d04/classchi__physics_1_1_isotropic_multi_grp_source.html',1,'chi_physics']]]
+  ['linemesh',['LineMesh',['../da/de4/classchi__mesh_1_1_line_mesh.html',1,'chi_mesh']]],
+  ['logicalvolume',['LogicalVolume',['../d0/d1e/classchi__mesh_1_1_logical_volume.html',1,'chi_mesh']]],
+  ['logstream',['LogStream',['../de/ddf/class_log_stream.html',1,'']]]
 ];
