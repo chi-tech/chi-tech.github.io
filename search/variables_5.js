@@ -1,19 +1,30 @@
 var searchData=
 [
+  ['f',['f',['../d6/d58/classchi__diffusion_1_1_boundary_robin_af3a42c2cb80e6e12e7f638e2ab299162.html#af3a42c2cb80e6e12e7f638e2ab299162',1,'chi_diffusion::BoundaryRobin']]],
   ['f_5findex',['f_index',['../d9/d36/structchi__mesh_1_1_edge_a953c0cb5897a84adcc5eba6410fccbd5.html#a953c0cb5897a84adcc5eba6410fccbd5',1,'chi_mesh::Edge']]],
   ['face_5farea',['face_area',['../d4/dc6/class_polygon_f_v_view_ae834b5c661d59ad60406e29aaf27f151.html#ae834b5c661d59ad60406e29aaf27f151',1,'PolygonFVView']]],
+  ['face_5fboundary_5fid',['face_boundary_id',['../da/d28/class_l_b_s_cell_view_full_a5386f0d9d8e3996a40b3ccd01c70d63a.html#a5386f0d9d8e3996a40b3ccd01c70d63a',1,'LBSCellViewFull']]],
   ['face_5fcentroid',['face_centroid',['../d4/dd2/structchi__mesh_1_1_face_a1b822a33e4c6e94669d8096836456e5f.html#a1b822a33e4c6e94669d8096836456e5f',1,'chi_mesh::Face::face_centroid()'],['../d4/ddb/structchi__mesh_1_1_poly_face_aa9c072212b73a3a7547d2143e3fad891.html#aa9c072212b73a3a7547d2143e3fad891',1,'chi_mesh::PolyFace::face_centroid()']]],
   ['face_5fdof_5fmappings',['face_dof_mappings',['../dd/da4/class_polyhedron_f_e_view_a27137058c85333f17edbe27615af1ad3.html#a27137058c85333f17edbe27615af1ad3',1,'PolyhedronFEView']]],
+  ['face_5ff_5fadj_5fpart_5fid',['face_f_adj_part_id',['../da/d28/class_l_b_s_cell_view_full_a971b7f8113b43a9a9ea25e8b03306433.html#a971b7f8113b43a9a9ea25e8b03306433',1,'LBSCellViewFull']]],
+  ['face_5ff_5fupwind_5fflag',['face_f_upwind_flag',['../da/d28/class_l_b_s_cell_view_full_a8f23715155e3427668025199a2b8f6ad.html#a8f23715155e3427668025199a2b8f6ad',1,'LBSCellViewFull']]],
   ['face_5findices',['face_indices',['../d4/ddb/structchi__mesh_1_1_poly_face_ae37810db74b8968677b351142dd027d9.html#ae37810db74b8968677b351142dd027d9',1,'chi_mesh::PolyFace']]],
   ['face_5fmap',['face_map',['../d7/d59/struct_f_enode_map_aa49abaac0b717405e07c3d2b28aa7395.html#aa49abaac0b717405e07c3d2b28aa7395',1,'FEnodeMap']]],
   ['face_5fnormals',['face_normals',['../da/dd2/classchi__mesh_1_1_cell_slab_a90f3b27eb4d139e6671abb882183b28b.html#a90f3b27eb4d139e6671abb882183b28b',1,'chi_mesh::CellSlab']]],
+  ['face_5fv_5findices',['face_v_indices',['../d4/d46/struct_diffusion_i_p_border_cell_a328149df0d32e82b32ff8863148d85dc.html#a328149df0d32e82b32ff8863148d85dc',1,'DiffusionIPBorderCell']]],
   ['faces',['faces',['../d6/d71/classchi__mesh_1_1_cell_polyhedron_a967fbed82b76d01edbfe2339a4dedd85.html#a967fbed82b76d01edbfe2339a4dedd85',1,'chi_mesh::CellPolyhedron::faces()'],['../dd/d43/classchi__mesh_1_1_surface_mesh_a7b7f440d25626c9ec33df91029916f4a.html#a7b7f440d25626c9ec33df91029916f4a',1,'chi_mesh::SurfaceMesh::faces()']]],
+  ['fem_5fmethod',['fem_method',['../d6/d32/classchi__diffusion_1_1_solver_a8f559bb8448cf7aac103f630f5455854.html#a8f559bb8448cf7aac103f630f5455854',1,'chi_diffusion::Solver']]],
   ['ffinterpolation_5fstack',['ffinterpolation_stack',['../d2/d10/classchi__mesh_1_1_mesh_handler_a68fd85c47d698f735f8de68924179a85.html#a68fd85c47d698f735f8de68924179a85',1,'chi_mesh::MeshHandler']]],
   ['field_5ffunctions',['field_functions',['../d5/dd4/classchi__mesh_1_1_field_function_interpolation_a74afb726bf3171181a1f532ecca81481.html#a74afb726bf3171181a1f532ecca81481',1,'chi_mesh::FieldFunctionInterpolation::field_functions()'],['../d9/d3a/classchi__physics_1_1_solver_ae1ded02d6ec7130e202279b12d3b8292.html#ae1ded02d6ec7130e202279b12d3b8292',1,'chi_physics::Solver::field_functions()']]],
   ['field_5fvector',['field_vector',['../df/de9/classchi__physics_1_1_field_function_a863a7ad6785dd8fda95ff9653391403a.html#a863a7ad6785dd8fda95ff9653391403a',1,'chi_physics::FieldFunction']]],
   ['field_5fvector_5flocal',['field_vector_local',['../df/de9/classchi__physics_1_1_field_function_a9978edd1dd0f029622a4bc6d5c5b2f15.html#a9978edd1dd0f029622a4bc6d5c5b2f15',1,'chi_physics::FieldFunction']]],
   ['fieldfunc_5fstack',['fieldfunc_stack',['../d8/d9a/class_chi_physics_af6dd5c7fc85bb49efd91dd3826ab9de3.html#af6dd5c7fc85bb49efd91dd3826ab9de3',1,'ChiPhysics']]],
+  ['floss',['floss',['../d3/de5/class_h_y_d_r_o___s_j_u_n_c_t_i_o_n_ac45320f8d09482361e4af4a3d91cb876.html#ac45320f8d09482361e4af4a3d91cb876',1,'HYDRO_SJUNCTION']]],
+  ['flprops',['flProps',['../d6/d08/class_thermo_alpha_a364676bf3c64eada069454ab59d9de5b.html#a364676bf3c64eada069454ab59d9de5b',1,'ThermoAlpha']]],
   ['fluds',['fluds',['../d9/d2e/classchi__mesh_1_1_sweep_management_1_1_angle_set_adebd209f1935277c1493c3f87f33b34d.html#adebd209f1935277c1493c3f87f33b34d',1,'chi_mesh::SweepManagement::AngleSet']]],
+  ['fluidoption',['fluidOption',['../d6/d08/class_thermo_alpha_af618e616f920df7c4baff783dd2f7816.html#af618e616f920df7c4baff783dd2f7816',1,'ThermoAlpha']]],
+  ['force_5fisotropic',['force_isotropic',['../d4/d24/classchi__montecarlon_1_1_solver_a2563ef4cc7935ca293178fed69892d41.html#a2563ef4cc7935ca293178fed69892d41',1,'chi_montecarlon::Solver']]],
   ['force_5fpolygons',['force_polygons',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s_a9d0d80b0063ed44a3456f01d9bea5d9e.html#a9d0d80b0063ed44a3456f01d9bea5d9e',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS']]],
-  ['fpar',['fPar',['../d3/d41/struct_c_s_t_event_a51e5965394d4ec4e86afe59c6a57a85d.html#a51e5965394d4ec4e86afe59c6a57a85d',1,'CSTEvent']]]
+  ['fpar',['fPar',['../d3/d41/struct_c_s_t_event_a51e5965394d4ec4e86afe59c6a57a85d.html#a51e5965394d4ec4e86afe59c6a57a85d',1,'CSTEvent']]],
+  ['fv_5fsdm',['fv_sdm',['../d6/da0/classchi__montecarlon_1_1_source_a4d022c8aa3396892e9c96a6a02eca2e0.html#a4d022c8aa3396892e9c96a6a02eca2e0',1,'chi_montecarlon::Source']]]
 ];

@@ -12,6 +12,12 @@ var searchData=
   ['angleset',['AngleSet',['../d9/d2e/classchi__mesh_1_1_sweep_management_1_1_angle_set_a8b38fb007a6376a63e439720ddf92df2.html#a8b38fb007a6376a63e439720ddf92df2',1,'chi_mesh::SweepManagement::AngleSet']]],
   ['anglesetadvance',['AngleSetAdvance',['../d9/d2e/classchi__mesh_1_1_sweep_management_1_1_angle_set_a6b124312102a7ee8f7765fd960af2b74.html#a6b124312102a7ee8f7765fd960af2b74',1,'chi_mesh::SweepManagement::AngleSet']]],
   ['anglesetgroupadvance',['AngleSetGroupAdvance',['../d9/d19/classchi__mesh_1_1_sweep_management_1_1_angle_set_group_a408d592e0c8e6605feae8bcc787153b9.html#a408d592e0c8e6605feae8bcc787153b9',1,'chi_mesh::SweepManagement::AngleSetGroup']]],
+  ['applydirichleti',['ApplyDirichletI',['../d6/d32/classchi__diffusion_1_1_solver_a25faca0319d73ed1b16b33af711694b8.html#a25faca0319d73ed1b16b33af711694b8',1,'chi_diffusion::Solver']]],
+  ['applydirichletj',['ApplyDirichletJ',['../d6/d32/classchi__diffusion_1_1_solver_af60bd09f07da65563967a370d2dc4ccb.html#af60bd09f07da65563967a370d2dc4ccb',1,'chi_diffusion::Solver']]],
+  ['assembletgdsadeltaphivector',['AssembleTGDSADeltaPhiVector',['../d9/db8/class_linear_boltzman_solver_a0806545aa39236d3805d1dee12781bf4.html#a0806545aa39236d3805d1dee12781bf4',1,'LinearBoltzmanSolver']]],
+  ['assemblevector',['AssembleVector',['../d9/db8/class_linear_boltzman_solver_a9786ebb654c99ab61818ca9559dd9c49.html#a9786ebb654c99ab61818ca9559dd9c49',1,'LinearBoltzmanSolver']]],
+  ['assemblevectors',['AssembleVectors',['../d9/db8/class_linear_boltzman_solver_aa20242705a5a57811eea8d38331e7143.html#aa20242705a5a57811eea8d38331e7143',1,'LinearBoltzmanSolver']]],
+  ['assemblewgdsadeltaphivector',['AssembleWGDSADeltaPhiVector',['../d9/db8/class_linear_boltzman_solver_acf9b7b59393e752a4b775d40dd1ce0ee.html#acf9b7b59393e752a4b775d40dd1ce0ee',1,'LinearBoltzmanSolver']]],
   ['assignsurfacetoboundary',['AssignSurfaceToBoundary',['../d0/d81/namespacechi__mesh_a10ba6abaf542d717584e31199a158958.html#a10ba6abaf542d717584e31199a158958',1,'chi_mesh']]],
   ['assoclegendre',['AssocLegendre',['../dc/d58/namespacechi__math_a584d116a16e18b7dcf058888e1f19a85.html#a584d116a16e18b7dcf058888e1f19a85',1,'chi_math']]],
   ['attachunusedvertex',['AttachUnusedVertex',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch_ac1eabeef3a999f35a5064b20ac794004.html#ac1eabeef3a999f35a5064b20ac794004',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]]

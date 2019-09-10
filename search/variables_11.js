@@ -3,6 +3,7 @@ var searchData=
   ['r',['r',['../db/d06/classchi__mesh_1_1_sphere_logical_volume_a485e30cf056f7c36e60834eddd3236cf.html#a485e30cf056f7c36e60834eddd3236cf',1,'chi_mesh::SphereLogicalVolume::r()'],['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume_ae62dd421e577341caa6aa30d06ee974f.html#ae62dd421e577341caa6aa30d06ee974f',1,'chi_mesh::RCCLogicalVolume::r()']]],
   ['rank',['rank',['../da/d1d/structchi__graph_1_1_graph_vertex_a43c4efb8d60e290b75c1bece637def56.html#a43c4efb8d60e290b75c1bece637def56',1,'chi_graph::GraphVertex']]],
   ['raw_5fpatch',['raw_patch',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch_aba90c06970e1302c1ab3bfa8b3ad5cb6.html#aba90c06970e1302c1ab3bfa8b3ad5cb6',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
+  ['ref_5fbndry',['ref_bndry',['../d3/dfb/classchi__montecarlon_1_1_boundary_source_a1a011facf08f08c834d85bdfe5813ea7.html#a1a011facf08f08c834d85bdfe5813ea7',1,'chi_montecarlon::BoundarySource']]],
   ['ref_5fboundary_5ftypes',['ref_boundary_types',['../d9/d2e/classchi__mesh_1_1_sweep_management_1_1_angle_set_af2e4197e2f55b590561f67366e6de0bb.html#af2e4197e2f55b590561f67366e6de0bb',1,'chi_mesh::SweepManagement::AngleSet']]],
   ['ref_5fcdf',['ref_cdf',['../d8/db6/structchi__math_1_1_c_d_f_sampler_1_1_sub_intvl_a42787f6c21aa49ca3037178cd5224d37.html#a42787f6c21aa49ca3037178cd5224d37',1,'chi_math::CDFSampler::SubIntvl']]],
   ['ref_5fff',['ref_ff',['../d9/db7/struct_field_function_context_aa3d5d9d86e6906fa77d7143f65c8a316.html#aa3d5d9d86e6906fa77d7143f65c8a316',1,'FieldFunctionContext']]],
@@ -12,7 +13,15 @@ var searchData=
   ['region_5fstack',['region_stack',['../d2/d10/classchi__mesh_1_1_mesh_handler_a1e6fca7c25c8dcfddb13bf49f8651740.html#a1e6fca7c25c8dcfddb13bf49f8651740',1,'chi_mesh::MeshHandler']]],
   ['regions',['regions',['../d9/d3a/classchi__physics_1_1_solver_a1e88bba35bb5b67908a64fe5944db62a.html#a1e88bba35bb5b67908a64fe5944db62a',1,'chi_physics::Solver']]],
   ['remeshed_5fsurface_5fmesh',['remeshed_surface_mesh',['../d0/d54/structchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_mesh_context_a9118471a92a899b8ab534a5ab9f47215.html#a9118471a92a899b8ab534a5ab9f47215',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayMeshContext']]],
+  ['residual_5ftolerance',['residual_tolerance',['../d6/d32/classchi__diffusion_1_1_solver_ade535f862d3a1dc8fcc3904c83f24212.html#ade535f862d3a1dc8fcc3904c83f24212',1,'chi_diffusion::Solver::residual_tolerance()'],['../d7/d7d/class_l_b_s_groupset_acdc8a0552d714a2e9806ed678102c853.html#acdc8a0552d714a2e9806ed678102c853',1,'LBSGroupset::residual_tolerance()']]],
   ['reverse_5fnode_5fordering',['reverse_node_ordering',['../de/df0/classchi__mesh_1_1_volume_mesher_a9a712d150f2a058ba95254e257481b9b.html#a9a712d150f2a058ba95254e257481b9b',1,'chi_mesh::VolumeMesher']]],
+  ['rho_5ff',['rho_f',['../d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y_ae3e501089562186bbe33058e2c05cf80.html#ae3e501089562186bbe33058e2c05cf80',1,'HYDRO_BOUNDARY::rho_f()'],['../d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e_a914ddbee80d03f1a0d2c1226c8bd3828.html#a914ddbee80d03f1a0d2c1226c8bd3828',1,'HYDRO_VOLUME::rho_f()']]],
+  ['rho_5fg',['rho_g',['../d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y_a668d783599fd42bb88aa817ea92595b5.html#a668d783599fd42bb88aa817ea92595b5',1,'HYDRO_BOUNDARY::rho_g()'],['../d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e_a492e1223a049ad4c9a7be3ea304feaff.html#a492e1223a049ad4c9a7be3ea304feaff',1,'HYDRO_VOLUME::rho_g()']]],
+  ['rigthcomponent',['rigtHComponent',['../d3/de5/class_h_y_d_r_o___s_j_u_n_c_t_i_o_n_a331f65a87f93dc38381ba1208ed21664.html#a331f65a87f93dc38381ba1208ed21664',1,'HYDRO_SJUNCTION']]],
+  ['rigtjunctionindex',['rigtJunctionIndex',['../d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e_a44221a8876ed63d77aad0785963d472b.html#a44221a8876ed63d77aad0785963d472b',1,'HYDRO_VOLUME']]],
+  ['rloss',['rloss',['../d3/de5/class_h_y_d_r_o___s_j_u_n_c_t_i_o_n_ac2f27c52b8c502c4f5510fe11d7048f0.html#ac2f27c52b8c502c4f5510fe11d7048f0',1,'HYDRO_SJUNCTION']]],
+  ['rng0',['rng0',['../d4/d24/classchi__montecarlon_1_1_solver_ab36d4eddcbeffdd3168bdc5d2544f5ba.html#ab36d4eddcbeffdd3168bdc5d2544f5ba',1,'chi_montecarlon::Solver']]],
+  ['roughness',['roughness',['../d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e_a3a3b44a3ce01dcfcfc0ad77b3e4cea8c.html#a3a3b44a3ce01dcfcfc0ad77b3e4cea8c',1,'HYDRO_VOLUME']]],
   ['rowi_5fcolj',['rowI_colJ',['../de/d51/classchi__math_1_1_sparse_matrix_a4ed151eb9c3f7bfb2699e7fd9edf7f8d.html#a4ed151eb9c3f7bfb2699e7fd9edf7f8d',1,'chi_math::SparseMatrix']]],
   ['rundeveloper',['runDeveloper',['../dd/d62/class_chi_console_a855f0a88b69088a881ec8dcef9c29dd6.html#a855f0a88b69088a881ec8dcef9c29dd6',1,'ChiConsole']]]
 ];

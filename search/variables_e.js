@@ -6,5 +6,6 @@ var searchData=
   ['op_5ftype',['op_type',['../db/dd5/classchi__mesh_1_1_field_function_interpolation_volume_a3aa35e4b6e9e9f83dab5c9226d9836eb.html#a3aa35e4b6e9e9f83dab5c9226d9836eb',1,'chi_mesh::FieldFunctionInterpolationVolume']]],
   ['op_5fvalue',['op_value',['../db/dd5/classchi__mesh_1_1_field_function_interpolation_volume_a5a5dff7993b7a51687afea50b95533b8.html#a5a5dff7993b7a51687afea50b95533b8',1,'chi_mesh::FieldFunctionInterpolationVolume']]],
   ['open_5fedges',['open_edges',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch_a2d0c37cb3a012975c6d136d1738da220.html#a2d0c37cb3a012975c6d136d1738da220',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
-  ['options',['options',['../de/df0/classchi__mesh_1_1_volume_mesher_abc0ebd8604df6dc1c67efe66579de214.html#abc0ebd8604df6dc1c67efe66579de214',1,'chi_mesh::VolumeMesher']]]
+  ['options',['options',['../de/df0/classchi__mesh_1_1_volume_mesher_abc0ebd8604df6dc1c67efe66579de214.html#abc0ebd8604df6dc1c67efe66579de214',1,'chi_mesh::VolumeMesher::options()'],['../d9/db8/class_linear_boltzman_solver_a1b1a440506f3405e26ddf36171e863b3.html#a1b1a440506f3405e26ddf36171e863b3',1,'LinearBoltzmanSolver::options()']]],
+  ['options_5fstring',['options_string',['../d6/d32/classchi__diffusion_1_1_solver_a9978cc10f7d45d25e6d6951d1026b8f7.html#a9978cc10f7d45d25e6d6951d1026b8f7',1,'chi_diffusion::Solver']]]
 ];

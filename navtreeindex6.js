@@ -1,13 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"functions_vars_r.html":[6,3,2,17],
-"functions_vars_s.html":[6,3,2,18],
-"functions_vars_t.html":[6,3,2,19],
-"functions_vars_u.html":[6,3,2,20],
-"functions_vars_v.html":[6,3,2,21],
-"functions_vars_w.html":[6,3,2,22],
-"functions_vars_x.html":[6,3,2,23],
-"functions_vars_y.html":[6,3,2,24],
 "functions_vars_z.html":[6,3,2,25],
 "functions_w.html":[6,3,0,22],
 "functions_x.html":[6,3,0,23],

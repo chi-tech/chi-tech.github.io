@@ -2,6 +2,7 @@ var searchData=
 [
   ['sc',['sc',['../de/d04/struct_f_eside__data3d_abb85a74ee4cee7040816c3c199d72c0a.html#abb85a74ee4cee7040816c3c199d72c0a',1,'FEside_data3d']]],
   ['scattering_5finitialized',['scattering_initialized',['../d3/dff/classchi__physics_1_1_transport_cross_sections_aab95bf6dcae6ca40e7ba6c4c551352c1.html#aab95bf6dcae6ca40e7ba6c4c551352c1',1,'chi_physics::TransportCrossSections']]],
+  ['scattering_5forder',['scattering_order',['../d2/d06/struct_l_b_s_options_a0b9006b289b5b18df32d582679f23a84.html#a0b9006b289b5b18df32d582679f23a84',1,'LBSOptions::scattering_order()'],['../d4/d24/classchi__montecarlon_1_1_solver_ad7230d47fedfda4666b0a2d0d4670e38.html#ad7230d47fedfda4666b0a2d0d4670e38',1,'chi_montecarlon::Solver::scattering_order()']]],
   ['shape_5fqp',['shape_qp',['../d9/dc8/struct_f_eqp__data2d_a77ada8b9bc4ec6848f8d137bd2fb72de.html#a77ada8b9bc4ec6848f8d137bd2fb72de',1,'FEqp_data2d::shape_qp()'],['../d0/df4/struct_f_eqp__data3d_aeb6499c23bf843d7dcc53d7b02963749.html#aeb6499c23bf843d7dcc53d7b02963749',1,'FEqp_data3d::shape_qp()']]],
   ['shape_5fqp_5fsurf',['shape_qp_surf',['../d9/dc8/struct_f_eqp__data2d_af79d551f42d9bfd5a84435d64e8124a4.html#af79d551f42d9bfd5a84435d64e8124a4',1,'FEqp_data2d::shape_qp_surf()'],['../d0/df4/struct_f_eqp__data3d_a0c72b0e2466e2df5f65bbae997c46638.html#a0c72b0e2466e2df5f65bbae997c46638',1,'FEqp_data3d::shape_qp_surf()']]],
   ['side_5fmap',['side_map',['../d2/d73/struct_f_enode_face_map_a53fea7e51e740c1383809209013aa020.html#a53fea7e51e740c1383809209013aa020',1,'FEnodeFaceMap']]],
@@ -10,14 +11,18 @@ var searchData=
   ['sigma_5fa_5fjfull',['sigma_a_jfull',['../d3/dff/classchi__physics_1_1_transport_cross_sections_a06be32155bc01db364bd6acb288a4fa8.html#a06be32155bc01db364bd6acb288a4fa8',1,'chi_physics::TransportCrossSections']]],
   ['sigma_5fa_5fjpart',['sigma_a_jpart',['../d3/dff/classchi__physics_1_1_transport_cross_sections_a67cc7cfac8e57c91f82cb5448a98bb21.html#a67cc7cfac8e57c91f82cb5448a98bb21',1,'chi_physics::TransportCrossSections']]],
   ['sigma_5fag',['sigma_ag',['../d3/dff/classchi__physics_1_1_transport_cross_sections_a0d59f39203de1d10aa00b11fbde7615a.html#a0d59f39203de1d10aa00b11fbde7615a',1,'chi_physics::TransportCrossSections']]],
+  ['sigma_5ffield',['sigma_field',['../d6/d32/classchi__diffusion_1_1_solver_a460ce89961e7a432d27a7f58d7468aba.html#a460ce89961e7a432d27a7f58d7468aba',1,'chi_diffusion::Solver']]],
   ['sigma_5frg',['sigma_rg',['../d3/dff/classchi__physics_1_1_transport_cross_sections_a6043fdb98dc5e004d3f989abf60eaeec.html#a6043fdb98dc5e004d3f989abf60eaeec',1,'chi_physics::TransportCrossSections']]],
   ['sigma_5fs_5fgtog',['sigma_s_gtog',['../d3/dff/classchi__physics_1_1_transport_cross_sections_a494979c0b32c3558338885ea8d69ca26.html#a494979c0b32c3558338885ea8d69ca26',1,'chi_physics::TransportCrossSections']]],
   ['sigma_5ftg',['sigma_tg',['../d3/dff/classchi__physics_1_1_transport_cross_sections_a52d7103c1f4649f9c6f0b721ec09a1ee.html#a52d7103c1f4649f9c6f0b721ec09a1ee',1,'chi_physics::TransportCrossSections']]],
   ['simplices',['simplices',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch_a00b123bdefc6f8a5856090ce57c07df5.html#a00b123bdefc6f8a5856090ce57c07df5',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
   ['slave_5fedge',['slave_edge',['../d9/d39/structchi__mesh_1_1_interface_ae9286718e119a31b7d4dc2b2c4efc90a.html#ae9286718e119a31b7d4dc2b2c4efc90a',1,'chi_mesh::Interface']]],
   ['slave_5fsurface',['slave_surface',['../d9/d39/structchi__mesh_1_1_interface_a5cf26b237d51a074f17cc561c2a62e01.html#a5cf26b237d51a074f17cc561c2a62e01',1,'chi_mesh::Interface']]],
+  ['solver',['solver',['../dd/dbc/struct_k_s_p_data_context_abe59694bf448593b872bbfb84b70a82a.html#abe59694bf448593b872bbfb84b70a82a',1,'KSPDataContext']]],
+  ['solver_5fname',['solver_name',['../d6/d32/classchi__diffusion_1_1_solver_a5c5035fd4ccd0fe4763c8d707618ca79.html#a5c5035fd4ccd0fe4763c8d707618ca79',1,'chi_diffusion::Solver']]],
   ['solver_5fstack',['solver_stack',['../d8/d9a/class_chi_physics_a5eea4ecebd52f4289ed9edaab8936d37.html#a5eea4ecebd52f4289ed9edaab8936d37',1,'ChiPhysics']]],
   ['source_5fvalue_5fg',['source_value_g',['../dc/d04/classchi__physics_1_1_isotropic_multi_grp_source_a2c3b619ae0a368b17328f28bbabdcc52.html#a2c3b619ae0a368b17328f28bbabdcc52',1,'chi_physics::IsotropicMultiGrpSource']]],
+  ['sources',['sources',['../d4/d24/classchi__montecarlon_1_1_solver_a761da48292f6a63e13fa8ab3d04ccf27.html#a761da48292f6a63e13fa8ab3d04ccf27',1,'chi_montecarlon::Solver']]],
   ['spar',['sPar',['../d3/d41/struct_c_s_t_event_a774b1e971becc6bb88870f67823d46f7.html#a774b1e971becc6bb88870f67823d46f7',1,'CSTEvent']]],
   ['spatial_5fdiscr_5fmethod',['spatial_discr_method',['../d5/dd4/classchi__mesh_1_1_field_function_interpolation_a40c865ef553f3a71107f5627f112f9f9.html#a40c865ef553f3a71107f5627f112f9f9',1,'chi_mesh::FieldFunctionInterpolation']]],
   ['spatial_5fdiscretization',['spatial_discretization',['../df/de9/classchi__physics_1_1_field_function_aeff0fc9e298aa96c5871f0e746eb02b3.html#aeff0fc9e298aa96c5871f0e746eb02b3',1,'chi_physics::FieldFunction']]],
@@ -29,5 +34,9 @@ var searchData=
   ['surface_5fmesh',['surface_mesh',['../d3/d1c/classchi__mesh_1_1_mesh_continuum_a45f60d8fe8704125bf92975406dd71e4.html#a45f60d8fe8704125bf92975406dd71e4',1,'chi_mesh::MeshContinuum']]],
   ['surface_5fmesh_5fcollections',['surface_mesh_collections',['../d2/d10/classchi__mesh_1_1_mesh_handler_a6addb216863c6901e0b6e3902ba6dc84.html#a6addb216863c6901e0b6e3902ba6dc84',1,'chi_mesh::MeshHandler']]],
   ['surface_5fmesh_5fstack',['surface_mesh_stack',['../d2/d10/classchi__mesh_1_1_mesh_handler_a475f8284a657eb829c717e28ca5ca009.html#a475f8284a657eb829c717e28ca5ca009',1,'chi_mesh::MeshHandler']]],
-  ['surface_5fmesher',['surface_mesher',['../d2/d10/classchi__mesh_1_1_mesh_handler_a6c20d5a7fa8f88824376319d141f535e.html#a6c20d5a7fa8f88824376319d141f535e',1,'chi_mesh::MeshHandler']]]
+  ['surface_5fmesher',['surface_mesher',['../d2/d10/classchi__mesh_1_1_mesh_handler_a6c20d5a7fa8f88824376319d141f535e.html#a6c20d5a7fa8f88824376319d141f535e',1,'chi_mesh::MeshHandler']]],
+  ['sweep_5fchunk',['sweep_chunk',['../dd/dbc/struct_k_s_p_data_context_abd599cff22c778296aadc9e122544e72.html#abd599cff22c778296aadc9e122544e72',1,'KSPDataContext']]],
+  ['sweep_5feager_5flimit',['sweep_eager_limit',['../d2/d06/struct_l_b_s_options_aa9c2f05f9dae147cf38e16aa51d831a6.html#aa9c2f05f9dae147cf38e16aa51d831a6',1,'LBSOptions']]],
+  ['sweep_5forderings',['sweep_orderings',['../d9/db8/class_linear_boltzman_solver_a1333e303b07be4ac3dd606f5206bced4.html#a1333e303b07be4ac3dd606f5206bced4',1,'LinearBoltzmanSolver']]],
+  ['sweepscheduler',['sweepScheduler',['../dd/dbc/struct_k_s_p_data_context_a3f109b516750700aa2d5660f38a3f0bc.html#a3f109b516750700aa2d5660f38a3f0bc',1,'KSPDataContext']]]
 ];

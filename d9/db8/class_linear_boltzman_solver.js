@@ -25,7 +25,6 @@ var class_linear_boltzman_solver =
     [ "InitTGDSA", "d9/db8/class_linear_boltzman_solver_aee381f8b6eb20d9efec12059f25bb9df.html#aee381f8b6eb20d9efec12059f25bb9df", null ],
     [ "InitWGDSA", "d9/db8/class_linear_boltzman_solver_ab489686f6a4d0957911250c499e0a64b.html#ab489686f6a4d0957911250c499e0a64b", null ],
     [ "ResetSweepOrderings", "d9/db8/class_linear_boltzman_solver_aa5a6a04bd6112d5f76493716dec45818.html#aa5a6a04bd6112d5f76493716dec45818", null ],
-    [ "SetPartitioning", "d9/db8/class_linear_boltzman_solver_a6225630dd2dd15d92f2ea8ccb8eff4c3.html#a6225630dd2dd15d92f2ea8ccb8eff4c3", null ],
     [ "SetSource", "d9/db8/class_linear_boltzman_solver_a3c2816444b0c9c74199fb4fc107d3293.html#a3c2816444b0c9c74199fb4fc107d3293", null ],
     [ "SetSweepChunk", "d9/db8/class_linear_boltzman_solver_ae4909d4625bbca0cb5ccaf7308171fca.html#ae4909d4625bbca0cb5ccaf7308171fca", null ],
     [ "SolveGroupset", "d9/db8/class_linear_boltzman_solver_a759f5cd4c966a1575f34f48cbc041273.html#a759f5cd4c966a1575f34f48cbc041273", null ],
