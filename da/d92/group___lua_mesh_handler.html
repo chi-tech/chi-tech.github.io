@@ -95,14 +95,103 @@ $(document).ready(function(){initNavTree('da/d92/group___lua_mesh_handler.html',
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga57ff5c2bfc92cd5cf102d26a3611bd3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler_ga57ff5c2bfc92cd5cf102d26a3611bd3e.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chi_lua::chiMeshHandlerCreate</a> ()</td></tr>
+<tr class="memitem:ga57ff5c2bfc92cd5cf102d26a3611bd3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chi_lua::chiMeshHandlerCreate</a> ()</td></tr>
 <tr class="separator:ga57ff5c2bfc92cd5cf102d26a3611bd3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga01c22aafd561a48846ad2807a5c2f647"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler_ga01c22aafd561a48846ad2807a5c2f647.html#ga01c22aafd561a48846ad2807a5c2f647">chi_lua::chiMeshHandlerSetCurrent</a> (int HandlerHandler)</td></tr>
+<tr class="memitem:ga01c22aafd561a48846ad2807a5c2f647"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga01c22aafd561a48846ad2807a5c2f647">chi_lua::chiMeshHandlerSetCurrent</a> (int HandlerHandler)</td></tr>
 <tr class="separator:ga01c22aafd561a48846ad2807a5c2f647"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga53866f6ba77f93ba5d15fe9d13eb3986"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler_ga53866f6ba77f93ba5d15fe9d13eb3986.html#ga53866f6ba77f93ba5d15fe9d13eb3986">chi_lua::chiMeshHandlerGetSurfaceFromCollection</a> (int CollectionHandle, int SurfaceIndex)</td></tr>
+<tr class="memitem:ga53866f6ba77f93ba5d15fe9d13eb3986"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga53866f6ba77f93ba5d15fe9d13eb3986">chi_lua::chiMeshHandlerGetSurfaceFromCollection</a> (int CollectionHandle, int SurfaceIndex)</td></tr>
 <tr class="separator:ga53866f6ba77f93ba5d15fe9d13eb3986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga57ff5c2bfc92cd5cf102d26a3611bd3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga57ff5c2bfc92cd5cf102d26a3611bd3e">&#9670;&nbsp;</a></span>chiMeshHandlerCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiMeshHandlerCreate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a mesh handler and sets it as "current". </p><dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created mesh handler.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00397">397</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="ga53866f6ba77f93ba5d15fe9d13eb3986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga53866f6ba77f93ba5d15fe9d13eb3986">&#9670;&nbsp;</a></span>chiMeshHandlerGetSurfaceFromCollection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiMeshHandlerGetSurfaceFromCollection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>CollectionHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>SurfaceIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets an index to a surface from a SurfaceMeshCollection.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">CollectionHandle</td><td>int Handle to the SurfaceMeshCollection </td></tr>
+    <tr><td class="paramname">SurfaceIndex</td><td>int Index of the SurfaceMesh in the collection. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the extracted SurfaceMesh.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00416">416</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="ga01c22aafd561a48846ad2807a5c2f647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga01c22aafd561a48846ad2807a5c2f647">&#9670;&nbsp;</a></span>chiMeshHandlerSetCurrent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiMeshHandlerSetCurrent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>HandlerHandler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the given mesh handler as "current". </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">HandlerHandler</td><td>int Handle to the mesh handler previously created with a call to chiMeshHandlerCreate.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00404">404</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

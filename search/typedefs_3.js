@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['patch',['Patch',['../d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay_ac2ddf76b1ea3db9f8d12a3c5ca14ac7d.html#ac2ddf76b1ea3db9f8d12a3c5ca14ac7d',1,'chi_mesh::SurfaceMesherDelaunay']]]
+  ['edgelist',['EdgeList',['../d0/d81/namespacechi__mesh.html#a92edf6c4546a123997d7ef476f777281',1,'chi_mesh']]],
+  ['edgeloopcollection',['EdgeLoopCollection',['../d0/d81/namespacechi__mesh.html#a506916afe5f66719a771ebba664bb9a8',1,'chi_mesh']]],
+  ['executionpermission',['ExecutionPermission',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#acfa57bd987462ac915139416fd63d84d',1,'chi_mesh::sweep_management']]]
 ];

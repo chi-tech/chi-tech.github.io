@@ -95,12 +95,82 @@ $(document).ready(function(){initNavTree('d5/dac/group___lua_line_mesh.html','..
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga3ec7ef07f330a4f62aaaaa2e5b1231cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dac/group___lua_line_mesh_ga3ec7ef07f330a4f62aaaaa2e5b1231cf.html#ga3ec7ef07f330a4f62aaaaa2e5b1231cf">chi_lua::chiLineMeshCreateFromArray</a> (LuaTable Table)</td></tr>
+<tr class="memitem:ga3ec7ef07f330a4f62aaaaa2e5b1231cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dac/group___lua_line_mesh.html#ga3ec7ef07f330a4f62aaaaa2e5b1231cf">chi_lua::chiLineMeshCreateFromArray</a> (LuaTable Table)</td></tr>
 <tr class="separator:ga3ec7ef07f330a4f62aaaaa2e5b1231cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8c45007cb7b9d892ccb4d660e0c574a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dac/group___lua_line_mesh_ga8c45007cb7b9d892ccb4d660e0c574a8.html#ga8c45007cb7b9d892ccb4d660e0c574a8">chi_lua::chiLineMeshCreateFromLoop</a> (int LoopCollectionHandle, int LoopHandle)</td></tr>
+<tr class="memitem:ga8c45007cb7b9d892ccb4d660e0c574a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dac/group___lua_line_mesh.html#ga8c45007cb7b9d892ccb4d660e0c574a8">chi_lua::chiLineMeshCreateFromLoop</a> (int LoopCollectionHandle, int LoopHandle)</td></tr>
 <tr class="separator:ga8c45007cb7b9d892ccb4d660e0c574a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga3ec7ef07f330a4f62aaaaa2e5b1231cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3ec7ef07f330a4f62aaaaa2e5b1231cf">&#9670;&nbsp;</a></span>chiLineMeshCreateFromArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiLineMeshCreateFromArray </td>
+          <td>(</td>
+          <td class="paramtype">LuaTable&#160;</td>
+          <td class="paramname"><em>Table</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a new line mesh from a lua array.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Table</td><td>LuaTable A lua table containing all the vertices of the mesh. ## Example <div class="fragment"><div class="line">mesh = {0.0,0.1,0.2,0.3,0.5}</div><div class="line">line_mesh = <a class="code" href="../../d5/dac/group___lua_line_mesh.html#ga3ec7ef07f330a4f62aaaaa2e5b1231cf">chiLineMeshCreateFromArray</a>(mesh)</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created line mesh.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00432">432</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="ga8c45007cb7b9d892ccb4d660e0c574a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c45007cb7b9d892ccb4d660e0c574a8">&#9670;&nbsp;</a></span>chiLineMeshCreateFromLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiLineMeshCreateFromLoop </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>LoopCollectionHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>LoopHandle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a new line mesh from a loop.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LoopCollectionHandle</td><td>int Handle to the Loop collection. </td></tr>
+    <tr><td class="paramname">LoopHandle</td><td>int Handle to the loop inside the collection. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created line mesh.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00444">444</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

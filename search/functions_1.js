@@ -1,13 +1,21 @@
 var searchData=
 [
-  ['boundary',['Boundary',['../db/dc8/classchi__mesh_1_1_boundary_a380663b55d7ad8e2cda17e83d8a69a30.html#a380663b55d7ad8e2cda17e83d8a69a30',1,'chi_mesh::Boundary']]],
-  ['boundarydirichlet',['BoundaryDirichlet',['../de/d2e/classchi__diffusion_1_1_boundary_dirichlet_abaf44d08e2972703abbab1563b28435e.html#abaf44d08e2972703abbab1563b28435e',1,'chi_diffusion::BoundaryDirichlet']]],
-  ['boundaryreflecting',['BoundaryReflecting',['../d1/d0c/classchi__diffusion_1_1_boundary_reflecting_a395c9e96099d8f9b2e9a78d465fb0783.html#a395c9e96099d8f9b2e9a78d465fb0783',1,'chi_diffusion::BoundaryReflecting']]],
-  ['boundaryrobin',['BoundaryRobin',['../d6/d58/classchi__diffusion_1_1_boundary_robin_aea4a74ad50ef157fd02e9c5eedf4d5d4.html#aea4a74ad50ef157fd02e9c5eedf4d5d4',1,'chi_diffusion::BoundaryRobin']]],
-  ['boundarysource',['BoundarySource',['../d3/dfb/classchi__montecarlon_1_1_boundary_source_a30b7c6213f2d78396af2260e2b9355c9.html#a30b7c6213f2d78396af2260e2b9355c9',1,'chi_montecarlon::BoundarySource']]],
-  ['broadcastnodes',['BroadcastNodes',['../dc/d52/class_chi_m_p_i_afa0fc0c570b457786df4950d32ac10e3.html#afa0fc0c570b457786df4950d32ac10e3',1,'ChiMPI']]],
-  ['broadcasttrifaces',['BroadcastTriFaces',['../dc/d52/class_chi_m_p_i_ad00a3b362fd0b0ebfc5acf91b53eb646.html#ad00a3b362fd0b0ebfc5acf91b53eb646',1,'ChiMPI']]],
-  ['builddiscmomoperator',['BuildDiscMomOperator',['../d7/d7d/class_l_b_s_groupset_aa2c0ba3a7738cc10282169e4d61d3e42.html#aa2c0ba3a7738cc10282169e4d61d3e42',1,'LBSGroupset']]],
-  ['buildmomdiscoperator',['BuildMomDiscOperator',['../d7/d7d/class_l_b_s_groupset_acd705e9d1b885972a6c9b0f870a2f516.html#acd705e9d1b885972a6c9b0f870a2f516',1,'LBSGroupset']]],
-  ['buildsubsets',['BuildSubsets',['../d7/d7d/class_l_b_s_groupset_afee1b9067ff51ffc1efc6f786ac2cf5c.html#afee1b9067ff51ffc1efc6f786ac2cf5c',1,'LBSGroupset']]]
+  ['begin',['begin',['../dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html#a58fc7a2147b9c864ac6bdc7ed4ca11ac',1,'chi_mesh::MeshContinuum::LocalCells']]],
+  ['boundary',['Boundary',['../db/dc8/classchi__mesh_1_1_boundary.html#a380663b55d7ad8e2cda17e83d8a69a30',1,'chi_mesh::Boundary']]],
+  ['boundarybase',['BoundaryBase',['../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a269e6b10984d52d631b18598ca5e7bc7',1,'chi_mesh::sweep_management::BoundaryBase']]],
+  ['boundarydirichlet',['BoundaryDirichlet',['../de/d2e/classchi__diffusion_1_1_boundary_dirichlet.html#abaf44d08e2972703abbab1563b28435e',1,'chi_diffusion::BoundaryDirichlet']]],
+  ['boundaryincidentheterogenous',['BoundaryIncidentHeterogenous',['../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a872dff1b17772c0b66bee6f752075e3b',1,'chi_mesh::sweep_management::BoundaryIncidentHeterogenous']]],
+  ['boundaryincidenthomogenous',['BoundaryIncidentHomogenous',['../d2/dbc/classchi__mesh_1_1sweep__management_1_1_boundary_incident_homogenous.html#a392dd2a2d846af257ddaa64a7e1e56d6',1,'chi_mesh::sweep_management::BoundaryIncidentHomogenous']]],
+  ['boundaryreflecting',['BoundaryReflecting',['../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#aeb101b19575ebb4fe3d7aaead154ef25',1,'chi_mesh::sweep_management::BoundaryReflecting::BoundaryReflecting()'],['../d1/d0c/classchi__diffusion_1_1_boundary_reflecting.html#a395c9e96099d8f9b2e9a78d465fb0783',1,'chi_diffusion::BoundaryReflecting::BoundaryReflecting()']]],
+  ['boundaryrobin',['BoundaryRobin',['../d6/d58/classchi__diffusion_1_1_boundary_robin.html#aea4a74ad50ef157fd02e9c5eedf4d5d4',1,'chi_diffusion::BoundaryRobin']]],
+  ['boundaryvacuum',['BoundaryVacuum',['../dc/d41/classchi__mesh_1_1sweep__management_1_1_boundary_vacuum.html#ad02ce3a084ac4166540c320686669f0f',1,'chi_mesh::sweep_management::BoundaryVacuum']]],
+  ['broadcastnodes',['BroadcastNodes',['../dc/d52/class_chi_m_p_i.html#afa0fc0c570b457786df4950d32ac10e3',1,'ChiMPI']]],
+  ['broadcasttrifaces',['BroadcastTriFaces',['../dc/d52/class_chi_m_p_i.html#ad00a3b362fd0b0ebfc5acf91b53eb646',1,'ChiMPI']]],
+  ['buildcfemsparsitypattern',['BuildCFEMSparsityPattern',['../de/dfb/class_spatial_discretization___p_w_l.html#a1d16532f1f2f03a8d0260b2a79c7e4d6',1,'SpatialDiscretization_PWL']]],
+  ['builddfemsparsitypattern',['BuildDFEMSparsityPattern',['../de/dfb/class_spatial_discretization___p_w_l.html#a1ca82e7f70eebab2f01d5d6be148a440',1,'SpatialDiscretization_PWL']]],
+  ['builddiscmomoperator',['BuildDiscMomOperator',['../d7/d7d/class_l_b_s_groupset.html#aa2c0ba3a7738cc10282169e4d61d3e42',1,'LBSGroupset']]],
+  ['buildfacehistograminfo',['BuildFaceHistogramInfo',['../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a2fdf6f98473e391c1c394d59c0b20c5c',1,'chi_mesh::MeshContinuum']]],
+  ['buildmessagestructure',['BuildMessageStructure',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#aef1a05ad5170f195fda268d0edbc2bdf',1,'chi_mesh::sweep_management::SweepBuffer']]],
+  ['buildmomdiscoperator',['BuildMomDiscOperator',['../d7/d7d/class_l_b_s_groupset.html#acd705e9d1b885972a6c9b0f870a2f516',1,'LBSGroupset']]],
+  ['buildsubsets',['BuildSubsets',['../d7/d7d/class_l_b_s_groupset.html#afee1b9067ff51ffc1efc6f786ac2cf5c',1,'LBSGroupset']]]
 ];

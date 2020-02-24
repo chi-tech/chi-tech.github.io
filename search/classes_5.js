@@ -2,7 +2,6 @@ var searchData=
 [
   ['face',['Face',['../d4/dd2/structchi__mesh_1_1_face.html',1,'chi_mesh']]],
   ['feface_5fdata',['FEface_data',['../dc/dee/struct_f_eface__data.html',1,'']]],
-  ['fefacedofmapping',['FEFaceDOFMapping',['../d8/d45/struct_f_e_face_d_o_f_mapping.html',1,'']]],
   ['fenodefacemap',['FEnodeFaceMap',['../d2/d73/struct_f_enode_face_map.html',1,'']]],
   ['fenodemap',['FEnodeMap',['../d7/d59/struct_f_enode_map.html',1,'']]],
   ['fenodesidemap',['FEnodeSideMap',['../dc/dfe/struct_f_enode_side_map.html',1,'']]],
@@ -18,5 +17,5 @@ var searchData=
   ['fieldfunctioninterpolationline',['FieldFunctionInterpolationLine',['../d5/d14/classchi__mesh_1_1_field_function_interpolation_line.html',1,'chi_mesh']]],
   ['fieldfunctioninterpolationslice',['FieldFunctionInterpolationSlice',['../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html',1,'chi_mesh']]],
   ['fieldfunctioninterpolationvolume',['FieldFunctionInterpolationVolume',['../db/dd5/classchi__mesh_1_1_field_function_interpolation_volume.html',1,'chi_mesh']]],
-  ['fluds',['FLUDS',['../d3/d5e/classchi__mesh_1_1_sweep_management_1_1_f_l_u_d_s.html',1,'chi_mesh::SweepManagement']]]
+  ['fluds',['FLUDS',['../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html',1,'chi_mesh::sweep_management']]]
 ];

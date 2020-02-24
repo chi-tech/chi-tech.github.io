@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['surfacemeshcollection',['SurfaceMeshCollection',['../d2/d10/classchi__mesh_1_1_mesh_handler_ab5f23e0685a0a6de76458380a279968f.html#ab5f23e0685a0a6de76458380a279968f',1,'chi_mesh::MeshHandler']]]
+  ['gssubset',['GsSubSet',['../d9/dc3/lbs__groupset_8h.html#a0d44fd13ecd4e245aff54517db32b61d',1,'lbs_groupset.h']]]
 ];

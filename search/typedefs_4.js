@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['regiondelaunycontexts',['RegionDelaunyContexts',['../d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay_a63c74e9536e672b5b7a02d2b0470eb12.html#a63c74e9536e672b5b7a02d2b0470eb12',1,'chi_mesh::SurfaceMesherDelaunay']]]
+  ['facevec',['FaceVec',['../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#ad5e8df2e983227a520f07e53d808ccf5',1,'chi_mesh::sweep_management::BoundaryReflecting']]]
 ];

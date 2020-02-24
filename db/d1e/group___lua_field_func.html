@@ -95,11 +95,11 @@ $(document).ready(function(){initNavTree('db/d1e/group___lua_field_func.html','.
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga90fbbe861dc52ff693603d0983edeb5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func_ga90fbbe861dc52ff693603d0983edeb5c.html#ga90fbbe861dc52ff693603d0983edeb5c">chiExportFieldFunctionToVTK</a> (lua_State *L)</td></tr>
+<tr class="memitem:ga90fbbe861dc52ff693603d0983edeb5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#ga90fbbe861dc52ff693603d0983edeb5c">chiExportFieldFunctionToVTK</a> (lua_State *L)</td></tr>
 <tr class="separator:ga90fbbe861dc52ff693603d0983edeb5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaddfd8941956d0822567bf965bd764270"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func_gaddfd8941956d0822567bf965bd764270.html#gaddfd8941956d0822567bf965bd764270">chiExportFieldFunctionToVTKG</a> (lua_State *L)</td></tr>
+<tr class="memitem:gaddfd8941956d0822567bf965bd764270"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#gaddfd8941956d0822567bf965bd764270">chiExportFieldFunctionToVTKG</a> (lua_State *L)</td></tr>
 <tr class="separator:gaddfd8941956d0822567bf965bd764270"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaae118d08d9f6b352d9b7ac12655380a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func_gaae118d08d9f6b352d9b7ac12655380a2.html#gaae118d08d9f6b352d9b7ac12655380a2">chiExportMultiFieldFunctionToVTKG</a> (lua_State *L)</td></tr>
+<tr class="memitem:gaae118d08d9f6b352d9b7ac12655380a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#gaae118d08d9f6b352d9b7ac12655380a2">chiExportMultiFieldFunctionToVTKG</a> (lua_State *L)</td></tr>
 <tr class="separator:gaae118d08d9f6b352d9b7ac12655380a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -109,6 +109,96 @@ Functions</h2></td></tr>
 </div>
 <p>In the most basic sense a field function is the values of a field as a function of space and time. This can be as simple as cell average values located at cell centroids. Such a simple case would be a field function that is defined by a set of delta functions, therefore the field is only defined at those specific values via its associated grid (mesh). In practice however the cell average values will have do be constant on an entire cell and any position within a given cell should give this value. Hence the association with a discretization method. Given a grid and a discretization method the value of a field function can be obtained without the need to know any information of where that value is stored or from which physics solver this value was populated.</p>
 <p>This concept will be developed further. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga90fbbe861dc52ff693603d0983edeb5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga90fbbe861dc52ff693603d0983edeb5c">&#9670;&nbsp;</a></span>chiExportFieldFunctionToVTK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chiExportFieldFunctionToVTK </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Exports a field function to VTK format.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FFHandle</td><td>int Global handle to the field function. </td></tr>
+    <tr><td class="paramname">BaseName</td><td>char Base name for the exported file.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d70/physics__exportfieldfunc_8cc_source.html#l00020">20</a> of file <a class="el" href="../../d2/d70/physics__exportfieldfunc_8cc_source.html">physics_exportfieldfunc.cc</a>.</p>
+
+</div>
+</div>
+<a id="gaddfd8941956d0822567bf965bd764270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaddfd8941956d0822567bf965bd764270">&#9670;&nbsp;</a></span>chiExportFieldFunctionToVTKG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chiExportFieldFunctionToVTKG </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Exports all the groups in a field function to VTK format.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FFHandle</td><td>int Global handle to the field function. </td></tr>
+    <tr><td class="paramname">BaseName</td><td>char Base name for the exported file.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d70/physics__exportfieldfunc_8cc_source.html#l00057">57</a> of file <a class="el" href="../../d2/d70/physics__exportfieldfunc_8cc_source.html">physics_exportfieldfunc.cc</a>.</p>
+
+</div>
+</div>
+<a id="gaae118d08d9f6b352d9b7ac12655380a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaae118d08d9f6b352d9b7ac12655380a2">&#9670;&nbsp;</a></span>chiExportMultiFieldFunctionToVTKG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chiExportMultiFieldFunctionToVTKG </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Exports all the groups in a field function to VTK format and also attached another field function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FFHandle</td><td>int Global handle to the field function. </td></tr>
+    <tr><td class="paramname">FFHandle2</td><td>int The Global handle to the secondary field function. </td></tr>
+    <tr><td class="paramname">BaseName</td><td>char Base name for the exported file. </td></tr>
+    <tr><td class="paramname">FieldName</td><td>char Optional field name.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d70/physics__exportfieldfunc_8cc_source.html#l00097">97</a> of file <a class="el" href="../../d2/d70/physics__exportfieldfunc_8cc_source.html">physics_exportfieldfunc.cc</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,14 +1,16 @@
 var _programmer_manual =
 [
-    [ "Development  Cycle", "d7/db6/_programmer_manual.html#devman_sec0", [
-      [ "Package update cycle - Primary: August", "d7/db6/_programmer_manual.html#devman_sec0_1", null ],
-      [ "Development update cycle - Every 2 weeks", "d7/db6/_programmer_manual.html#devman_sec0_2", null ],
-      [ "Regression tests", "d7/db6/_programmer_manual.html#devman_sec0_4", null ],
-      [ "Code review criterion", "d7/db6/_programmer_manual.html#devman_sec0_5", null ]
-    ] ],
-    [ "Documentation quality", "d7/db6/_programmer_manual.html#devman_sec0_6", [
-      [ "Code annotation", "d7/db6/_programmer_manual.html#devman_sec0_7", null ],
-      [ "Technical documentation", "d7/db6/_programmer_manual.html#devman_sec0_8", null ]
+    [ "Development Cycle", "dc/d94/_dev_man_dev_cycle.html", [
+      [ "Development  Cycle", "dc/d94/_dev_man_dev_cycle.html#devman_sec0", [
+        [ "Package update cycle - Primary: August", "dc/d94/_dev_man_dev_cycle.html#devman_sec0_1", null ],
+        [ "Development update cycle - Every 2 weeks", "dc/d94/_dev_man_dev_cycle.html#devman_sec0_2", null ],
+        [ "Regression tests", "dc/d94/_dev_man_dev_cycle.html#devman_sec0_4", null ],
+        [ "Code review criterion", "dc/d94/_dev_man_dev_cycle.html#devman_sec0_5", null ]
+      ] ],
+      [ "Documentation quality", "dc/d94/_dev_man_dev_cycle.html#devman_sec0_6", [
+        [ "Code annotation", "dc/d94/_dev_man_dev_cycle.html#devman_sec0_7", null ],
+        [ "Technical documentation", "dc/d94/_dev_man_dev_cycle.html#devman_sec0_8", null ]
+      ] ]
     ] ],
     [ "Adding code to the system", "dc/d4c/_dev_man_adding_code.html", [
       [ "So you want to add your own code", "dc/d4c/_dev_man_adding_code.html#devman0_sec0", [
@@ -38,7 +40,8 @@ var _programmer_manual =
         [ "Boolean expressions", "db/d7b/_dev_man_code_conventions.html#devman1_sec3_1", null ],
         [ "Constructor Initializer lists", "db/d7b/_dev_man_code_conventions.html#devman1_sec3_2", null ],
         [ "Operators", "db/d7b/_dev_man_code_conventions.html#devman1_sec3_3", null ],
-        [ "Templates and Casts", "db/d7b/_dev_man_code_conventions.html#devman1_sec3_4", null ]
+        [ "Templates", "db/d7b/_dev_man_code_conventions.html#devman1_sec3_4", null ],
+        [ "Casting", "db/d7b/_dev_man_code_conventions.html#devman1_sec3_5", null ]
       ] ]
     ] ],
     [ "Global variables", "d6/dfd/_dev_man_global_vars.html", [
@@ -50,5 +53,8 @@ var _programmer_manual =
     ] ],
     [ "Adding Lua-input to the system", "d1/d86/_dev_man_adding_lua.html", [
       [ "Adding Lua-input", "d1/d86/_dev_man_adding_lua.html#devman03_sec0", null ]
+    ] ],
+    [ "The structure of meshes", "dd/d1a/_dev_man_meshes.html", [
+      [ "General structure of meshes", "dd/d1a/_dev_man_meshes.html#devman4_sec0", null ]
     ] ]
 ];

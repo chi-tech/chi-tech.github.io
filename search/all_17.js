@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['x',['x',['../d3/dd1/structchi__math_1_1_quadrature_point_x_y_a18381a1205aa4e87f035409aaf730552.html#a18381a1205aa4e87f035409aaf730552',1,'chi_math::QuadraturePointXY::x()'],['../d7/d1c/structchi__math_1_1_quadrature_point_x_y_z_af333dab06857b528594666951c2b3302.html#af333dab06857b528594666951c2b3302',1,'chi_math::QuadraturePointXYZ::x()'],['../da/d85/structchi__mesh_1_1_vector_a64c79169048a841a37010df63e539849.html#a64c79169048a841a37010df63e539849',1,'chi_mesh::Vector::x()'],['../d3/dd4/classchi__mesh_1_1_sweep_management_1_1_sweep_chunk_a5e200419c47c0417212a035c5523147a.html#a5e200419c47c0417212a035c5523147a',1,'chi_mesh::SweepManagement::SweepChunk::x()'],['../d6/d32/classchi__diffusion_1_1_solver_a689aec2d33208ec9667e487741439ccb.html#a689aec2d33208ec9667e487741439ccb',1,'chi_diffusion::Solver::x()']]],
-  ['x0',['x0',['../db/d06/classchi__mesh_1_1_sphere_logical_volume_ae0b7359f4a34c2e1e15e1c683d027098.html#ae0b7359f4a34c2e1e15e1c683d027098',1,'chi_mesh::SphereLogicalVolume::x0()'],['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume_a7fcf77b81bfca196797386bb25799275.html#a7fcf77b81bfca196797386bb25799275',1,'chi_mesh::RCCLogicalVolume::x0()']]],
-  ['x_5ftemp',['x_temp',['../dd/dbc/struct_k_s_p_data_context_a2f100e582e211db7c335f660cf426e82.html#a2f100e582e211db7c335f660cf426e82',1,'KSPDataContext']]],
-  ['xcuts',['xcuts',['../df/d7e/classchi__mesh_1_1_surface_mesher_a53fd20fc38acf19dfe2cb71812fa2098.html#a53fd20fc38acf19dfe2cb71812fa2098',1,'chi_mesh::SurfaceMesher']]],
-  ['xg',['xg',['../d6/d32/classchi__diffusion_1_1_solver_aae908b04a386edce8fa01a3476b0bcda.html#aae908b04a386edce8fa01a3476b0bcda',1,'chi_diffusion::Solver']]],
-  ['xi_5fjfull_5fg',['xi_Jfull_g',['../d3/dff/classchi__physics_1_1_transport_cross_sections_a7b946cc5b3f9c60adc209495205d20b2.html#a7b946cc5b3f9c60adc209495205d20b2',1,'chi_physics::TransportCrossSections']]],
-  ['xi_5fjpart_5fg',['xi_Jpart_g',['../d3/dff/classchi__physics_1_1_transport_cross_sections_ac2d72476750b4996d6d607b955043c79.html#ac2d72476750b4996d6d607b955043c79',1,'chi_physics::TransportCrossSections']]],
-  ['xmax',['xmax',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume_a80662af2bb204647a1656cdca727eb78.html#a80662af2bb204647a1656cdca727eb78',1,'chi_mesh::RPPLogicalVolume']]],
-  ['xmin',['xmin',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume_af0e11f3acf780a7290ce6be1f8e5fafa.html#af0e11f3acf780a7290ce6be1f8e5fafa',1,'chi_mesh::RPPLogicalVolume']]],
-  ['xn_5fwn',['xn_wn',['../d5/d5e/class_golub_fischer_a4f4e9eede67964c8cd810aa3c5ba92a4.html#a4f4e9eede67964c8cd810aa3c5ba92a4',1,'GolubFischer']]],
-  ['xref',['xref',['../d6/d32/classchi__diffusion_1_1_solver_a76f92051696cc6f831ea486dd0e6c857.html#a76f92051696cc6f831ea486dd0e6c857',1,'chi_diffusion::Solver']]],
-  ['xs_5fid',['xs_id',['../da/d28/class_l_b_s_cell_view_full_a183ebdc6fe9456bd1256aae21894dd41.html#a183ebdc6fe9456bd1256aae21894dd41',1,'LBSCellViewFull']]],
-  ['xsize',['xSize',['../dd/d62/class_chi_console_a59a89b7cfb3517518dea16f0cd058c12.html#a59a89b7cfb3517518dea16f0cd058c12',1,'ChiConsole']]],
-  ['xy_5fpartition_5findices',['xy_partition_indices',['../d8/d7c/classchi__mesh_1_1_cell_a11cec3e31fd9a0b8a3b0c105bcaa241c.html#a11cec3e31fd9a0b8a3b0c105bcaa241c',1,'chi_mesh::Cell']]],
-  ['xyz_5fpartition_5findices',['xyz_partition_indices',['../d8/d7c/classchi__mesh_1_1_cell_aa51051eb505b7f7bb7e0dba1a6bc7497.html#aa51051eb505b7f7bb7e0dba1a6bc7497',1,'chi_mesh::Cell']]]
+  ['weights',['weights',['../d5/df7/classchi__math_1_1_product_quadrature.html#a7d1527d0c2b31a4f131ed555b16de9ac',1,'chi_math::ProductQuadrature::weights()'],['../d3/dbf/classchi__math_1_1_quadrature.html#ae769e4fbd25d20f9c43a3945bfeb1efa',1,'chi_math::Quadrature::weights()'],['../d8/d57/classchi__math_1_1_quadrature_tetrahedron.html#aa050382c17b1ff7c39c69ebcc8b276d2',1,'chi_math::QuadratureTetrahedron::weights()'],['../d0/d61/classchi__math_1_1_quadrature_triangle.html#a7e7f2bc387e9aa80b3c5e50729b1c44d',1,'chi_math::QuadratureTriangle::weights()'],['../db/d9e/struct_f_f_i_face_edge_intersection.html#a4db6d5727ccfe843af071492c70e7cb4',1,'FFIFaceEdgeIntersection::weights()']]],
+  ['wgdsa_5fcell_5fdof_5farray_5faddress',['wgdsa_cell_dof_array_address',['../d7/d7d/class_l_b_s_groupset.html#acdda8cc9b94bc7a712bf653f89bacc8b',1,'LBSGroupset']]],
+  ['wgdsa_5fmax_5fiters',['wgdsa_max_iters',['../d7/d7d/class_l_b_s_groupset.html#aea72146b8eca829751202e103ebcade3',1,'LBSGroupset']]],
+  ['wgdsa_5fsolver',['wgdsa_solver',['../d7/d7d/class_l_b_s_groupset.html#a66682d358962485b2e036f31e5dcbff9',1,'LBSGroupset']]],
+  ['wgdsa_5fstring',['wgdsa_string',['../d7/d7d/class_l_b_s_groupset.html#ab8de58e773ab57d9bde342b760512d96',1,'LBSGroupset']]],
+  ['wgdsa_5ftol',['wgdsa_tol',['../d7/d7d/class_l_b_s_groupset.html#af34a87684f8a08d90c83d1666107e892',1,'LBSGroupset']]],
+  ['wgdsa_5fverbose',['wgdsa_verbose',['../d7/d7d/class_l_b_s_groupset.html#a7badbfc9142712ce84542d4f1c4a7495',1,'LBSGroupset']]],
+  ['wn',['wn',['../d7/d3d/class_l_b_s_sweep_chunk_p_w_l.html#a1d39e1b08c7eb0ca19d276afe1b26c06',1,'LBSSweepChunkPWL']]],
+  ['world_5fgroup',['world_group',['../dd/d3f/class_chi_m_p_i_communicator_set.html#acb3b8f87aa592533ab704cf212022067',1,'ChiMPICommunicatorSet']]],
+  ['write_5frestart_5fdata',['write_restart_data',['../da/d88/struct_linear_boltzman_1_1_options.html#a29b3706fa43f0991f39ea76b67384785',1,'LinearBoltzman::Options']]],
+  ['write_5frestart_5ffile_5fbase',['write_restart_file_base',['../da/d88/struct_linear_boltzman_1_1_options.html#a0c33613e74536715d96e88e29edf13a1',1,'LinearBoltzman::Options']]],
+  ['write_5frestart_5ffolder_5fname',['write_restart_folder_name',['../da/d88/struct_linear_boltzman_1_1_options.html#a5870b4800d1aaa336304e3bef494dfd9',1,'LinearBoltzman::Options']]],
+  ['write_5frestart_5finterval',['write_restart_interval',['../da/d88/struct_linear_boltzman_1_1_options.html#ae1cd46cc0e3ab4a3e9ef3b8e3288d575',1,'LinearBoltzman::Options']]],
+  ['writepvtu',['WritePVTU',['../df/de9/classchi__physics_1_1_field_function.html#afbaf139b55ac8b9d76076d6878a27402',1,'chi_physics::FieldFunction']]],
+  ['writerestartdata',['WriteRestartData',['../d7/d26/class_linear_boltzman_1_1_solver.html#ae14cdcefdb651eca23de835bf33f186c',1,'LinearBoltzman::Solver']]]
 ];

@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['k',['k',['../dc/d32/classchi__physics_1_1_thermal_conductivity_a9e5cdaf0a96acbedaac9274711d55e16.html#a9e5cdaf0a96acbedaac9274711d55e16',1,'chi_physics::ThermalConductivity']]],
-  ['krylov_5fsolver',['krylov_solver',['../dd/dbc/struct_k_s_p_data_context_a73b47e90ee6a96f8a789f2a2c1bf77c7.html#a73b47e90ee6a96f8a789f2a2c1bf77c7',1,'KSPDataContext']]],
-  ['ksp',['ksp',['../d6/d32/classchi__diffusion_1_1_solver_af641af815549ee181e932a903d9cd420.html#af641af815549ee181e932a903d9cd420',1,'chi_diffusion::Solver']]],
-  ['kspdatacontext',['KSPDataContext',['../dd/dbc/struct_k_s_p_data_context.html',1,'']]],
-  ['kspg',['kspg',['../d6/d32/classchi__diffusion_1_1_solver_abfb932ae7b2842f148b5d3962f855190.html#abfb932ae7b2842f148b5d3962f855190',1,'chi_diffusion::Solver']]],
-  ['kspmonitorachitech',['KSPMonitorAChiTech',['../de/d73/namespacechi__diffusion_a635822a5015ed1d1d9adf91dc95fcc4d.html#a635822a5015ed1d1d9adf91dc95fcc4d',1,'chi_diffusion']]]
+  ['j',['J',['../d5/d8e/struct_f_eside__data2d.html#ad3ff7f2b6ab2bc2a19b80f59980ee01d',1,'FEside_data2d::J()'],['../de/d04/struct_f_eside__data3d.html#a66b0c3c5ff7d59c82797fd2939741c7b',1,'FEside_data3d::J()']]],
+  ['jinv',['Jinv',['../d5/d8e/struct_f_eside__data2d.html#a7b390fe837bf43fd34479e46991657c8',1,'FEside_data2d::Jinv()'],['../de/d04/struct_f_eside__data3d.html#a6324f1da50d9ba14d1553c0aeb36a89d',1,'FEside_data3d::Jinv()']]],
+  ['jtinv',['JTinv',['../d5/d8e/struct_f_eside__data2d.html#a29e1c95e3c01f9bf2dadc98cd25d2c2c',1,'FEside_data2d::JTinv()'],['../de/d04/struct_f_eside__data3d.html#a8495bb20a44415ec535975425776d16c',1,'FEside_data3d::JTinv()']]],
+  ['junctionindex',['junctionIndex',['../d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html#a1ba3cf0a9ddaebc2b39cb711fcbbfc00',1,'HYDRO_BOUNDARY']]]
 ];

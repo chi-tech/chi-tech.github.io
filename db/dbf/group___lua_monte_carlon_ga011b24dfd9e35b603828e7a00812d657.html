@@ -125,10 +125,21 @@ $(document).ready(function(){initNavTree('db/dbf/group___lua_monte_carlon_ga011b
  Source on a surface boundary. Expects to be followed by the boundary number.<br />
 <br />
 MC_RESID_SRC<br />
- Uses a residual source from a field function. Expects to be followed by a field function handle. </p><dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created source.</dd></dl>
+ Uses a residual source from a field function. Expects to be followed by a field function handle. This will sample the residual.<br />
+<br />
+MC_RESID_SRC_SU<br />
+ Same as above but will sample the domain uniformly and adjust the weights of each individual particle.<br />
+<br />
+MC_RESID_MOC<br />
+ Uses a field-function for computing a residual but uses the Method of Characteristics to trace the uncollided portions.<br />
+<br />
+MC_RESID_MOC_SU<br />
+ Same as above but will sample the domain uniformly and adjust the weights of each individual particle.<br />
+<br />
+</p><dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created source.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00768">768</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00782">782</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

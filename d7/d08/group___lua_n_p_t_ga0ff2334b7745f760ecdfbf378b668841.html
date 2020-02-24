@@ -129,27 +129,6 @@ PARTITION_METHOD<br />
 BOUNDARY_CONDITION<br />
  Boundary condition type. See BoundaryIdentify.<br />
 <br />
-GROUPSET_ITERATIVEMETHOD<br />
- Iterative method to be used by a given groupset. Expects to be followed by the groupset handle and IterativeMethod.<br />
-<br />
-GROUPSET_TOLERANCE<br />
- Either Residual or pointwise tolerance to use for iterative method. Expects to be followed by the groupset handle and a float. Default is 1.0e-6<br />
-<br />
-GROUPSET_MAXITERATIONS<br />
- Maximum iterations for groupset solve. Exepects to be followed by the groupset handle and an integer. Default is 1000.<br />
-<br />
-GROUPSET_GMRESRESTART_INTVL<br />
- Number of GMRES iterations to accumulate Krylov vectors before restarting the accumulation. Default 10.<br />
-<br />
-GROUPSET_SUBSETS<br />
- Number of subsets to use for groupset. Default 1. Expects to be followed by groupset handle and integer amount of subsets.<br />
-<br />
-GROUPSET_WGDSA<br />
- Expects to be followed by a boolean flag. If true then Within-Group Diffusion Synthetic Acceleration will be applied. Default false.<br />
-<br />
-GROUPSET_TGDSA<br />
- Expects to be followed by a boolean flag. If true then Two-Grid Diffusion Synthetic Acceleration will be applied. Default false.<br />
-<br />
 SCATTERING_ORDER<br />
  Defines the level of harmonic expansion for the scattering source.Default 1. Expects to be followed by an integer.<br />
 <br />
@@ -171,21 +150,15 @@ ZMIN = Bottom boundary <br />
 </p><h3>LBSBoundaryType</h3>
 <p>Specifies the type of boundary. Depending on the type this argument needs to be followed by one or more values. Note: By default all boundaries are type VACUUM.<br />
 <br />
-VACUUM<br />
+LBSBoundaryTypes.VACUUM<br />
 Specifies a vaccuum boundary condition. It is not followed by any value.<br />
 <br />
 <br />
-INCIDENT_ISOTROPIC<br />
-Incident isotropic flux. This argument needs to be followed by a lua table index 1 to G where G is the amount of energy groups. Note internally this is mapped as 0 to G-1. </p><h3>IterativeMethod</h3>
-<p>NPT_CLASSICRICHARDSON<br />
-Classic richardson iteration or otherwise known as source iteration.<br />
-<br />
-NPT_GMRES<br />
-Generalized Minimized Residual. Very robust method for converging solutions.<br />
-</p><h3>Note on the Eager limit</h3>
+LBSBoundaryTypes.INCIDENT_ISOTROPIC<br />
+Incident isotropic flux. This argument needs to be followed by a lua table index 1 to G where G is the amount of energy groups. Note internally this is mapped as 0 to G-1. </p><h3>Note on the Eager limit</h3>
 <p>The eager limit is the message size limit before which non-blocking MPI send calls will execute without waiting for a matching receive call. The limit is platform dependent but in general 64 kb. Some systems have 32 kb as a limit and therefore we use that as a default limit in ChiTech. There is a fine interplay between message size and the shear amount of messages that will be sent. In general smaller messages tend to be more efficient, however, when there are too many small messages being sent around the communication system on the given platform will start to suffer. One can gain a small amount of parallel efficiency by lowering this limit, however, there is a point where the parallel efficiency will actually get worse so use with caution. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01032">1032</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00943">943</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

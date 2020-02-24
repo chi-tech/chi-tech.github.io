@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['edgelist',['EdgeList',['../d0/d81/namespacechi__mesh_a92edf6c4546a123997d7ef476f777281.html#a92edf6c4546a123997d7ef476f777281',1,'chi_mesh']]],
-  ['edgeloopcollection',['EdgeLoopCollection',['../d0/d81/namespacechi__mesh_a506916afe5f66719a771ebba664bb9a8.html#a506916afe5f66719a771ebba664bb9a8',1,'chi_mesh']]]
+  ['angleagg',['AngleAgg',['../d9/dc3/lbs__groupset_8h.html#ac35f268df3d7e79803bde48721bd50dc',1,'lbs_groupset.h']]],
+  ['angsubset',['AngSubSet',['../d9/dc3/lbs__groupset_8h.html#a60f61566154c7daf05bd404014fce04d',1,'lbs_groupset.h']]],
+  ['angvec',['AngVec',['../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#ae6db3c67bdb403fe2cba56917c8b48e5',1,'chi_mesh::sweep_management::BoundaryReflecting']]]
 ];

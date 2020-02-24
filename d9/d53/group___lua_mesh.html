@@ -106,6 +106,8 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:da/d92/group___lua_mesh_handler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler.html">Mesh Handler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d9/db8/group___lua_mesh_macros"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db8/group___lua_mesh_macros.html">Mesh Macros</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:df/dda/group___lua_region"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dda/group___lua_region.html">Regions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:db/dc8/group___lua_surface_mesh"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html">Surface Meshes</a></td></tr>
@@ -117,13 +119,60 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga11ba7bfa75925eedaad8b0520f0d5167"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d53/group___lua_mesh_ga11ba7bfa75925eedaad8b0520f0d5167.html#ga11ba7bfa75925eedaad8b0520f0d5167">chi_lua::chiEdgeLoopSplitByAngle</a> (int LoopCollectionHandle, int LoopHandle, double Angle)</td></tr>
+<tr class="memitem:ga11ba7bfa75925eedaad8b0520f0d5167"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d53/group___lua_mesh.html#ga11ba7bfa75925eedaad8b0520f0d5167">chi_lua::chiEdgeLoopSplitByAngle</a> (int LoopCollectionHandle, int LoopHandle, double Angle)</td></tr>
 <tr class="separator:ga11ba7bfa75925eedaad8b0520f0d5167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2>Mesh Handling</h2>
-<p>Meshing in ChiTech is made available via the <a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a> namespace. All instances of entities are stored within a handler (<a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a>). A mesh handler is created with a call to <a class="el" href="../../da/d92/group___lua_mesh_handler_ga57ff5c2bfc92cd5cf102d26a3611bd3e.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate()</a>. </p><div class="fragment"><div class="line"><a class="code" href="../../da/d92/group___lua_mesh_handler_ga57ff5c2bfc92cd5cf102d26a3611bd3e.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div></div><!-- fragment --> <h2>Predefined 2D Mesh Setup Example</h2>
-<div class="fragment"><div class="line"><a class="code" href="../../da/d92/group___lua_mesh_handler_ga57ff5c2bfc92cd5cf102d26a3611bd3e.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div><div class="line">--</div><div class="line">newSurfMesh = <a class="code" href="../../db/dc8/group___lua_surface_mesh_ga5b4ae0e72dd9dd3a8bef427883aea5a1.html#ga5b4ae0e72dd9dd3a8bef427883aea5a1">chiSurfaceMeshCreate</a>();</div><div class="line"><a class="code" href="../../db/dc8/group___lua_surface_mesh_ga60251857e39dcfe2867a6fb5c2cade15.html#ga60251857e39dcfe2867a6fb5c2cade15">chiSurfaceMeshImportFromOBJFile</a>(newSurfMesh,<span class="stringliteral">&quot;CHI_RESOURCES/TestObjects/SquareMesh2x2.obj&quot;</span>)</div><div class="line">loops,loop_count = <a class="code" href="../../db/dc8/group___lua_surface_mesh_ga5aa9ce8cee2a125d0b651bdc486aef8a.html#ga5aa9ce8cee2a125d0b651bdc486aef8a">chiSurfaceMeshGetEdgeLoops</a>(newSurfMesh)</div><div class="line">--</div><div class="line">--</div><div class="line">line_mesh = {};</div><div class="line">line_mesh_count = 0;</div><div class="line">--</div><div class="line"><span class="keywordflow">for</span> k=1,loop_count <span class="keywordflow">do</span></div><div class="line">  split_loops,split_count = <a class="code" href="../../d9/d53/group___lua_mesh_ga11ba7bfa75925eedaad8b0520f0d5167.html#ga11ba7bfa75925eedaad8b0520f0d5167">chiEdgeLoopSplitByAngle</a>(loops,k-1);</div><div class="line">  <span class="keywordflow">for</span> m=1,split_count <span class="keywordflow">do</span></div><div class="line">    line_mesh_count = line_mesh_count + 1;</div><div class="line">    line_mesh[line_mesh_count] = <a class="code" href="../../d5/dac/group___lua_line_mesh_ga8c45007cb7b9d892ccb4d660e0c574a8.html#ga8c45007cb7b9d892ccb4d660e0c574a8">chiLineMeshCreateFromLoop</a>(split_loops,m-1);</div><div class="line">  end</div><div class="line">--</div><div class="line">end</div></div><!-- fragment --> </div><!-- contents -->
+<p>Meshing in <a class="el" href="../../d5/d49/class_chi_tech.html">ChiTech</a> is made available via the <a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a> namespace. All instances of entities are stored within a handler (<a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a>). A mesh handler is created with a call to <a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate()</a>. </p><div class="fragment"><div class="line"><a class="code" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div></div><!-- fragment --> <h2>Predefined 2D Mesh Setup Example</h2>
+<div class="fragment"><div class="line"><a class="code" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div><div class="line">--</div><div class="line">newSurfMesh = <a class="code" href="../../db/dc8/group___lua_surface_mesh.html#ga5b4ae0e72dd9dd3a8bef427883aea5a1">chiSurfaceMeshCreate</a>();</div><div class="line"><a class="code" href="../../db/dc8/group___lua_surface_mesh.html#ga60251857e39dcfe2867a6fb5c2cade15">chiSurfaceMeshImportFromOBJFile</a>(newSurfMesh,<span class="stringliteral">&quot;CHI_RESOURCES/TestObjects/SquareMesh2x2.obj&quot;</span>)</div><div class="line">loops,loop_count = <a class="code" href="../../db/dc8/group___lua_surface_mesh.html#ga5aa9ce8cee2a125d0b651bdc486aef8a">chiSurfaceMeshGetEdgeLoops</a>(newSurfMesh)</div><div class="line">--</div><div class="line">--</div><div class="line">line_mesh = {};</div><div class="line">line_mesh_count = 0;</div><div class="line">--</div><div class="line"><span class="keywordflow">for</span> k=1,loop_count <span class="keywordflow">do</span></div><div class="line">  split_loops,split_count = <a class="code" href="../../d9/d53/group___lua_mesh.html#ga11ba7bfa75925eedaad8b0520f0d5167">chiEdgeLoopSplitByAngle</a>(loops,k-1);</div><div class="line">  <span class="keywordflow">for</span> m=1,split_count <span class="keywordflow">do</span></div><div class="line">    line_mesh_count = line_mesh_count + 1;</div><div class="line">    line_mesh[line_mesh_count] = <a class="code" href="../../d5/dac/group___lua_line_mesh.html#ga8c45007cb7b9d892ccb4d660e0c574a8">chiLineMeshCreateFromLoop</a>(split_loops,m-1);</div><div class="line">  end</div><div class="line">--</div><div class="line">end</div></div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a id="ga11ba7bfa75925eedaad8b0520f0d5167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11ba7bfa75925eedaad8b0520f0d5167">&#9670;&nbsp;</a></span>chiEdgeLoopSplitByAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiEdgeLoopSplitByAngle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>LoopCollectionHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>LoopHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Splits an edge loop into edges if they differ by a certain angle. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LoopCollectionHandle</td><td>int Handle to the Loop collection. </td></tr>
+    <tr><td class="paramname">LoopHandle</td><td>int Handle to the loop inside the collection. </td></tr>
+    <tr><td class="paramname">Angle</td><td>double (Optional) Value of the angle by which to split. Default 1 deg. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Handle int. Handle to the newly created LoopCollection.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00085">85</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

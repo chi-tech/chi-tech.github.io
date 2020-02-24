@@ -1,6 +1,6 @@
 var namespacechi__mesh_1_1_sweep_management =
 [
-    [ "AngleAggregation", "d0/de5/structchi__mesh_1_1_sweep_management_1_1_angle_aggregation.html", "d0/de5/structchi__mesh_1_1_sweep_management_1_1_angle_aggregation" ],
+    [ "AngleAggregation", "df/dc8/classchi__mesh_1_1_sweep_management_1_1_angle_aggregation.html", "df/dc8/classchi__mesh_1_1_sweep_management_1_1_angle_aggregation" ],
     [ "AngleSet", "d9/d2e/classchi__mesh_1_1_sweep_management_1_1_angle_set.html", "d9/d2e/classchi__mesh_1_1_sweep_management_1_1_angle_set" ],
     [ "AngleSetGroup", "d9/d19/classchi__mesh_1_1_sweep_management_1_1_angle_set_group.html", "d9/d19/classchi__mesh_1_1_sweep_management_1_1_angle_set_group" ],
     [ "FLUDS", "d3/d5e/classchi__mesh_1_1_sweep_management_1_1_f_l_u_d_s.html", "d3/d5e/classchi__mesh_1_1_sweep_management_1_1_f_l_u_d_s" ],

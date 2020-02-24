@@ -95,12 +95,146 @@ $(document).ready(function(){initNavTree('de/d37/group___lua_quadrature.html','.
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga09519b0cd9acba1733c0b16e1e032129"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature_ga09519b0cd9acba1733c0b16e1e032129.html#ga09519b0cd9acba1733c0b16e1e032129">chi_lua::chiCreateProductQuadrature</a> (int QuadratureType, int Np, int Na)</td></tr>
-<tr class="separator:ga09519b0cd9acba1733c0b16e1e032129"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3a7a47b6f96398f795d4564ca202a891"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature_ga3a7a47b6f96398f795d4564ca202a891.html#ga3a7a47b6f96398f795d4564ca202a891">chi_lua::chiCreateQuadrature</a> (int QuadratureType, int NumberOfPoints)</td></tr>
-<tr class="separator:ga3a7a47b6f96398f795d4564ca202a891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9600f3a9c8ef7a0f97a27d7317ebb3b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#ga9600f3a9c8ef7a0f97a27d7317ebb3b3">chi_lua::chiCreateProductQuadrature</a> (int QuadratureType, varying values)</td></tr>
+<tr class="separator:ga9600f3a9c8ef7a0f97a27d7317ebb3b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8fde37d24b96f988753a7f18827d11f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#gab8fde37d24b96f988753a7f18827d11f">chi_lua::chiGetProductQuadrature</a> (int QuadHandle)</td></tr>
+<tr class="separator:gab8fde37d24b96f988753a7f18827d11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac86eefa7c0cf1f1210c072be2a733280"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#gac86eefa7c0cf1f1210c072be2a733280">chi_lua::chiCreateQuadrature</a> (int QuadratureType, int NumberOfPoints, bool VerboseFlag)</td></tr>
+<tr class="separator:gac86eefa7c0cf1f1210c072be2a733280"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga9600f3a9c8ef7a0f97a27d7317ebb3b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9600f3a9c8ef7a0f97a27d7317ebb3b3">&#9670;&nbsp;</a></span>chiCreateProductQuadrature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiCreateProductQuadrature </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>QuadratureType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">varying&#160;</td>
+          <td class="paramname"><em>values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a Product-quadrature.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuadratureType</td><td>int Quadrature identifier. </td></tr>
+    <tr><td class="paramname">values</td><td>varying Varying options based on the quadrature type. <h2>_</h2>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<h3>QuadratureType:</h3>
+<p>GAUSS_LEGENDRE<br />
+ Gauss-Legendre quadrature for the polar angles and no quadrature rule for the azimuthal angle. Suitable only for 1D simulations. Expects to be followed by the number of angles Np. Optionally a verbosity flag can be added.<br />
+<br />
+GAUSS_LEGENDRE_LEGENDRE<br />
+ Gauss-Legendre quadrature for both the polar and azimuthal dimension. Expects to be followed by number of Azimuthal and Polar angles. Optionally a verbosity flag can be added.<br />
+<br />
+GAUSS_LEGENDRE_CHEBYSHEV<br />
+ Gauss-Legendre quadrature for the polar angle but Gauss-Chebyshev for the azimuthal angle. Expects to be followed by number of Azimuthal and Polar angles. Optionally a verbosity flag can be added.<br />
+<br />
+CUSTOM_QUADRATURE<br />
+ Expects to be followed by three lua tables. The first table is an array, of length Na, of the azimuthal angles (radians). The second table is an array, of length Np, of the polar angles (radians). The third table is an array, of length Na*Np, and contains the weight associated with each angle pair. Optionally a verbosity flag can be added.<br />
+<br />
+</p><dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00030">30</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="gac86eefa7c0cf1f1210c072be2a733280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac86eefa7c0cf1f1210c072be2a733280">&#9670;&nbsp;</a></span>chiCreateQuadrature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiCreateQuadrature </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>QuadratureType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>NumberOfPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>VerboseFlag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a quadrature.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuadratureType</td><td>int Quadrature identifier. </td></tr>
+    <tr><td class="paramname">NumberOfPoints</td><td>int Number of quadrature points. </td></tr>
+    <tr><td class="paramname">VerboseFlag</td><td>bool As the name implies. Default: false. <h2>_</h2>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<h3>QuadratureType:</h3>
+<p>GAUSS_LEGENDRE = Gauss-Legendre quadrature. GAUSS_CHEBYSHEV = Gauss-Chebyshev quadrature. </p><dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created quadrature rule</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00054">54</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="gab8fde37d24b96f988753a7f18827d11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab8fde37d24b96f988753a7f18827d11f">&#9670;&nbsp;</a></span>chiGetProductQuadrature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiGetProductQuadrature </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>QuadHandle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the values of a product quadrature </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuadHandle</td><td>int Handle to an existing product quadrature. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Table A lua table with each entry being another table with entries .weight .polar .azimuthal.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00038">38</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

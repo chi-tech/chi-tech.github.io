@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['randomnumbergenerator',['RandomNumberGenerator',['../de/d32/classchi__montecarlon_1_1_random_number_generator.html',1,'chi_montecarlon']]],
-  ['rcclogicalvolume',['RCCLogicalVolume',['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html',1,'chi_mesh']]],
-  ['region',['Region',['../d1/d9a/classchi__mesh_1_1_region.html',1,'chi_mesh']]],
-  ['residualsource',['ResidualSource',['../d7/d03/classchi__montecarlon_1_1_residual_source.html',1,'chi_montecarlon']]],
-  ['rpplogicalvolume',['RPPLogicalVolume',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html',1,'chi_mesh']]]
+  ['quadrature',['Quadrature',['../d3/dbf/classchi__math_1_1_quadrature.html',1,'chi_math']]],
+  ['quadraturegausschebyshev',['QuadratureGaussChebyshev',['../d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev.html',1,'chi_math']]],
+  ['quadraturegausslegendre',['QuadratureGaussLegendre',['../d3/d07/classchi__math_1_1_quadrature_gauss_legendre.html',1,'chi_math']]],
+  ['quadraturepointphitheta',['QuadraturePointPhiTheta',['../dc/d9c/structchi__math_1_1_quadrature_point_phi_theta.html',1,'chi_math']]],
+  ['quadraturepointxy',['QuadraturePointXY',['../d3/dd1/structchi__math_1_1_quadrature_point_x_y.html',1,'chi_math']]],
+  ['quadraturepointxyz',['QuadraturePointXYZ',['../d7/d1c/structchi__math_1_1_quadrature_point_x_y_z.html',1,'chi_math']]],
+  ['quadraturetetrahedron',['QuadratureTetrahedron',['../d8/d57/classchi__math_1_1_quadrature_tetrahedron.html',1,'chi_math']]],
+  ['quadraturetriangle',['QuadratureTriangle',['../d0/d61/classchi__math_1_1_quadrature_triangle.html',1,'chi_math']]]
 ];

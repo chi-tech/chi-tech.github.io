@@ -88,7 +88,8 @@ $(document).ready(function(){initNavTree('d1/d7a/class_slab_f_e_view.html','../.
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a>  </div>
+<a href="#pub-attribs">Data Fields</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">SlabFEView Class Reference</div>  </div>
 </div><!--header-->
@@ -107,42 +108,355 @@ Inheritance diagram for SlabFEView:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af532e697b2f06337ea14a6aec57145bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view_af532e697b2f06337ea14a6aec57145bc.html#af532e697b2f06337ea14a6aec57145bc">SlabFEView</a> (<a class="el" href="../../da/dd2/classchi__mesh_1_1_cell_slab.html">chi_mesh::CellSlab</a> *slab_cell, <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> *vol_continuum)</td></tr>
+<tr class="memitem:af532e697b2f06337ea14a6aec57145bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view.html#af532e697b2f06337ea14a6aec57145bc">SlabFEView</a> (<a class="el" href="../../da/dd2/classchi__mesh_1_1_cell_slab.html">chi_mesh::CellSlab</a> *slab_cell, <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> *vol_continuum)</td></tr>
 <tr class="separator:af532e697b2f06337ea14a6aec57145bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ccaca92c33b45af58a0ff7818f4d1c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view_a1ccaca92c33b45af58a0ff7818f4d1c4.html#a1ccaca92c33b45af58a0ff7818f4d1c4">Shape_x</a> (int i, <a class="el" href="../../da/d85/structchi__mesh_1_1_vector.html">chi_mesh::Vector</a> xyz)</td></tr>
-<tr class="separator:a1ccaca92c33b45af58a0ff7818f4d1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a7b12f39ca1269114a9f117cfd8d1f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view.html#a23a7b12f39ca1269114a9f117cfd8d1f">ShapeValue</a> (const int i, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;xyz) override</td></tr>
+<tr class="separator:a23a7b12f39ca1269114a9f117cfd8d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5967ae38fc091ab040d29ae082ef526"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view.html#ac5967ae38fc091ab040d29ae082ef526">ShapeValues</a> (const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;xyz, std::vector&lt; double &gt; &amp;shape_values) override</td></tr>
+<tr class="separator:ac5967ae38fc091ab040d29ae082ef526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e8397687ca3c53d4e4ddbd4dff4cf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view.html#ad1e8397687ca3c53d4e4ddbd4dff4cf4">GradShapeValue</a> (const int i, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;xyz) override</td></tr>
+<tr class="separator:ad1e8397687ca3c53d4e4ddbd4dff4cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d73c58576b45f250a3492de45775b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view.html#ab6d73c58576b45f250a3492de45775b3">GradShapeValues</a> (const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;xyz, std::vector&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt; &amp;gradshape_values) override</td></tr>
+<tr class="separator:ab6d73c58576b45f250a3492de45775b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_cell_f_e_view"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cell_f_e_view')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d8/d0f/class_cell_f_e_view.html">CellFEView</a></td></tr>
-<tr class="memitem:a2c494aef10970d1462580083f84863b3 inherit pub_methods_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view_a2c494aef10970d1462580083f84863b3.html#a2c494aef10970d1462580083f84863b3">CellFEView</a> (int num_dofs)</td></tr>
+<tr class="memitem:a2c494aef10970d1462580083f84863b3 inherit pub_methods_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#a2c494aef10970d1462580083f84863b3">CellFEView</a> (int num_dofs)</td></tr>
 <tr class="separator:a2c494aef10970d1462580083f84863b3 inherit pub_methods_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc986b534cc81505104bb4440a627e9 inherit pub_methods_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#adfc986b534cc81505104bb4440a627e9">~CellFEView</a> ()</td></tr>
+<tr class="separator:adfc986b534cc81505104bb4440a627e9 inherit pub_methods_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ad828d921c3c462934592b614f79634b7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view_ad828d921c3c462934592b614f79634b7.html#ad828d921c3c462934592b614f79634b7">IntV_gradShapeI_gradShapeJ</a></td></tr>
-<tr class="separator:ad828d921c3c462934592b614f79634b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedd301d5ca05647650d1a4c348bf4da6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="../../da/d85/structchi__mesh_1_1_vector.html">chi_mesh::Vector</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view_aedd301d5ca05647650d1a4c348bf4da6.html#aedd301d5ca05647650d1a4c348bf4da6">IntV_shapeI_gradshapeJ</a></td></tr>
-<tr class="separator:aedd301d5ca05647650d1a4c348bf4da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90d7a1a7faeb6b466995d7987c2efae6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view_a90d7a1a7faeb6b466995d7987c2efae6.html#a90d7a1a7faeb6b466995d7987c2efae6">IntV_shapeI_shapeJ</a></td></tr>
-<tr class="separator:a90d7a1a7faeb6b466995d7987c2efae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac38777aab4331d1df503ec6c180418cb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view_ac38777aab4331d1df503ec6c180418cb.html#ac38777aab4331d1df503ec6c180418cb">IntV_shapeI</a></td></tr>
-<tr class="separator:ac38777aab4331d1df503ec6c180418cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5c0f7539e062d3c70f4b267d0e719a7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view_af5c0f7539e062d3c70f4b267d0e719a7.html#af5c0f7539e062d3c70f4b267d0e719a7">IntS_shapeI</a></td></tr>
-<tr class="separator:af5c0f7539e062d3c70f4b267d0e719a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8232810d5853f1cb39d35c30c2567670"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view_a8232810d5853f1cb39d35c30c2567670.html#a8232810d5853f1cb39d35c30c2567670">IntS_shapeI_shapeJ</a></td></tr>
-<tr class="separator:a8232810d5853f1cb39d35c30c2567670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f64f9b11c85801c41d7a6be94147e8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::vector&lt; <a class="el" href="../../da/d85/structchi__mesh_1_1_vector.html">chi_mesh::Vector</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view_a99f64f9b11c85801c41d7a6be94147e8.html#a99f64f9b11c85801c41d7a6be94147e8">IntS_shapeI_gradshapeJ</a></td></tr>
-<tr class="separator:a99f64f9b11c85801c41d7a6be94147e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad2cb35cf5385f83c9730f68b0044446"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view_aad2cb35cf5385f83c9730f68b0044446.html#aad2cb35cf5385f83c9730f68b0044446">h</a></td></tr>
+<tr class="memitem:aad2cb35cf5385f83c9730f68b0044446"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view.html#aad2cb35cf5385f83c9730f68b0044446">h</a></td></tr>
 <tr class="separator:aad2cb35cf5385f83c9730f68b0044446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_cell_f_e_view"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_cell_f_e_view')"><img src="../../closed.png" alt="-"/>&#160;Data Fields inherited from <a class="el" href="../../d8/d0f/class_cell_f_e_view.html">CellFEView</a></td></tr>
-<tr class="memitem:a5cb7534a876646f7da0a0a33cc7f0f5b inherit pub_attribs_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view_a5cb7534a876646f7da0a0a33cc7f0f5b.html#a5cb7534a876646f7da0a0a33cc7f0f5b">dofs</a></td></tr>
+<tr class="memitem:a5cb7534a876646f7da0a0a33cc7f0f5b inherit pub_attribs_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#a5cb7534a876646f7da0a0a33cc7f0f5b">dofs</a></td></tr>
 <tr class="separator:a5cb7534a876646f7da0a0a33cc7f0f5b inherit pub_attribs_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee84b0bbe5a4ae0bd110490e5681ccc0 inherit pub_attribs_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#aee84b0bbe5a4ae0bd110490e5681ccc0">IntV_gradShapeI_gradShapeJ</a></td></tr>
+<tr class="separator:aee84b0bbe5a4ae0bd110490e5681ccc0 inherit pub_attribs_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a225e4185f8493566c9adf5b99f5d7637 inherit pub_attribs_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#a225e4185f8493566c9adf5b99f5d7637">IntV_shapeI_gradshapeJ</a></td></tr>
+<tr class="separator:a225e4185f8493566c9adf5b99f5d7637 inherit pub_attribs_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6297cc4257d13489500b9b84281cd8fb inherit pub_attribs_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#a6297cc4257d13489500b9b84281cd8fb">IntV_shapeI_shapeJ</a></td></tr>
+<tr class="separator:a6297cc4257d13489500b9b84281cd8fb inherit pub_attribs_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce36f3f592c21cf18ee0feee45f7de1 inherit pub_attribs_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#a5ce36f3f592c21cf18ee0feee45f7de1">IntV_shapeI</a></td></tr>
+<tr class="separator:a5ce36f3f592c21cf18ee0feee45f7de1 inherit pub_attribs_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abee6f3b11f26d8405fbc2eb422f06342 inherit pub_attribs_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::vector&lt; double &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#abee6f3b11f26d8405fbc2eb422f06342">IntS_shapeI_shapeJ</a></td></tr>
+<tr class="separator:abee6f3b11f26d8405fbc2eb422f06342 inherit pub_attribs_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a544f53600b327718bbb0a311ce2e9 inherit pub_attribs_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#a23a544f53600b327718bbb0a311ce2e9">IntS_shapeI</a></td></tr>
+<tr class="separator:a23a544f53600b327718bbb0a311ce2e9 inherit pub_attribs_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54847cca982b1666adca9780d821ddc9 inherit pub_attribs_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::vector&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#a54847cca982b1666adca9780d821ddc9">IntS_shapeI_gradshapeJ</a></td></tr>
+<tr class="separator:a54847cca982b1666adca9780d821ddc9 inherit pub_attribs_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addaa0ecd64b0bc9fe5d2942ad82036d8 inherit pub_attribs_class_cell_f_e_view"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html#addaa0ecd64b0bc9fe5d2942ad82036d8">face_dof_mappings</a></td></tr>
+<tr class="separator:addaa0ecd64b0bc9fe5d2942ad82036d8 inherit pub_attribs_class_cell_f_e_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a09e0f90325d3787b54bc4be820c06b99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view.html#a09e0f90325d3787b54bc4be820c06b99">grid</a></td></tr>
+<tr class="separator:a09e0f90325d3787b54bc4be820c06b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cbb847eb26bc4db9cb69d70a96bdb90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view.html#a5cbb847eb26bc4db9cb69d70a96bdb90">v0i</a></td></tr>
+<tr class="separator:a5cbb847eb26bc4db9cb69d70a96bdb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73927c9a8a0540222a366a431b88b1ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7a/class_slab_f_e_view.html#a73927c9a8a0540222a366a431b88b1ef">v1i</a></td></tr>
+<tr class="separator:a73927c9a8a0540222a366a431b88b1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Object for handling slab shaped piecewise linear shape functions. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d15/pwl__slab_8h_source.html#l00010">10</a> of file <a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a></li>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af532e697b2f06337ea14a6aec57145bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af532e697b2f06337ea14a6aec57145bc">&#9670;&nbsp;</a></span>SlabFEView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SlabFEView::SlabFEView </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/dd2/classchi__mesh_1_1_cell_slab.html">chi_mesh::CellSlab</a> *&#160;</td>
+          <td class="paramname"><em>slab_cell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> *&#160;</td>
+          <td class="paramname"><em>vol_continuum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor for a slab view. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d15/pwl__slab_8h_source.html#l00021">21</a> of file <a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad1e8397687ca3c53d4e4ddbd4dff4cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e8397687ca3c53d4e4ddbd4dff4cf4">&#9670;&nbsp;</a></span>GradShapeValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> SlabFEView::GradShapeValue </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>xyz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the evaluation of grad-shape function i at the supplied point. </p>
+
+<p>Reimplemented from <a class="el" href="../../d8/d0f/class_cell_f_e_view.html#afc87b0490352a4b3c5f337c7acf8e38d">CellFEView</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d15/pwl__slab_8h_source.html#l00182">182</a> of file <a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a>.</p>
+
+</div>
+</div>
+<a id="ab6d73c58576b45f250a3492de45775b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d73c58576b45f250a3492de45775b3">&#9670;&nbsp;</a></span>GradShapeValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SlabFEView::GradShapeValues </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>xyz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>gradshape_values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Populates shape_values with the value of each shape function's value evaluate at the supplied point. </p>
+
+<p>Reimplemented from <a class="el" href="../../d8/d0f/class_cell_f_e_view.html#aad02395bbfc0ee0cb99c2ff84e57ec57">CellFEView</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d15/pwl__slab_8h_source.html#l00193">193</a> of file <a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a>.</p>
+
+</div>
+</div>
+<a id="a23a7b12f39ca1269114a9f117cfd8d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a7b12f39ca1269114a9f117cfd8d1f">&#9670;&nbsp;</a></span>ShapeValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SlabFEView::ShapeValue </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>xyz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Shape function i evaluated at given point for the slab. </p>
+
+<p>Reimplemented from <a class="el" href="../../d8/d0f/class_cell_f_e_view.html#afe69685012ee4c14ec192499b8d0e655">CellFEView</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d15/pwl__slab_8h_source.html#l00121">121</a> of file <a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a>.</p>
+
+</div>
+</div>
+<a id="ac5967ae38fc091ab040d29ae082ef526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5967ae38fc091ab040d29ae082ef526">&#9670;&nbsp;</a></span>ShapeValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SlabFEView::ShapeValues </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>xyz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>shape_values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Populates shape_values with the value of each shape function's value evaluate at the supplied point. </p>
+
+<p>Reimplemented from <a class="el" href="../../d8/d0f/class_cell_f_e_view.html#a9f7feafb1822d4d4998f856dce9d7c32">CellFEView</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d15/pwl__slab_8h_source.html#l00149">149</a> of file <a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a09e0f90325d3787b54bc4be820c06b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e0f90325d3787b54bc4be820c06b99">&#9670;&nbsp;</a></span>grid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>* SlabFEView::grid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d15/pwl__slab_8h_source.html#l00013">13</a> of file <a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a>.</p>
+
+</div>
+</div>
+<a id="aad2cb35cf5385f83c9730f68b0044446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad2cb35cf5385f83c9730f68b0044446">&#9670;&nbsp;</a></span>h</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SlabFEView::h</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d15/pwl__slab_8h_source.html#l00017">17</a> of file <a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a>.</p>
+
+</div>
+</div>
+<a id="a5cbb847eb26bc4db9cb69d70a96bdb90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cbb847eb26bc4db9cb69d70a96bdb90">&#9670;&nbsp;</a></span>v0i</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SlabFEView::v0i</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d15/pwl__slab_8h_source.html#l00014">14</a> of file <a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a>.</p>
+
+</div>
+</div>
+<a id="a73927c9a8a0540222a366a431b88b1ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73927c9a8a0540222a366a431b88b1ef">&#9670;&nbsp;</a></span>v1i</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SlabFEView::v1i</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d15/pwl__slab_8h_source.html#l00015">15</a> of file <a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>CHI_TECH/ChiMath/SpatialDiscretization/PiecewiseLinear/CellViews/<a class="el" href="../../d4/d15/pwl__slab_8h_source.html">pwl_slab.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
