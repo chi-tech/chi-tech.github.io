@@ -10,5 +10,6 @@ var classchi__mesh_1_1_mesh_handler =
     [ "surface_mesh_collections", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a6addb216863c6901e0b6e3902ba6dc84", null ],
     [ "surface_mesh_stack", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a475f8284a657eb829c717e28ca5ca009", null ],
     [ "surface_mesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a6c20d5a7fa8f88824376319d141f535e", null ],
+    [ "unpartitionedmesh_stack", "d2/d10/classchi__mesh_1_1_mesh_handler.html#acb4af5be511166e9d85c3d18c5712272", null ],
     [ "volume_mesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a071cdfeda8d79ad0369e9712262f6a18", null ]
 ];

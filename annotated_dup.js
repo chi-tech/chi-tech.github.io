@@ -53,5 +53,6 @@ var annotated_dup =
     [ "SpatialDiscretization", "da/d2b/class_spatial_discretization.html", "da/d2b/class_spatial_discretization" ],
     [ "SpatialDiscretization_FV", "d1/d09/class_spatial_discretization___f_v.html", "d1/d09/class_spatial_discretization___f_v" ],
     [ "SpatialDiscretization_PWL", "de/dfb/class_spatial_discretization___p_w_l.html", "de/dfb/class_spatial_discretization___p_w_l" ],
-    [ "ThermoAlpha", "d6/d08/class_thermo_alpha.html", "d6/d08/class_thermo_alpha" ]
+    [ "ThermoAlpha", "d6/d08/class_thermo_alpha.html", "d6/d08/class_thermo_alpha" ],
+    [ "vtkCleanUnstructuredGrid", "d8/dce/classvtk_clean_unstructured_grid.html", "d8/dce/classvtk_clean_unstructured_grid" ]
 ];

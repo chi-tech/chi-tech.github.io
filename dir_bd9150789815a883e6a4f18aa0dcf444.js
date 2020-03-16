@@ -12,7 +12,8 @@ var dir_bd9150789815a883e6a4f18aa0dcf444 =
     [ "create_sweep_ordering.cc", "d5/de0/create__sweep__ordering_8cc.html", "d5/de0/create__sweep__ordering_8cc" ],
     [ "populate_cell_relationships.cc", "d2/dfc/populate__cell__relationships_8cc.html", "d2/dfc/populate__cell__relationships_8cc" ],
     [ "printsweepordering.cc", "da/d42/printsweepordering_8cc.html", null ],
-    [ "remove_glob_cyclicdep.cc", "d9/dc9/remove__glob__cyclicdep_8cc.html", "d9/dc9/remove__glob__cyclicdep_8cc" ],
+    [ "remove_global_cyclicdep.cc", "dd/d82/remove__global__cyclicdep_8cc.html", "dd/d82/remove__global__cyclicdep_8cc" ],
+    [ "remove_local_cyclicdep.cc", "d7/d45/remove__local__cyclicdep_8cc.html", "d7/d45/remove__local__cyclicdep_8cc" ],
     [ "sweep_namespace.h", "d1/d37/sweep__namespace_8h.html", "d1/d37/sweep__namespace_8h" ],
     [ "sweepchunk_base.h", "d1/dc1/sweepchunk__base_8h.html", [
       [ "SweepChunk", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk" ]

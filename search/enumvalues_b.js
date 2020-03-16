@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['pdt_5fxsfile',['PDT_XSFILE',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95af5fcb61ae4760a6d42c3ef7849aea51c',1,'chi_physics']]],
-  ['polar',['POLAR',['../d4/dfe/namespace_linear_boltzman.html#af8e2ee53c2c3b0a97ac5957929484536ac7cde0b1adf0598acd2b9ee165c02472',1,'LinearBoltzman']]],
-  ['polygon',['POLYGON',['../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9aecdc92bf56d960b73b02ee40125758bc',1,'chi_mesh']]],
-  ['polyhedron',['POLYHEDRON',['../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74',1,'chi_mesh']]]
+  ['matid_5ffromlogical',['MATID_FROMLOGICAL',['../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803',1,'chi_mesh']]],
+  ['max_5fmemory_5fusage',['MAX_MEMORY_USAGE',['../d8/d1a/class_chi_log.html#a130798199b3ef1ed34ece3857b6bbd24ab9dc787a6733a0ac3f0e40a931a9efb4',1,'ChiLog']]],
+  ['max_5fvalue',['MAX_VALUE',['../d8/d1a/class_chi_log.html#a79cc0a14ad518f04e8fe5e06656eba8fada539a37cfaec77691a36c791911208e',1,'ChiLog']]],
+  ['mesh_5fglobal',['MESH_GLOBAL',['../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a8be35b214a8a2227dda38881e16e35a0',1,'chi_mesh']]]
 ];

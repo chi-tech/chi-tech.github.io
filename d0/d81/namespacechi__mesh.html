@@ -170,6 +170,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html">SurfaceMeshLogicalVolume</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html">UnpartitionedMesh</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">Vector3</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html">VolumeMesher</a></td></tr>
@@ -179,6 +181,8 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html">VolumeMesherLinemesh1D</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html">VolumeMesherPredefined2D</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html">VolumeMesherPredefined3D</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -216,6 +220,30 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ac0040cc3dbd19fdbf7d5dc46e61a5ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff8e76f208eff98d2d3e9fe169edbf1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a3ff8e76f208eff98d2d3e9fe169edbf1">VolumeMesherType</a> { <a class="el" href="../../d0/d81/namespacechi__mesh.html#a3ff8e76f208eff98d2d3e9fe169edbf1a806a2ee28f749ad4a658b8a0b754b7de">LINEMESH1D</a> = 1, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a3ff8e76f208eff98d2d3e9fe169edbf1a548d5d929e5f87a5283e3e0b0fef6ab6">PREDEFINED2D</a> = 3, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a3ff8e76f208eff98d2d3e9fe169edbf1a0befd17b3ade34df1cc1ae7ecd38da20">EXTRUDER</a> = 4, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a3ff8e76f208eff98d2d3e9fe169edbf1a349c3c7e011b2ed8a9c60d161f1e5113">PREDEFINED3D</a> = 5
+ }</td></tr>
+<tr class="separator:a3ff8e76f208eff98d2d3e9fe169edbf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a496eecf9633f022b12704bc27a6726a5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5">VolumeMesherProperty</a> { <br />
+&#160;&#160;<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a29157e47118ce8eaa75b5e63346e3159">FORCE_POLYGONS</a> = 1, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a8be35b214a8a2227dda38881e16e35a0">MESH_GLOBAL</a> = 2, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5ad9c700b057e07dba8aff3a801ea69a97">PARTITION_Z</a> = 3, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a2f2be371ee12e5bf1f15a55f8997d7b4">PARTITION_Y</a> = 4, 
+<br />
+&#160;&#160;<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a6e8f0c3d6cf298a401e6a8a6d9b592d1">PARTITION_X</a> = 5, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5addc6d5db15b7e0dc08ab513179d9605e">CUTS_Z</a> = 6, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5ae63b21f1a550c17e040bb3ef61a6e25a">CUTS_Y</a> = 7, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5ac95a7b4eff4fbb448b25fe2571a4985c">CUTS_X</a> = 8, 
+<br />
+&#160;&#160;<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a704f523c928ce09f4a03ebc860c4064b">PARTITION_TYPE</a> = 9, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a7fa5319da678071d38e04d6f571f09f5">EXTRUSION_LAYER</a> = 10, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803">MATID_FROMLOGICAL</a> = 11, 
+<a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a7f91a4d4b8e9e23a94dfdc882c363285">BNDRYID_FROMLOGICAL</a> = 12
+<br />
+ }</td></tr>
+<tr class="separator:a496eecf9633f022b12704bc27a6726a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -409,6 +437,58 @@ Functions</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/ddd/cell_8h_source.html#l00010">10</a> of file <a class="el" href="../../d0/ddd/cell_8h_source.html">cell.h</a>.</p>
+
+</div>
+</div>
+<a id="a496eecf9633f022b12704bc27a6726a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a496eecf9633f022b12704bc27a6726a5">&#9670;&nbsp;</a></span>VolumeMesherProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5">chi_mesh::VolumeMesherProperty</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5a29157e47118ce8eaa75b5e63346e3159"></a>FORCE_POLYGONS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5a8be35b214a8a2227dda38881e16e35a0"></a>MESH_GLOBAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5ad9c700b057e07dba8aff3a801ea69a97"></a>PARTITION_Z&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5a2f2be371ee12e5bf1f15a55f8997d7b4"></a>PARTITION_Y&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5a6e8f0c3d6cf298a401e6a8a6d9b592d1"></a>PARTITION_X&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5addc6d5db15b7e0dc08ab513179d9605e"></a>CUTS_Z&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5ae63b21f1a550c17e040bb3ef61a6e25a"></a>CUTS_Y&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5ac95a7b4eff4fbb448b25fe2571a4985c"></a>CUTS_X&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5a704f523c928ce09f4a03ebc860c4064b"></a>PARTITION_TYPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5a7fa5319da678071d38e04d6f571f09f5"></a>EXTRUSION_LAYER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803"></a>MATID_FROMLOGICAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a496eecf9633f022b12704bc27a6726a5a7f91a4d4b8e9e23a94dfdc882c363285"></a>BNDRYID_FROMLOGICAL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dcb/chi__volumemesher_8h_source.html#l00020">20</a> of file <a class="el" href="../../dd/dcb/chi__volumemesher_8h_source.html">chi_volumemesher.h</a>.</p>
+
+</div>
+</div>
+<a id="a3ff8e76f208eff98d2d3e9fe169edbf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ff8e76f208eff98d2d3e9fe169edbf1">&#9670;&nbsp;</a></span>VolumeMesherType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d0/d81/namespacechi__mesh.html#a3ff8e76f208eff98d2d3e9fe169edbf1">chi_mesh::VolumeMesherType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3ff8e76f208eff98d2d3e9fe169edbf1a806a2ee28f749ad4a658b8a0b754b7de"></a>LINEMESH1D&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3ff8e76f208eff98d2d3e9fe169edbf1a548d5d929e5f87a5283e3e0b0fef6ab6"></a>PREDEFINED2D&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3ff8e76f208eff98d2d3e9fe169edbf1a0befd17b3ade34df1cc1ae7ecd38da20"></a>EXTRUDER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3ff8e76f208eff98d2d3e9fe169edbf1a349c3c7e011b2ed8a9c60d161f1e5113"></a>PREDEFINED3D&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dcb/chi__volumemesher_8h_source.html#l00013">13</a> of file <a class="el" href="../../dd/dcb/chi__volumemesher_8h_source.html">chi_volumemesher.h</a>.</p>
 
 </div>
 </div>

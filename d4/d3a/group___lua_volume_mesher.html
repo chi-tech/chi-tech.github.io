@@ -133,13 +133,14 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
  VOLUMEMESHER_LINEMESH1D = Creates 1D slab cells from a linemesh.<br />
  VOLUMEMESHER_PREDEFINED2D = No remeshing is performed.<br />
  VOLUMEMESHER_EXTRUDER = Extruder the first surface mesh found.<br />
+ VOLUMEMESHER_PREDEFINED3D = Create the mesh from the latest UnpartitionedMesh.<br />
  </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00531">531</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00534">534</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -160,7 +161,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 <p>Executes the volume meshing pipeline.</p>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00536">536</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00539">539</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -201,12 +202,17 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 <p>FORCE_POLYGONS = <b>PropertyValue:[bool]</b> Forces the 2D Meshing to use polygon cells even if the underlying surface mesh is triangles. Expects a boolean value.<br />
  EXTRUSION_LAYER = <b>PropertyValue:[double,(int),(char)]</b> Adds a layer to the extruder volume mesher if it exists. Expects 1 required parameter, the layer height, followed by 2 optional parameters: number of subdivisions (defaults to 1), and layer id (char)(defaults to nothing).<br />
  MESH_GLOBAL = <b>PropertyValue:[bool]</b> Generate/Read the full mesh at each location. Expects a boolean value [Default=true].<br />
- PARTITION_Z = <b>PropertyValue:[int]</b> Sets the pz partitioning parameters for the z direction.<br />
+ CUT_X = Adds a cut at the given x-value.<br />
+ CUT_Y = Adds a cut at the given y-value.<br />
+ CUT_Z = Adds a cut at the given z-value.<br />
+ PARTITION_X = <b>PropertyValue:[int]</b> Number of partitions in X.<br />
+ PARTITION_Y = <b>PropertyValue:[int]</b> Number of partitions in Y.<br />
+ PARTITION_Z = <b>PropertyValue:[int]</b> Number of partitions in Z.<br />
  MATID_FROMLOGICAL = <b>LogicalVolumeHandle:[int],Mat_id:[int], Sense:[bool](Optional, default:true)</b> Sets the material id of cells that meet the sense requirement for the given logical volume.<br />
  BNDRYID_FROMLOGICAL = <b>LogicalVolumeHandle:[int],Bndry_id:[int], Sense:[bool](Optional, default:true)</b> Sets the cell boundary id to the specified value for cells that meet the sense requirement for the given logical volume.<br />
  </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00566">566</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00573">573</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

@@ -41,7 +41,8 @@ var NAVTREE =
         [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ]
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
     [ "Data Structures", "annotated.html", [
@@ -77,18 +78,19 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839",
-"d2/db7/delaunay__patch__00__utils_8cc.html",
-"d3/dff/classchi__physics_1_1_transport_cross_sections.html#a84997a065caeb8e90e9572f55561782d",
-"d5/d8e/struct_f_eside__data2d.html#a296bec64cd896916fa7c18e482710ce0",
-"d6/d81/legendrepoly_8h.html#a584d116a16e18b7dcf058888e1f19a85",
-"d7/d7d/class_l_b_s_groupset.html#af34a87684f8a08d90c83d1666107e892",
-"d8/db6/structchi__math_1_1_c_d_f_sampler_1_1_sub_intvl.html#af5853cb8f99435e12622b21a26c150e6",
-"d9/dfa/group___lua_f_f_interpol.html",
-"db/d1e/group___lua_field_func.html#gaddfd8941956d0822567bf965bd764270",
-"dc/d72/chi__ffinter__line_8h.html#a43d6fe2303178e034b60a9c1a5fe26e8",
-"dd/d74/triangle__mesher_8h_source.html",
-"de/df0/classchi__mesh_1_1_volume_mesher.html#afa1336149bf5283d0c373a5eb771a75d",
-"functions_e.html"
+"d2/d98/chi__surfacemesh_8h_source.html",
+"d3/dff/classchi__physics_1_1_transport_cross_sections.html#a0d59f39203de1d10aa00b11fbde7615a",
+"d5/d49/class_chi_tech.html#aad21dc53f30a7a2e7101c61cd1985e66",
+"d6/d56/raytrace__utils_8cc.html",
+"d7/d6b/lbs___g_m_r_e_s_8cc.html#adc1b2db4f75dab650895a0e0ec8e748e",
+"d8/d81/chi__mesh__splitedgeloopbyangle_8cc.html",
+"d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html#ac7bdd8cf5aaa3903f96f808a3d198645",
+"da/d96/module__lua__register_8h.html",
+"dc/d15/classchi__graph_1_1_directed_graph.html#a5eda015771b74d0a31a677b92f366ab1",
+"dd/d06/fv__polyhedron_8h.html",
+"de/d04/struct_f_eside__data3d.html#abdb7e93f12318e4a4574b9801e6d5460",
+"df/db6/sweepbuffer__senddownstreampsi_8cc.html",
+"globals_e.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

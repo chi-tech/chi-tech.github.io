@@ -13,6 +13,7 @@ var classchi__mesh_1_1_surface_mesh =
     [ "GetEdgeLoops", "dd/d43/classchi__mesh_1_1_surface_mesh.html#aaeb84a0b3bd146f64a7a95b7b335a2b5", null ],
     [ "GetEdgeLoopsPoly", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a891a2be28ddbab93dd6d16167f92e9e4", null ],
     [ "GetMeshStats", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a644376a87da0dec93bd800d5c2dfd995", null ],
+    [ "ImportFromMshFiles", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a7dbd48c55667e22e5ae5aacdf18207e5", null ],
     [ "ImportFromOBJFile", "dd/d43/classchi__mesh_1_1_surface_mesh.html#aa95d3703c8670b078bd04360e2809779", null ],
     [ "ImportFromTriangleFiles", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a1bd5f38ec4fc5bbfc2cd6a4d902dbd60", null ],
     [ "SplitByPatch", "dd/d43/classchi__mesh_1_1_surface_mesh.html#ac54250e74cdf8b2983b95ee1aeed89bc", null ],

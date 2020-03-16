@@ -3,18 +3,19 @@ var hierarchy =
     [ "chi_mesh::sweep_management::AngleAggregation", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html", null ],
     [ "chi_mesh::sweep_management::AngleSet", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html", null ],
     [ "chi_mesh::sweep_management::AngleSetGroup", "df/db6/classchi__mesh_1_1sweep__management_1_1_angle_set_group.html", null ],
-    [ "chi_mesh::Boundary", "db/dc8/classchi__mesh_1_1_boundary.html", null ],
     [ "chi_diffusion::Boundary", "d7/dae/classchi__diffusion_1_1_boundary.html", [
       [ "chi_diffusion::BoundaryDirichlet", "de/d2e/classchi__diffusion_1_1_boundary_dirichlet.html", null ],
       [ "chi_diffusion::BoundaryReflecting", "d1/d0c/classchi__diffusion_1_1_boundary_reflecting.html", null ],
       [ "chi_diffusion::BoundaryRobin", "d6/d58/classchi__diffusion_1_1_boundary_robin.html", null ]
     ] ],
+    [ "chi_mesh::Boundary", "db/dc8/classchi__mesh_1_1_boundary.html", null ],
     [ "chi_mesh::sweep_management::BoundaryBase", "dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html", [
       [ "chi_mesh::sweep_management::BoundaryIncidentHeterogenous", "dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html", null ],
       [ "chi_mesh::sweep_management::BoundaryIncidentHomogenous", "d2/dbc/classchi__mesh_1_1sweep__management_1_1_boundary_incident_homogenous.html", null ],
       [ "chi_mesh::sweep_management::BoundaryReflecting", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html", null ],
       [ "chi_mesh::sweep_management::BoundaryVacuum", "dc/d41/classchi__mesh_1_1sweep__management_1_1_boundary_vacuum.html", null ]
     ] ],
+    [ "chi_mesh::UnpartitionedMesh::BoundBox", "d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html", null ],
     [ "chi_math::CDFSampler", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html", null ],
     [ "chi_mesh::Cell", "d8/d7c/classchi__mesh_1_1_cell.html", [
       [ "chi_mesh::CellPolygon", "dc/d11/classchi__mesh_1_1_cell_polygon.html", null ],
@@ -87,9 +88,12 @@ var hierarchy =
     [ "HYDRO_SJUNCTION", "d3/de5/class_h_y_d_r_o___s_j_u_n_c_t_i_o_n.html", null ],
     [ "chi_mesh::Interface", "d9/d39/structchi__mesh_1_1_interface.html", null ],
     [ "chi_mesh::MeshContinuum::LocalCells::iterator", "d7/d37/classchi__mesh_1_1_mesh_continuum_1_1_local_cells_1_1iterator.html", null ],
+    [ "chi_graph::DirectedGraph::VertexAccessor::iterator", "dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html", null ],
     [ "KSPDataContext", "dd/dbc/struct_k_s_p_data_context.html", null ],
     [ "LBSGroup", "de/d7b/class_l_b_s_group.html", null ],
     [ "LBSGroupset", "d7/d7d/class_l_b_s_groupset.html", null ],
+    [ "chi_mesh::UnpartitionedMesh::LightWeightCell", "da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html", null ],
+    [ "chi_mesh::UnpartitionedMesh::LightWeightFace", "da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html", null ],
     [ "chi_mesh::LineMesh", "da/de4/classchi__mesh_1_1_line_mesh.html", null ],
     [ "chi_mesh::MeshContinuum::LocalCells", "dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html", null ],
     [ "chi_mesh::LogicalVolume", "d0/d1e/classchi__mesh_1_1_logical_volume.html", [
@@ -110,6 +114,7 @@ var hierarchy =
     [ "chi_mesh::MeshHandler", "d2/d10/classchi__mesh_1_1_mesh_handler.html", null ],
     [ "MeshLayer", "da/da0/struct_mesh_layer.html", null ],
     [ "LinearBoltzman::Options", "da/d88/struct_linear_boltzman_1_1_options.html", null ],
+    [ "chi_mesh::UnpartitionedMesh::Options", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html", null ],
     [ "ostream", null, [
       [ "DummyStream", "d9/d4e/struct_dummy_stream.html", null ]
     ] ],
@@ -162,11 +167,17 @@ var hierarchy =
     ] ],
     [ "chi_mesh::sweep_management::SweepScheduler", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html", null ],
     [ "ThermoAlpha", "d6/d08/class_thermo_alpha.html", null ],
+    [ "chi_mesh::UnpartitionedMesh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html", null ],
     [ "chi_mesh::Vector3", "dd/d54/structchi__mesh_1_1_vector3.html", null ],
+    [ "chi_graph::DirectedGraph::VertexAccessor", "df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html", null ],
     [ "chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html", null ],
     [ "chi_mesh::VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", [
       [ "chi_mesh::VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", null ],
       [ "chi_mesh::VolumeMesherLinemesh1D", "d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html", null ],
-      [ "chi_mesh::VolumeMesherPredefined2D", "d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html", null ]
+      [ "chi_mesh::VolumeMesherPredefined2D", "d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html", null ],
+      [ "chi_mesh::VolumeMesherPredefined3D", "d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html", null ]
+    ] ],
+    [ "vtkUnstructuredGridAlgorithm", null, [
+      [ "vtkCleanUnstructuredGrid", "d8/dce/classvtk_clean_unstructured_grid.html", null ]
     ] ]
 ];

@@ -81,6 +81,7 @@ var lua__namespace_8hpp =
     [ "chiSurfaceMeshExtractOpenEdgesToObj", "da/d1e/lua__namespace_8hpp.html#ga065dcb08ce4da44d96eb7198be3ccda2", null ],
     [ "chiSurfaceMeshGetEdgeLoops", "da/d1e/lua__namespace_8hpp.html#ga5aa9ce8cee2a125d0b651bdc486aef8a", null ],
     [ "chiSurfaceMeshGetEdgeLoopsPoly", "da/d1e/lua__namespace_8hpp.html#gacae53e2abbd30c226155488919702b8c", null ],
+    [ "chiSurfaceMeshImportFromMshFiles", "da/d1e/lua__namespace_8hpp.html#ac8bdc1ed60e81e166f9d95fed2b1ceed", null ],
     [ "chiSurfaceMeshImportFromOBJFile", "da/d1e/lua__namespace_8hpp.html#ga60251857e39dcfe2867a6fb5c2cade15", null ],
     [ "chiSurfaceMeshImportFromTriangleFiles", "da/d1e/lua__namespace_8hpp.html#ga1904c337bf04e2b61196a3267b9eb505", null ],
     [ "chiSurfaceMeshSplitByPatch", "da/d1e/lua__namespace_8hpp.html#gad3575f8e77897066cc52fa38f98a1a1c", null ],

@@ -3,7 +3,24 @@ var chi__volumemesher_8h =
     [ "CellIndexMap", "dd/da7/structchi__mesh_1_1_cell_index_map.html", "dd/da7/structchi__mesh_1_1_cell_index_map" ],
     [ "VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", "de/df0/classchi__mesh_1_1_volume_mesher" ],
     [ "VOLUME_MESHER_OPTIONS", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s" ],
-    [ "VOLUMEMESHER_EXTRUDER", "dd/dcb/chi__volumemesher_8h.html#a69eb2a96bed6744175f9211156dc603a", null ],
-    [ "VOLUMEMESHER_LINEMESH1D", "dd/dcb/chi__volumemesher_8h.html#a4f1c716073e6fbecbf1adfab92e0e02c", null ],
-    [ "VOLUMEMESHER_PREDEFINED2D", "dd/dcb/chi__volumemesher_8h.html#a58543a11e679fd9b9b785c7f92129a97", null ]
+    [ "VolumeMesherProperty", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5", [
+      [ "FORCE_POLYGONS", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a29157e47118ce8eaa75b5e63346e3159", null ],
+      [ "MESH_GLOBAL", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a8be35b214a8a2227dda38881e16e35a0", null ],
+      [ "PARTITION_Z", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5ad9c700b057e07dba8aff3a801ea69a97", null ],
+      [ "PARTITION_Y", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a2f2be371ee12e5bf1f15a55f8997d7b4", null ],
+      [ "PARTITION_X", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a6e8f0c3d6cf298a401e6a8a6d9b592d1", null ],
+      [ "CUTS_Z", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5addc6d5db15b7e0dc08ab513179d9605e", null ],
+      [ "CUTS_Y", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5ae63b21f1a550c17e040bb3ef61a6e25a", null ],
+      [ "CUTS_X", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5ac95a7b4eff4fbb448b25fe2571a4985c", null ],
+      [ "PARTITION_TYPE", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a704f523c928ce09f4a03ebc860c4064b", null ],
+      [ "EXTRUSION_LAYER", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a7fa5319da678071d38e04d6f571f09f5", null ],
+      [ "MATID_FROMLOGICAL", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803", null ],
+      [ "BNDRYID_FROMLOGICAL", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a7f91a4d4b8e9e23a94dfdc882c363285", null ]
+    ] ],
+    [ "VolumeMesherType", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1", [
+      [ "LINEMESH1D", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a806a2ee28f749ad4a658b8a0b754b7de", null ],
+      [ "PREDEFINED2D", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a548d5d929e5f87a5283e3e0b0fef6ab6", null ],
+      [ "EXTRUDER", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a0befd17b3ade34df1cc1ae7ecd38da20", null ],
+      [ "PREDEFINED3D", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a349c3c7e011b2ed8a9c60d161f1e5113", null ]
+    ] ]
 ];

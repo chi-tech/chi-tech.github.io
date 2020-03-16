@@ -1,15 +1,7 @@
 var searchData=
 [
-  ['log_5f0',['LOG_0',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8',1,'chi_log.h']]],
-  ['log_5f0error',['LOG_0ERROR',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405aef3c4e23d7c6b54ceac13604de983ed5',1,'chi_log.h']]],
-  ['log_5f0verbose_5f0',['LOG_0VERBOSE_0',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a23efa3df025bb2d5a5b36a86cd84b3d9',1,'chi_log.h']]],
-  ['log_5f0verbose_5f1',['LOG_0VERBOSE_1',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a19207d16b0356472b7102efe3caf12c1',1,'chi_log.h']]],
-  ['log_5f0verbose_5f2',['LOG_0VERBOSE_2',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e',1,'chi_log.h']]],
-  ['log_5f0warning',['LOG_0WARNING',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a2eeeaef39b7d7267030f18c9359726d7',1,'chi_log.h']]],
-  ['log_5fall',['LOG_ALL',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc',1,'chi_log.h']]],
-  ['log_5fallerror',['LOG_ALLERROR',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03',1,'chi_log.h']]],
-  ['log_5fallverbose_5f0',['LOG_ALLVERBOSE_0',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405adad69b4e4299bc032af4bff74f53c13c',1,'chi_log.h']]],
-  ['log_5fallverbose_5f1',['LOG_ALLVERBOSE_1',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda',1,'chi_log.h']]],
-  ['log_5fallverbose_5f2',['LOG_ALLVERBOSE_2',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a165d9f8cd7a877eff195c8b93c4996d0',1,'chi_log.h']]],
-  ['log_5fallwarning',['LOG_ALLWARNING',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405ae173a29acc36e26ca9fa5a3b1b264d5c',1,'chi_log.h']]]
+  ['incident_5fheterogenous',['INCIDENT_HETEROGENOUS',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da77f10d27c69cfa62b4b2d16470134cb1',1,'chi_mesh::sweep_management']]],
+  ['incident_5fhomogenous',['INCIDENT_HOMOGENOUS',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da857360a246793bc54c7f4b0987d88d60',1,'chi_mesh::sweep_management']]],
+  ['incident_5fisotropic',['INCIDENT_ISOTROPIC',['../d4/dfe/namespace_linear_boltzman.html#a1973ca8019ede222aa9e5a77bf7f9e76a1cc3753228b759f2be4d82bafb63d45c',1,'LinearBoltzman']]],
+  ['isotropic_5fmg_5fsource',['ISOTROPIC_MG_SOURCE',['../d6/d5f/namespacechi__physics.html#ad03b34f5fd167ff7afde2dfa96ac6312ad3a94694ab7282c52b36b6995abbc0c1',1,'chi_physics']]]
 ];

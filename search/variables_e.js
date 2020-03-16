@@ -9,5 +9,6 @@ var searchData=
   ['open_5fedges',['open_edges',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html#a2d0c37cb3a012975c6d136d1738da220',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
   ['opposing_5freflected',['opposing_reflected',['../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a0b6db214de50fbf470b04587f1fed833',1,'chi_mesh::sweep_management::BoundaryReflecting']]],
   ['options',['options',['../de/df0/classchi__mesh_1_1_volume_mesher.html#abc0ebd8604df6dc1c67efe66579de214',1,'chi_mesh::VolumeMesher::options()'],['../d7/d26/class_linear_boltzman_1_1_solver.html#a6353ebb91c10213d1d97bfcaeacac975',1,'LinearBoltzman::Solver::options()']]],
-  ['options_5fstring',['options_string',['../d6/d32/classchi__diffusion_1_1_solver.html#a9978cc10f7d45d25e6d6951d1026b8f7',1,'chi_diffusion::Solver']]]
+  ['options_5fstring',['options_string',['../d6/d32/classchi__diffusion_1_1_solver.html#a9978cc10f7d45d25e6d6951d1026b8f7',1,'chi_diffusion::Solver']]],
+  ['outputpointsprecision',['OutputPointsPrecision',['../d8/dce/classvtk_clean_unstructured_grid.html#ad3999f8d322d7a7551f7381605d6fe8e',1,'vtkCleanUnstructuredGrid']]]
 ];

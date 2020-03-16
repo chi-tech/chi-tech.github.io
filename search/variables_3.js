@@ -50,5 +50,6 @@ var searchData=
   ['dofs',['dofs',['../d5/def/class_cell_f_v_view.html#a0ea50109afe1c0cb492ae75c967ca4c9',1,'CellFVView::dofs()'],['../d8/d0f/class_cell_f_e_view.html#a5cb7534a876646f7da0a0a33cc7f0f5b',1,'CellFEView::dofs()'],['../d1/d1a/class_linear_boltzman_1_1_cell_view_full.html#a989657428a8cbd2fdefd6bbb32961758',1,'LinearBoltzman::CellViewFull::dofs()']]],
   ['done_5fsending',['done_sending',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#a64f9729cf9bee28ae8dce5f3f2b79eb2',1,'chi_mesh::sweep_management::SweepBuffer']]],
   ['ds_5fedge',['ds_edge',['../da/d1d/structchi__graph_1_1_graph_vertex.html#a8d53d3c8e15977b728eb5d26200f1a1c',1,'chi_graph::GraphVertex']]],
+  ['ds_5fweights',['ds_weights',['../da/d1d/structchi__graph_1_1_graph_vertex.html#ab9892c8bc72c41cb691c38592f6a1a7b',1,'chi_graph::GraphVertex']]],
   ['dummy_5fstream',['dummy_stream',['../d8/d1a/class_chi_log.html#aadcdf7fad4188906b43bae592432d782',1,'ChiLog']]]
 ];

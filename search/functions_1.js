@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['begin',['begin',['../dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html#a58fc7a2147b9c864ac6bdc7ed4ca11ac',1,'chi_mesh::MeshContinuum::LocalCells']]],
+  ['begin',['begin',['../df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a1ed724393040a0704cf8fb7b415725a8',1,'chi_graph::DirectedGraph::VertexAccessor::begin()'],['../dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html#a58fc7a2147b9c864ac6bdc7ed4ca11ac',1,'chi_mesh::MeshContinuum::LocalCells::begin()']]],
   ['boundary',['Boundary',['../db/dc8/classchi__mesh_1_1_boundary.html#a380663b55d7ad8e2cda17e83d8a69a30',1,'chi_mesh::Boundary']]],
   ['boundarybase',['BoundaryBase',['../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a269e6b10984d52d631b18598ca5e7bc7',1,'chi_mesh::sweep_management::BoundaryBase']]],
   ['boundarydirichlet',['BoundaryDirichlet',['../de/d2e/classchi__diffusion_1_1_boundary_dirichlet.html#abaf44d08e2972703abbab1563b28435e',1,'chi_diffusion::BoundaryDirichlet']]],

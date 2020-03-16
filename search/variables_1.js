@@ -5,6 +5,7 @@ var searchData=
   ['bg',['bg',['../d6/d32/classchi__diffusion_1_1_solver.html#a6e223270f197b36af7de643f6b308885',1,'chi_diffusion::Solver']]],
   ['binorm',['binorm',['../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html#ab1618061f0cf961b4ce05eda15e85942',1,'chi_mesh::FieldFunctionInterpolationSlice']]],
   ['bot_5fboundary_5findex',['bot_boundary_index',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a761e851b1c676a095be35679a9f9881e',1,'chi_mesh::VolumeMesherExtruder']]],
+  ['bound_5fbox',['bound_box',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a69dd0c31207a900aca05a248f92b4dd8',1,'chi_mesh::UnpartitionedMesh']]],
   ['boundaries',['boundaries',['../d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839',1,'chi_mesh::Region::boundaries()'],['../d6/d32/classchi__diffusion_1_1_solver.html#affd4790c5f0755e4ceb72faa832310e6',1,'chi_diffusion::Solver::boundaries()']]],
   ['boundary_5fcell_5findices',['boundary_cell_indices',['../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a14217121baae72422059d050263b249c',1,'chi_mesh::MeshContinuum']]],
   ['boundary_5fdependencies',['boundary_dependencies',['../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#aaaf8ad9e4c3b071da2c864e38977735d',1,'chi_mesh::sweep_management::FLUDS']]],

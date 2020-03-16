@@ -3,7 +3,7 @@ var searchData=
   ['n_5findex',['n_index',['../d4/dd2/structchi__mesh_1_1_face.html#a6cdc6947029a00b8f7737d54bd6fb1f8',1,'chi_mesh::Face']]],
   ['name',['name',['../dc/dff/class_chi_log_1_1_repeating_event.html#af7bdcf79acd2c2d16adc61f546f4aabb',1,'ChiLog::RepeatingEvent::name()'],['../da/da0/struct_mesh_layer.html#ae328c6096d067c64e358e5f2e74ff48e',1,'MeshLayer::name()'],['../d8/da4/classchi__physics_1_1_material.html#a3ac7434990000927f4e1c881cde6be21',1,'chi_physics::Material::name()']]],
   ['native_5fcells',['native_cells',['../dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html#abfdfd4aa482b2a2799171d90fa3ff5c3',1,'chi_mesh::MeshContinuum::LocalCells']]],
-  ['neighbor',['neighbor',['../db/d1b/classchi__mesh_1_1_cell_face.html#a2a7294a5319b84685fb2179c25065ac9',1,'chi_mesh::CellFace']]],
+  ['neighbor',['neighbor',['../db/d1b/classchi__mesh_1_1_cell_face.html#a2a7294a5319b84685fb2179c25065ac9',1,'chi_mesh::CellFace::neighbor()'],['../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#a67c04b47af3dd231dd3662d4b5ac56dc',1,'chi_mesh::UnpartitionedMesh::LightWeightFace::neighbor()']]],
   ['neighbor_5fass_5fface',['neighbor_ass_face',['../db/d1b/classchi__mesh_1_1_cell_face.html#ad5436ae7b5d5a1645298bb81819f5c4f',1,'chi_mesh::CellFace']]],
   ['neighbor_5fcell_5fblock_5faddress',['neighbor_cell_block_address',['../da/d2b/class_spatial_discretization.html#af965e3e887ea17a23d8e143ecd269545',1,'SpatialDiscretization']]],
   ['neighbor_5fcell_5ffe_5fviews',['neighbor_cell_fe_views',['../de/dfb/class_spatial_discretization___p_w_l.html#a620ef3d6bd77ac6c233141d29fc0ce68',1,'SpatialDiscretization_PWL']]],

@@ -1,5 +1,6 @@
 var classchi__mesh_1_1_cell_face =
 [
+    [ "ComputeFaceArea", "db/d1b/classchi__mesh_1_1_cell_face.html#a299bc4c0d66ee12067ef458022de2ccc", null ],
     [ "GetNeighborAssociatedFace", "db/d1b/classchi__mesh_1_1_cell_face.html#a25804ef27cef655257234f8e0cbf97a9", null ],
     [ "GetNeighborLocalID", "db/d1b/classchi__mesh_1_1_cell_face.html#a6475c12e0620326676ebb153b7213b7b", null ],
     [ "GetNeighborPartitionID", "db/d1b/classchi__mesh_1_1_cell_face.html#a7eae54906f717ab814f263c50fe3a7e9", null ],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['importfrommshfiles',['ImportFromMshFiles',['../dd/d43/classchi__mesh_1_1_surface_mesh.html#a7dbd48c55667e22e5ae5aacdf18207e5',1,'chi_mesh::SurfaceMesh']]],
   ['importfromobjfile',['ImportFromOBJFile',['../dd/d43/classchi__mesh_1_1_surface_mesh.html#aa95d3703c8670b078bd04360e2809779',1,'chi_mesh::SurfaceMesh']]],
   ['importfromtrianglefiles',['ImportFromTriangleFiles',['../dd/d43/classchi__mesh_1_1_surface_mesh.html#a1bd5f38ec4fc5bbfc2cd6a4d902dbd60',1,'chi_mesh::SurfaceMesh']]],
   ['incircle',['InCircle',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html#a749952fbd9530a4bd9dfd81596c67bd4',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
@@ -42,7 +43,8 @@ var searchData=
   ['iscelllocal',['IsCellLocal',['../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a38ae02622bdcc1bbb784c6e24b49db3f',1,'chi_mesh::MeshContinuum']]],
   ['isneighborlocal',['IsNeighborLocal',['../db/d1b/classchi__mesh_1_1_cell_face.html#aa91f625a16823cdfa6c9afc29745b93e',1,'chi_mesh::CellFace']]],
   ['isotropicmultigrpsource',['IsotropicMultiGrpSource',['../dc/d04/classchi__physics_1_1_isotropic_multi_grp_source.html#a90455934ee05168ffdd5f8bce2c8a959',1,'chi_physics::IsotropicMultiGrpSource']]],
+  ['israwcellneighbortopartition',['IsRawCellNeighborToPartition',['../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html#aeb2bb622891c18af2460e55ce6c154d2',1,'chi_mesh::VolumeMesherPredefined3D']]],
   ['isreflecting',['IsReflecting',['../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a7b5a9a24b3a3be0ba347b6af6d8192fa',1,'chi_mesh::sweep_management::BoundaryBase']]],
   ['istemplatecellneighbortothispartition',['IsTemplateCellNeighborToThisPartition',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#ab29b159d9faff5c79a46bc3a975884fb',1,'chi_mesh::VolumeMesherExtruder']]],
-  ['iterator',['iterator',['../d7/d37/classchi__mesh_1_1_mesh_continuum_1_1_local_cells_1_1iterator.html#aa7ba435ced31efed9e4e46070fb6cf54',1,'chi_mesh::MeshContinuum::LocalCells::iterator']]]
+  ['iterator',['iterator',['../dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html#a61c75f6ba1b8a6bcd5fb2ba76adbde6a',1,'chi_graph::DirectedGraph::VertexAccessor::iterator::iterator()'],['../d7/d37/classchi__mesh_1_1_mesh_continuum_1_1_local_cells_1_1iterator.html#aa7ba435ced31efed9e4e46070fb6cf54',1,'chi_mesh::MeshContinuum::LocalCells::iterator::iterator()']]]
 ];

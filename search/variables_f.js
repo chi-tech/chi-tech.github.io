@@ -1,9 +1,11 @@
 var searchData=
 [
   ['p',['P',['../d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html#ac64c792738c14e8c3b34d7897b7752aa',1,'HYDRO_BOUNDARY::P()'],['../d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e.html#ae828e8a86224c0deac4e574c0ed24774',1,'HYDRO_VOLUME::P()']]],
+  ['parallel_5fmethod',['parallel_method',['../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#aca3a70dc0a025a843857be7522aee2e5',1,'chi_mesh::UnpartitionedMesh::Options']]],
   ['part_5fof_5fface',['part_of_face',['../dc/dfe/struct_f_enode_side_map.html#a621c803b645b3c2dc1f6237ed0728e4c',1,'FEnodeSideMap']]],
   ['partition_5fid',['partition_id',['../d8/d7c/classchi__mesh_1_1_cell.html#aafbc93797420b047d998dfd848657b7d',1,'chi_mesh::Cell']]],
   ['partition_5fmethod',['partition_method',['../da/d88/struct_linear_boltzman_1_1_options.html#ab3aa10205b7d886471236aa1a6d3a5a9',1,'LinearBoltzman::Options']]],
+  ['partition_5ftype',['partition_type',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a32f6ec77f94ed50347932e331c531bcb',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS']]],
   ['partition_5fz',['partition_z',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a42efa1bb3fd5b8a00012e4dd6522d620',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS']]],
   ['partitioning_5fx',['partitioning_x',['../df/d7e/classchi__mesh_1_1_surface_mesher.html#a472607a99fccb222ab4df25e535e9854',1,'chi_mesh::SurfaceMesher']]],
   ['partitioning_5fy',['partitioning_y',['../df/d7e/classchi__mesh_1_1_surface_mesher.html#ada889695bc78dfecd733804586b8e31c',1,'chi_mesh::SurfaceMesher']]],

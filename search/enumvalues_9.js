@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['max_5fmemory_5fusage',['MAX_MEMORY_USAGE',['../d8/d1a/class_chi_log.html#a130798199b3ef1ed34ece3857b6bbd24ab9dc787a6733a0ac3f0e40a931a9efb4',1,'ChiLog']]],
-  ['max_5fvalue',['MAX_VALUE',['../d8/d1a/class_chi_log.html#a79cc0a14ad518f04e8fe5e06656eba8fada539a37cfaec77691a36c791911208e',1,'ChiLog']]]
+  ['kba_5fstyle_5fxy',['KBA_STYLE_XY',['../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3a348cc917e8347159e6eb3ea756d7ba17',1,'chi_mesh::VolumeMesher']]],
+  ['kba_5fstyle_5fxyz',['KBA_STYLE_XYZ',['../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3ac04afcc24c159516c1b664dbef84d936',1,'chi_mesh::VolumeMesher']]]
 ];
