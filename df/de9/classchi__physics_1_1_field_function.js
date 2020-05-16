@@ -25,5 +25,6 @@ var classchi__physics_1_1_field_function =
     [ "temp_cell_dof_values", "df/de9/classchi__physics_1_1_field_function.html#a428fd0875de53c8c6c924a62d486343b", null ],
     [ "text_name", "df/de9/classchi__physics_1_1_field_function.html#aebf52347d456a63704b688734a69e67b", null ],
     [ "type", "df/de9/classchi__physics_1_1_field_function.html#a2d234f445f61d538e2f2f46d8e5dd40e", null ],
+    [ "unknown_manager", "df/de9/classchi__physics_1_1_field_function.html#a6c728bc91c5fda2dba8022c0c2ec08c9", null ],
     [ "using_petsc_field_vector", "df/de9/classchi__physics_1_1_field_function.html#a9ba71f5a7fab91de359d3f357fe30c98", null ]
 ];

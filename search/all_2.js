@@ -5,13 +5,14 @@ var searchData=
   ['beta',['beta',['../d5/d5e/class_golub_fischer.html#aad502b85e7aba2c9a726a1614baba7af',1,'GolubFischer::beta()'],['../d7/db8/class_polygon_f_e_view.html#a5ab4deba969ff90fb094229837d78b2c',1,'PolygonFEView::beta()']]],
   ['bg',['bg',['../d6/d32/classchi__diffusion_1_1_solver.html#a6e223270f197b36af7de643f6b308885',1,'chi_diffusion::Solver']]],
   ['binorm',['binorm',['../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html#ab1618061f0cf961b4ce05eda15e85942',1,'chi_mesh::FieldFunctionInterpolationSlice']]],
+  ['block_5fsize_5fper_5funknown',['block_size_per_unknown',['../da/d2b/class_spatial_discretization.html#a55a579eb79f0682230d4032eed53c0d8',1,'SpatialDiscretization']]],
   ['bndryid_5ffromlogical',['BNDRYID_FROMLOGICAL',['../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a7f91a4d4b8e9e23a94dfdc882c363285',1,'chi_mesh']]],
   ['boolean',['BOOLEAN',['../d9/df5/chi__mesh__logicalvolume_8h.html#a50168fdbaa52d4a0b1c287d476050f12',1,'chi_mesh_logicalvolume.h']]],
   ['booleanlogicalvolume',['BooleanLogicalVolume',['../da/dca/classchi__mesh_1_1_boolean_logical_volume.html',1,'chi_mesh']]],
   ['bot_5fboundary_5findex',['bot_boundary_index',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a761e851b1c676a095be35679a9f9881e',1,'chi_mesh::VolumeMesherExtruder']]],
   ['bound_5fbox',['bound_box',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a69dd0c31207a900aca05a248f92b4dd8',1,'chi_mesh::UnpartitionedMesh']]],
   ['boundaries',['boundaries',['../d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839',1,'chi_mesh::Region::boundaries()'],['../d6/d32/classchi__diffusion_1_1_solver.html#affd4790c5f0755e4ceb72faa832310e6',1,'chi_diffusion::Solver::boundaries()']]],
-  ['boundary',['Boundary',['../d7/dae/classchi__diffusion_1_1_boundary.html',1,'chi_diffusion::Boundary'],['../db/dc8/classchi__mesh_1_1_boundary.html',1,'chi_mesh::Boundary'],['../db/dc8/classchi__mesh_1_1_boundary.html#a380663b55d7ad8e2cda17e83d8a69a30',1,'chi_mesh::Boundary::Boundary()']]],
+  ['boundary',['Boundary',['../db/dc8/classchi__mesh_1_1_boundary.html',1,'chi_mesh::Boundary'],['../d7/dae/classchi__diffusion_1_1_boundary.html',1,'chi_diffusion::Boundary'],['../db/dc8/classchi__mesh_1_1_boundary.html#a380663b55d7ad8e2cda17e83d8a69a30',1,'chi_mesh::Boundary::Boundary()']]],
   ['boundary_5fcell_5findices',['boundary_cell_indices',['../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a14217121baae72422059d050263b249c',1,'chi_mesh::MeshContinuum']]],
   ['boundary_5fdependencies',['boundary_dependencies',['../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#aaaf8ad9e4c3b071da2c864e38977735d',1,'chi_mesh::sweep_management::FLUDS']]],
   ['boundary_5fflux',['boundary_flux',['../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a4df24dd302b9c03ceb3ac3d722462bce',1,'chi_mesh::sweep_management::BoundaryBase']]],
@@ -38,6 +39,7 @@ var searchData=
   ['buildfacehistograminfo',['BuildFaceHistogramInfo',['../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a2fdf6f98473e391c1c394d59c0b20c5c',1,'chi_mesh::MeshContinuum']]],
   ['buildmessagestructure',['BuildMessageStructure',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#aef1a05ad5170f195fda268d0edbc2bdf',1,'chi_mesh::sweep_management::SweepBuffer']]],
   ['buildmomdiscoperator',['BuildMomDiscOperator',['../d7/d7d/class_l_b_s_groupset.html#acd705e9d1b885972a6c9b0f870a2f516',1,'LBSGroupset']]],
+  ['buildsparsitypattern',['BuildSparsityPattern',['../d1/d09/class_spatial_discretization___f_v.html#a902b9b1798e104f60b2ab1eaa89fa420',1,'SpatialDiscretization_FV']]],
   ['buildsubsets',['BuildSubsets',['../d7/d7d/class_l_b_s_groupset.html#afee1b9067ff51ffc1efc6f786ac2cf5c',1,'LBSGroupset']]],
   ['b_20math',['B Math',['../d0/d4d/group___lua_math.html',1,'']]]
 ];

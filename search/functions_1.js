@@ -17,5 +17,6 @@ var searchData=
   ['buildfacehistograminfo',['BuildFaceHistogramInfo',['../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a2fdf6f98473e391c1c394d59c0b20c5c',1,'chi_mesh::MeshContinuum']]],
   ['buildmessagestructure',['BuildMessageStructure',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#aef1a05ad5170f195fda268d0edbc2bdf',1,'chi_mesh::sweep_management::SweepBuffer']]],
   ['buildmomdiscoperator',['BuildMomDiscOperator',['../d7/d7d/class_l_b_s_groupset.html#acd705e9d1b885972a6c9b0f870a2f516',1,'LBSGroupset']]],
+  ['buildsparsitypattern',['BuildSparsityPattern',['../d1/d09/class_spatial_discretization___f_v.html#a902b9b1798e104f60b2ab1eaa89fa420',1,'SpatialDiscretization_FV']]],
   ['buildsubsets',['BuildSubsets',['../d7/d7d/class_l_b_s_groupset.html#afee1b9067ff51ffc1efc6f786ac2cf5c',1,'LBSGroupset']]]
 ];

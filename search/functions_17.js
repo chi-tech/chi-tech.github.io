@@ -12,5 +12,7 @@ var searchData=
   ['_7epolyface',['~PolyFace',['../d4/ddb/structchi__mesh_1_1_poly_face.html#a69f207f47be7466091a7d6d549819d4d',1,'chi_mesh::PolyFace']]],
   ['_7esolver',['~Solver',['../d9/d3a/classchi__physics_1_1_solver.html#a6ad4b37d7da845300fb6c80d11fa1b3b',1,'chi_physics::Solver::~Solver()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a2de514bc22f33a4f896f9e2a94a6602c',1,'chi_diffusion::Solver::~Solver()']]],
   ['_7esurfacemesh',['~SurfaceMesh',['../dd/d43/classchi__mesh_1_1_surface_mesh.html#aa670f6ea91c145a8fa95ae2ff6fdd651',1,'chi_mesh::SurfaceMesh']]],
+  ['_7eunknown',['~Unknown',['../d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html#ae0345eb4b35bc3c4946a94c35a3ad9ba',1,'chi_math::UnknownManager::Unknown']]],
+  ['_7eunknownmanager',['~UnknownManager',['../d9/da7/classchi__math_1_1_unknown_manager.html#a4168fd268367f6b950d4b2a5dae640d6',1,'chi_math::UnknownManager']]],
   ['_7evtkcleanunstructuredgrid',['~vtkCleanUnstructuredGrid',['../d8/dce/classvtk_clean_unstructured_grid.html#a69fc61291c01a08324a02609f2a7622b',1,'vtkCleanUnstructuredGrid']]]
 ];

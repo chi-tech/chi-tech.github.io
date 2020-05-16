@@ -14,6 +14,7 @@ var searchData=
   ['addlocalsuccessor',['AddLocalSuccessor',['../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#abd8f3590f2f183fd5de380da3660e9cb',1,'chi_mesh::sweep_management::SPDS']]],
   ['addnamedconstanttonamespace',['AddNamedConstantToNamespace',['../d6/d07/chi__console__constrdestr_8cpp.html',1,'chi_console_constrdestr.cpp']]],
   ['addregion',['AddRegion',['../d9/d3a/classchi__physics_1_1_solver.html#a4ed879cea25e00e88651995de0a34328',1,'chi_physics::Solver']]],
+  ['addunknown',['AddUnknown',['../d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78',1,'chi_math::UnknownManager']]],
   ['addvertex',['AddVertex',['../df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#afc2b45404e71ffe527c04558acedc951',1,'chi_graph::DirectedGraph::VertexAccessor::AddVertex()'],['../dc/d15/classchi__graph_1_1_directed_graph.html#a02f9e99e1f42762ab0c918eb7b2b6ce9',1,'chi_graph::DirectedGraph::AddVertex()']]],
   ['addviewoflocalcontinuum',['AddViewOfLocalContinuum',['../d1/d09/class_spatial_discretization___f_v.html#a98fa5f43349adb026457e709bb7526db',1,'SpatialDiscretization_FV::AddViewOfLocalContinuum()'],['../de/dfb/class_spatial_discretization___p_w_l.html#a351be7ba4ea1303c055d7780cabcbfdc',1,'SpatialDiscretization_PWL::AddViewOfLocalContinuum()'],['../da/d2b/class_spatial_discretization.html#ab8acb81485d21f89c2bc6c35df21cbba',1,'SpatialDiscretization::AddViewOfLocalContinuum()']]],
   ['addviewofneighborcontinuums',['AddViewOfNeighborContinuums',['../de/dfb/class_spatial_discretization___p_w_l.html#a63031bb0d9fb281d12e99397a45c8f91',1,'SpatialDiscretization_PWL']]],
@@ -86,7 +87,7 @@ var searchData=
   ['average_5fvalue',['AVERAGE_VALUE',['../d8/d1a/class_chi_log.html#a79cc0a14ad518f04e8fe5e06656eba8fac1b2803111445b2b15783f54679f4af9',1,'ChiLog']]],
   ['azimu_5fang',['azimu_ang',['../d5/df7/classchi__math_1_1_product_quadrature.html#a408e9ce3cf7bd90ace365d381b094046',1,'chi_math::ProductQuadrature']]],
   ['azimuthal',['azimuthal',['../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a43bfa5b847742de540b4788480864af9',1,'chi_mesh::sweep_management::SPDS']]],
-  ['adding_20code_20to_20the_20system',['Adding code to the system',['../dc/d4c/_dev_man_adding_code.html',1,'ProgrammerManual']]],
-  ['adding_20lua_2dinput_20to_20the_20system',['Adding Lua-input to the system',['../d1/d86/_dev_man_adding_lua.html',1,'ProgrammerManual']]],
+  ['adding_20code_20to_20the_20system',['Adding code to the system',['../dc/d4c/_dev_man_adding_code.html',1,'DevManMustReads']]],
+  ['adding_20lua_2dinput_20to_20the_20system',['Adding Lua-input to the system',['../d1/d86/_dev_man_adding_lua.html',1,'DevManMustReads']]],
   ['a_20meshing',['A Meshing',['../d9/d53/group___lua_mesh.html',1,'']]]
 ];

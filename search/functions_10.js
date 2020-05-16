@@ -12,6 +12,7 @@ var searchData=
   ['receiveupstreampsi',['ReceiveUpstreamPsi',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#aabf40f04b08fc1df9f87b11b9357db20',1,'chi_mesh::sweep_management::SweepBuffer']]],
   ['refineedges',['RefineEdges',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html#acc428dad4ec4ffaec1af0a20d145336d',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
   ['reflectingpsioutboundbndry',['ReflectingPsiOutBoundBndry',['../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a866099296a9143666501e7e8b95e7d07',1,'chi_mesh::sweep_management::AngleSet']]],
+  ['relativeresidualconvergencetest',['RelativeResidualConvergenceTest',['../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a77fd6feef9f909de887c2533d2ca144c',1,'chi_math::PETScUtils']]],
   ['releaselocator',['ReleaseLocator',['../d8/dce/classvtk_clean_unstructured_grid.html#a8c058ff48d76865070b0501e524edf09',1,'vtkCleanUnstructuredGrid']]],
   ['removebadqualitytriangles',['RemoveBadQualityTriangles',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html#a8c487761d67c974389c020c7bcba94e1',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
   ['removeedge',['RemoveEdge',['../dc/d15/classchi__graph_1_1_directed_graph.html#a1e2427f67632a420e7849ee3004efe46',1,'chi_graph::DirectedGraph']]],

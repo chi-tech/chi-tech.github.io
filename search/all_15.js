@@ -1,7 +1,15 @@
 var searchData=
 [
+  ['using_20chi_2dtech_20as_20a_20library',['Using Chi-Tech as a library',['../d8/d99/_dev_man_using_lib.html',1,'DevManMustReads']]],
   ['unpartitioned_20mesh_2dreader',['Unpartitioned Mesh-Reader',['../d2/dde/group___lua_unpartitioned_mesh.html',1,'']]],
   ['u_5fll_5fint',['u_ll_int',['../d9/d11/sweepbuffer_8h.html#a13c0d9c8c925922a27cee81b356ad14d',1,'sweepbuffer.h']]],
+  ['unknown',['Unknown',['../d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html',1,'chi_math::UnknownManager::Unknown'],['../d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html#acb08f55b3de080b1882366354de008a3',1,'chi_math::UnknownManager::Unknown::Unknown()']]],
+  ['unknown_5fmanager',['unknown_manager',['../df/de9/classchi__physics_1_1_field_function.html#a6c728bc91c5fda2dba8022c0c2ec08c9',1,'chi_physics::FieldFunction']]],
+  ['unknown_5fmanager_2ecc',['unknown_manager.cc',['../d0/d4c/unknown__manager_8cc.html',1,'']]],
+  ['unknown_5fmanager_2eh',['unknown_manager.h',['../d6/d3b/unknown__manager_8h.html',1,'']]],
+  ['unknownmanager',['UnknownManager',['../d9/da7/classchi__math_1_1_unknown_manager.html',1,'chi_math']]],
+  ['unknowns',['unknowns',['../d9/da7/classchi__math_1_1_unknown_manager.html#a4ed8dd987d328f8e89b7e981bc03f2e9',1,'chi_math::UnknownManager']]],
+  ['unknowntype',['UnknownType',['../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1d',1,'chi_math']]],
   ['unpartitionedmesh',['UnpartitionedMesh',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html',1,'chi_mesh']]],
   ['unpartitionedmesh_5fstack',['unpartitionedmesh_stack',['../d2/d10/classchi__mesh_1_1_mesh_handler.html#acb4af5be511166e9d85c3d18c5712272',1,'chi_mesh::MeshHandler']]],
   ['unpartmesh_5f00_5fgeneral_2ecc',['unpartmesh_00_general.cc',['../da/dab/unpartmesh__00__general_8cc.html',1,'']]],

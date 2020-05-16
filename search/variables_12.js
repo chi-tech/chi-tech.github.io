@@ -36,6 +36,7 @@ var searchData=
   ['solver',['solver',['../dd/dbc/struct_k_s_p_data_context.html#a26c45755f2308a156c5a1c0164469fcd',1,'KSPDataContext']]],
   ['solver_5fname',['solver_name',['../d6/d32/classchi__diffusion_1_1_solver.html#a5c5035fd4ccd0fe4763c8d707618ca79',1,'chi_diffusion::Solver']]],
   ['solver_5fstack',['solver_stack',['../d8/d9a/class_chi_physics.html#a5eea4ecebd52f4289ed9edaab8936d37',1,'ChiPhysics']]],
+  ['solver_5ftype',['solver_type',['../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a02114f46868b2e55ed76860138505f90',1,'chi_math::PETScUtils::PETScSolverSetup']]],
   ['source',['source',['../d7/d3d/class_l_b_s_sweep_chunk_p_w_l.html#ae6541da42d27eb2d566585c268d05f63',1,'LBSSweepChunkPWL']]],
   ['source_5fevent_5ftag',['source_event_tag',['../d7/d26/class_linear_boltzman_1_1_solver.html#a3fad51a14cae131bedc0f65858df0930',1,'LinearBoltzman::Solver']]],
   ['source_5fvalue_5fg',['source_value_g',['../dc/d04/classchi__physics_1_1_isotropic_multi_grp_source.html#a2c3b619ae0a368b17328f28bbabdcc52',1,'chi_physics::IsotropicMultiGrpSource']]],

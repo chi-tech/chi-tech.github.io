@@ -92,16 +92,70 @@ $(document).ready(function(){initNavTree('dd/d1a/_dev_man_meshes.html','../../')
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="devman4_sec0"></a>
 General structure of meshes</h1>
-<p>Meshes and mesh operations are all handled under the umbrella of a <a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a>. If any mesh operation is performed it should push newly created objects to a stack in a handler. The figure below shows a generalized architecture.</p>
+<h2>_</h2>
+<h2>Easily access an existing grid</h2>
+<p>We will explain the different elements of a mesh in more detail in sections below but as a quick primer we can say that mesh entities are loaded into <a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a>.</p>
+<p>You can get the current mesh-handler using:</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> cur_handler = <a class="code" href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a>();</div></div><!-- fragment --><p>The computational grid is contained in a <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> object which you can obtain with:</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> grid = cur_handler-&gt;GetGrid();</div></div><!-- fragment --><h2>_</h2>
+<h2>More detail on Mesh data structures</h2>
+<h3><a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a></h3>
+<p>Meshes and mesh operations are all handled under the umbrella of a <a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a>. Mesh handlers are loaded onto the global variable <code>chi_meshhandler_stack</code> and the "current" handler is tracked by another global variable, <code>chi_current_mesh_handler</code>. If any mesh operation is performed it should push newly created objects to a stack in a handler. The figure below shows a generalized architecture.</p>
 <div class="image">
 <img src="../../MeshOverview.png" alt="MeshOverview.png" width="700px"/>
 <div class="caption">
-Overview of the mesh hierarchy</div></div>
-<p>The final level of a <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> object is a <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> object. On this object it will be placed inside a global stack, meaning all processes will have the same stack (albeit some locations might have empty references for cells not locally owned). Partitioning of meshes is facilitated by storing the full data structure of a cell only if the cell is locally owned, and by populating the local_cell_glob_index array of indices mapped from local ids to global ids. This vector stores the global indices of cells that are locally owned. See Figure below:</p>
+Figure 1: Overview of the mesh hierarchy.</div></div>
+<p>The "current" handler can always be obtained with:</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> cur_handler = <a class="code" href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a>();</div></div><!-- fragment --><h2>_</h2>
+<h3><a class="el" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a></h3>
+<p>When loading mesh related entities, all mesh operations are pushed onto stacks contained in the current handler. This is used free-form and the user can upload as many mesh-related items as he/she desires. When specific mesh items are specific to a computational grid another grouping element is applied called a region (<a class="el" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a>). Boundaries are normally attached to regions to assist in meshing operations, although an empty boundary can also be added.</p>
+<p>To create and access grids at least one region must be present on a mesh-handler.</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> cur_region = <span class="keyword">new</span> <a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a>();</div><div class="line">cur_handler-&gt;region_stack.push_back(cur_region);</div></div><!-- fragment --><h2>_</h2>
+<h3><a class="el" href="../../df/d7e/classchi__mesh_1_1_surface_mesher.html">chi_mesh::SurfaceMesher</a> and <a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html">chi_mesh::VolumeMesher</a></h3>
+<p>Each mesh-handler is outfitted with one surface mesher and one volume mesher, both initially undefined. The surface meshing step can be thought of a preprocessing step. For those who are used to STAR-CCM+, this step is analogous to the remeshing of a CAD surface into a format more conducive to volume meshing.</p>
+<p>There are various types of surface meshers:</p><ul>
+<li><a class="el" href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a>. Pass through pre-processor. Does not perform any meshing.</li>
+<li><a class="el" href="../../d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html">chi_mesh::SurfaceMesherDelaunay</a>. Remeshes a surface mesh using Delaunay triangulation.</li>
+<li><a class="el" href="../../d7/ddc/classchi__mesh_1_1_surface_mesher_triangle.html">chi_mesh::SurfaceMesherTriangle</a>. Remeshes a surface mesh using Triangle 1.6.</li>
+</ul>
+<p>Similarly there are also various types of volume meshers:</p><ul>
+<li><a class="el" href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html">chi_mesh::VolumeMesherLinemesh1D</a>. Converts line meshes into slabs.</li>
+<li><a class="el" href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html">chi_mesh::VolumeMesherPredefined2D</a>. Converts predefined surface meshes into 2D triangles, quadrilaterals or polygons.</li>
+<li><a class="el" href="../../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html">chi_mesh::VolumeMesherExtruder</a>. Extrudes predefined surface meshes into 3D triangular prisms, hexahedrals or polyhedrons.</li>
+<li><a class="el" href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html">chi_mesh::VolumeMesherPredefined3D</a>. Converts loaded 3D meshes to 3D tetrahedrals, hexahedrals or polyhedrons.</li>
+</ul>
+<p>Surface meshers and volume meshers are assigned to a handler as:</p>
+<div class="fragment"><div class="line">cur_handler-&gt;surface_mesher = <span class="keyword">new</span> <a class="code" href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a>;</div><div class="line">cur_handler-&gt;volume_mesher = <span class="keyword">new</span> <a class="code" href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html">chi_mesh::VolumeMesherPredefined3D</a>;</div></div><!-- fragment --><p>To execute the surface meshers simply do:</p>
+<div class="fragment"><div class="line">cur_handler-&gt;surface_mesher-&gt;Execute();</div><div class="line">cur_handler-&gt;volume_mesher-&gt;Execute();</div></div><!-- fragment --><h2>_</h2>
+<h3><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> (or if you like ... THE GRID!)</h3>
+<p>A <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> object is the business-end of meshes. The execution of a volume mesher ultimately results in the creation of a grid. To obtain a reference to a grid simply execute:</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> grid = cur_handler-&gt;GetGrid();</div></div><!-- fragment --><p>This command will retrieve the latest grid from the latest region within the current mesh handler.</p>
+<h2>_</h2>
+<h3><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a></h3>
+<p>Cells in Chi-Tech are the basic building blocks for mesh-based scientific computing. Some of the mesh types are shown in Figure 2 below and are defined by the enumeration they hold as defined by <a class="el" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9">chi_mesh::CellType</a>. The cell types supported right now are:</p><ul>
+<li><a class="el" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9ad1360da3ac37ed5c02244bbe2ef9a34e">chi_mesh::CellType::SLAB</a></li>
+<li><a class="el" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a9bcd89070cae224dce305f5011659ef4">chi_mesh::CellType::TRIANGLE</a></li>
+<li><a class="el" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9ac9736a37691f2901057c38a5490dc10c">chi_mesh::CellType::QUADRILATERAL</a></li>
+<li><a class="el" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9aecdc92bf56d960b73b02ee40125758bc">chi_mesh::CellType::POLYGON</a></li>
+<li><a class="el" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a921725623efcb888f85a941eb29906a9">chi_mesh::CellType::TETRAHEDRON</a></li>
+<li><a class="el" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a8efa397d080e415a2a4b45794abc1f76">chi_mesh::CellType::HEXAHEDRON</a></li>
+<li><a class="el" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74">chi_mesh::CellType::POLYHEDRON</a></li>
+</ul>
 <div class="image">
-<img src="../../CellMapping.png" alt="CellMapping.png" width="700px"/>
+<img src="../../TypesOfCells.png" alt="TypesOfCells.png" width="500px"/>
 <div class="caption">
-Cell mapping logic</div></div>
+Figure 2: Types of cells.</div></div>
+<h2>_</h2>
+<h3>Accessing cells (the pain of parallel programs)</h3>
+<p>Cells live in the <code>local_cells</code> member of a grid, which is of object type <a class="el" href="../../dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html">chi_mesh::MeshContinuum::LocalCells</a>, under the auspices of either <code>native_cells</code> or <code>foreign_cells</code>. Local cells are guaranteed to be fully defined (i.e. not ghost cells) whilst non-local cells are most likely to be ghost-cells. The fastest way to access a cell is by means of its local id</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> cell = grid-&gt;local_cells[cell_local_id];</div></div><!-- fragment --><p>The <code>local_cells</code> object also facilitates an iterator.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span> cell = grid-&gt;local_cells.begin();</div><div class="line">     cell != grid-&gt;local-cells.end();</div><div class="line">     ++cell)</div><div class="line">{<span class="comment">//do stuff}</span></div></div><!-- fragment --><p>and also a range based iterator</p>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : grid-&gt;local_cells)</div><div class="line">{ <span class="comment">//do stuff}</span></div></div><!-- fragment --><p>Alternatively, a more expensive way to access a cell is by means of its global index via the grid's <code>cells</code> member. This member is a utility object that will search the <code>native_cells</code> and <code>foreign_cells</code> for the cell with the associated global id</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> cell = grid-&gt;cells[cell_global_id];</div></div><!-- fragment --><p>Because of the search operation it is not recommended to repeatedly access cells by their global ids.</p>
+<div class="image">
+<img src="../../CellMapping.png" alt="CellMapping.png" width="600px"/>
+<div class="caption">
+Figure 3: Cell mapping logic.</div></div>
  </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

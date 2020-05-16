@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['petscsolversetup',['PETScSolverSetup',['../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html',1,'chi_math::PETScUtils']]],
   ['polyface',['PolyFace',['../d4/ddb/structchi__mesh_1_1_poly_face.html',1,'chi_mesh']]],
   ['polygonfeview',['PolygonFEView',['../d7/db8/class_polygon_f_e_view.html',1,'']]],
   ['polygonfvview',['PolygonFVView',['../d4/dc6/class_polygon_f_v_view.html',1,'']]],

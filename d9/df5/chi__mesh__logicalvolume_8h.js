@@ -11,6 +11,5 @@ var chi__mesh__logicalvolume_8h =
     [ "RPP", "d9/df5/chi__mesh__logicalvolume_8h.html#ab27b91d4128c63b2fa1ff9d4c7f179a5", null ],
     [ "SPHERE", "d9/df5/chi__mesh__logicalvolume_8h.html#ad6372e14875f107f90642c7da8e10d12", null ],
     [ "SPHERE_ORIGIN", "d9/df5/chi__mesh__logicalvolume_8h.html#a8fa293695ca84c47fbcd8bf99f6357f7", null ],
-    [ "SURFACE", "d9/df5/chi__mesh__logicalvolume_8h.html#a5ec2e414545e7c2a2f3ebe4c93600b76", null ],
-    [ "chi_log", "d9/df5/chi__mesh__logicalvolume_8h.html#a7f7643dbaafc220f437a5f6429f0263a", null ]
+    [ "SURFACE", "d9/df5/chi__mesh__logicalvolume_8h.html#a5ec2e414545e7c2a2f3ebe4c93600b76", null ]
 ];

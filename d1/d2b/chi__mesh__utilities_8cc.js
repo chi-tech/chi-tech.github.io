@@ -1,4 +1,5 @@
 var chi__mesh__utilities_8cc =
 [
-    [ "chi_log", "d1/d2b/chi__mesh__utilities_8cc.html#a7f7643dbaafc220f437a5f6429f0263a", null ]
+    [ "operator*", "d1/d2b/chi__mesh__utilities_8cc.html#a1766b6592096c0ed679d6bb64021b1c3", null ],
+    [ "chi_log", "d1/d2b/chi__mesh__utilities_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869", null ]
 ];

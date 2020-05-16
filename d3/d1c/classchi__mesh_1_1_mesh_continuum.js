@@ -12,6 +12,7 @@ var classchi__mesh_1_1_mesh_continuum =
     [ "FindAssociatedVertices", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a6a9cc1f2ff80abd94cd6e7eafac1eae7", null ],
     [ "GetCommunicator", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a63de2e096180433a25967c02d0603986", null ],
     [ "GetFaceHistogramBinDOFSize", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a5ba081e63d16161bc6d4f91f12ac3220", null ],
+    [ "GetGlobalNumberOfCells", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a1bd208a0afbfe85f6187b0d0d6f08ce8", null ],
     [ "IsCellBndry", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aaff6e9cfae64a2c60869d938efe8dbf4", null ],
     [ "IsCellLocal", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a38ae02622bdcc1bbb784c6e24b49db3f", null ],
     [ "MapFaceHistogramBins", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a0eebe16ef3e8a0c8a1e5da0f0d27bfde", null ],

@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['petsc_5futils_2eh',['petsc_utils.h',['../da/d0e/petsc__utils_8h.html',1,'']]],
+  ['petsc_5futils_5f00_2ecc',['petsc_utils_00.cc',['../dd/d76/petsc__utils__00_8cc.html',1,'']]],
   ['physics_5fexportfieldfunc_2ecc',['physics_exportfieldfunc.cc',['../d2/d70/physics__exportfieldfunc_8cc.html',1,'']]],
   ['physics_5fgetfieldfunclist_2ecc',['physics_getfieldfunclist.cc',['../df/d84/physics__getfieldfunclist_8cc.html',1,'']]],
   ['populate_5fcell_5frelationships_2ecc',['populate_cell_relationships.cc',['../d2/dfc/populate__cell__relationships_8cc.html',1,'']]],

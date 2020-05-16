@@ -30,7 +30,8 @@ var NAVTREE =
     [ "Developer's quick reference", "d9/df2/_dev_ref_main.html", [
       [ "Useful Functions", "d9/df2/_dev_ref_main.html#devrefmain_00", [
         [ "Runtime", "d9/df2/_dev_ref_main.html#devrefmain_00a", null ],
-        [ "Mesh Utilities", "d9/df2/_dev_ref_main.html#devrefmain_00b", null ]
+        [ "Mesh Utilities", "d9/df2/_dev_ref_main.html#devrefmain_00b", null ],
+        [ "Math Utilities", "d9/df2/_dev_ref_main.html#devrefmain_00c", null ]
       ] ]
     ] ],
     [ "Todo List", "dd/da0/todo.html", null ],
@@ -77,20 +78,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839",
-"d2/d98/chi__surfacemesh_8h_source.html",
-"d3/dff/classchi__physics_1_1_transport_cross_sections.html#a0d59f39203de1d10aa00b11fbde7615a",
-"d5/d49/class_chi_tech.html#aad21dc53f30a7a2e7101c61cd1985e66",
-"d6/d56/raytrace__utils_8cc.html",
-"d7/d6b/lbs___g_m_r_e_s_8cc.html#adc1b2db4f75dab650895a0e0ec8e748e",
-"d8/d81/chi__mesh__splitedgeloopbyangle_8cc.html",
-"d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html#ac7bdd8cf5aaa3903f96f808a3d198645",
-"da/d96/module__lua__register_8h.html",
-"dc/d15/classchi__graph_1_1_directed_graph.html#a5eda015771b74d0a31a677b92f366ab1",
-"dd/d06/fv__polyhedron_8h.html",
-"de/d04/struct_f_eside__data3d.html#abdb7e93f12318e4a4574b9801e6d5460",
-"df/db6/sweepbuffer__senddownstreampsi_8cc.html",
-"globals_e.html"
+"d1/d74/_mesh_tutorial__01___predef2d_8h.html",
+"d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#ab04e98921b09572dde0a481cf3c5cad9",
+"d3/dd3/chi__runtime_8cc_source.html",
+"d5/d14/classchi__mesh_1_1_field_function_interpolation_line.html#a4e5a8e906f325a767f5327e6e0fa105e",
+"d6/d32/classchi__diffusion_1_1_solver.html#a927532b42d15dddab55a8c8f46f618a1",
+"d7/d3d/class_l_b_s_sweep_chunk_p_w_l.html#a1d39e1b08c7eb0ca19d276afe1b26c06",
+"d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#ad5e2a65c10b7dbf1646bd09cdfba34ec",
+"d9/d3a/classchi__physics_1_1_solver.html#a1e88bba35bb5b67908a64fe5944db62a",
+"da/d1e/lua__namespace_8hpp.html#ga893d680fbdbe760b270dc2eaa47d02db",
+"db/d8c/initpwld__grpagg_8cc.html",
+"dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a11d3faae6211a2aebdac5087a66e2e2f",
+"dd/d9b/chi__console__memory_8cpp.html",
+"de/df0/classchi__mesh_1_1_volume_mesher.html#ac1b61e24c3ad24f873a19f07e6d650e5",
+"dir_a82033d5292ea792d9dba3cdf760924c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

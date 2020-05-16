@@ -4,6 +4,7 @@ var searchData=
   ['sample_5fgprime',['Sample_gprime',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#afabf684416ac963367fa097a998919fb',1,'chi_physics::TransportCrossSections']]],
   ['samplecdf',['SampleCDF',['../dc/d58/namespacechi__math.html#a46211d1897a690eb5828d7041b77d387',1,'chi_math']]],
   ['samplemu_5fgprime_5fg',['SampleMu_gprime_g',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a9655ec1ae091cc4fe220cd5ee7b12db6',1,'chi_physics::TransportCrossSections']]],
+  ['scalarunknown',['ScalarUnknown',['../d1/dbb/classchi__math_1_1_unknown_manager_1_1_scalar_unknown.html#a1e1744002f63ca640c677565467cc9b9',1,'chi_math::UnknownManager::ScalarUnknown']]],
   ['scalarvalue',['ScalarValue',['../db/d6e/classchi__physics_1_1_scalar_value.html#a352888588ca96ada887a201e6ae8deca',1,'chi_physics::ScalarValue']]],
   ['scale',['Scale',['../dc/d58/namespacechi__math.html#a408917c286c16e9fc82ed928c9db6b64',1,'chi_math::Scale(VecDbl &amp;x, const double &amp;val)'],['../dc/d58/namespacechi__math.html#a1eec94fde137265a429b5082d2302c87',1,'chi_math::Scale(MatDbl &amp;A, const double &amp;val)']]],
   ['sccalgorithm',['SCCAlgorithm',['../dc/d15/classchi__graph_1_1_directed_graph.html#a5e0dab5cdb0ea745746e16952f2a7a26',1,'chi_graph::DirectedGraph']]],

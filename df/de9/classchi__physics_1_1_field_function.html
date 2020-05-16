@@ -136,6 +136,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:a6b4b56651e03f46d0a1c0ca52f6d8015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeff0fc9e298aa96c5871f0e746eb02b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d2b/class_spatial_discretization.html">SpatialDiscretization</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html#aeff0fc9e298aa96c5871f0e746eb02b3">spatial_discretization</a></td></tr>
 <tr class="separator:aeff0fc9e298aa96c5871f0e746eb02b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c728bc91c5fda2dba8022c0c2ec08c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html#a6c728bc91c5fda2dba8022c0c2ec08c9">unknown_manager</a></td></tr>
+<tr class="separator:a6c728bc91c5fda2dba8022c0c2ec08c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03daf59ab3b96f8ad6b3b0aaaab7f557"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html#a03daf59ab3b96f8ad6b3b0aaaab7f557">num_components</a></td></tr>
 <tr class="separator:a03daf59ab3b96f8ad6b3b0aaaab7f557"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15795e20d7551ccae27c7fb803a15fcf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html#a15795e20d7551ccae27c7fb803a15fcf">num_sets</a></td></tr>
@@ -162,7 +164,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Implementation of an abstracted field function object holding a reference to a contiguous vector of data associated with a mesh and a spatial discretization method. This object's design has undergone numerous iterations and is still evolving. The first iteration involved the structuring of groups and moments associated with transport simulations which exhibited significant performance gains when the groups were contiguous. The mapping for each dof was then dof*num_grps*num_moms + num_groups*moment + group. After this it became clear that the design can be generalized even further. The deal.ii library has the concepts of unknown ``components" on each degree of freedom. It also extends the concept to vector valued components.</p>
 <p>For <a class="el" href="../../d5/d49/class_chi_tech.html">ChiTech</a> we will generalize a field function to store sets of components. Each set (akin to a moment) will have all its components contiguous and will allow algorithms to to build accordingly. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00037">37</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00038">38</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="add2254264d2027604a960cd6f1be33e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add2254264d2027604a960cd6f1be33e7">&#9670;&nbsp;</a></span>FieldFunction() <span class="overload">[1/2]</span></h2>
@@ -253,7 +255,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Non-PETSc based field function constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00060">60</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00062">62</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -346,7 +348,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>PETSc-vector based field function constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00088">88</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00090">90</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -440,7 +442,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Handles the PWLD version of a field function export to VTK. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d82/fieldfunction__vtkfv_8cc_source.html#l00214">214</a> of file <a class="el" href="../../db/d82/fieldfunction__vtkfv_8cc_source.html">fieldfunction_vtkfv.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d82/fieldfunction__vtkfv_8cc_source.html#l00222">222</a> of file <a class="el" href="../../db/d82/fieldfunction__vtkfv_8cc_source.html">fieldfunction_vtkfv.cc</a>.</p>
 
 </div>
 </div>
@@ -694,7 +696,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00050">50</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00052">52</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -710,7 +712,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00051">51</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00053">53</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -726,7 +728,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00043">43</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00044">44</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -742,7 +744,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00041">41</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00042">42</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -758,7 +760,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00048">48</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00050">50</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -774,7 +776,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00045">45</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00047">47</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -790,7 +792,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00045">45</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00047">47</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -806,7 +808,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00046">46</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00048">48</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -822,7 +824,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00046">46</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00048">48</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -838,7 +840,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00044">44</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00045">45</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -862,7 +864,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00055">55</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00057">57</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -878,7 +880,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00040">40</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00041">41</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -894,7 +896,23 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00042">42</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00043">43</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+
+</div>
+</div>
+<a id="a6c728bc91c5fda2dba8022c0c2ec08c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c728bc91c5fda2dba8022c0c2ec08c9">&#9670;&nbsp;</a></span>unknown_manager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a>* chi_physics::FieldFunction::unknown_manager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00046">46</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>
@@ -910,7 +928,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00052">52</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/fieldfunction_8h_source.html#l00054">54</a> of file <a class="el" href="../../d1/db1/fieldfunction_8h_source.html">fieldfunction.h</a>.</p>
 
 </div>
 </div>

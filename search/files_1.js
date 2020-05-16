@@ -73,6 +73,7 @@ var searchData=
   ['chi_5fmeshcontinuum_5fexportobj_2ecc',['chi_meshcontinuum_exportobj.cc',['../d6/d61/chi__meshcontinuum__exportobj_8cc.html',1,'']]],
   ['chi_5fmeshcontinuum_5fexportpython_2ecc',['chi_meshcontinuum_exportpython.cc',['../d5/dcc/chi__meshcontinuum__exportpython_8cc.html',1,'']]],
   ['chi_5fmeshcontinuum_5fexportvtk_2ecc',['chi_meshcontinuum_exportvtk.cc',['../d1/d4c/chi__meshcontinuum__exportvtk_8cc.html',1,'']]],
+  ['chi_5fmeshcontinuum_5fglobal_5fcells_2ecc',['chi_meshcontinuum_global_cells.cc',['../d5/d9d/chi__meshcontinuum__global__cells_8cc.html',1,'']]],
   ['chi_5fmeshcontinuum_5flocal_5fcells_2ecc',['chi_meshcontinuum_local_cells.cc',['../df/dbc/chi__meshcontinuum__local__cells_8cc.html',1,'']]],
   ['chi_5fmeshcontinuum_5futilities_2ecc',['chi_meshcontinuum_utilities.cc',['../dd/d61/chi__meshcontinuum__utilities_8cc.html',1,'']]],
   ['chi_5fmeshface_2eh',['chi_meshface.h',['../db/d70/chi__meshface_8h.html',1,'']]],

@@ -31,7 +31,5 @@ var dir_f4f809ca642493e8405e9576fec2205d =
     [ "chi_meshmatrix3x3.h", "d8/df9/chi__meshmatrix3x3_8h.html", [
       [ "Matrix3x3", "d0/dec/structchi__mesh_1_1_matrix3x3.html", "d0/dec/structchi__mesh_1_1_matrix3x3" ]
     ] ],
-    [ "chi_meshvector.h", "d1/d7f/chi__meshvector_8h.html", [
-      [ "Vector3", "dd/d54/structchi__mesh_1_1_vector3.html", "dd/d54/structchi__mesh_1_1_vector3" ]
-    ] ]
+    [ "chi_meshvector.h", "d1/d7f/chi__meshvector_8h.html", "d1/d7f/chi__meshvector_8h" ]
 ];

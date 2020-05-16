@@ -27,6 +27,7 @@ var searchData=
   ['region_5fcontexts',['region_contexts',['../d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html#a5ba614c0bd8522a49226c5ae0d72bec5',1,'chi_mesh::SurfaceMesherDelaunay']]],
   ['region_5fstack',['region_stack',['../d2/d10/classchi__mesh_1_1_mesh_handler.html#a1e6fca7c25c8dcfddb13bf49f8651740',1,'chi_mesh::MeshHandler']]],
   ['regions',['regions',['../d9/d3a/classchi__physics_1_1_solver.html#a1e88bba35bb5b67908a64fe5944db62a',1,'chi_physics::Solver']]],
+  ['relative_5fresidual_5ftol',['relative_residual_tol',['../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#ae24d68a807c5830ace64677706f16655',1,'chi_math::PETScUtils::PETScSolverSetup']]],
   ['remeshed_5fsurface_5fmesh',['remeshed_surface_mesh',['../d0/d54/structchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_mesh_context.html#a9118471a92a899b8ab534a5ab9f47215',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayMeshContext']]],
   ['repeating_5fevents',['repeating_events',['../d8/d1a/class_chi_log.html#a89bd617139af8c579d2063b5aa402ce7',1,'ChiLog']]],
   ['residual_5ftolerance',['residual_tolerance',['../d6/d32/classchi__diffusion_1_1_solver.html#ade535f862d3a1dc8fcc3904c83f24212',1,'chi_diffusion::Solver::residual_tolerance()'],['../d7/d7d/class_l_b_s_groupset.html#acdc8a0552d714a2e9806ed678102c853',1,'LBSGroupset::residual_tolerance()']]],

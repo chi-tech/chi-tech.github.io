@@ -4,6 +4,7 @@ var searchData=
   ['beta',['beta',['../d5/d5e/class_golub_fischer.html#aad502b85e7aba2c9a726a1614baba7af',1,'GolubFischer::beta()'],['../d7/db8/class_polygon_f_e_view.html#a5ab4deba969ff90fb094229837d78b2c',1,'PolygonFEView::beta()']]],
   ['bg',['bg',['../d6/d32/classchi__diffusion_1_1_solver.html#a6e223270f197b36af7de643f6b308885',1,'chi_diffusion::Solver']]],
   ['binorm',['binorm',['../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html#ab1618061f0cf961b4ce05eda15e85942',1,'chi_mesh::FieldFunctionInterpolationSlice']]],
+  ['block_5fsize_5fper_5funknown',['block_size_per_unknown',['../da/d2b/class_spatial_discretization.html#a55a579eb79f0682230d4032eed53c0d8',1,'SpatialDiscretization']]],
   ['bot_5fboundary_5findex',['bot_boundary_index',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a761e851b1c676a095be35679a9f9881e',1,'chi_mesh::VolumeMesherExtruder']]],
   ['bound_5fbox',['bound_box',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a69dd0c31207a900aca05a248f92b4dd8',1,'chi_mesh::UnpartitionedMesh']]],
   ['boundaries',['boundaries',['../d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839',1,'chi_mesh::Region::boundaries()'],['../d6/d32/classchi__diffusion_1_1_solver.html#affd4790c5f0755e4ceb72faa832310e6',1,'chi_diffusion::Solver::boundaries()']]],

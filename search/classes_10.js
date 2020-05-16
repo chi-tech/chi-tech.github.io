@@ -1,9 +1,10 @@
 var searchData=
 [
+  ['scalarunknown',['ScalarUnknown',['../d1/dbb/classchi__math_1_1_unknown_manager_1_1_scalar_unknown.html',1,'chi_math::UnknownManager']]],
   ['scalarvalue',['ScalarValue',['../db/d6e/classchi__physics_1_1_scalar_value.html',1,'chi_physics']]],
   ['slabfeview',['SlabFEView',['../d1/d7a/class_slab_f_e_view.html',1,'']]],
   ['slabfvview',['SlabFVView',['../da/dc2/class_slab_f_v_view.html',1,'']]],
-  ['solver',['Solver',['../d9/d3a/classchi__physics_1_1_solver.html',1,'chi_physics::Solver'],['../d6/d32/classchi__diffusion_1_1_solver.html',1,'chi_diffusion::Solver'],['../d7/d26/class_linear_boltzman_1_1_solver.html',1,'LinearBoltzman::Solver']]],
+  ['solver',['Solver',['../d7/d26/class_linear_boltzman_1_1_solver.html',1,'LinearBoltzman::Solver'],['../d6/d32/classchi__diffusion_1_1_solver.html',1,'chi_diffusion::Solver'],['../d9/d3a/classchi__physics_1_1_solver.html',1,'chi_physics::Solver']]],
   ['sourceflags',['SourceFlags',['../df/df5/struct_linear_boltzman_1_1_source_flags.html',1,'LinearBoltzman']]],
   ['sparsematrix',['SparseMatrix',['../de/d51/classchi__math_1_1_sparse_matrix.html',1,'chi_math']]],
   ['spatialdiscretization',['SpatialDiscretization',['../da/d2b/class_spatial_discretization.html',1,'']]],

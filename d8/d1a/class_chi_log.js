@@ -20,6 +20,7 @@ var class_chi_log =
       [ "MAX_MEMORY_USAGE", "d8/d1a/class_chi_log.html#a130798199b3ef1ed34ece3857b6bbd24ab9dc787a6733a0ac3f0e40a931a9efb4", null ]
     ] ],
     [ "ChiLog", "d8/d1a/class_chi_log.html#a5e6909c4557d1ef7ba289d9067769d8a", null ],
+    [ "GetInstance", "d8/d1a/class_chi_log.html#af5c2dcd4bf197d44b12c70e8359b0bd0", null ],
     [ "GetRepeatingEventTag", "d8/d1a/class_chi_log.html#a1a32e31311525f199f208b4f92817978", null ],
     [ "GetVerbosity", "d8/d1a/class_chi_log.html#afcb7b450ad2435af94adeb545513c812", null ],
     [ "Log", "d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64", null ],
@@ -29,6 +30,7 @@ var class_chi_log =
     [ "ProcessEvent", "d8/d1a/class_chi_log.html#a99f7a7b1802dacd5fc58637d7183f789", null ],
     [ "SetVerbosity", "d8/d1a/class_chi_log.html#af9758f0233105c8ed2073ec6e965b181", null ],
     [ "dummy_stream", "d8/d1a/class_chi_log.html#aadcdf7fad4188906b43bae592432d782", null ],
+    [ "instance", "d8/d1a/class_chi_log.html#ae582fda3fff26a4ea74437bf780f7455", null ],
     [ "repeating_events", "d8/d1a/class_chi_log.html#a89bd617139af8c579d2063b5aa402ce7", null ],
     [ "verbosity", "d8/d1a/class_chi_log.html#a17b90f08bff19b0ea74d38aa3b915ec6", null ]
 ];

@@ -2,6 +2,7 @@ var classchi__montecarlon_1_1_source =
 [
     [ "Source", "d6/da0/classchi__montecarlon_1_1_source.html#a0c166cb66ce9e2e8a4059cf181d69cec", null ],
     [ "CreateParticle", "d6/da0/classchi__montecarlon_1_1_source.html#a1a051a7aa55e347bd0cbdacc41a93cc4", null ],
+    [ "GetParallelRelativeSourceWeight", "d6/da0/classchi__montecarlon_1_1_source.html#a78eeeb5796a61aa3e442c1a67b07747a", null ],
     [ "Initialize", "d6/da0/classchi__montecarlon_1_1_source.html#a9c710a143d35b5d1ad8c69749b074376", null ],
     [ "fv_sdm", "d6/da0/classchi__montecarlon_1_1_source.html#a4d022c8aa3396892e9c96a6a02eca2e0", null ],
     [ "grid", "d6/da0/classchi__montecarlon_1_1_source.html#a0e679722a3e63cc97135d059c3e4c011", null ],

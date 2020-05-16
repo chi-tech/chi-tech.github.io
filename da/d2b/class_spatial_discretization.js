@@ -2,6 +2,7 @@ var class_spatial_discretization =
 [
     [ "SpatialDiscretization", "da/d2b/class_spatial_discretization.html#a397e3168cd1ad2934ff322e84eda009f", null ],
     [ "AddViewOfLocalContinuum", "da/d2b/class_spatial_discretization.html#ab8acb81485d21f89c2bc6c35df21cbba", null ],
+    [ "block_size_per_unknown", "da/d2b/class_spatial_discretization.html#a55a579eb79f0682230d4032eed53c0d8", null ],
     [ "cell_dfem_block_address", "da/d2b/class_spatial_discretization.html#a37683a66f7df3ff31e705ce59061abbe", null ],
     [ "cfem_local_block_address", "da/d2b/class_spatial_discretization.html#a46098e24015e7c5592e651848eb440ef", null ],
     [ "dfem_local_block_address", "da/d2b/class_spatial_discretization.html#ab90abc49df3b844dbc3301083a05e4ed", null ],

@@ -1,4 +1,4 @@
 var prop__transportxs__04__scatangles_8cc =
 [
-    [ "chi_log", "d9/d81/prop__transportxs__04__scatangles_8cc.html#a7f7643dbaafc220f437a5f6429f0263a", null ]
+    [ "chi_log", "d9/d81/prop__transportxs__04__scatangles_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869", null ]
 ];

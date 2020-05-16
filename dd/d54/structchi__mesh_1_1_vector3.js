@@ -6,6 +6,8 @@ var structchi__mesh_1_1_vector3 =
     [ "Vector3", "dd/d54/structchi__mesh_1_1_vector3.html#a036c60e7a43ed5d9670acb7ac5e4b2a7", null ],
     [ "Cross", "dd/d54/structchi__mesh_1_1_vector3.html#a6ddbb12bba7c4e09e08623c24f02f1ea", null ],
     [ "Dot", "dd/d54/structchi__mesh_1_1_vector3.html#aceea8261e0ad28732ff4beaf8e481902", null ],
+    [ "InverseZeroIfGreater", "dd/d54/structchi__mesh_1_1_vector3.html#ae3e1103b754cc3ed6c6085c8565567bb", null ],
+    [ "InverseZeroIfInf", "dd/d54/structchi__mesh_1_1_vector3.html#a041413b032f85011e2f357d624121bf1", null ],
     [ "Norm", "dd/d54/structchi__mesh_1_1_vector3.html#aa05ee3e4694dc431351b2dd05a6e3cb6", null ],
     [ "Normalize", "dd/d54/structchi__mesh_1_1_vector3.html#aa1db0fd1b692fa5802a0cfb4b3856598", null ],
     [ "Normalized", "dd/d54/structchi__mesh_1_1_vector3.html#a7be867bf9e8b3d9ac50f975890ff98c1", null ],
