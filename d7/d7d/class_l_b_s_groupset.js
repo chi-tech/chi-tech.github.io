@@ -1,8 +1,8 @@
 var class_l_b_s_groupset =
 [
     [ "LBSGroupset", "d7/d7d/class_l_b_s_groupset.html#a82b1237b403a72c5071da953ea7da4ae", null ],
-    [ "BuildDiscMomOperator", "d7/d7d/class_l_b_s_groupset.html#aa2c0ba3a7738cc10282169e4d61d3e42", null ],
-    [ "BuildMomDiscOperator", "d7/d7d/class_l_b_s_groupset.html#acd705e9d1b885972a6c9b0f870a2f516", null ],
+    [ "BuildDiscMomOperator", "d7/d7d/class_l_b_s_groupset.html#ae146b895cda2e287399ee14778d096f0", null ],
+    [ "BuildMomDiscOperator", "d7/d7d/class_l_b_s_groupset.html#a84b0656535de88884cecfce6ed0eeb7d", null ],
     [ "BuildSubsets", "d7/d7d/class_l_b_s_groupset.html#afee1b9067ff51ffc1efc6f786ac2cf5c", null ],
     [ "PrintSweepInfoFile", "d7/d7d/class_l_b_s_groupset.html#a3fb47cc9c80e913effef09a13bf94031", null ],
     [ "allow_cycles", "d7/d7d/class_l_b_s_groupset.html#afe022c8a317984669b276b0b753b0af6", null ],
@@ -26,7 +26,7 @@ var class_l_b_s_groupset =
     [ "master_num_ang_subsets", "d7/d7d/class_l_b_s_groupset.html#a9ca3461f0cb3537c99868c422882287d", null ],
     [ "master_num_grp_subsets", "d7/d7d/class_l_b_s_groupset.html#ae063f977328cbb21c984d3846237d610", null ],
     [ "max_iterations", "d7/d7d/class_l_b_s_groupset.html#acbc39a0c7b82b58782e1bc6724d19e4f", null ],
-    [ "quadrature", "d7/d7d/class_l_b_s_groupset.html#a1cfbfbc21c1c236099a091eed9840f36", null ],
+    [ "quadrature", "d7/d7d/class_l_b_s_groupset.html#a4e0b0f96ca8928738044b5e1890d2675", null ],
     [ "residual_tolerance", "d7/d7d/class_l_b_s_groupset.html#acdc8a0552d714a2e9806ed678102c853", null ],
     [ "tgdsa_max_iters", "d7/d7d/class_l_b_s_groupset.html#a5566973f8814a63a71e14135f15d35f2", null ],
     [ "tgdsa_solver", "d7/d7d/class_l_b_s_groupset.html#a85203263127cdc3adbd6580dbb635ba4", null ],

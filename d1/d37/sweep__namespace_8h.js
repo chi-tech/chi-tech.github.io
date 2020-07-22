@@ -7,7 +7,9 @@ var sweep__namespace_8h =
       [ "RECEIVING", "d1/d37/sweep__namespace_8h.html#a6f35c94844603249789b4e4ae4ece8c1a0c96084902e8f21bf3bf678fdce4f2a0", null ],
       [ "READY_TO_EXECUTE", "d1/d37/sweep__namespace_8h.html#a6f35c94844603249789b4e4ae4ece8c1a36250289c9c8a172135ba8502166d295", null ],
       [ "EXECUTE", "d1/d37/sweep__namespace_8h.html#a6f35c94844603249789b4e4ae4ece8c1a5d76688e2261e6805ee36ad961b3fa7a", null ],
-      [ "NO_EXEC_IF_READY", "d1/d37/sweep__namespace_8h.html#a6f35c94844603249789b4e4ae4ece8c1a4f6f09236255d46abd9f93f737241235", null ]
+      [ "NO_EXEC_IF_READY", "d1/d37/sweep__namespace_8h.html#a6f35c94844603249789b4e4ae4ece8c1a4f6f09236255d46abd9f93f737241235", null ],
+      [ "MESSAGES_SENT", "d1/d37/sweep__namespace_8h.html#a6f35c94844603249789b4e4ae4ece8c1a495a7d57f3167daf75ddc2537910106d", null ],
+      [ "MESSAGES_PENDING", "d1/d37/sweep__namespace_8h.html#a6f35c94844603249789b4e4ae4ece8c1aadee93faeba7a352b5cbecf1e5023ae8", null ]
     ] ],
     [ "CreateSweepOrder", "d1/d37/sweep__namespace_8h.html#a53e797da28cd539e4690a964a2071ff8", null ],
     [ "PopulateCellRelationships", "d1/d37/sweep__namespace_8h.html#a1cab982cd61c6fd4c6df857a671b77a2", null ],

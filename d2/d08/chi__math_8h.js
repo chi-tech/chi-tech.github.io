@@ -3,6 +3,14 @@ var chi__math_8h =
     [ "ChiMath", "d9/d9f/class_chi_math.html", "d9/d9f/class_chi_math" ],
     [ "MatDbl", "d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b", null ],
     [ "VecDbl", "d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94", null ],
+    [ "SpatialDiscretizationType", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0", [
+      [ "UNDEFINED", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0a0db45d2a4141101bdfe48e3314cfbca3", null ],
+      [ "FINITE_VOLUME", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0aec3041e97b53638eb474d4998174f9ee", null ],
+      [ "PIECEWISE_LINEAR_CONTINUOUS", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0a4024c7b08844e0df3143693b3ea32848", null ],
+      [ "PIECEWISE_LINEAR_DISCONTINUOUS", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0a7b8b9d3fac8d9bcf41f85cd912757f8b", null ],
+      [ "LAGRANGE_CONTINUOUS", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0a7efacede3be7ad02206c39bcc07a8ece", null ],
+      [ "LAGRANGE_DISCONTINUOUS", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0ac1e6ab27ed1931f2bdf53b1fd8f18901", null ]
+    ] ],
     [ "Determinant", "d2/d08/chi__math_8h.html#a98e795181c199b5da2f45df80a31706b", null ],
     [ "Dot", "d2/d08/chi__math_8h.html#acafbf241afadc0b99da0c43a8832e058", null ],
     [ "GaussElimination", "d2/d08/chi__math_8h.html#ac5008abb8163f2ed4c36a231352d42a8", null ],

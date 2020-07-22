@@ -101,14 +101,16 @@ Inheritance diagram for chi_mesh::SurfaceMesher:</div>
  <div class="center">
   <img src="../../df/d7e/classchi__mesh_1_1_surface_mesher.png" usemap="#chi_5Fmesh::SurfaceMesher_map" alt=""/>
   <map id="chi_5Fmesh::SurfaceMesher_map" name="chi_5Fmesh::SurfaceMesher_map">
-<area href="../../d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html" alt="chi_mesh::SurfaceMesherDelaunay" shape="rect" coords="0,56,221,80"/>
-<area href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html" alt="chi_mesh::SurfaceMesherPredefined" shape="rect" coords="231,56,452,80"/>
-<area href="../../d7/ddc/classchi__mesh_1_1_surface_mesher_triangle.html" alt="chi_mesh::SurfaceMesherTriangle" shape="rect" coords="462,56,683,80"/>
+<area href="../../d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html" alt="chi_mesh::SurfaceMesherDelaunay" shape="rect" coords="0,56,229,80"/>
+<area href="../../d3/d2d/classchi__mesh_1_1_surface_mesher_passthrough.html" alt="chi_mesh::SurfaceMesherPassthrough" shape="rect" coords="239,56,468,80"/>
+<area href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html" alt="chi_mesh::SurfaceMesherPredefined" shape="rect" coords="478,56,707,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae1f99a7abb22f114c989ddf6dfd6fcc9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d7e/classchi__mesh_1_1_surface_mesher.html#ae1f99a7abb22f114c989ddf6dfd6fcc9">SurfaceMesher</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#a86b91e648fa560486ba65712269df162">SurfaceMesherType</a> in_type)</td></tr>
+<tr class="separator:ae1f99a7abb22f114c989ddf6dfd6fcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bc84f14e6ffd644105ab27d4f38fd96"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d7e/classchi__mesh_1_1_surface_mesher.html#a6bc84f14e6ffd644105ab27d4f38fd96">Execute</a> ()</td></tr>
 <tr class="separator:a6bc84f14e6ffd644105ab27d4f38fd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6566dbc70da69d15ba00feb6397d3632"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d7e/classchi__mesh_1_1_surface_mesher.html#a6566dbc70da69d15ba00feb6397d3632">PrintLoadBalanceInfo</a> ()</td></tr>
@@ -116,6 +118,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
+<tr class="memitem:a9102b1436eb50ebf09fe70759d1a438c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d0/d81/namespacechi__mesh.html#a86b91e648fa560486ba65712269df162">SurfaceMesherType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d7e/classchi__mesh_1_1_surface_mesher.html#a9102b1436eb50ebf09fe70759d1a438c">type</a></td></tr>
+<tr class="separator:a9102b1436eb50ebf09fe70759d1a438c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a472607a99fccb222ab4df25e535e9854"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d7e/classchi__mesh_1_1_surface_mesher.html#a472607a99fccb222ab4df25e535e9854">partitioning_x</a></td></tr>
 <tr class="separator:a472607a99fccb222ab4df25e535e9854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada889695bc78dfecd733804586b8e31c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d7e/classchi__mesh_1_1_surface_mesher.html#ada889695bc78dfecd733804586b8e31c">partitioning_y</a></td></tr>
@@ -128,9 +132,39 @@ Data Fields</h2></td></tr>
 <tr class="separator:a92648f16f9f67eb552c70d5cee441d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00005">5</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Base class for surface meshers. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00017">17</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae1f99a7abb22f114c989ddf6dfd6fcc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1f99a7abb22f114c989ddf6dfd6fcc9">&#9670;&nbsp;</a></span>SurfaceMesher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_mesh::SurfaceMesher::SurfaceMesher </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a86b91e648fa560486ba65712269df162">SurfaceMesherType</a>&#160;</td>
+          <td class="paramname"><em>in_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00028">28</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6bc84f14e6ffd644105ab27d4f38fd96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6bc84f14e6ffd644105ab27d4f38fd96">&#9670;&nbsp;</a></span>Execute()</h2>
 
@@ -155,9 +189,9 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Virtual execute function. Meant to be overwritten. </p>
 
-<p>Reimplemented in <a class="el" href="../../d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html#ac0763d13d59571fbd6532d0243d93117">chi_mesh::SurfaceMesherDelaunay</a>, <a class="el" href="../../d7/ddc/classchi__mesh_1_1_surface_mesher_triangle.html#a1514b3b235955c95cb57edded3b49322">chi_mesh::SurfaceMesherTriangle</a>, and <a class="el" href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html#a2335688e57bfa76c2cc0c313faae1414">chi_mesh::SurfaceMesherPredefined</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html#ac0763d13d59571fbd6532d0243d93117">chi_mesh::SurfaceMesherDelaunay</a>, <a class="el" href="../../d3/d2d/classchi__mesh_1_1_surface_mesher_passthrough.html#a68654726e4b1f1e36f5f79bd4f1334c1">chi_mesh::SurfaceMesherPassthrough</a>, and <a class="el" href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html#a2335688e57bfa76c2cc0c313faae1414">chi_mesh::SurfaceMesherPredefined</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/df0/surfacemesher__02__execute_8cc_source.html#l00012">12</a> of file <a class="el" href="../../d0/df0/surfacemesher__02__execute_8cc_source.html">surfacemesher_02_execute.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/df0/surfacemesher__02__execute_8cc_source.html#l00013">13</a> of file <a class="el" href="../../d0/df0/surfacemesher__02__execute_8cc_source.html">surfacemesher_02_execute.cc</a>.</p>
 
 </div>
 </div>
@@ -177,7 +211,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Prints load balancing information based on a two D grid of XY-cuts. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/df0/surfacemesher__02__execute_8cc_source.html#l00020">20</a> of file <a class="el" href="../../d0/df0/surfacemesher__02__execute_8cc_source.html">surfacemesher_02_execute.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/df0/surfacemesher__02__execute_8cc_source.html#l00021">21</a> of file <a class="el" href="../../d0/df0/surfacemesher__02__execute_8cc_source.html">surfacemesher_02_execute.cc</a>.</p>
 
 </div>
 </div>
@@ -194,7 +228,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00010">10</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00023">23</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
 
 </div>
 </div>
@@ -210,7 +244,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00008">8</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00021">21</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
 
 </div>
 </div>
@@ -226,7 +260,23 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00009">9</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00022">22</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
+
+</div>
+</div>
+<a id="a9102b1436eb50ebf09fe70759d1a438c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9102b1436eb50ebf09fe70759d1a438c">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d0/d81/namespacechi__mesh.html#a86b91e648fa560486ba65712269df162">SurfaceMesherType</a> chi_mesh::SurfaceMesher::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00020">20</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
 
 </div>
 </div>
@@ -242,7 +292,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00012">12</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00025">25</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
 
 </div>
 </div>
@@ -258,7 +308,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00013">13</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d47/surfacemesher_8h_source.html#l00026">26</a> of file <a class="el" href="../../d5/d47/surfacemesher_8h_source.html">surfacemesher.h</a>.</p>
 
 </div>
 </div>

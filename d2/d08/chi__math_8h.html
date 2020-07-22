@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('d2/d08/chi__math_8h.html','../../');})
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">chi_math.h File Reference</div>  </div>
@@ -97,7 +98,8 @@ $(document).ready(function(){initNavTree('d2/d08/chi__math_8h.html','../../');})
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../da/d34/chi__math__incdef_8h_source.html">chi_math_incdef.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d4c/quadrature_8h_source.html">Quadratures/quadrature.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../dc/d2a/product__quadrature_8h_source.html">Quadratures/product_quadrature.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d27/angular__quadrature__base_8h_source.html">Quadratures/angular_quadrature_base.h</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 </div>
 <p><a href="../../d2/d08/chi__math_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -117,6 +119,20 @@ Typedefs</h2></td></tr>
 <tr class="separator:acbe69520b2db91355c5ed8d97a218b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80801c4491f8f4ff54ed012d63d0d48b"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a></td></tr>
 <tr class="separator:a80801c4491f8f4ff54ed012d63d0d48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a6849793d0950c05a3e5a26a9ea700cb0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0">chi_math::SpatialDiscretizationType</a> { <br />
+&#160;&#160;<a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0a0db45d2a4141101bdfe48e3314cfbca3">chi_math::SpatialDiscretizationType::UNDEFINED</a> = 0, 
+<a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0aec3041e97b53638eb474d4998174f9ee">chi_math::SpatialDiscretizationType::FINITE_VOLUME</a> = 1, 
+<a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0a4024c7b08844e0df3143693b3ea32848">chi_math::SpatialDiscretizationType::PIECEWISE_LINEAR_CONTINUOUS</a> = 2, 
+<a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0a7b8b9d3fac8d9bcf41f85cd912757f8b">chi_math::SpatialDiscretizationType::PIECEWISE_LINEAR_DISCONTINUOUS</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0a7efacede3be7ad02206c39bcc07a8ece">chi_math::SpatialDiscretizationType::LAGRANGE_CONTINUOUS</a> = 4, 
+<a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0ac1e6ab27ed1931f2bdf53b1fd8f18901">chi_math::SpatialDiscretizationType::LAGRANGE_DISCONTINUOUS</a> = 5
+<br />
+ }</td></tr>
+<tr class="separator:a6849793d0950c05a3e5a26a9ea700cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -184,7 +200,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d08/chi__math_8h_source.html#l00014">14</a> of file <a class="el" href="../../d2/d08/chi__math_8h_source.html">chi_math.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d08/chi__math_8h_source.html#l00015">15</a> of file <a class="el" href="../../d2/d08/chi__math_8h_source.html">chi_math.h</a>.</p>
 
 </div>
 </div>
@@ -200,7 +216,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d08/chi__math_8h_source.html#l00013">13</a> of file <a class="el" href="../../d2/d08/chi__math_8h_source.html">chi_math.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d08/chi__math_8h_source.html#l00014">14</a> of file <a class="el" href="../../d2/d08/chi__math_8h_source.html">chi_math.h</a>.</p>
 
 </div>
 </div>

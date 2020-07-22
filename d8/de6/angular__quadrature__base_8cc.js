@@ -1,0 +1,4 @@
+var angular__quadrature__base_8cc =
+[
+    [ "chi_log", "d8/de6/angular__quadrature__base_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869", null ]
+];

@@ -5,6 +5,8 @@ var searchData=
   ['diffusionipbordercell',['DiffusionIPBorderCell',['../d4/d46/struct_diffusion_i_p_border_cell.html',1,'']]],
   ['diffusionipcellview',['DiffusionIPCellView',['../d4/de4/struct_diffusion_i_p_cell_view.html',1,'']]],
   ['directedgraph',['DirectedGraph',['../dc/d15/classchi__graph_1_1_directed_graph.html',1,'chi_graph']]],
+  ['dmatrixnx',['DMatrixNX',['../d7/d71/classchi__math_1_1_d_matrix_n_x.html',1,'chi_math']]],
   ['dummystream',['DummyStream',['../d9/d4e/struct_dummy_stream.html',1,'']]],
-  ['dummystreambuffer',['DummyStreamBuffer',['../d2/d86/struct_dummy_stream_1_1_dummy_stream_buffer.html',1,'DummyStream']]]
+  ['dummystreambuffer',['DummyStreamBuffer',['../d2/d86/struct_dummy_stream_1_1_dummy_stream_buffer.html',1,'DummyStream']]],
+  ['dvectornx',['DVectorNX',['../da/d6e/classchi__math_1_1_d_vector_n_x.html',1,'chi_math']]]
 ];

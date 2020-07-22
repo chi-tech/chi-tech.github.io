@@ -1,6 +1,7 @@
 var searchData=
 [
   ['r',['r',['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#a485e30cf056f7c36e60834eddd3236cf',1,'chi_mesh::SphereLogicalVolume::r()'],['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#ae62dd421e577341caa6aa30d06ee974f',1,'chi_mesh::RCCLogicalVolume::r()']]],
+  ['rank',['rank',['../d1/dbe/structchi__math_1_1_tensor_r_n_x.html#acda6cb14dc4f71c0d506e75007082e22',1,'chi_math::TensorRNX::rank()'],['../d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4.html#a28024b6d5f9769c78c2e88cf032e5d18',1,'chi_math::TensorRNX&lt; 2, N, NumberFormat &gt;::rank()']]],
   ['raw_5fcells',['raw_cells',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a54f13d709bd55611f09c9c4007097505',1,'chi_mesh::UnpartitionedMesh']]],
   ['raw_5fpatch',['raw_patch',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html#aba90c06970e1302c1ab3bfa8b3ad5cb6',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
   ['read_5frestart_5fdata',['read_restart_data',['../da/d88/struct_linear_boltzman_1_1_options.html#aaf501c324f023a2561cba07611001f35',1,'LinearBoltzman::Options']]],
@@ -18,6 +19,7 @@ var searchData=
   ['ref_5fdeploci_5foutgoing_5fpsi',['ref_deplocI_outgoing_psi',['../d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a32acee76a035d4b9a0dda56e78d296c1',1,'chi_mesh::sweep_management::AUX_FLUDS::ref_deplocI_outgoing_psi()'],['../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a6c11d1564087fa89243d37ce4ad4f430',1,'chi_mesh::sweep_management::PRIMARY_FLUDS::ref_deplocI_outgoing_psi()']]],
   ['ref_5felement',['ref_element',['../dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html#a4ed92b5bc269e047cf55c67412104d30',1,'chi_graph::DirectedGraph::VertexAccessor::iterator::ref_element()'],['../d7/d37/classchi__mesh_1_1_mesh_continuum_1_1_local_cells_1_1iterator.html#aecf3058719dc78ddc0bfb1c743beec6b',1,'chi_mesh::MeshContinuum::LocalCells::iterator::ref_element()']]],
   ['ref_5fff',['ref_ff',['../d9/db7/struct_field_function_context.html#aa3d5d9d86e6906fa77d7143f65c8a316',1,'FieldFunctionContext']]],
+  ['ref_5fgrid',['ref_grid',['../da/d2b/class_spatial_discretization.html#a82e3be2c97c213dbeaa60aa3ecfc4dce',1,'SpatialDiscretization']]],
   ['ref_5flocal_5fpsi',['ref_local_psi',['../d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a0d379a434e04436b96ed91c0ae743a0b',1,'chi_mesh::sweep_management::AUX_FLUDS::ref_local_psi()'],['../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#aae843d5bc12d97c15fda403c9ab138f2',1,'chi_mesh::sweep_management::PRIMARY_FLUDS::ref_local_psi()']]],
   ['ref_5fpreloci_5foutgoing_5fpsi',['ref_prelocI_outgoing_psi',['../d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a1b12ccbcc11bc80422d8429c79ac18c2',1,'chi_mesh::sweep_management::AUX_FLUDS::ref_prelocI_outgoing_psi()'],['../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0e6da15e51f77841f5e52cc1da4694ba',1,'chi_mesh::sweep_management::PRIMARY_FLUDS::ref_prelocI_outgoing_psi()']]],
   ['ref_5fset',['ref_set',['../df/de9/classchi__physics_1_1_field_function.html#a971764920be8881915f8bb8a666e0184',1,'chi_physics::FieldFunction']]],
@@ -31,6 +33,7 @@ var searchData=
   ['remeshed_5fsurface_5fmesh',['remeshed_surface_mesh',['../d0/d54/structchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_mesh_context.html#a9118471a92a899b8ab534a5ab9f47215',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayMeshContext']]],
   ['repeating_5fevents',['repeating_events',['../d8/d1a/class_chi_log.html#a89bd617139af8c579d2063b5aa402ce7',1,'ChiLog']]],
   ['residual_5ftolerance',['residual_tolerance',['../d6/d32/classchi__diffusion_1_1_solver.html#ade535f862d3a1dc8fcc3904c83f24212',1,'chi_diffusion::Solver::residual_tolerance()'],['../d7/d7d/class_l_b_s_groupset.html#acdc8a0552d714a2e9806ed678102c853',1,'LBSGroupset::residual_tolerance()']]],
+  ['result',['result',['../d8/d65/namespace_z_compile_and_run.html#a473cdd1e6d33a2b09ba79f4690aaf3e1',1,'ZCompileAndRun']]],
   ['reverse_5fnode_5fmapping',['reverse_node_mapping',['../da/d2b/class_spatial_discretization.html#a42ba206642ee5592287179a1e1164695',1,'SpatialDiscretization']]],
   ['reverse_5fnode_5fordering',['reverse_node_ordering',['../de/df0/classchi__mesh_1_1_volume_mesher.html#a9a712d150f2a058ba95254e257481b9b',1,'chi_mesh::VolumeMesher']]],
   ['rho_5ff',['rho_f',['../d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html#ae3e501089562186bbe33058e2c05cf80',1,'HYDRO_BOUNDARY::rho_f()'],['../d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e.html#a914ddbee80d03f1a0d2c1226c8bd3828',1,'HYDRO_VOLUME::rho_f()']]],

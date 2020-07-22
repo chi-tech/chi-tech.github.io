@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['schedulingalgorithm',['SchedulingAlgorithm',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#ab89d643f43f578f07f21038106d6817f',1,'chi_mesh::sweep_management']]],
-  ['stdtags',['StdTags',['../d8/d1a/class_chi_log.html#a130798199b3ef1ed34ece3857b6bbd24',1,'ChiLog']]]
+  ['operationtype',['OperationType',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95',1,'chi_physics']]]
 ];

@@ -140,7 +140,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00534">534</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00489">489</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -161,7 +161,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 <p>Executes the volume meshing pipeline.</p>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00539">539</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00494">494</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -200,19 +200,27 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 </dl>
 <h3>PropertyIndex:</h3>
 <p>FORCE_POLYGONS = <b>PropertyValue:[bool]</b> Forces the 2D Meshing to use polygon cells even if the underlying surface mesh is triangles. Expects a boolean value.<br />
- EXTRUSION_LAYER = <b>PropertyValue:[double,(int),(char)]</b> Adds a layer to the extruder volume mesher if it exists. Expects 1 required parameter, the layer height, followed by 2 optional parameters: number of subdivisions (defaults to 1), and layer id (char)(defaults to nothing).<br />
  MESH_GLOBAL = <b>PropertyValue:[bool]</b> Generate/Read the full mesh at each location. Expects a boolean value [Default=true].<br />
- CUT_X = Adds a cut at the given x-value.<br />
- CUT_Y = Adds a cut at the given y-value.<br />
- CUT_Z = Adds a cut at the given z-value.<br />
- PARTITION_X = <b>PropertyValue:[int]</b> Number of partitions in X.<br />
- PARTITION_Y = <b>PropertyValue:[int]</b> Number of partitions in Y.<br />
- PARTITION_Z = <b>PropertyValue:[int]</b> Number of partitions in Z.<br />
+ PARTITION_TYPE = <b>PartitionType</b>. See below.<br />
+ EXTRUSION_LAYER = <b>PropertyValue:[double,(int),(char)]</b> Adds a layer to the extruder volume mesher if it exists. Expects 1 required parameter, the layer height, followed by 2 optional parameters: number of subdivisions (defaults to 1), and layer id (char)(defaults to nothing). Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>. <br />
+ CUT_X = Adds a cut at the given x-value. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br />
+ CUT_Y = Adds a cut at the given y-value. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br />
+ CUT_Z = Adds a cut at the given z-value. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br />
+ PARTITION_X = <b>PropertyValue:[int]</b> Number of partitions in X. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br />
+ PARTITION_Y = <b>PropertyValue:[int]</b> Number of partitions in Y. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br />
+ PARTITION_Z = <b>PropertyValue:[int]</b> Number of partitions in Z. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br />
  MATID_FROMLOGICAL = <b>LogicalVolumeHandle:[int],Mat_id:[int], Sense:[bool](Optional, default:true)</b> Sets the material id of cells that meet the sense requirement for the given logical volume.<br />
  BNDRYID_FROMLOGICAL = <b>LogicalVolumeHandle:[int],Bndry_id:[int], Sense:[bool](Optional, default:true)</b> Sets the cell boundary id to the specified value for cells that meet the sense requirement for the given logical volume.<br />
- </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+</p><h2>_</h2>
+<h3>PartitionType</h3>
+<p>Can be any of the following:</p><ul>
+<li>KBA_STYLE_XY</li>
+<li>KBA_STYLE_XYZ</li>
+<li>PARMETIS</li>
+</ul>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00573">573</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00545">545</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

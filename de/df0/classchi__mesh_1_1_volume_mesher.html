@@ -103,10 +103,11 @@ Inheritance diagram for chi_mesh::VolumeMesher:</div>
  <div class="center">
   <img src="../../de/df0/classchi__mesh_1_1_volume_mesher.png" usemap="#chi_5Fmesh::VolumeMesher_map" alt=""/>
   <map id="chi_5Fmesh::VolumeMesher_map" name="chi_5Fmesh::VolumeMesher_map">
-<area href="../../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html" alt="chi_mesh::VolumeMesherExtruder" shape="rect" coords="0,56,234,80"/>
-<area href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html" alt="chi_mesh::VolumeMesherLinemesh1D" shape="rect" coords="244,56,478,80"/>
-<area href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html" alt="chi_mesh::VolumeMesherPredefined2D" shape="rect" coords="488,56,722,80"/>
-<area href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html" alt="chi_mesh::VolumeMesherPredefined3D" shape="rect" coords="732,56,966,80"/>
+<area href="../../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html" alt="chi_mesh::VolumeMesherExtruder" shape="rect" coords="0,56,292,80"/>
+<area href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html" alt="chi_mesh::VolumeMesherLinemesh1D" shape="rect" coords="302,56,594,80"/>
+<area href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html" alt="chi_mesh::VolumeMesherPredefined2D" shape="rect" coords="604,56,896,80"/>
+<area href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html" alt="chi_mesh::VolumeMesherPredefined3D" shape="rect" coords="906,56,1198,80"/>
+<area href="../../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html" alt="chi_mesh::VolumeMesherPredefinedUnpartitioned" shape="rect" coords="1208,56,1500,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -129,6 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afa1336149bf5283d0c373a5eb771a75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4c8108dd05c5b23478021772b7ba6ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ad4c8108dd05c5b23478021772b7ba6ba">CreatePolygonCells</a> (<a class="el" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html">chi_mesh::SurfaceMesh</a> *surface_mesh, <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> *vol_continuum, bool delete_surface_mesh_elements=false, bool force_local=false)</td></tr>
 <tr class="separator:ad4c8108dd05c5b23478021772b7ba6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f6a947e825057ce821b3fd3d1b62ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a34f6a947e825057ce821b3fd3d1b62ca">GridFilterGhosts</a> (<a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> *in_grid, <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> *out_grid)</td></tr>
+<tr class="separator:a34f6a947e825057ce821b3fd3d1b62ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adae946377185e5a87d8b3eb40bf90e12"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#adae946377185e5a87d8b3eb40bf90e12">GetCellXYPartitionID</a> (<a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cell)</td></tr>
 <tr class="separator:adae946377185e5a87d8b3eb40bf90e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59fde36b4500529837da8760341b42f6"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; int, int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a59fde36b4500529837da8760341b42f6">GetCellXYZPartitionID</a> (<a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cell)</td></tr>
@@ -213,7 +216,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates 2D polygon cells for each face of a surface mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00028">28</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00027">27</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
 
 </div>
 </div>
@@ -256,7 +259,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates 2D polygon cells for each face of a surface mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00036">36</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00035">35</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
 
 </div>
 </div>
@@ -283,7 +286,7 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a75cb8e19d039591c8958aea016fb6774">chi_mesh::VolumeMesherExtruder</a>, <a class="el" href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html#adca582e29b3d63ebcc6b8dedf07f4a24">chi_mesh::VolumeMesherLinemesh1D</a>, <a class="el" href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html#ac7bdd8cf5aaa3903f96f808a3d198645">chi_mesh::VolumeMesherPredefined2D</a>, and <a class="el" href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html#ac7130545ed292bd08187323bc1865c18">chi_mesh::VolumeMesherPredefined3D</a>.</p>
+<p>Reimplemented in <a class="el" href="../../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a75cb8e19d039591c8958aea016fb6774">chi_mesh::VolumeMesherExtruder</a>, <a class="el" href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html#adca582e29b3d63ebcc6b8dedf07f4a24">chi_mesh::VolumeMesherLinemesh1D</a>, <a class="el" href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html#ac7bdd8cf5aaa3903f96f808a3d198645">chi_mesh::VolumeMesherPredefined2D</a>, <a class="el" href="../../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#a5d3bd0c47ab166bc11d667298ddea311">chi_mesh::VolumeMesherPredefinedUnpartitioned</a>, and <a class="el" href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html#ac7130545ed292bd08187323bc1865c18">chi_mesh::VolumeMesherPredefined3D</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d16/chi__volumemesher__02__execute_8cc_source.html#l00006">6</a> of file <a class="el" href="../../d3/d16/chi__volumemesher__02__execute_8cc_source.html">chi_volumemesher_02_execute.cc</a>.</p>
 
@@ -306,7 +309,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Get a list of boundary cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00446">446</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00497">497</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
 
 </div>
 </div>
@@ -327,7 +330,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Obtains the xy partition IDs of a cell. <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">Cell</a> xy_partition ids are obtained from the surface mesher. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00167">167</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00219">219</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
 
 </div>
 </div>
@@ -348,7 +351,38 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Obtains the xyz partition IDs of a cell. <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">Cell</a> xy_partition ids are obtained from the surface mesher. z id is obtained from the volume mesher. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00265">265</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00316">316</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
+
+</div>
+</div>
+<a id="a34f6a947e825057ce821b3fd3d1b62ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f6a947e825057ce821b3fd3d1b62ca">&#9670;&nbsp;</a></span>GridFilterGhosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_mesh::VolumeMesher::GridFilterGhosts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> *&#160;</td>
+          <td class="paramname"><em>in_grid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> *&#160;</td>
+          <td class="paramname"><em>out_grid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Filters non-esential ghosts from the grid. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00161">161</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
 
 </div>
 </div>
@@ -427,7 +461,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets material id's using a logical volume. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00503">503</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00554">554</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
 
 </div>
 </div>
@@ -464,7 +498,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets material id's using a logical volume. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00473">473</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html#l00524">524</a> of file <a class="el" href="../../d7/d78/chi__volumemesher__01__utils_8cc_source.html">chi_volumemesher_01_utils.cc</a>.</p>
 
 </div>
 </div>

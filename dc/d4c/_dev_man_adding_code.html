@@ -103,7 +103,7 @@ Creating a new directory</div></div>
 <h2><a class="anchor" id="devman0_sec0_2"></a>
 Step 2 - If there is no CMakeLists.txt, create one</h2>
 <p>In the folder you just created, make a file called "CMakeLists.txt" and add the following code to it</p>
-<div class="fragment"><div class="line">file (GLOB_RECURSE MORE_SOURCES <span class="stringliteral">&quot;${CMAKE_CURRENT_SOURCE_DIR}/*.cc&quot;</span>)</div><div class="line"></div><div class="line"><span class="keyword">set</span>(SOURCES ${SOURCES} ${MORE_SOURCES} PARENT_SCOPE)</div></div><!-- fragment --><p>This code will get executed by cmake and will recursively find all files with a .cc extension and compile it.</p>
+<div class="fragment"><div class="line"><a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a> (GLOB_RECURSE MORE_SOURCES <span class="stringliteral">&quot;${CMAKE_CURRENT_SOURCE_DIR}/*.cc&quot;</span>)</div><div class="line"></div><div class="line"><span class="keyword">set</span>(SOURCES ${SOURCES} ${MORE_SOURCES} PARENT_SCOPE)</div></div><!-- fragment --><p>This code will get executed by cmake and will recursively find all files with a .cc extension and compile it.</p>
 <h2><a class="anchor" id="devman0_sec0_3"></a>
 Step 3 - Create your source code</h2>
 <p>Create appropriate headers and source code.</p>

@@ -104,6 +104,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5d1494c122529f3366da8a883c532eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56960ad567b78f69636c929d1229c39c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/classchi__mesh_1_1_mesh_continuum_1_1_global_cell_handler.html#a56960ad567b78f69636c929d1229c39c">operator[]</a> (int cell_global_index)</td></tr>
 <tr class="separator:a56960ad567b78f69636c929d1229c39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b341458e470e561632fe7774f9d7246"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/classchi__mesh_1_1_mesh_continuum_1_1_global_cell_handler.html#a9b341458e470e561632fe7774f9d7246">GetNumGhosts</a> ()</td></tr>
+<tr class="separator:a9b341458e470e561632fe7774f9d7246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475d2e95fe66b1d462e735e7e3e77ddc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/classchi__mesh_1_1_mesh_continuum_1_1_global_cell_handler.html#a475d2e95fe66b1d462e735e7e3e77ddc">GetGhostGlobalIDs</a> ()</td></tr>
+<tr class="separator:a475d2e95fe66b1d462e735e7e3e77ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7872a02de405192c1ae50cc4dbc3034d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d21/classchi__mesh_1_1_mesh_continuum_1_1_global_cell_handler.html#a7872a02de405192c1ae50cc4dbc3034d">GetGhostLocalID</a> (int cell_global_index)</td></tr>
+<tr class="separator:a7872a02de405192c1ae50cc4dbc3034d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -117,7 +123,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles all global index queries. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00075">75</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00074">74</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a955407137a671d3b62fc410113bf3f28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a955407137a671d3b62fc410113bf3f28">&#9670;&nbsp;</a></span>GlobalCellHandler()</h2>
@@ -143,11 +149,72 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00084">84</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00083">83</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a475d2e95fe66b1d462e735e7e3e77ddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475d2e95fe66b1d462e735e7e3e77ddc">&#9670;&nbsp;</a></span>GetGhostGlobalIDs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; int &gt; chi_mesh::MeshContinuum::GlobalCellHandler::GetGhostGlobalIDs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the cell global ids of all ghost cells. These are cells that neighbors to this partition's cells but are on a different partition. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html#l00135">135</a> of file <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html">chi_meshcontinuum_global_cells.cc</a>.</p>
+
+</div>
+</div>
+<a id="a7872a02de405192c1ae50cc4dbc3034d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7872a02de405192c1ae50cc4dbc3034d">&#9670;&nbsp;</a></span>GetGhostLocalID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_mesh::MeshContinuum::GlobalCellHandler::GetGhostLocalID </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cell_global_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the local storage address of a ghost cell. If the ghost is not truly a ghost then -1 is returned, but is wasteful and therefore the user of this function should implement code to prevent it. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html#l00154">154</a> of file <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html">chi_meshcontinuum_global_cells.cc</a>.</p>
+
+</div>
+</div>
+<a id="a9b341458e470e561632fe7774f9d7246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b341458e470e561632fe7774f9d7246">&#9670;&nbsp;</a></span>GetNumGhosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_mesh::MeshContinuum::GlobalCellHandler::GetNumGhosts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the number of ghost cells. These are cells that neighbors to this partition's cells but are on a different partition. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html#l00125">125</a> of file <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html">chi_meshcontinuum_global_cells.cc</a>.</p>
+
+</div>
+</div>
 <a id="a56960ad567b78f69636c929d1229c39c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56960ad567b78f69636c929d1229c39c">&#9670;&nbsp;</a></span>operator[]()</h2>
 
@@ -165,7 +232,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns a pointer to a cell given its global cell index. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html#l00047">47</a> of file <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html">chi_meshcontinuum_global_cells.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html#l00046">46</a> of file <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html">chi_meshcontinuum_global_cells.cc</a>.</p>
 
 </div>
 </div>
@@ -186,7 +253,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Adds a new cell to grid registry. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html#l00012">12</a> of file <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html">chi_meshcontinuum_global_cells.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d5/d9d/chi__meshcontinuum__global__cells_8cc_source.html">chi_meshcontinuum_global_cells.cc</a>.</p>
 
 </div>
 </div>
@@ -211,7 +278,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00080">80</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00079">79</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -235,7 +302,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00079">79</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00078">78</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -259,7 +326,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00078">78</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00077">77</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>

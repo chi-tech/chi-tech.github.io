@@ -8,6 +8,7 @@ var dir_eec4d28110009ed62ffe54c00aea6a23 =
     [ "ChiMPI", "dir_24a12459924edf4dddf77f5c8069fcfe.html", "dir_24a12459924edf4dddf77f5c8069fcfe" ],
     [ "ChiPhysics", "dir_5b71995b7c749f54258bfeab247bf2b5.html", "dir_5b71995b7c749f54258bfeab247bf2b5" ],
     [ "ChiTimer", "dir_399e0ecf640b0e270bacd066a4728c65.html", "dir_399e0ecf640b0e270bacd066a4728c65" ],
+    [ "UnitTests", "dir_34c2b491a59804becfc8f18f7b972760.html", "dir_34c2b491a59804becfc8f18f7b972760" ],
     [ "chi_runtime.cc", "d3/dd3/chi__runtime_8cc.html", "d3/dd3/chi__runtime_8cc" ],
     [ "chi_runtime.h", "d3/db2/chi__runtime_8h.html", [
       [ "ChiTech", "d5/d49/class_chi_tech.html", "d5/d49/class_chi_tech" ]

@@ -13,6 +13,6 @@ var classchi__mesh_1_1sweep__management_1_1_angle_aggregation =
     [ "number_angular_unknowns", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a22db19c7ba1baf9fa736f282c62d7d1f", null ],
     [ "number_of_group_subsets", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#ac557bda27e3dc393f4dd19c7438bdd9c", null ],
     [ "number_of_groups", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a97c86f7521785295615384a24589cbab", null ],
-    [ "quadrature", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#af977606bb95f395f20e5d61a147fe046", null ],
+    [ "quadrature", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a515002078c0318ba874164350242f4e1", null ],
     [ "sim_boundaries", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a4b5a91a86e94408cf1def07620c15505", null ]
 ];

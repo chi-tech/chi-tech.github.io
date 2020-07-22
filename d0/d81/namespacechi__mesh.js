@@ -31,14 +31,16 @@ var namespacechi__mesh =
     [ "SurfaceMesh", "dd/d43/classchi__mesh_1_1_surface_mesh.html", "dd/d43/classchi__mesh_1_1_surface_mesh" ],
     [ "SurfaceMesher", "df/d7e/classchi__mesh_1_1_surface_mesher.html", "df/d7e/classchi__mesh_1_1_surface_mesher" ],
     [ "SurfaceMesherDelaunay", "d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html", "d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay" ],
+    [ "SurfaceMesherPassthrough", "d3/d2d/classchi__mesh_1_1_surface_mesher_passthrough.html", "d3/d2d/classchi__mesh_1_1_surface_mesher_passthrough" ],
     [ "SurfaceMesherPredefined", "d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html", "d0/d83/classchi__mesh_1_1_surface_mesher_predefined" ],
-    [ "SurfaceMesherTriangle", "d7/ddc/classchi__mesh_1_1_surface_mesher_triangle.html", "d7/ddc/classchi__mesh_1_1_surface_mesher_triangle" ],
     [ "SurfaceMeshLogicalVolume", "dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html", "dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume" ],
+    [ "TensorRank2Dim3", "d8/d2c/structchi__mesh_1_1_tensor_rank2_dim3.html", "d8/d2c/structchi__mesh_1_1_tensor_rank2_dim3" ],
     [ "UnpartitionedMesh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh" ],
     [ "Vector3", "dd/d54/structchi__mesh_1_1_vector3.html", "dd/d54/structchi__mesh_1_1_vector3" ],
     [ "VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", "de/df0/classchi__mesh_1_1_volume_mesher" ],
     [ "VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", "de/d89/classchi__mesh_1_1_volume_mesher_extruder" ],
     [ "VolumeMesherLinemesh1D", "d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html", "d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d" ],
     [ "VolumeMesherPredefined2D", "d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html", "d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d" ],
-    [ "VolumeMesherPredefined3D", "d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html", "d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d" ]
+    [ "VolumeMesherPredefined3D", "d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html", "d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d" ],
+    [ "VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned" ]
 ];

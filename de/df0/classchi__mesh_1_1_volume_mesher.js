@@ -12,6 +12,7 @@ var classchi__mesh_1_1_volume_mesher =
     [ "GetBoundaryCells", "de/df0/classchi__mesh_1_1_volume_mesher.html#a7d28ff6a9b5e60a690738d0bd0396c7c", null ],
     [ "GetCellXYPartitionID", "de/df0/classchi__mesh_1_1_volume_mesher.html#adae946377185e5a87d8b3eb40bf90e12", null ],
     [ "GetCellXYZPartitionID", "de/df0/classchi__mesh_1_1_volume_mesher.html#a59fde36b4500529837da8760341b42f6", null ],
+    [ "GridFilterGhosts", "de/df0/classchi__mesh_1_1_volume_mesher.html#a34f6a947e825057ce821b3fd3d1b62ca", null ],
     [ "MapNode", "de/df0/classchi__mesh_1_1_volume_mesher.html#a0906af1dab028b25faa7dd10401f1a9d", null ],
     [ "ReverseMapNode", "de/df0/classchi__mesh_1_1_volume_mesher.html#ad3014c600fa7d439d210f21773b3e48c", null ],
     [ "SetBndryIDFromLogical", "de/df0/classchi__mesh_1_1_volume_mesher.html#a6f791fc776b92a74e5eef9fb9d9a3781", null ],

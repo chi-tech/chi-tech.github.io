@@ -1,6 +1,7 @@
 var struct_linear_boltzman_1_1_options =
 [
     [ "Options", "da/d88/struct_linear_boltzman_1_1_options.html#acd2deb642e2623b9b45824e20e5a9c06", null ],
+    [ "geometry_type", "da/d88/struct_linear_boltzman_1_1_options.html#a086ba798c707d3103b1a8c7760dffd2d", null ],
     [ "partition_method", "da/d88/struct_linear_boltzman_1_1_options.html#ab3aa10205b7d886471236aa1a6d3a5a9", null ],
     [ "read_restart_data", "da/d88/struct_linear_boltzman_1_1_options.html#aaf501c324f023a2561cba07611001f35", null ],
     [ "read_restart_file_base", "da/d88/struct_linear_boltzman_1_1_options.html#a75affb1557cfeb060244d388a9ac9fb2", null ],

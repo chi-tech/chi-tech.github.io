@@ -6,6 +6,7 @@ var annotated_dup =
     [ "chi_mesh", "d0/d81/namespacechi__mesh.html", "d0/d81/namespacechi__mesh" ],
     [ "chi_physics", "d6/d5f/namespacechi__physics.html", "d6/d5f/namespacechi__physics" ],
     [ "LinearBoltzman", "d4/dfe/namespace_linear_boltzman.html", "d4/dfe/namespace_linear_boltzman" ],
+    [ "ZCompileAndRun", "d8/d65/namespace_z_compile_and_run.html", "d8/d65/namespace_z_compile_and_run" ],
     [ "CellFEView", "d8/d0f/class_cell_f_e_view.html", "d8/d0f/class_cell_f_e_view" ],
     [ "CellFVView", "d5/def/class_cell_f_v_view.html", "d5/def/class_cell_f_v_view" ],
     [ "ChiConsole", "dd/d62/class_chi_console.html", "dd/d62/class_chi_console" ],

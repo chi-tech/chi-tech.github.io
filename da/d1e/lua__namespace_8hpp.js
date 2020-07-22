@@ -1,6 +1,7 @@
 var lua__namespace_8hpp =
 [
     [ "chiComputeLoadBalancing", "da/d1e/lua__namespace_8hpp.html#gada729c1b517676a366834fe1fb50e3f4", null ],
+    [ "chiCreateCustomAngularQuadrature", "da/d1e/lua__namespace_8hpp.html#gab7d8a43b56ecd0142d00231de4e0c526", null ],
     [ "chiCreateProductQuadrature", "da/d1e/lua__namespace_8hpp.html#ga9600f3a9c8ef7a0f97a27d7317ebb3b3", null ],
     [ "chiCreateQuadrature", "da/d1e/lua__namespace_8hpp.html#gac86eefa7c0cf1f1210c072be2a733280", null ],
     [ "chiDecomposeSurfaceMeshPxPy", "da/d1e/lua__namespace_8hpp.html#ga729933223badd18df4cf96f70d8398cf", null ],
@@ -45,9 +46,6 @@ var lua__namespace_8hpp =
     [ "chiLogicalVolumeCreate", "da/d1e/lua__namespace_8hpp.html#ga5ecdd09775b38d1aa8cbfa4322a6ae0c", null ],
     [ "chiLogSetVerbosity", "da/d1e/lua__namespace_8hpp.html#ga1a20925b709feebaca0c6418f2042b7f", null ],
     [ "chiLuaTest", "da/d1e/lua__namespace_8hpp.html#ga09eae924251d1d159fdc16b378cdfecc", null ],
-    [ "chiMeshCreate1DSlabMesh", "da/d1e/lua__namespace_8hpp.html#ga01e8c93a1fb48351c4a8126f0b29856f", null ],
-    [ "chiMeshCreate2DOrthoMesh", "da/d1e/lua__namespace_8hpp.html#gad7ec0410e0d044a4e2e24d079ce6f808", null ],
-    [ "chiMeshCreate3DOrthoMesh", "da/d1e/lua__namespace_8hpp.html#gae64d050e505779f34c019cecc474801c", null ],
     [ "chiMeshHandlerCreate", "da/d1e/lua__namespace_8hpp.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e", null ],
     [ "chiMeshHandlerGetSurfaceFromCollection", "da/d1e/lua__namespace_8hpp.html#ga53866f6ba77f93ba5d15fe9d13eb3986", null ],
     [ "chiMeshHandlerSetCurrent", "da/d1e/lua__namespace_8hpp.html#ga01c22aafd561a48846ad2807a5c2f647", null ],

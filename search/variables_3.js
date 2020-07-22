@@ -45,10 +45,13 @@ var searchData=
   ['diffg',['diffg',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a3ef22bc815acac446024fb1cf5b57a7a',1,'chi_physics::TransportCrossSections']]],
   ['diffusion_5finitialized',['diffusion_initialized',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a84997a065caeb8e90e9572f55561782d',1,'chi_physics::TransportCrossSections']]],
   ['dim',['dim',['../da/d2b/class_spatial_discretization.html#a7df47b99096a699574b06de26cc8c360',1,'SpatialDiscretization']]],
+  ['dimension',['dimension',['../d1/dbe/structchi__math_1_1_tensor_r_n_x.html#a756b326fa75efd92e10cf236bd44599d',1,'chi_math::TensorRNX::dimension()'],['../d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4.html#a5601d32cdf5cf06b861f0bcdaa40abc0',1,'chi_math::TensorRNX&lt; 2, N, NumberFormat &gt;::dimension()'],['../d5/d8e/structchi__math_1_1_vector_n_x.html#aafb25116c8d5a2862bc8ac5375c8702e',1,'chi_math::VectorNX::dimension()']]],
   ['discretization',['discretization',['../d6/d32/classchi__diffusion_1_1_solver.html#aced1bd8759a4ec042d0516564ad9ff9f',1,'chi_diffusion::Solver::discretization()'],['../d7/d26/class_linear_boltzman_1_1_solver.html#a561caee1b90ccf58af28044ab1b82ef3',1,'LinearBoltzman::Solver::discretization()']]],
   ['dof_5fphi_5fmap_5fstart',['dof_phi_map_start',['../d1/d1a/class_linear_boltzman_1_1_cell_view_full.html#a73c45e38138eb2484d5d1fc0134b809b',1,'LinearBoltzman::CellViewFull']]],
+  ['dof_5fstorage_5ftype',['dof_storage_type',['../d9/da7/classchi__math_1_1_unknown_manager.html#ab19d931348a4e0a1fa9468715bf62f19',1,'chi_math::UnknownManager']]],
   ['dofs',['dofs',['../d5/def/class_cell_f_v_view.html#a0ea50109afe1c0cb492ae75c967ca4c9',1,'CellFVView::dofs()'],['../d8/d0f/class_cell_f_e_view.html#a5cb7534a876646f7da0a0a33cc7f0f5b',1,'CellFEView::dofs()'],['../d1/d1a/class_linear_boltzman_1_1_cell_view_full.html#a989657428a8cbd2fdefd6bbb32961758',1,'LinearBoltzman::CellViewFull::dofs()']]],
   ['done_5fsending',['done_sending',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#a64f9729cf9bee28ae8dce5f3f2b79eb2',1,'chi_mesh::sweep_management::SweepBuffer']]],
+  ['dot',['dot',['../d8/d65/namespace_z_compile_and_run.html#a484e93bca4059e666aca1a81374818bb',1,'ZCompileAndRun']]],
   ['ds_5fedge',['ds_edge',['../da/d1d/structchi__graph_1_1_graph_vertex.html#a8d53d3c8e15977b728eb5d26200f1a1c',1,'chi_graph::GraphVertex']]],
   ['ds_5fweights',['ds_weights',['../da/d1d/structchi__graph_1_1_graph_vertex.html#ab9892c8bc72c41cb691c38592f6a1a7b',1,'chi_graph::GraphVertex']]],
   ['dummy_5fstream',['dummy_stream',['../d8/d1a/class_chi_log.html#aadcdf7fad4188906b43bae592432d782',1,'ChiLog']]]

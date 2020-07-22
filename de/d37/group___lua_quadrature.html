@@ -95,6 +95,8 @@ $(document).ready(function(){initNavTree('de/d37/group___lua_quadrature.html','.
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gab7d8a43b56ecd0142d00231de4e0c526"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#gab7d8a43b56ecd0142d00231de4e0c526">chi_lua::chiCreateCustomAngularQuadrature</a> (array azimuthal_angles, array polar_angles, array weight)</td></tr>
+<tr class="separator:gab7d8a43b56ecd0142d00231de4e0c526"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9600f3a9c8ef7a0f97a27d7317ebb3b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#ga9600f3a9c8ef7a0f97a27d7317ebb3b3">chi_lua::chiCreateProductQuadrature</a> (int QuadratureType, varying values)</td></tr>
 <tr class="separator:ga9600f3a9c8ef7a0f97a27d7317ebb3b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab8fde37d24b96f988753a7f18827d11f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#gab8fde37d24b96f988753a7f18827d11f">chi_lua::chiGetProductQuadrature</a> (int QuadHandle)</td></tr>
@@ -104,6 +106,53 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gab7d8a43b56ecd0142d00231de4e0c526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab7d8a43b56ecd0142d00231de4e0c526">&#9670;&nbsp;</a></span>chiCreateCustomAngularQuadrature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiCreateCustomAngularQuadrature </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>azimuthal_angles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>polar_angles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>weight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an angular quadrature.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">azimuthal_angles</td><td>array A lua table with N entries each being an azimuthal angle. </td></tr>
+    <tr><td class="paramname">polar_angles</td><td>array A lua table with N entries each being a polar angle angle. </td></tr>
+    <tr><td class="paramname">weight</td><td>array A lua table with N entries each being a quadrature weight. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created angular quadrature</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00011">11</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
 <a id="ga9600f3a9c8ef7a0f97a27d7317ebb3b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9600f3a9c8ef7a0f97a27d7317ebb3b3">&#9670;&nbsp;</a></span>chiCreateProductQuadrature()</h2>
 
@@ -154,7 +203,7 @@ CUSTOM_QUADRATURE<br />
 </p><dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00030">30</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00042">42</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -203,7 +252,7 @@ CUSTOM_QUADRATURE<br />
 <p>GAUSS_LEGENDRE = Gauss-Legendre quadrature. GAUSS_CHEBYSHEV = Gauss-Chebyshev quadrature. </p><dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created quadrature rule</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00054">54</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00066">66</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -231,7 +280,7 @@ CUSTOM_QUADRATURE<br />
 <dl class="section return"><dt>Returns</dt><dd>Table A lua table with each entry being another table with entries .weight .polar .azimuthal.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00038">38</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00050">50</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

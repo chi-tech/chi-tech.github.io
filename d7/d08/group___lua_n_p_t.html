@@ -132,7 +132,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a Neutral Particle Transport solver. </p><dl class="section return"><dt>Returns</dt><dd>SolverHandle int Handle to the solver created. <div class="fragment"><div class="line">phys1 = <a class="code" href="../../d7/d08/group___lua_n_p_t.html#gaa8ecbfc58922b856b87105c25a14ac1e">chiLBSCreateSolver</a>()</div><div class="line"><a class="code" href="../../dc/d4e/group___lua_solver.html#gab5fe2a50838ea4c4f573979d6d7540e4">chiSolverAddRegion</a>(phys1,region1)</div><div class="line">--</div><div class="line">-- Add Groupset construction here</div><div class="line">--</div><div class="line"><a class="code" href="../../d7/d08/group___lua_n_p_t.html#ga0ff2334b7745f760ecdfbf378b668841">chiLBSSetProperty</a>(phys1,DISCRETIZATION_METHOD,PWLD3D)</div><div class="line"><a class="code" href="../../d7/d08/group___lua_n_p_t.html#ga0ff2334b7745f760ecdfbf378b668841">chiLBSSetProperty</a>(phys1,SCATTERING_ORDER,1)</div><div class="line">--</div><div class="line"><a class="code" href="../../d7/d08/group___lua_n_p_t.html#ga64539ea4595365ed48c1e8458028c443">chiLBSInitialize</a>(phys1)</div><div class="line"><a class="code" href="../../d7/d08/group___lua_n_p_t.html#ga4325f93255469d8c33115055a0a41964">chiLBSExecute</a>(phys1)</div><div class="line">--</div><div class="line">fflist,count = <a class="code" href="../../d7/d08/group___lua_n_p_t.html#ga5d938e5ed990f5c34953f0d6928cbbf4">chiLBSGetScalarFieldFunctionList</a>(phys1)</div></div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01596">1596</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01576">1576</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -158,7 +158,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01602">1602</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01582">1582</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -187,7 +187,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>table,count Returns an array of handles and the amount of elements in it (indexed from 1).</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01565">1565</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01545">1545</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -215,7 +215,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>table,count Returns an array of handles and the amount of elements in it (indexed from 1).</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01574">1574</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01554">1554</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -241,7 +241,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01556">1556</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01536">1536</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -326,7 +326,7 @@ LBSBoundaryTypes.REFLECTING<br />
 Reflecting boundary condition. Beware, when opposing reflecting boundary conditions are used this enduces a cyclic dependency which will increase the iteration convergence behavior. </p><h3>Note on the Eager limit</h3>
 <p>The eager limit is the message size limit before which non-blocking MPI send calls will execute without waiting for a matching receive call. The limit is platform dependent but in general 64 kb. Some systems have 32 kb as a limit and therefore we use that as a default limit in <a class="el" href="../../d5/d49/class_chi_tech.html">ChiTech</a>. There is a fine interplay between message size and the shear amount of messages that will be sent. In general smaller messages tend to be more efficient, however, when there are too many small messages being sent around the communication system on the given platform will start to suffer. One can gain a small amount of parallel efficiency by lowering this limit, however, there is a point where the parallel efficiency will actually get worse so use with caution. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01256">1256</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01236">1236</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

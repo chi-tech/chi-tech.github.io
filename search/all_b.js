@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['kba',['KBA',['../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html#aaa60a7b56a5ad5057bb491c6a84cc308',1,'chi_mesh::VolumeMesherPredefined3D::KBA()'],['../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#a618af04e8895e48776b3b3776d8426a4',1,'chi_mesh::VolumeMesherPredefinedUnpartitioned::KBA()']]],
   ['kba_5fstyle_5fxy',['KBA_STYLE_XY',['../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3a348cc917e8347159e6eb3ea756d7ba17',1,'chi_mesh::VolumeMesher']]],
   ['kba_5fstyle_5fxyz',['KBA_STYLE_XYZ',['../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3ac04afcc24c159516c1b664dbef84d936',1,'chi_mesh::VolumeMesher']]],
   ['krylov_5fsolver',['krylov_solver',['../dd/dbc/struct_k_s_p_data_context.html#a73b47e90ee6a96f8a789f2a2c1bf77c7',1,'KSPDataContext']]],

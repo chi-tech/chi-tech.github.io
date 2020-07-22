@@ -5,6 +5,7 @@ var classchi__physics_1_1_transport_cross_sections =
     [ "ComputeDiscreteScattering", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a30f8875cd946c7e26495305ca2e3ab9f", null ],
     [ "EnergyCollapse", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a2d0217d5570ba619ccdf46ff6b86337f", null ],
     [ "MakeCombined", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#ab870498b4c9fa9923d0d2b0bf763f61c", null ],
+    [ "MakeFromCHIxsFile", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a88869768a842a3ce2766f282c53808e1", null ],
     [ "MakeFromPDTxsFile", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#aeab8ad19b848f27ad2cce78ac5fe11ae", null ],
     [ "MakeSimple0", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#ae2fd6a8d144ab11f93425b1b927a9e98", null ],
     [ "MakeSimple1", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a1cb54c4349e47c5f5ce27bd0f3417bab", null ],

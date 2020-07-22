@@ -41,7 +41,6 @@ var searchData=
   ['preloci_5foutgoing_5fpsi',['prelocI_outgoing_psi',['../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#aeace91971fb9ded6026b7e4ac817413f',1,'chi_mesh::sweep_management::AngleSet']]],
   ['previoussize',['previousSize',['../dd/d62/class_chi_console.html#ab68a1e04db4a38919a260f4d6e97eb43',1,'ChiConsole']]],
   ['process_5fcount',['process_count',['../dc/d52/class_chi_m_p_i.html#a51968d828ef0e022637679cc3c7d27ac',1,'ChiMPI']]],
-  ['product_5fquadratures',['product_quadratures',['../d9/d9f/class_chi_math.html#a58a6d93ef4113b0b4443dbe6442c2487',1,'ChiMath']]],
   ['properties',['properties',['../d8/da4/classchi__physics_1_1_material.html#a1a936484dbe87871ddcf18c0778cb046',1,'chi_physics::Material']]],
   ['property_5fmap_5fd',['property_map_D',['../d6/d32/classchi__diffusion_1_1_solver.html#ae2472974ed27ec6a8631f7290fac2549',1,'chi_diffusion::Solver']]],
   ['property_5fmap_5fq',['property_map_q',['../d6/d32/classchi__diffusion_1_1_solver.html#a21b2ed4e1e87414296d4081fbab0c6bc',1,'chi_diffusion::Solver']]],

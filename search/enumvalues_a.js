@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['lagrange_5fcontinuous',['LAGRANGE_CONTINUOUS',['../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0a7efacede3be7ad02206c39bcc07a8ece',1,'chi_math']]],
+  ['lagrange_5fdiscontinuous',['LAGRANGE_DISCONTINUOUS',['../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0ac1e6ab27ed1931f2bdf53b1fd8f18901',1,'chi_math']]],
   ['linemesh1d',['LINEMESH1D',['../d0/d81/namespacechi__mesh.html#a3ff8e76f208eff98d2d3e9fe169edbf1a806a2ee28f749ad4a658b8a0b754b7de',1,'chi_mesh']]],
   ['log_5f0',['LOG_0',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8',1,'chi_log.h']]],
   ['log_5f0error',['LOG_0ERROR',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405aef3c4e23d7c6b54ceac13604de983ed5',1,'chi_log.h']]],
