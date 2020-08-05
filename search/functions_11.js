@@ -38,6 +38,7 @@ var searchData=
   ['restoredelaunay',['RestoreDelaunay',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html#acdfa6427abc3d29167bb6354c1a5845c',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
   ['restoreghostvectorlocalviewread',['RestoreGhostVectorLocalViewRead',['../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a0c5eb90fb46ec9271439481a67c2bc12',1,'chi_math::PETScUtils']]],
   ['reversemapnode',['ReverseMapNode',['../de/df0/classchi__mesh_1_1_volume_mesher.html#ad3014c600fa7d439d210f21773b3e48c',1,'chi_mesh::VolumeMesher']]],
+  ['riemannintegral',['RiemannIntegral',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a783b659273f98d62fb45ce3f20d596dd',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],
   ['rootsortho',['RootsOrtho',['../d5/d5e/class_golub_fischer.html#a64fb8e6abbe2c662f363d4e8077b5fb9',1,'GolubFischer']]],
   ['rpplogicalvolume',['RPPLogicalVolume',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#a0ab3f8bea6c1d0670ea47a45f491fccc',1,'chi_mesh::RPPLogicalVolume::RPPLogicalVolume()'],['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#ad204425020f65878de6d424625c4ce35',1,'chi_mesh::RPPLogicalVolume::RPPLogicalVolume(double x0, double x1, double y0, double y1, double z0, double z1)']]],
   ['rule_5fvalues',['RULE_VALUES',['../d2/d06/structchi__mesh_1_1sweep__management_1_1_sweep_scheduler_1_1_r_u_l_e___v_a_l_u_e_s.html#ad5c98a7eee5103eedc04bff78d823697',1,'chi_mesh::sweep_management::SweepScheduler::RULE_VALUES']]],

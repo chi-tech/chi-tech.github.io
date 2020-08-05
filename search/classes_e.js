@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['quadrature',['Quadrature',['../d3/dbf/classchi__math_1_1_quadrature.html',1,'chi_math']]],
+  ['quadrature',['Quadrature',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html',1,'chi_math::SimplifiedLDFESQ::Quadrature'],['../d3/dbf/classchi__math_1_1_quadrature.html',1,'chi_math::Quadrature']]],
   ['quadraturegausschebyshev',['QuadratureGaussChebyshev',['../d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev.html',1,'chi_math']]],
   ['quadraturegausslegendre',['QuadratureGaussLegendre',['../d3/d07/classchi__math_1_1_quadrature_gauss_legendre.html',1,'chi_math']]],
   ['quadraturepointphitheta',['QuadraturePointPhiTheta',['../dc/d9c/structchi__math_1_1_quadrature_point_phi_theta.html',1,'chi_math']]],

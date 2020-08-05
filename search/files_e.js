@@ -1,5 +1,16 @@
 var searchData=
 [
+  ['sldfe_5fsq_2eh',['sldfe_sq.h',['../d6/d18/sldfe__sq_8h.html',1,'']]],
+  ['sldfe_5fsq_5f01_5fgen_5finitrefinement_2ecc',['sldfe_sq_01_gen_initrefinement.cc',['../db/d3d/sldfe__sq__01__gen__initrefinement_8cc.html',1,'']]],
+  ['sldfe_5fsq_5f01a_5fdiagonal_5fspacing_2ecc',['sldfe_sq_01a_diagonal_spacing.cc',['../db/d69/sldfe__sq__01a__diagonal__spacing_8cc.html',1,'']]],
+  ['sldfe_5fsq_5f01b_5fref_5fface_2ecc',['sldfe_sq_01b_ref_face.cc',['../d9/dbc/sldfe__sq__01b__ref__face_8cc.html',1,'']]],
+  ['sldfe_5fsq_5f01c_5fa_5fempirical_2ecc',['sldfe_sq_01c_a_empirical.cc',['../dc/dd8/sldfe__sq__01c__a__empirical_8cc.html',1,'']]],
+  ['sldfe_5fsq_5f01c_5fb_5fisolated_2ecc',['sldfe_sq_01c_b_isolated.cc',['../d2/d60/sldfe__sq__01c__b__isolated_8cc.html',1,'']]],
+  ['sldfe_5fsq_5f01c_5fdevelop_5fldfe_2ecc',['sldfe_sq_01c_develop_ldfe.cc',['../dc/d56/sldfe__sq__01c__develop__ldfe_8cc.html',1,'']]],
+  ['sldfe_5fsq_5f01d_5futils_2ecc',['sldfe_sq_01d_utils.cc',['../d6/da9/sldfe__sq__01d__utils_8cc.html',1,'']]],
+  ['sldfe_5fsq_5f02_5ftest_5fintegration_2ecc',['sldfe_sq_02_test_integration.cc',['../d7/d27/sldfe__sq__02__test__integration_8cc.html',1,'']]],
+  ['sldfe_5fsq_5f03_5fprint_5fquadrature_2ecc',['sldfe_sq_03_print_quadrature.cc',['../d6/dee/sldfe__sq__03__print__quadrature_8cc.html',1,'']]],
+  ['sldfe_5fsq_5f04_5flocally_5frefine_2ecc',['sldfe_sq_04_locally_refine.cc',['../d2/d51/sldfe__sq__04__locally__refine_8cc.html',1,'']]],
   ['spatial_5fdiscretization_2eh',['spatial_discretization.h',['../d6/d28/spatial__discretization_8h.html',1,'']]],
   ['spatial_5fdiscretization_5f00_5fconstrdestr_2ecc',['spatial_discretization_00_constrdestr.cc',['../d1/dac/spatial__discretization__00__constrdestr_8cc.html',1,'']]],
   ['spatial_5fdiscretization_5f01_5faddviewofcont_2ecc',['spatial_discretization_01_addviewofcont.cc',['../d0/dd3/spatial__discretization__01__addviewofcont_8cc.html',1,'']]],

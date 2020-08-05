@@ -1,6 +1,7 @@
 var namespacechi__math =
 [
     [ "PETScUtils", "dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html", "dc/d29/namespacechi__math_1_1_p_e_t_sc_utils" ],
+    [ "SimplifiedLDFESQ", "dd/d56/namespacechi__math_1_1_simplified_l_d_f_e_s_q.html", "dd/d56/namespacechi__math_1_1_simplified_l_d_f_e_s_q" ],
     [ "AngularQuadrature", "d8/dd9/classchi__math_1_1_angular_quadrature.html", "d8/dd9/classchi__math_1_1_angular_quadrature" ],
     [ "CDFSampler", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html", "d5/ddf/classchi__math_1_1_c_d_f_sampler" ],
     [ "DMatrixNX", "d7/d71/classchi__math_1_1_d_matrix_n_x.html", "d7/d71/classchi__math_1_1_d_matrix_n_x" ],

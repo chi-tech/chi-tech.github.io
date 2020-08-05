@@ -26,6 +26,7 @@ var searchData=
   ['toleranceisabsolute',['ToleranceIsAbsolute',['../d8/dce/classvtk_clean_unstructured_grid.html#a305c59279ab29909adfeb145b91847d9',1,'vtkCleanUnstructuredGrid']]],
   ['top_5fboundary_5findex',['top_boundary_index',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#ac44df231283a616325b5034ba72e989b',1,'chi_mesh::VolumeMesherExtruder']]],
   ['transfer_5fmatrix',['transfer_matrix',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#ae4a351c05fdba0c9b709e32c10c96099',1,'chi_physics::TransportCrossSections']]],
+  ['translation_5fvector',['translation_vector',['../d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html#a4908ad032d8b7cbd41481c08745381b9',1,'chi_math::SimplifiedLDFESQ::SphericalQuadrilateral']]],
   ['tri_5fquad_5fdeg3_5fsurf',['tri_quad_deg3_surf',['../de/dfb/class_spatial_discretization___p_w_l.html#a3787c9a2ec1455950ff8102e1a0309ac',1,'SpatialDiscretization_PWL']]],
   ['tri_5fquad_5fdeg5',['tri_quad_deg5',['../de/dfb/class_spatial_discretization___p_w_l.html#a2f5d3806afe09fd0ecac4a2e18a797e5',1,'SpatialDiscretization_PWL']]],
   ['triangles',['triangles',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html#a1380d6628510f48e561f86eba4690dde',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],

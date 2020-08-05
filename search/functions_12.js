@@ -51,6 +51,7 @@ var searchData=
   ['spherelogicalvolume',['SphereLogicalVolume',['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#a3d30d4592d330a0a40a630d538c55594',1,'chi_mesh::SphereLogicalVolume::SphereLogicalVolume()'],['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#aa980b1ee5d93c0b6c57af84f756ac462',1,'chi_mesh::SphereLogicalVolume::SphereLogicalVolume(double in_radius)'],['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#a0cdcd8b1e9a5c2b20bde52e76d969bdf',1,'chi_mesh::SphereLogicalVolume::SphereLogicalVolume(double in_radius, double in_x, double in_y, double in_z)']]],
   ['splitbypatch',['SplitByPatch',['../dd/d43/classchi__mesh_1_1_surface_mesh.html#ac54250e74cdf8b2983b95ee1aeed89bc',1,'chi_mesh::SurfaceMesh']]],
   ['splitedgeloopbyangle',['SplitEdgeLoopByAngle',['../d0/d81/namespacechi__mesh.html#a272d936d8dd7762d7ee33c78c6a470b2',1,'chi_mesh']]],
+  ['splitsq',['SplitSQ',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a39b0b9dba8a482fad34e835b9cf0d671',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],
   ['step',['Step',['../d6/d08/class_thermo_alpha.html#aa1704c5863c5c1bf016c4a221e91749f',1,'ThermoAlpha']]],
   ['subintvl',['SubIntvl',['../d8/db6/structchi__math_1_1_c_d_f_sampler_1_1_sub_intvl.html#af5853cb8f99435e12622b21a26c150e6',1,'chi_math::CDFSampler::SubIntvl']]],
   ['submatrix',['SubMatrix',['../dc/d58/namespacechi__math.html#a800268583e3fdc9fac2fe508983012f0',1,'chi_math']]],

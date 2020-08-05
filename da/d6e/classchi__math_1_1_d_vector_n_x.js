@@ -38,6 +38,7 @@ var classchi__math_1_1_d_vector_n_x =
     [ "operator=", "da/d6e/classchi__math_1_1_d_vector_n_x.html#aa1a2693d14586c1dfee0f7aabdf4c91a", null ],
     [ "operator=", "da/d6e/classchi__math_1_1_d_vector_n_x.html#adb863fe22ed57cbd70e94130916b70ac", null ],
     [ "operator[]", "da/d6e/classchi__math_1_1_d_vector_n_x.html#aaa0240376d54a6ca424f16e65b5cf8cd", null ],
+    [ "operator[]", "da/d6e/classchi__math_1_1_d_vector_n_x.html#adfa92b7950e33bee77591ae0c189c02d", null ],
     [ "pop_back", "da/d6e/classchi__math_1_1_d_vector_n_x.html#aaf8679e272fe75a104a121f8c9cc9ea3", null ],
     [ "push_back", "da/d6e/classchi__math_1_1_d_vector_n_x.html#a0ce55dcfc3b90271cd5b215f430e3a45", null ],
     [ "reserve", "da/d6e/classchi__math_1_1_d_vector_n_x.html#aa595452be5a85f3410ba880a908ef372", null ],

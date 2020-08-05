@@ -2,6 +2,7 @@ var searchData=
 [
   ['edge',['Edge',['../d9/d36/structchi__mesh_1_1_edge.html#a361ece54b045d6e9447a336917065952',1,'chi_mesh::Edge']]],
   ['edgeflip',['EdgeFlip',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html#a2cf4ed50585aa8669e755ecb36300a2c',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
+  ['empiricalqpoptimization',['EmpiricalQPOptimization',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a743c443bd1ca901213da02e96b7a2ec8',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],
   ['empty',['empty',['../d7/d71/classchi__math_1_1_d_matrix_n_x.html#af519e5ba9f7de06ebaf53bdc643c2a0c',1,'chi_math::DMatrixNX::empty()'],['../da/d6e/classchi__math_1_1_d_vector_n_x.html#a214589c65d0233d800f0a122c438373c',1,'chi_math::DVectorNX::empty()']]],
   ['end',['end',['../df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a5c5ea68a32cfe813e82463486fa35c19',1,'chi_graph::DirectedGraph::VertexAccessor::end()'],['../d7/d71/classchi__math_1_1_d_matrix_n_x.html#a933ec64ff1820b32f033b838960c6b9f',1,'chi_math::DMatrixNX::end()'],['../da/d6e/classchi__math_1_1_d_vector_n_x.html#a5ce5be4a88f0220945e22cc37e3124d4',1,'chi_math::DVectorNX::end()'],['../dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html#ae0371480d65ebe1514a7ee07246568e4',1,'chi_mesh::MeshContinuum::LocalCells::end()']]],
   ['energycollapse',['EnergyCollapse',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a2d0217d5570ba619ccdf46ff6b86337f',1,'chi_physics::TransportCrossSections']]],

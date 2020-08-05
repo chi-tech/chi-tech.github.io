@@ -1,6 +1,7 @@
 var dir_d01ea86efa29449069a70782e6d4dad2 =
 [
     [ "LegendrePoly", "dir_fe9cc34f919e571dd7e83be00fceab7f.html", "dir_fe9cc34f919e571dd7e83be00fceab7f" ],
+    [ "SLDFESQ", "dir_1501d7868541f42e5f410d129fe9fc8c.html", "dir_1501d7868541f42e5f410d129fe9fc8c" ],
     [ "angular_quadrature_base.cc", "d8/de6/angular__quadrature__base_8cc.html", "d8/de6/angular__quadrature__base_8cc" ],
     [ "angular_quadrature_base.h", "d5/d27/angular__quadrature__base_8h.html", "d5/d27/angular__quadrature__base_8h" ],
     [ "product_quadrature.cc", "d7/d9c/product__quadrature_8cc.html", "d7/d9c/product__quadrature_8cc" ],

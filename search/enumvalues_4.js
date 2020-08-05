@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['empirical',['EMPIRICAL',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ab4833fb33e746caf98bb8c79c6353807aaded1d4ec069c2a5e90fb1ba36ddac7f',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],
   ['event_5fbegin',['EVENT_BEGIN',['../d8/d1a/class_chi_log.html#ab2c301e8b92e9a0b24c86656cd8ff6ceaaa3cba5f6cd9cd162c2d35af6187d802',1,'ChiLog']]],
   ['event_5fcreated',['EVENT_CREATED',['../d8/d1a/class_chi_log.html#ab2c301e8b92e9a0b24c86656cd8ff6ceae672bd8c63b0be26429fa05ffc872c1b',1,'ChiLog']]],
   ['event_5fend',['EVENT_END',['../d8/d1a/class_chi_log.html#ab2c301e8b92e9a0b24c86656cd8ff6ceaf2ba99e542039eba504f4cd3beec38b0',1,'ChiLog']]],

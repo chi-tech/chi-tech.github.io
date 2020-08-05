@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['a',['a',['../d6/d58/classchi__diffusion_1_1_boundary_robin.html#a8e9bf08c2505f5c8daf6fdb1aa355c42',1,'chi_diffusion::BoundaryRobin::a()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a3bbf908a022ee2739cfe98160d20fbb6',1,'chi_diffusion::Solver::A()'],['../d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html#a8871edce5e113e2d931e06f953098578',1,'HYDRO_BOUNDARY::A()'],['../d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e.html#af9eb8ad30726895f59d2bfe2fa6bba57',1,'HYDRO_VOLUME::A()']]],
+  ['a',['a',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ae2e2030f035f36117cf747fa5c337787',1,'chi_math::SimplifiedLDFESQ::Quadrature::a()'],['../d6/d58/classchi__diffusion_1_1_boundary_robin.html#a8e9bf08c2505f5c8daf6fdb1aa355c42',1,'chi_diffusion::BoundaryRobin::a()'],['../d3/d82/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_f_u_n_c_t_i_o_n___w_e_i_g_h_t___f_r_o_m___r_h_o.html#a5d404072bd47eb6be1adc4361d7d2196',1,'chi_math::SimplifiedLDFESQ::FUNCTION_WEIGHT_FROM_RHO::A()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a3bbf908a022ee2739cfe98160d20fbb6',1,'chi_diffusion::Solver::A()'],['../d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html#a8871edce5e113e2d931e06f953098578',1,'HYDRO_BOUNDARY::A()'],['../d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e.html#af9eb8ad30726895f59d2bfe2fa6bba57',1,'HYDRO_VOLUME::A()']]],
   ['a_5fand_5fb_5finitialized',['a_and_b_initialized',['../d7/d3d/class_l_b_s_sweep_chunk_p_w_l.html#a0477c2c75986daf1c5932ddb44756486',1,'LBSSweepChunkPWL']]],
+  ['a_5finv',['A_inv',['../d3/d82/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_f_u_n_c_t_i_o_n___w_e_i_g_h_t___f_r_o_m___r_h_o.html#a2579bbee828da5b704a149d21a267107',1,'chi_math::SimplifiedLDFESQ::FUNCTION_WEIGHT_FROM_RHO']]],
   ['abscissae',['abscissae',['../d8/dd9/classchi__math_1_1_angular_quadrature.html#a4ce7c62325acf99f0910252a8f99a187',1,'chi_math::AngularQuadrature::abscissae()'],['../d3/dbf/classchi__math_1_1_quadrature.html#a704f75004ed0b310751549838308d99e',1,'chi_math::Quadrature::abscissae()']]],
   ['absoluteminumumsize',['absoluteMinumumSize',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html#a4e54fde604773831d874ecf39e806ec1',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
   ['absolutetolerance',['AbsoluteTolerance',['../d8/dce/classvtk_clean_unstructured_grid.html#aae5a425cb9e4e1d57eb623e58cbb76b9',1,'vtkCleanUnstructuredGrid']]],
@@ -68,6 +69,7 @@ var searchData=
   ['arb_5finfo',['arb_info',['../db/d4a/struct_chi_log_1_1_event_info.html#ae2c7dbd0b6b43d8dc5520588b6fdb00a',1,'ChiLog::EventInfo']]],
   ['arb_5fvalue',['arb_value',['../db/d4a/struct_chi_log_1_1_event_info.html#ab802d7b14e72517915b93db597647723',1,'ChiLog::EventInfo']]],
   ['arbitrary',['Arbitrary',['../dc/d58/namespacechi__math.html#a1549f07a2de9e2c7f01c728a5f0dbe37a3c1fc46575f79b15fc8990642387d07f',1,'chi_math']]],
+  ['area',['area',['../d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html#aad65df690c197a9edea3fcfea94ab0d4',1,'chi_math::SimplifiedLDFESQ::SphericalQuadrilateral']]],
   ['aref',['Aref',['../d6/d32/classchi__diffusion_1_1_solver.html#a8790f59e5b12c131cbc802dbca935a3d',1,'chi_diffusion::Solver']]],
   ['assemble_5fpwlc_2ecc',['assemble_pwlc.cc',['../d3/dc6/assemble__pwlc_8cc.html',1,'']]],
   ['assemble_5fpwld_2ecc',['assemble_pwld.cc',['../d6/dfb/assemble__pwld_8cc.html',1,'']]],

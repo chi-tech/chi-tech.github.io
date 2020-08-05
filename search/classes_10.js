@@ -12,6 +12,7 @@ var searchData=
   ['spatialdiscretization_5fpwl',['SpatialDiscretization_PWL',['../de/dfb/class_spatial_discretization___p_w_l.html',1,'']]],
   ['spds',['SPDS',['../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html',1,'chi_mesh::sweep_management']]],
   ['spherelogicalvolume',['SphereLogicalVolume',['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html',1,'chi_mesh']]],
+  ['sphericalquadrilateral',['SphericalQuadrilateral',['../d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html',1,'chi_math::SimplifiedLDFESQ']]],
   ['spls',['SPLS',['../d5/d51/structchi__mesh_1_1sweep__management_1_1_s_p_l_s.html',1,'chi_mesh::sweep_management']]],
   ['stdg',['STDG',['../df/dda/structchi__mesh_1_1sweep__management_1_1_s_t_d_g.html',1,'chi_mesh::sweep_management']]],
   ['subintvl',['SubIntvl',['../d8/db6/structchi__math_1_1_c_d_f_sampler_1_1_sub_intvl.html',1,'chi_math::CDFSampler']]],

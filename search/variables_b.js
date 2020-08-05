@@ -40,5 +40,7 @@ var searchData=
   ['log_5fstream',['log_stream',['../de/ddf/class_log_stream.html#ac755696b5350081ea02fac2720b0ccaf',1,'LogStream']]],
   ['log_5fsweep_5fevents',['log_sweep_events',['../d7/d7d/class_l_b_s_groupset.html#ae1ddc977f5abf2d210902a7b97c742e5',1,'LBSGroupset']]],
   ['logical_5fvolume',['logical_volume',['../db/dd5/classchi__mesh_1_1_field_function_interpolation_volume.html#a8f77853c7bd69b563fb16ac2035e1847',1,'chi_mesh::FieldFunctionInterpolationVolume']]],
-  ['logicvolume_5fstack',['logicvolume_stack',['../d2/d10/classchi__mesh_1_1_mesh_handler.html#a6b5298b245ef5d8e16c7b5d4274b76c4',1,'chi_mesh::MeshHandler']]]
+  ['logicvolume_5fstack',['logicvolume_stack',['../d2/d10/classchi__mesh_1_1_mesh_handler.html#a6b5298b245ef5d8e16c7b5d4274b76c4',1,'chi_mesh::MeshHandler']]],
+  ['lqp',['lqp',['../d3/d82/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_f_u_n_c_t_i_o_n___w_e_i_g_h_t___f_r_o_m___r_h_o.html#a8855acbaa24c559eb7390781a34d82c0',1,'chi_math::SimplifiedLDFESQ::FUNCTION_WEIGHT_FROM_RHO']]],
+  ['lqw',['lqw',['../d3/d82/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_f_u_n_c_t_i_o_n___w_e_i_g_h_t___f_r_o_m___r_h_o.html#a0a67872cbb8cb0b041485e68c016eb4f',1,'chi_math::SimplifiedLDFESQ::FUNCTION_WEIGHT_FROM_RHO']]]
 ];

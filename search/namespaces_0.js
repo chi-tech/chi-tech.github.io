@@ -7,5 +7,6 @@ var searchData=
   ['chi_5fmesh',['chi_mesh',['../d0/d81/namespacechi__mesh.html',1,'']]],
   ['chi_5fphysics',['chi_physics',['../d6/d5f/namespacechi__physics.html',1,'']]],
   ['petscutils',['PETScUtils',['../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html',1,'chi_math']]],
+  ['simplifiedldfesq',['SimplifiedLDFESQ',['../dd/d56/namespacechi__math_1_1_simplified_l_d_f_e_s_q.html',1,'chi_math']]],
   ['sweep_5fmanagement',['sweep_management',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html',1,'chi_mesh']]]
 ];
