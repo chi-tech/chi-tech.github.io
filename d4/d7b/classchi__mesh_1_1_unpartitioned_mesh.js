@@ -21,7 +21,7 @@ var classchi__mesh_1_1_unpartitioned_mesh =
     [ "CreateUnpartitioned3DOrthoMesh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a5cad3d3375fdc948d5baed507f566a49", null ],
     [ "VolumeMesherPredefined3D", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ac8fc62debb3e0205738b0de51f152150", null ],
     [ "VolumeMesherPredefinedUnpartitioned", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a39f7e50710e8128ecb71c45c740fc5af", null ],
-    [ "bound_box", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a69dd0c31207a900aca05a248f92b4dd8", null ],
+    [ "bound_box", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b", null ],
     [ "mesh_options", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#aede1055a5f2c7ab57de4fa1e9b8d2afb", null ],
     [ "raw_cells", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a54f13d709bd55611f09c9c4007097505", null ],
     [ "vertices", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a71b720504b36cbe60fc569d8ea17eab0", null ]

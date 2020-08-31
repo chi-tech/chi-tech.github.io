@@ -1,10 +1,11 @@
 var class_linear_boltzman_1_1_solver =
 [
     [ "Solver", "d7/d26/class_linear_boltzman_1_1_solver.html#aee5f89c2dd5baaf3cbeb211a0bab68af", null ],
+    [ "~Solver", "d7/d26/class_linear_boltzman_1_1_solver.html#aead2a1b11bc5d49b81e685f2292ffbdd", null ],
     [ "AssembleTGDSADeltaPhiVector", "d7/d26/class_linear_boltzman_1_1_solver.html#aee96df14a2f0159a11b3dc94e9c4f5ab", null ],
     [ "AssembleVector", "d7/d26/class_linear_boltzman_1_1_solver.html#ac5274596f007405b381ce9c37dc7bb8d", null ],
     [ "AssembleWGDSADeltaPhiVector", "d7/d26/class_linear_boltzman_1_1_solver.html#aa068eb5e465baaaee62315321ecee92e", null ],
-    [ "ClassicRichardson", "d7/d26/class_linear_boltzman_1_1_solver.html#a2272f79d9bc648f17830024237f3186a", null ],
+    [ "ClassicRichardson", "d7/d26/class_linear_boltzman_1_1_solver.html#ab3317cb720709f4f6ac107cb8cbf7f8e", null ],
     [ "CleanUpTGDSA", "d7/d26/class_linear_boltzman_1_1_solver.html#a58e787acc257941711dfadb8fada5a94", null ],
     [ "CleanUpWGDSA", "d7/d26/class_linear_boltzman_1_1_solver.html#abcaf0b22e1c52e879ee98949b4ce0e7b", null ],
     [ "ComputeNumberOfMoments", "d7/d26/class_linear_boltzman_1_1_solver.html#adef7c60d6c174fa59ef1a96d34426a60", null ],
@@ -16,7 +17,7 @@ var class_linear_boltzman_1_1_solver =
     [ "DisAssembleVectorLocalToLocal", "d7/d26/class_linear_boltzman_1_1_solver.html#a32b9fbc51c5bb4bf512c0bcbced789e2", null ],
     [ "DisAssembleWGDSADeltaPhiVector", "d7/d26/class_linear_boltzman_1_1_solver.html#af0ec45d2c761df3439e5acf4e84409f0", null ],
     [ "Execute", "d7/d26/class_linear_boltzman_1_1_solver.html#a83fddcd4cab9075d6e7cde5d553f33d6", null ],
-    [ "GMRES", "d7/d26/class_linear_boltzman_1_1_solver.html#a9b0731e6d3a34622cb399cc0d1d18a2c", null ],
+    [ "GMRES", "d7/d26/class_linear_boltzman_1_1_solver.html#afadff7b229be73805b3ebc765e169a29", null ],
     [ "InitAngleAggPolar", "d7/d26/class_linear_boltzman_1_1_solver.html#ae019ef10586b882c244b0492cd574d52", null ],
     [ "InitAngleAggSingle", "d7/d26/class_linear_boltzman_1_1_solver.html#a6a447b22797ad454bce4be7b83ea8d40", null ],
     [ "InitFluxDataStructures", "d7/d26/class_linear_boltzman_1_1_solver.html#a9fe34bff9b68ba36587fdd2d5e4ad98f", null ],

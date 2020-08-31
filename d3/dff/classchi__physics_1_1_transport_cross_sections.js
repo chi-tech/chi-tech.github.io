@@ -16,6 +16,7 @@ var classchi__physics_1_1_transport_cross_sections =
     [ "chi_g", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#af29343adab3b215bc594c25989a48193", null ],
     [ "D_jfull", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a83afab391936f9670fb642086d6071ee", null ],
     [ "D_jpart", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a451cadeb4d7210d0c8b1e2e28cc8a951", null ],
+    [ "ddt_coeff", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#abab390c3877e4a1405c2fac52cf2208f", null ],
     [ "diffg", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a3ef22bc815acac446024fb1cf5b57a7a", null ],
     [ "diffusion_initialized", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a84997a065caeb8e90e9572f55561782d", null ],
     [ "G", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a91dbba121f1c003218bc6ba72352fad4", null ],

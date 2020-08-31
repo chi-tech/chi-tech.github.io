@@ -1,5 +1,6 @@
 var classchi__mesh_1_1sweep__management_1_1_sweep_chunk =
 [
+    [ "~SweepChunk", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#aef9f8ad994608284798270e9eb69ffc9", null ],
     [ "SetDestinationPhi", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#a3218b41a41e531aeeeffcd87dc65e245", null ],
     [ "Sweep", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#af9ade5dacb173746afd008e53f903a95", null ],
     [ "angle_num", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ae10c09f9351588e30981deb01ed819ec", null ],

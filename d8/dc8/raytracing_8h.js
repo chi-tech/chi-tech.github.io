@@ -6,5 +6,5 @@ var raytracing_8h =
     [ "CheckPlaneLineIntersect", "d8/dc8/raytracing_8h.html#a21d0f4fd8ff1dcfb346386119f37e420", null ],
     [ "CheckPointInTriangle", "d8/dc8/raytracing_8h.html#a9014e7899a847b4e57ed756312896389", null ],
     [ "PopulateRaySegmentLengths", "d8/dc8/raytracing_8h.html#ad39c10d9d2f2b5e6b8f10544affe4169", null ],
-    [ "RayTrace", "d8/dc8/raytracing_8h.html#a59591e8a4279f32fd13d6de38c490df2", null ]
+    [ "RayTrace", "d8/dc8/raytracing_8h.html#a7118b30c74f5304ba65c1601f97817c6", null ]
 ];

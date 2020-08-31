@@ -1,25 +1,26 @@
 /*
-@ @licstart  The following is the entire license notice for the
-JavaScript code in this file.
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
 
-Copyright (C) 1997-2017 by Dimitri van Heesch
+ The MIT License (MIT)
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+ Copyright (C) 1997-2020 by Dimitri van Heesch
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
 
-@licend  The above is the entire license notice
-for the JavaScript code in this file
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var NAVTREE =
 [
@@ -79,22 +80,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d1/d4c/chi__meshcontinuum__exportvtk_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869",
-"d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html#ac64c792738c14e8c3b34d7897b7752aa",
+"d1/d4c/chi__meshcontinuum__exportvtk_8cc.html#aff18523449a2997a122381af7ab97f4d",
+"d2/d16/sweepscheduler__dog_8cc.html",
 "d3/d97/volmesher__linemesh1d__01__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869",
-"d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a0b62822af441cbda35ac23fc3e62f5ed",
-"d5/d8e/structchi__math_1_1_vector_n_x.html#aa3e1ab942fe1c30e5ee8e313d0881dfc",
-"d6/d3b/unknown__manager_8h.html#ad4724873fa5ae74b39c4657aa4f53d1da20760c37f74c5ecf95beeadd1407fbef",
-"d7/d3d/class_l_b_s_sweep_chunk_p_w_l.html#ae6541da42d27eb2d566585c268d05f63",
-"d8/d1a/class_chi_log.html#afcb7b450ad2435af94adeb545513c812",
-"d8/dfb/chi__ffinter__volume__execute_8cc_source.html",
-"da/d0e/assemble__utils__pwlc_8cc.html",
-"da/da0/struct_mesh_layer.html",
+"d4/d73/_f_l_u_d_s__betapass_8cc_source.html",
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a9dc0b4c66553943afcb5701b89f09e39",
+"d6/d3b/unknown__manager_8h.html#aa4d14dccd92db660290242a7519ebb6cad0a56035f3937389f4e549d396da1805",
+"d7/d3d/class_l_b_s_sweep_chunk_p_w_l.html#acfe816031816d92acf74fd042317307a",
+"d8/d1a/class_chi_log.html#af9758f0233105c8ed2073ec6e965b181",
+"d8/dfb/chi__ffinter__volume__execute_8cc.html",
+"da/d0e/assemble__utils__pwlc_8cc.html#aff18523449a2997a122381af7ab97f4d",
+"da/da0/struct_mesh_layer.html#a909f5112ee81147acc2bcf3fab8033db",
 "dc/d00/delaunay__mesher__00__constrdestr_8cc_source.html",
 "dc/d9b/init__pwld_8cc.html",
-"dd/da4/class_polyhedron_f_e_view.html#aeb0fca45f64836bb2e5af5d7d08989b6",
-"de/df0/classchi__mesh_1_1_volume_mesher.html#ad4c8108dd05c5b23478021772b7ba6ba",
-"dir_6816d633a31391de130e56fad92b60f1.html"
+"dd/da4/class_polyhedron_f_e_view.html#a8e6683c6d5be8ca8f9d2cd7d2354d74e",
+"de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3",
+"dir_50e4c48891b71f9c41cdd31391f59e70.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

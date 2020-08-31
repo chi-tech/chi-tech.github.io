@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linearboltzman',['LinearBoltzman',['../d4/dfe/namespace_linear_boltzman.html',1,'']]]
+  ['linearboltzman_2506',['LinearBoltzman',['../d4/dfe/namespace_linear_boltzman.html',1,'']]]
 ];

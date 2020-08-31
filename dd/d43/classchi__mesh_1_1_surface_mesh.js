@@ -16,7 +16,7 @@ var classchi__mesh_1_1_surface_mesh =
     [ "ImportFromMshFiles", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a7dbd48c55667e22e5ae5aacdf18207e5", null ],
     [ "ImportFromOBJFile", "dd/d43/classchi__mesh_1_1_surface_mesh.html#aa95d3703c8670b078bd04360e2809779", null ],
     [ "ImportFromTriangleFiles", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a1bd5f38ec4fc5bbfc2cd6a4d902dbd60", null ],
-    [ "SplitByPatch", "dd/d43/classchi__mesh_1_1_surface_mesh.html#ac54250e74cdf8b2983b95ee1aeed89bc", null ],
+    [ "SplitByPatch", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a08a5f6197f1a509372d84d1fac0a7f24", null ],
     [ "UpdateInternalConnectivity", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a8a79b632e3b3a9c593898efae013b6b2", null ],
     [ "operator<<", "dd/d43/classchi__mesh_1_1_surface_mesh.html#aecc0e9dd57ad4b032af712b4cbb410eb", null ],
     [ "faces", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a7b7f440d25626c9ec33df91029916f4a", null ],

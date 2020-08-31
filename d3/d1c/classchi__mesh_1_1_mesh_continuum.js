@@ -4,7 +4,7 @@ var classchi__mesh_1_1_mesh_continuum =
     [ "LocalCells", "dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html", "dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells" ],
     [ "MeshContinuum", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a9f0bc1e0fab76fb24debb27852300874", null ],
     [ "BuildFaceHistogramInfo", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a2fdf6f98473e391c1c394d59c0b20c5c", null ],
-    [ "CommunicatePartitionNeighborCells", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a1e35dd4e6ee08398f33382476a74c545", null ],
+    [ "CommunicatePartitionNeighborCells", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a829c97c25d0a7153c16c405de1104498", null ],
     [ "ComputeCentroidFromListOfNodes", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aa3ecae23c64701e5f5602e2fb9a110c2", null ],
     [ "ExportCellsToObj", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a249eca26d25dfe780c4975c3dfb46be6", null ],
     [ "ExportCellsToPython", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a6ce2c0f6bdb573e7ef09c0f4237d0cca", null ],
