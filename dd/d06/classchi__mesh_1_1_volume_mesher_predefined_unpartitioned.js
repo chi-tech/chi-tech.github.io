@@ -8,6 +8,6 @@ var classchi__mesh_1_1_volume_mesher_predefined_unpartitioned =
     [ "GetPartitionIDFromCentroid", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#aa2d73403174beea4aca5c4a8318b3235", null ],
     [ "IsRawCellNeighborToPartitionKBA", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#a7feb0757824a4f075ef10a964116db4b", null ],
     [ "IsRawCellNeighborToPartitionParmetis", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#ab092bb13ae7b8fe3d93ee0fa9409947d", null ],
-    [ "KBA", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#a618af04e8895e48776b3b3776d8426a4", null ],
-    [ "PARMETIS", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#a2e4f25a4cb95f35acbef3601a44d8921", null ]
+    [ "KBA", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#ad393839ef5c3527e3628802cc225b830", null ],
+    [ "PARMETIS", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#aff5e54826551168414c210bec81107e7", null ]
 ];

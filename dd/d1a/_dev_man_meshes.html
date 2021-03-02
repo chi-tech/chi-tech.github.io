@@ -98,7 +98,7 @@ General structure of meshes</h1>
 What is the grid?</h2>
 <p>The grid is an instance of the <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> class. It has 3 members of primary interest namely:</p><ul>
 <li><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a69278f27a593bd90c21b9897d7df1f54">chi_mesh::MeshContinuum::vertices</a> containing pointers to all the nodes of type <a class="el" href="../../d0/d81/namespacechi__mesh.html#a0c3635049b6a7727edc9a8a0b8b45f24">chi_mesh::Node</a>. The container is an indexed map using vertex global ids.</li>
-<li><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a128c3baa78ca094db239d8d0af4c5932">chi_mesh::MeshContinuum::local_cells</a> containing local cells of type <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>. The container has an iterator available and is indexed by cell local index.</li>
+<li><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">chi_mesh::MeshContinuum::local_cells</a> containing local cells of type <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>. The container has an iterator available and is indexed by cell local index.</li>
 <li><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a8290e6fd6bedfba721d4aabf73b806ee">chi_mesh::MeshContinuum::cells</a> handles indexing by global cell ids. This also facilitates the addition of cells to the local_cell storage.</li>
 </ul>
 <h2>_</h2>
@@ -176,7 +176,7 @@ Figure 2: Types of cells.</div></div>
 <h2>_</h2>
 <h2><a class="anchor" id="devman_meshes_sec1_5"></a>
 Accessing cells (the pain of parallel programs)</h2>
-<p>Cells live in the <code>local_cells</code> member of a grid, which is of object type <a class="el" href="../../dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html">chi_mesh::MeshContinuum::LocalCells</a>, under the auspices of either <code>native_cells</code> or <code>foreign_cells</code>. Local cells are guaranteed to be fully defined (i.e. not ghost cells) whilst non-local cells are most likely to be ghost-cells. The fastest way to access a cell is by means of its local id</p>
+<p>Cells live in the <code>local_cells</code> member of a grid, which is of object type chi_mesh::MeshContinuum::LocalCells, under the auspices of either <code>native_cells</code> or <code>foreign_cells</code>. Local cells are guaranteed to be fully defined (i.e. not ghost cells) whilst non-local cells are most likely to be ghost-cells. The fastest way to access a cell is by means of its local id</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> cell = grid-&gt;local_cells[cell_local_id];</div>
 </div><!-- fragment --><p>The <code>local_cells</code> object also facilitates an iterator.</p>
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span> cell = grid-&gt;local_cells.begin();</div>
@@ -199,7 +199,7 @@ Figure 3: Cell mapping logic.</div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_surface_mesher_predefined_html"><div class="ttname"><a href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/surfmesher__predefined_8h_source.html#l00010">surfmesher_predefined.h:11</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_region_html"><div class="ttname"><a href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d07/chi__region_8h_source.html#l00010">chi_region.h:11</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_predefined3_d_html"><div class="ttname"><a href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html">chi_mesh::VolumeMesherPredefined3D</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da7/volmesher__predefined3d_8h_source.html#l00007">volmesher_predefined3d.h:8</a></div></div>
-<div class="ttc" id="anamespacechi__mesh_html_a55aa0de42096c5df928a53928143aa55"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler * GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00012">chi_mesh_meshhandler_utils.cc:12</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_a55aa0de42096c5df928a53928143aa55"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler * GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00011">chi_mesh_meshhandler_utils.cc:11</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -1,6 +1,6 @@
 var files_dup =
 [
-    [ "CHI_DOC", "dir_74ac6d39270465d6ef7990243cce5b67.html", "dir_74ac6d39270465d6ef7990243cce5b67" ],
-    [ "CHI_TECH", "dir_eec4d28110009ed62ffe54c00aea6a23.html", "dir_eec4d28110009ed62ffe54c00aea6a23" ],
-    [ "Modules", "dir_f2541a3b18981391fa76fac5599e978a.html", "dir_f2541a3b18981391fa76fac5599e978a" ]
+    [ "ChiDoc", "dir_4618df47cc316f3b473f8159864a56ca.html", "dir_4618df47cc316f3b473f8159864a56ca" ],
+    [ "ChiModules", "dir_6650a3b49e3ce036dc343a3bf3bf0561.html", "dir_6650a3b49e3ce036dc343a3bf3bf0561" ],
+    [ "ChiTech", "dir_881599471ceacbc6fd7f5107170a74cb.html", "dir_881599471ceacbc6fd7f5107170a74cb" ]
 ];

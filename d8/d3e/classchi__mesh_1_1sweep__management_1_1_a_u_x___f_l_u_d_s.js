@@ -24,8 +24,8 @@ var classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s =
     [ "ref_deplocI_outgoing_psi", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a32acee76a035d4b9a0dda56e78d296c1", null ],
     [ "ref_local_psi", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a0d379a434e04436b96ed91c0ae743a0b", null ],
     [ "ref_prelocI_outgoing_psi", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a1b12ccbcc11bc80422d8429c79ac18c2", null ],
-    [ "so_cell_inco_face_dof_indices", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#aba9449c7d706f977b254311785e657f7", null ],
-    [ "so_cell_inco_face_face_category", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a977402dbbcf9f6d87090daacb399cce7", null ],
-    [ "so_cell_outb_face_face_category", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a8d99bbeb8db0ae5da79c6a8270b9b784", null ],
-    [ "so_cell_outb_face_slot_indices", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a7c0249c91ad3ba6d0f0ad886ae98a61b", null ]
+    [ "so_cell_inco_face_dof_indices", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#afd809c6aa521104a4b08727fbd2fd7dd", null ],
+    [ "so_cell_inco_face_face_category", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a64f8a560782b17f23c5787072f7d5ab3", null ],
+    [ "so_cell_outb_face_face_category", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#aa261d48503de4ce8ab0a4b63be2a8886", null ],
+    [ "so_cell_outb_face_slot_indices", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a87f7c40e752f7ad2ea21e1ac70913356", null ]
 ];

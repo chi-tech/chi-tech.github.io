@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: CHI_TECH/ChiPhysics/FieldFunction/fieldfunction_mapping.cc Source File</title>
+<title>Chi-Tech: ChiTech/ChiPhysics/FieldFunction/fieldfunction_mapping.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -88,60 +88,161 @@ $(document).ready(function(){initNavTree('d7/db3/fieldfunction__mapping_8cc_sour
 <div class="contents">
 <a href="../../d7/db3/fieldfunction__mapping_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/db1/fieldfunction_8h.html">fieldfunction.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../d7/db3/fieldfunction__mapping_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//###################################################################</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/***/</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../df/de9/classchi__physics_1_1_field_function.html#abfd14df8c1244f7adcd9001c30292265">    8</a></span>&#160;std::vector&lt;double&gt;&amp; <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#abfd14df8c1244f7adcd9001c30292265">chi_physics::FieldFunction::</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#abfd14df8c1244f7adcd9001c30292265">  GetCellDOFValues</a>(<span class="keywordtype">size_t</span> cell_local_id, <span class="keywordtype">size_t</span> component, <span class="keywordtype">size_t</span> set)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a9ba71f5a7fab91de359d3f357fe30c98">using_petsc_field_vector</a>)</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="../../d7/db3/fieldfunction__mapping_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;chi_physics::FieldFunction::GetCellDOFValues &quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;does not yet support petsc vectors.&quot;</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">auto</span> cell = <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a6b4b56651e03f46d0a1c0ca52f6d8015">grid</a>-&gt;<a class="code" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a128c3baa78ca094db239d8d0af4c5932">local_cells</a>[cell_local_id];</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> num_dofs = cell.vertex_ids.<a class="code" href="../../dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html#ab413fd681eed77b5aa5c7413d7233bcb">size</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a428fd0875de53c8c6c924a62d486343b">temp_cell_dof_values</a>.resize(num_dofs,0.0);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> block_map = (*local_cell_dof_array_address)[cell_local_id];</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dof=0; dof&lt;num_dofs; ++dof)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keywordtype">int</span> ir = block_map + dof*<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a03daf59ab3b96f8ad6b3b0aaaab7f557">num_components</a>*<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a15795e20d7551ccae27c7fb803a15fcf">num_sets</a> +</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;               <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a03daf59ab3b96f8ad6b3b0aaaab7f557">num_components</a> * set + component;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a428fd0875de53c8c6c924a62d486343b">temp_cell_dof_values</a>[dof] = (*field_vector_local)[ir];</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a428fd0875de53c8c6c924a62d486343b">temp_cell_dof_values</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d50/fv_8h.html">ChiMath/SpatialDiscretization/FiniteVolume/fv.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d01/pwl_8h.html">ChiMath/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwl.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/dfa/pwlc_8h.html">ChiMath/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwlc.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../d7/db3/fieldfunction__mapping_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/**Computes mappings of cell-local id to unknown vector index.*/</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../df/de9/classchi__physics_1_1_field_function.html#a4902be7b45a6812f29e667c19c0ee0c9">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a4902be7b45a6812f29e667c19c0ee0c9">chi_physics::FieldFunction::</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a4902be7b45a6812f29e667c19c0ee0c9">  CreateFVMappingLocal</a>(std::vector&lt;std::pair&lt;uint64_t,uint&gt;&gt;&amp; cell_component_pairs,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                       std::vector&lt;uint64_t&gt;&amp; mapping)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">auto</span>&amp; sdm    = <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a41a85444905665638fdadbd66b824cb6">spatial_discretization</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">if</span> (sdm-&gt;type != chi_math::SpatialDiscretizationType::FINITE_VOLUME)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">throw</span> std::invalid_argument(std::string(__PRETTY_FUNCTION__) +</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                <span class="stringliteral">&quot; Field function spatial&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                <span class="stringliteral">&quot; discretization is not of type &quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                <span class="stringliteral">&quot; FINITE_VOLUME.&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">auto</span> sdm_fv = std::static_pointer_cast&lt;SpatialDiscretization_FV&gt;(sdm);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell_index_component_pair : cell_component_pairs)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    uint64_t cell_local_index = cell_index_component_pair.first;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> component    = cell_index_component_pair.second;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">auto</span>&amp; cell = <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#ac01efa055c239381c32d6aa8ac5b0768">grid</a>-&gt;local_cells[cell_local_index];</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> address = sdm_fv-&gt;MapDOFLocal(cell,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                      <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a9a5c1e5580af3e7a1a1a533166d657d2">unknown_manager</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                      <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#ad1967ba7fb71bdcbdfaa39e23ab4fd32">ref_variable</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                      component);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    mapping.push_back(address);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/** Creates a mapping from a global vector */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../df/de9/classchi__physics_1_1_field_function.html#a003a5a3efe6bd18daf9ee5af39206f74">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a003a5a3efe6bd18daf9ee5af39206f74">chi_physics::FieldFunction::</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a003a5a3efe6bd18daf9ee5af39206f74">CreateCFEMMappingLocal</a>(Vec&amp; x_mapped,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                       std::vector&lt;std::tuple&lt;uint64_t,uint,uint&gt;&gt;&amp; cell_node_component_tuples,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                       std::vector&lt;uint64_t&gt;&amp; mapping)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span> (spatial_discretization-&gt;type !=</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      chi_math::SpatialDiscretizationType::PIECEWISE_LINEAR_CONTINUOUS)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">throw</span> std::invalid_argument(std::string(__PRETTY_FUNCTION__) +</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                <span class="stringliteral">&quot; Field function spatial&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                <span class="stringliteral">&quot; discretization is not of type &quot;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                <span class="stringliteral">&quot; PIECEWISE_LINEAR_CONTINUOUS.&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">auto</span> pwl_sdm = std::static_pointer_cast&lt;SpatialDiscretization_PWLC&gt;(spatial_discretization);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">size_t</span> num_nodes_to_map = cell_node_component_tuples.size();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  std::vector&lt;int&gt; mapped_nodes;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> n=0; n&lt; num_nodes_to_map; n++)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">auto</span>&amp;    data             = cell_node_component_tuples[n];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    uint64_t cell_local_index = std::get&lt;0&gt;(data);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    uint     node_number      = std::get&lt;1&gt;(data);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    uint     component_number = std::get&lt;2&gt;(data);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> ir = pwl_sdm-&gt;MapDOF(grid-&gt;local_cells[cell_local_index],</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                             node_number,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                             unknown_manager,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                             ref_variable,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                             component_number);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    mapped_nodes.push_back(ir);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    mapping.push_back(n);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  Vec x = *field_vector;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  VecCreateSeq(PETSC_COMM_SELF,mapped_nodes.size()+1,&amp;x_mapped);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  VecSet(x_mapped, 0.0);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  std::vector&lt;int&gt; int_mapping;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  std::copy(mapping.begin(),</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            mapping.end(),</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            std::back_inserter(int_mapping));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  IS global_set;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  IS local_set;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  ISCreateGeneral(PETSC_COMM_WORLD, num_nodes_to_map, mapped_nodes.data(),</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                  PETSC_COPY_VALUES,&amp;global_set);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  ISCreateGeneral(PETSC_COMM_WORLD, num_nodes_to_map, int_mapping.data(),</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                  PETSC_COPY_VALUES,&amp;local_set);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  VecScatter scat;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  VecScatterCreate(x, global_set, x_mapped, local_set, &amp;scat);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  VecScatterBegin(scat, x, x_mapped, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  VecScatterEnd(scat, x, x_mapped, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  ISDestroy(&amp;global_set);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  ISDestroy(&amp;local_set);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">/**Computes interpolated field function values.*/</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="../../df/de9/classchi__physics_1_1_field_function.html#a5047ee6c4fc0c7492c3b65619af3fdfc">  106</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a5047ee6c4fc0c7492c3b65619af3fdfc">chi_physics::FieldFunction::</a></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a5047ee6c4fc0c7492c3b65619af3fdfc">CreatePWLDMappingLocal</a>(</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  std::vector&lt;std::tuple&lt;uint64_t,uint,uint&gt;&gt;&amp; cell_node_component_tuples,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  std::vector&lt;uint64_t&gt;&amp; mapping)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">if</span> (spatial_discretization-&gt;type !=</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      chi_math::SpatialDiscretizationType::PIECEWISE_LINEAR_DISCONTINUOUS)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">throw</span> std::invalid_argument(std::string(__PRETTY_FUNCTION__) +</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                <span class="stringliteral">&quot; Field function spatial&quot;</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                <span class="stringliteral">&quot; discretization is not of type &quot;</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                <span class="stringliteral">&quot; PIECEWISE_LINEAR_DISCONTINUOUS.&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">auto</span> pwl_sdm = std::static_pointer_cast&lt;SpatialDiscretization_PWLD&gt;(spatial_discretization);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; data : cell_node_component_tuples)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    uint64_t cell_local_index = std::get&lt;0&gt;(data);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    uint     node_number      = std::get&lt;1&gt;(data);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    uint     component_number = std::get&lt;2&gt;(data);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">auto</span>&amp; cell = grid-&gt;local_cells[cell_local_index];</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">int</span> address = pwl_sdm-&gt;MapDOFLocal(cell,</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                       node_number,</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                                       unknown_manager,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                       ref_variable,</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                                       component_number);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    mapping.push_back(address);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  }<span class="comment">//for each tuple</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a41a85444905665638fdadbd66b824cb6"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a41a85444905665638fdadbd66b824cb6">chi_physics::FieldFunction::spatial_discretization</a></div><div class="ttdeci">std::shared_ptr&lt; SpatialDiscretization &gt; spatial_discretization</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00033">fieldfunction.h:33</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a9ba71f5a7fab91de359d3f357fe30c98"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a9ba71f5a7fab91de359d3f357fe30c98">chi_physics::FieldFunction::using_petsc_field_vector</a></div><div class="ttdeci">bool using_petsc_field_vector</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00054">fieldfunction.h:54</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a128c3baa78ca094db239d8d0af4c5932"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a128c3baa78ca094db239d8d0af4c5932">chi_mesh::MeshContinuum::local_cells</a></div><div class="ttdeci">LocalCells local_cells</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00098">chi_meshcontinuum.h:98</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_a5f227385fe906aad93de74eb1e756d64"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00029">chi_log.cc:29</a></div></div>
-<div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a></div><div class="ttdeci">@ LOG_ALLERROR</div><div class="ttdoc">Error for any location.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00017">chi_log.h:17</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a428fd0875de53c8c6c924a62d486343b"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a428fd0875de53c8c6c924a62d486343b">chi_physics::FieldFunction::temp_cell_dof_values</a></div><div class="ttdeci">std::vector&lt; double &gt; temp_cell_dof_values</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00057">fieldfunction.h:57</a></div></div>
-<div class="ttc" id="afieldfunction__mapping_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d7/db3/fieldfunction__mapping_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00023">chi_runtime.cc:23</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a03daf59ab3b96f8ad6b3b0aaaab7f557"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a03daf59ab3b96f8ad6b3b0aaaab7f557">chi_physics::FieldFunction::num_components</a></div><div class="ttdeci">int num_components</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00047">fieldfunction.h:47</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a003a5a3efe6bd18daf9ee5af39206f74"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a003a5a3efe6bd18daf9ee5af39206f74">chi_physics::FieldFunction::CreateCFEMMappingLocal</a></div><div class="ttdeci">void CreateCFEMMappingLocal(Vec &amp;x_mapped, std::vector&lt; std::tuple&lt; uint64_t, uint, uint &gt;&gt; &amp;cell_node_component_tuples, std::vector&lt; uint64_t &gt; &amp;mapping)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db3/fieldfunction__mapping_8cc_source.html#l00044">fieldfunction_mapping.cc:45</a></div></div>
+<div class="ttc" id="afv_8h_html"><div class="ttname"><a href="../../de/d50/fv_8h.html">fv.h</a></div></div>
+<div class="ttc" id="afieldfunction__mapping_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d7/db3/fieldfunction__mapping_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
+<div class="ttc" id="apwlc_8h_html"><div class="ttname"><a href="../../d3/dfa/pwlc_8h.html">pwlc.h</a></div></div>
 <div class="ttc" id="afieldfunction_8h_html"><div class="ttname"><a href="../../d1/db1/fieldfunction_8h.html">fieldfunction.h</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a9a5c1e5580af3e7a1a1a533166d657d2"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a9a5c1e5580af3e7a1a1a533166d657d2">chi_physics::FieldFunction::unknown_manager</a></div><div class="ttdeci">chi_math::UnknownManager unknown_manager</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00034">fieldfunction.h:34</a></div></div>
 <div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_1_1_local_cells_html_ab413fd681eed77b5aa5c7413d7233bcb"><div class="ttname"><a href="../../dc/d84/classchi__mesh_1_1_mesh_continuum_1_1_local_cells.html#ab413fd681eed77b5aa5c7413d7233bcb">chi_mesh::MeshContinuum::LocalCells::size</a></div><div class="ttdeci">size_t size()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00068">chi_meshcontinuum.h:68</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a6b4b56651e03f46d0a1c0ca52f6d8015"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a6b4b56651e03f46d0a1c0ca52f6d8015">chi_physics::FieldFunction::grid</a></div><div class="ttdeci">chi_mesh::MeshContinuum * grid</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00044">fieldfunction.h:44</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a15795e20d7551ccae27c7fb803a15fcf"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a15795e20d7551ccae27c7fb803a15fcf">chi_physics::FieldFunction::num_sets</a></div><div class="ttdeci">int num_sets</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00047">fieldfunction.h:47</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_field_function_html_abfd14df8c1244f7adcd9001c30292265"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#abfd14df8c1244f7adcd9001c30292265">chi_physics::FieldFunction::GetCellDOFValues</a></div><div class="ttdeci">std::vector&lt; double &gt; &amp; GetCellDOFValues(size_t cell_local_id, size_t component, size_t set)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db3/fieldfunction__mapping_8cc_source.html#l00008">fieldfunction_mapping.cc:9</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_field_function_html_ac01efa055c239381c32d6aa8ac5b0768"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#ac01efa055c239381c32d6aa8ac5b0768">chi_physics::FieldFunction::grid</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr grid</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00032">fieldfunction.h:32</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a4902be7b45a6812f29e667c19c0ee0c9"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a4902be7b45a6812f29e667c19c0ee0c9">chi_physics::FieldFunction::CreateFVMappingLocal</a></div><div class="ttdeci">void CreateFVMappingLocal(std::vector&lt; std::pair&lt; uint64_t, uint &gt;&gt; &amp;cell_component_pairs, std::vector&lt; uint64_t &gt; &amp;mapping)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db3/fieldfunction__mapping_8cc_source.html#l00012">fieldfunction_mapping.cc:13</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a5047ee6c4fc0c7492c3b65619af3fdfc"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a5047ee6c4fc0c7492c3b65619af3fdfc">chi_physics::FieldFunction::CreatePWLDMappingLocal</a></div><div class="ttdeci">void CreatePWLDMappingLocal(std::vector&lt; std::tuple&lt; uint64_t, uint, uint &gt;&gt; &amp;cell_node_component_tuples, std::vector&lt; uint64_t &gt; &amp;mapping)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db3/fieldfunction__mapping_8cc_source.html#l00106">fieldfunction_mapping.cc:107</a></div></div>
+<div class="ttc" id="apwl_8h_html"><div class="ttname"><a href="../../d4/d01/pwl_8h.html">pwl.h</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_field_function_html_ad1967ba7fb71bdcbdfaa39e23ab4fd32"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#ad1967ba7fb71bdcbdfaa39e23ab4fd32">chi_physics::FieldFunction::ref_variable</a></div><div class="ttdeci">const unsigned int ref_variable</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00036">fieldfunction.h:36</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_eec4d28110009ed62ffe54c00aea6a23.html">CHI_TECH</a></li><li class="navelem"><a class="el" href="../../dir_5b71995b7c749f54258bfeab247bf2b5.html">ChiPhysics</a></li><li class="navelem"><a class="el" href="../../dir_16c997e5857efb7537c2089d2a92cac5.html">FieldFunction</a></li><li class="navelem"><a class="el" href="../../d7/db3/fieldfunction__mapping_8cc.html">fieldfunction_mapping.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_881599471ceacbc6fd7f5107170a74cb.html">ChiTech</a></li><li class="navelem"><a class="el" href="../../dir_258e84e146fcb53e5484c5ffe0f5b2ba.html">ChiPhysics</a></li><li class="navelem"><a class="el" href="../../dir_cb7971c8aa713573f4c7346a23fd6b7f.html">FieldFunction</a></li><li class="navelem"><a class="el" href="../../d7/db3/fieldfunction__mapping_8cc.html">fieldfunction_mapping.cc</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.19 </li>
   </ul>
 </div>

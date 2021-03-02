@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: CHI_TECH/ChiGraph/chi_directed_graph.cc Source File</title>
+<title>Chi-Tech: ChiTech/ChiGraph/chi_directed_graph.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('d7/d0d/chi__directed__graph_8cc_source
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//=================================== Check &quot;from&quot; is in range</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">if</span> ((v&lt;0) || (v&gt;=vertices.size()))</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d7/d0d/chi__directed__graph_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc">LOG_ALL</a>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d7/d0d/chi__directed__graph_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc">LOG_ALL</a>)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;chi_graph::DirectedGraph::VertexAccessor: &quot;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;Error removing vertex &quot;</span> &lt;&lt; v;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    exit(EXIT_FAILURE);</div>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('d7/d0d/chi__directed__graph_8cc_source
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<a class="code" href="../../df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a4babb51c20aa20628ce84a543f464c44">  VertexAccessor::operator[]</a>(<span class="keywordtype">int</span> v)</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">if</span> (not vertex_valid_flags[v])</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="../../d7/d0d/chi__directed__graph_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="../../d7/d0d/chi__directed__graph_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;chi_graph::DirectedGraph::VertexAccessor: &quot;</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;         <span class="stringliteral">&quot;Invalid vertex accessed. Vertex may have been removed.&quot;</span>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">return</span> vertices[v];</div>
@@ -525,28 +525,162 @@ $(document).ready(function(){initNavTree('d7/d0d/chi__directed__graph_8cc_source
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  std::cout &lt;&lt; o.str();</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="comment">/**Clears all the data structures associated with the graph.*/</span></div>
-<div class="line"><a name="l00442"></a><span class="lineno"><a class="line" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a942bb553d4276b2eaa72dcf2a93141ce">  442</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a942bb553d4276b2eaa72dcf2a93141ce">chi_graph::DirectedGraph::Clear</a>()</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment">//###################################################################</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;std::vector&lt;std::pair&lt;int,int&gt;&gt;</div>
+<div class="line"><a name="l00442"></a><span class="lineno"><a class="line" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a954af4f6545458f748f63686042cbcbb">  442</a></span>&#160;<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a954af4f6545458f748f63686042cbcbb">chi_graph::DirectedGraph::RemoveCyclicDependencies</a>()</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;{</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  vertices.clear();</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;}</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="comment">/**Destructor.*/</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno"><a class="line" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a4c6432e48bbfd1617e6e4e1f19e937b7">  450</a></span>&#160;<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a4c6432e48bbfd1617e6e4e1f19e937b7">chi_graph::DirectedGraph::~DirectedGraph</a>()</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;{</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  Clear();</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;}</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  std::vector&lt;std::pair&lt;int,int&gt;&gt; edges_to_remove;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  <span class="comment">//============================================= Utility lambdas</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  <span class="keyword">auto</span> IsInList = [](std::vector&lt;int&gt;&amp; list, <span class="keywordtype">int</span> val)</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  {</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordflow">return</span> std::find(list.begin(),list.end(),val) != list.end();</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  };</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  <span class="comment">//============================================= Find initial SCCs</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  <span class="keyword">auto</span> SCCs = FindStronglyConnectedComponents();</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  <span class="keywordtype">int</span> iter=0;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  <span class="keywordflow">while</span> (not SCCs.empty())</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;  {</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d0d/chi__directed__graph_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#afcb7b450ad2435af94adeb545513c812">GetVerbosity</a>() &gt;= <a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e">LOG_0VERBOSE_2</a>)</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;      <a class="code" href="../../d7/d0d/chi__directed__graph_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc">LOG_ALL</a>)</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;Inter cell cyclic dependency removal. Iteration &quot;</span> &lt;&lt; ++iter;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="comment">//============================================= Remove bi-connected then</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="comment">//                                              tri-connected SCCs then</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="comment">//                                              n-connected</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; subDG : SCCs)</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    {</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;      <span class="comment">//====================================== If bi-connected</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;      <span class="keywordflow">if</span> (subDG.size()==2)</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;      {</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        RemoveEdge(subDG.front(), subDG.back());</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        edges_to_remove.emplace_back(subDG.front(), subDG.back());</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;      }<span class="comment">//bi-connected</span></div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="comment">//====================================== If tri-connected</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (subDG.size()==3)</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;      {</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        <span class="keywordtype">bool</span> found=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> u : subDG)</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        {</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v : vertices[u].ds_edge)</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;            <span class="keywordflow">if</span> (IsInList(subDG,v))</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;            {</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;              found=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;              RemoveEdge(u, v);</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;              edges_to_remove.emplace_back(u, v);</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;              <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;            }</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;          <span class="keywordflow">if</span> (found) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        }<span class="comment">//for u</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;      }<span class="comment">//tri-connected</span></div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        <span class="comment">//====================================== If n-connected</span></div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;      {</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        <span class="comment">//=============================== Add vertices to temporary graph</span></div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        <a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html">chi_graph::DirectedGraph</a> TG; <span class="comment">//Temp Graph</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> u : subDG)</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;          TG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a02f9e99e1f42762ab0c918eb7b2b6ce9">AddVertex</a>();</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160; </div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        <span class="comment">//=============================== Add local connectivity</span></div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="keywordtype">int</span> mapping_u = 0;</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> u : subDG)</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        {</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span> v : vertices[u].ds_edge)</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;          {</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;            <span class="keyword">auto</span> mapv = std::find(subDG.begin(),subDG.end(),v);</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            <span class="keywordflow">if</span> (mapv != subDG.end())</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            {</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;              <span class="keywordtype">int</span> mapping_v = mapv - subDG.begin();</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;              TG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#aca992bd50be71c88a3453c672e0085ac">AddEdge</a>(mapping_u,mapping_v,vertices[u].ds_weights[v]);</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;            }</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;          }<span class="comment">//for v</span></div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160; </div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;          ++mapping_u;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        }<span class="comment">//for u</span></div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160; </div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="comment">//=============================== Make a copy of the graph verts</span></div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        std::vector&lt;chi_graph::GraphVertex&gt; verts_copy;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        verts_copy.reserve(TG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802">vertices</a>.<a class="code" href="../../df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a0b5ff1abb2c3a9682033e6721d3364d5">size</a>());</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; v : TG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802">vertices</a>)</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;          verts_copy.push_back(v);</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160; </div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        <span class="comment">//=============================== Solve the minimum Feedback</span></div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        <span class="comment">//                                     Arc Set (FAS) problem</span></div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        <span class="keyword">auto</span> s = TG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ac7249a0d9869d73f19be4641db0c6866">FindApproxMinimumFAS</a>();</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160; </div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        <span class="comment">//========================== Build a sequence map</span></div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        <span class="comment">// This maps original sequence</span></div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        <span class="comment">// to minFAS sequence. i.e. originally</span></div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        <span class="comment">// we had v=0,1,2,3... and afterwards we</span></div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        <span class="comment">// something like s=7,3,1,5,0,....</span></div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        <span class="comment">// smap[v] then gives the position of v in s</span></div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        std::vector&lt;int&gt; smap(s.size(),-1);</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        <span class="keywordtype">int</span> count=0;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> u: s)</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;          smap[u] = count++;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        <span class="comment">//========================== Build edges to remove</span></div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        std::vector&lt;std::pair&lt;int,int&gt;&gt; edges_to_rem;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; u : verts_copy)</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        {</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;          <span class="keywordtype">int</span> cur_map = smap[u.id];</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v : u.ds_edge)</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;          {</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;            <span class="keywordtype">int</span> adj_map = smap[v];</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            <span class="keywordflow">if</span> (adj_map &lt; cur_map)</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;              edges_to_rem.emplace_back(u.id,v);</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;          }</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        }</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160; </div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; edge : edges_to_rem)</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        {</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;          <span class="keywordtype">int</span> u = subDG[edge.first];</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;          <span class="keywordtype">int</span> v = subDG[edge.second];</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;          RemoveEdge(u, v);</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;          edges_to_remove.emplace_back(u, v);</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;        }</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160; </div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;      }<span class="comment">//n-connected</span></div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    }<span class="comment">//for sub-DG</span></div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160; </div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160; </div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    <span class="comment">//============================================= Find SSCs again</span></div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    <span class="comment">// This step is like an insurance policy for if</span></div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="comment">// something came through. There should be no SSCs</span></div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="comment">// after the minFAS process, however, we just look</span></div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    <span class="comment">// again in-case.</span></div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    SCCs = FindStronglyConnectedComponents();</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;  }</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; </div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;  <span class="keywordflow">return</span> edges_to_remove;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;}</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160; </div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="comment">/**Clears all the data structures associated with the graph.*/</span></div>
+<div class="line"><a name="l00575"></a><span class="lineno"><a class="line" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a942bb553d4276b2eaa72dcf2a93141ce">  575</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a942bb553d4276b2eaa72dcf2a93141ce">chi_graph::DirectedGraph::Clear</a>()</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;{</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;  vertices.clear();</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;}</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160; </div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160; </div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;<span class="comment">/**Destructor.*/</span></div>
+<div class="line"><a name="l00583"></a><span class="lineno"><a class="line" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a4c6432e48bbfd1617e6e4e1f19e937b7">  583</a></span>&#160;<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a4c6432e48bbfd1617e6e4e1f19e937b7">chi_graph::DirectedGraph::~DirectedGraph</a>()</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;{</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;  Clear();</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_ad7c7822449f5266affd5da7bb5413e45"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ad7c7822449f5266affd5da7bb5413e45">chi_graph::DirectedGraph::RemoveVertex</a></div><div class="ttdeci">void RemoveVertex(int v)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00088">chi_directed_graph.cc:89</a></div></div>
+<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a954af4f6545458f748f63686042cbcbb"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a954af4f6545458f748f63686042cbcbb">chi_graph::DirectedGraph::RemoveCyclicDependencies</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; int, int &gt; &gt; RemoveCyclicDependencies()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00442">chi_directed_graph.cc:442</a></div></div>
 <div class="ttc" id="astructchi__graph_1_1_graph_vertex_html_a8d53d3c8e15977b728eb5d26200f1a1c"><div class="ttname"><a href="../../da/d1d/structchi__graph_1_1_graph_vertex.html#a8d53d3c8e15977b728eb5d26200f1a1c">chi_graph::GraphVertex::ds_edge</a></div><div class="ttdeci">std::set&lt; int &gt; ds_edge</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6a/chi__directed__graph__vertex_8h_source.html#l00016">chi_directed_graph_vertex.h:16</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_1_1_vertex_accessor_html_a4babb51c20aa20628ce84a543f464c44"><div class="ttname"><a href="../../df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a4babb51c20aa20628ce84a543f464c44">chi_graph::DirectedGraph::VertexAccessor::operator[]</a></div><div class="ttdeci">GraphVertex &amp; operator[](int v)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00065">chi_directed_graph.cc:66</a></div></div>
-<div class="ttc" id="achi__directed__graph_8cc_html_aff18523449a2997a122381af7ab97f4d"><div class="ttname"><a href="../../d7/d0d/chi__directed__graph_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a></div><div class="ttdeci">ChiMPI &amp; chi_mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00022">chi_runtime.cc:22</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_a5f227385fe906aad93de74eb1e756d64"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00029">chi_log.cc:29</a></div></div>
+<div class="ttc" id="achi__directed__graph_8cc_html_aff18523449a2997a122381af7ab97f4d"><div class="ttname"><a href="../../d7/d0d/chi__directed__graph_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a></div><div class="ttdeci">ChiMPI &amp; chi_mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00028">chi_runtime.cc:28</a></div></div>
+<div class="ttc" id="aclass_chi_log_html_afcb7b450ad2435af94adeb545513c812"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#afcb7b450ad2435af94adeb545513c812">ChiLog::GetVerbosity</a></div><div class="ttdeci">int GetVerbosity()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00150">chi_log.cc:150</a></div></div>
 <div class="ttc" id="astructchi__graph_1_1_graph_vertex_html"><div class="ttname"><a href="../../da/d1d/structchi__graph_1_1_graph_vertex.html">chi_graph::GraphVertex</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6a/chi__directed__graph__vertex_8h_source.html#l00010">chi_directed_graph_vertex.h:11</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a02f9e99e1f42762ab0c918eb7b2b6ce9"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a02f9e99e1f42762ab0c918eb7b2b6ce9">chi_graph::DirectedGraph::AddVertex</a></div><div class="ttdeci">void AddVertex(void *context=nullptr, int id=-1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00080">chi_directed_graph.cc:80</a></div></div>
 <div class="ttc" id="achi__directed__graph_8h_html"><div class="ttname"><a href="../../d4/d90/chi__directed__graph_8h.html">chi_directed_graph.h</a></div></div>
@@ -556,10 +690,12 @@ $(document).ready(function(){initNavTree('d7/d0d/chi__directed__graph_8cc_source
 <div class="ttc" id="astructchi__graph_1_1_graph_vertex_html_a5de56c1991799d648bef7a06a4972c11"><div class="ttname"><a href="../../da/d1d/structchi__graph_1_1_graph_vertex.html#a5de56c1991799d648bef7a06a4972c11">chi_graph::GraphVertex::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6a/chi__directed__graph__vertex_8h_source.html#l00012">chi_directed_graph_vertex.h:12</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_ada2b7f6df543842d51db282ce1faa406"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ada2b7f6df543842d51db282ce1faa406">chi_graph::DirectedGraph::PrintSubGraphviz</a></div><div class="ttdeci">void PrintSubGraphviz(const std::vector&lt; int &gt; &amp;verts_to_print, int location_mask=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00406">chi_directed_graph.cc:407</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_ac7249a0d9869d73f19be4641db0c6866"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ac7249a0d9869d73f19be4641db0c6866">chi_graph::DirectedGraph::FindApproxMinimumFAS</a></div><div class="ttdeci">std::vector&lt; int &gt; FindApproxMinimumFAS()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00303">chi_directed_graph.cc:304</a></div></div>
+<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html">chi_graph::DirectedGraph</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d90/chi__directed__graph_8h_source.html#l00011">chi_directed_graph.h:12</a></div></div>
 <div class="ttc" id="aclass_chi_m_p_i_html_ad65e6925a081cffee9ec7427fddfee8b"><div class="ttname"><a href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">ChiMPI::location_id</a></div><div class="ttdeci">int location_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/chi__mpi_8h_source.html#l00032">chi_mpi.h:32</a></div></div>
 <div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
-<div class="ttc" id="achi__directed__graph_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d7/d0d/chi__directed__graph_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00023">chi_runtime.cc:23</a></div></div>
+<div class="ttc" id="aclass_chi_log_html_ac2d1869abb6b7dd125a89ea20b977dbc"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00029">chi_log.cc:29</a></div></div>
+<div class="ttc" id="achi__directed__graph_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d7/d0d/chi__directed__graph_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
 <div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc">LOG_ALL</a></div><div class="ttdeci">@ LOG_ALL</div><div class="ttdoc">Verbose level 0 all locations.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00015">chi_log.h:15</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_ab0e0398e047ee06f485bb89247ee6802"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802">chi_graph::DirectedGraph::vertices</a></div><div class="ttdeci">VertexAccessor vertices</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d90/chi__directed__graph_8h_source.html#l00095">chi_directed_graph.h:95</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a16bc00eb96347eb25a58683e0669ceeb"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a16bc00eb96347eb25a58683e0669ceeb">chi_graph::DirectedGraph::DFSAlgorithm</a></div><div class="ttdeci">void DFSAlgorithm(std::vector&lt; int &gt; &amp;traversal, std::vector&lt; bool &gt; &amp;visited, int cur_vid)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00121">chi_directed_graph.cc:122</a></div></div>
@@ -569,16 +705,17 @@ $(document).ready(function(){initNavTree('d7/d0d/chi__directed__graph_8cc_source
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a5eda015771b74d0a31a677b92f366ab1"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a5eda015771b74d0a31a677b92f366ab1">chi_graph::DirectedGraph::PrintGraphviz</a></div><div class="ttdeci">void PrintGraphviz(int location_mask=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00377">chi_directed_graph.cc:377</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_ae4daaa9688f5c7ce2a3cb87035e05fa0"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ae4daaa9688f5c7ce2a3cb87035e05fa0">chi_graph::DirectedGraph::FindStronglyConnectedComponents</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; FindStronglyConnectedComponents()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00206">chi_directed_graph.cc:207</a></div></div>
 <div class="ttc" id="astructchi__graph_1_1_graph_vertex_html_a8929f14fc517b794bb4640f1ec03f650"><div class="ttname"><a href="../../da/d1d/structchi__graph_1_1_graph_vertex.html#a8929f14fc517b794bb4640f1ec03f650">chi_graph::GraphVertex::us_edge</a></div><div class="ttdeci">std::set&lt; int &gt; us_edge</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6a/chi__directed__graph__vertex_8h_source.html#l00015">chi_directed_graph_vertex.h:15</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a942bb553d4276b2eaa72dcf2a93141ce"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a942bb553d4276b2eaa72dcf2a93141ce">chi_graph::DirectedGraph::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00442">chi_directed_graph.cc:442</a></div></div>
+<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a942bb553d4276b2eaa72dcf2a93141ce"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a942bb553d4276b2eaa72dcf2a93141ce">chi_graph::DirectedGraph::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00575">chi_directed_graph.cc:575</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_1_1_vertex_accessor_html_a282ed31382b3ab22bef04741f0cca046"><div class="ttname"><a href="../../df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a282ed31382b3ab22bef04741f0cca046">chi_graph::DirectedGraph::VertexAccessor::RemoveVertex</a></div><div class="ttdeci">void RemoveVertex(int v)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00027">chi_directed_graph.cc:28</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a1e2427f67632a420e7849ee3004efe46"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a1e2427f67632a420e7849ee3004efe46">chi_graph::DirectedGraph::RemoveEdge</a></div><div class="ttdeci">void RemoveEdge(int from, int to)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00111">chi_directed_graph.cc:111</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a8c43ab2f4fddf350f02d93342b54b187"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a8c43ab2f4fddf350f02d93342b54b187">chi_graph::DirectedGraph::GenerateTopologicalSort</a></div><div class="ttdeci">std::vector&lt; int &gt; GenerateTopologicalSort()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00239">chi_directed_graph.cc:239</a></div></div>
+<div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e">LOG_0VERBOSE_2</a></div><div class="ttdeci">@ LOG_0VERBOSE_2</div><div class="ttdoc">Used only if verbosity level equals 2.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00014">chi_log.h:14</a></div></div>
 <div class="ttc" id="aclass_chi_m_p_i_html"><div class="ttname"><a href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/chi__mpi_8h_source.html#l00029">chi_mpi.h:30</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a4c6432e48bbfd1617e6e4e1f19e937b7"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a4c6432e48bbfd1617e6e4e1f19e937b7">chi_graph::DirectedGraph::~DirectedGraph</a></div><div class="ttdeci">~DirectedGraph()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00450">chi_directed_graph.cc:450</a></div></div>
+<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a4c6432e48bbfd1617e6e4e1f19e937b7"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a4c6432e48bbfd1617e6e4e1f19e937b7">chi_graph::DirectedGraph::~DirectedGraph</a></div><div class="ttdeci">~DirectedGraph()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00583">chi_directed_graph.cc:583</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_eec4d28110009ed62ffe54c00aea6a23.html">CHI_TECH</a></li><li class="navelem"><a class="el" href="../../dir_943723001db8b0defb25837fd135cadb.html">ChiGraph</a></li><li class="navelem"><a class="el" href="../../d7/d0d/chi__directed__graph_8cc.html">chi_directed_graph.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_881599471ceacbc6fd7f5107170a74cb.html">ChiTech</a></li><li class="navelem"><a class="el" href="../../dir_99afb48a394876214987dac0079f1807.html">ChiGraph</a></li><li class="navelem"><a class="el" href="../../d7/d0d/chi__directed__graph_8cc.html">chi_directed_graph.cc</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.19 </li>
   </ul>
 </div>

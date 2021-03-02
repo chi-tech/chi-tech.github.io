@@ -2,13 +2,9 @@ var unknown__manager_8h =
 [
     [ "UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html", "d9/da7/classchi__math_1_1_unknown_manager" ],
     [ "Unknown", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown" ],
-    [ "ScalarUnknown", "d1/dbb/classchi__math_1_1_unknown_manager_1_1_scalar_unknown.html", "d1/dbb/classchi__math_1_1_unknown_manager_1_1_scalar_unknown" ],
-    [ "Vector2Unknown", "d3/d0d/classchi__math_1_1_unknown_manager_1_1_vector2_unknown.html", "d3/d0d/classchi__math_1_1_unknown_manager_1_1_vector2_unknown" ],
-    [ "Vector3Unknown", "d4/dc0/classchi__math_1_1_unknown_manager_1_1_vector3_unknown.html", "d4/dc0/classchi__math_1_1_unknown_manager_1_1_vector3_unknown" ],
-    [ "VectorNUnknown", "d8/d6d/classchi__math_1_1_unknown_manager_1_1_vector_n_unknown.html", "d8/d6d/classchi__math_1_1_unknown_manager_1_1_vector_n_unknown" ],
-    [ "DOFStorageType", "d6/d3b/unknown__manager_8h.html#aa4d14dccd92db660290242a7519ebb6c", [
-      [ "NODAL", "d6/d3b/unknown__manager_8h.html#aa4d14dccd92db660290242a7519ebb6cad0a56035f3937389f4e549d396da1805", null ],
-      [ "BLOCK", "d6/d3b/unknown__manager_8h.html#aa4d14dccd92db660290242a7519ebb6ca4d34f53389ed7f28ca91fc31ea360a66", null ]
+    [ "UnknownStorageType", "d6/d3b/unknown__manager_8h.html#a863c3eb4ef311ca7cd86c5e26f89f44c", [
+      [ "NODAL", "d6/d3b/unknown__manager_8h.html#a863c3eb4ef311ca7cd86c5e26f89f44cad0a56035f3937389f4e549d396da1805", null ],
+      [ "BLOCK", "d6/d3b/unknown__manager_8h.html#a863c3eb4ef311ca7cd86c5e26f89f44ca4d34f53389ed7f28ca91fc31ea360a66", null ]
     ] ],
     [ "UnknownType", "d6/d3b/unknown__manager_8h.html#ad4724873fa5ae74b39c4657aa4f53d1d", [
       [ "SCALAR", "d6/d3b/unknown__manager_8h.html#ad4724873fa5ae74b39c4657aa4f53d1da8f3d9a4b6a7b7f2c7afa61ca113d0db9", null ],

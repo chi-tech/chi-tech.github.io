@@ -105,34 +105,7 @@ Lua-wrapper functions have no real arguments other than the lua-state and always
 <li>If you use the <code>param</code> tag then it must be on its own line. The variable name is followed by an indication of the type of the variable and then by the description of the parameter. <em>This gets used in the documentation script to generate the input reference</em>.</li>
 <li>The closing comment must be an asterisk forward slash. Like * / but without the space which was necessary to show it in this document. And must be on its own line.</li>
 </ul>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;ChiLua/chi_lua.h&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/dcb/chi__mesh_8h.html">ChiMesh/chi_mesh.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d98/chi__meshhandler_8h.html">ChiMesh/MeshHandler/chi_meshhandler.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">ChiMesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../da/d0e/petsc__utils_8h.html">ChiMath/PETScUtils/petsc_utils.h</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../d3/dd3/chi__runtime_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
-<div class="line"><span class="keyword">extern</span> <a class="code" href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a>&amp; <a class="code" href="../../d3/dd3/chi__runtime_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><span class="comment">/**This is a lua test function.</span></div>
-<div class="line"><span class="comment">\param argument1 Any Argument of any type.</span></div>
-<div class="line"><span class="comment">\ingroup LuaGeneralUtilities</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keywordtype">int</span> <a class="code" href="../../d1/d85/group___lua_general_utilities.html#ga09eae924251d1d159fdc16b378cdfecc">chiLuaTest</a>(lua_State* L)</div>
-<div class="line">{</div>
-<div class="line">  <a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> a(1.0,1.0,1.0);</div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">//  a = a + 2.0;</span></div>
-<div class="line"> </div>
-<div class="line">  <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --><h2>Step 3: Add it to the lua-register</h2>
+<div class="fragment"></div><!-- fragment --><h2>Step 3: Add it to the lua-register</h2>
 <p>In the project directory go to the file <code>CHI_TECH/ChiLua/chi_lua_register.h</code> and add a <code>RegisterFunction</code> call to the register, registering the lua function call to be connected with the lua console. <em>Without out this call the wrapper will not be callable from lua.</em> <br  />
 <br  />
 If you would like for the function call to be listed under a category then proceed the <code>RegisterFunction</code> call with a comment starting exactly with <code>//module:</code> which will create a module with text matching the text following this piece. <br  />
@@ -145,13 +118,13 @@ The module tabulation in the manual and the documentation for the parameters wil
 <div class="fragment"><div class="line"> .</div>
 <div class="line"> .</div>
 <div class="line"> .</div>
-<div class="line">RegisterFunction(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga165566f609ac8098f3ebb356cf71cf1e">chiLBSGroupsetSetGroupSubsets</a>)</div>
-<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga2a564e9bf5d242298862b84b4202aa4a">chiLBSGroupsetSetIterativeMethod</a>)</div>
-<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaee8fa9ea897058b7c22fb64d2e2a53c4">chiLBSGroupsetSetResidualTolerance</a>)</div>
-<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaab6c348508a33b17a779862605afa6c0">chiLBSGroupsetSetMaxIterations</a>)</div>
-<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaec6b3fcece2e9ff00cd4d216fb3cbe66">chiLBSGroupsetSetGMRESRestartIntvl</a>)</div>
-<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga92e2e2734da988f93638c53d253ece30">chiLBSGroupsetSetWGDSA</a>)</div>
-<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#gadd3fce4dc1756565f2490882c3e67e36">chiLBSGroupsetSetTGDSA</a>)</div>
+<div class="line">RegisterFunction(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga3ecc5749d9f5c76b76b5d872ef54b7d2">chiLBSGroupsetSetGroupSubsets</a>)</div>
+<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaa8c0e0360cc6cd8bd7bf368c344602a9">chiLBSGroupsetSetIterativeMethod</a>)</div>
+<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga9a29a0026cb3e2aecd233d83f1835f6b">chiLBSGroupsetSetResidualTolerance</a>)</div>
+<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaf435464dc04748638931c4b256bbc93e">chiLBSGroupsetSetMaxIterations</a>)</div>
+<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga8c335027a743ba1a64e18d2f7b95145c">chiLBSGroupsetSetGMRESRestartIntvl</a>)</div>
+<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaad403f6ded2da1fb869c2df01b9e7f2d">chiLBSGroupsetSetWGDSA</a>)</div>
+<div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaf08024ea4c413d55464144d354b21ca8">chiLBSGroupsetSetTGDSA</a>)</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//module:Test scripts</span></div>
 <div class="line"><a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(<a class="code" href="../../d1/d85/group___lua_general_utilities.html#ga09eae924251d1d159fdc16b378cdfecc">chiLuaTest</a>)</div>
@@ -162,7 +135,7 @@ The module tabulation in the manual and the documentation for the parameters wil
 <div class="line"> .</div>
 <div class="line">Add_Folder(<span class="stringliteral">&quot;../../Modules/MonteCarlon/lua&quot;</span>)</div>
 <div class="line">Add_Folder(<span class="stringliteral">&quot;../../Modules/DiffusionSolver/lua&quot;</span>)</div>
-<div class="line">Add_Folder(&quot;../../Modules/LinearBoltzmanSolver/lua&quot;)</div>
+<div class="line">Add_Folder(&quot;../../Modules/LinearBoltzmannSolver/lua&quot;)</div>
 <div class="line"> </div>
 <div class="line">Add_Folder(&quot;../LuaTest&quot;)</div>
 </div><!-- fragment --><h2>Final step: Test it!!</h2>
@@ -171,26 +144,15 @@ The module tabulation in the manual and the documentation for the parameters wil
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_gaab6c348508a33b17a779862605afa6c0"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaab6c348508a33b17a779862605afa6c0">chi_lua::chiLBSGroupsetSetMaxIterations</a></div><div class="ttdeci">int chiLBSGroupsetSetMaxIterations(int SolverIndex, int GroupsetIndex, int Numiter)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01592">lua_functions.c:1592</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_ga165566f609ac8098f3ebb356cf71cf1e"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga165566f609ac8098f3ebb356cf71cf1e">chi_lua::chiLBSGroupsetSetGroupSubsets</a></div><div class="ttdeci">int chiLBSGroupsetSetGroupSubsets(int SolverIndex, int GroupsetIndex, int NumDiv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01533">lua_functions.c:1533</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_gadd3fce4dc1756565f2490882c3e67e36"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#gadd3fce4dc1756565f2490882c3e67e36">chi_lua::chiLBSGroupsetSetTGDSA</a></div><div class="ttdeci">int chiLBSGroupsetSetTGDSA(int SolverIndex, int GroupsetIndex, int MaxIters, float ResTol, bool Verbose, char PETSCString)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01674">lua_functions.c:1674</a></div></div>
-<div class="ttc" id="agroup___lua_general_utilities_html_ga09eae924251d1d159fdc16b378cdfecc"><div class="ttname"><a href="../../d1/d85/group___lua_general_utilities.html#ga09eae924251d1d159fdc16b378cdfecc">chi_lua::chiLuaTest</a></div><div class="ttdeci">int chiLuaTest(Any argument1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01732">lua_functions.c:1732</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_gaee8fa9ea897058b7c22fb64d2e2a53c4"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaee8fa9ea897058b7c22fb64d2e2a53c4">chi_lua::chiLBSGroupsetSetResidualTolerance</a></div><div class="ttdeci">int chiLBSGroupsetSetResidualTolerance(int SolverIndex, int GroupsetIndex, float ResidualTol)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01577">lua_functions.c:1577</a></div></div>
-<div class="ttc" id="achi__meshhandler_8h_html"><div class="ttname"><a href="../../df/d98/chi__meshhandler_8h.html">chi_meshhandler.h</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_ga92e2e2734da988f93638c53d253ece30"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga92e2e2734da988f93638c53d253ece30">chi_lua::chiLBSGroupsetSetWGDSA</a></div><div class="ttdeci">int chiLBSGroupsetSetWGDSA(int SolverIndex, int GroupsetIndex, int MaxIters, float ResTol, bool Verbose, char PETSCString)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01648">lua_functions.c:1648</a></div></div>
-<div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_ga2a564e9bf5d242298862b84b4202aa4a"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga2a564e9bf5d242298862b84b4202aa4a">chi_lua::chiLBSGroupsetSetIterativeMethod</a></div><div class="ttdeci">int chiLBSGroupsetSetIterativeMethod(int SolverIndex, int GroupsetIndex, int IterativeMethod)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01559">lua_functions.c:1559</a></div></div>
+<div class="ttc" id="agroup___lua_general_utilities_html_ga09eae924251d1d159fdc16b378cdfecc"><div class="ttname"><a href="../../d1/d85/group___lua_general_utilities.html#ga09eae924251d1d159fdc16b378cdfecc">chi_lua::chiLuaTest</a></div><div class="ttdeci">int chiLuaTest(Any argument1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01645">lua_functions.c:1645</a></div></div>
 <div class="ttc" id="alua__register_8txt_html_a3c11846e61db5cc62fad5bad66797ea8"><div class="ttname"><a href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a></div><div class="ttdeci">#define RegisterFunction(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbe/lua__register_8txt_source.html#l00001">lua_register.txt:1</a></div></div>
-<div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
-<div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
-<div class="ttc" id="apetsc__utils_8h_html"><div class="ttname"><a href="../../da/d0e/petsc__utils_8h.html">petsc_utils.h</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_gaec6b3fcece2e9ff00cd4d216fb3cbe66"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaec6b3fcece2e9ff00cd4d216fb3cbe66">chi_lua::chiLBSGroupsetSetGMRESRestartIntvl</a></div><div class="ttdeci">int chiLBSGroupsetSetGMRESRestartIntvl(int SolverIndex, int GroupsetIndex, int Intvl)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01607">lua_functions.c:1607</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00011">chi_meshvector.h:12</a></div></div>
-<div class="ttc" id="achi__runtime_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d3/dd3/chi__runtime_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00023">chi_runtime.cc:23</a></div></div>
-<div class="ttc" id="achi__runtime_8cc_html_aff18523449a2997a122381af7ab97f4d"><div class="ttname"><a href="../../d3/dd3/chi__runtime_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a></div><div class="ttdeci">ChiMPI &amp; chi_mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00022">chi_runtime.cc:22</a></div></div>
-<div class="ttc" id="achi__mesh_8h_html"><div class="ttname"><a href="../../d3/dcb/chi__mesh_8h.html">chi_mesh.h</a></div></div>
-<div class="ttc" id="aclass_chi_m_p_i_html"><div class="ttname"><a href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/chi__mpi_8h_source.html#l00029">chi_mpi.h:30</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_gaf08024ea4c413d55464144d354b21ca8"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaf08024ea4c413d55464144d354b21ca8">chiLBSGroupsetSetTGDSA</a></div><div class="ttdeci">int chiLBSGroupsetSetTGDSA(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/lbs__groupset__ops_8cc_source.html#l01243">lbs_groupset_ops.cc:1243</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_ga8c335027a743ba1a64e18d2f7b95145c"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga8c335027a743ba1a64e18d2f7b95145c">chiLBSGroupsetSetGMRESRestartIntvl</a></div><div class="ttdeci">int chiLBSGroupsetSetGMRESRestartIntvl(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/lbs__groupset__ops_8cc_source.html#l00959">lbs_groupset_ops.cc:959</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_gaa8c0e0360cc6cd8bd7bf368c344602a9"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaa8c0e0360cc6cd8bd7bf368c344602a9">chiLBSGroupsetSetIterativeMethod</a></div><div class="ttdeci">int chiLBSGroupsetSetIterativeMethod(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/lbs__groupset__ops_8cc_source.html#l00685">lbs_groupset_ops.cc:685</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_ga9a29a0026cb3e2aecd233d83f1835f6b"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga9a29a0026cb3e2aecd233d83f1835f6b">chiLBSGroupsetSetResidualTolerance</a></div><div class="ttdeci">int chiLBSGroupsetSetResidualTolerance(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/lbs__groupset__ops_8cc_source.html#l00786">lbs_groupset_ops.cc:786</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_ga3ecc5749d9f5c76b76b5d872ef54b7d2"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga3ecc5749d9f5c76b76b5d872ef54b7d2">chiLBSGroupsetSetGroupSubsets</a></div><div class="ttdeci">int chiLBSGroupsetSetGroupSubsets(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/lbs__groupset__ops_8cc_source.html#l00585">lbs_groupset_ops.cc:585</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_gaf435464dc04748638931c4b256bbc93e"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaf435464dc04748638931c4b256bbc93e">chiLBSGroupsetSetMaxIterations</a></div><div class="ttdeci">int chiLBSGroupsetSetMaxIterations(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/lbs__groupset__ops_8cc_source.html#l00874">lbs_groupset_ops.cc:874</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_groupsets_html_gaad403f6ded2da1fb869c2df01b9e7f2d"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaad403f6ded2da1fb869c2df01b9e7f2d">chiLBSGroupsetSetWGDSA</a></div><div class="ttdeci">int chiLBSGroupsetSetWGDSA(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/lbs__groupset__ops_8cc_source.html#l01136">lbs_groupset_ops.cc:1136</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

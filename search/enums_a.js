@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quadraturepointoptimization_4551',['QuadraturePointOptimization',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ab4833fb33e746caf98bb8c79c6353807',1,'chi_math::SimplifiedLDFESQ::Quadrature']]]
+  ['unknownstoragetype_4824',['UnknownStorageType',['../dc/d58/namespacechi__math.html#a863c3eb4ef311ca7cd86c5e26f89f44c',1,'chi_math']]],
+  ['unknowntype_4825',['UnknownType',['../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1d',1,'chi_math']]]
 ];

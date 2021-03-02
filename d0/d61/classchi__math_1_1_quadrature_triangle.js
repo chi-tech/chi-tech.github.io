@@ -1,6 +1,6 @@
 var classchi__math_1_1_quadrature_triangle =
 [
-    [ "QuadratureTriangle", "d0/d61/classchi__math_1_1_quadrature_triangle.html#a42a266ece17dd16623e9090960e1eee1", null ],
-    [ "qpoints", "d0/d61/classchi__math_1_1_quadrature_triangle.html#a56170b96156db66ff3ee7a946e482ae0", null ],
-    [ "weights", "d0/d61/classchi__math_1_1_quadrature_triangle.html#a7e7f2bc387e9aa80b3c5e50729b1c44d", null ]
+    [ "QuadratureTriangle", "d0/d61/classchi__math_1_1_quadrature_triangle.html#ae50c0da1a94308f941ecea6ba665a5ce", null ],
+    [ "dunavant_rule", "d0/d61/classchi__math_1_1_quadrature_triangle.html#a5aef0ffa7724849e1309d76bb3cb1f7c", null ],
+    [ "dunavant_rule2", "d0/d61/classchi__math_1_1_quadrature_triangle.html#a0104e7ab0a7cf27b7e293340652ce306", null ]
 ];

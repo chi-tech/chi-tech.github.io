@@ -5,12 +5,7 @@ var cell_8h =
     [ "CellType", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9", [
       [ "GHOST", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a30047325d9201304e95ffb83105002de", null ],
       [ "SLAB", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9ad1360da3ac37ed5c02244bbe2ef9a34e", null ],
-      [ "SPHERICAL_SHELL", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a761ba3e5a682400bcd184b5253451ce5", null ],
-      [ "CYLINDRICAL_ANNULUS", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9afbc189a832c010dfb1332a4466d61aef", null ],
-      [ "TRIANGLE", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a9bcd89070cae224dce305f5011659ef4", null ],
-      [ "QUADRILATERAL", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9ac9736a37691f2901057c38a5490dc10c", null ],
       [ "POLYGON", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9aecdc92bf56d960b73b02ee40125758bc", null ],
-      [ "TETRAHEDRON", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a921725623efcb888f85a941eb29906a9", null ],
       [ "HEXAHEDRON", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a8efa397d080e415a2a4b45794abc1f76", null ],
       [ "POLYHEDRON", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74", null ]
     ] ]

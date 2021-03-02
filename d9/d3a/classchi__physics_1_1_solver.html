@@ -97,8 +97,9 @@ Inheritance diagram for chi_physics::Solver:</div>
  <div class="center">
   <img src="../../d9/d3a/classchi__physics_1_1_solver.png" usemap="#chi_5Fphysics::Solver_map" alt=""/>
   <map id="chi_5Fphysics::Solver_map" name="chi_5Fphysics::Solver_map">
-<area href="../../d6/d32/classchi__diffusion_1_1_solver.html" alt="chi_diffusion::Solver" shape="rect" coords="0,56,141,80"/>
-<area href="../../d7/d26/class_linear_boltzman_1_1_solver.html" alt="LinearBoltzman::Solver" shape="rect" coords="151,56,292,80"/>
+<area href="../../d6/d32/classchi__diffusion_1_1_solver.html" alt="chi_diffusion::Solver" shape="rect" coords="0,56,225,80"/>
+<area href="../../d2/dc1/class_linear_boltzmann_1_1_solver.html" alt="LinearBoltzmann::Solver" shape="rect" coords="235,56,460,80"/>
+<area href="../../d5/dd1/class_linear_boltzmann_1_1_k_eigenvalue_1_1_solver.html" alt="LinearBoltzmann::KEigenvalue::Solver" shape="rect" coords="235,112,460,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -115,8 +116,8 @@ Public Member Functions</h2></td></tr>
 Data Fields</h2></td></tr>
 <tr class="memitem:a1e88bba35bb5b67908a64fe5944db62a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a1e88bba35bb5b67908a64fe5944db62a">regions</a></td></tr>
 <tr class="separator:a1e88bba35bb5b67908a64fe5944db62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ded02d6ec7130e202279b12d3b8292"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ae1ded02d6ec7130e202279b12d3b8292">field_functions</a></td></tr>
-<tr class="separator:ae1ded02d6ec7130e202279b12d3b8292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89e44b9876d6f1158a5f53f29822a1f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">FieldFunction</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ad89e44b9876d6f1158a5f53f29822a1f">field_functions</a></td></tr>
+<tr class="separator:ad89e44b9876d6f1158a5f53f29822a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -145,7 +146,7 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d7/d26/class_linear_boltzman_1_1_solver.html#aead2a1b11bc5d49b81e685f2292ffbdd">LinearBoltzman::Solver</a>, and <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2de514bc22f33a4f896f9e2a94a6602c">chi_diffusion::Solver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d2/dc1/class_linear_boltzmann_1_1_solver.html#aa92852f843a89938093b3e1b61cd0006">LinearBoltzmann::Solver</a>, and <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2de514bc22f33a4f896f9e2a94a6602c">chi_diffusion::Solver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00021">21</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
 
@@ -196,21 +197,21 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d7/d26/class_linear_boltzman_1_1_solver.html#a83fddcd4cab9075d6e7cde5d553f33d6">LinearBoltzman::Solver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d2/dc1/class_linear_boltzmann_1_1_solver.html#aa393816cd5341d41048d333ea6a81969">LinearBoltzmann::Solver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d68/chi__solver__02__execute_8cc_source.html#l00003">3</a> of file <a class="el" href="../../dd/d68/chi__solver__02__execute_8cc_source.html">chi_solver_02_execute.cc</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
-<a id="ae1ded02d6ec7130e202279b12d3b8292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1ded02d6ec7130e202279b12d3b8292">&#9670;&nbsp;</a></span>field_functions</h2>
+<a id="ad89e44b9876d6f1158a5f53f29822a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad89e44b9876d6f1158a5f53f29822a1f">&#9670;&nbsp;</a></span>field_functions</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a>*&gt; chi_physics::Solver::field_functions</td>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">FieldFunction</a>&gt; &gt; chi_physics::Solver::field_functions</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -236,9 +237,9 @@ Data Fields</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>CHI_TECH/ChiPhysics/SolverBase/<a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a></li>
-<li>CHI_TECH/ChiPhysics/SolverBase/<a class="el" href="../../da/d87/chi__solver__01__addregion_8cc_source.html">chi_solver_01_addregion.cc</a></li>
-<li>CHI_TECH/ChiPhysics/SolverBase/<a class="el" href="../../dd/d68/chi__solver__02__execute_8cc_source.html">chi_solver_02_execute.cc</a></li>
+<li>ChiTech/ChiPhysics/SolverBase/<a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a></li>
+<li>ChiTech/ChiPhysics/SolverBase/<a class="el" href="../../da/d87/chi__solver__01__addregion_8cc_source.html">chi_solver_01_addregion.cc</a></li>
+<li>ChiTech/ChiPhysics/SolverBase/<a class="el" href="../../dd/d68/chi__solver__02__execute_8cc_source.html">chi_solver_02_execute.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['vecdbl_4531',['VecDbl',['../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94',1,'chi_math.h']]],
-  ['vector2_4532',['Vector2',['../dc/d58/namespacechi__math.html#ad508803f470a20022affdd2f4f368d55',1,'chi_math']]],
-  ['vector3_4533',['Vector3',['../dc/d58/namespacechi__math.html#ae9d5df571cd219e6731bcd6d74c85af4',1,'chi_math']]],
-  ['vectorn_4534',['VectorN',['../dc/d58/namespacechi__math.html#aa5aea498ade77491eb487f5603c3c9d7',1,'chi_math']]],
-  ['vertex_4535',['Vertex',['../d0/d81/namespacechi__mesh.html#ae80ecc182d386ac8201fb3330f6ae52c',1,'chi_mesh']]]
+  ['u_5fll_5fint_4796',['u_ll_int',['../d9/d11/sweepbuffer_8h.html#a13c0d9c8c925922a27cee81b356ad14d',1,'sweepbuffer.h']]],
+  ['uidata_4797',['UIData',['../d9/dd4/class_spatial_discretization___p_w_l_d.html#a215bd9dc829d08d9df8c9397eb290219',1,'SpatialDiscretization_PWLD::UIData()'],['../d2/d19/class_spatial_discretization___f_e.html#a47f96d3efcf5adeefa9648a658a531b4',1,'SpatialDiscretization_FE::UIData()']]]
 ];

@@ -1052,102 +1052,13 @@ block contains all the nodes but only a single unknown. Multiblock addressing is
 
 
 
-\newpage
-\section{CFEM verification}
-This section establishes a suite of test cases to verify the accurate implementation of the CFEM method. For each dimension we will restrict the domain $r \in [-1,1]$.
-
-\subsection{Slab 1D}
-Consider the one dimensional problem
-
-\begin{equation*}
--\frac{\partial}{\partial x} \frac{\partial \phi}{\partial x} = 1 \quad \quad \forall x \in [-1,1]
-\end{equation*}
-
-We will apply different boundary conditions to test the implementation.
-
-\subsubsection{Dirichlet boundary conditions}
-We now consider the problem
-
-\begin{equation*}
-\begin{aligned}
--\frac{\partial}{\partial x} \frac{\partial \phi}{\partial x} = 1 \quad \quad \forall x \in [-1,1] \\
-\phi(-1) = 1 \quad \quad \text{on } \partial \bOmega \\
-\phi(1) = 1 \quad \quad \text{on } \partial \bOmega
-\end{aligned}
-\end{equation*}
-
-which has the analytical solution
-
-\begin{equation*}
-\begin{aligned}
-\phi(x) = -\frac{1}{2}x^2 + \frac{3}{2} \\
-\end{aligned}
-\end{equation*}
-
-A comparison of the solutions is shown in Figure \ref{fig:Diffusion1a}. The comparison looks good.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\linewidth]{Figures/Diffusion1a}
-\caption{Comparison of CFEM solution to analytical solution.}
-\label{fig:Diffusion1a}
-\end{figure}
-
-\subsubsection{Reflecting boundary condition}
-Implementing a reflecting boundary condition cannot involve both boundaries being reflecting or else the system will be indeterminite. Therefore we will take the previous analytical solution and attempt to simulate the right half.
-
-\begin{equation*}
-\begin{aligned}
--\frac{\partial}{\partial x} \frac{\partial \phi}{\partial x} = 1 \quad \quad \forall x \in [-1,1] \\
-\frac{\partial \phi}{\partial x}\biggr |_{x=0} = 0 \quad \quad \text{on } \partial \bOmega \\
-\phi(1) = 1 \quad \quad \text{on } \partial \bOmega
-\end{aligned}
-\end{equation*}
-
-The analytical solution is still
-
-\begin{equation*}
-\begin{aligned}
-\phi(x) = -\frac{1}{2}x^2 + \frac{3}{2} \\
-\end{aligned}
-\end{equation*}
-
-The results are shown in Figure \ref{fig:Diffusion1b} below.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\linewidth]{Figures/Diffusion1b}
-\caption{Comparison of CFEM solution to analytical solution using a reflecting boundary.}
-\label{fig:Diffusion1b}
-\end{figure}
-
-\subsubsection{Vacuum boundary conditions}
-For vacuum boundary conditions we deal with the following
-
-\begin{equation*}
-\begin{aligned}
--\frac{\partial}{\partial x} \frac{\partial \phi}{\partial x} = 1 \quad \quad \forall x \in [-1,1] \\
-\frac{1}{4}\phi + \frac{1}{2}D \hat{n} \cdot \frac{\partial \phi}{\partial x} = 0 \quad \quad \text{on } \partial \bOmega \\
-\end{aligned}
-\end{equation*}
-
-The results are shown in Figure \ref{fig:Diffusion1c}.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\linewidth]{Figures/Diffusion1c}
-\caption{Comparison of CFEM solution to analytical solution using vacuum boundary conditions.}
-\label{fig:Diffusion1c}
-\end{figure}
 
 \newpage
-\chead{DFEM}
-\section{Modified Interior Penalty}
+\chead{Discontinuous Finite Element Method}
+\section{Discontinuous Finite Element Method}
 Instead of a Continuous Finite Element Method (CFEM) discretization, 
 where the solution is defined on nodes, the Discontinuous Finite Element
-Method (DFEM) stores values per cell. More specifically, using Piecewise
-Linear (PWL) basis functions and trial functions, defines the solution per cell 
-node. The complication with using this formulation is then that the 
+Method (DFEM) stores values per cell-nodes. The complication with using this formulation is then that the 
 connectivity between cells is not as easy to determine as it was for 
 CFEM discretization.
 
@@ -1221,84 +1132,20 @@ Part A then becomes
 \end{aligned}
 \end{equation*}
 Now, for simplicity let us replace $\kappa^{MIP}$ with $K$ and only focus on the terms inside
-the integral, part A now becomes
+the integral (removing the integral notations), part A now becomes
 
 \begin{equation}
 \begin{aligned}
 &\quad \kappa^{MIP} \llbracket b_j \rrbracket,\llbracket b_i \rrbracket \\ 
 &= K (b_j^+ - b_j^-)(b_i^+ - b_i^-) \\
 &= K (b_i^+ - b_i^-) b_j^+ - K (b_i^+ - b_i^-) b_j^-  \\
-&= K (b_i^+ - b_i^-) b_j^+ \quad + \Aboxed{K (b_i^- - b_i^+) b_j^-} .
+&= K \bigr[ b_i^+b_j^+ - b_i^-b_j^+ - b_i^+b_j^- + b_i^-b_j^- \bigr] \\
+&= K \bigr[ - b_i^-b_j^+ + b_i^+b_j^+  - b_i^+b_j^- + b_i^-b_j^- \bigr] \\
+&= K( - b_i^-b_j^+ + b_i^+b_j^+) \quad + \Aboxed{K(- b_i^+b_j^- + b_i^-b_j^-)}.
 \end{aligned}
 \end{equation}
-\newline 
-The assembly of the interface terms into the matrix is a very complicated
- process. Each interface has to update each cell belonging to the 
- interface. This is further complicated by the nominal way in which the
- matrix is normally assembled, i.e. cell-by-cell. Fortunately, some 
- symmetry exists within the different parts as can be seen in part A above.
- The boxed portion in the above code is symmetric to the unboxed portion
- with respect to the cell with a negative sense to the face. In other words
- if we loop cell by cell and only execute the boxed portion, this will be
- equivalent to looping over the interfaces and updating both sides.
-
-Given we computed $K$ we can now calculate the following on the interface
-based on our current cell location ($cell^-$)
-
-\begin{equation}
-\begin{aligned}
-& \quad (\kappa^{MIP} \llbracket b_j \rrbracket,\llbracket b_i \rrbracket)_{E_h^i} \\
-&\text{for }i,j \text{ on current cell}\\
-&\text{for }i^* \text{ on adjacent cell}\\
-a_{i_rj_r} &= \biggr[ \kappa^{MIP} \int_{S_f} b_i.b_j.dA \biggr]_{cur-cell}\\
-a_{i_r^*j_r} &= \biggr[ -\kappa^{MIP} \int_{S_f} b_{i^*}.b_j.dA \biggr]_{adj-cell},
-\end{aligned}
-\end{equation}
-
-where $i_r$ and $j_r$ refers to the global matrix row and columns as 
-mapped from the local matrices. The coding implementation for this is 
-shown on the next page.
 \newline
-\newline
-The implementation features a primary loop over trial space $i$ followed by a 
-secondary loop over basis functions $j$. Since we are dealing only with the 
-shape functions we loop over face dofs and map the face DOFs to cell DOFs using
-the data \textbf{edge\_dof\_mappings}, developed during FE initialization. We
-also use the ``interior penalty"-view of the cell to determine the matrix row
-($ir$) corresponding to this cell's DOF-$i$. Since we are dealing with $b_i^*$ 
-we also have to determine $i_r^*$, and hence we determine $i_{map}$ which is the
-adjacent cell's DOF-$i$ index that corresponds to the current cell's DOF-$i$. 
-The mapping of $i_{map}$ is then used with the adjacent cell's 
-``interior penalty''-view to map to $i_r^*$. A similar procedure is applied to
-the $b_j$ components but this time we are not dealing with indices on the adjacent
-cell and therefore only $j_r$ is mapped. The values are inserted into global
-matrix using PETSc's \textbf{MatSetValue} which need not refer to local values 
-only.
-\vspace{0.5cm}
-\begin{lstlisting}[language=c++]
-//========================= Assemble penalty terms
-for (int fi=0; fi<num_face_dofs; fi++)
-{
-	int i  = fe_view->edge_dof_mappings[f][fi];
-	int ir = cell_ip_view->MapDof(i);
-
-	//Mapping face index to adj-cell
-	int imap = MapCellDof(adj_cell,poly_cell->edges[f][fi]);
-	int irstar = adj_ip_view->MapDof(imap);
-
-	for (int fj=0; fj<2; fj++)
-	{
-		int j  = fe_view->edge_dof_mappings[f][fj];
-		int jr = cell_ip_view->MapDof(j);
-
-		double aij = kappa*fe_view->IntS_shapeI_shapeJ[f][i][j];
-
-		MatSetValue(A,ir    ,jr, aij,ADD_VALUES);
-		MatSetValue(A,irstar,jr,-aij,ADD_VALUES);
-	}//for fj
-
-}//for fi
-\end{lstlisting}
+Here we can see that, if the sign of the superscipts of the blocked terms are flipped, then the blocked terms would be the same as the unblocked terms. This allows the local cell to only assemble one half of the equation (i.e., the blocked part).
 
 \vspace{0.5cm}
 \subsection{Part B}
@@ -1313,17 +1160,13 @@ Let us now expand the terms inside the integral
 \begin{equation*}
 \begin{aligned}
  &\llbracket b_j \rrbracket,\ldblbrace D \partial_n b_i \rdblbrace \\
- &= \frac{1}{2}\biggr(b_j^+ - b_j^-\biggr)\biggr(D^+\hat{n}\cdot\nabla b_i^+ + D^-\hat{n}\cdot\nabla b_i^-\biggr)\\
-  &=\frac{1}{2}\biggr(D^+\hat{n}\cdot\nabla b_i^+ + D^-\hat{n}\cdot\nabla b_i^- \biggr)b_j^+
-  - \frac{1}{2}\biggr(D^+\hat{n}\cdot\nabla b_i^+ + D^-\hat{n}\cdot\nabla b_i^- \biggr)b_j^-\\
- &=\frac{1}{2}\biggr(D^+\hat{n}\cdot\nabla b_i^+ + D^-\hat{n}\cdot\nabla b_i^-\biggr)b_j^+
- \Aboxed{
- - \frac{1}{2}\biggr(D^+\hat{n}\cdot\nabla b_i^+ + D^-\hat{n}\cdot\nabla b_i^-\biggr)b_j^-}
+ &= \frac{1}{2}D\biggr(b_j^+ - b_j^-\biggr)\biggr(\hat{n}^-\cdot\nabla b_i^+ + \hat{n}^-\cdot\nabla b_i^-\biggr)\\
+ &=\frac{1}{2}D\biggr( b_j^+ - b_j^- \biggr) \hat{n}^-\cdot\nabla b_i^+ \quad
+  + \quad \Aboxed{\frac{1}{2}D\biggr( b_j^+ - b_j^- \biggr) \hat{n}^-\cdot\nabla b_i^-} 
 \end{aligned}
 \end{equation*}
 \newline
 The blocked term in this equation is symmetric to the non-blocked terms with respect to the current cell and the adjacent cell. In other words, the normal ($\hat{n}$) in the blocked portion is with respect to the current cell ($cell^-$). When we flip the sign of all the $\pm$ denotations and set $\hat{n} = -\hat{n}$ then we obtain the non-blocked terms.
-Some of the terms in the blocked portions can be combined with others so let us defer showing the code for that for now and proceed to part C.
 
 \subsection{Part C}
 Part C is
@@ -1338,164 +1181,14 @@ Let us now expand the terms inside the integral
 \begin{aligned}
  &\ldblbrace D \partial_n b_j \rdblbrace,\llbracket b_i \rrbracket \\
  &= \frac{1}{2}\biggr(b_i^+ - b_i^-\biggr)\biggr(D^+\hat{n}\cdot\nabla b_j^+ + D^-\hat{n}\cdot\nabla b_j^-\biggr)\\
- &= \frac{1}{2}\biggr(D^+\hat{n}\cdot\nabla b_j^+ + D^-\hat{n}\cdot\nabla b_j^-\biggr)b_i^+
-- \frac{1}{2}\biggr(D^+\hat{n}\cdot\nabla b_j^+ + D^-\hat{n}\cdot\nabla b_j^-\biggr)b_i^-\\
- &= \frac{1}{2}\biggr(D^+\hat{n}\cdot\nabla b_j^+ + D^-\hat{n}\cdot\nabla b_j^-\biggr)b_i^+
- \Aboxed{
-- \frac{1}{2}\biggr(D^+\hat{n}\cdot\nabla b_j^+ + D^-\hat{n}\cdot\nabla b_j^-\biggr)b_i^-}
+  &=\frac{1}{2}D\biggr( b_i^+ - b_i^- \biggr) \hat{n}^-\cdot\nabla b_j^+ \quad
+   + \quad \Aboxed{\frac{1}{2}D\biggr( b_i^+ - b_i^- \biggr) \hat{n}^-\cdot\nabla b_j^-} 
 \end{aligned}
 \end{equation*}
 \newline
 Again the same symmetry applies as with part B (i.e. flipping the denotations and the signs on the normals).
 
-\subsection{Assembling B and C}
-We first look at the blocked parts of B and C together
 
-\begin{equation*}
-\begin{aligned}
- &\Aboxed{
-  - \frac{1}{2}\biggr(D^+\hat{n}\cdot\nabla b_i^+ + D^-\hat{n}\cdot\nabla b_i^-\biggr)b_j^-} \quad
- \Aboxed{
-- \frac{1}{2}\biggr(D^+\hat{n}\cdot\nabla b_j^+ + D^-\hat{n}\cdot\nabla b_j^-\biggr)b_i^-}\\
-\end{aligned}
-\end{equation*}
-
-\begin{equation*}
-\begin{aligned}
-&=
-- \frac{1}{2} b_j^- D^+\hat{n}\cdot\nabla b_i^+ \quad
-- \frac{1}{2} b_j^- D^-\hat{n}\cdot\nabla b_i^- \quad
-- \frac{1}{2} b_i^- D^+\hat{n}\cdot\nabla b_j^+ \quad
-- \frac{1}{2} b_i^- D^-\hat{n}\cdot\nabla b_j^- 
-\end{aligned}
-\end{equation*}
-\newline
-We now reshuffle the terms here after first noting that the second and last terms are the transpose of each other as well as the first and third.
-
-\begin{equation*}
-\begin{aligned}
-&=
-- \frac{1}{2} b_j^- D^-\hat{n}\cdot\nabla b_i^- \quad
-- \frac{1}{2} b_i^- D^-\hat{n}\cdot\nabla b_j^- \quad
-- \frac{1}{2} b_j^- D^+\hat{n}\cdot\nabla b_i^+ \quad
-- \frac{1}{2} b_i^- D^+\hat{n}\cdot\nabla b_j^+ 
-\end{aligned}
-\end{equation*}
-\newline
-We now reintroduce the surface integrals
-
-\begin{equation*}
-\begin{aligned}
-&\int_f \biggr[
-- \frac{1}{2} b_j^- D^-\hat{n}\cdot\nabla b_i^- \quad
-- \frac{1}{2} b_i^- D^-\hat{n}\cdot\nabla b_j^- \quad
-- \frac{1}{2} b_j^- D^+\hat{n}\cdot\nabla b_i^+ \quad
-- \frac{1}{2} b_i^- D^+\hat{n}\cdot\nabla b_j^+ 
-\biggr].dA \\
-&=- \frac{1}{2} D^-\hat{n} \cdot \int_f \biggr(
-b_j^- \cdot\nabla b_i^- +
-b_i^- \cdot\nabla b_j^-
-\biggr).dA \quad
-- \frac{1}{2} D^+\hat{n}\cdot  \int_f \biggr(
-b_j^- \cdot\nabla b_i^+
-\biggr).dA \quad
-- \frac{1}{2} D^+\hat{n}\cdot  \int_f \biggr(
-b_i^- \cdot\nabla b_j^+
-\biggr).dA
-\end{aligned}
-\end{equation*}
-\newline
-Theoretically the two right hand integrals could have been lumped in a similar fashion to the left-most integral, however, this segregation proved useful for efficiency in the looping structure with minimal mapping. We therefore have the following three equations to implement
-
-\begin{equation}
-a_{i_r,j_r} = 
-- \frac{1}{2} D^-\hat{n} \cdot \int_f \biggr(
-b_j^- \cdot\nabla b_i^- +
-b_i^- \cdot\nabla b_j^-
-\biggr).dA
-\end{equation}
-
-\begin{equation}
-a_{i_r^*,j_r} = 
-- \frac{1}{2} D^+\hat{n}\cdot  \int_f \biggr(
-b_j^- \cdot\nabla b_i^+
-\biggr).dA
-\end{equation}
-
-\begin{equation}
-a_{i_r,j_r^*} = 
-- \frac{1}{2} D^+\hat{n}\cdot  \int_f \biggr(
-b_i^- \cdot\nabla b_j^+
-\biggr).dA
-\end{equation}
-\newline
-The coding implementation is shown below:
-
-\vspace{0.5cm}
-\begin{lstlisting}[language=c++]
-// -Di^- bj^- and
-// -Dj^- bi^-
-for (int i=0; i<fe_view->dofs; i++)
-{
-  int ir = cell_ip_view->MapDof(i);
-
-  for (int j=0; j<fe_view->dofs; j++)
-  {
-    int jr = cell_ip_view->MapDof(j);
-
-    double gij =
-      n.Dot(fe_view->IntS_shapeI_gradshapeJ[f][i][j] +
-            fe_view->IntS_shapeI_gradshapeJ[f][j][i]);
-    double aij = -0.5*diffCoeff*gij;
-
-    MatSetValue(A,ir,jr,aij,ADD_VALUES);
-  }//for j
-}//for i
-\end{lstlisting}
-
-\vspace{0.25cm}
-\begin{lstlisting}[language=c++]
-// - Di^+ bj^-
-for (int imap=0; imap<adj_fe_view->dofs; imap++)
-{
-  int irmap = adj_ip_view->MapDof(imap);
-
-  for (int fj=0; fj<num_face_dofs; fj++)
-  {
-    int jmap  = MapCellDof(adj_cell,poly_cell->edges[f][fj]);
-    int j     = MapCellDof(poly_cell,poly_cell->edges[f][fj]);
-    int jr    = cell_ip_view->MapDof(j);
-
-    double gij =
-      n.Dot(adj_fe_view->IntS_shapeI_gradshapeJ[fmap][jmap][imap]);
-    double aij = -0.5*diffCoeff*gij;
-
-    MatSetValue(A,irmap,jr,aij,ADD_VALUES);
-  }//for j
-}//for i
-\end{lstlisting}
-
-\vspace{0.25cm}
-\begin{lstlisting}[language=c++]
-// - Dj^+ bi^-
-for (int jmap=0; jmap<adj_fe_view->dofs; jmap++)
-{
-  int jrmap = adj_ip_view->MapDof(jmap);
-
-  for (int fi=0; fi<num_face_dofs; fi++)
-  {
-    int imap  = MapCellDof(adj_cell,poly_cell->edges[f][fi]);
-    int i     = MapCellDof(poly_cell,poly_cell->edges[f][fi]);
-    int ir    = cell_ip_view->MapDof(i);
-
-    double gij =
-      n.Dot(adj_fe_view->IntS_shapeI_gradshapeJ[fmap][imap][jmap]);
-    double aij = -0.5*diffCoeff*gij;
-
-    MatSetValue(A,ir,jrmap,aij,ADD_VALUES);
-  }//for j
-}//for i
-\end{lstlisting}
 
 \newpage
 \chead{References}

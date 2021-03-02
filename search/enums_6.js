@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['geometrytype_4545',['GeometryType',['../d4/dfe/namespace_linear_boltzman.html#a94e1e79a9f3cb565b5ec6f4e4ec23c26',1,'LinearBoltzman']]]
+  ['operationtype_4813',['OperationType',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95',1,'chi_physics']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: CHI_TECH/ChiMesh/SweepUtilities/remove_local_cyclicdep.cc Source File</title>
+<title>Chi-Tech: ChiTech/ChiMesh/SweepUtilities/remove_local_cyclicdep.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -88,219 +88,49 @@ $(document).ready(function(){initNavTree('d7/d45/remove__local__cyclicdep_8cc_so
 <div class="contents">
 <a href="../../d7/d45/remove__local__cyclicdep_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../chi_mesh.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d06/_s_p_d_s_8h.html">ChiMesh/SweepUtilities/SPDS/SPDS.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d90/chi__directed__graph_8h.html">ChiGraph/chi_directed_graph.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a>&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a>&amp; <a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d37/sweep__namespace_8h.html">ChiMesh/SweepUtilities/sweep_namespace.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d06/_s_p_d_s_8h.html">ChiMesh/SweepUtilities/SPDS/SPDS.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d90/chi__directed__graph_8h.html">ChiGraph/chi_directed_graph.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a>&amp; <a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/**Removes local cyclic dependencies.*/</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#ab64608bc0fae5ba8cd89133394a5d2e0">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#ab64608bc0fae5ba8cd89133394a5d2e0">chi_mesh::sweep_management::</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#ab64608bc0fae5ba8cd89133394a5d2e0">  RemoveLocalCyclicDependencies</a>(<a class="code" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">chi_mesh::sweep_management::SPDS</a> *sweep_order,</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a08330bb9af1d916d059a549af0982ee8">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a08330bb9af1d916d059a549af0982ee8">chi_mesh::sweep_management::</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a08330bb9af1d916d059a549af0982ee8">  RemoveLocalCyclicDependencies</a>(std::shared_ptr&lt;SPDS&gt; sweep_order,</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                <a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html">chi_graph::DirectedGraph</a> &amp;local_DG)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">//============================================= Utility lambdas</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">auto</span> IsInList = [](std::vector&lt;int&gt;&amp; list, <span class="keywordtype">int</span> val)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> std::find(list.begin(),list.end(),val) != list.end();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  };</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">//============================================= Find initial SCCs</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">auto</span> SCCs = local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ae4daaa9688f5c7ce2a3cb87035e05fa0">FindStronglyConnectedComponents</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="comment">//============================================= Remove bi-connected then</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">//                                              tri-connected SCCs then</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//                                              n-connected</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; subDG : SCCs)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (subDG.size()==2)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a1e2427f67632a420e7849ee3004efe46">RemoveEdge</a>(subDG.front(), subDG.back());</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      sweep_order-&gt;<a class="code" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a154f1425c56df2fc2a523af3ea1ac8d8">local_cyclic_dependencies</a>.emplace_back(</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        subDG.front(),</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        subDG.back());</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#afcb7b450ad2435af94adeb545513c812">GetVerbosity</a>() &gt;= <a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e">LOG_0VERBOSE_2</a>)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc">LOG_ALL</a>)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          &lt;&lt; <span class="stringliteral">&quot;Bi-connected component removed: &quot;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;          &lt;&lt; subDG.front() &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          &lt;&lt; subDG.back();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }<span class="comment">//bi-connected</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (subDG.size()==3)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordtype">bool</span> found=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> u : subDG)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v : local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802">vertices</a>[u].ds_edge)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          <span class="keywordflow">if</span> (IsInList(subDG,v))</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;          {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            found=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a1e2427f67632a420e7849ee3004efe46">RemoveEdge</a>(u, v);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            sweep_order-&gt;<a class="code" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a154f1425c56df2fc2a523af3ea1ac8d8">local_cyclic_dependencies</a>.emplace_back(u, v);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#afcb7b450ad2435af94adeb545513c812">GetVerbosity</a>() &gt;= <a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e">LOG_0VERBOSE_2</a>)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;              <a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc">LOG_ALL</a>)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                &lt;&lt; <span class="stringliteral">&quot;Tri-connected component removed: &quot;</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                &lt;&lt; u &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span> &lt;&lt; v;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;          }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (found) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      }<span class="comment">//for u</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }<span class="comment">//tri-connected</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="comment">//==================================== Add vertices to temporary graph</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html">chi_graph::DirectedGraph</a> TG; <span class="comment">//Temp Graph</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> u : subDG)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        TG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a02f9e99e1f42762ab0c918eb7b2b6ce9">AddVertex</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="comment">//==================================== Add local connectivity</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordtype">int</span> mapping_u = 0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> u : subDG)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> v : local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802">vertices</a>[u].ds_edge)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;          <span class="keyword">auto</span> mapv = std::find(subDG.begin(),subDG.end(),v);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;          <span class="keywordflow">if</span> (mapv != subDG.end())</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordtype">int</span> mapping_v = mapv - subDG.begin();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            TG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#aca992bd50be71c88a3453c672e0085ac">AddEdge</a>(mapping_u,mapping_v,local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802">vertices</a>[u].ds_weights[v]);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;          }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }<span class="comment">//for v</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        ++mapping_u;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      }<span class="comment">//for u</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="comment">//==================================== Make a copy of the graph verts</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      std::vector&lt;chi_graph::GraphVertex&gt; verts_copy;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      verts_copy.reserve(TG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802">vertices</a>.<a class="code" href="../../df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a0b5ff1abb2c3a9682033e6721d3364d5">size</a>());</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; v : TG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802">vertices</a>)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        verts_copy.push_back(v);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="comment">//==================================== Solve the minimum Feedback</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="comment">//                                     Arc Set (FAS) problem</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keyword">auto</span> s = TG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ac7249a0d9869d73f19be4641db0c6866">FindApproxMinimumFAS</a>();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="comment">//========================== Build a sequence map</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="comment">// This maps original sequence</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="comment">// to minFAS sequence. i.e. originally</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="comment">// we had v=0,1,2,3... and afterwards we</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="comment">// something like s=7,3,1,5,0,....</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="comment">// smap[v] then gives the position of v in s</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      std::vector&lt;int&gt; smap(s.size(),-1);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordtype">int</span> count=0;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> u: s)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        smap[u] = count++;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="comment">//========================== Build edges to remove</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      std::vector&lt;std::pair&lt;int,int&gt;&gt; edges_to_rem;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; u : verts_copy)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">int</span> cur_map = smap[u.id];</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v : u.ds_edge)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;          <span class="keywordtype">int</span> adj_map = smap[v];</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;          <span class="keywordflow">if</span> (adj_map &lt; cur_map)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            edges_to_rem.emplace_back(u.id,v);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; edge : edges_to_rem)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">int</span> u = subDG[edge.first];</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">int</span> v = subDG[edge.second];</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a1e2427f67632a420e7849ee3004efe46">RemoveEdge</a>(u, v);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        sweep_order-&gt;<a class="code" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a154f1425c56df2fc2a523af3ea1ac8d8">local_cyclic_dependencies</a>.emplace_back(u, v);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#afcb7b450ad2435af94adeb545513c812">GetVerbosity</a>() &gt;= <a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e">LOG_0VERBOSE_2</a>)</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;          <a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc">LOG_ALL</a>)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Removing edge &quot;</span> &lt;&lt; u &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; v;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }<span class="comment">//n-connected</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  }<span class="comment">//for sub-DG</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="comment">//============================================= Find SSCs again</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="comment">// This step is like an insurance policy for if</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="comment">// something came through. There should be no SSCs</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="comment">// after the minFAS process, however, we just look</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="comment">// again in-case.</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  SCCs = local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ae4daaa9688f5c7ce2a3cb87035e05fa0">FindStronglyConnectedComponents</a>();</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="comment">//============================================= Rinse remove edges</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  std::vector&lt;std::pair&lt;int,int&gt;&gt; edges_to_remove;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">int</span> iter=0;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">while</span> (not SCCs.empty())</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#afcb7b450ad2435af94adeb545513c812">GetVerbosity</a>() &gt;= <a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e">LOG_0VERBOSE_2</a>)</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <a class="code" href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc">LOG_ALL</a>)</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;Inter cell cyclic dependency removal. Iteration &quot;</span> &lt;&lt; ++iter;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">//=================================== Loop over sub-graphs</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    edges_to_remove.clear();</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; subDG : SCCs)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="comment">//Identify edges to remove</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordtype">bool</span> found_edge_to_remove = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v : subDG)</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> w : local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802">vertices</a>[v].ds_edge)</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;          <span class="keywordflow">if</span> (std::find(subDG.begin(), subDG.end(), w) != subDG.end())</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;          {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            found_edge_to_remove = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            edges_to_remove.emplace_back(v,w);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;          }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (found_edge_to_remove) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      }<span class="comment">//for v in subDG</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }<span class="comment">//for subDG</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">//Remove the edges</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; edge_to_remove : edges_to_remove)</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a1e2427f67632a420e7849ee3004efe46">RemoveEdge</a>(edge_to_remove.first, edge_to_remove.second);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      sweep_order-&gt;<a class="code" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a154f1425c56df2fc2a523af3ea1ac8d8">local_cyclic_dependencies</a>.emplace_back(</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        edge_to_remove.first,</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        edge_to_remove.second);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="comment">// Refind SCCs</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    SCCs = local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ae4daaa9688f5c7ce2a3cb87035e05fa0">FindStronglyConnectedComponents</a>();</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  }</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">auto</span> edges_to_remove = local_DG.<a class="code" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a954af4f6545458f748f63686042cbcbb">RemoveCyclicDependencies</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; edge_to_remove : edges_to_remove)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    sweep_order-&gt;local_cyclic_dependencies.emplace_back(</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      edge_to_remove.first,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      edge_to_remove.second);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a954af4f6545458f748f63686042cbcbb"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a954af4f6545458f748f63686042cbcbb">chi_graph::DirectedGraph::RemoveCyclicDependencies</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; int, int &gt; &gt; RemoveCyclicDependencies()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00442">chi_directed_graph.cc:442</a></div></div>
 <div class="ttc" id="a_s_p_d_s_8h_html"><div class="ttname"><a href="../../db/d06/_s_p_d_s_8h.html">SPDS.h</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
-<div class="ttc" id="anamespacechi__mesh_1_1sweep__management_html_ab64608bc0fae5ba8cd89133394a5d2e0"><div class="ttname"><a href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#ab64608bc0fae5ba8cd89133394a5d2e0">chi_mesh::sweep_management::RemoveLocalCyclicDependencies</a></div><div class="ttdeci">void RemoveLocalCyclicDependencies(chi_mesh::sweep_management::SPDS *sweep_order, chi_graph::DirectedGraph &amp;local_DG)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d45/remove__local__cyclicdep_8cc_source.html#l00015">remove_local_cyclicdep.cc:16</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_afcb7b450ad2435af94adeb545513c812"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#afcb7b450ad2435af94adeb545513c812">ChiLog::GetVerbosity</a></div><div class="ttdeci">int GetVerbosity()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00150">chi_log.cc:150</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_a5f227385fe906aad93de74eb1e756d64"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00029">chi_log.cc:29</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a02f9e99e1f42762ab0c918eb7b2b6ce9"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a02f9e99e1f42762ab0c918eb7b2b6ce9">chi_graph::DirectedGraph::AddVertex</a></div><div class="ttdeci">void AddVertex(void *context=nullptr, int id=-1)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00080">chi_directed_graph.cc:80</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_1_1sweep__management_html_a08330bb9af1d916d059a549af0982ee8"><div class="ttname"><a href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a08330bb9af1d916d059a549af0982ee8">chi_mesh::sweep_management::RemoveLocalCyclicDependencies</a></div><div class="ttdeci">void RemoveLocalCyclicDependencies(std::shared_ptr&lt; SPDS &gt; sweep_order, chi_graph::DirectedGraph &amp;local_DG)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d45/remove__local__cyclicdep_8cc_source.html#l00015">remove_local_cyclicdep.cc:16</a></div></div>
 <div class="ttc" id="achi__directed__graph_8h_html"><div class="ttname"><a href="../../d4/d90/chi__directed__graph_8h.html">chi_directed_graph.h</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_1_1_vertex_accessor_html_a0b5ff1abb2c3a9682033e6721d3364d5"><div class="ttname"><a href="../../df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a0b5ff1abb2c3a9682033e6721d3364d5">chi_graph::DirectedGraph::VertexAccessor::size</a></div><div class="ttdeci">size_t size()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d90/chi__directed__graph_8h_source.html#l00080">chi_directed_graph.h:80</a></div></div>
-<div class="ttc" id="aremove__local__cyclicdep_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00023">chi_runtime.cc:23</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_ac7249a0d9869d73f19be4641db0c6866"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ac7249a0d9869d73f19be4641db0c6866">chi_graph::DirectedGraph::FindApproxMinimumFAS</a></div><div class="ttdeci">std::vector&lt; int &gt; FindApproxMinimumFAS()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00303">chi_directed_graph.cc:304</a></div></div>
+<div class="ttc" id="aremove__local__cyclicdep_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d7/d45/remove__local__cyclicdep_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
 <div class="ttc" id="aclasschi__graph_1_1_directed_graph_html"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html">chi_graph::DirectedGraph</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d90/chi__directed__graph_8h_source.html#l00011">chi_directed_graph.h:12</a></div></div>
 <div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
-<div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc">LOG_ALL</a></div><div class="ttdeci">@ LOG_ALL</div><div class="ttdoc">Verbose level 0 all locations.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00015">chi_log.h:15</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1sweep__management_1_1_s_p_d_s_html"><div class="ttname"><a href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">chi_mesh::sweep_management::SPDS</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d06/_s_p_d_s_8h_source.html#l00008">SPDS.h:9</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_ab0e0398e047ee06f485bb89247ee6802"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802">chi_graph::DirectedGraph::vertices</a></div><div class="ttdeci">VertexAccessor vertices</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d90/chi__directed__graph_8h_source.html#l00095">chi_directed_graph.h:95</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_aca992bd50be71c88a3453c672e0085ac"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#aca992bd50be71c88a3453c672e0085ac">chi_graph::DirectedGraph::AddEdge</a></div><div class="ttdeci">bool AddEdge(int from, int to, double weight=1.0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00097">chi_directed_graph.cc:97</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1sweep__management_1_1_s_p_d_s_html_a154f1425c56df2fc2a523af3ea1ac8d8"><div class="ttname"><a href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a154f1425c56df2fc2a523af3ea1ac8d8">chi_mesh::sweep_management::SPDS::local_cyclic_dependencies</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; int, int &gt; &gt; local_cyclic_dependencies</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d06/_s_p_d_s_8h_source.html#l00023">SPDS.h:23</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_ae4daaa9688f5c7ce2a3cb87035e05fa0"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#ae4daaa9688f5c7ce2a3cb87035e05fa0">chi_graph::DirectedGraph::FindStronglyConnectedComponents</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; FindStronglyConnectedComponents()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00206">chi_directed_graph.cc:207</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a1e2427f67632a420e7849ee3004efe46"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a1e2427f67632a420e7849ee3004efe46">chi_graph::DirectedGraph::RemoveEdge</a></div><div class="ttdeci">void RemoveEdge(int from, int to)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00111">chi_directed_graph.cc:111</a></div></div>
-<div class="ttc" id="aremove__local__cyclicdep_8cc_html_aff18523449a2997a122381af7ab97f4d"><div class="ttname"><a href="../../d7/d45/remove__local__cyclicdep_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a></div><div class="ttdeci">ChiMPI &amp; chi_mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00022">chi_runtime.cc:22</a></div></div>
-<div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e">LOG_0VERBOSE_2</a></div><div class="ttdeci">@ LOG_0VERBOSE_2</div><div class="ttdoc">Used only if verbosity level equals 2.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00014">chi_log.h:14</a></div></div>
+<div class="ttc" id="asweep__namespace_8h_html"><div class="ttname"><a href="../../d1/d37/sweep__namespace_8h.html">sweep_namespace.h</a></div></div>
+<div class="ttc" id="aremove__local__cyclicdep_8cc_html_aff18523449a2997a122381af7ab97f4d"><div class="ttname"><a href="../../d7/d45/remove__local__cyclicdep_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a></div><div class="ttdeci">ChiMPI &amp; chi_mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00028">chi_runtime.cc:28</a></div></div>
 <div class="ttc" id="aclass_chi_m_p_i_html"><div class="ttname"><a href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/chi__mpi_8h_source.html#l00029">chi_mpi.h:30</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_eec4d28110009ed62ffe54c00aea6a23.html">CHI_TECH</a></li><li class="navelem"><a class="el" href="../../dir_f4f809ca642493e8405e9576fec2205d.html">ChiMesh</a></li><li class="navelem"><a class="el" href="../../dir_bd9150789815a883e6a4f18aa0dcf444.html">SweepUtilities</a></li><li class="navelem"><a class="el" href="../../d7/d45/remove__local__cyclicdep_8cc.html">remove_local_cyclicdep.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_881599471ceacbc6fd7f5107170a74cb.html">ChiTech</a></li><li class="navelem"><a class="el" href="../../dir_8547f55c5a95c1d7bb77b3036ec48497.html">ChiMesh</a></li><li class="navelem"><a class="el" href="../../dir_107e041f54db810be0be40e861c0d652.html">SweepUtilities</a></li><li class="navelem"><a class="el" href="../../d7/d45/remove__local__cyclicdep_8cc.html">remove_local_cyclicdep.cc</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.19 </li>
   </ul>
 </div>

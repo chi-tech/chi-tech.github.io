@@ -20,10 +20,10 @@ var class_chi_log =
       [ "MAX_MEMORY_USAGE", "d8/d1a/class_chi_log.html#a130798199b3ef1ed34ece3857b6bbd24ab9dc787a6733a0ac3f0e40a931a9efb4", null ]
     ] ],
     [ "ChiLog", "d8/d1a/class_chi_log.html#a5e6909c4557d1ef7ba289d9067769d8a", null ],
-    [ "GetInstance", "d8/d1a/class_chi_log.html#af5c2dcd4bf197d44b12c70e8359b0bd0", null ],
+    [ "GetInstance", "d8/d1a/class_chi_log.html#ab08e65db7cd903188b2fe062b183044f", null ],
     [ "GetRepeatingEventTag", "d8/d1a/class_chi_log.html#a1a32e31311525f199f208b4f92817978", null ],
     [ "GetVerbosity", "d8/d1a/class_chi_log.html#afcb7b450ad2435af94adeb545513c812", null ],
-    [ "Log", "d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64", null ],
+    [ "Log", "d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc", null ],
     [ "LogEvent", "d8/d1a/class_chi_log.html#aeb71d9b52c4ab9d71dc32c502d56b0a0", null ],
     [ "LogEvent", "d8/d1a/class_chi_log.html#aa35be8eba9a40a2ff460b858a0deec00", null ],
     [ "PrintEventHistory", "d8/d1a/class_chi_log.html#aff2a3a84876baf522584aaa9e9acb993", null ],

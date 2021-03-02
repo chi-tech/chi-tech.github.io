@@ -11,9 +11,10 @@ var sweep__namespace_8h =
       [ "MESSAGES_SENT", "d1/d37/sweep__namespace_8h.html#a6f35c94844603249789b4e4ae4ece8c1a495a7d57f3167daf75ddc2537910106d", null ],
       [ "MESSAGES_PENDING", "d1/d37/sweep__namespace_8h.html#a6f35c94844603249789b4e4ae4ece8c1aadee93faeba7a352b5cbecf1e5023ae8", null ]
     ] ],
-    [ "CreateSweepOrder", "d1/d37/sweep__namespace_8h.html#a53e797da28cd539e4690a964a2071ff8", null ],
-    [ "PopulateCellRelationships", "d1/d37/sweep__namespace_8h.html#a1cab982cd61c6fd4c6df857a671b77a2", null ],
-    [ "PrintSweepOrdering", "d1/d37/sweep__namespace_8h.html#a5764cf87de08f652b373cf6e8b7dd7e5", null ],
+    [ "CommunicateLocationDependencies", "d1/d37/sweep__namespace_8h.html#adf52c0345ec5612fbc2937da6a295a0c", null ],
+    [ "CreateSweepOrder", "d1/d37/sweep__namespace_8h.html#a1c01cea8ce5361c5a39651e5bd14a64a", null ],
+    [ "PopulateCellRelationships", "d1/d37/sweep__namespace_8h.html#a9baa407203986273b9f4cdcffce2025b", null ],
+    [ "PrintSweepOrdering", "d1/d37/sweep__namespace_8h.html#a14056bd4d6583fc03ff5400466e173bd", null ],
     [ "RemoveGlobalCyclicDependencies", "d1/d37/sweep__namespace_8h.html#ad9afacb8ef7ad0b18ef39c13db1dcc81", null ],
-    [ "RemoveLocalCyclicDependencies", "d1/d37/sweep__namespace_8h.html#ab64608bc0fae5ba8cd89133394a5d2e0", null ]
+    [ "RemoveLocalCyclicDependencies", "d1/d37/sweep__namespace_8h.html#a08330bb9af1d916d059a549af0982ee8", null ]
 ];

@@ -1,9 +1,20 @@
 var searchData=
 [
-  ['y_4472',['y',['../d3/dd1/structchi__math_1_1_quadrature_point_x_y.html#a71c3ec7a56f2c9cd64e2512dee39034e',1,'chi_math::QuadraturePointXY::y()'],['../d7/d1c/structchi__math_1_1_quadrature_point_x_y_z.html#ae0c720fee2d6bad5c478c798a6b07c7f',1,'chi_math::QuadraturePointXYZ::y()'],['../dd/d54/structchi__mesh_1_1_vector3.html#a8b89a79cfebafd04dbda021f626a9694',1,'chi_mesh::Vector3::y()']]],
-  ['y0_4473',['y0',['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#a247ddbbadf9ebf5710169b7ea32e6960',1,'chi_mesh::SphereLogicalVolume::y0()'],['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#aa5e066c297e337f5426d5190080889f5',1,'chi_mesh::RCCLogicalVolume::y0()']]],
-  ['ybounds_4474',['ybounds',['../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html#a36bf96a8ef7e471582869092f2d4eaf6',1,'chi_mesh::SurfaceMeshLogicalVolume']]],
-  ['ycuts_4475',['ycuts',['../df/d7e/classchi__mesh_1_1_surface_mesher.html#a92648f16f9f67eb552c70d5cee441d99',1,'chi_mesh::SurfaceMesher']]],
-  ['ymax_4476',['ymax',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#ade20a6073a509c9065abac340c5d9007',1,'chi_mesh::RPPLogicalVolume::ymax()'],['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#acf069e314cf0e7ff13d047e8836ecd14',1,'chi_mesh::UnpartitionedMesh::BoundBox::ymax()']]],
-  ['ymin_4477',['ymin',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#a9f70e3f3c89eced3c81d22bc3b08f73c',1,'chi_mesh::RPPLogicalVolume::ymin()'],['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abac16fd3161e5380153a454ff94bc146',1,'chi_mesh::UnpartitionedMesh::BoundBox::ymin()']]]
+  ['x_4713',['x',['../dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472',1,'chi_mesh::Vector3::x()'],['../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#a49ea25dc4c45af620ef8bb7e20d156a2',1,'chi_mesh::sweep_management::SweepChunk::x()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a689aec2d33208ec9667e487741439ccb',1,'chi_diffusion::Solver::x()']]],
+  ['x0_4714',['x0',['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#ae0b7359f4a34c2e1e15e1c683d027098',1,'chi_mesh::SphereLogicalVolume::x0()'],['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a7fcf77b81bfca196797386bb25799275',1,'chi_mesh::RCCLogicalVolume::x0()']]],
+  ['x_5fi_4715',['x_i',['../d6/dbe/class_hexahedron_mapping_f_e___p_w_l.html#ac170bc5b3c5bf520c922866c4feac5d4',1,'HexahedronMappingFE_PWL']]],
+  ['x_5flocalized_4716',['x_localized',['../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a10ae77e73afee4a62bbc8ab8753d3a12',1,'chi_math::PETScUtils::GhostVecLocalRaw']]],
+  ['x_5flocalized_5fraw_4717',['x_localized_raw',['../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a397cac73443cf56da7c2e09a4b50030c',1,'chi_math::PETScUtils::GhostVecLocalRaw']]],
+  ['x_5ftemp_4718',['x_temp',['../dd/dbc/struct_k_s_p_data_context.html#a2f100e582e211db7c335f660cf426e82',1,'KSPDataContext']]],
+  ['xbounds_4719',['xbounds',['../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html#a2156a70ae4369343de6d3d80137f5aaf',1,'chi_mesh::SurfaceMeshLogicalVolume']]],
+  ['xcuts_4720',['xcuts',['../df/d7e/classchi__mesh_1_1_surface_mesher.html#a53fd20fc38acf19dfe2cb71812fa2098',1,'chi_mesh::SurfaceMesher']]],
+  ['xi_5fi_4721',['xi_i',['../d6/dbe/class_hexahedron_mapping_f_e___p_w_l.html#a7e63b34a7aced258d8c729e181c94ac2',1,'HexahedronMappingFE_PWL']]],
+  ['xi_5fjfull_5fg_4722',['xi_Jfull_g',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a7b946cc5b3f9c60adc209495205d20b2',1,'chi_physics::TransportCrossSections']]],
+  ['xi_5fjpart_5fg_4723',['xi_Jpart_g',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#ac2d72476750b4996d6d607b955043c79',1,'chi_physics::TransportCrossSections']]],
+  ['xmax_4724',['xmax',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#a80662af2bb204647a1656cdca727eb78',1,'chi_mesh::RPPLogicalVolume::xmax()'],['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#ad6e82a41929aa8b13c21ea88f9ad8c8e',1,'chi_mesh::UnpartitionedMesh::BoundBox::xmax()']]],
+  ['xmin_4725',['xmin',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#af0e11f3acf780a7290ce6be1f8e5fafa',1,'chi_mesh::RPPLogicalVolume::xmin()'],['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#a5c016b281fc6d0377409c96624f12d8a',1,'chi_mesh::UnpartitionedMesh::BoundBox::xmin()']]],
+  ['xn_5fwn_4726',['xn_wn',['../d5/d5e/class_golub_fischer.html#a4f4e9eede67964c8cd810aa3c5ba92a4',1,'GolubFischer']]],
+  ['xs_5fid_4727',['xs_id',['../d6/da1/class_linear_boltzmann_1_1_cell_l_b_s_view.html#a397f0ff5b3d18d8d2a5540c920751ea3',1,'LinearBoltzmann::CellLBSView']]],
+  ['xsections_4728',['xsections',['../d7/d3d/class_l_b_s_sweep_chunk_p_w_l.html#aeb09d9e93f323421967de7693981d089',1,'LBSSweepChunkPWL']]],
+  ['xsize_4729',['xSize',['../dd/d62/class_chi_console.html#a59a89b7cfb3517518dea16f0cd058c12',1,'ChiConsole']]]
 ];

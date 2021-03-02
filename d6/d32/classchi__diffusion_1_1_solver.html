@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('d6/d32/classchi__diffusion_1_1_solver.
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
@@ -108,109 +109,70 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acbec56ac53ae8b2f9f56d284036e74a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a743dce6318042576602f11ca0017e4a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a743dce6318042576602f11ca0017e4a7">Solver</a> (std::string in_solver_name)</td></tr>
 <tr class="separator:a743dce6318042576602f11ca0017e4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2de514bc22f33a4f896f9e2a94a6602c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2de514bc22f33a4f896f9e2a94a6602c">~Solver</a> ()</td></tr>
+<tr class="memitem:a2de514bc22f33a4f896f9e2a94a6602c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2de514bc22f33a4f896f9e2a94a6602c">~Solver</a> ()</td></tr>
 <tr class="separator:a2de514bc22f33a4f896f9e2a94a6602c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1290c0cf2f2591bd5e09945025cb058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ab1290c0cf2f2591bd5e09945025cb058">GetMaterialProperties</a> (int mat_id, double &amp;diffCoeff, double &amp;sourceQ, double &amp;sigmaa)</td></tr>
-<tr class="separator:ab1290c0cf2f2591bd5e09945025cb058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24251cf00d21d123507513724833ae58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a24251cf00d21d123507513724833ae58">GetMaterialProperties</a> (int mat_id, <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cell, int cell_dofs, std::vector&lt; double &gt; &amp;diffCoeff, std::vector&lt; double &gt; &amp;sourceQ, std::vector&lt; double &gt; &amp;sigmaa, int group=0, int moment=0)</td></tr>
-<tr class="separator:a24251cf00d21d123507513724833ae58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25faca0319d73ed1b16b33af711694b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a25faca0319d73ed1b16b33af711694b8">ApplyDirichletI</a> (int ir, int *ir_boundary_type, int iref=-1, bool suppress_assembly=false)</td></tr>
-<tr class="separator:a25faca0319d73ed1b16b33af711694b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af60bd09f07da65563967a370d2dc4ccb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#af60bd09f07da65563967a370d2dc4ccb">ApplyDirichletJ</a> (int jr, int ir, double jr_mat_entry, int *ir_boundary_type, int iref=-1)</td></tr>
-<tr class="separator:af60bd09f07da65563967a370d2dc4ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7969ef0c6fa666d4d9caf58cba65fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2e7969ef0c6fa666d4d9caf58cba65fc">GetMaterialProperties</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, int cell_dofs, std::vector&lt; double &gt; &amp;diffCoeff, std::vector&lt; double &gt; &amp;sourceQ, std::vector&lt; double &gt; &amp;sigmaa, int group=0, int moment=0)</td></tr>
+<tr class="separator:a2e7969ef0c6fa666d4d9caf58cba65fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad36245b1ea37348a48a3acdedbc151eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ad36245b1ea37348a48a3acdedbc151eb">InitializeCommonItems</a> ()</td></tr>
 <tr class="separator:ad36245b1ea37348a48a3acdedbc151eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bbb98d3fc3aa2d079f79c501972d0fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a8bbb98d3fc3aa2d079f79c501972d0fd">PWLDBuildSparsityPattern</a> ()</td></tr>
-<tr class="separator:a8bbb98d3fc3aa2d079f79c501972d0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a926adddce2acea067cb4003adec47ef4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a926adddce2acea067cb4003adec47ef4">PWLCBuildSparsityPattern</a> ()</td></tr>
-<tr class="separator:a926adddce2acea067cb4003adec47ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad718f8da9b395fe355c376109743e5ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ad718f8da9b395fe355c376109743e5ff">Initialize</a> (bool verbose=true)</td></tr>
 <tr class="separator:ad718f8da9b395fe355c376109743e5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9ec93f89abc18dd52e58abd045c1a99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ae9ec93f89abc18dd52e58abd045c1a99">InitializePWLC</a> (bool verbose=true)</td></tr>
-<tr class="separator:ae9ec93f89abc18dd52e58abd045c1a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47ed7ddf9bc882658bb27944585c3a6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a47ed7ddf9bc882658bb27944585c3a6e">InitializePWLD</a> (bool verbose=true)</td></tr>
-<tr class="separator:a47ed7ddf9bc882658bb27944585c3a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04a2a696440a6c96268e3a735083f297"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a04a2a696440a6c96268e3a735083f297">InitializePWLDGroups</a> (bool verbose=true)</td></tr>
-<tr class="separator:a04a2a696440a6c96268e3a735083f297"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af44410345481c537157206372f8818f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#af44410345481c537157206372f8818f4">InitializePWLDGrpAgg</a> (bool verbose=true)</td></tr>
-<tr class="separator:af44410345481c537157206372f8818f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf627359dc9717744e0c8a5d792f66ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#aaf627359dc9717744e0c8a5d792f66ea">ExecuteS</a> (bool suppress_assembly=false, bool suppress_solve=false)</td></tr>
 <tr class="separator:aaf627359dc9717744e0c8a5d792f66ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedf5b149827f5502715c1db73a78a1d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#aedf5b149827f5502715c1db73a78a1d4">ExecutePWLC</a> (bool suppress_assembly=false, bool suppress_solve=false)</td></tr>
-<tr class="separator:aedf5b149827f5502715c1db73a78a1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace4342d89b34829cb5c781034950df78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ace4342d89b34829cb5c781034950df78">CFEM_Assemble_A_and_b</a> (int cell_glob_index, <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cell, int group=0)</td></tr>
-<tr class="separator:ace4342d89b34829cb5c781034950df78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02903222697dd766817cd484a1a02289"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a02903222697dd766817cd484a1a02289">ExecutePWLD_MIP</a> (bool suppress_assembly=false, bool suppress_solve=false)</td></tr>
-<tr class="separator:a02903222697dd766817cd484a1a02289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3742080254f65ab555e84691968a9f1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a3742080254f65ab555e84691968a9f1a">PWLD_Assemble_A_and_b</a> (int cell_glob_index, <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cell, <a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> *cell_ip_view, int component=0, int component_block_offset=1)</td></tr>
-<tr class="separator:a3742080254f65ab555e84691968a9f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae016bf60beb55e589c3f2752da5c3756"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ae016bf60beb55e589c3f2752da5c3756">PWLD_Assemble_b</a> (int cell_glob_index, <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cell, <a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> *cell_ip_view, int component=0, int component_block_offset=1)</td></tr>
-<tr class="separator:ae016bf60beb55e589c3f2752da5c3756"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c2f6d24b9254f7e4df82ffb674546e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5c2f6d24b9254f7e4df82ffb674546e6">ExecutePWLD_MIP_GRPS</a> (bool suppress_assembly=false, bool suppress_solve=false)</td></tr>
-<tr class="separator:a5c2f6d24b9254f7e4df82ffb674546e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e3d77182466a08f7c160256ec48d42a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a0e3d77182466a08f7c160256ec48d42a">ExecutePWLD_MIP_GAGG</a> (bool suppress_assembly=false, bool suppress_solve=false)</td></tr>
-<tr class="separator:a0e3d77182466a08f7c160256ec48d42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86e40f34c8b595b4bd0012dc085f154a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a86e40f34c8b595b4bd0012dc085f154a">PWLD_Assemble_A_and_b_GAGG</a> (int cell_glob_index, <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cell, <a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> *cell_ip_view)</td></tr>
-<tr class="separator:a86e40f34c8b595b4bd0012dc085f154a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a27cf3cf8b65a57275a7c2871c76d0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a9a27cf3cf8b65a57275a7c2871c76d0b">PWLD_Assemble_b_GAGG</a> (int cell_glob_index, <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cell, <a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> *cell_ip_view)</td></tr>
-<tr class="separator:a9a27cf3cf8b65a57275a7c2871c76d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83f2fc4e4b5565aec2af617061d0d521"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a83f2fc4e4b5565aec2af617061d0d521">ReorderNodesPWLC</a> ()</td></tr>
-<tr class="separator:a83f2fc4e4b5565aec2af617061d0d521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac08236ca6507264499cab97b855bfd02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ac08236ca6507264499cab97b855bfd02">ReorderNodesPWLD</a> ()</td></tr>
-<tr class="separator:ac08236ca6507264499cab97b855bfd02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc980e0ed454137f1b39a4cfaacc456c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#afc980e0ed454137f1b39a4cfaacc456c">MapBorderCell</a> (int locI, int neighbor, int vglob_i)</td></tr>
-<tr class="separator:afc980e0ed454137f1b39a4cfaacc456c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a283aab85e5786e075d614071f10be8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a3a283aab85e5786e075d614071f10be8">SpawnBorderCell</a> (int locI, int cell_border_index)</td></tr>
-<tr class="separator:a3a283aab85e5786e075d614071f10be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfc718e5d16b48f162c15a93dd8745e0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#acfc718e5d16b48f162c15a93dd8745e0">HPerpendicular</a> (<a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cell, <a class="el" href="../../d8/d0f/class_cell_f_e_view.html">CellFEView</a> *fe_view, int f)</td></tr>
-<tr class="separator:acfc718e5d16b48f162c15a93dd8745e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2609a44f5572b10f0c320f90ec025b0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2609a44f5572b10f0c320f90ec025b0c">MapCellDof</a> (<a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cell, int ig)</td></tr>
-<tr class="separator:a2609a44f5572b10f0c320f90ec025b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addd011110645d76a82c6566edcc6765c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#addd011110645d76a82c6566edcc6765c">MapCellFace</a> (<a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *cur_cell, <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *adj_cell, int f)</td></tr>
-<tr class="separator:addd011110645d76a82c6566edcc6765c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a676787b4ff1ff71b1941089ac8c35002"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a676787b4ff1ff71b1941089ac8c35002">GetBorderIPView</a> (int locI, int cell_glob_index)</td></tr>
-<tr class="separator:a676787b4ff1ff71b1941089ac8c35002"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52c7b4596d4acfc806211943937f3640"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html">CellFEView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a52c7b4596d4acfc806211943937f3640">GetBorderFEView</a> (int locI, int cell_glob_index)</td></tr>
-<tr class="separator:a52c7b4596d4acfc806211943937f3640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a12ce6b43e2c1469d998d516d19d077"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a4a12ce6b43e2c1469d998d516d19d077">GetBorderCell</a> (int locI, int cell_glob_index)</td></tr>
-<tr class="separator:a4a12ce6b43e2c1469d998d516d19d077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07245ce83ee2c4aa67c8ebf010f7c101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a07245ce83ee2c4aa67c8ebf010f7c101">CFEM_Assemble_A_and_b</a> (<a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, int group=0)</td></tr>
+<tr class="separator:a07245ce83ee2c4aa67c8ebf010f7c101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f675579782a19e5f97eb30689a0342"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#af9f675579782a19e5f97eb30689a0342">PWLD_Assemble_A_and_b</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, int component=0)</td></tr>
+<tr class="separator:af9f675579782a19e5f97eb30689a0342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b20d6160b3deabd69d10b64b18e21b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a39b20d6160b3deabd69d10b64b18e21b">PWLD_Assemble_b</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, int component=0)</td></tr>
+<tr class="separator:a39b20d6160b3deabd69d10b64b18e21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02eab2edfe4d885fdc71190297319975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a02eab2edfe4d885fdc71190297319975">PWLD_Assemble_A_and_b_GAGG</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell)</td></tr>
+<tr class="separator:a02eab2edfe4d885fdc71190297319975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a972d5532b9d1a80d072c88f09fdd97ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a972d5532b9d1a80d072c88f09fdd97ef">PWLD_Assemble_b_GAGG</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell)</td></tr>
+<tr class="separator:a972d5532b9d1a80d072c88f09fdd97ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88101aaf412022691894491af1eafdd1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a88101aaf412022691894491af1eafdd1">HPerpendicular</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, const <a class="el" href="../../de/d0d/classchi__math_1_1finite__element_1_1_unit_integral_data.html">chi_math::finite_element::UnitIntegralData</a> &amp;fe_intgrl_values, unsigned int f)</td></tr>
+<tr class="separator:a88101aaf412022691894491af1eafdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classchi__physics_1_1_solver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classchi__physics_1_1_solver')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html">chi_physics::Solver</a></td></tr>
 <tr class="memitem:a4ed879cea25e00e88651995de0a34328 inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a4ed879cea25e00e88651995de0a34328">AddRegion</a> (<a class="el" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a> *region)</td></tr>
 <tr class="separator:a4ed879cea25e00e88651995de0a34328 inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa416dcd9ba22712272ebd0ec4414046d inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#aa416dcd9ba22712272ebd0ec4414046d">Execute</a> ()</td></tr>
 <tr class="separator:aa416dcd9ba22712272ebd0ec4414046d inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a21e4706dbc029b03594b49ff4ac36622"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a21e4706dbc029b03594b49ff4ac36622">MapCellLocalNodeIDFromGlobalID</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, uint64_t node_global_id)</td></tr>
+<tr class="separator:a21e4706dbc029b03594b49ff4ac36622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a619ab85548a3a73428463cfec2b24c02"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a619ab85548a3a73428463cfec2b24c02">MapCellFace</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cur_cell, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;adj_cell, unsigned int f)</td></tr>
+<tr class="separator:a619ab85548a3a73428463cfec2b24c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a5c5035fd4ccd0fe4763c8d707618ca79"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5c5035fd4ccd0fe4763c8d707618ca79">solver_name</a></td></tr>
+<tr class="memitem:a5c5035fd4ccd0fe4763c8d707618ca79"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5c5035fd4ccd0fe4763c8d707618ca79">solver_name</a> =&quot;Diffusion <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html">Solver</a>&quot;</td></tr>
 <tr class="separator:a5c5035fd4ccd0fe4763c8d707618ca79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affd4790c5f0755e4ceb72faa832310e6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d7/dae/classchi__diffusion_1_1_boundary.html">chi_diffusion::Boundary</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#affd4790c5f0755e4ceb72faa832310e6">boundaries</a></td></tr>
 <tr class="separator:affd4790c5f0755e4ceb72faa832310e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27c0695817bebd5f168d829492286cff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a27c0695817bebd5f168d829492286cff">grid</a></td></tr>
-<tr class="separator:a27c0695817bebd5f168d829492286cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aced1bd8759a4ec042d0516564ad9ff9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d2b/class_spatial_discretization.html">SpatialDiscretization</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#aced1bd8759a4ec042d0516564ad9ff9f">discretization</a></td></tr>
-<tr class="separator:aced1bd8759a4ec042d0516564ad9ff9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a238e43bf45a5eee0c7db81852bdd2572"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dfb/class_spatial_discretization___p_w_l.html">SpatialDiscretization_PWL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a238e43bf45a5eee0c7db81852bdd2572">pwl_sdm</a></td></tr>
-<tr class="separator:a238e43bf45a5eee0c7db81852bdd2572"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2612e294f51645191ae120303e5afba6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html">chi_mesh::VolumeMesher</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2612e294f51645191ae120303e5afba6">mesher</a></td></tr>
-<tr class="separator:a2612e294f51645191ae120303e5afba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f559bb8448cf7aac103f630f5455854"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a8f559bb8448cf7aac103f630f5455854">fem_method</a></td></tr>
+<tr class="memitem:a12287ec73e134ae8fdd138d2aff542aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a12287ec73e134ae8fdd138d2aff542aa">grid</a> = nullptr</td></tr>
+<tr class="separator:a12287ec73e134ae8fdd138d2aff542aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c9698db0db14813675c5dc15a2b451f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../da/d2b/class_spatial_discretization.html">SpatialDiscretization</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a1c9698db0db14813675c5dc15a2b451f">discretization</a></td></tr>
+<tr class="separator:a1c9698db0db14813675c5dc15a2b451f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd617ee99528d5b4e293adb73b72930"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a7cd617ee99528d5b4e293adb73b72930">unknown_manager</a></td></tr>
+<tr class="separator:a7cd617ee99528d5b4e293adb73b72930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f559bb8448cf7aac103f630f5455854"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a8f559bb8448cf7aac103f630f5455854">fem_method</a> = 0</td></tr>
 <tr class="separator:a8f559bb8448cf7aac103f630f5455854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2472974ed27ec6a8631f7290fac2549"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ae2472974ed27ec6a8631f7290fac2549">property_map_D</a></td></tr>
+<tr class="memitem:ae2472974ed27ec6a8631f7290fac2549"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ae2472974ed27ec6a8631f7290fac2549">property_map_D</a> = 0</td></tr>
 <tr class="separator:ae2472974ed27ec6a8631f7290fac2549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21b2ed4e1e87414296d4081fbab0c6bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a21b2ed4e1e87414296d4081fbab0c6bc">property_map_q</a></td></tr>
+<tr class="memitem:a21b2ed4e1e87414296d4081fbab0c6bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a21b2ed4e1e87414296d4081fbab0c6bc">property_map_q</a> = 1</td></tr>
 <tr class="separator:a21b2ed4e1e87414296d4081fbab0c6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a363cb82ad1e8419d9bf812deb661823d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a363cb82ad1e8419d9bf812deb661823d">property_map_sigma</a></td></tr>
+<tr class="memitem:a363cb82ad1e8419d9bf812deb661823d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a363cb82ad1e8419d9bf812deb661823d">property_map_sigma</a> = 2</td></tr>
 <tr class="separator:a363cb82ad1e8419d9bf812deb661823d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc973e4389974b8615f267372721ac2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#adc973e4389974b8615f267372721ac2a">material_mode</a></td></tr>
+<tr class="memitem:adc973e4389974b8615f267372721ac2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#adc973e4389974b8615f267372721ac2a">material_mode</a> = <a class="el" href="../../d9/d4b/diffusion__solver_8h.html#a667f8b51ac0eb00f096d920da9e91832">DIFFUSION_MATERIALS_REGULAR</a></td></tr>
 <tr class="separator:adc973e4389974b8615f267372721ac2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e1d966fd2e3f823d379ec7aa00b4fcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a4e1d966fd2e3f823d379ec7aa00b4fcf">D_field</a></td></tr>
-<tr class="separator:a4e1d966fd2e3f823d379ec7aa00b4fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f2f462ebb5504e72b91cb208c38ac19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a1f2f462ebb5504e72b91cb208c38ac19">q_field</a></td></tr>
-<tr class="separator:a1f2f462ebb5504e72b91cb208c38ac19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a460ce89961e7a432d27a7f58d7468aba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a460ce89961e7a432d27a7f58d7468aba">sigma_field</a></td></tr>
-<tr class="separator:a460ce89961e7a432d27a7f58d7468aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc327eb0fba5eedba248ca9d575e76a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#abc327eb0fba5eedba248ca9d575e76a2">common_items_initialized</a></td></tr>
+<tr class="memitem:a5cf77e969faa62f45abeb0a7f05743b9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5cf77e969faa62f45abeb0a7f05743b9">D_field</a> = nullptr</td></tr>
+<tr class="separator:a5cf77e969faa62f45abeb0a7f05743b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec203db97cc30ee77aa17bd71be2d4d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a> = nullptr</td></tr>
+<tr class="separator:a5ec203db97cc30ee77aa17bd71be2d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6fc147629e142ce991d9efdaf5d73f2"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#aa6fc147629e142ce991d9efdaf5d73f2">sigma_field</a> = nullptr</td></tr>
+<tr class="separator:aa6fc147629e142ce991d9efdaf5d73f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc327eb0fba5eedba248ca9d575e76a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#abc327eb0fba5eedba248ca9d575e76a2">common_items_initialized</a> =false</td></tr>
 <tr class="separator:abc327eb0fba5eedba248ca9d575e76a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a689aec2d33208ec9667e487741439ccb"><td class="memItemLeft" align="right" valign="top">Vec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a689aec2d33208ec9667e487741439ccb">x</a></td></tr>
 <tr class="separator:a689aec2d33208ec9667e487741439ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,71 +184,31 @@ Data Fields</h2></td></tr>
 <tr class="separator:af641af815549ee181e932a903d9cd420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd8410fcd0f419d54b8cb55511aac1f7"><td class="memItemLeft" align="right" valign="top">PC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#afd8410fcd0f419d54b8cb55511aac1f7">pc</a></td></tr>
 <tr class="separator:afd8410fcd0f419d54b8cb55511aac1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae908b04a386edce8fa01a3476b0bcda"><td class="memItemLeft" align="right" valign="top">Vec *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#aae908b04a386edce8fa01a3476b0bcda">xg</a></td></tr>
-<tr class="separator:aae908b04a386edce8fa01a3476b0bcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e223270f197b36af7de643f6b308885"><td class="memItemLeft" align="right" valign="top">Vec *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a6e223270f197b36af7de643f6b308885">bg</a></td></tr>
-<tr class="separator:a6e223270f197b36af7de643f6b308885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a6f44e83654b0425b5e4df902f57b6e"><td class="memItemLeft" align="right" valign="top">Mat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a7a6f44e83654b0425b5e4df902f57b6e">Ag</a></td></tr>
-<tr class="separator:a7a6f44e83654b0425b5e4df902f57b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfb932ae7b2842f148b5d3962f855190"><td class="memItemLeft" align="right" valign="top">KSP *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#abfb932ae7b2842f148b5d3962f855190">kspg</a></td></tr>
-<tr class="separator:abfb932ae7b2842f148b5d3962f855190"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b83982326e72d013f8dd9bb75607435"><td class="memItemLeft" align="right" valign="top">PC *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a4b83982326e72d013f8dd9bb75607435">pcg</a></td></tr>
-<tr class="separator:a4b83982326e72d013f8dd9bb75607435"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76f92051696cc6f831ea486dd0e6c857"><td class="memItemLeft" align="right" valign="top">Vec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a76f92051696cc6f831ea486dd0e6c857">xref</a></td></tr>
-<tr class="separator:a76f92051696cc6f831ea486dd0e6c857"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f6e9511bf8e151f74c4a1cdbece6d9d"><td class="memItemLeft" align="right" valign="top">Vec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a3f6e9511bf8e151f74c4a1cdbece6d9d">bref</a></td></tr>
-<tr class="separator:a3f6e9511bf8e151f74c4a1cdbece6d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8790f59e5b12c131cbc802dbca935a3d"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a8790f59e5b12c131cbc802dbca935a3d">Aref</a></td></tr>
-<tr class="separator:a8790f59e5b12c131cbc802dbca935a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5efc2bce4ac1314fcbd2e646fed59b7"><td class="memItemLeft" align="right" valign="top">PetscReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ae5efc2bce4ac1314fcbd2e646fed59b7">norm</a></td></tr>
 <tr class="separator:ae5efc2bce4ac1314fcbd2e646fed59b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2461816873a8ffcd3c43d8e66567747"><td class="memItemLeft" align="right" valign="top">PetscErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ac2461816873a8ffcd3c43d8e66567747">ierr</a></td></tr>
 <tr class="separator:ac2461816873a8ffcd3c43d8e66567747"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a557cbb834fffec8bd47d4ae1a7001a17"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a557cbb834fffec8bd47d4ae1a7001a17">nodal_connections</a></td></tr>
-<tr class="separator:a557cbb834fffec8bd47d4ae1a7001a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae212b47eb1cc7e12e585b6a5f7e20dcb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ae212b47eb1cc7e12e585b6a5f7e20dcb">nodal_cell_connections</a></td></tr>
-<tr class="separator:ae212b47eb1cc7e12e585b6a5f7e20dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a291e12f103e421081c0c830a679f9ee7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a291e12f103e421081c0c830a679f9ee7">nodal_boundary_numbers</a></td></tr>
-<tr class="separator:a291e12f103e421081c0c830a679f9ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a927532b42d15dddab55a8c8f46f618a1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a927532b42d15dddab55a8c8f46f618a1">nodal_nnz_in_diag</a></td></tr>
-<tr class="separator:a927532b42d15dddab55a8c8f46f618a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f9c3b13b184d35c2e675a162d022d14"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a9f9c3b13b184d35c2e675a162d022d14">nodal_nnz_off_diag</a></td></tr>
-<tr class="separator:a9f9c3b13b184d35c2e675a162d022d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a100068aee9a051b02571d541858c4762"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a100068aee9a051b02571d541858c4762">local_dof_count</a></td></tr>
+<tr class="memitem:a100068aee9a051b02571d541858c4762"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a100068aee9a051b02571d541858c4762">local_dof_count</a> = 0</td></tr>
 <tr class="separator:a100068aee9a051b02571d541858c4762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c21af5e6341aea4d5ce2238caf06e17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2c21af5e6341aea4d5ce2238caf06e17">global_dof_count</a></td></tr>
+<tr class="memitem:a2c21af5e6341aea4d5ce2238caf06e17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2c21af5e6341aea4d5ce2238caf06e17">global_dof_count</a> = 0</td></tr>
 <tr class="separator:a2c21af5e6341aea4d5ce2238caf06e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e7e1a2eea1db0844062eb773226d99b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a3e7e1a2eea1db0844062eb773226d99b">pwld_local_dof_start</a></td></tr>
-<tr class="separator:a3e7e1a2eea1db0844062eb773226d99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10a53ecca062ed82722dcf0fc960eeb6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a10a53ecca062ed82722dcf0fc960eeb6">ip_cell_views</a></td></tr>
-<tr class="separator:a10a53ecca062ed82722dcf0fc960eeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad46aeb61082b5ba8b0f10c28605a73d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d4b/diffusion__solver_8h.html#a80eeb4a73b50e34db37b0c88c67c0114">IP_BORDERCELL_INFO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ad46aeb61082b5ba8b0f10c28605a73d4">ip_locI_bordercell_info</a></td></tr>
-<tr class="separator:ad46aeb61082b5ba8b0f10c28605a73d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add14f23e745e66257f5c5ffbde8a56e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d4b/diffusion__solver_8h.html#a4b2933a52f080cf7ee068a9919b9add6">IP_BORDERCELLS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#add14f23e745e66257f5c5ffbde8a56e5">ip_locI_bordercells</a></td></tr>
-<tr class="separator:add14f23e745e66257f5c5ffbde8a56e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74d12379dfc9b7d37748a585b84feac0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d4b/diffusion__solver_8h.html#ac3a7372866e227b19c297e62ccad74ac">IP_BORDERFEVIEWS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a74d12379dfc9b7d37748a585b84feac0">ip_locI_borderfeviews</a></td></tr>
-<tr class="separator:a74d12379dfc9b7d37748a585b84feac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc713f0a8fe1495999637f5e8334fe92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d4b/diffusion__solver_8h.html#acd08da70e2acdb2c40db19d7e04f998b">IP_BORDERIPVIEWS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#abc713f0a8fe1495999637f5e8334fe92">ip_locI_borderipviews</a></td></tr>
-<tr class="separator:abc713f0a8fe1495999637f5e8334fe92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98cfb6dedbd58c8a7d0b86567c2a896a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a98cfb6dedbd58c8a7d0b86567c2a896a">pwld_phi_local</a></td></tr>
 <tr class="separator:a98cfb6dedbd58c8a7d0b86567c2a896a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac04c868c4ae7bc539a72f6991c0b3482"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ac04c868c4ae7bc539a72f6991c0b3482">pwld_cell_dof_array_address</a></td></tr>
-<tr class="separator:ac04c868c4ae7bc539a72f6991c0b3482"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aed769d97dd25bd2bac886986e630cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a6aed769d97dd25bd2bac886986e630cc">max_iters</a></td></tr>
+<tr class="memitem:a6aed769d97dd25bd2bac886986e630cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a6aed769d97dd25bd2bac886986e630cc">max_iters</a> = 500</td></tr>
 <tr class="separator:a6aed769d97dd25bd2bac886986e630cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade535f862d3a1dc8fcc3904c83f24212"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ade535f862d3a1dc8fcc3904c83f24212">residual_tolerance</a></td></tr>
+<tr class="memitem:ade535f862d3a1dc8fcc3904c83f24212"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ade535f862d3a1dc8fcc3904c83f24212">residual_tolerance</a> = 1.0e-8</td></tr>
 <tr class="separator:ade535f862d3a1dc8fcc3904c83f24212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abea079eed4801e3afbfef81d8052960b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#abea079eed4801e3afbfef81d8052960b">gi</a></td></tr>
+<tr class="memitem:abea079eed4801e3afbfef81d8052960b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#abea079eed4801e3afbfef81d8052960b">gi</a> = 0</td></tr>
 <tr class="separator:abea079eed4801e3afbfef81d8052960b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eff171413dc9daafd7c052e88ada518"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a7eff171413dc9daafd7c052e88ada518">G</a></td></tr>
+<tr class="memitem:a7eff171413dc9daafd7c052e88ada518"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a7eff171413dc9daafd7c052e88ada518">G</a> = 1</td></tr>
 <tr class="separator:a7eff171413dc9daafd7c052e88ada518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9978cc10f7d45d25e6d6951d1026b8f7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a9978cc10f7d45d25e6d6951d1026b8f7">options_string</a></td></tr>
 <tr class="separator:a9978cc10f7d45d25e6d6951d1026b8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classchi__physics_1_1_solver"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classchi__physics_1_1_solver')"><img src="../../closed.png" alt="-"/>&#160;Data Fields inherited from <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html">chi_physics::Solver</a></td></tr>
 <tr class="memitem:a1e88bba35bb5b67908a64fe5944db62a inherit pub_attribs_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a1e88bba35bb5b67908a64fe5944db62a">regions</a></td></tr>
 <tr class="separator:a1e88bba35bb5b67908a64fe5944db62a inherit pub_attribs_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ded02d6ec7130e202279b12d3b8292 inherit pub_attribs_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ae1ded02d6ec7130e202279b12d3b8292">field_functions</a></td></tr>
-<tr class="separator:ae1ded02d6ec7130e202279b12d3b8292 inherit pub_attribs_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89e44b9876d6f1158a5f53f29822a1f inherit pub_attribs_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">FieldFunction</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ad89e44b9876d6f1158a5f53f29822a1f">field_functions</a></td></tr>
+<tr class="separator:ad89e44b9876d6f1158a5f53f29822a1f inherit pub_attribs_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -294,18 +216,18 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a1b5cad92f7896a4bd63d146a2cb04a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4bacffbc34411d8d66e5b0bcfe2f8f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d2e/class_chi_timer.html">ChiTimer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#af4bacffbc34411d8d66e5b0bcfe2f8f9">t_solve</a></td></tr>
 <tr class="separator:af4bacffbc34411d8d66e5b0bcfe2f8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80d99d2193213da9b6ab5e3f2703b67f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a80d99d2193213da9b6ab5e3f2703b67f">time_assembly</a></td></tr>
+<tr class="memitem:a80d99d2193213da9b6ab5e3f2703b67f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a80d99d2193213da9b6ab5e3f2703b67f">time_assembly</a> =0.0</td></tr>
 <tr class="separator:a80d99d2193213da9b6ab5e3f2703b67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ab1bec5fba50150ac6d7895c410b0bc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a4ab1bec5fba50150ac6d7895c410b0bc">time_solve</a></td></tr>
+<tr class="memitem:a4ab1bec5fba50150ac6d7895c410b0bc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a4ab1bec5fba50150ac6d7895c410b0bc">time_solve</a> =0.0</td></tr>
 <tr class="separator:a4ab1bec5fba50150ac6d7895c410b0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af983f0e28dc74cc06d41467d1339653b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#af983f0e28dc74cc06d41467d1339653b">verbose_info</a></td></tr>
+<tr class="memitem:af983f0e28dc74cc06d41467d1339653b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#af983f0e28dc74cc06d41467d1339653b">verbose_info</a> =true</td></tr>
 <tr class="separator:af983f0e28dc74cc06d41467d1339653b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html">Solver</a> for the general diffusion problem.</p>
 <p><img src="../../DiffusionMatProp.png" alt="" style="width:500px" class="inline"/> </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00071">71</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00041">41</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acbec56ac53ae8b2f9f56d284036e74a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbec56ac53ae8b2f9f56d284036e74a3">&#9670;&nbsp;</a></span>Solver() <span class="overload">[1/2]</span></h2>
@@ -331,6 +253,9 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">chi_diffusion::Solver::Solver </td>
@@ -340,9 +265,14 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d7a/constrdestr_8cc_source.html#l00029">29</a> of file <a class="el" href="../../dc/d7a/constrdestr_8cc_source.html">constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d7a/constrdestr_8cc_source.html#l00009">9</a> of file <a class="el" href="../../dc/d7a/constrdestr_8cc_source.html">constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -371,123 +301,13 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a6ad4b37d7da845300fb6c80d11fa1b3b">chi_physics::Solver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d7a/constrdestr_8cc_source.html#l00034">34</a> of file <a class="el" href="../../dc/d7a/constrdestr_8cc_source.html">constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d7a/constrdestr_8cc_source.html#l00014">14</a> of file <a class="el" href="../../dc/d7a/constrdestr_8cc_source.html">constrdestr.cc</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a25faca0319d73ed1b16b33af711694b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25faca0319d73ed1b16b33af711694b8">&#9670;&nbsp;</a></span>ApplyDirichletI()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool chi_diffusion::Solver::ApplyDirichletI </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ir</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>ir_boundary_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iref</em> = <code>-1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_assembly</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Attempts to apply Dirichlet boundary conditions on the ith row of the matrix. If it did apply the dirichlet boundary condition then it will return true which should logically be used to prevent other matrix columns to be populated.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ir</td><td>The row which is to receive the possible application of the dirichlet boundary condition. </td></tr>
-    <tr><td class="paramname">ir_boundary_type</td><td>Pointer to a index that will receive the boundary type. </td></tr>
-    <tr><td class="paramname">iref</td><td>The reference vertex index to be used for boundary type information.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Note on ir. In a multigroup simulation ir would be the dof number plus offset calculations (i.e. idof*G+g). </p>
-
-<p class="definition">Definition at line <a class="el" href="../../dd/dff/general_8cc_source.html#l00457">457</a> of file <a class="el" href="../../dd/dff/general_8cc_source.html">general.cc</a>.</p>
-
-</div>
-</div>
-<a id="af60bd09f07da65563967a370d2dc4ccb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af60bd09f07da65563967a370d2dc4ccb">&#9670;&nbsp;</a></span>ApplyDirichletJ()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool chi_diffusion::Solver::ApplyDirichletJ </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>jr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ir</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>jr_mat_entry</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>jr_boundary_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>jref</em> = <code>-1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Applies Dirichlet boundary conditions on the jth DOF. This prevent non-symmetric matrix entries for dirichlet boundary conditions.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">jr</td><td>The column which is to receive an entry. </td></tr>
-    <tr><td class="paramname">ir</td><td>The row which is to receive an entry. </td></tr>
-    <tr><td class="paramname">ir_boundary_type</td><td>Pointer to a index that will receive the boundary type. </td></tr>
-    <tr><td class="paramname">jref</td><td>The reference vertex index to be used for boundary type information. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="../../dd/dff/general_8cc_source.html#l00504">504</a> of file <a class="el" href="../../dd/dff/general_8cc_source.html">general.cc</a>.</p>
-
-</div>
-</div>
-<a id="ace4342d89b34829cb5c781034950df78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace4342d89b34829cb5c781034950df78">&#9670;&nbsp;</a></span>CFEM_Assemble_A_and_b()</h2>
+<a id="a07245ce83ee2c4aa67c8ebf010f7c101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07245ce83ee2c4aa67c8ebf010f7c101">&#9670;&nbsp;</a></span>CFEM_Assemble_A_and_b()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -495,13 +315,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void chi_diffusion::Solver::CFEM_Assemble_A_and_b </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_glob_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
           <td class="paramname"><em>cell</em>, </td>
         </tr>
         <tr>
@@ -519,131 +333,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Assembles PWLC matrix for general cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dc6/assemble__pwlc_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d3/dc6/assemble__pwlc_8cc_source.html">assemble_pwlc.cc</a>.</p>
-
-</div>
-</div>
-<a id="aedf5b149827f5502715c1db73a78a1d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedf5b149827f5502715c1db73a78a1d4">&#9670;&nbsp;</a></span>ExecutePWLC()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::ExecutePWLC </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_assembly</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_solve</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Builds the matrix using the PWLC discretization method. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d0/d51/exec__pwlc_8cc_source.html#l00026">26</a> of file <a class="el" href="../../d0/d51/exec__pwlc_8cc_source.html">exec_pwlc.cc</a>.</p>
-
-</div>
-</div>
-<a id="a02903222697dd766817cd484a1a02289"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02903222697dd766817cd484a1a02289">&#9670;&nbsp;</a></span>ExecutePWLD_MIP()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::ExecutePWLD_MIP </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_assembly</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_solve</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Builds the matrix using the PWLD_IP discretization method. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d2/dfb/exec__pwld__mip_8cc_source.html#l00022">22</a> of file <a class="el" href="../../d2/dfb/exec__pwld__mip_8cc_source.html">exec_pwld_mip.cc</a>.</p>
-
-</div>
-</div>
-<a id="a0e3d77182466a08f7c160256ec48d42a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e3d77182466a08f7c160256ec48d42a">&#9670;&nbsp;</a></span>ExecutePWLD_MIP_GAGG()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::ExecutePWLD_MIP_GAGG </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_assembly</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_solve</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Builds the matrix using the PWLD_IP discretization method. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../db/d0a/exec__pwld__mip__gagg_8cc_source.html#l00022">22</a> of file <a class="el" href="../../db/d0a/exec__pwld__mip__gagg_8cc_source.html">exec_pwld_mip_gagg.cc</a>.</p>
-
-</div>
-</div>
-<a id="a5c2f6d24b9254f7e4df82ffb674546e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c2f6d24b9254f7e4df82ffb674546e6">&#9670;&nbsp;</a></span>ExecutePWLD_MIP_GRPS()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::ExecutePWLD_MIP_GRPS </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_assembly</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>suppress_solve</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Builds the matrix using the PWLD_MIP discretization method and uses multiple groups. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d3/de0/exec__pwld__mip__grps_8cc_source.html#l00023">23</a> of file <a class="el" href="../../d3/de0/exec__pwld__mip__grps_8cc_source.html">exec_pwld_mip_grps.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dc6/assemble__pwlc_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d3/dc6/assemble__pwlc_8cc_source.html">assemble_pwlc.cc</a>.</p>
 
 </div>
 </div>
@@ -674,105 +364,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Executes the diffusion solver using the PETSc library. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d6f/main__exec_8cc_source.html#l00008">8</a> of file <a class="el" href="../../de/d6f/main__exec_8cc_source.html">main_exec.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d6f/main__exec_8cc_source.html#l00017">17</a> of file <a class="el" href="../../de/d6f/main__exec_8cc_source.html">main_exec.cc</a>.</p>
 
 </div>
 </div>
-<a id="a4a12ce6b43e2c1469d998d516d19d077"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a12ce6b43e2c1469d998d516d19d077">&#9670;&nbsp;</a></span>GetBorderCell()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> * chi_diffusion::Solver::GetBorderCell </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>locI</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_glob_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Obtains a reference to a cell. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00331">331</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
-
-</div>
-</div>
-<a id="a52c7b4596d4acfc806211943937f3640"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52c7b4596d4acfc806211943937f3640">&#9670;&nbsp;</a></span>GetBorderFEView()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html">CellFEView</a> * chi_diffusion::Solver::GetBorderFEView </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>locI</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_glob_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Obtains a reference to a Finite Element view of a cell. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00303">303</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
-
-</div>
-</div>
-<a id="a676787b4ff1ff71b1941089ac8c35002"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a676787b4ff1ff71b1941089ac8c35002">&#9670;&nbsp;</a></span>GetBorderIPView()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> * chi_diffusion::Solver::GetBorderIPView </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>locI</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_glob_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Obtains a reference to a Interior Penalty view of a cell. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00275">275</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
-
-</div>
-</div>
-<a id="a24251cf00d21d123507513724833ae58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24251cf00d21d123507513724833ae58">&#9670;&nbsp;</a></span>GetMaterialProperties() <span class="overload">[1/2]</span></h2>
+<a id="a2e7969ef0c6fa666d4d9caf58cba65fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7969ef0c6fa666d4d9caf58cba65fc">&#9670;&nbsp;</a></span>GetMaterialProperties()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -780,13 +377,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void chi_diffusion::Solver::GetMaterialProperties </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mat_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
           <td class="paramname"><em>cell</em>, </td>
         </tr>
         <tr>
@@ -838,48 +429,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab1290c0cf2f2591bd5e09945025cb058"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1290c0cf2f2591bd5e09945025cb058">&#9670;&nbsp;</a></span>GetMaterialProperties() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void chi_diffusion::Solver::GetMaterialProperties </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mat_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>diffCoeff</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>sourceQ</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>sigmaa</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acfc718e5d16b48f162c15a93dd8745e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfc718e5d16b48f162c15a93dd8745e0">&#9670;&nbsp;</a></span>HPerpendicular()</h2>
+<a id="a88101aaf412022691894491af1eafdd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88101aaf412022691894491af1eafdd1">&#9670;&nbsp;</a></span>HPerpendicular()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -887,19 +438,19 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">double chi_diffusion::Solver::HPerpendicular </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
           <td class="paramname"><em>cell</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d0f/class_cell_f_e_view.html">CellFEView</a> *&#160;</td>
-          <td class="paramname"><em>fe_view</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../de/d0d/classchi__math_1_1finite__element_1_1_unit_integral_data.html">chi_math::finite_element::UnitIntegralData</a> &amp;&#160;</td>
+          <td class="paramname"><em>fe_intgrl_values</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>f</em>&#160;</td>
         </tr>
         <tr>
@@ -916,7 +467,7 @@ for S_n transport on 2D arbitrary polygonal meshes", Journal of Computational Ph
 <br  />
 Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be replaced by edge length. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00126">126</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00016">16</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
 
 </div>
 </div>
@@ -937,7 +488,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </div><div class="memdoc">
 <p>Initializes the diffusion solver using the PETSc library. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d8c/main__initialize_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d2/d8c/main__initialize_8cc_source.html">main_initialize.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d8c/main__initialize_8cc_source.html#l00022">22</a> of file <a class="el" href="../../d2/d8c/main__initialize_8cc_source.html">main_initialize.cc</a>.</p>
 
 </div>
 </div>
@@ -961,180 +512,31 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 
 </div>
 </div>
-<a id="ae9ec93f89abc18dd52e58abd045c1a99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9ec93f89abc18dd52e58abd045c1a99">&#9670;&nbsp;</a></span>InitializePWLC()</h2>
+<a id="a619ab85548a3a73428463cfec2b24c02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a619ab85548a3a73428463cfec2b24c02">&#9670;&nbsp;</a></span>MapCellFace()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::InitializePWLC </td>
+          <td class="memname">unsigned int chi_diffusion::Solver::MapCellFace </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em> = <code>true</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Initializes Piecewise Linear FEM for diffusion solver. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/d39/init__pwlc_8cc_source.html#l00021">21</a> of file <a class="el" href="../../d5/d39/init__pwlc_8cc_source.html">init_pwlc.cc</a>.</p>
-
-</div>
-</div>
-<a id="a47ed7ddf9bc882658bb27944585c3a6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47ed7ddf9bc882658bb27944585c3a6e">&#9670;&nbsp;</a></span>InitializePWLD()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::InitializePWLD </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em> = <code>true</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Initializes Piecewise Linear FEM for diffusion solver. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d9b/init__pwld_8cc_source.html#l00021">21</a> of file <a class="el" href="../../dc/d9b/init__pwld_8cc_source.html">init_pwld.cc</a>.</p>
-
-</div>
-</div>
-<a id="a04a2a696440a6c96268e3a735083f297"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04a2a696440a6c96268e3a735083f297">&#9670;&nbsp;</a></span>InitializePWLDGroups()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::InitializePWLDGroups </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em> = <code>true</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Initializes Piecewise Linear FEM for diffusion solver. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/initpwld__grps_8cc_source.html#l00021">21</a> of file <a class="el" href="../../dd/d06/initpwld__grps_8cc_source.html">initpwld_grps.cc</a>.</p>
-
-</div>
-</div>
-<a id="af44410345481c537157206372f8818f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af44410345481c537157206372f8818f4">&#9670;&nbsp;</a></span>InitializePWLDGrpAgg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::InitializePWLDGrpAgg </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em> = <code>true</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Initializes Piecewise Linear FEM for diffusion solver. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../db/d8c/initpwld__grpagg_8cc_source.html#l00021">21</a> of file <a class="el" href="../../db/d8c/initpwld__grpagg_8cc_source.html">initpwld_grpagg.cc</a>.</p>
-
-</div>
-</div>
-<a id="afc980e0ed454137f1b39a4cfaacc456c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc980e0ed454137f1b39a4cfaacc456c">&#9670;&nbsp;</a></span>MapBorderCell()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::MapBorderCell </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>locI</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>neighbor</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>vglob_i</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Maps a border cell. Returns the matrix row location for the given vertex index. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00083">83</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
-
-</div>
-</div>
-<a id="a2609a44f5572b10f0c320f90ec025b0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2609a44f5572b10f0c320f90ec025b0c">&#9670;&nbsp;</a></span>MapCellDof()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::MapCellDof </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td>
-          <td class="paramname"><em>cell</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ig</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Given a global node index, returns the dof its associated on the referenced cell. Polyhedron overload. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00208">208</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
-
-</div>
-</div>
-<a id="addd011110645d76a82c6566edcc6765c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addd011110645d76a82c6566edcc6765c">&#9670;&nbsp;</a></span>MapCellFace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::MapCellFace </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
           <td class="paramname"><em>cur_cell</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
           <td class="paramname"><em>adj_cell</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>f</em>&#160;</td>
         </tr>
         <tr>
@@ -1143,32 +545,59 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Given the face index on the current cell, finds the corresponding face index on the adjacent cell. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00226">226</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00127">127</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
 
 </div>
 </div>
-<a id="a926adddce2acea067cb4003adec47ef4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a926adddce2acea067cb4003adec47ef4">&#9670;&nbsp;</a></span>PWLCBuildSparsityPattern()</h2>
+<a id="a21e4706dbc029b03594b49ff4ac36622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e4706dbc029b03594b49ff4ac36622">&#9670;&nbsp;</a></span>MapCellLocalNodeIDFromGlobalID()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_diffusion::Solver::PWLCBuildSparsityPattern </td>
+          <td class="memname">uint64_t chi_diffusion::Solver::MapCellLocalNodeIDFromGlobalID </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>node_global_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>Given a global node index, returns the local cell-node it's associated on the referenced cell. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00101">101</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
 
 </div>
 </div>
-<a id="a3742080254f65ab555e84691968a9f1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3742080254f65ab555e84691968a9f1a">&#9670;&nbsp;</a></span>PWLD_Assemble_A_and_b()</h2>
+<a id="af9f675579782a19e5f97eb30689a0342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f675579782a19e5f97eb30689a0342">&#9670;&nbsp;</a></span>PWLD_Assemble_A_and_b()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1176,32 +605,14 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
         <tr>
           <td class="memname">void chi_diffusion::Solver::PWLD_Assemble_A_and_b </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_glob_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
           <td class="paramname"><em>cell</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> *&#160;</td>
-          <td class="paramname"><em>cell_ip_view</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>component</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>component_block_offset</em> = <code>1</code>&#160;</td>
+          <td class="paramname"><em>component</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1212,12 +623,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </div><div class="memdoc">
 <p>Assembles PWLC matrix for polygon cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html">assemble_pwld.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html">assemble_pwld.cc</a>.</p>
 
 </div>
 </div>
-<a id="a86e40f34c8b595b4bd0012dc085f154a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86e40f34c8b595b4bd0012dc085f154a">&#9670;&nbsp;</a></span>PWLD_Assemble_A_and_b_GAGG()</h2>
+<a id="a02eab2edfe4d885fdc71190297319975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02eab2edfe4d885fdc71190297319975">&#9670;&nbsp;</a></span>PWLD_Assemble_A_and_b_GAGG()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1225,36 +636,20 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
         <tr>
           <td class="memname">void chi_diffusion::Solver::PWLD_Assemble_A_and_b_GAGG </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_glob_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td>
-          <td class="paramname"><em>cell</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> *&#160;</td>
-          <td class="paramname"><em>cell_ip_view</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Assembles PWLC matrix for polygon cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html">assemble_pwld_gagg.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html">assemble_pwld_gagg.cc</a>.</p>
 
 </div>
 </div>
-<a id="ae016bf60beb55e589c3f2752da5c3756"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae016bf60beb55e589c3f2752da5c3756">&#9670;&nbsp;</a></span>PWLD_Assemble_b()</h2>
+<a id="a39b20d6160b3deabd69d10b64b18e21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b20d6160b3deabd69d10b64b18e21b">&#9670;&nbsp;</a></span>PWLD_Assemble_b()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1262,32 +657,14 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
         <tr>
           <td class="memname">void chi_diffusion::Solver::PWLD_Assemble_b </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_glob_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
           <td class="paramname"><em>cell</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> *&#160;</td>
-          <td class="paramname"><em>cell_ip_view</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>component</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>component_block_offset</em> = <code>1</code>&#160;</td>
+          <td class="paramname"><em>component</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1298,12 +675,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </div><div class="memdoc">
 <p>Assembles PWLC matrix for polygon cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html#l00391">391</a> of file <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html">assemble_pwld.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html#l00296">296</a> of file <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html">assemble_pwld.cc</a>.</p>
 
 </div>
 </div>
-<a id="a9a27cf3cf8b65a57275a7c2871c76d0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a27cf3cf8b65a57275a7c2871c76d0b">&#9670;&nbsp;</a></span>PWLD_Assemble_b_GAGG()</h2>
+<a id="a972d5532b9d1a80d072c88f09fdd97ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a972d5532b9d1a80d072c88f09fdd97ef">&#9670;&nbsp;</a></span>PWLD_Assemble_b_GAGG()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1311,119 +688,15 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
         <tr>
           <td class="memname">void chi_diffusion::Solver::PWLD_Assemble_b_GAGG </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_glob_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *&#160;</td>
-          <td class="paramname"><em>cell</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a> *&#160;</td>
-          <td class="paramname"><em>cell_ip_view</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Assembles b PWLD for polygon cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html#l00370">370</a> of file <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html">assemble_pwld_gagg.cc</a>.</p>
-
-</div>
-</div>
-<a id="a8bbb98d3fc3aa2d079f79c501972d0fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bbb98d3fc3aa2d079f79c501972d0fd">&#9670;&nbsp;</a></span>PWLDBuildSparsityPattern()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void chi_diffusion::Solver::PWLDBuildSparsityPattern </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Builds the sparsity pattern for PWLC spatial discretization. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d67/pwld__build__sparsitypattern_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d1/d67/pwld__build__sparsitypattern_8cc_source.html">pwld_build_sparsitypattern.cc</a>.</p>
-
-</div>
-</div>
-<a id="a83f2fc4e4b5565aec2af617061d0d521"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83f2fc4e4b5565aec2af617061d0d521">&#9670;&nbsp;</a></span>ReorderNodesPWLC()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void chi_diffusion::Solver::ReorderNodesPWLC </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac08236ca6507264499cab97b855bfd02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac08236ca6507264499cab97b855bfd02">&#9670;&nbsp;</a></span>ReorderNodesPWLD()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void chi_diffusion::Solver::ReorderNodesPWLD </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Reorders nodes for better parrallel communication during matrix assembly specific to PWLD methods. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00027">27</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
-
-</div>
-</div>
-<a id="a3a283aab85e5786e075d614071f10be8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a283aab85e5786e075d614071f10be8">&#9670;&nbsp;</a></span>SpawnBorderCell()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void chi_diffusion::Solver::SpawnBorderCell </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>locI</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_border_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function can be called from a number of places and is used to generate the necessary information for the successful implementation of MIP. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html#l00366">366</a> of file <a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html#l00295">295</a> of file <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html">assemble_pwld_gagg.cc</a>.</p>
 
 </div>
 </div>
@@ -1440,39 +713,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00100">100</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a7a6f44e83654b0425b5e4df902f57b6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a6f44e83654b0425b5e4df902f57b6e">&#9670;&nbsp;</a></span>Ag</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Mat* chi_diffusion::Solver::Ag</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00106">106</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a8790f59e5b12c131cbc802dbca935a3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8790f59e5b12c131cbc802dbca935a3d">&#9670;&nbsp;</a></span>Aref</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Mat chi_diffusion::Solver::Aref</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00112">112</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00071">71</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1488,23 +729,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00099">99</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a6e223270f197b36af7de643f6b308885"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e223270f197b36af7de643f6b308885">&#9670;&nbsp;</a></span>bg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vec* chi_diffusion::Solver::bg</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00105">105</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00070">70</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1520,23 +745,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00081">81</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a3f6e9511bf8e151f74c4a1cdbece6d9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f6e9511bf8e151f74c4a1cdbece6d9d">&#9670;&nbsp;</a></span>bref</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vec chi_diffusion::Solver::bref</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00111">111</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00051">51</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1547,44 +756,44 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool chi_diffusion::Solver::common_items_initialized</td>
+          <td class="memname">bool chi_diffusion::Solver::common_items_initialized =false</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00096">96</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00067">67</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
-<a id="a4e1d966fd2e3f823d379ec7aa00b4fcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e1d966fd2e3f823d379ec7aa00b4fcf">&#9670;&nbsp;</a></span>D_field</h2>
+<a id="a5cf77e969faa62f45abeb0a7f05743b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf77e969faa62f45abeb0a7f05743b9">&#9670;&nbsp;</a></span>D_field</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a>* chi_diffusion::Solver::D_field</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a>&gt; chi_diffusion::Solver::D_field = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00092">92</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00063">63</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
-<a id="aced1bd8759a4ec042d0516564ad9ff9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aced1bd8759a4ec042d0516564ad9ff9f">&#9670;&nbsp;</a></span>discretization</h2>
+<a id="a1c9698db0db14813675c5dc15a2b451f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c9698db0db14813675c5dc15a2b451f">&#9670;&nbsp;</a></span>discretization</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/d2b/class_spatial_discretization.html">SpatialDiscretization</a>* chi_diffusion::Solver::discretization</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../da/d2b/class_spatial_discretization.html">SpatialDiscretization</a>&gt; chi_diffusion::Solver::discretization</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00083">83</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00054">54</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1595,12 +804,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::fem_method</td>
+          <td class="memname">int chi_diffusion::Solver::fem_method = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00086">86</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00057">57</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1611,12 +820,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::G</td>
+          <td class="memname">int chi_diffusion::Solver::G = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00139">139</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00086">86</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1627,12 +836,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::gi</td>
+          <td class="memname">int chi_diffusion::Solver::gi = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00138">138</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00085">85</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1643,28 +852,28 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::global_dof_count</td>
+          <td class="memname">int chi_diffusion::Solver::global_dof_count = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00125">125</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00079">79</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
-<a id="a27c0695817bebd5f168d829492286cff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27c0695817bebd5f168d829492286cff">&#9670;&nbsp;</a></span>grid</h2>
+<a id="a12287ec73e134ae8fdd138d2aff542aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12287ec73e134ae8fdd138d2aff542aa">&#9670;&nbsp;</a></span>grid</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>* chi_diffusion::Solver::grid</td>
+          <td class="memname"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> chi_diffusion::Solver::grid = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00082">82</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00052">52</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1680,87 +889,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00115">115</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a10a53ecca062ed82722dcf0fc960eeb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10a53ecca062ed82722dcf0fc960eeb6">&#9670;&nbsp;</a></span>ip_cell_views</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../d4/de4/struct_diffusion_i_p_cell_view.html">DiffusionIPCellView</a>*&gt; chi_diffusion::Solver::ip_cell_views</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00127">127</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="ad46aeb61082b5ba8b0f10c28605a73d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad46aeb61082b5ba8b0f10c28605a73d4">&#9670;&nbsp;</a></span>ip_locI_bordercell_info</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d9/d4b/diffusion__solver_8h.html#a80eeb4a73b50e34db37b0c88c67c0114">IP_BORDERCELL_INFO</a> chi_diffusion::Solver::ip_locI_bordercell_info</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00128">128</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="add14f23e745e66257f5c5ffbde8a56e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add14f23e745e66257f5c5ffbde8a56e5">&#9670;&nbsp;</a></span>ip_locI_bordercells</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d9/d4b/diffusion__solver_8h.html#a4b2933a52f080cf7ee068a9919b9add6">IP_BORDERCELLS</a> chi_diffusion::Solver::ip_locI_bordercells</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00129">129</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a74d12379dfc9b7d37748a585b84feac0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74d12379dfc9b7d37748a585b84feac0">&#9670;&nbsp;</a></span>ip_locI_borderfeviews</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d9/d4b/diffusion__solver_8h.html#ac3a7372866e227b19c297e62ccad74ac">IP_BORDERFEVIEWS</a> chi_diffusion::Solver::ip_locI_borderfeviews</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00130">130</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="abc713f0a8fe1495999637f5e8334fe92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc713f0a8fe1495999637f5e8334fe92">&#9670;&nbsp;</a></span>ip_locI_borderipviews</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d9/d4b/diffusion__solver_8h.html#acd08da70e2acdb2c40db19d7e04f998b">IP_BORDERIPVIEWS</a> chi_diffusion::Solver::ip_locI_borderipviews</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00131">131</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00076">76</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1776,23 +905,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00101">101</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="abfb932ae7b2842f148b5d3962f855190"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfb932ae7b2842f148b5d3962f855190">&#9670;&nbsp;</a></span>kspg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">KSP* chi_diffusion::Solver::kspg</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00107">107</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00072">72</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1803,12 +916,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::local_dof_count</td>
+          <td class="memname">int chi_diffusion::Solver::local_dof_count = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00124">124</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00078">78</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1819,12 +932,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::material_mode</td>
+          <td class="memname">int chi_diffusion::Solver::material_mode = <a class="el" href="../../d9/d4b/diffusion__solver_8h.html#a667f8b51ac0eb00f096d920da9e91832">DIFFUSION_MATERIALS_REGULAR</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00091">91</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00062">62</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1835,108 +948,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::max_iters</td>
+          <td class="memname">int chi_diffusion::Solver::max_iters = 500</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00136">136</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a2612e294f51645191ae120303e5afba6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2612e294f51645191ae120303e5afba6">&#9670;&nbsp;</a></span>mesher</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html">chi_mesh::VolumeMesher</a>* chi_diffusion::Solver::mesher</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00085">85</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a291e12f103e421081c0c830a679f9ee7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a291e12f103e421081c0c830a679f9ee7">&#9670;&nbsp;</a></span>nodal_boundary_numbers</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;int&gt; chi_diffusion::Solver::nodal_boundary_numbers</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00120">120</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="ae212b47eb1cc7e12e585b6a5f7e20dcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae212b47eb1cc7e12e585b6a5f7e20dcb">&#9670;&nbsp;</a></span>nodal_cell_connections</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;int&gt; &gt; chi_diffusion::Solver::nodal_cell_connections</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00119">119</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a557cbb834fffec8bd47d4ae1a7001a17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a557cbb834fffec8bd47d4ae1a7001a17">&#9670;&nbsp;</a></span>nodal_connections</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;int&gt; &gt; chi_diffusion::Solver::nodal_connections</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00118">118</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a927532b42d15dddab55a8c8f46f618a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a927532b42d15dddab55a8c8f46f618a1">&#9670;&nbsp;</a></span>nodal_nnz_in_diag</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;int&gt; chi_diffusion::Solver::nodal_nnz_in_diag</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00121">121</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a9f9c3b13b184d35c2e675a162d022d14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f9c3b13b184d35c2e675a162d022d14">&#9670;&nbsp;</a></span>nodal_nnz_off_diag</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;int&gt; chi_diffusion::Solver::nodal_nnz_off_diag</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00122">122</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00083">83</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1952,7 +969,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00114">114</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00075">75</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1968,7 +985,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00140">140</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00087">87</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1984,23 +1001,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00102">102</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a4b83982326e72d013f8dd9bb75607435"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b83982326e72d013f8dd9bb75607435">&#9670;&nbsp;</a></span>pcg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">PC* chi_diffusion::Solver::pcg</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00108">108</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00073">73</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2011,12 +1012,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::property_map_D</td>
+          <td class="memname">int chi_diffusion::Solver::property_map_D = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00088">88</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00059">59</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2027,12 +1028,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::property_map_q</td>
+          <td class="memname">int chi_diffusion::Solver::property_map_q = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00089">89</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00060">60</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2043,60 +1044,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_diffusion::Solver::property_map_sigma</td>
+          <td class="memname">int chi_diffusion::Solver::property_map_sigma = 2</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00090">90</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a238e43bf45a5eee0c7db81852bdd2572"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a238e43bf45a5eee0c7db81852bdd2572">&#9670;&nbsp;</a></span>pwl_sdm</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../de/dfb/class_spatial_discretization___p_w_l.html">SpatialDiscretization_PWL</a>* chi_diffusion::Solver::pwl_sdm</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00084">84</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="ac04c868c4ae7bc539a72f6991c0b3482"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac04c868c4ae7bc539a72f6991c0b3482">&#9670;&nbsp;</a></span>pwld_cell_dof_array_address</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;int&gt; chi_diffusion::Solver::pwld_cell_dof_array_address</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00134">134</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a3e7e1a2eea1db0844062eb773226d99b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e7e1a2eea1db0844062eb773226d99b">&#9670;&nbsp;</a></span>pwld_local_dof_start</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_diffusion::Solver::pwld_local_dof_start</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00126">126</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00061">61</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2112,23 +1065,23 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00133">133</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00081">81</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
-<a id="a1f2f462ebb5504e72b91cb208c38ac19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f2f462ebb5504e72b91cb208c38ac19">&#9670;&nbsp;</a></span>q_field</h2>
+<a id="a5ec203db97cc30ee77aa17bd71be2d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec203db97cc30ee77aa17bd71be2d4d">&#9670;&nbsp;</a></span>q_field</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a>* chi_diffusion::Solver::q_field</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a>&gt; chi_diffusion::Solver::q_field = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00093">93</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00064">64</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2139,28 +1092,28 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double chi_diffusion::Solver::residual_tolerance</td>
+          <td class="memname">double chi_diffusion::Solver::residual_tolerance = 1.0e-8</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00137">137</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00084">84</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
-<a id="a460ce89961e7a432d27a7f58d7468aba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a460ce89961e7a432d27a7f58d7468aba">&#9670;&nbsp;</a></span>sigma_field</h2>
+<a id="aa6fc147629e142ce991d9efdaf5d73f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6fc147629e142ce991d9efdaf5d73f2">&#9670;&nbsp;</a></span>sigma_field</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a>* chi_diffusion::Solver::sigma_field</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">chi_physics::FieldFunction</a>&gt; chi_diffusion::Solver::sigma_field = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00094">94</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00065">65</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2171,12 +1124,12 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string chi_diffusion::Solver::solver_name</td>
+          <td class="memname">std::string chi_diffusion::Solver::solver_name =&quot;Diffusion <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html">Solver</a>&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00080">80</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00050">50</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2200,7 +1153,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00074">74</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00044">44</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2224,7 +1177,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00075">75</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00045">45</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2238,7 +1191,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double chi_diffusion::Solver::time_assembly</td>
+          <td class="memname">double chi_diffusion::Solver::time_assembly =0.0</td>
         </tr>
       </table>
   </td>
@@ -2248,7 +1201,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00077">77</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00047">47</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2262,7 +1215,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double chi_diffusion::Solver::time_solve</td>
+          <td class="memname">double chi_diffusion::Solver::time_solve =0.0</td>
         </tr>
       </table>
   </td>
@@ -2272,7 +1225,23 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00077">77</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00047">47</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+
+</div>
+</div>
+<a id="a7cd617ee99528d5b4e293adb73b72930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd617ee99528d5b4e293adb73b72930">&#9670;&nbsp;</a></span>unknown_manager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> chi_diffusion::Solver::unknown_manager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00056">56</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2286,7 +1255,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool chi_diffusion::Solver::verbose_info</td>
+          <td class="memname">bool chi_diffusion::Solver::verbose_info =true</td>
         </tr>
       </table>
   </td>
@@ -2296,7 +1265,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00078">78</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00048">48</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2312,62 +1281,21 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00098">98</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="aae908b04a386edce8fa01a3476b0bcda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae908b04a386edce8fa01a3476b0bcda">&#9670;&nbsp;</a></span>xg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vec* chi_diffusion::Solver::xg</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00104">104</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-
-</div>
-</div>
-<a id="a76f92051696cc6f831ea486dd0e6c857"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76f92051696cc6f831ea486dd0e6c857">&#9670;&nbsp;</a></span>xref</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vec chi_diffusion::Solver::xref</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00110">110</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00069">69</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d3/dc6/assemble__pwlc_8cc_source.html">assemble_pwlc.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html">assemble_pwld.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html">assemble_pwld_gagg.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../dc/d7a/constrdestr_8cc_source.html">constrdestr.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d0/d51/exec__pwlc_8cc_source.html">exec_pwlc.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d2/dfb/exec__pwld__mip_8cc_source.html">exec_pwld_mip.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../db/d0a/exec__pwld__mip__gagg_8cc_source.html">exec_pwld_mip_gagg.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d3/de0/exec__pwld__mip__grps_8cc_source.html">exec_pwld_mip_grps.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../dd/dff/general_8cc_source.html">general.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d5/d39/init__pwlc_8cc_source.html">init_pwlc.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../dc/d9b/init__pwld_8cc_source.html">init_pwld.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d9/d2b/initcommon_8cc_source.html">initcommon.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../db/d8c/initpwld__grpagg_8cc_source.html">initpwld_grpagg.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../dd/d06/initpwld__grps_8cc_source.html">initpwld_grps.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../de/d6f/main__exec_8cc_source.html">main_exec.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d2/d8c/main__initialize_8cc_source.html">main_initialize.cc</a></li>
-<li>Modules/DiffusionSolver/Solver/<a class="el" href="../../d1/d67/pwld__build__sparsitypattern_8cc_source.html">pwld_build_sparsitypattern.cc</a></li>
+<li>ChiModules/DiffusionSolver/Solver/<a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a></li>
+<li>ChiModules/DiffusionSolver/Solver/<a class="el" href="../../d3/dc6/assemble__pwlc_8cc_source.html">assemble_pwlc.cc</a></li>
+<li>ChiModules/DiffusionSolver/Solver/<a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html">assemble_pwld.cc</a></li>
+<li>ChiModules/DiffusionSolver/Solver/<a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html">assemble_pwld_gagg.cc</a></li>
+<li>ChiModules/DiffusionSolver/Solver/<a class="el" href="../../d5/da1/assemble__utils__plwd_8cc_source.html">assemble_utils_plwd.cc</a></li>
+<li>ChiModules/DiffusionSolver/Solver/<a class="el" href="../../dc/d7a/constrdestr_8cc_source.html">constrdestr.cc</a></li>
+<li>ChiModules/DiffusionSolver/Solver/<a class="el" href="../../dd/dff/general_8cc_source.html">general.cc</a></li>
+<li>ChiModules/DiffusionSolver/Solver/<a class="el" href="../../d9/d2b/initcommon_8cc_source.html">initcommon.cc</a></li>
+<li>ChiModules/DiffusionSolver/Solver/<a class="el" href="../../de/d6f/main__exec_8cc_source.html">main_exec.cc</a></li>
+<li>ChiModules/DiffusionSolver/Solver/<a class="el" href="../../d2/d8c/main__initialize_8cc_source.html">main_initialize.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

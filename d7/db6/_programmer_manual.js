@@ -14,7 +14,7 @@ var _programmer_manual =
         [ "Step 1 - Make a application directory and empty source file", "d8/d99/_dev_man_using_lib.html#devman01_02_01", null ],
         [ "Step 2 - Create CMakeLists.txt file", "d8/d99/_dev_man_using_lib.html#devman01_02_02", null ],
         [ "Step 3 - Edit the cmake file to connect to Chi-Tech", "d8/d99/_dev_man_using_lib.html#devman01_02_03", null ],
-        [ "Step 4 - Add the basic code to <tt>test.cc</tt>", "d8/d99/_dev_man_using_lib.html#devman01_02_04", null ],
+        [ "Step 4 - Add the basic code to test.cc", "d8/d99/_dev_man_using_lib.html#devman01_02_04", null ],
         [ "Step 5 - Compile the code", "d8/d99/_dev_man_using_lib.html#devman01_02_05", null ]
       ] ],
       [ "Adding lua-input to library-using apps", "d8/d99/_dev_man_using_lib.html#devman01_03", [

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: CHI_TECH/ChiMath/SpatialDiscretization/FiniteVolume/CellViews/fv_cellbase.h Source File</title>
+<title>Chi-Tech: ChiTech/ChiMath/SpatialDiscretization/FiniteVolume/CellViews/fv_cellbase.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -86,37 +86,37 @@ $(document).ready(function(){initNavTree('dd/d64/fv__cellbase_8h_source.html','.
 <div class="title">fv_cellbase.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../dd/d64/fv__cellbase_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _fv_cellbase_h</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _fv_cellbase_h</span></div>
+<a href="../../dd/d64/fv__cellbase_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CELL_FVDATA_BASE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CELL_FVDATA_BASE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//######################################################### Class def</span><span class="comment"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/**Base cell class for Finite Volume Method.*/</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d5/def/class_cell_f_v_view.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/def/class_cell_f_v_view.html">CellFVView</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../dd/da9/class_cell_f_v_values.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/da9/class_cell_f_v_values.html">CellFVValues</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d5/def/class_cell_f_v_view.html#a0ea50109afe1c0cb492ae75c967ca4c9">    9</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="../../d5/def/class_cell_f_v_view.html#a0ea50109afe1c0cb492ae75c967ca4c9">dofs</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d5/def/class_cell_f_v_view.html#aa38318a1cd2419346feab80739f7adf6">   10</a></span>&#160;  <span class="keywordtype">double</span>                <a class="code" href="../../d5/def/class_cell_f_v_view.html#aa38318a1cd2419346feab80739f7adf6">volume</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d5/def/class_cell_f_v_view.html#a7a1d44de75ad424b622ab6b96041692a">   11</a></span>&#160;  std::vector&lt;double&gt;   <a class="code" href="../../d5/def/class_cell_f_v_view.html#a7a1d44de75ad424b622ab6b96041692a">face_area</a>; <span class="comment">///&lt; Actually areas</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../dd/da9/class_cell_f_v_values.html#a06a2dc65948b1f1adf7a7b8aae3e4e65">    9</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="../../dd/da9/class_cell_f_v_values.html#a06a2dc65948b1f1adf7a7b8aae3e4e65">dofs</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../dd/da9/class_cell_f_v_values.html#a60047c4f0ea8d7a66fc16b979b8217c6">   10</a></span>&#160;  <span class="keywordtype">double</span>                <a class="code" href="../../dd/da9/class_cell_f_v_values.html#a60047c4f0ea8d7a66fc16b979b8217c6">volume</a>=0.0;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../dd/da9/class_cell_f_v_values.html#ac0d92bd56abbdd3c4bca97574fc91b0d">   11</a></span>&#160;  std::vector&lt;double&gt;   <a class="code" href="../../dd/da9/class_cell_f_v_values.html#ac0d92bd56abbdd3c4bca97574fc91b0d">face_area</a> = {}; <span class="comment">///&lt; Actually areas</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d5/def/class_cell_f_v_view.html#a46019496086782d38a7d295c760ae2a5">   13</a></span>&#160;  <a class="code" href="../../d5/def/class_cell_f_v_view.html#a46019496086782d38a7d295c760ae2a5">CellFVView</a>(<span class="keywordtype">int</span> num_dofs)</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../d5/def/class_cell_f_v_view.html#a0ea50109afe1c0cb492ae75c967ca4c9">dofs</a>=num_dofs;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../dd/da9/class_cell_f_v_values.html#aa50efc5dccc4497c39976e3cbadc660c">   13</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="../../dd/da9/class_cell_f_v_values.html#aa50efc5dccc4497c39976e3cbadc660c">CellFVValues</a>(<span class="keywordtype">int</span> num_dofs) :</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="../../dd/da9/class_cell_f_v_values.html#a06a2dc65948b1f1adf7a7b8aae3e4e65">dofs</a>(num_dofs),</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../dd/da9/class_cell_f_v_values.html#ac0d92bd56abbdd3c4bca97574fc91b0d">face_area</a>({})</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {}</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_cell_f_v_view_html"><div class="ttname"><a href="../../d5/def/class_cell_f_v_view.html">CellFVView</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d64/fv__cellbase_8h_source.html#l00006">fv_cellbase.h:7</a></div></div>
-<div class="ttc" id="aclass_cell_f_v_view_html_a7a1d44de75ad424b622ab6b96041692a"><div class="ttname"><a href="../../d5/def/class_cell_f_v_view.html#a7a1d44de75ad424b622ab6b96041692a">CellFVView::face_area</a></div><div class="ttdeci">std::vector&lt; double &gt; face_area</div><div class="ttdoc">Actually areas.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d64/fv__cellbase_8h_source.html#l00011">fv_cellbase.h:11</a></div></div>
-<div class="ttc" id="aclass_cell_f_v_view_html_aa38318a1cd2419346feab80739f7adf6"><div class="ttname"><a href="../../d5/def/class_cell_f_v_view.html#aa38318a1cd2419346feab80739f7adf6">CellFVView::volume</a></div><div class="ttdeci">double volume</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d64/fv__cellbase_8h_source.html#l00010">fv_cellbase.h:10</a></div></div>
-<div class="ttc" id="aclass_cell_f_v_view_html_a0ea50109afe1c0cb492ae75c967ca4c9"><div class="ttname"><a href="../../d5/def/class_cell_f_v_view.html#a0ea50109afe1c0cb492ae75c967ca4c9">CellFVView::dofs</a></div><div class="ttdeci">int dofs</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d64/fv__cellbase_8h_source.html#l00009">fv_cellbase.h:9</a></div></div>
-<div class="ttc" id="aclass_cell_f_v_view_html_a46019496086782d38a7d295c760ae2a5"><div class="ttname"><a href="../../d5/def/class_cell_f_v_view.html#a46019496086782d38a7d295c760ae2a5">CellFVView::CellFVView</a></div><div class="ttdeci">CellFVView(int num_dofs)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d64/fv__cellbase_8h_source.html#l00013">fv_cellbase.h:13</a></div></div>
+<div class="ttc" id="aclass_cell_f_v_values_html_a06a2dc65948b1f1adf7a7b8aae3e4e65"><div class="ttname"><a href="../../dd/da9/class_cell_f_v_values.html#a06a2dc65948b1f1adf7a7b8aae3e4e65">CellFVValues::dofs</a></div><div class="ttdeci">int dofs</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d64/fv__cellbase_8h_source.html#l00009">fv_cellbase.h:9</a></div></div>
+<div class="ttc" id="aclass_cell_f_v_values_html_aa50efc5dccc4497c39976e3cbadc660c"><div class="ttname"><a href="../../dd/da9/class_cell_f_v_values.html#aa50efc5dccc4497c39976e3cbadc660c">CellFVValues::CellFVValues</a></div><div class="ttdeci">CellFVValues(int num_dofs)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d64/fv__cellbase_8h_source.html#l00013">fv_cellbase.h:13</a></div></div>
+<div class="ttc" id="aclass_cell_f_v_values_html"><div class="ttname"><a href="../../dd/da9/class_cell_f_v_values.html">CellFVValues</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d64/fv__cellbase_8h_source.html#l00006">fv_cellbase.h:7</a></div></div>
+<div class="ttc" id="aclass_cell_f_v_values_html_a60047c4f0ea8d7a66fc16b979b8217c6"><div class="ttname"><a href="../../dd/da9/class_cell_f_v_values.html#a60047c4f0ea8d7a66fc16b979b8217c6">CellFVValues::volume</a></div><div class="ttdeci">double volume</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d64/fv__cellbase_8h_source.html#l00010">fv_cellbase.h:10</a></div></div>
+<div class="ttc" id="aclass_cell_f_v_values_html_ac0d92bd56abbdd3c4bca97574fc91b0d"><div class="ttname"><a href="../../dd/da9/class_cell_f_v_values.html#ac0d92bd56abbdd3c4bca97574fc91b0d">CellFVValues::face_area</a></div><div class="ttdeci">std::vector&lt; double &gt; face_area</div><div class="ttdoc">Actually areas.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d64/fv__cellbase_8h_source.html#l00011">fv_cellbase.h:11</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_eec4d28110009ed62ffe54c00aea6a23.html">CHI_TECH</a></li><li class="navelem"><a class="el" href="../../dir_e39b13cf42129acff9b36d1e08704398.html">ChiMath</a></li><li class="navelem"><a class="el" href="../../dir_a47ca0b0afc3744e51bcb313256d8556.html">SpatialDiscretization</a></li><li class="navelem"><a class="el" href="../../dir_30b71ba52e3a7798add445aac20ac937.html">FiniteVolume</a></li><li class="navelem"><a class="el" href="../../dir_16345721e9882597acb4d95eed1f5c89.html">CellViews</a></li><li class="navelem"><a class="el" href="../../dd/d64/fv__cellbase_8h.html">fv_cellbase.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_881599471ceacbc6fd7f5107170a74cb.html">ChiTech</a></li><li class="navelem"><a class="el" href="../../dir_b38d3186440610780b535c2057083989.html">ChiMath</a></li><li class="navelem"><a class="el" href="../../dir_81f46582a39be8e66e85f29056b7e655.html">SpatialDiscretization</a></li><li class="navelem"><a class="el" href="../../dir_64a052cb1ba64c1a317ffcd443a1a577.html">FiniteVolume</a></li><li class="navelem"><a class="el" href="../../dir_5c1b92e2cf7065c8dce59efd0ce9230e.html">CellViews</a></li><li class="navelem"><a class="el" href="../../dd/d64/fv__cellbase_8h.html">fv_cellbase.h</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.19 </li>
   </ul>
 </div>

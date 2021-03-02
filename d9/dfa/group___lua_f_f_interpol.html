@@ -313,12 +313,12 @@ OPERATION = Some interpolations support operation types. See OpTypes.<br  />
 LOGICAL_VOLUME = To be followed by a handle to a logical volume to be used by the interpolator.<br  />
 </p><h3>OpTypes</h3>
 <p>Basic operations are volume sum, volume average or volume max. The volume sum is computed from </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ Sum = \sum_k \sum_i u_i \int_V N_i .dV. \]" src="../../form_93.png"/>
+<img class="formulaDsp" alt="\[ Sum = \sum_k \sum_i u_i \int_V N_i .dV. \]" src="../../form_16.png" width="179" height="41"/>
 </p>
 <p> The volume average is computed from </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ Avg = \frac{\sum_k \sum_i u_i \int_V N_i .dV}{\sum_k \sum_i \int_V N_i .dV} \]" src="../../form_94.png"/>
+<img class="formulaDsp" alt="\[ Avg = \frac{\sum_k \sum_i u_i \int_V N_i .dV}{\sum_k \sum_i \int_V N_i .dV} \]" src="../../form_17.png" width="176" height="41"/>
 </p>
-<p> The volume max is simply <img class="formulaInl" alt="$ max_{k,i}(u_i) $" src="../../form_95.png"/>.<br  />
+<p> The volume max is simply <img class="formulaInl" alt="$ max_{k,i}(u_i) $" src="../../form_18.png" width="71" height="17"/>.<br  />
 <br  />
 OP_SUM<br  />
 For volume interpolations, computes the volume integral.<br  />
@@ -332,7 +332,7 @@ A modified version of these operations are also available. Instead of OP_SUM, OP
 <div class="line"> ret_val = 0.0;   --Or some computation</div>
 <div class="line"> <span class="keywordflow">return</span> ret_val</div>
 <div class="line"><a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a77363b7e6cc91ab46a7379a6be8a31d0">end</a></div>
-</div><!-- fragment --><p> This code will be called to return a value <img class="formulaInl" alt="$ f(u_i) $" src="../../form_96.png"/> to be used instead of the field function <img class="formulaInl" alt="$ u_i $" src="../../form_97.png"/>.<br  />
+</div><!-- fragment --><p> This code will be called to return a value <img class="formulaInl" alt="$ f(u_i) $" src="../../form_19.png" width="33" height="17"/> to be used instead of the field function <img class="formulaInl" alt="$ u_i $" src="../../form_20.png" width="14" height="11"/>.<br  />
 Example: </p><div class="fragment"><div class="line">xwing=2.0</div>
 <div class="line">function IntegrateMaterialVolume(ff_value,mat_id)</div>
 <div class="line">    <span class="keywordflow">return</span> xwing</div>

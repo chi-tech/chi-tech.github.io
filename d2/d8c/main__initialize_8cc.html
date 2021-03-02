@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: Modules/DiffusionSolver/Solver/main_initialize.cc File Reference</title>
+<title>Chi-Tech: ChiModules/DiffusionSolver/Solver/main_initialize.cc File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -83,27 +83,86 @@ $(document).ready(function(){initNavTree('d2/d8c/main__initialize_8cc.html','../
 
 <div class="header">
   <div class="summary">
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">main_initialize.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>&quot;</code><br />
-<code>#include &lt;<a class="el" href="../../da/de5/chi__timer_8h_source.html">ChiTimer/chi_timer.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d6/d57/chi__mpi_8h_source.html">chi_mpi.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../da/de5/chi__timer_8h_source.html">ChiTimer/chi_timer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/d57/chi__mpi_8h_source.html">chi_mpi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d54/chi__physics_8h_source.html">ChiPhysics/chi_physics.h</a>&quot;</code><br />
 </div>
 <p><a href="../../d2/d8c/main__initialize_8cc_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a46756c3c165654f8bc73ce66b11f20cc"><td class="memItemLeft" align="right" valign="top">PetscErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/main__initialize_8cc.html#a46756c3c165654f8bc73ce66b11f20cc">DiffusionConvergenceTestNPT</a> (KSP ksp, PetscInt n, PetscReal rnorm, KSPConvergedReason *convergedReason, void *monitordestroy)</td></tr>
+<tr class="separator:a46756c3c165654f8bc73ce66b11f20cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:adc1b2db4f75dab650895a0e0ec8e748e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d2e/class_chi_timer.html">ChiTimer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/main__initialize_8cc.html#adc1b2db4f75dab650895a0e0ec8e748e">chi_program_timer</a></td></tr>
+<tr class="separator:adc1b2db4f75dab650895a0e0ec8e748e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff18523449a2997a122381af7ab97f4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/main__initialize_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a></td></tr>
 <tr class="separator:aff18523449a2997a122381af7ab97f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5307d1d2e96bfccf9876352dfa7d0869"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d1a/class_chi_log.html">ChiLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/main__initialize_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></td></tr>
 <tr class="separator:a5307d1d2e96bfccf9876352dfa7d0869"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc1b2db4f75dab650895a0e0ec8e748e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d2e/class_chi_timer.html">ChiTimer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/main__initialize_8cc.html#adc1b2db4f75dab650895a0e0ec8e748e">chi_program_timer</a></td></tr>
-<tr class="separator:adc1b2db4f75dab650895a0e0ec8e748e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87694d946c53737d94052d065be89b53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/main__initialize_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a></td></tr>
+<tr class="separator:a87694d946c53737d94052d065be89b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a46756c3c165654f8bc73ce66b11f20cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46756c3c165654f8bc73ce66b11f20cc">&#9670;&nbsp;</a></span>DiffusionConvergenceTestNPT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PetscErrorCode DiffusionConvergenceTestNPT </td>
+          <td>(</td>
+          <td class="paramtype">KSP&#160;</td>
+          <td class="paramname"><em>ksp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PetscInt&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PetscReal&#160;</td>
+          <td class="paramname"><em>rnorm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KSPConvergedReason *&#160;</td>
+          <td class="paramname"><em>convergedReason</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>monitordestroy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Customized convergence test. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d8c/main__initialize_8cc_source.html#l00243">243</a> of file <a class="el" href="../../d2/d8c/main__initialize_8cc_source.html">main_initialize.cc</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="a5307d1d2e96bfccf9876352dfa7d0869"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5307d1d2e96bfccf9876352dfa7d0869">&#9670;&nbsp;</a></span>chi_log</h2>
@@ -125,7 +184,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00023">23</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">29</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -149,7 +208,31 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00022">22</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00028">28</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+
+</div>
+</div>
+<a id="a87694d946c53737d94052d065be89b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87694d946c53737d94052d065be89b53">&#9670;&nbsp;</a></span>chi_physics_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a>&amp; chi_physics_handler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00030">30</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -173,7 +256,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00030">30</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00032">32</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -182,7 +265,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_f2541a3b18981391fa76fac5599e978a.html">Modules</a></li><li class="navelem"><a class="el" href="../../dir_8b4456616e8a49ed8cc79c1432f8808e.html">DiffusionSolver</a></li><li class="navelem"><a class="el" href="../../dir_ac7deac65824d3f1de4e3af97f07d09f.html">Solver</a></li><li class="navelem"><a class="el" href="../../d2/d8c/main__initialize_8cc.html">main_initialize.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_6650a3b49e3ce036dc343a3bf3bf0561.html">ChiModules</a></li><li class="navelem"><a class="el" href="../../dir_e3e88f4a3b9b2457a51c28026e55fe6a.html">DiffusionSolver</a></li><li class="navelem"><a class="el" href="../../dir_397a1c67f3e8a2cf64ae3ac7e30ede9b.html">Solver</a></li><li class="navelem"><a class="el" href="../../d2/d8c/main__initialize_8cc.html">main_initialize.cc</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.19 </li>
   </ul>
 </div>

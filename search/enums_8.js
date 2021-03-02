@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operationtype_4547',['OperationType',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95',1,'chi_physics']]]
+  ['quadratureorder_4817',['QuadratureOrder',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9',1,'chi_math']]],
+  ['quadraturepointoptimization_4818',['QuadraturePointOptimization',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ab4833fb33e746caf98bb8c79c6353807',1,'chi_math::SimplifiedLDFESQ::Quadrature']]]
 ];

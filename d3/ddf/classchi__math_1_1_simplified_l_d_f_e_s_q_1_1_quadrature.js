@@ -6,6 +6,7 @@ var classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature =
       [ "ISOLATED", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ab4833fb33e746caf98bb8c79c6353807a5c8781cb597c806ca9f578e950a4b49f", null ]
     ] ],
     [ "Quadrature", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a9a999c43c61d74a88a6ee458bf7d0a2f", null ],
+    [ "~Quadrature", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#af1ce444c8f95a1651155db6e1dcd5173", null ],
     [ "ComputeSphericalQuadrilateralArea", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a25901a8be8928330eb5b1b8fe475ab73", null ],
     [ "CopyToAllOctants", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a585b4a2472ff056bec2ba26db8ccec3e", null ],
     [ "DevelopSQLDFEValues", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a115d9c457c24cf8423c7d45d83ef107d", null ],
@@ -13,7 +14,7 @@ var classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature =
     [ "GenerateDiagonalSpacings", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#afd2f8758ec24347fd96e08d8fce0417c", null ],
     [ "GenerateInitialRefinement", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a569427c79ff38e718cbe7e25fc4f1f07", null ],
     [ "GenerateReferenceFaceVertices", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a31c59bb62fb597a79a4104a0dd65de86", null ],
-    [ "IntegrateLDFEShapeFunctions", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a3ada3d7592485a5619c5dd546b9eb37c", null ],
+    [ "IntegrateLDFEShapeFunctions", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ae72c12182f86728800fe8be362a8aaba", null ],
     [ "IsolatedQPOptimization", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#adfc5ad9d25b6b52b642d8ab1bb5ed8dd", null ],
     [ "LocallyRefine", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a12e9c009c10b6c504cc634a295c9909e", null ],
     [ "PopulateQuadratureAbscissae", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a921e33188a6696a764535e33bfdf3724", null ],

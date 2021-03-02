@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: CHI_TECH/ChiPhysics/SolverBase/chi_solver.h Source File</title>
+<title>Chi-Tech: ChiTech/ChiPhysics/SolverBase/chi_solver.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -86,8 +86,8 @@ $(document).ready(function(){initNavTree('d7/d54/chi__solver_8h_source.html','..
 <div class="title">chi_solver.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d7/d54/chi__solver_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _chi_solver_h</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _chi_solver_h</span></div>
+<a href="../../d7/d54/chi__solver_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CHI_PHYSICS_SOLVER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CHI_PHYSICS_SOLVER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&lt;iostream&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../chi_physics_namespace.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../ChiMesh/Region/chi_region.h&quot;</span></div>
@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('d7/d54/chi__solver_8h_source.html','..
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d9/d3a/classchi__physics_1_1_solver.html#a1e88bba35bb5b67908a64fe5944db62a">   17</a></span>&#160;  std::vector&lt;chi_mesh::Region*&gt;           <a class="code" href="../../d9/d3a/classchi__physics_1_1_solver.html#a1e88bba35bb5b67908a64fe5944db62a">regions</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d9/d3a/classchi__physics_1_1_solver.html#ae1ded02d6ec7130e202279b12d3b8292">   18</a></span>&#160;  std::vector&lt;chi_physics::FieldFunction*&gt; <a class="code" href="../../d9/d3a/classchi__physics_1_1_solver.html#ae1ded02d6ec7130e202279b12d3b8292">field_functions</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d9/d3a/classchi__physics_1_1_solver.html#ad89e44b9876d6f1158a5f53f29822a1f">   18</a></span>&#160;  std::vector&lt;std::shared_ptr&lt;FieldFunction&gt;&gt; <a class="code" href="../../d9/d3a/classchi__physics_1_1_solver.html#ad89e44b9876d6f1158a5f53f29822a1f">field_functions</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d9/d3a/classchi__physics_1_1_solver.html#a6ad4b37d7da845300fb6c80d11fa1b3b">   21</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="../../d9/d3a/classchi__physics_1_1_solver.html#a6ad4b37d7da845300fb6c80d11fa1b3b">~Solver</a>() {};</div>
@@ -120,17 +120,17 @@ $(document).ready(function(){initNavTree('d7/d54/chi__solver_8h_source.html','..
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclasschi__physics_1_1_solver_html"><div class="ttname"><a href="../../d9/d3a/classchi__physics_1_1_solver.html">chi_physics::Solver</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/chi__solver_8h_source.html#l00014">chi_solver.h:15</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_solver_html_ae1ded02d6ec7130e202279b12d3b8292"><div class="ttname"><a href="../../d9/d3a/classchi__physics_1_1_solver.html#ae1ded02d6ec7130e202279b12d3b8292">chi_physics::Solver::field_functions</a></div><div class="ttdeci">std::vector&lt; chi_physics::FieldFunction * &gt; field_functions</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/chi__solver_8h_source.html#l00018">chi_solver.h:18</a></div></div>
 <div class="ttc" id="aclasschi__physics_1_1_solver_html_aa416dcd9ba22712272ebd0ec4414046d"><div class="ttname"><a href="../../d9/d3a/classchi__physics_1_1_solver.html#aa416dcd9ba22712272ebd0ec4414046d">chi_physics::Solver::Execute</a></div><div class="ttdeci">virtual void Execute()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d68/chi__solver__02__execute_8cc_source.html#l00003">chi_solver_02_execute.cc:3</a></div></div>
 <div class="ttc" id="aclasschi__physics_1_1_solver_html_a6ad4b37d7da845300fb6c80d11fa1b3b"><div class="ttname"><a href="../../d9/d3a/classchi__physics_1_1_solver.html#a6ad4b37d7da845300fb6c80d11fa1b3b">chi_physics::Solver::~Solver</a></div><div class="ttdeci">virtual ~Solver()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/chi__solver_8h_source.html#l00021">chi_solver.h:21</a></div></div>
 <div class="ttc" id="afieldfunction_8h_html"><div class="ttname"><a href="../../d1/db1/fieldfunction_8h.html">fieldfunction.h</a></div></div>
 <div class="ttc" id="aclasschi__physics_1_1_solver_html_a4ed879cea25e00e88651995de0a34328"><div class="ttname"><a href="../../d9/d3a/classchi__physics_1_1_solver.html#a4ed879cea25e00e88651995de0a34328">chi_physics::Solver::AddRegion</a></div><div class="ttdeci">void AddRegion(chi_mesh::Region *region)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d87/chi__solver__01__addregion_8cc_source.html#l00006">chi_solver_01_addregion.cc:6</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_region_html"><div class="ttname"><a href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d07/chi__region_8h_source.html#l00010">chi_region.h:11</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_solver_html_ad89e44b9876d6f1158a5f53f29822a1f"><div class="ttname"><a href="../../d9/d3a/classchi__physics_1_1_solver.html#ad89e44b9876d6f1158a5f53f29822a1f">chi_physics::Solver::field_functions</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; FieldFunction &gt; &gt; field_functions</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/chi__solver_8h_source.html#l00018">chi_solver.h:18</a></div></div>
 <div class="ttc" id="aclasschi__physics_1_1_solver_html_a1e88bba35bb5b67908a64fe5944db62a"><div class="ttname"><a href="../../d9/d3a/classchi__physics_1_1_solver.html#a1e88bba35bb5b67908a64fe5944db62a">chi_physics::Solver::regions</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Region * &gt; regions</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/chi__solver_8h_source.html#l00017">chi_solver.h:17</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_eec4d28110009ed62ffe54c00aea6a23.html">CHI_TECH</a></li><li class="navelem"><a class="el" href="../../dir_5b71995b7c749f54258bfeab247bf2b5.html">ChiPhysics</a></li><li class="navelem"><a class="el" href="../../dir_da54652196cf032e73fa531c22fe1163.html">SolverBase</a></li><li class="navelem"><a class="el" href="../../d7/d54/chi__solver_8h.html">chi_solver.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_881599471ceacbc6fd7f5107170a74cb.html">ChiTech</a></li><li class="navelem"><a class="el" href="../../dir_258e84e146fcb53e5484c5ffe0f5b2ba.html">ChiPhysics</a></li><li class="navelem"><a class="el" href="../../dir_065df3355f53f48c0963aa5e45b49185.html">SolverBase</a></li><li class="navelem"><a class="el" href="../../d7/d54/chi__solver_8h.html">chi_solver.h</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.19 </li>
   </ul>
 </div>

@@ -110,7 +110,7 @@ Step 3 - Edit the cmake file to connect to Chi-Tech</h2>
 </ul>
 <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.2)</div>
 <div class="line"> </div>
-<div class="line">set(TARGET test)</div>
+<div class="line">set(TARGET test_app)</div>
 <div class="line">project(${TARGET} C CXX)</div>
 <div class="line">set(CHI_TECH_DIR <span class="stringliteral">&quot;~/Desktop/ChiTech/chi-tech&quot;</span>)</div>
 <div class="line">include(<span class="stringliteral">&quot;${CHI_TECH_DIR}/CHI_RESOURCES/Macros/Downstream.cmake&quot;</span>)</div>
@@ -118,24 +118,30 @@ Step 3 - Edit the cmake file to connect to Chi-Tech</h2>
 <div class="line"><a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a> (GLOB_RECURSE SOURCES &quot;*.cc&quot;)</div>
 <div class="line">add_executable(${TARGET} <span class="stringliteral">&quot;${SOURCES}&quot;</span>)</div>
 <div class="line">target_link_libraries(${TARGET} ${CHI_LIBS})</div>
-</div><!-- fragment --><p>The <code>set(TARGET test)</code> line sets the name of the eventual executable to be used. You can use any name other than <code>test</code>. The <code>set(CHI_TECH_DIR "~/Desktop/ChiTech/chi-tech")</code> line sets the directory of an installed chi-tech. Change this line to point to the appropriate directory. The <code>include</code> statement allows you to connect to all the resources connected to Chi-Tech, including lua, PETSc, etc. You will have to find the location where you compiled Chi-Tech in order to properly specify the location of <code>Downstream.cmake</code>. Once this is properly specified, the cmake-variable <code>CHI_LIBS</code> will be defined and the necessary include-files will be usable. The line <code>file (GLOB_RECURSE SOURCES "*.cc")</code> adds all <code>.cc</code> files, in the current directory, to the list of sources to compile. To specify specific source-file names use <code>set(SOURCES "test.cc")</code>. Alternatively cmake functionality can be googled to determine how to add sub-directories.</p>
+</div><!-- fragment --><p>The <code>set(TARGET test_app)</code> line sets the name of the eventual executable to be used. You can use any name other than <code>test</code>. The <code>set(CHI_TECH_DIR "~/Desktop/ChiTech/chi-tech")</code> line sets the directory of an installed chi-tech. Change this line to point to the appropriate directory. The <code>include</code> statement allows you to connect to all the resources connected to Chi-Tech, including lua, PETSc, etc. You will have to find the location where you compiled Chi-Tech in order to properly specify the location of <code>Downstream.cmake</code>. Once this is properly specified, the cmake-variable <code>CHI_LIBS</code> will be defined and the necessary include-files will be usable. The line <code>file (GLOB_RECURSE SOURCES "*.cc")</code> adds all <code>.cc</code> files, in the current directory, to the list of sources to compile. To specify specific source-file names use <code>set(SOURCES "test.cc")</code>. Alternatively cmake functionality can be googled to determine how to add sub-directories.</p>
 <h2>_</h2>
 <h2><a class="anchor" id="devman01_02_04"></a>
-Step 4 - Add the basic code to &lt;tt&gt;test.cc&lt;/tt&gt;</h2>
+Step 4 - Add the basic code to test.cc</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code" href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="../../d5/d49/class_chi_tech.html#a3c2fb8f53da8e920fbdbc415d299f328">ChiTech::Initialize</a>(argc,argv);</div>
+<div class="line">    <a class="code" href="../../d5/d49/class_chi_tech.html#a9f2a0ed92a944d5a4b53c8da6586d518">ChiTech::Initialize</a>(argc,argv);</div>
+<div class="line">    <a class="code" href="../../d5/d49/class_chi_tech.html#a9a02fd9d4c5a0cfc28bc411878e7f1a8">ChiTech::RunBatch</a>(argc, argv);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../d3/dd3/chi__runtime_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a> = <a class="code" href="../../d8/d1a/class_chi_log.html#ab08e65db7cd903188b2fe062b183044f">ChiLog::GetInstance</a>();</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="../../d3/dd3/chi__runtime_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Hello World!&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">//We will add code here</span></div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d49/class_chi_tech.html#a79c2e4d177303e57e3813a87172421c5">ChiTech::Finalize</a>();</div>
+<div class="line">    <a class="code" href="../../d5/d49/class_chi_tech.html#a7afdd6e3a35f7a1dd6cf903b3c5546ad">ChiTech::Finalize</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>This code is the minimum needed to have everything available in Chi-Tech. The basic namespace access is provided via <code>#include "chi_runtime.h"</code></p>
-<p>MPI initialization and PETSc initialization is handled via the call to <code><a class="el" href="../../d5/d49/class_chi_tech.html#a3c2fb8f53da8e920fbdbc415d299f328">ChiTech::Initialize()</a></code>.</p>
-<p>Finally all MPI and PETSc related items are destroyed via the call to <code><a class="el" href="../../d5/d49/class_chi_tech.html#a79c2e4d177303e57e3813a87172421c5">ChiTech::Finalize()</a></code>.</p>
+<p>MPI initialization and PETSc initialization is handled via the call to <code><a class="el" href="../../d5/d49/class_chi_tech.html#a9f2a0ed92a944d5a4b53c8da6586d518">ChiTech::Initialize()</a></code>.</p>
+<p>Finally all MPI and PETSc related items are destroyed via the call to <code><a class="el" href="../../d5/d49/class_chi_tech.html#a7afdd6e3a35f7a1dd6cf903b3c5546ad">ChiTech::Finalize()</a></code>.</p>
 <h2>_</h2>
 <h2><a class="anchor" id="devman01_02_05"></a>
 Step 5 - Compile the code</h2>
@@ -164,9 +170,9 @@ Step 2 - Create a source file</h2>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> chiPrintStatus(lua_State *L)</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; log = <a class="code" href="../../d8/d1a/class_chi_log.html#af5c2dcd4bf197d44b12c70e8359b0bd0">ChiLog::GetInstance</a>();</div>
+<div class="line">    <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; log = <a class="code" href="../../d8/d1a/class_chi_log.html#ab08e65db7cd903188b2fe062b183044f">ChiLog::GetInstance</a>();</div>
 <div class="line"> </div>
-<div class="line">    log.<a class="code" href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; <span class="stringliteral">&quot;Hello from here&quot;</span>;</div>
+<div class="line">    log.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; <span class="stringliteral">&quot;Hello from here&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
@@ -201,21 +207,21 @@ Step 4 - Modify test.cc to register the lua function</h2>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code" href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="../../d5/d49/class_chi_tech.html#a3c2fb8f53da8e920fbdbc415d299f328">ChiTech::Initialize</a>(argc,argv);</div>
+<div class="line">    <a class="code" href="../../d5/d49/class_chi_tech.html#a9f2a0ed92a944d5a4b53c8da6586d518">ChiTech::Initialize</a>(argc,argv);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../dd/d62/class_chi_console.html">ChiConsole</a>&amp; console = <a class="code" href="../../dd/d62/class_chi_console.html#aa86fe2fd17d4a190ae2a689d20285fdb">ChiConsole::GetInstance</a>();</div>
+<div class="line">    <a class="code" href="../../dd/d62/class_chi_console.html">ChiConsole</a>&amp; console = <a class="code" href="../../dd/d62/class_chi_console.html#af3ab1f9710d7bb44d1ff42afdeb44897">ChiConsole::GetInstance</a>();</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">auto</span> L = console.<a class="code" href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">consoleState</a>;</div>
 <div class="line"><span class="preprocessor">    #include &quot;ChiMacros/lua_register_macro.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a>(chiPrintStatus);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d5/d49/class_chi_tech.html#a79c2e4d177303e57e3813a87172421c5">ChiTech::Finalize</a>();</div>
+<div class="line">    <a class="code" href="../../d5/d49/class_chi_tech.html#a7afdd6e3a35f7a1dd6cf903b3c5546ad">ChiTech::Finalize</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>Notice here that we firstly included the header file for the <code><a class="el" href="../../dd/d62/class_chi_console.html">ChiConsole</a></code> object. This is the object that allows us to connect to the lua state. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">ChiConsole/chi_console.h</a>&quot;</span></div>
 </div><!-- fragment --><p>Next we obtained a reference to the console through</p>
-<div class="fragment"><div class="line"><a class="code" href="../../dd/d62/class_chi_console.html">ChiConsole</a>&amp; console = <a class="code" href="../../dd/d62/class_chi_console.html#aa86fe2fd17d4a190ae2a689d20285fdb">ChiConsole::GetInstance</a>();</div>
+<div class="fragment"><div class="line"><a class="code" href="../../dd/d62/class_chi_console.html">ChiConsole</a>&amp; console = <a class="code" href="../../dd/d62/class_chi_console.html#af3ab1f9710d7bb44d1ff42afdeb44897">ChiConsole::GetInstance</a>();</div>
 </div><!-- fragment --><p>We then setup the variable <code>L</code>, which is needed by the macro file <code>ChiMacros/lua_register_macro.h</code>.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> L = console.<a class="code" href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">consoleState</a>;</div>
 <div class="line"><span class="preprocessor">#include &quot;ChiMacros/lua_register_macro.h&quot;</span></div>
@@ -226,19 +232,21 @@ Step 4 - Modify test.cc to register the lua function</h2>
 </div><!-- doc-content -->
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a></div><div class="ttdeci">@ LOG_0</div><div class="ttdoc">Used only for location 0.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00009">chi_log.h:9</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_a5f227385fe906aad93de74eb1e756d64"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00029">chi_log.cc:29</a></div></div>
 <div class="ttc" id="aclass_chi_console_html_a6b03e4088cb1d5840f05c34382e72dbc"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">ChiConsole::consoleState</a></div><div class="ttdeci">lua_State * consoleState</div><div class="ttdoc">Pointer to lua console state.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00020">chi_console.h:20</a></div></div>
 <div class="ttc" id="aclass_chi_console_html"><div class="ttname"><a href="../../dd/d62/class_chi_console.html">ChiConsole</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00017">chi_console.h:18</a></div></div>
-<div class="ttc" id="aclass_chi_tech_html_a3c2fb8f53da8e920fbdbc415d299f328"><div class="ttname"><a href="../../d5/d49/class_chi_tech.html#a3c2fb8f53da8e920fbdbc415d299f328">ChiTech::Initialize</a></div><div class="ttdeci">static int Initialize(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00100">chi_runtime.cc:100</a></div></div>
+<div class="ttc" id="aclass_chi_tech_html_a7afdd6e3a35f7a1dd6cf903b3c5546ad"><div class="ttname"><a href="../../d5/d49/class_chi_tech.html#a7afdd6e3a35f7a1dd6cf903b3c5546ad">ChiTech::Finalize</a></div><div class="ttdeci">static void Finalize()</div></div>
 <div class="ttc" id="alua__register_8txt_html_a3c11846e61db5cc62fad5bad66797ea8"><div class="ttname"><a href="../../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8">RegisterFunction</a></div><div class="ttdeci">#define RegisterFunction(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbe/lua__register_8txt_source.html#l00001">lua_register.txt:1</a></div></div>
+<div class="ttc" id="aclass_chi_log_html_ab08e65db7cd903188b2fe062b183044f"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#ab08e65db7cd903188b2fe062b183044f">ChiLog::GetInstance</a></div><div class="ttdeci">static ChiLog &amp; GetInstance() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00206">chi_log.h:206</a></div></div>
+<div class="ttc" id="aclass_chi_tech_html_a9a02fd9d4c5a0cfc28bc411878e7f1a8"><div class="ttname"><a href="../../d5/d49/class_chi_tech.html#a9a02fd9d4c5a0cfc28bc411878e7f1a8">ChiTech::RunBatch</a></div><div class="ttdeci">static int RunBatch(int argc, char **argv)</div></div>
 <div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
-<div class="ttc" id="achi__tech__main_8cc_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/chi__tech__main_8cc_source.html#l00012">chi_tech_main.cc:12</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_af5c2dcd4bf197d44b12c70e8359b0bd0"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#af5c2dcd4bf197d44b12c70e8359b0bd0">ChiLog::GetInstance</a></div><div class="ttdeci">static ChiLog &amp; GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00206">chi_log.h:206</a></div></div>
+<div class="ttc" id="aclass_chi_tech_html_a9f2a0ed92a944d5a4b53c8da6586d518"><div class="ttname"><a href="../../d5/d49/class_chi_tech.html#a9f2a0ed92a944d5a4b53c8da6586d518">ChiTech::Initialize</a></div><div class="ttdeci">static int Initialize(int argc, char **argv)</div></div>
+<div class="ttc" id="aclass_chi_log_html_ac2d1869abb6b7dd125a89ea20b977dbc"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00029">chi_log.cc:29</a></div></div>
+<div class="ttc" id="achi__tech__main_8cc_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/chi__tech__main_8cc_source.html#l00010">chi_tech_main.cc:10</a></div></div>
 <div class="ttc" id="achi__console_8h_html"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html">chi_console.h</a></div></div>
 <div class="ttc" id="anamespace_z_compile_and_run_html_a3f5f620160c2772d4cf69ca3cbb34eb4"><div class="ttname"><a href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">ZCompileAndRun.file</a></div><div class="ttdeci">file</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4d/_z_compile_and_run_8py_source.html#l00034">ZCompileAndRun.py:34</a></div></div>
-<div class="ttc" id="aclass_chi_tech_html_a79c2e4d177303e57e3813a87172421c5"><div class="ttname"><a href="../../d5/d49/class_chi_tech.html#a79c2e4d177303e57e3813a87172421c5">ChiTech::Finalize</a></div><div class="ttdeci">static void Finalize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00124">chi_runtime.cc:124</a></div></div>
-<div class="ttc" id="aclass_chi_console_html_aa86fe2fd17d4a190ae2a689d20285fdb"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#aa86fe2fd17d4a190ae2a689d20285fdb">ChiConsole::GetInstance</a></div><div class="ttdeci">static ChiConsole &amp; GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00034">chi_console.h:34</a></div></div>
-<div class="ttc" id="aclass_chi_tech_html"><div class="ttname"><a href="../../d5/d49/class_chi_tech.html">ChiTech</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00005">chi_runtime.h:6</a></div></div>
+<div class="ttc" id="achi__runtime_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d3/dd3/chi__runtime_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
+<div class="ttc" id="aclass_chi_console_html_af3ab1f9710d7bb44d1ff42afdeb44897"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#af3ab1f9710d7bb44d1ff42afdeb44897">ChiConsole::GetInstance</a></div><div class="ttdeci">static ChiConsole &amp; GetInstance() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00036">chi_console.h:36</a></div></div>
+<div class="ttc" id="aclass_chi_tech_html"><div class="ttname"><a href="../../d5/d49/class_chi_tech.html">ChiTech</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00013">chi_runtime.h:14</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

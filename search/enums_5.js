@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fieldfunctiontype_4544',['FieldFunctionType',['../d6/d5f/namespacechi__physics.html#adcd4adc1742c58506768cf73b50d1086',1,'chi_physics']]]
+  ['log_5flvl_4812',['LOG_LVL',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405',1,'chi_log.h']]]
 ];

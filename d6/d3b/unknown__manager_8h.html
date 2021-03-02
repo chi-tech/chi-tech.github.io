@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: CHI_TECH/ChiMath/UnknownManager/unknown_manager.h File Reference</title>
+<title>Chi-Tech: ChiTech/ChiMath/UnknownManager/unknown_manager.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('d6/d3b/unknown__manager_8h.html','../.
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 </div>
 <p><a href="../../d6/d3b/unknown__manager_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -100,14 +101,6 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html">chi_math::UnknownManager::Unknown</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dbb/classchi__math_1_1_unknown_manager_1_1_scalar_unknown.html">chi_math::UnknownManager::ScalarUnknown</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0d/classchi__math_1_1_unknown_manager_1_1_vector2_unknown.html">chi_math::UnknownManager::Vector2Unknown</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc0/classchi__math_1_1_unknown_manager_1_1_vector3_unknown.html">chi_math::UnknownManager::Vector3Unknown</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d6d/classchi__math_1_1_unknown_manager_1_1_vector_n_unknown.html">chi_math::UnknownManager::VectorNUnknown</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -127,17 +120,17 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ad4724873fa5ae74b39c4657aa4f53d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4d14dccd92db660290242a7519ebb6c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#aa4d14dccd92db660290242a7519ebb6c">chi_math::DOFStorageType</a> { <a class="el" href="../../dc/d58/namespacechi__math.html#aa4d14dccd92db660290242a7519ebb6cad0a56035f3937389f4e549d396da1805">chi_math::DOFStorageType::NODAL</a> = 1, 
-<a class="el" href="../../dc/d58/namespacechi__math.html#aa4d14dccd92db660290242a7519ebb6ca4d34f53389ed7f28ca91fc31ea360a66">chi_math::DOFStorageType::BLOCK</a> = 2
+<tr class="memitem:a863c3eb4ef311ca7cd86c5e26f89f44c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a863c3eb4ef311ca7cd86c5e26f89f44c">chi_math::UnknownStorageType</a> { <a class="el" href="../../dc/d58/namespacechi__math.html#a863c3eb4ef311ca7cd86c5e26f89f44cad0a56035f3937389f4e549d396da1805">chi_math::UnknownStorageType::NODAL</a> = 1, 
+<a class="el" href="../../dc/d58/namespacechi__math.html#a863c3eb4ef311ca7cd86c5e26f89f44ca4d34f53389ed7f28ca91fc31ea360a66">chi_math::UnknownStorageType::BLOCK</a> = 2
  }</td></tr>
-<tr class="separator:aa4d14dccd92db660290242a7519ebb6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a863c3eb4ef311ca7cd86c5e26f89f44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_eec4d28110009ed62ffe54c00aea6a23.html">CHI_TECH</a></li><li class="navelem"><a class="el" href="../../dir_e39b13cf42129acff9b36d1e08704398.html">ChiMath</a></li><li class="navelem"><a class="el" href="../../dir_38b5a92f7fdf24cc1e72511602b320f4.html">UnknownManager</a></li><li class="navelem"><a class="el" href="../../d6/d3b/unknown__manager_8h.html">unknown_manager.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_881599471ceacbc6fd7f5107170a74cb.html">ChiTech</a></li><li class="navelem"><a class="el" href="../../dir_b38d3186440610780b535c2057083989.html">ChiMath</a></li><li class="navelem"><a class="el" href="../../dir_2d73e8d7e53ad93fe860b8888eb7adea.html">UnknownManager</a></li><li class="navelem"><a class="el" href="../../d6/d3b/unknown__manager_8h.html">unknown_manager.h</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.19 </li>
   </ul>
 </div>

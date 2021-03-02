@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: CHI_TECH/ChiConsole/chi_console_flushconsole.cpp Source File</title>
+<title>Chi-Tech: ChiTech/ChiConsole/chi_console_flushconsole.cpp Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -99,23 +99,25 @@ $(document).ready(function(){initNavTree('d2/dfd/chi__console__flushconsole_8cpp
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* This function sends the commands contained in the input buffer to</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">the lua state from where it is executed.</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../dd/d62/class_chi_console.html#aabfd9f0b7337efc789a016033367a95c">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d62/class_chi_console.html#aabfd9f0b7337efc789a016033367a95c">ChiConsole::flushConsole</a>()</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../dd/d62/class_chi_console.html#ae7e793d07b3983b9874befabc449c600">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d62/class_chi_console.html#ae7e793d07b3983b9874befabc449c600">ChiConsole::FlushConsole</a>()</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; command : <a class="code" href="../../dd/d62/class_chi_console.html#af60522be685265d81908d12c4d907472">command_buffer</a>)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    luaL_dostring(<a class="code" href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">consoleState</a>, command.c_str());</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_chi_console_html_a6b03e4088cb1d5840f05c34382e72dbc"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">ChiConsole::consoleState</a></div><div class="ttdeci">lua_State * consoleState</div><div class="ttdoc">Pointer to lua console state.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00020">chi_console.h:20</a></div></div>
 <div class="ttc" id="aclass_chi_physics_html"><div class="ttname"><a href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d54/chi__physics_8h_source.html#l00014">chi_physics.h:15</a></div></div>
-<div class="ttc" id="achi__console__flushconsole_8cpp_html_adc1b2db4f75dab650895a0e0ec8e748e"><div class="ttname"><a href="../../d2/dfd/chi__console__flushconsole_8cpp.html#adc1b2db4f75dab650895a0e0ec8e748e">chi_program_timer</a></div><div class="ttdeci">ChiTimer chi_program_timer</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00030">chi_runtime.cc:30</a></div></div>
-<div class="ttc" id="aclass_chi_console_html_aabfd9f0b7337efc789a016033367a95c"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#aabfd9f0b7337efc789a016033367a95c">ChiConsole::flushConsole</a></div><div class="ttdeci">void flushConsole()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfd/chi__console__flushconsole_8cpp_source.html#l00014">chi_console_flushconsole.cpp:14</a></div></div>
+<div class="ttc" id="achi__console__flushconsole_8cpp_html_adc1b2db4f75dab650895a0e0ec8e748e"><div class="ttname"><a href="../../d2/dfd/chi__console__flushconsole_8cpp.html#adc1b2db4f75dab650895a0e0ec8e748e">chi_program_timer</a></div><div class="ttdeci">ChiTimer chi_program_timer</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00032">chi_runtime.cc:32</a></div></div>
+<div class="ttc" id="aclass_chi_console_html_af60522be685265d81908d12c4d907472"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#af60522be685265d81908d12c4d907472">ChiConsole::command_buffer</a></div><div class="ttdeci">std::vector&lt; std::string &gt; command_buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00029">chi_console.h:29</a></div></div>
 <div class="ttc" id="achi__console_8h_html"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html">chi_console.h</a></div></div>
-<div class="ttc" id="achi__console__flushconsole_8cpp_html_a87694d946c53737d94052d065be89b53"><div class="ttname"><a href="../../d2/dfd/chi__console__flushconsole_8cpp.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a></div><div class="ttdeci">ChiPhysics &amp; chi_physics_handler</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00024">chi_runtime.cc:24</a></div></div>
+<div class="ttc" id="aclass_chi_console_html_ae7e793d07b3983b9874befabc449c600"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#ae7e793d07b3983b9874befabc449c600">ChiConsole::FlushConsole</a></div><div class="ttdeci">void FlushConsole()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dfd/chi__console__flushconsole_8cpp_source.html#l00014">chi_console_flushconsole.cpp:14</a></div></div>
+<div class="ttc" id="achi__console__flushconsole_8cpp_html_a87694d946c53737d94052d065be89b53"><div class="ttname"><a href="../../d2/dfd/chi__console__flushconsole_8cpp.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a></div><div class="ttdeci">ChiPhysics &amp; chi_physics_handler</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00030">chi_runtime.cc:30</a></div></div>
 <div class="ttc" id="aclass_chi_timer_html"><div class="ttname"><a href="../../d7/d2e/class_chi_timer.html">ChiTimer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/de5/chi__timer_8h_source.html#l00009">chi_timer.h:10</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_eec4d28110009ed62ffe54c00aea6a23.html">CHI_TECH</a></li><li class="navelem"><a class="el" href="../../dir_e07cf1c0a6f4f6a7bb1fa19c8f52e1ce.html">ChiConsole</a></li><li class="navelem"><a class="el" href="../../d2/dfd/chi__console__flushconsole_8cpp.html">chi_console_flushconsole.cpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_881599471ceacbc6fd7f5107170a74cb.html">ChiTech</a></li><li class="navelem"><a class="el" href="../../dir_39c325140f224528f8bddaed75cd534f.html">ChiConsole</a></li><li class="navelem"><a class="el" href="../../d2/dfd/chi__console__flushconsole_8cpp.html">chi_console_flushconsole.cpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.19 </li>
   </ul>
 </div>

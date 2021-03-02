@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['tangleset_4520',['TAngleSet',['../df/d95/sweepscheduler_8h.html#abdb5f8f95ffb4f442927d9edad884128',1,'TAngleSet():&#160;sweepscheduler.h'],['../d2/df6/lbs__angleaggregation_8cc.html#abdb5f8f95ffb4f442927d9edad884128',1,'TAngleSet():&#160;lbs_angleaggregation.cc'],['../d8/d90/lbs__compsweeporder_8cc.html#abdb5f8f95ffb4f442927d9edad884128',1,'TAngleSet():&#160;lbs_compsweeporder.cc']]],
-  ['tanglesetgroup_4521',['TAngleSetGroup',['../df/d95/sweepscheduler_8h.html#afdc768c9d767e01f92a0737de5b2294a',1,'TAngleSetGroup():&#160;sweepscheduler.h'],['../d2/df6/lbs__angleaggregation_8cc.html#afdc768c9d767e01f92a0737de5b2294a',1,'TAngleSetGroup():&#160;lbs_angleaggregation.cc'],['../d8/d90/lbs__compsweeporder_8cc.html#afdc768c9d767e01f92a0737de5b2294a',1,'TAngleSetGroup():&#160;lbs_compsweeporder.cc']]],
-  ['tcrosssections_4522',['TCrossSections',['../df/d60/lbs__sweepchunk__pwl_8h.html#a874e8ab5ada8f14522c14b0b65479698',1,'lbs_sweepchunk_pwl.h']]],
-  ['tensor2n_4523',['Tensor2N',['../dc/d58/namespacechi__math.html#a70284ca276fc295317eee71e23f0df19',1,'chi_math']]],
-  ['tensorrn_4524',['TensorRN',['../dc/d58/namespacechi__math.html#a24af91734cb5a0b5d7375e4b7f732ab3',1,'chi_math']]],
-  ['tgspo_4525',['TGSPO',['../df/d95/sweepscheduler_8h.html#a7994968a2e59e0282ab73aba3fe0a0d2',1,'sweepscheduler.h']]],
-  ['tleveled_5fgraph_4526',['TLEVELED_GRAPH',['../df/d95/sweepscheduler_8h.html#a21ffc172308fdfbbd3bef6e7860fd957',1,'sweepscheduler.h']]],
-  ['tri_4527',['Tri',['../d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html#a5a961f0b157737d29a0137d2969460c0',1,'chi_mesh::SurfaceMesherDelaunay']]],
-  ['tvecdbl_4528',['Tvecdbl',['../dc/dc0/_golub_fischer_8h.html#a837bc11f591e6fa026ea828bc85e46b4',1,'GolubFischer.h']]],
-  ['tvecdbl_5fvecdbl_4529',['Tvecdbl_vecdbl',['../dc/dc0/_golub_fischer_8h.html#aeeb7c119816a65e61122cf96dd571df9',1,'Tvecdbl_vecdbl():&#160;GolubFischer.h'],['../db/d88/property10__transportxsections_8h.html#aeeb7c119816a65e61122cf96dd571df9',1,'Tvecdbl_vecdbl():&#160;property10_transportxsections.h']]]
+  ['schedulingalgorithm_4779',['SchedulingAlgorithm',['../d6/dab/power__iteration_8cc.html#af7fe1b0f2cf6f10332c53518f261c6b8',1,'SchedulingAlgorithm():&#160;power_iteration.cc'],['../df/d26/lbs__linear__boltzmann__solver_8h.html#af7fe1b0f2cf6f10332c53518f261c6b8',1,'SchedulingAlgorithm():&#160;lbs_linear_boltzmann_solver.h']]],
+  ['sdmtype_4780',['SDMType',['../da/d2b/class_spatial_discretization.html#a40c4cadaab0ba12e0ede03f1b802d901',1,'SpatialDiscretization::SDMType()'],['../dd/d96/struct_linear_boltzmann_1_1_options.html#aba9504ad34e7730e7d04e2479c17c3c6',1,'LinearBoltzmann::Options::SDMType()']]],
+  ['spatialdiscretizationptr_4781',['SpatialDiscretizationPtr',['../d6/d28/spatial__discretization_8h.html#a355b2067cccbfb31dc9835b0b0021b31',1,'spatial_discretization.h']]],
+  ['spds_5fptr_4782',['SPDS_ptr',['../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a11564f7c6b1bfa73d76943c0fa0ae025',1,'chi_mesh::sweep_management::PRIMARY_FLUDS::SPDS_ptr()'],['../d7/d7d/class_l_b_s_groupset.html#a4adaa0dc2ac3a926a5964ccadc9de680',1,'LBSGroupset::SPDS_ptr()']]],
+  ['surfacemeshcollection_4783',['SurfaceMeshCollection',['../d2/d10/classchi__mesh_1_1_mesh_handler.html#ab5f23e0685a0a6de76458380a279968f',1,'chi_mesh::MeshHandler']]],
+  ['sweepbndry_4784',['SweepBndry',['../d1/df2/angleset_8h.html#af14c94acb51921e5bbc5e2e18e16d33c',1,'angleset.h']]],
+  ['sweepchunk_4785',['SweepChunk',['../d6/dab/power__iteration_8cc.html#a39d0161e81d59bb9266d92abbb07ab19',1,'SweepChunk():&#160;power_iteration.cc'],['../dc/dd0/lbs__setsweepchunk_8cc.html#adfad77f405a91e0c24b4bed78523652d',1,'SweepChunk():&#160;lbs_setsweepchunk.cc'],['../df/d26/lbs__linear__boltzmann__solver_8h.html#a39d0161e81d59bb9266d92abbb07ab19',1,'SweepChunk():&#160;lbs_linear_boltzmann_solver.h']]]
 ];

@@ -3,7 +3,7 @@ var class_chi_m_p_i =
     [ "ChiMPI", "dc/d52/class_chi_m_p_i.html#ac280588c809f2543dc70220678660c8e", null ],
     [ "BroadcastNodes", "dc/d52/class_chi_m_p_i.html#afa0fc0c570b457786df4950d32ac10e3", null ],
     [ "BroadcastTriFaces", "dc/d52/class_chi_m_p_i.html#ad00a3b362fd0b0ebfc5acf91b53eb646", null ],
-    [ "GetInstance", "dc/d52/class_chi_m_p_i.html#ac5d4b4278d23c8c468cd4faca0df3137", null ],
+    [ "GetInstance", "dc/d52/class_chi_m_p_i.html#a9814ae50f156b75888bd1307179ef250", null ],
     [ "Initialize", "dc/d52/class_chi_m_p_i.html#a07d9d924bf94bebbab155dd05b10868d", null ],
     [ "ReceiveNodes", "dc/d52/class_chi_m_p_i.html#a9c959702eeefbc8854bea1be4ee1b216", null ],
     [ "ReceiveTriFaces", "dc/d52/class_chi_m_p_i.html#a6205eac5651dd616e84351b9b8935dd4", null ],

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: CHI_TECH/ChiMath/Quadratures/SLDFESQ/sldfe_sq_04_locally_refine.cc Source File</title>
+<title>Chi-Tech: ChiTech/ChiMath/Quadratures/SLDFESQ/sldfe_sq_04_locally_refine.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -178,57 +178,55 @@ $(document).ready(function(){initNavTree('d2/d51/sldfe__sq__04__locally__refine_
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::vector&lt;SphericalQuadrilateral&gt; new_deployment;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  new_deployment.reserve(deployed_SQs.size());</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="../../d3/d07/classchi__math_1_1_quadrature_gauss_legendre.html">chi_math::QuadratureGaussLegendre</a> legendre;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  legendre.<a class="code" href="../../d3/d07/classchi__math_1_1_quadrature_gauss_legendre.html#ac96f179f1173224bb2d0ae3f5bac2761">Initialize</a>(32);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">int</span> num_refined = 0;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; sq : deployed_SQs)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">bool</span> sq_to_be_split = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (not dir_as_plane_normal)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      sq_to_be_split = sq.centroid_xyz.Dot(ref_dir_n)&gt;mu_cone;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      sq_to_be_split = std::fabs(sq.centroid_xyz.Dot(ref_dir_n)) &lt;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                       (sin(cone_size));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">if</span> (not sq_to_be_split)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      new_deployment.push_back(sq);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keyword">auto</span> new_sqs = SplitSQ(sq,legendre);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; nsq : new_sqs)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        new_deployment.push_back(nsq);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      ++num_refined;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  deployed_SQs.clear();</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  deployed_SQs = new_deployment;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  deployed_SQs_history.push_back(new_deployment);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  PopulateQuadratureAbscissae();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <a class="code" href="../../d2/d51/sldfe__sq__04__locally__refine_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; <span class="stringliteral">&quot;SLDFESQ refined &quot;</span> &lt;&lt; num_refined &lt;&lt; <span class="stringliteral">&quot; SQs.&quot;</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="../../d3/d07/classchi__math_1_1_quadrature_gauss_legendre.html">chi_math::QuadratureGaussLegendre</a> legendre(QuadratureOrder::THIRTYSECOND);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">int</span> num_refined = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; sq : deployed_SQs)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">bool</span> sq_to_be_split = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (not dir_as_plane_normal)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      sq_to_be_split = sq.centroid_xyz.Dot(ref_dir_n)&gt;mu_cone;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      sq_to_be_split = std::fabs(sq.centroid_xyz.Dot(ref_dir_n)) &lt;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                       (sin(cone_size));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (not sq_to_be_split)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      new_deployment.push_back(sq);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keyword">auto</span> new_sqs = SplitSQ(sq,legendre);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; nsq : new_sqs)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        new_deployment.push_back(nsq);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      ++num_refined;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  deployed_SQs.clear();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  deployed_SQs = new_deployment;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  deployed_SQs_history.push_back(new_deployment);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  PopulateQuadratureAbscissae();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="../../d2/d51/sldfe__sq__04__locally__refine_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; <span class="stringliteral">&quot;SLDFESQ refined &quot;</span> &lt;&lt; num_refined &lt;&lt; <span class="stringliteral">&quot; SQs.&quot;</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature_html_a39b0b9dba8a482fad34e835b9cf0d671"><div class="ttname"><a href="../../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a39b0b9dba8a482fad34e835b9cf0d671">chi_math::SimplifiedLDFESQ::Quadrature::SplitSQ</a></div><div class="ttdeci">std::array&lt; SphericalQuadrilateral, 4 &gt; SplitSQ(SphericalQuadrilateral &amp;sq, chi_math::QuadratureGaussLegendre &amp;legendre)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d51/sldfe__sq__04__locally__refine_8cc_source.html#l00010">sldfe_sq_04_locally_refine.cc:11</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral_html_a93c7dba70c8be17515ca4381ce8d3d49"><div class="ttname"><a href="../../d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html#a93c7dba70c8be17515ca4381ce8d3d49">chi_math::SimplifiedLDFESQ::SphericalQuadrilateral::rotation_matrix</a></div><div class="ttdeci">chi_mesh::Matrix3x3 rotation_matrix</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d18/sldfe__sq_8h_source.html#l00042">sldfe_sq.h:42</a></div></div>
 <div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a></div><div class="ttdeci">@ LOG_0</div><div class="ttdoc">Used only for location 0.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00009">chi_log.h:9</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_a5f227385fe906aad93de74eb1e756d64"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#a5f227385fe906aad93de74eb1e756d64">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00029">chi_log.cc:29</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature_html_a115d9c457c24cf8423c7d45d83ef107d"><div class="ttname"><a href="../../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a115d9c457c24cf8423c7d45d83ef107d">chi_math::SimplifiedLDFESQ::Quadrature::DevelopSQLDFEValues</a></div><div class="ttdeci">void DevelopSQLDFEValues(SphericalQuadrilateral &amp;sq, chi_math::QuadratureGaussLegendre &amp;legendre)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d56/sldfe__sq__01c__develop__ldfe_8cc_source.html#l00007">sldfe_sq_01c_develop_ldfe.cc:8</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_quadrature_gauss_legendre_html"><div class="ttname"><a href="../../d3/d07/classchi__math_1_1_quadrature_gauss_legendre.html">chi_math::QuadratureGaussLegendre</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/de2/quadrature__gausslegendre_8h_source.html#l00014">quadrature_gausslegendre.h:15</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral_html_a4908ad032d8b7cbd41481c08745381b9"><div class="ttname"><a href="../../d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html#a4908ad032d8b7cbd41481c08745381b9">chi_math::SimplifiedLDFESQ::SphericalQuadrilateral::translation_vector</a></div><div class="ttdeci">chi_mesh::Vector3 translation_vector</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d18/sldfe__sq_8h_source.html#l00043">sldfe_sq.h:43</a></div></div>
 <div class="ttc" id="asldfe__sq_8h_html"><div class="ttname"><a href="../../d6/d18/sldfe__sq_8h.html">sldfe_sq.h</a></div></div>
 <div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral_html"><div class="ttname"><a href="../../d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html">chi_math::SimplifiedLDFESQ::SphericalQuadrilateral</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d18/sldfe__sq_8h_source.html#l00035">sldfe_sq.h:36</a></div></div>
-<div class="ttc" id="asldfe__sq__04__locally__refine_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d2/d51/sldfe__sq__04__locally__refine_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00023">chi_runtime.cc:23</a></div></div>
+<div class="ttc" id="aclass_chi_log_html_ac2d1869abb6b7dd125a89ea20b977dbc"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00029">chi_log.cc:29</a></div></div>
+<div class="ttc" id="asldfe__sq__04__locally__refine_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d2/d51/sldfe__sq__04__locally__refine_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00011">chi_meshvector.h:12</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral_html_aa7f6dbfdf5be2f5f521aab537e9ae008"><div class="ttname"><a href="../../d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html#aa7f6dbfdf5be2f5f521aab537e9ae008">chi_math::SimplifiedLDFESQ::SphericalQuadrilateral::octant_modifier</a></div><div class="ttdeci">chi_mesh::Vector3 octant_modifier</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d18/sldfe__sq_8h_source.html#l00050">sldfe_sq.h:50</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature_html_a12e9c009c10b6c504cc634a295c9909e"><div class="ttname"><a href="../../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a12e9c009c10b6c504cc634a295c9909e">chi_math::SimplifiedLDFESQ::Quadrature::LocallyRefine</a></div><div class="ttdeci">void LocallyRefine(const chi_mesh::Vector3 &amp;ref_dir, const double cone_size, const bool dir_as_plane_normal=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d51/sldfe__sq__04__locally__refine_8cc_source.html#l00083">sldfe_sq_04_locally_refine.cc:84</a></div></div>
-<div class="ttc" id="aclasschi__math_1_1_quadrature_gauss_legendre_html_ac96f179f1173224bb2d0ae3f5bac2761"><div class="ttname"><a href="../../d3/d07/classchi__math_1_1_quadrature_gauss_legendre.html#ac96f179f1173224bb2d0ae3f5bac2761">chi_math::QuadratureGaussLegendre::Initialize</a></div><div class="ttdeci">void Initialize(int N, int maxiters=1000, double tol=1.0e-12, bool verbose=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dda/quadrature__gausslegendre_8cc_source.html#l00015">quadrature_gausslegendre.cc:16</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_vector3_html_a7be867bf9e8b3d9ac50f975890ff98c1"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a7be867bf9e8b3d9ac50f975890ff98c1">chi_mesh::Vector3::Normalized</a></div><div class="ttdeci">Vector3 Normalized() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00314">chi_meshvector.h:314</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature_html_a25901a8be8928330eb5b1b8fe475ab73"><div class="ttname"><a href="../../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a25901a8be8928330eb5b1b8fe475ab73">chi_math::SimplifiedLDFESQ::Quadrature::ComputeSphericalQuadrilateralArea</a></div><div class="ttdeci">static double ComputeSphericalQuadrilateralArea(std::array&lt; chi_mesh::Vertex, 4 &gt; &amp;vertices_xyz)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/da9/sldfe__sq__01d__utils_8cc_source.html#l00007">sldfe_sq_01d_utils.cc:8</a></div></div>
 <div class="ttc" id="anamespace_z_compile_and_run_html_a1963b0f3bba220d2ecfb343694cab7c8"><div class="ttname"><a href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">ZCompileAndRun.i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4d/_z_compile_and_run_8py_source.html#l00038">ZCompileAndRun.py:38</a></div></div>
@@ -236,7 +234,7 @@ $(document).ready(function(){initNavTree('d2/d51/sldfe__sq__04__locally__refine_
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_eec4d28110009ed62ffe54c00aea6a23.html">CHI_TECH</a></li><li class="navelem"><a class="el" href="../../dir_e39b13cf42129acff9b36d1e08704398.html">ChiMath</a></li><li class="navelem"><a class="el" href="../../dir_d01ea86efa29449069a70782e6d4dad2.html">Quadratures</a></li><li class="navelem"><a class="el" href="../../dir_1501d7868541f42e5f410d129fe9fc8c.html">SLDFESQ</a></li><li class="navelem"><a class="el" href="../../d2/d51/sldfe__sq__04__locally__refine_8cc.html">sldfe_sq_04_locally_refine.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_881599471ceacbc6fd7f5107170a74cb.html">ChiTech</a></li><li class="navelem"><a class="el" href="../../dir_b38d3186440610780b535c2057083989.html">ChiMath</a></li><li class="navelem"><a class="el" href="../../dir_eea7055961cf37dd5c57ededab0b198f.html">Quadratures</a></li><li class="navelem"><a class="el" href="../../dir_28ac5d8a8251ec41fd568fe49dd317be.html">SLDFESQ</a></li><li class="navelem"><a class="el" href="../../d2/d51/sldfe__sq__04__locally__refine_8cc.html">sldfe_sq_04_locally_refine.cc</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.19 </li>
   </ul>
 </div>
