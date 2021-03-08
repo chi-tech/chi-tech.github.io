@@ -5,7 +5,6 @@ var namespacechi__mesh =
     [ "Boundary", "db/dc8/classchi__mesh_1_1_boundary.html", "db/dc8/classchi__mesh_1_1_boundary" ],
     [ "Cell", "d8/d7c/classchi__mesh_1_1_cell.html", "d8/d7c/classchi__mesh_1_1_cell" ],
     [ "CellFace", "db/d1b/classchi__mesh_1_1_cell_face.html", "db/d1b/classchi__mesh_1_1_cell_face" ],
-    [ "CellIndexMap", "dd/da7/structchi__mesh_1_1_cell_index_map.html", "dd/da7/structchi__mesh_1_1_cell_index_map" ],
     [ "CellPolygon", "dc/d11/classchi__mesh_1_1_cell_polygon.html", "dc/d11/classchi__mesh_1_1_cell_polygon" ],
     [ "CellPolyhedron", "d6/d71/classchi__mesh_1_1_cell_polyhedron.html", "d6/d71/classchi__mesh_1_1_cell_polyhedron" ],
     [ "CellSlab", "da/dd2/classchi__mesh_1_1_cell_slab.html", "da/dd2/classchi__mesh_1_1_cell_slab" ],
@@ -41,8 +40,5 @@ var namespacechi__mesh =
     [ "Vector3", "dd/d54/structchi__mesh_1_1_vector3.html", "dd/d54/structchi__mesh_1_1_vector3" ],
     [ "VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", "de/df0/classchi__mesh_1_1_volume_mesher" ],
     [ "VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", "de/d89/classchi__mesh_1_1_volume_mesher_extruder" ],
-    [ "VolumeMesherLinemesh1D", "d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html", "d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d" ],
-    [ "VolumeMesherPredefined2D", "d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html", "d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d" ],
-    [ "VolumeMesherPredefined3D", "d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html", "d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d" ],
     [ "VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned" ]
 ];

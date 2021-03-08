@@ -35,7 +35,6 @@ var annotated_dup =
     [ "LBSGroupset", "d7/d7d/class_l_b_s_groupset.html", "d7/d7d/class_l_b_s_groupset" ],
     [ "LBSSweepChunkPWL", "d7/d3d/class_l_b_s_sweep_chunk_p_w_l.html", "d7/d3d/class_l_b_s_sweep_chunk_p_w_l" ],
     [ "LogStream", "de/ddf/class_log_stream.html", "de/ddf/class_log_stream" ],
-    [ "MeshLayer", "da/da0/struct_mesh_layer.html", "da/da0/struct_mesh_layer" ],
     [ "PolygonFVValues", "d5/d99/class_polygon_f_v_values.html", "d5/d99/class_polygon_f_v_values" ],
     [ "PolygonMappingFE_PWL", "d1/d2d/class_polygon_mapping_f_e___p_w_l.html", "d1/d2d/class_polygon_mapping_f_e___p_w_l" ],
     [ "PolyhedronFVValues", "d9/ddd/class_polyhedron_f_v_values.html", "d9/ddd/class_polyhedron_f_v_values" ],

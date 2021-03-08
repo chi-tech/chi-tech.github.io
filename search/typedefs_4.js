@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['facevec_4759',['FaceVec',['../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#ad5e8df2e983227a520f07e53d808ccf5',1,'chi_mesh::sweep_management::BoundaryReflecting']]]
+  ['edgelist_4722',['EdgeList',['../d0/d81/namespacechi__mesh.html#a92edf6c4546a123997d7ef476f777281',1,'chi_mesh']]],
+  ['edgeloopcollection_4723',['EdgeLoopCollection',['../d0/d81/namespacechi__mesh.html#a506916afe5f66719a771ebba664bb9a8',1,'chi_mesh']]],
+  ['executionpermission_4724',['ExecutionPermission',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#acfa57bd987462ac915139416fd63d84d',1,'chi_mesh::sweep_management']]]
 ];

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['createunpartitioned1dorthomesh_4979',['CreateUnpartitioned1DOrthoMesh',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a0b62822af441cbda35ac23fc3e62f5ed',1,'chi_mesh::UnpartitionedMesh']]],
-  ['createunpartitioned2dorthomesh_4980',['CreateUnpartitioned2DOrthoMesh',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a9cda00aef9d199908f75397f4a3f7ad3',1,'chi_mesh::UnpartitionedMesh']]],
-  ['createunpartitioned3dorthomesh_4981',['CreateUnpartitioned3DOrthoMesh',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a5cad3d3375fdc948d5baed507f566a49',1,'chi_mesh::UnpartitionedMesh']]]
+  ['function_5fweight_5ffrom_5frho_4949',['FUNCTION_WEIGHT_FROM_RHO',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#aef3d6a3e636147f460cf6d825ac918b7',1,'chi_math::SimplifiedLDFESQ::Quadrature']]]
 ];

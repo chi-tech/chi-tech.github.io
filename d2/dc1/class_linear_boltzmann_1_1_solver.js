@@ -11,7 +11,7 @@ var class_linear_boltzmann_1_1_solver =
     [ "CleanUpWGDSA", "d2/dc1/class_linear_boltzmann_1_1_solver.html#a5bf4276ee965ed0ba1a9bb82998100a3", null ],
     [ "ComputeNumberOfMoments", "d2/dc1/class_linear_boltzmann_1_1_solver.html#a735cbf2537092ffbb97881d50d21e9a4", null ],
     [ "ComputePiecewiseChange", "d2/dc1/class_linear_boltzmann_1_1_solver.html#af85218ec4c3a4f111ad71c14d0cf4173", null ],
-    [ "ComputeSweepOrderings", "d2/dc1/class_linear_boltzmann_1_1_solver.html#ae0fc931eb49e3406a6220c74184af084", null ],
+    [ "ComputeSweepOrderings", "d2/dc1/class_linear_boltzmann_1_1_solver.html#a6ea75cde02caa1214b56ee18575d5b11", null ],
     [ "DisAssembleTGDSADeltaPhiVector", "d2/dc1/class_linear_boltzmann_1_1_solver.html#ac9d53b02137b65b976dedb7971162181", null ],
     [ "DisAssembleVector", "d2/dc1/class_linear_boltzmann_1_1_solver.html#a9892947ee0b6ba7cdd337070b33bdbf0", null ],
     [ "DisAssembleVectorLocalToLocal", "d2/dc1/class_linear_boltzmann_1_1_solver.html#ac3569d4904eb99976adaeef1274c9c9b", null ],

@@ -1,5 +1,8 @@
 var classchi__diffusion_1_1_solver =
 [
+    [ "BoundaryInfo", "d6/d32/classchi__diffusion_1_1_solver.html#a2c29847bfd7d3f711d088b58a5d526c4", null ],
+    [ "BoundaryPreferences", "d6/d32/classchi__diffusion_1_1_solver.html#a05c4ba79c51bae0070aee1e83944d016", null ],
+    [ "uint", "d6/d32/classchi__diffusion_1_1_solver.html#af2908525025b293391f4ce24e86c34a0", null ],
     [ "Solver", "d6/d32/classchi__diffusion_1_1_solver.html#acbec56ac53ae8b2f9f56d284036e74a3", null ],
     [ "Solver", "d6/d32/classchi__diffusion_1_1_solver.html#a743dce6318042576602f11ca0017e4a7", null ],
     [ "~Solver", "d6/d32/classchi__diffusion_1_1_solver.html#a2de514bc22f33a4f896f9e2a94a6602c", null ],
@@ -18,6 +21,7 @@ var classchi__diffusion_1_1_solver =
     [ "A", "d6/d32/classchi__diffusion_1_1_solver.html#a3bbf908a022ee2739cfe98160d20fbb6", null ],
     [ "b", "d6/d32/classchi__diffusion_1_1_solver.html#a03441a07ee0fc2548871885a134d2612", null ],
     [ "boundaries", "d6/d32/classchi__diffusion_1_1_solver.html#affd4790c5f0755e4ceb72faa832310e6", null ],
+    [ "boundary_preferences", "d6/d32/classchi__diffusion_1_1_solver.html#a1f084443cc2d538e42ede9574e77d1e0", null ],
     [ "common_items_initialized", "d6/d32/classchi__diffusion_1_1_solver.html#abc327eb0fba5eedba248ca9d575e76a2", null ],
     [ "D_field", "d6/d32/classchi__diffusion_1_1_solver.html#a5cf77e969faa62f45abeb0a7f05743b9", null ],
     [ "discretization", "d6/d32/classchi__diffusion_1_1_solver.html#a1c9698db0db14813675c5dc15a2b451f", null ],

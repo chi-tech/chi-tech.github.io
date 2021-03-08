@@ -33,7 +33,6 @@ var hierarchy =
       [ "PolyhedronFVValues", "d9/ddd/class_polyhedron_f_v_values.html", null ],
       [ "SlabFVValues", "d9/dbf/class_slab_f_v_values.html", null ]
     ] ],
-    [ "chi_mesh::CellIndexMap", "dd/da7/structchi__mesh_1_1_cell_index_map.html", null ],
     [ "LinearBoltzmann::CellLBSView", "d6/da1/class_linear_boltzmann_1_1_cell_l_b_s_view.html", null ],
     [ "CellMappingFE_PWL", "db/d41/class_cell_mapping_f_e___p_w_l.html", [
       [ "HexahedronMappingFE_PWL", "d6/dbe/class_hexahedron_mapping_f_e___p_w_l.html", null ],
@@ -54,9 +53,9 @@ var hierarchy =
     [ "CSTMemory", "d6/de4/struct_c_s_t_memory.html", null ],
     [ "chi_mesh::SurfaceMesherDelaunay::DelaunayMeshContext", "d0/d54/structchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_mesh_context.html", null ],
     [ "chi_graph::DirectedGraph", "dc/d15/classchi__graph_1_1_directed_graph.html", null ],
-    [ "chi_math::DMatrixNX< NumberFormat >", "d7/d71/classchi__math_1_1_d_matrix_n_x.html", null ],
-    [ "chi_math::DMatrixNX< double >", "d7/d71/classchi__math_1_1_d_matrix_n_x.html", null ],
-    [ "chi_math::DVectorNX< NumberFormat >", "da/d6e/classchi__math_1_1_d_vector_n_x.html", null ],
+    [ "chi_math::DynamicMatrix< NumberFormat >", "df/d4b/classchi__math_1_1_dynamic_matrix.html", null ],
+    [ "chi_math::DynamicMatrix< double >", "df/d4b/classchi__math_1_1_dynamic_matrix.html", null ],
+    [ "chi_math::DynamicVector< NumberFormat >", "db/d08/classchi__math_1_1_dynamic_vector.html", null ],
     [ "chi_mesh::Edge", "d9/d36/structchi__mesh_1_1_edge.html", null ],
     [ "chi_mesh::EdgeLoop", "d5/d30/structchi__mesh_1_1_edge_loop.html", null ],
     [ "ChiLog::Event", "de/d2b/struct_chi_log_1_1_event.html", null ],
@@ -131,7 +130,7 @@ var hierarchy =
     [ "chi_mesh::Matrix3x3", "d0/dec/structchi__mesh_1_1_matrix3x3.html", null ],
     [ "chi_mesh::MeshContinuum", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html", null ],
     [ "chi_mesh::MeshHandler", "d2/d10/classchi__mesh_1_1_mesh_handler.html", null ],
-    [ "MeshLayer", "da/da0/struct_mesh_layer.html", null ],
+    [ "chi_mesh::VolumeMesherExtruder::MeshLayer", "d8/d95/structchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer.html", null ],
     [ "chi_mesh::UnpartitionedMesh::Options", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html", null ],
     [ "LinearBoltzmann::Options", "dd/d96/struct_linear_boltzmann_1_1_options.html", null ],
     [ "ostream", null, [
@@ -210,9 +209,6 @@ var hierarchy =
     [ "chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html", null ],
     [ "chi_mesh::VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", [
       [ "chi_mesh::VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", null ],
-      [ "chi_mesh::VolumeMesherLinemesh1D", "d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html", null ],
-      [ "chi_mesh::VolumeMesherPredefined2D", "d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html", null ],
-      [ "chi_mesh::VolumeMesherPredefined3D", "d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html", null ],
       [ "chi_mesh::VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", null ]
     ] ],
     [ "vtkUnstructuredGridAlgorithm", null, [

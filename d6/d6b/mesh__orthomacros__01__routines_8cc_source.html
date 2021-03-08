@@ -93,212 +93,149 @@ $(document).ready(function(){initNavTree('d6/d6b/mesh__orthomacros__01__routines
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d34/chi__boundary_8h.html">ChiMesh/Boundary/chi_boundary.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d07/chi__region_8h.html">ChiMesh/Region/chi_region.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d78/surfmesher__predefined_8h.html">ChiMesh/SurfaceMesher/Predefined/surfmesher_predefined.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dab/volmesher__linemesh1d_8h.html">ChiMesh/VolumeMesher/Linemesh1D/volmesher_linemesh1d.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d98/chi__surfacemesh_8h.html">ChiMesh/SurfaceMesh/chi_surfacemesh.h</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dec/volmesher__predefined2d_8h.html">ChiMesh/VolumeMesher/Predefined2D/volmesher_predefined2d.h</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/dab/volmesher__extruder_8h.html">ChiMesh/VolumeMesher/Extruder/volmesher_extruder.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d60/chi__unpartitioned__mesh_8h.html">ChiMesh/UnpartitionedMesh/chi_unpartitioned_mesh.h</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../d6/d6b/mesh__orthomacros__01__routines_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/**Creates a 1D slab mesh from a set of vertices.*/</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d0/d81/namespacechi__mesh.html#a9ae7579055a3d962c0058bd1e3ea98f7">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d81/namespacechi__mesh.html#a9ae7579055a3d962c0058bd1e3ea98f7">chi_mesh::Create1DSlabMesh</a>(std::vector&lt;double&gt;&amp; vertices)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="comment">//======================================== Checks if vertices are empty</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">if</span> (vertices.empty())</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d6/d6b/mesh__orthomacros__01__routines_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;chi_mesh::Create1DSlabMesh. Empty vertex list.&quot;</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//======================================== Get current mesh handler</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">auto</span> handler = <a class="code" href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">//======================================== Reorient 1D verts along z</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  std::vector&lt;double&gt; distances;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  distances.reserve(vertices.size()-1);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> v=0; v&lt;(vertices.size()-1); ++v)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    distances.push_back(vertices[v+1]-vertices[v]);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d98/chi__surfacemesh_8h.html">ChiMesh/SurfaceMesh/chi_surfacemesh.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dec/volmesher__predefined2d_8h.html">ChiMesh/VolumeMesher/Predefined2D/volmesher_predefined2d.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/dab/volmesher__extruder_8h.html">ChiMesh/VolumeMesher/Extruder/volmesher_extruder.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d60/chi__unpartitioned__mesh_8h.html">ChiMesh/UnpartitionedMesh/chi_unpartitioned_mesh.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../d6/d6b/mesh__orthomacros__01__routines_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/**Creates a 2D orthogonal mesh from a set of vertices in x and y.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * The vertices along a dimension merely represents the divisions. They</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * are not the complete vertices defining a cell. For example:</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">\code</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">std::vector&lt;chi_mesh::Vertex&gt; vertices_x = {0.0,1.0,2.0};</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">std::vector&lt;chi_mesh::Vertex&gt; vertices_y = {0.0,1.0,2.0};</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">chi_mesh::Create2DOrthoMesh(vertices_x,vertices_y);</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">\endcode</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">This code will create a 2x2 mesh with \f$ \vec{x} \in [0,2]^2 \f$.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d0/d81/namespacechi__mesh.html#ad5c7ea06894035732c6201405c05b9a7">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d81/namespacechi__mesh.html#ad5c7ea06894035732c6201405c05b9a7">chi_mesh::Create2DOrthoMesh</a>(std::vector&lt;double&gt;&amp; vertices_1d_x,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                 std::vector&lt;double&gt;&amp; vertices_1d_y)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">auto</span> surface_mesh =</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a0f22f917408d10b1e5a1a6170a347ea7">chi_mesh::SurfaceMesh::CreateFromDivisions</a>(vertices_1d_x,vertices_1d_y);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">//======================================== Get current mesh handler</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">auto</span> handler = <a class="code" href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  handler-&gt;surface_mesh_stack.push_back(surface_mesh);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  std::vector&lt;Vertex&gt; zverts;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  zverts.reserve(vertices.size());</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  zverts.emplace_back(0.0,0.0,0.0);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">double</span> last_distance = 0.0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; d : distances)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    zverts.emplace_back(0.0,0.0,last_distance+d);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    last_distance += d;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">//======================================== Add it to boundary</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">auto</span> bndry = <span class="keyword">new</span> <a class="code" href="../../db/dc8/classchi__mesh_1_1_boundary.html">chi_mesh::Boundary</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  bndry-&gt;<a class="code" href="../../db/dc8/classchi__mesh_1_1_boundary.html#a3b9c6655cde609a73be14f2b999fa163">initial_mesh_continuum</a>-&gt;surface_mesh = surface_mesh;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">//======================================== Add boundary to region</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">auto</span> region = <span class="keyword">new</span> <a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  region-&gt;<a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839">boundaries</a>.push_back(bndry);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  handler-&gt;region_stack.push_back(region);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">//======================================== Create line mesh</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">auto</span> line_mesh = <span class="keyword">new</span> <a class="code" href="../../da/de4/classchi__mesh_1_1_line_mesh.html">chi_mesh::LineMesh</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  line_mesh-&gt;<a class="code" href="../../da/de4/classchi__mesh_1_1_line_mesh.html#a6e90ec1330c3f7822678bce597457c50">vertices</a> = std::move(zverts);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  handler-&gt;linemesh_stack.push_back(line_mesh);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">//======================================== Add it to boundary</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">auto</span> bndry = <span class="keyword">new</span> <a class="code" href="../../db/dc8/classchi__mesh_1_1_boundary.html">chi_mesh::Boundary</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  bndry-&gt;<a class="code" href="../../db/dc8/classchi__mesh_1_1_boundary.html#a3b9c6655cde609a73be14f2b999fa163">initial_mesh_continuum</a>-&gt;line_mesh = line_mesh;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">//======================================== Add boundary to region</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">auto</span> region = <span class="keyword">new</span> <a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  region-&gt;<a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839">boundaries</a>.push_back(bndry);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  handler-&gt;region_stack.push_back(region);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">//======================================== Create meshers</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  handler-&gt;surface_mesher = <span class="keyword">new</span> <a class="code" href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  handler-&gt;volume_mesher = <span class="keyword">new</span> <a class="code" href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html">chi_mesh::VolumeMesherLinemesh1D</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  handler-&gt;surface_mesher-&gt;<a class="code" href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html#adca582e29b3d63ebcc6b8dedf07f4a24">Execute</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/**Creates a 2D orthogonal mesh from a set of vertices in x and y.</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> * The vertices along a dimension merely represents the divisions. They</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> * are not the complete vertices defining a cell. For example:</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">\code</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">std::vector&lt;chi_mesh::Vertex&gt; vertices_x = {0.0,1.0,2.0};</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">std::vector&lt;chi_mesh::Vertex&gt; vertices_y = {0.0,1.0,2.0};</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">chi_mesh::Create2DOrthoMesh(vertices_x,vertices_y);</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">\endcode</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">This code will create a 2x2 mesh with \f$ \vec{x} \in [0,2]^2 \f$.</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../d0/d81/namespacechi__mesh.html#ad5c7ea06894035732c6201405c05b9a7">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d81/namespacechi__mesh.html#ad5c7ea06894035732c6201405c05b9a7">chi_mesh::Create2DOrthoMesh</a>(std::vector&lt;double&gt;&amp; vertices_1d_x,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                 std::vector&lt;double&gt;&amp; vertices_1d_y)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">auto</span> surface_mesh =</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a0f22f917408d10b1e5a1a6170a347ea7">chi_mesh::SurfaceMesh::CreateFromDivisions</a>(vertices_1d_x,vertices_1d_y);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">//======================================== Create meshers</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  handler-&gt;surface_mesher = <span class="keyword">new</span> <a class="code" href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  handler-&gt;volume_mesher = <span class="keyword">new</span> <a class="code" href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html">chi_mesh::VolumeMesherPredefined2D</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  handler-&gt;surface_mesher-&gt;<a class="code" href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html#ac7bdd8cf5aaa3903f96f808a3d198645">Execute</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">/**Creates a 3D orthogonal mesh from a set of vertices in x, y and z.</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"> * The vertices along a dimension merely represents the divisions. They</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"> * are not the complete vertices defining a cell. For example:</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">\code</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">std::vector&lt;double&gt; vertices_x = {0.0,1.0,2.0};</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">std::vector&lt;double&gt; vertices_y = {0.0,1.0,2.0};</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">std::vector&lt;double&gt; vertices_z = {0.0,1.0,2.0};</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">chi_mesh::Create3DOrthoMesh(vertices_x,vertices_y,vertices_z);</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">\endcode</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">This code will create a 2x2x2 mesh with \f$ \vec{x} \in [0,2]^3 \f$.</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d0/d81/namespacechi__mesh.html#a12b96c173232f820d3da4abe6f086286">   71</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d81/namespacechi__mesh.html#a12b96c173232f820d3da4abe6f086286">chi_mesh::Create3DOrthoMesh</a>(std::vector&lt;double&gt;&amp; vertices_x,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                 std::vector&lt;double&gt;&amp; vertices_y,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                 std::vector&lt;double&gt;&amp; vertices_z)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">auto</span> surface_mesh =</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a0f22f917408d10b1e5a1a6170a347ea7">chi_mesh::SurfaceMesh::CreateFromDivisions</a>(vertices_x,vertices_y);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="comment">//======================================== Get current mesh handler</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">auto</span> handler = <a class="code" href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  handler-&gt;surface_mesh_stack.push_back(surface_mesh);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">//======================================== Add it to boundary</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">auto</span> bndry = <span class="keyword">new</span> <a class="code" href="../../db/dc8/classchi__mesh_1_1_boundary.html">chi_mesh::Boundary</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  bndry-&gt;<a class="code" href="../../db/dc8/classchi__mesh_1_1_boundary.html#a3b9c6655cde609a73be14f2b999fa163">initial_mesh_continuum</a>-&gt;surface_mesh = surface_mesh;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="comment">//======================================== Add boundary to region</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">auto</span> region = <span class="keyword">new</span> <a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  region-&gt;<a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839">boundaries</a>.push_back(bndry);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  handler-&gt;region_stack.push_back(region);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="comment">//======================================== Get current mesh handler</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">auto</span> handler = <a class="code" href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a>();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  handler-&gt;surface_mesh_stack.push_back(surface_mesh);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="comment">//======================================== Add it to boundary</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">auto</span> bndry = <span class="keyword">new</span> <a class="code" href="../../db/dc8/classchi__mesh_1_1_boundary.html">chi_mesh::Boundary</a>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  bndry-&gt;<a class="code" href="../../db/dc8/classchi__mesh_1_1_boundary.html#a3b9c6655cde609a73be14f2b999fa163">initial_mesh_continuum</a>-&gt;surface_mesh = surface_mesh;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">//======================================== Add boundary to region</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">auto</span> region = <span class="keyword">new</span> <a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  region-&gt;<a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839">boundaries</a>.push_back(bndry);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="comment">//======================================== Create meshers</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  handler-&gt;surface_mesher = <span class="keyword">new</span> <a class="code" href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">auto</span> extruder = <span class="keyword">new</span> <a class="code" href="../../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html">chi_mesh::VolumeMesherExtruder</a>(surface_mesh);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  handler-&gt;volume_mesher = extruder;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">//======================================== Populate layers</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  std::vector&lt;double&gt; distances;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  distances.reserve(vertices_z.size()-1);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> v=0; v&lt;(vertices_z.size()-1); ++v)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    distances.push_back(vertices_z[v+1]-vertices_z[v]);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  handler-&gt;region_stack.push_back(region);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="comment">//======================================== Create meshers</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  handler-&gt;surface_mesher = <span class="keyword">new</span> <a class="code" href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  handler-&gt;volume_mesher = <span class="keyword">new</span> <a class="code" href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html">chi_mesh::VolumeMesherPredefined2D</a>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  handler-&gt;surface_mesher-&gt;<a class="code" href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html#ac7bdd8cf5aaa3903f96f808a3d198645">Execute</a>();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">/**Creates a 3D orthogonal mesh from a set of vertices in x, y and z.</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"> * The vertices along a dimension merely represents the divisions. They</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"> * are not the complete vertices defining a cell. For example:</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">\code</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">std::vector&lt;double&gt; vertices_x = {0.0,1.0,2.0};</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">std::vector&lt;double&gt; vertices_y = {0.0,1.0,2.0};</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">std::vector&lt;double&gt; vertices_z = {0.0,1.0,2.0};</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">chi_mesh::Create3DOrthoMesh(vertices_x,vertices_y,vertices_z);</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">\endcode</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">This code will create a 2x2x2 mesh with \f$ \vec{x} \in [0,2]^3 \f$.</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="../../d0/d81/namespacechi__mesh.html#a12b96c173232f820d3da4abe6f086286">  127</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d81/namespacechi__mesh.html#a12b96c173232f820d3da4abe6f086286">chi_mesh::Create3DOrthoMesh</a>(std::vector&lt;double&gt;&amp; vertices_x,</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                                 std::vector&lt;double&gt;&amp; vertices_y,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                 std::vector&lt;double&gt;&amp; vertices_z)</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keyword">auto</span> surface_mesh =</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a0f22f917408d10b1e5a1a6170a347ea7">chi_mesh::SurfaceMesh::CreateFromDivisions</a>(vertices_x,vertices_y);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="comment">//======================================== Get current mesh handler</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keyword">auto</span> handler = <a class="code" href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a>();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  handler-&gt;surface_mesh_stack.push_back(surface_mesh);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="comment">//======================================== Add it to boundary</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keyword">auto</span> bndry = <span class="keyword">new</span> <a class="code" href="../../db/dc8/classchi__mesh_1_1_boundary.html">chi_mesh::Boundary</a>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  bndry-&gt;<a class="code" href="../../db/dc8/classchi__mesh_1_1_boundary.html#a3b9c6655cde609a73be14f2b999fa163">initial_mesh_continuum</a>-&gt;surface_mesh = surface_mesh;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="comment">//======================================== Add boundary to region</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keyword">auto</span> region = <span class="keyword">new</span> <a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  region-&gt;<a class="code" href="../../d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839">boundaries</a>.push_back(bndry);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  handler-&gt;region_stack.push_back(region);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="comment">//======================================== Create meshers</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  handler-&gt;surface_mesher = <span class="keyword">new</span> <a class="code" href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a>;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keyword">auto</span> extruder = <span class="keyword">new</span> <a class="code" href="../../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html">chi_mesh::VolumeMesherExtruder</a>;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  handler-&gt;volume_mesher = extruder;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="comment">//======================================== Populate layers</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  std::vector&lt;double&gt; distances;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  distances.reserve(vertices_z.size()-1);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> v=0; v&lt;(vertices_z.size()-1); ++v)</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    distances.push_back(vertices_z[v+1]-vertices_z[v]);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  std::vector&lt;Vertex&gt; zverts;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  zverts.reserve(vertices_z.size());</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  zverts.emplace_back(0.0,0.0,0.0);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">double</span> last_distance = 0.0;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; d : distances)</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    zverts.emplace_back(0.0,0.0,last_distance+d);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    last_distance += d;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> distance : distances)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">auto</span> new_layer = <span class="keyword">new</span> <a class="code" href="../../da/da0/struct_mesh_layer.html">MeshLayer</a>;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    new_layer-&gt;<a class="code" href="../../da/da0/struct_mesh_layer.html#a909f5112ee81147acc2bcf3fab8033db">height</a> = distance;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    new_layer-&gt;sub_divisions = 1;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    extruder-&gt;input_layers.push_back(new_layer);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  handler-&gt;surface_mesher-&gt;Execute();</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  std::vector&lt;Vertex&gt; zverts;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  zverts.reserve(vertices_z.size());</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  zverts.emplace_back(0.0,0.0,0.0);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">double</span> last_distance = 0.0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; d : distances)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    zverts.emplace_back(0.0,0.0,last_distance+d);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    last_distance += d;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> distance : distances)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="../../d8/d95/structchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer.html">chi_mesh::VolumeMesherExtruder::MeshLayer</a> new_layer;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    new_layer.<a class="code" href="../../d8/d95/structchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer.html#aef30eef9e2152eb26c28c7d2a6cc52c7">height</a> = distance;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    new_layer.<a class="code" href="../../d8/d95/structchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer.html#a902e54716d4be112ce97fe66106b56b7">sub_divisions</a> = 1;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    extruder-&gt;input_layers.push_back(new_layer);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  handler-&gt;surface_mesher-&gt;Execute();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasschi__mesh_1_1_line_mesh_html_a6e90ec1330c3f7822678bce597457c50"><div class="ttname"><a href="../../da/de4/classchi__mesh_1_1_line_mesh.html#a6e90ec1330c3f7822678bce597457c50">chi_mesh::LineMesh::vertices</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Vertex &gt; vertices</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc1/chi__linemesh_8h_source.html#l00015">chi_linemesh.h:15</a></div></div>
-<div class="ttc" id="anamespacechi__mesh_html_ad5c7ea06894035732c6201405c05b9a7"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad5c7ea06894035732c6201405c05b9a7">chi_mesh::Create2DOrthoMesh</a></div><div class="ttdeci">void Create2DOrthoMesh(std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6b/mesh__orthomacros__01__routines_8cc_source.html#l00086">mesh_orthomacros_01_routines.cc:86</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_ad5c7ea06894035732c6201405c05b9a7"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad5c7ea06894035732c6201405c05b9a7">chi_mesh::Create2DOrthoMesh</a></div><div class="ttdeci">void Create2DOrthoMesh(std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6b/mesh__orthomacros__01__routines_8cc_source.html#l00030">mesh_orthomacros_01_routines.cc:30</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_surface_mesh_html_a0f22f917408d10b1e5a1a6170a347ea7"><div class="ttname"><a href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a0f22f917408d10b1e5a1a6170a347ea7">chi_mesh::SurfaceMesh::CreateFromDivisions</a></div><div class="ttdeci">static SurfaceMesh * CreateFromDivisions(std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d97/chi__surfacemesh__loadexport_8cc_source.html#l00565">chi_surfacemesh_loadexport.cc:566</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_linemesh1_d_html_adca582e29b3d63ebcc6b8dedf07f4a24"><div class="ttname"><a href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html#adca582e29b3d63ebcc6b8dedf07f4a24">chi_mesh::VolumeMesherLinemesh1D::Execute</a></div><div class="ttdeci">void Execute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d97/volmesher__linemesh1d__01__execute_8cc_source.html#l00020">volmesher_linemesh1d_01_execute.cc:20</a></div></div>
 <div class="ttc" id="achi__unpartitioned__mesh_8h_html"><div class="ttname"><a href="../../d6/d60/chi__unpartitioned__mesh_8h.html">chi_unpartitioned_mesh.h</a></div></div>
-<div class="ttc" id="astruct_mesh_layer_html"><div class="ttname"><a href="../../da/da0/struct_mesh_layer.html">MeshLayer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/volmesher__extruder_8h_source.html#l00007">volmesher_extruder.h:8</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_boundary_html"><div class="ttname"><a href="../../db/dc8/classchi__mesh_1_1_boundary.html">chi_mesh::Boundary</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d34/chi__boundary_8h_source.html#l00008">chi_boundary.h:9</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_surface_mesher_predefined_html"><div class="ttname"><a href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/surfmesher__predefined_8h_source.html#l00010">surfmesher_predefined.h:11</a></div></div>
 <div class="ttc" id="asurfmesher__predefined_8h_html"><div class="ttname"><a href="../../d9/d78/surfmesher__predefined_8h.html">surfmesher_predefined.h</a></div></div>
 <div class="ttc" id="achi__meshhandler_8h_html"><div class="ttname"><a href="../../df/d98/chi__meshhandler_8h.html">chi_meshhandler.h</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_linemesh1_d_html"><div class="ttname"><a href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html">chi_mesh::VolumeMesherLinemesh1D</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dab/volmesher__linemesh1d_8h_source.html#l00008">volmesher_linemesh1d.h:9</a></div></div>
-<div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a></div><div class="ttdeci">@ LOG_ALLERROR</div><div class="ttdoc">Error for any location.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00017">chi_log.h:17</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer_html_aef30eef9e2152eb26c28c7d2a6cc52c7"><div class="ttname"><a href="../../d8/d95/structchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer.html#aef30eef9e2152eb26c28c7d2a6cc52c7">chi_mesh::VolumeMesherExtruder::MeshLayer::height</a></div><div class="ttdeci">double height</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/volmesher__extruder_8h_source.html#l00022">volmesher_extruder.h:22</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_boundary_html_a3b9c6655cde609a73be14f2b999fa163"><div class="ttname"><a href="../../db/dc8/classchi__mesh_1_1_boundary.html#a3b9c6655cde609a73be14f2b999fa163">chi_mesh::Boundary::initial_mesh_continuum</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr initial_mesh_continuum</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d34/chi__boundary_8h_source.html#l00011">chi_boundary.h:11</a></div></div>
 <div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_region_html"><div class="ttname"><a href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d07/chi__region_8h_source.html#l00010">chi_region.h:11</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_ac2d1869abb6b7dd125a89ea20b977dbc"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00029">chi_log.cc:29</a></div></div>
 <div class="ttc" id="achi__surfacemesh_8h_html"><div class="ttname"><a href="../../d2/d98/chi__surfacemesh_8h.html">chi_surfacemesh.h</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_region_html_a4729f30fbad488210e20cdfe92705839"><div class="ttname"><a href="../../d1/d9a/classchi__mesh_1_1_region.html#a4729f30fbad488210e20cdfe92705839">chi_mesh::Region::boundaries</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Boundary * &gt; boundaries</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d07/chi__region_8h_source.html#l00015">chi_region.h:15</a></div></div>
-<div class="ttc" id="anamespacechi__mesh_html_a12b96c173232f820d3da4abe6f086286"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a12b96c173232f820d3da4abe6f086286">chi_mesh::Create3DOrthoMesh</a></div><div class="ttdeci">void Create3DOrthoMesh(std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y, std::vector&lt; double &gt; &amp;vertices_1d_z)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6b/mesh__orthomacros__01__routines_8cc_source.html#l00127">mesh_orthomacros_01_routines.cc:127</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_extruder_html"><div class="ttname"><a href="../../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html">chi_mesh::VolumeMesherExtruder</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/volmesher__extruder_8h_source.html#l00018">volmesher_extruder.h:19</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_a12b96c173232f820d3da4abe6f086286"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a12b96c173232f820d3da4abe6f086286">chi_mesh::Create3DOrthoMesh</a></div><div class="ttdeci">void Create3DOrthoMesh(std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y, std::vector&lt; double &gt; &amp;vertices_1d_z)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6b/mesh__orthomacros__01__routines_8cc_source.html#l00071">mesh_orthomacros_01_routines.cc:71</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_extruder_html"><div class="ttname"><a href="../../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html">chi_mesh::VolumeMesherExtruder</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/volmesher__extruder_8h_source.html#l00011">volmesher_extruder.h:12</a></div></div>
 <div class="ttc" id="avolmesher__predefined2d_8h_html"><div class="ttname"><a href="../../db/dec/volmesher__predefined2d_8h.html">volmesher_predefined2d.h</a></div></div>
-<div class="ttc" id="astruct_mesh_layer_html_a909f5112ee81147acc2bcf3fab8033db"><div class="ttname"><a href="../../da/da0/struct_mesh_layer.html#a909f5112ee81147acc2bcf3fab8033db">MeshLayer::height</a></div><div class="ttdeci">double height</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/volmesher__extruder_8h_source.html#l00010">volmesher_extruder.h:10</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_line_mesh_html"><div class="ttname"><a href="../../da/de4/classchi__mesh_1_1_line_mesh.html">chi_mesh::LineMesh</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dc1/chi__linemesh_8h_source.html#l00012">chi_linemesh.h:13</a></div></div>
 <div class="ttc" id="achi__region_8h_html"><div class="ttname"><a href="../../d2/d07/chi__region_8h.html">chi_region.h</a></div></div>
 <div class="ttc" id="achi__boundary_8h_html"><div class="ttname"><a href="../../d0/d34/chi__boundary_8h.html">chi_boundary.h</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_predefined2_d_html"><div class="ttname"><a href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html">chi_mesh::VolumeMesherPredefined2D</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dec/volmesher__predefined2d_8h_source.html#l00007">volmesher_predefined2d.h:8</a></div></div>
 <div class="ttc" id="avolmesher__extruder_8h_html"><div class="ttname"><a href="../../dc/dab/volmesher__extruder_8h.html">volmesher_extruder.h</a></div></div>
-<div class="ttc" id="avolmesher__linemesh1d_8h_html"><div class="ttname"><a href="../../db/dab/volmesher__linemesh1d_8h.html">volmesher_linemesh1d.h</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer_html_a902e54716d4be112ce97fe66106b56b7"><div class="ttname"><a href="../../d8/d95/structchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer.html#a902e54716d4be112ce97fe66106b56b7">chi_mesh::VolumeMesherExtruder::MeshLayer::sub_divisions</a></div><div class="ttdeci">int sub_divisions</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/volmesher__extruder_8h_source.html#l00023">volmesher_extruder.h:23</a></div></div>
 <div class="ttc" id="achi__mesh_8h_html"><div class="ttname"><a href="../../d3/dcb/chi__mesh_8h.html">chi_mesh.h</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer_html"><div class="ttname"><a href="../../d8/d95/structchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer.html">chi_mesh::VolumeMesherExtruder::MeshLayer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dab/volmesher__extruder_8h_source.html#l00019">volmesher_extruder.h:20</a></div></div>
 <div class="ttc" id="achi__linemesh_8h_html"><div class="ttname"><a href="../../dc/dc1/chi__linemesh_8h.html">chi_linemesh.h</a></div></div>
-<div class="ttc" id="anamespacechi__mesh_html_a9ae7579055a3d962c0058bd1e3ea98f7"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a9ae7579055a3d962c0058bd1e3ea98f7">chi_mesh::Create1DSlabMesh</a></div><div class="ttdeci">void Create1DSlabMesh(std::vector&lt; double &gt; &amp;vertices_1d)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6b/mesh__orthomacros__01__routines_8cc_source.html#l00020">mesh_orthomacros_01_routines.cc:20</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_predefined2_d_html_ac7bdd8cf5aaa3903f96f808a3d198645"><div class="ttname"><a href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html#ac7bdd8cf5aaa3903f96f808a3d198645">chi_mesh::VolumeMesherPredefined2D::Execute</a></div><div class="ttdeci">void Execute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d61/volmesher__predefined2d__02__execute_8cc_source.html#l00017">volmesher_predefined2d_02_execute.cc:17</a></div></div>
 <div class="ttc" id="amesh__orthomacros__01__routines_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d6/d6b/mesh__orthomacros__01__routines_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_a55aa0de42096c5df928a53928143aa55"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler * GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00011">chi_mesh_meshhandler_utils.cc:11</a></div></div>

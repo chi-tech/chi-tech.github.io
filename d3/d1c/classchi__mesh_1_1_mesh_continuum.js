@@ -10,6 +10,7 @@ var classchi__mesh_1_1_mesh_continuum =
     [ "ExportCellsToVTK", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a5521ee6f7e666f865bfec8dfda45cb62", null ],
     [ "FindAssociatedVertices", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aec19de560c061c06010975ee9bc324b2", null ],
     [ "GetCommunicator", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a63de2e096180433a25967c02d0603986", null ],
+    [ "GetDomainUniqueBoundaryIDs", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#add25e66a31973db57bc7436e3b0edfb8", null ],
     [ "GetFaceHistogramBinDOFSize", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a5ba081e63d16161bc6d4f91f12ac3220", null ],
     [ "GetGlobalNumberOfCells", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a1bd208a0afbfe85f6187b0d0d6f08ce8", null ],
     [ "IsCellBndry", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a9ceafb77b70de00b6883b0d47d3f0586", null ],

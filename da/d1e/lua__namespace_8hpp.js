@@ -92,6 +92,12 @@ var lua__namespace_8hpp =
     [ "chiSurfaceMeshSplitByPatch", "da/d1e/lua__namespace_8hpp.html#gad3575f8e77897066cc52fa38f98a1a1c", null ],
     [ "chiVolumeMesherCreate", "da/d1e/lua__namespace_8hpp.html#ga51e2ce3f00d88c1bb3811b3361f0c2df", null ],
     [ "chiVolumeMesherExecute", "da/d1e/lua__namespace_8hpp.html#ga2cbae637b293223c824105bf422c0ab8", null ],
+    [ "chiVolumeMesherSetKBACutsX", "da/d1e/lua__namespace_8hpp.html#a44d2f4c215a98d705ad233d2ea7fc8ba", null ],
+    [ "chiVolumeMesherSetKBACutsY", "da/d1e/lua__namespace_8hpp.html#aceecddf9f23e355dd93f4e7ff2d2c164", null ],
+    [ "chiVolumeMesherSetKBACutsZ", "da/d1e/lua__namespace_8hpp.html#a356a9ea73b154efb208e341ab76706bc", null ],
+    [ "chiVolumeMesherSetKBAPartitioningPxPyPz", "da/d1e/lua__namespace_8hpp.html#a70c108fdd425942953b7d31c8c96e02c", null ],
+    [ "chiVolumeMesherSetMatIDToAll", "da/d1e/lua__namespace_8hpp.html#a090d59f6220b9ccf3f910571856b612e", null ],
     [ "chiVolumeMesherSetProperty", "da/d1e/lua__namespace_8hpp.html#ga52aada794be1a72c2c5efb8a442e9e1f", null ],
+    [ "chiVolumeMesherSetupOrthogonalBoundaries", "da/d1e/lua__namespace_8hpp.html#ab53dfd750a364bfe19eeafd18bd60873", null ],
     [ "chiYlm", "da/d1e/lua__namespace_8hpp.html#ga8cb0fae654b617fde41e8bdc849a1f9f", null ]
 ];

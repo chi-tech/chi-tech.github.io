@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['patch_4774',['Patch',['../d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html#ac2ddf76b1ea3db9f8d12a3c5ca14ac7d',1,'chi_mesh::SurfaceMesherDelaunay']]]
+  ['node_4737',['Node',['../d0/d81/namespacechi__mesh.html#a0c3635049b6a7727edc9a8a0b8b45f24',1,'chi_mesh']]],
+  ['nodeindexmap_4738',['NodeIndexMap',['../d0/d81/namespacechi__mesh.html#ad6f9155d2de7416e37dc0dc507ebb93e',1,'chi_mesh']]],
+  ['normal_4739',['Normal',['../d0/d81/namespacechi__mesh.html#a7e8ffeada9f9616fe9eef023a8533a7b',1,'chi_mesh']]]
 ];

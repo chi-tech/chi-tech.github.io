@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('d6/d32/classchi__diffusion_1_1_solver.
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Data Fields</a> &#124;
@@ -103,6 +104,15 @@ Inheritance diagram for chi_diffusion::Solver:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af2908525025b293391f4ce24e86c34a0"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#af2908525025b293391f4ce24e86c34a0">uint</a></td></tr>
+<tr class="separator:af2908525025b293391f4ce24e86c34a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c29847bfd7d3f711d088b58a5d526c4"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; <a class="el" href="../../de/d73/namespacechi__diffusion.html#ac4e189795be6769fcad88cf3ebf1d79f">BoundaryType</a>, std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2c29847bfd7d3f711d088b58a5d526c4">BoundaryInfo</a></td></tr>
+<tr class="separator:a2c29847bfd7d3f711d088b58a5d526c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c4ba79c51bae0070aee1e83944d016"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#af2908525025b293391f4ce24e86c34a0">uint</a>, <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2c29847bfd7d3f711d088b58a5d526c4">BoundaryInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a05c4ba79c51bae0070aee1e83944d016">BoundaryPreferences</a></td></tr>
+<tr class="separator:a05c4ba79c51bae0070aee1e83944d016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acbec56ac53ae8b2f9f56d284036e74a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#acbec56ac53ae8b2f9f56d284036e74a3">Solver</a> ()</td></tr>
@@ -148,6 +158,8 @@ Static Public Member Functions</h2></td></tr>
 Data Fields</h2></td></tr>
 <tr class="memitem:a5c5035fd4ccd0fe4763c8d707618ca79"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5c5035fd4ccd0fe4763c8d707618ca79">solver_name</a> =&quot;Diffusion <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html">Solver</a>&quot;</td></tr>
 <tr class="separator:a5c5035fd4ccd0fe4763c8d707618ca79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f084443cc2d538e42ede9574e77d1e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a05c4ba79c51bae0070aee1e83944d016">BoundaryPreferences</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a1f084443cc2d538e42ede9574e77d1e0">boundary_preferences</a></td></tr>
+<tr class="separator:a1f084443cc2d538e42ede9574e77d1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affd4790c5f0755e4ceb72faa832310e6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d7/dae/classchi__diffusion_1_1_boundary.html">chi_diffusion::Boundary</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#affd4790c5f0755e4ceb72faa832310e6">boundaries</a></td></tr>
 <tr class="separator:affd4790c5f0755e4ceb72faa832310e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12287ec73e134ae8fdd138d2aff542aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a12287ec73e134ae8fdd138d2aff542aa">grid</a> = nullptr</td></tr>
@@ -228,7 +240,56 @@ Private Attributes</h2></td></tr>
 <p><img src="../../DiffusionMatProp.png" alt="" style="width:500px" class="inline"/> </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00041">41</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a2c29847bfd7d3f711d088b58a5d526c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c29847bfd7d3f711d088b58a5d526c4">&#9670;&nbsp;</a></span>BoundaryInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::pair&lt;<a class="el" href="../../de/d73/namespacechi__diffusion.html#ac4e189795be6769fcad88cf3ebf1d79f">BoundaryType</a>,std::vector&lt;double&gt; &gt; <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2c29847bfd7d3f711d088b58a5d526c4">chi_diffusion::Solver::BoundaryInfo</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00052">52</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+
+</div>
+</div>
+<a id="a05c4ba79c51bae0070aee1e83944d016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c4ba79c51bae0070aee1e83944d016">&#9670;&nbsp;</a></span>BoundaryPreferences</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt;<a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#af2908525025b293391f4ce24e86c34a0">uint</a>, <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2c29847bfd7d3f711d088b58a5d526c4">BoundaryInfo</a>&gt; <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a05c4ba79c51bae0070aee1e83944d016">chi_diffusion::Solver::BoundaryPreferences</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00053">53</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+
+</div>
+</div>
+<a id="af2908525025b293391f4ce24e86c34a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2908525025b293391f4ce24e86c34a0">&#9670;&nbsp;</a></span>uint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned int <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#af2908525025b293391f4ce24e86c34a0">chi_diffusion::Solver::uint</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00051">51</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acbec56ac53ae8b2f9f56d284036e74a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbec56ac53ae8b2f9f56d284036e74a3">&#9670;&nbsp;</a></span>Solver() <span class="overload">[1/2]</span></h2>
 
@@ -333,7 +394,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Assembles PWLC matrix for general cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dc6/assemble__pwlc_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d3/dc6/assemble__pwlc_8cc_source.html">assemble_pwlc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dc6/assemble__pwlc_8cc_source.html#l00008">8</a> of file <a class="el" href="../../d3/dc6/assemble__pwlc_8cc_source.html">assemble_pwlc.cc</a>.</p>
 
 </div>
 </div>
@@ -425,7 +486,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Gets material properties various sources. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dff/general_8cc_source.html#l00023">23</a> of file <a class="el" href="../../dd/dff/general_8cc_source.html">general.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dff/general_8cc_source.html#l00017">17</a> of file <a class="el" href="../../dd/dff/general_8cc_source.html">general.cc</a>.</p>
 
 </div>
 </div>
@@ -508,7 +569,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </div><div class="memdoc">
 <p>Initialization of common to all solver types. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d2b/initcommon_8cc_source.html#l00021">21</a> of file <a class="el" href="../../d9/d2b/initcommon_8cc_source.html">initcommon.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d2b/initcommon_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d9/d2b/initcommon_8cc_source.html">initcommon.cc</a>.</p>
 
 </div>
 </div>
@@ -623,7 +684,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </div><div class="memdoc">
 <p>Assembles PWLC matrix for polygon cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html">assemble_pwld.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html#l00013">13</a> of file <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html">assemble_pwld.cc</a>.</p>
 
 </div>
 </div>
@@ -644,7 +705,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </div><div class="memdoc">
 <p>Assembles PWLC matrix for polygon cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html">assemble_pwld_gagg.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html#l00010">10</a> of file <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html">assemble_pwld_gagg.cc</a>.</p>
 
 </div>
 </div>
@@ -675,7 +736,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </div><div class="memdoc">
 <p>Assembles PWLC matrix for polygon cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html#l00296">296</a> of file <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html">assemble_pwld.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html#l00292">292</a> of file <a class="el" href="../../d6/dfb/assemble__pwld_8cc_source.html">assemble_pwld.cc</a>.</p>
 
 </div>
 </div>
@@ -696,7 +757,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 </div><div class="memdoc">
 <p>Assembles b PWLD for polygon cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html#l00295">295</a> of file <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html">assemble_pwld_gagg.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html#l00291">291</a> of file <a class="el" href="../../d6/d14/assemble__pwld__gagg_8cc_source.html">assemble_pwld_gagg.cc</a>.</p>
 
 </div>
 </div>
@@ -713,7 +774,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00071">71</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00078">78</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -729,7 +790,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00070">70</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00077">77</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -745,7 +806,23 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00051">51</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00058">58</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+
+</div>
+</div>
+<a id="a1f084443cc2d538e42ede9574e77d1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f084443cc2d538e42ede9574e77d1e0">&#9670;&nbsp;</a></span>boundary_preferences</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a05c4ba79c51bae0070aee1e83944d016">BoundaryPreferences</a> chi_diffusion::Solver::boundary_preferences</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00057">57</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -761,7 +838,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00067">67</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00074">74</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -777,7 +854,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00063">63</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00070">70</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -793,7 +870,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00054">54</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00061">61</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -809,7 +886,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00057">57</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00064">64</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -825,7 +902,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00086">86</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00093">93</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -841,7 +918,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00085">85</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00092">92</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -857,7 +934,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00079">79</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00086">86</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -873,7 +950,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00052">52</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00059">59</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -889,7 +966,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00076">76</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00083">83</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -905,7 +982,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00072">72</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00079">79</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -921,7 +998,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00078">78</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00085">85</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -937,7 +1014,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00062">62</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00069">69</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -953,7 +1030,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00083">83</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00090">90</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -969,7 +1046,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00075">75</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00082">82</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -985,7 +1062,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00087">87</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00094">94</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1078,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00073">73</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00080">80</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1017,7 +1094,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00059">59</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00066">66</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1033,7 +1110,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00060">60</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00067">67</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1049,7 +1126,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00061">61</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00068">68</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +1142,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00081">81</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00088">88</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1158,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00064">64</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00071">71</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1097,7 +1174,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00084">84</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00091">91</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1113,7 +1190,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00065">65</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00072">72</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1129,7 +1206,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00050">50</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00056">56</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1241,7 +1318,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00056">56</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00063">63</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1281,7 +1358,7 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00069">69</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html#l00076">76</a> of file <a class="el" href="../../d9/d4b/diffusion__solver_8h_source.html">diffusion_solver.h</a>.</p>
 
 </div>
 </div>

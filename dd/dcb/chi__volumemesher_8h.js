@@ -1,6 +1,5 @@
 var chi__volumemesher_8h =
 [
-    [ "CellIndexMap", "dd/da7/structchi__mesh_1_1_cell_index_map.html", "dd/da7/structchi__mesh_1_1_cell_index_map" ],
     [ "VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", "de/df0/classchi__mesh_1_1_volume_mesher" ],
     [ "VOLUME_MESHER_OPTIONS", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s" ],
     [ "VolumeMesherProperty", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5", [
@@ -18,9 +17,7 @@ var chi__volumemesher_8h =
       [ "BNDRYID_FROMLOGICAL", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a7f91a4d4b8e9e23a94dfdc882c363285", null ]
     ] ],
     [ "VolumeMesherType", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1", [
-      [ "LINEMESH1D", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a806a2ee28f749ad4a658b8a0b754b7de", null ],
-      [ "PREDEFINED2D", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a548d5d929e5f87a5283e3e0b0fef6ab6", null ],
       [ "EXTRUDER", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a0befd17b3ade34df1cc1ae7ecd38da20", null ],
-      [ "PREDEFINED3D", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a349c3c7e011b2ed8a9c60d161f1e5113", null ]
+      [ "UNPARTITIONED", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a4ff11a25c75f2e5deefd836afcbec82a", null ]
     ] ]
 ];

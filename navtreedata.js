@@ -80,24 +80,24 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d1/d4c/chi__meshcontinuum__exportvtk_8cc.html#aff18523449a2997a122381af7ab97f4d",
-"d2/d19/class_spatial_discretization___f_e.html#a2a2fe43a46efde897ba705a4a22a3637",
-"d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a67bdcf75a27e9d5970b915b66b3ddbd4",
-"d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ae72c12182f86728800fe8be362a8aaba",
-"d4/de6/lbs__01d__initparrays_8cc_source.html",
-"d5/d7c/delaunay__patch__07d__rembadqual_8cc.html",
-"d6/d32/classchi__diffusion_1_1_solver.html#a39b20d6160b3deabd69d10b64b18e21b",
-"d7/d0d/chi__directed__graph_8cc.html#aff18523449a2997a122381af7ab97f4d",
-"d8/d1a/class_chi_log.html#a79cc0a14ad518f04e8fe5e06656eba8fa592d7a1c7412099b9bfd63feba88624c",
-"d8/dd9/classchi__math_1_1_angular_quadrature.html#a428a1a46fbec14a468f4ec74c93c6467",
-"d9/da7/classchi__math_1_1_unknown_manager.html#ac43ca7efb97b685d5fa80e1c3fe72c85",
-"da/d1e/lua__namespace_8hpp.html#ga92e2e2734da988f93638c53d253ece30",
-"db/d41/class_cell_mapping_f_e___p_w_l.html#ab2639ed3a823a643323c212ba1c3b6c9",
-"dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a783fa0daa30068dae1d724189347325e",
-"dd/d25/chi__thermoalpha__01__initialize_8cpp_source.html",
-"de/d0d/classchi__math_1_1finite__element_1_1_unit_integral_data.html#a321728763873be2d1da71370d891cca4",
-"df/d52/classchi__physics_1_1_material_property.html#af89883b35d004e81f322a854daf554f9",
-"functions_f.html"
+"d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html#aa5e9c7bae0d1479d5a98cedaeee65efe",
+"d2/d36/_f_l_u_d_s_8cc_source.html",
+"d3/d1c/classchi__mesh_1_1_mesh_continuum.html#add25e66a31973db57bc7436e3b0edfb8",
+"d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#a49ea25dc4c45af620ef8bb7e20d156a2",
+"d5/d03/group___lua_l_b_s_groupsets.html",
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a7bc5509328364ec8b7108dee4fdc1b32",
+"d6/d32/classchi__diffusion_1_1_solver.html#ae2472974ed27ec6a8631f7290fac2549",
+"d7/d24/classchi__mesh_1_1_global_cell_handler.html#a6e361f388fd68ecfef2e36eee092ac72",
+"d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#ad5e2a65c10b7dbf1646bd09cdfba34ec",
+"d9/d1c/lbs__solvercreate_8cc.html#a87694d946c53737d94052d065be89b53",
+"d9/dd4/class_spatial_discretization___p_w_l_d.html#a17df1eecdedb9e859719848750a9035e",
+"da/d52/integrate__volume_8cc_source.html",
+"db/d70/chi__meshface_8h.html#ac37458b05fa7ffc23c7d126c12990a7c",
+"dc/d72/chi__ffinter__line_8h.html#a08a3a4b447c7fd1c6dbcdf58742fb4d1",
+"dd/d54/structchi__mesh_1_1_vector3.html#a8ba41727dff951df3ee04a20634b24bf",
+"de/d51/classchi__math_1_1_sparse_matrix.html#a2241c444e10aacf231ec80fafa16b728",
+"df/d95/sweepscheduler_8h.html#a7994968a2e59e0282ab73aba3fe0a0d2",
+"functions_rela.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

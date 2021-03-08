@@ -139,15 +139,15 @@ chi_mesh::SurfaceMesher and chi_mesh::VolumeMesher</h2>
 <li>chi_mesh::SurfaceMesherTriangle. Remeshes a surface mesh using Triangle 1.6.</li>
 </ul>
 <p>Similarly there are also various types of volume meshers:</p><ul>
-<li><a class="el" href="../../d0/de5/classchi__mesh_1_1_volume_mesher_linemesh1_d.html">chi_mesh::VolumeMesherLinemesh1D</a>. Converts line meshes into slabs.</li>
-<li><a class="el" href="../../d9/d93/classchi__mesh_1_1_volume_mesher_predefined2_d.html">chi_mesh::VolumeMesherPredefined2D</a>. Converts predefined surface meshes into 2D triangles, quadrilaterals or polygons.</li>
+<li>chi_mesh::VolumeMesherLinemesh1D. Converts line meshes into slabs.</li>
+<li>chi_mesh::VolumeMesherPredefined2D. Converts predefined surface meshes into 2D triangles, quadrilaterals or polygons.</li>
 <li><a class="el" href="../../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html">chi_mesh::VolumeMesherExtruder</a>. Extrudes predefined surface meshes into 3D triangular prisms, hexahedrals or polyhedrons.</li>
-<li><a class="el" href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html">chi_mesh::VolumeMesherPredefined3D</a>. Converts loaded 3D meshes to 3D tetrahedrals, hexahedrals or polyhedrons.</li>
+<li>chi_mesh::VolumeMesherPredefined3D. Converts loaded 3D meshes to 3D tetrahedrals, hexahedrals or polyhedrons.</li>
 <li><a class="el" href="../../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html">chi_mesh::VolumeMesherPredefinedUnpartitioned</a>. Converts a ligthweight unpartitioned mesh to a proper full detail partitioned mesh. This mesher allows much flexibility for reading meshes from external sources.</li>
 </ul>
 <p>Surface meshers and volume meshers are assigned to a handler as:</p>
 <div class="fragment"><div class="line">cur_handler-&gt;surface_mesher = <span class="keyword">new</span> <a class="code" href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a>;</div>
-<div class="line">cur_handler-&gt;volume_mesher = <span class="keyword">new</span> <a class="code" href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html">chi_mesh::VolumeMesherPredefined3D</a>;</div>
+<div class="line">cur_handler-&gt;volume_mesher = <span class="keyword">new</span> chi_mesh::VolumeMesherPredefined3D;</div>
 </div><!-- fragment --><p>To execute the surface meshers simply do:</p>
 <div class="fragment"><div class="line">cur_handler-&gt;surface_mesher-&gt;Execute();</div>
 <div class="line">cur_handler-&gt;volume_mesher-&gt;Execute();</div>
@@ -198,7 +198,6 @@ Figure 3: Cell mapping logic.</div></div>
 </div><!-- doc-content -->
 <div class="ttc" id="aclasschi__mesh_1_1_surface_mesher_predefined_html"><div class="ttname"><a href="../../d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html">chi_mesh::SurfaceMesherPredefined</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/surfmesher__predefined_8h_source.html#l00010">surfmesher_predefined.h:11</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_region_html"><div class="ttname"><a href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d07/chi__region_8h_source.html#l00010">chi_region.h:11</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_predefined3_d_html"><div class="ttname"><a href="../../d1/da0/classchi__mesh_1_1_volume_mesher_predefined3_d.html">chi_mesh::VolumeMesherPredefined3D</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da7/volmesher__predefined3d_8h_source.html#l00007">volmesher_predefined3d.h:8</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_a55aa0de42096c5df928a53928143aa55"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler * GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00011">chi_mesh_meshhandler_utils.cc:11</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -126,17 +126,24 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Type</td><td>int Volume Remesher type. Remesher types:<br  />
- VOLUMEMESHER_LINEMESH1D = Creates 1D slab cells from a linemesh.<br  />
  VOLUMEMESHER_PREDEFINED2D = No remeshing is performed.<br  />
- VOLUMEMESHER_EXTRUDER = Extruder the first surface mesh found.<br  />
- VOLUMEMESHER_PREDEFINED3D = Create the mesh from the latest UnpartitionedMesh.<br  />
- </td></tr>
+ VOLUMEMESHER_EXTRUDER = Creates an extruded mesh from a 2D template mesh. Requires two additional arguments. <em>TemplateType</em> and <em>handle</em>. See below.<br  />
+ VOLUMEMESHER_UNPARTITIONED = Create the mesh from the latest UnpartitionedMesh.<br  />
+<h2>_</h2>
+</td></tr>
   </table>
   </dd>
 </dl>
+<h3>Extruder parameters</h3>
+<p>When the mesher type is specified to be VOLUMEMESHER_EXTRUDER then two additional arguments are required. <em>TemplateType</em> and <em>handle</em>.<br  />
+</p><ul>
+<li><em>TemplateType</em> can be either ExtruderTemplateType.SURFACE_MESH or ExtruderTemplateType.UNPARTITIONED_MESH.<br  />
+</li>
+<li><em>handle</em> is a handle to the template mesh. When <em>TemplateType</em> is set to ExtruderTemplateType.SURFACE_MESH then this must be a handle to a valid surface mesh. Similarly, when <em>TemplateType</em> is set to ExtruderTemplateType.UNPARTITIONED_MESH then the handle must point to a valid unpartitioned mesh.</li>
+</ul>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00633">633</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00654">654</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -157,7 +164,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 <p>Executes the volume meshing pipeline.</p>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00638">638</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00659">659</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -199,9 +206,9 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
  MESH_GLOBAL = <b>PropertyValue:[bool]</b> Generate/Read the full mesh at each location. Expects a boolean value [Default=true].<br  />
  PARTITION_TYPE = <b>PartitionType</b>. See below.<br  />
  EXTRUSION_LAYER = <b>PropertyValue:[double,(int),(char)]</b> Adds a layer to the extruder volume mesher if it exists. Expects 1 required parameter, the layer height, followed by 2 optional parameters: number of subdivisions (defaults to 1), and layer id (char)(defaults to nothing). Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>. <br  />
- CUT_X = Adds a cut at the given x-value. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
- CUT_Y = Adds a cut at the given y-value. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
- CUT_Z = Adds a cut at the given z-value. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
+ CUTS_X = Adds a cut at the given x-value. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
+ CUTS_Y = Adds a cut at the given y-value. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
+ CUTS_Z = Adds a cut at the given z-value. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
  PARTITION_X = <b>PropertyValue:[int]</b> Number of partitions in X. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
  PARTITION_Y = <b>PropertyValue:[int]</b> Number of partitions in Y. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
  PARTITION_Z = <b>PropertyValue:[int]</b> Number of partitions in Z. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
@@ -210,13 +217,12 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 </p><h2>_</h2>
 <h3>PartitionType</h3>
 <p>Can be any of the following:</p><ul>
-<li>KBA_STYLE_XY</li>
 <li>KBA_STYLE_XYZ</li>
 <li>PARMETIS</li>
 </ul>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00689">689</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00713">713</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

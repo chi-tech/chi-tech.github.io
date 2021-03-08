@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gssubset_4760',['GsSubSet',['../d9/dc3/lbs__groupset_8h.html#a0d44fd13ecd4e245aff54517db32b61d',1,'lbs_groupset.h']]]
+  ['facevec_4725',['FaceVec',['../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#ad5e8df2e983227a520f07e53d808ccf5',1,'chi_mesh::sweep_management::BoundaryReflecting']]]
 ];

@@ -14,7 +14,7 @@ var classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature =
     [ "GenerateDiagonalSpacings", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#afd2f8758ec24347fd96e08d8fce0417c", null ],
     [ "GenerateInitialRefinement", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a569427c79ff38e718cbe7e25fc4f1f07", null ],
     [ "GenerateReferenceFaceVertices", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a31c59bb62fb597a79a4104a0dd65de86", null ],
-    [ "IntegrateLDFEShapeFunctions", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ae72c12182f86728800fe8be362a8aaba", null ],
+    [ "IntegrateLDFEShapeFunctions", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#abf889a5b16512af76ae1558fd875a76c", null ],
     [ "IsolatedQPOptimization", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#adfc5ad9d25b6b52b642d8ab1bb5ed8dd", null ],
     [ "LocallyRefine", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a12e9c009c10b6c504cc634a295c9909e", null ],
     [ "PopulateQuadratureAbscissae", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a921e33188a6696a764535e33bfdf3724", null ],
