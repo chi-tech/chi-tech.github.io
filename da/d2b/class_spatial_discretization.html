@@ -108,12 +108,20 @@ Inheritance diagram for SpatialDiscretization:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a671c3cb34e4f21c0f5f667c0a0cc7d6a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#a671c3cb34e4f21c0f5f667c0a0cc7d6a">BuildSparsityPattern</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> grid, std::vector&lt; int &gt; &amp;nodal_nnz_in_diag, std::vector&lt; int &gt; &amp;nodal_nnz_off_diag, <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager)</td></tr>
-<tr class="separator:a671c3cb34e4f21c0f5f667c0a0cc7d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a343f9681e125230614d9d318fcc3dbaf"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#a343f9681e125230614d9d318fcc3dbaf">GetNumLocalDOFs</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> grid, <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager)</td></tr>
-<tr class="separator:a343f9681e125230614d9d318fcc3dbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae165ef9788a2c59937905a75e1b6ea9c"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#ae165ef9788a2c59937905a75e1b6ea9c">GetNumGlobalDOFs</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> grid, <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager)</td></tr>
-<tr class="separator:ae165ef9788a2c59937905a75e1b6ea9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f8c3f810e7bcc53c5a07aa3717558cb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#a5f8c3f810e7bcc53c5a07aa3717558cb">BuildSparsityPattern</a> (std::vector&lt; int &gt; &amp;nodal_nnz_in_diag, std::vector&lt; int &gt; &amp;nodal_nnz_off_diag, <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager)</td></tr>
+<tr class="separator:a5f8c3f810e7bcc53c5a07aa3717558cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff18a21b9a1551f2f4f8582e0eb87692"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#aff18a21b9a1551f2f4f8582e0eb87692">MapDOF</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, unsigned int node, const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager, unsigned int unknown_id, unsigned int component) const</td></tr>
+<tr class="separator:aff18a21b9a1551f2f4f8582e0eb87692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afca2ac533574b1de238f86545e210921"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#afca2ac533574b1de238f86545e210921">MapDOFLocal</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, unsigned int node, const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager, unsigned int unknown_id, unsigned int component) const</td></tr>
+<tr class="separator:afca2ac533574b1de238f86545e210921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa0d2481146b07b61a89f699d0b749c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#aeaa0d2481146b07b61a89f699d0b749c">MapDOF</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, unsigned int node) const</td></tr>
+<tr class="separator:aeaa0d2481146b07b61a89f699d0b749c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404dacb7dbf3f1b706b3d4c1d6bd7b3a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#a404dacb7dbf3f1b706b3d4c1d6bd7b3a">MapDOFLocal</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, unsigned int node) const</td></tr>
+<tr class="separator:a404dacb7dbf3f1b706b3d4c1d6bd7b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c4464f1f7495fcda44f81330c818ffe"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#a7c4464f1f7495fcda44f81330c818ffe">GetNumLocalDOFs</a> (<a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager)</td></tr>
+<tr class="separator:a7c4464f1f7495fcda44f81330c818ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a9160398a1e24dff8746647d19ed0a8"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#a7a9160398a1e24dff8746647d19ed0a8">GetNumGlobalDOFs</a> (<a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager)</td></tr>
+<tr class="separator:a7a9160398a1e24dff8746647d19ed0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -131,8 +139,8 @@ Protected Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:acecb774cc36e31f118d92618c804efc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#acecb774cc36e31f118d92618c804efc8">SpatialDiscretization</a> (int in_dim, <a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> in_grid, <a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0">SDMType</a> in_type=SDMType::UNDEFINED)</td></tr>
-<tr class="separator:acecb774cc36e31f118d92618c804efc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadfa57bc93cc2c8949c3ab6130ed9032"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#aadfa57bc93cc2c8949c3ab6130ed9032">SpatialDiscretization</a> (int in_dim, <a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> &amp;in_grid, <a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0">SDMType</a> in_type=SDMType::UNDEFINED)</td></tr>
+<tr class="separator:aadfa57bc93cc2c8949c3ab6130ed9032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a503e258d53186f8ec8665fcd0dad0a23"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#a503e258d53186f8ec8665fcd0dad0a23">PreComputeCellSDValues</a> ()</td></tr>
 <tr class="separator:a503e258d53186f8ec8665fcd0dad0a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac61e0fbf7b5ac1291e674878f7b334a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#ac61e0fbf7b5ac1291e674878f7b334a0">LocalizePETScVector</a> (Vec petsc_vector, std::vector&lt; double &gt; &amp;local_vector, <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager)</td></tr>
@@ -140,7 +148,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00019">19</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00011">11</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a40c4cadaab0ba12e0ede03f1b802d901"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40c4cadaab0ba12e0ede03f1b802d901">&#9670;&nbsp;</a></span>SDMType</h2>
@@ -162,13 +170,13 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00028">28</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00020">20</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="acecb774cc36e31f118d92618c804efc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acecb774cc36e31f118d92618c804efc8">&#9670;&nbsp;</a></span>SpatialDiscretization()</h2>
+<a id="aadfa57bc93cc2c8949c3ab6130ed9032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadfa57bc93cc2c8949c3ab6130ed9032">&#9670;&nbsp;</a></span>SpatialDiscretization()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +193,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>in_grid</em>, </td>
         </tr>
         <tr>
@@ -207,13 +215,13 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00033">33</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00025">25</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a671c3cb34e4f21c0f5f667c0a0cc7d6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a671c3cb34e4f21c0f5f667c0a0cc7d6a">&#9670;&nbsp;</a></span>BuildSparsityPattern()</h2>
+<a id="a5f8c3f810e7bcc53c5a07aa3717558cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8c3f810e7bcc53c5a07aa3717558cb">&#9670;&nbsp;</a></span>BuildSparsityPattern()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,12 +232,6 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void SpatialDiscretization::BuildSparsityPattern </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a>&#160;</td>
-          <td class="paramname"><em>grid</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
           <td class="paramname"><em>nodal_nnz_in_diag</em>, </td>
         </tr>
@@ -258,14 +260,14 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a0012c6ae97bb0bf8769538180f56527d">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a810fd32cb14c6f1c9a7746736f9bbc2c">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#abf84bbe104d7ed0e4ba87f9ddf022ded">SpatialDiscretization_PWLD</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a509abec278a2e983d1f920cecc51c333">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#ae515e085b23604dd8d44b969a4db4ed2">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#a64e6cb29afd8f6d3fbc7c37c0b0302da">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00048">48</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00040">40</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
-<a id="ae165ef9788a2c59937905a75e1b6ea9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae165ef9788a2c59937905a75e1b6ea9c">&#9670;&nbsp;</a></span>GetNumGlobalDOFs()</h2>
+<a id="a7a9160398a1e24dff8746647d19ed0a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a9160398a1e24dff8746647d19ed0a8">&#9670;&nbsp;</a></span>GetNumGlobalDOFs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,19 +278,9 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual size_t SpatialDiscretization::GetNumGlobalDOFs </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a>&#160;</td>
-          <td class="paramname"><em>grid</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;&#160;</td>
-          <td class="paramname"><em>unknown_manager</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>unknown_manager</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -298,14 +290,14 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#aad78d03401e4911b20567473ba4ab889">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a5fecc04f2569a7ffe0b89d8243de3fef">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#a12ca7455d428d7e1606991913d0da58b">SpatialDiscretization_PWLD</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a2022ba8796d99efbe6aace8512d05c7d">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#aacdfda609d452467efcf692feb6c8d15">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#ac54ce8b6a7c9e4e83ec0f48c871336cb">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00059">59</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00068">68</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
-<a id="a343f9681e125230614d9d318fcc3dbaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a343f9681e125230614d9d318fcc3dbaf">&#9670;&nbsp;</a></span>GetNumLocalDOFs()</h2>
+<a id="a7c4464f1f7495fcda44f81330c818ffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c4464f1f7495fcda44f81330c818ffe">&#9670;&nbsp;</a></span>GetNumLocalDOFs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,19 +308,9 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual size_t SpatialDiscretization::GetNumLocalDOFs </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a>&#160;</td>
-          <td class="paramname"><em>grid</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;&#160;</td>
-          <td class="paramname"><em>unknown_manager</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>unknown_manager</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -338,9 +320,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a00e8c7dbca0608510f612666ac6e8f41">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#af1c5ca5ca991fc324333b314600e7390">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#a567a695bfb27d71d6b3475cc88fa1085">SpatialDiscretization_PWLD</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a065ad1d2a32522801dd47b6b7105c3b7">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#af3ac4d3cbb302fccee59bf6e4bb455be">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#ad91d6e3387b6f2dbc9948424ea33bdbe">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00055">55</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00065">65</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +369,203 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a7d409700a8e544e59c52cbd02814407f">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a115b36152ab6672b02135a48add1cff8">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#a9f2c2cd8985fbe5fcdfd4c0cd911eb3e">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00068">68</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00076">76</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+
+</div>
+</div>
+<a id="aeaa0d2481146b07b61a89f699d0b749c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa0d2481146b07b61a89f699d0b749c">&#9670;&nbsp;</a></span>MapDOF() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int SpatialDiscretization::MapDOF </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a7dd94031bdb387827ab151b83527fb6f">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a3cb46425feae9b7af8ecaa6bb776e5e9">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#aaeba94dc68e5e109c56397d3924bfd6c">SpatialDiscretization_PWLD</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00060">60</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+
+</div>
+</div>
+<a id="aff18a21b9a1551f2f4f8582e0eb87692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff18a21b9a1551f2f4f8582e0eb87692">&#9670;&nbsp;</a></span>MapDOF() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int SpatialDiscretization::MapDOF </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>unknown_manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>unknown_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>component</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#aa0f1596fd8e0c72e76d68f153e3bd97c">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#aa37ea7bce101e895966ccd2327c74b0a">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#ab1bffbbb1a28ef0bf73b0e5770c01fc9">SpatialDiscretization_PWLD</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00046">46</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+
+</div>
+</div>
+<a id="a404dacb7dbf3f1b706b3d4c1d6bd7b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a404dacb7dbf3f1b706b3d4c1d6bd7b3a">&#9670;&nbsp;</a></span>MapDOFLocal() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int SpatialDiscretization::MapDOFLocal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a6f58940a83decf23d4c0cceab012bf3d">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a8fd4849f468edeed7561b73fd48ff5a7">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#a6fb9fe68c7c82f0dbfdca452ec1539fd">SpatialDiscretization_PWLD</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00062">62</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+
+</div>
+</div>
+<a id="afca2ac533574b1de238f86545e210921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afca2ac533574b1de238f86545e210921">&#9670;&nbsp;</a></span>MapDOFLocal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int SpatialDiscretization::MapDOFLocal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>unknown_manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>unknown_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>component</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#ab0c44c8a3af6b596024092b003803a4b">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a4acf8e319de4a6f2920d0711eb6f427c">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#a9cbc467b7f0fa57480e5276e175e9bf3">SpatialDiscretization_PWLD</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00053">53</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -416,7 +594,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a6156810c6c520844fca68a77cb112b96">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#ad497bc8da02192aa48fdd565491ac304">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#ae1e523184541403a1bdf4b4f5a6b7e85">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00044">44</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00036">36</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -433,7 +611,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00022">22</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00014">14</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -449,7 +627,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00025">25</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00017">17</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -465,7 +643,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00023">23</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00015">15</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>

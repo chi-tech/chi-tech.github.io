@@ -89,16 +89,16 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <a href="../../dc/dee/lbs__groupset__ops_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;ChiLua/chi_lua.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../lbs_linear_boltzmann_solver.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d54/chi__physics_8h.html">ChiPhysics/chi_physics.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d08/chi__math_8h.html">ChiMath/chi_math.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d2a/product__quadrature_8h.html">ChiMath/Quadratures/product_quadrature.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d2a/product__quadrature_8h.html">ChiMath/Quadratures/product_quadrature.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp;     <a class="code" href="../../dc/dee/lbs__groupset__ops_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a>&amp;  <a class="code" href="../../dc/dee/lbs__groupset__ops_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d9/d9f/class_chi_math.html">ChiMath</a>&amp;     <a class="code" href="../../dc/dee/lbs__groupset__ops_8cc.html#ae9efc1c41deef277517887c4997f0fab">chi_math_handler</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp;     <a class="code" href="../../dc/dee/lbs__groupset__ops_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d08/chi__math_8h.html">ChiMath/chi_math.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d9/d9f/class_chi_math.html">ChiMath</a>&amp;     <a class="code" href="../../dc/dee/lbs__groupset__ops_8cc.html#ae9efc1c41deef277517887c4997f0fab">chi_math_handler</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d54/chi__physics_8h.html">ChiPhysics/chi_physics.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a>&amp;  <a class="code" href="../../dc/dee/lbs__groupset__ops_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/** \defgroup LuaLBSGroupsets LBS Groupsets</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span> </div>
@@ -273,7 +273,7 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordflow">if</span> (num_args != 4)</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetAddGroups&quot;</span>,4,num_args);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    LuaPostArgAmountError(__FUNCTION__,4,num_args);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">int</span> from = lua_tonumber(L,3);</div>
@@ -372,11 +372,11 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keywordflow">if</span> (num_args != 3)</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetSetQuadrature&quot;</span>,3,num_args);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    LuaPostArgAmountError(__FUNCTION__,3,num_args);</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetQuadrature&quot;</span>,L,1);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetQuadrature&quot;</span>,L,2);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetQuadrature&quot;</span>,L,3);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
@@ -492,11 +492,11 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  <span class="keywordflow">if</span> (num_args != 3)</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetSetAngleAggregationType&quot;</span>,3,num_args);</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    LuaPostArgAmountError(__FUNCTION__,3,num_args);</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetAngleAggregationType&quot;</span>,L,1);</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetAngleAggregationType&quot;</span>,L,2);</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetAngleAggregationType&quot;</span>,L,3);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keywordtype">int</span> agg_type = lua_tonumber(L,3);</div>
@@ -590,11 +590,11 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;  <span class="keywordflow">if</span> (num_args != 3)</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetSetAngleAggDiv&quot;</span>,3,num_args);</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    LuaPostArgAmountError(__FUNCTION__,3,num_args);</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160; </div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetAngleAggDiv&quot;</span>,L,1);</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetAngleAggDiv&quot;</span>,L,2);</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetAngleAggDiv&quot;</span>,L,3);</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;  <span class="keywordtype">int</span> num_div = lua_tonumber(L,3);</div>
@@ -675,11 +675,11 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;  <span class="keywordflow">if</span> (num_args != 3)</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetSetGroupSubsets&quot;</span>,3,num_args);</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    LuaPostArgAmountError(__FUNCTION__,3,num_args);</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160; </div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetGroupSubsets&quot;</span>,L,1);</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetGroupSubsets&quot;</span>,L,2);</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetGroupSubsets&quot;</span>,L,3);</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;  <span class="keywordtype">int</span> num_div = lua_tonumber(L,3);</div>
@@ -775,11 +775,11 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;  <span class="keywordflow">if</span> (num_args != 3)</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetSetIterativeMethod&quot;</span>,3,num_args);</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    LuaPostArgAmountError(__FUNCTION__,3,num_args);</div>
 <div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160; </div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetIterativeMethod&quot;</span>,L,1);</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetIterativeMethod&quot;</span>,L,2);</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetIterativeMethod&quot;</span>,L,3);</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  <span class="keywordtype">int</span> iter_method  = lua_tonumber(L,3);</div>
@@ -876,11 +876,11 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;  <span class="keywordflow">if</span> (num_args != 3)</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetSetResidualTolerance&quot;</span>,3,num_args);</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    LuaPostArgAmountError(__FUNCTION__,3,num_args);</div>
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160; </div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetResidualTolerance&quot;</span>,L,1);</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetResidualTolerance&quot;</span>,L,2);</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetResidualTolerance&quot;</span>,L,3);</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
 <div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;  <span class="keywordtype">double</span> resid_tol = lua_tonumber(L,3);</div>
@@ -964,11 +964,11 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;  <span class="keywordflow">if</span> (num_args != 3)</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetSetMaxIterations&quot;</span>,3,num_args);</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    LuaPostArgAmountError(__FUNCTION__,3,num_args);</div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160; </div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetMaxIterations&quot;</span>,L,1);</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetMaxIterations&quot;</span>,L,2);</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetMaxIterations&quot;</span>,L,3);</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;  <span class="keywordtype">int</span> num_iter = lua_tonumber(L,3);</div>
@@ -1049,11 +1049,11 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;  <span class="keywordflow">if</span> (num_args != 3)</div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetSetGMRESRestartIntvl&quot;</span>,3,num_args);</div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    LuaPostArgAmountError(__FUNCTION__,3,num_args);</div>
 <div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160; </div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetGMRESRestartIntvl&quot;</span>,L,1);</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetGMRESRestartIntvl&quot;</span>,L,2);</div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetGMRESRestartIntvl&quot;</span>,L,3);</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
 <div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;  <span class="keywordtype">int</span> restart_intvl = lua_tonumber(L,3);</div>
@@ -1135,11 +1135,11 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;  <span class="keywordflow">if</span> (num_args != 3)</div>
-<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetSetEnableSweepLog&quot;</span>,3,num_args);</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;    LuaPostArgAmountError(__FUNCTION__,3,num_args);</div>
 <div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160; </div>
-<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetEnableSweepLog&quot;</span>,L,1);</div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetEnableSweepLog&quot;</span>,L,2);</div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetEnableSweepLog&quot;</span>,L,3);</div>
+<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
 <div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;  <span class="keywordtype">bool</span> log_flag = lua_toboolean(L,3);</div>
@@ -1226,12 +1226,12 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;  <span class="keywordflow">if</span> (num_args &lt; 4)</div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;chiLBSGroupsetSetWGDSA&quot;</span>,4,num_args);</div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;    LuaPostArgAmountError(__FUNCTION__,4,num_args);</div>
 <div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160; </div>
-<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetWGDSA&quot;</span>,L,1);</div>
-<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetWGDSA&quot;</span>,L,2);</div>
-<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetWGDSA&quot;</span>,L,3);</div>
-<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetWGDSA&quot;</span>,L,4);</div>
+<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
+<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,4);</div>
 <div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;  <span class="keywordtype">int</span> max_iters = lua_tonumber(L,3);</div>
@@ -1333,12 +1333,12 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;  <span class="comment">//============================================= Get arguments</span></div>
 <div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
 <div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;  <span class="keywordflow">if</span> (num_args &lt; 4)</div>
-<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;    LuaPostArgAmountError(<span class="stringliteral">&quot;TGDSA&quot;</span>,4,num_args);</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;    LuaPostArgAmountError(__FUNCTION__,4,num_args);</div>
 <div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160; </div>
-<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetTGDSA&quot;</span>,L,1);</div>
-<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetTGDSA&quot;</span>,L,2);</div>
-<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetTGDSA&quot;</span>,L,3);</div>
-<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;  LuaCheckNilValue(<span class="stringliteral">&quot;chiLBSGroupsetSetTGDSA&quot;</span>,L,4);</div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,1);</div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,2);</div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,3);</div>
+<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;  LuaCheckNilValue(__FUNCTION__,L,4);</div>
 <div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
 <div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;  <span class="keywordtype">int</span> grpset_index = lua_tonumber(L,2);</div>
 <div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;  <span class="keywordtype">int</span> max_iters = lua_tonumber(L,3);</div>
@@ -1447,7 +1447,7 @@ $(document).ready(function(){initNavTree('dc/dee/lbs__groupset__ops_8cc_source.h
 <div class="ttc" id="aclass_l_b_s_groupset_html_a0ecf717cabde59d01e170f04e594a703"><div class="ttname"><a href="../../d7/d7d/class_l_b_s_groupset.html#a0ecf717cabde59d01e170f04e594a703">LBSGroupset::gmres_restart_intvl</a></div><div class="ttdeci">int gmres_restart_intvl</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00056">lbs_groupset.h:56</a></div></div>
 <div class="ttc" id="aclass_l_b_s_groupset_html"><div class="ttname"><a href="../../d7/d7d/class_l_b_s_groupset.html">LBSGroupset</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00034">lbs_groupset.h:35</a></div></div>
 <div class="ttc" id="agroup___lua_l_b_s_groupsets_html_gaad403f6ded2da1fb869c2df01b9e7f2d"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaad403f6ded2da1fb869c2df01b9e7f2d">chiLBSGroupsetSetWGDSA</a></div><div class="ttdeci">int chiLBSGroupsetSetWGDSA(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/lbs__groupset__ops_8cc_source.html#l01136">lbs_groupset_ops.cc:1136</a></div></div>
-<div class="ttc" id="aclass_l_b_s_groupset_html_ae1ddc977f5abf2d210902a7b97c742e5"><div class="ttname"><a href="../../d7/d7d/class_l_b_s_groupset.html#ae1ddc977f5abf2d210902a7b97c742e5">LBSGroupset::log_sweep_events</a></div><div class="ttdeci">bool log_sweep_events</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00074">lbs_groupset.h:74</a></div></div>
+<div class="ttc" id="aclass_l_b_s_groupset_html_ae1ddc977f5abf2d210902a7b97c742e5"><div class="ttname"><a href="../../d7/d7d/class_l_b_s_groupset.html#ae1ddc977f5abf2d210902a7b97c742e5">LBSGroupset::log_sweep_events</a></div><div class="ttdeci">bool log_sweep_events</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00073">lbs_groupset.h:73</a></div></div>
 <div class="ttc" id="agroup___lua_l_b_s_groupsets_html_ga72e259aab8895e06971e04efb7e0fddf"><div class="ttname"><a href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga72e259aab8895e06971e04efb7e0fddf">chiLBSGroupsetSetAngleAggDiv</a></div><div class="ttdeci">int chiLBSGroupsetSetAngleAggDiv(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/lbs__groupset__ops_8cc_source.html#l00500">lbs_groupset_ops.cc:500</a></div></div>
 <div class="ttc" id="aclass_l_b_s_groupset_html_acdc8a0552d714a2e9806ed678102c853"><div class="ttname"><a href="../../d7/d7d/class_l_b_s_groupset.html#acdc8a0552d714a2e9806ed678102c853">LBSGroupset::residual_tolerance</a></div><div class="ttdeci">double residual_tolerance</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00054">lbs_groupset.h:54</a></div></div>
 <div class="ttc" id="aclass_l_b_s_groupset_html_a4e0b0f96ca8928738044b5e1890d2675"><div class="ttname"><a href="../../d7/d7d/class_l_b_s_groupset.html#a4e0b0f96ca8928738044b5e1890d2675">LBSGroupset::quadrature</a></div><div class="ttdeci">std::shared_ptr&lt; chi_math::AngularQuadrature &gt; quadrature</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00040">lbs_groupset.h:40</a></div></div>

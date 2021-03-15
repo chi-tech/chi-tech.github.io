@@ -7,6 +7,7 @@ var struct_linear_boltzmann_1_1_options =
     [ "read_restart_data", "dd/d96/struct_linear_boltzmann_1_1_options.html#a05a2f9333f22d2ad44ccba492ea12d12", null ],
     [ "read_restart_file_base", "dd/d96/struct_linear_boltzmann_1_1_options.html#aa1f80fbebf394c4185bf52dc2255c225", null ],
     [ "read_restart_folder_name", "dd/d96/struct_linear_boltzmann_1_1_options.html#a76d1c5d1a9aae00e7b14321364dbcb51", null ],
+    [ "save_angular_flux", "dd/d96/struct_linear_boltzmann_1_1_options.html#a66fc1f6459c05320faa67e7eb1ad5a04", null ],
     [ "scattering_order", "dd/d96/struct_linear_boltzmann_1_1_options.html#af25028d922297c3583ccadcad02ea091", null ],
     [ "sd_type", "dd/d96/struct_linear_boltzmann_1_1_options.html#a04c4a6d22662dc0ab0dafbcd810174e1", null ],
     [ "sweep_eager_limit", "dd/d96/struct_linear_boltzmann_1_1_options.html#a71fa2661e03a8553f3495f4df6fd28fb", null ],

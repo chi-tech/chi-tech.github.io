@@ -261,7 +261,7 @@ $(document).ready(function(){initNavTree('d2/d7c/export__multiple__vtk_8cc_sourc
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#ac01efa055c239381c32d6aa8ac5b0768">grid</a>-&gt;local_cells)</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        {</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;          <span class="keywordtype">int</span> local_mapping =</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            fv.MapDOFLocal(cell,ff-&gt;unknown_manager,ref_unknown);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            fv.MapDOFLocal(cell,0,ff-&gt;unknown_manager,ref_unknown,0);</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;          <span class="keywordtype">double</span> value = (*ff-&gt;field_vector_local)[local_mapping];</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>

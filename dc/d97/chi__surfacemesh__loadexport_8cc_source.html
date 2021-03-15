@@ -840,7 +840,7 @@ $(document).ready(function(){initNavTree('dc/d97/chi__surfacemesh__loadexport_8c
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160; </div>
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n=0; n&lt;num_elems; n++)</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;  {</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keywordtype">int</span> elem_type, num_tags, tag, element_index;</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    <span class="keywordtype">int</span> elem_type, num_tags, physical_reg, tag, element_index;</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    <a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html">chi_mesh::PolyFace</a>* newFace = <span class="keyword">new</span> <a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html">chi_mesh::PolyFace</a>;</div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    std::getline(<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>, line);</div>
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    iss = std::istringstream(line);</div>
@@ -851,212 +851,217 @@ $(document).ready(function(){initNavTree('dc/d97/chi__surfacemesh__loadexport_8c
 <div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;      exit(EXIT_FAILURE);</div>
 <div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    }</div>
 <div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160; </div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_tags; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;      <span class="keywordflow">if</span>( !(iss &gt;&gt; tag) )</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;      {</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;        <a class="code" href="../../dc/d97/chi__surfacemesh__loadexport_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)&lt;&lt;<span class="stringliteral">&quot;Failed when reading tags.\n&quot;</span>;</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;      }</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160; </div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <span class="keywordflow">if</span> (elem_type == 2)</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    {</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes = 3;</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160; </div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;      <span class="keywordtype">int</span> nodes[num_nodes];</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_nodes; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;        <span class="keywordflow">if</span> ( !(iss &gt;&gt; nodes[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>]) )</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        {</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;          <a class="code" href="../../dc/d97/chi__surfacemesh__loadexport_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)&lt;&lt;<span class="stringliteral">&quot;Failed when reading element node index.\n&quot;</span>;</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;          exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;        }</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160; </div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;      newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>.resize(num_nodes);</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_nodes; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>] = nodes[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>]-1;</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160; </div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (elem_type == 3)</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    {</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes = 4;</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160; </div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;      <span class="keywordtype">int</span> nodes[num_nodes];</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_nodes; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;        <span class="keywordflow">if</span> ( !(iss &gt;&gt; nodes[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>]) )</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        {</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;          <a class="code" href="../../dc/d97/chi__surfacemesh__loadexport_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)&lt;&lt;<span class="stringliteral">&quot;Failed when reading element node index.\n&quot;</span>;</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;          exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        }</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160; </div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;      newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>.resize(num_nodes);</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_nodes; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>] = nodes[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>]-1;</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160; </div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    } <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;    {</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160; </div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    }</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    <span class="keywordflow">if</span>( !(iss&gt;&gt;physical_reg) )</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;    {</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;      <a class="code" href="../../dc/d97/chi__surfacemesh__loadexport_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)&lt;&lt;<span class="stringliteral">&quot;Failed while reading physical region.\n&quot;</span>;</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;      exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;    }</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160; </div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=1; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_tags; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;      <span class="keywordflow">if</span>( !(iss &gt;&gt; tag) )</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;      {</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        <a class="code" href="../../dc/d97/chi__surfacemesh__loadexport_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)&lt;&lt;<span class="stringliteral">&quot;Failed when reading tags.\n&quot;</span>;</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;      }</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160; </div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    <span class="keywordflow">if</span> (elem_type == 2)</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    {</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes = 3;</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160; </div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;      <span class="keywordtype">int</span> nodes[num_nodes];</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_nodes; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;        <span class="keywordflow">if</span> ( !(iss &gt;&gt; nodes[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>]) )</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        {</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;          <a class="code" href="../../dc/d97/chi__surfacemesh__loadexport_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)&lt;&lt;<span class="stringliteral">&quot;Failed when reading element node index.\n&quot;</span>;</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;          exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        }</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160; </div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;      newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>.resize(num_nodes);</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_nodes; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>] = nodes[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>]-1;</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160; </div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (elem_type == 3)</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    {</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes = 4;</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;      <span class="keywordtype">int</span> nodes[num_nodes];</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_nodes; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        <span class="keywordflow">if</span> ( !(iss &gt;&gt; nodes[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>]) )</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        {</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;          <a class="code" href="../../dc/d97/chi__surfacemesh__loadexport_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)&lt;&lt;<span class="stringliteral">&quot;Failed when reading element node index.\n&quot;</span>;</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;          exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;        }</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160; </div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;      newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>.resize(num_nodes);</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_nodes; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>] = nodes[<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>]-1;</div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160; </div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> total_nodes = newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>.size();</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160; </div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> e=0; e&lt;total_nodes; e++)</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    {</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;      <span class="keywordtype">int</span>* side_indices = <span class="keyword">new</span> <span class="keywordtype">int</span>[total_nodes];</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;      side_indices[0] = newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>[e];</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    {</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    }</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160; </div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> total_nodes = newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>.size();</div>
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160; </div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;      <span class="keywordflow">if</span> (e&lt;total_nodes-1)</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        side_indices[1] = newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>[e+1];</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;        side_indices[1] = newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>[0];</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> e=0; e&lt;total_nodes; e++)</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    {</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;      <span class="keywordtype">int</span>* side_indices = <span class="keyword">new</span> <span class="keywordtype">int</span>[total_nodes];</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;      side_indices[0] = newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>[e];</div>
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160; </div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;      side_indices[2] = -1;</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;      side_indices[3] = -1;</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160; </div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;      newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a265ff3b6977cfb86473fbeaa65474cda">edges</a>.push_back(side_indices);</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;    }</div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160; </div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;    poly_faces.push_back(newFace);</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;      <span class="keywordflow">if</span> (e&lt;total_nodes-1)</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        side_indices[1] = newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>[e+1];</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        side_indices[1] = newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">v_indices</a>[0];</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160; </div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;      side_indices[2] = -1;</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;      side_indices[3] = -1;</div>
 <div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160; </div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;  }</div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160; </div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;  <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>.close();</div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160; </div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;  <span class="comment">//======================================================= Calculate face properties</span></div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;  std::vector&lt;chi_mesh::Face&gt;::iterator curFace;</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;  std::vector&lt;chi_mesh::PolyFace*&gt;::iterator curPFace;</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;  <span class="keywordflow">for</span> (curPFace = this-&gt;poly_faces.begin();</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;       curPFace!=this-&gt;poly_faces.end();</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;       curPFace++)</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;  {</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    <a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> centroid;</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    <span class="keywordtype">int</span> num_verts = (*curPFace)-&gt;v_indices.size();</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160; </div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v=0; v&lt;num_verts; v++)</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;      centroid = centroid + vertices[(*curPFace)-&gt;v_indices[v]];</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160; </div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;    centroid = centroid/num_verts;</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;      newFace-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a265ff3b6977cfb86473fbeaa65474cda">edges</a>.push_back(side_indices);</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;    }</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160; </div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;    poly_faces.push_back(newFace);</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;    physical_region_map.push_back(physical_reg);</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;  }</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160; </div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;  <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>.close();</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160; </div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;  <span class="comment">//======================================================= Calculate face properties</span></div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;  std::vector&lt;chi_mesh::Face&gt;::iterator curFace;</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;  std::vector&lt;chi_mesh::PolyFace*&gt;::iterator curPFace;</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;  <span class="keywordflow">for</span> (curPFace = this-&gt;poly_faces.begin();</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;       curPFace!=this-&gt;poly_faces.end();</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;       curPFace++)</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;  {</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;    <a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> centroid;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;    <span class="keywordtype">int</span> num_verts = (*curPFace)-&gt;v_indices.size();</div>
 <div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160; </div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    (*curPFace)-&gt;face_centroid = centroid;</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160; </div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    <a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> n = (vertices[(*curPFace)-&gt;v_indices[1]] -</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;                          vertices[(*curPFace)-&gt;v_indices[0]]).<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a6ddbb12bba7c4e09e08623c24f02f1ea">Cross</a>(</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;                          centroid - vertices[(*curPFace)-&gt;v_indices[1]]);</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160; </div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    n = n/n.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#aa05ee3e4694dc431351b2dd05a6e3cb6">Norm</a>();</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160; </div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    (*curPFace)-&gt;geometric_normal = n;</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;  }</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v=0; v&lt;num_verts; v++)</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;      centroid = centroid + vertices[(*curPFace)-&gt;v_indices[v]];</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160; </div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;    centroid = centroid/num_verts;</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160; </div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    (*curPFace)-&gt;face_centroid = centroid;</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160; </div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;    <a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> n = (vertices[(*curPFace)-&gt;v_indices[1]] -</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;                          vertices[(*curPFace)-&gt;v_indices[0]]).<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a6ddbb12bba7c4e09e08623c24f02f1ea">Cross</a>(</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;                          centroid - vertices[(*curPFace)-&gt;v_indices[1]]);</div>
 <div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160; </div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;  UpdateInternalConnectivity();</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    n = n/n.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#aa05ee3e4694dc431351b2dd05a6e3cb6">Norm</a>();</div>
 <div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160; </div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;}</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;    (*curPFace)-&gt;geometric_normal = n;</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;  }</div>
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160; </div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;<span class="comment">//#########################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;<span class="comment">/**Exports the triangular faces of a surface mesh to</span></div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;<span class="comment"> * wavefront .obj files.*/</span></div>
-<div class="line"><a name="l00869"></a><span class="lineno"><a class="line" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a2d505a22e027e496eef0a12b0245b34d">  869</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a2d505a22e027e496eef0a12b0245b34d">chi_mesh::SurfaceMesh::ExportToOBJFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fileName)</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;{</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160; </div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;<span class="comment">//  if (this-&gt;faces.empty())</span></div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;<span class="comment">//  {</span></div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;<span class="comment">//    std::cout &lt;&lt; &quot;Cannot export empty SurfaceMesh\n&quot;;</span></div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;<span class="comment">//    return;</span></div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;<span class="comment">//  }</span></div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;  FILE* outputFile = fopen(fileName,<span class="stringliteral">&quot;w&quot;</span>);</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;  <span class="keywordflow">if</span> (outputFile==NULL)</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;  {</div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    printf(<span class="stringliteral">&quot;Error creating file %s!\n&quot;</span>,fileName);</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;  }</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160; </div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;  fprintf(outputFile,<span class="stringliteral">&quot;# Exported mesh file from tringulation script\n&quot;</span>);</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;  fprintf(outputFile,<span class="stringliteral">&quot;o %s\n&quot;</span>,<span class="stringliteral">&quot;ChitechTriMesh&quot;</span>);</div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160; </div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;  std::vector&lt;chi_mesh::Vertex&gt;::iterator cur_v;</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;  <span class="keywordflow">for</span> (cur_v = this-&gt;vertices.begin();</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;       cur_v != this-&gt;vertices.end();</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;       cur_v++)</div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;  {</div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;v %9.6f %9.6f %9.6f\n&quot;</span>,cur_v-&gt;x,cur_v-&gt;y,cur_v-&gt;z);</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;  }</div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160; </div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> ell=0; ell&lt;this-&gt;lines.size(); ell++)</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;  UpdateInternalConnectivity();</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160; </div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;}</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160; </div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;<span class="comment">//#########################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;<span class="comment">/**Exports the triangular faces of a surface mesh to</span></div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;<span class="comment"> * wavefront .obj files.*/</span></div>
+<div class="line"><a name="l00874"></a><span class="lineno"><a class="line" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a2d505a22e027e496eef0a12b0245b34d">  874</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a2d505a22e027e496eef0a12b0245b34d">chi_mesh::SurfaceMesh::ExportToOBJFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fileName)</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;{</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160; </div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;<span class="comment">//  if (this-&gt;faces.empty())</span></div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;<span class="comment">//  {</span></div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;<span class="comment">//    std::cout &lt;&lt; &quot;Cannot export empty SurfaceMesh\n&quot;;</span></div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="comment">//    return;</span></div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;<span class="comment">//  }</span></div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;  FILE* outputFile = fopen(fileName,<span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;  <span class="keywordflow">if</span> (outputFile==NULL)</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;  {</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    printf(<span class="stringliteral">&quot;Error creating file %s!\n&quot;</span>,fileName);</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;  }</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160; </div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;  fprintf(outputFile,<span class="stringliteral">&quot;# Exported mesh file from tringulation script\n&quot;</span>);</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;  fprintf(outputFile,<span class="stringliteral">&quot;o %s\n&quot;</span>,<span class="stringliteral">&quot;ChitechTriMesh&quot;</span>);</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160; </div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;  std::vector&lt;chi_mesh::Vertex&gt;::iterator cur_v;</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;  <span class="keywordflow">for</span> (cur_v = this-&gt;vertices.begin();</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;       cur_v != this-&gt;vertices.end();</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;       cur_v++)</div>
 <div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;  {</div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;l %d %d \n&quot;</span>,lines[ell].v_index[0]+1,</div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;                                    lines[ell].v_index[1]+1);</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;  }</div>
-<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160; </div>
-<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;  <span class="keywordflow">if</span> (faces.size()&gt;0)</div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;  {</div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;    <a class="code" href="../../d4/dd2/structchi__mesh_1_1_face.html">chi_mesh::Face</a> first_face = this-&gt;faces.front();</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;vn %.4f %.4f %.4f\n&quot;</span>, first_face.<a class="code" href="../../d4/dd2/structchi__mesh_1_1_face.html#a0a4f803cf6961754c12412342e1c1fc5">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472">x</a>,</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;            first_face.<a class="code" href="../../d4/dd2/structchi__mesh_1_1_face.html#a0a4f803cf6961754c12412342e1c1fc5">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a8b89a79cfebafd04dbda021f626a9694">y</a>,</div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;            first_face.<a class="code" href="../../d4/dd2/structchi__mesh_1_1_face.html#a0a4f803cf6961754c12412342e1c1fc5">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a95963ca137a97c9d927bc9d10a98a36f">z</a>);</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;s off\n&quot;</span>);</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160; </div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;    std::vector&lt;chi_mesh::Face&gt;::iterator cur_face;</div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;    <span class="keywordflow">for</span> (cur_face = this-&gt;faces.begin();</div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;         cur_face != this-&gt;faces.end();</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;         cur_face++)</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;    {</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;      fprintf(outputFile,<span class="stringliteral">&quot;f %d//1 %d//1 %d//1\n&quot;</span>,cur_face-&gt;v_index[0]+1,</div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;              cur_face-&gt;v_index[1]+1,</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;              cur_face-&gt;v_index[2]+1);</div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;    }</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;  }</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;  <span class="keywordflow">if</span> (poly_faces.size()&gt;0)</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;  {</div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html">chi_mesh::PolyFace</a>* first_face = this-&gt;poly_faces.front();</div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;vn %.4f %.4f %.4f\n&quot;</span>, first_face-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#acd77b07579aa9b288fcbf5b130a98a08">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472">x</a>,</div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;            first_face-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#acd77b07579aa9b288fcbf5b130a98a08">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a8b89a79cfebafd04dbda021f626a9694">y</a>,</div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;            first_face-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#acd77b07579aa9b288fcbf5b130a98a08">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a95963ca137a97c9d927bc9d10a98a36f">z</a>);</div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;s off\n&quot;</span>);</div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160; </div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f=0; f&lt;poly_faces.size(); f++)</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    {</div>
-<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;      fprintf(outputFile,<span class="stringliteral">&quot;f &quot;</span>);</div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v=0; v&lt;poly_faces[f]-&gt;v_indices.size(); v++)</div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;      {</div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;        fprintf(outputFile,<span class="stringliteral">&quot;%d//1 &quot;</span>,poly_faces[f]-&gt;v_indices[v]+1);</div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;      }</div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;      fprintf(outputFile,<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    }</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;  }</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160; </div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;  fclose(outputFile);</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;  printf(<span class="stringliteral">&quot;Exported mesh to %s\n&quot;</span>,fileName);</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;}</div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160; </div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;<span class="comment">//#########################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;<span class="comment">/**Exports a PSLG to triangle1.6&#39;s .poly format.*/</span></div>
-<div class="line"><a name="l00944"></a><span class="lineno"><a class="line" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a4a75c88f20001293b6568bb72776905c">  944</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a4a75c88f20001293b6568bb72776905c">chi_mesh::SurfaceMesh::ExportToPolyFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fileName)</div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;{</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;  FILE* outputFile = fopen(fileName,<span class="stringliteral">&quot;w&quot;</span>);</div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;  <span class="keywordflow">if</span> (outputFile==NULL)</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;  {</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;    printf(<span class="stringliteral">&quot;Error creating file %s!\n&quot;</span>,fileName);</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;  }</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160; </div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;  fprintf(outputFile,<span class="stringliteral">&quot;%lu 2 0 0\n&quot;</span>, vertices.size());</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v=0; v&lt;vertices.size(); v++)</div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;  {</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;%d %.15f %.15f 0\n&quot;</span>,v+1,vertices[v].x,vertices[v].y);</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;  }</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160; </div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;  fprintf(outputFile,<span class="stringliteral">&quot;%lu 0\n&quot;</span>, lines.size());</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> e=0; e&lt;lines.size(); e++)</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;  {</div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;%d %d %d\n&quot;</span>,e+1,lines[e].v_index[0]+1,</div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;                                      lines[e].v_index[1]+1);</div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;  }</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160; </div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;  fprintf(outputFile,<span class="stringliteral">&quot;0&quot;</span>);</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160; </div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160; </div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;  fclose(outputFile);</div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;  printf(<span class="stringliteral">&quot;Exported mesh to %s\n&quot;</span>,fileName);</div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;}</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;v %9.6f %9.6f %9.6f\n&quot;</span>,cur_v-&gt;x,cur_v-&gt;y,cur_v-&gt;z);</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;  }</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160; </div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> ell=0; ell&lt;this-&gt;lines.size(); ell++)</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;  {</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;l %d %d \n&quot;</span>,lines[ell].v_index[0]+1,</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;                                    lines[ell].v_index[1]+1);</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;  }</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160; </div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;  <span class="keywordflow">if</span> (faces.size()&gt;0)</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;  {</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;    <a class="code" href="../../d4/dd2/structchi__mesh_1_1_face.html">chi_mesh::Face</a> first_face = this-&gt;faces.front();</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;vn %.4f %.4f %.4f\n&quot;</span>, first_face.<a class="code" href="../../d4/dd2/structchi__mesh_1_1_face.html#a0a4f803cf6961754c12412342e1c1fc5">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472">x</a>,</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;            first_face.<a class="code" href="../../d4/dd2/structchi__mesh_1_1_face.html#a0a4f803cf6961754c12412342e1c1fc5">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a8b89a79cfebafd04dbda021f626a9694">y</a>,</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;            first_face.<a class="code" href="../../d4/dd2/structchi__mesh_1_1_face.html#a0a4f803cf6961754c12412342e1c1fc5">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a95963ca137a97c9d927bc9d10a98a36f">z</a>);</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;s off\n&quot;</span>);</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160; </div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;    std::vector&lt;chi_mesh::Face&gt;::iterator cur_face;</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;    <span class="keywordflow">for</span> (cur_face = this-&gt;faces.begin();</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;         cur_face != this-&gt;faces.end();</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;         cur_face++)</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    {</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;      fprintf(outputFile,<span class="stringliteral">&quot;f %d//1 %d//1 %d//1\n&quot;</span>,cur_face-&gt;v_index[0]+1,</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;              cur_face-&gt;v_index[1]+1,</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;              cur_face-&gt;v_index[2]+1);</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    }</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;  }</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;  <span class="keywordflow">if</span> (poly_faces.size()&gt;0)</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;  {</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    <a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html">chi_mesh::PolyFace</a>* first_face = this-&gt;poly_faces.front();</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;vn %.4f %.4f %.4f\n&quot;</span>, first_face-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#acd77b07579aa9b288fcbf5b130a98a08">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472">x</a>,</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;            first_face-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#acd77b07579aa9b288fcbf5b130a98a08">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a8b89a79cfebafd04dbda021f626a9694">y</a>,</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;            first_face-&gt;<a class="code" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#acd77b07579aa9b288fcbf5b130a98a08">geometric_normal</a>.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a95963ca137a97c9d927bc9d10a98a36f">z</a>);</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;s off\n&quot;</span>);</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160; </div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f=0; f&lt;poly_faces.size(); f++)</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    {</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;      fprintf(outputFile,<span class="stringliteral">&quot;f &quot;</span>);</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v=0; v&lt;poly_faces[f]-&gt;v_indices.size(); v++)</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;      {</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        fprintf(outputFile,<span class="stringliteral">&quot;%d//1 &quot;</span>,poly_faces[f]-&gt;v_indices[v]+1);</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;      }</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;      fprintf(outputFile,<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;    }</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;  }</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160; </div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;  fclose(outputFile);</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;  printf(<span class="stringliteral">&quot;Exported mesh to %s\n&quot;</span>,fileName);</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;}</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160; </div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;<span class="comment">//#########################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;<span class="comment">/**Exports a PSLG to triangle1.6&#39;s .poly format.*/</span></div>
+<div class="line"><a name="l00949"></a><span class="lineno"><a class="line" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a4a75c88f20001293b6568bb72776905c">  949</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a4a75c88f20001293b6568bb72776905c">chi_mesh::SurfaceMesh::ExportToPolyFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fileName)</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;{</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;  FILE* outputFile = fopen(fileName,<span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;  <span class="keywordflow">if</span> (outputFile==NULL)</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;  {</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    printf(<span class="stringliteral">&quot;Error creating file %s!\n&quot;</span>,fileName);</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;  }</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160; </div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;  fprintf(outputFile,<span class="stringliteral">&quot;%lu 2 0 0\n&quot;</span>, vertices.size());</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v=0; v&lt;vertices.size(); v++)</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;  {</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;%d %.15f %.15f 0\n&quot;</span>,v+1,vertices[v].x,vertices[v].y);</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;  }</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160; </div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;  fprintf(outputFile,<span class="stringliteral">&quot;%lu 0\n&quot;</span>, lines.size());</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> e=0; e&lt;lines.size(); e++)</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;  {</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    fprintf(outputFile,<span class="stringliteral">&quot;%d %d %d\n&quot;</span>,e+1,lines[e].v_index[0]+1,</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;                                      lines[e].v_index[1]+1);</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;  }</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160; </div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;  fprintf(outputFile,<span class="stringliteral">&quot;0&quot;</span>);</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160; </div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160; </div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;  fclose(outputFile);</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;  printf(<span class="stringliteral">&quot;Exported mesh to %s\n&quot;</span>,fileName);</div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructchi__mesh_1_1_poly_face_html_a076cecd2011f5760d211e017e1a1ac47"><div class="ttname"><a href="../../d4/ddb/structchi__mesh_1_1_poly_face.html#a076cecd2011f5760d211e017e1a1ac47">chi_mesh::PolyFace::v_indices</a></div><div class="ttdeci">std::vector&lt; int &gt; v_indices</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d70/chi__meshface_8h_source.html#l00091">chi_meshface.h:91</a></div></div>
@@ -1087,7 +1092,7 @@ $(document).ready(function(){initNavTree('dc/d97/chi__surfacemesh__loadexport_8c
 <div class="ttc" id="aclass_chi_log_html_ac2d1869abb6b7dd125a89ea20b977dbc"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00028">chi_log.cc:28</a></div></div>
 <div class="ttc" id="achi__surfacemesh_8h_html"><div class="ttname"><a href="../../d2/d98/chi__surfacemesh_8h.html">chi_surfacemesh.h</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_surface_mesh_html_a8470300a9c7577c7b14585d7068459e1"><div class="ttname"><a href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a8470300a9c7577c7b14585d7068459e1">chi_mesh::SurfaceMesh::vertices</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Vertex &gt; vertices</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d98/chi__surfacemesh_8h_source.html#l00016">chi_surfacemesh.h:16</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_surface_mesh_html_a4a75c88f20001293b6568bb72776905c"><div class="ttname"><a href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a4a75c88f20001293b6568bb72776905c">chi_mesh::SurfaceMesh::ExportToPolyFile</a></div><div class="ttdeci">void ExportToPolyFile(const char *fileName)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d97/chi__surfacemesh__loadexport_8cc_source.html#l00944">chi_surfacemesh_loadexport.cc:944</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_surface_mesh_html_a4a75c88f20001293b6568bb72776905c"><div class="ttname"><a href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a4a75c88f20001293b6568bb72776905c">chi_mesh::SurfaceMesh::ExportToPolyFile</a></div><div class="ttdeci">void ExportToPolyFile(const char *fileName)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d97/chi__surfacemesh__loadexport_8cc_source.html#l00949">chi_surfacemesh_loadexport.cc:949</a></div></div>
 <div class="ttc" id="achi__surfacemesh__loadexport_8cc_html_adc1b2db4f75dab650895a0e0ec8e748e"><div class="ttname"><a href="../../dc/d97/chi__surfacemesh__loadexport_8cc.html#adc1b2db4f75dab650895a0e0ec8e748e">chi_program_timer</a></div><div class="ttdeci">ChiTimer chi_program_timer</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00032">chi_runtime.cc:32</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_vector3_html_a6ddbb12bba7c4e09e08623c24f02f1ea"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a6ddbb12bba7c4e09e08623c24f02f1ea">chi_mesh::Vector3::Cross</a></div><div class="ttdeci">Vector3 Cross(const Vector3 &amp;that) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00252">chi_meshvector.h:252</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_surface_mesh_html_aa95d3703c8670b078bd04360e2809779"><div class="ttname"><a href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#aa95d3703c8670b078bd04360e2809779">chi_mesh::SurfaceMesh::ImportFromOBJFile</a></div><div class="ttdeci">int ImportFromOBJFile(const char *fileName, bool as_poly)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d97/chi__surfacemesh__loadexport_8cc_source.html#l00014">chi_surfacemesh_loadexport.cc:15</a></div></div>
@@ -1103,7 +1108,7 @@ $(document).ready(function(){initNavTree('dc/d97/chi__surfacemesh__loadexport_8c
 <div class="ttc" id="astructchi__mesh_1_1_edge_html_a5889c642bfaf33eaf182d69d3432655b"><div class="ttname"><a href="../../d9/d36/structchi__mesh_1_1_edge.html#a5889c642bfaf33eaf182d69d3432655b">chi_mesh::Edge::vertices</a></div><div class="ttdeci">chi_mesh::Vertex vertices[2]</div><div class="ttdoc">Vector vertices.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d09/chi__mesh__edgeloops_8h_source.html#l00009">chi_mesh_edgeloops.h:9</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_face_html"><div class="ttname"><a href="../../d4/dd2/structchi__mesh_1_1_face.html">chi_mesh::Face</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d70/chi__meshface_8h_source.html#l00006">chi_meshface.h:7</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_poly_face_html"><div class="ttname"><a href="../../d4/ddb/structchi__mesh_1_1_poly_face.html">chi_mesh::PolyFace</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d70/chi__meshface_8h_source.html#l00089">chi_meshface.h:90</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_surface_mesh_html_a2d505a22e027e496eef0a12b0245b34d"><div class="ttname"><a href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a2d505a22e027e496eef0a12b0245b34d">chi_mesh::SurfaceMesh::ExportToOBJFile</a></div><div class="ttdeci">void ExportToOBJFile(const char *fileName)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d97/chi__surfacemesh__loadexport_8cc_source.html#l00869">chi_surfacemesh_loadexport.cc:869</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_surface_mesh_html_a2d505a22e027e496eef0a12b0245b34d"><div class="ttname"><a href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a2d505a22e027e496eef0a12b0245b34d">chi_mesh::SurfaceMesh::ExportToOBJFile</a></div><div class="ttdeci">void ExportToOBJFile(const char *fileName)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d97/chi__surfacemesh__loadexport_8cc_source.html#l00874">chi_surfacemesh_loadexport.cc:874</a></div></div>
 <div class="ttc" id="aclass_chi_timer_html"><div class="ttname"><a href="../../d7/d2e/class_chi_timer.html">ChiTimer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/de5/chi__timer_8h_source.html#l00009">chi_timer.h:10</a></div></div>
 <div class="ttc" id="anamespace_z_compile_and_run_html_a1963b0f3bba220d2ecfb343694cab7c8"><div class="ttname"><a href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">ZCompileAndRun.i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4d/_z_compile_and_run_8py_source.html#l00038">ZCompileAndRun.py:38</a></div></div>
 <!-- start footer part -->

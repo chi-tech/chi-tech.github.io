@@ -17,6 +17,7 @@ var classchi__mesh_1_1_unpartitioned_mesh =
     [ "CreateCellFromVTKTetrahedron", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a70c9e81810de07e8a0ab4041bd920ea9", null ],
     [ "CreateCellFromVTKTriangle", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a92ef577a3a892387cb30560a30e8e628", null ],
     [ "ReadFromEnsightGold", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a84fe0cda8fac49b32bcfd60f77e1721f", null ],
+    [ "ReadFromMsh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ad870fede14345f786340622beaf81eba", null ],
     [ "ReadFromVTU", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972", null ],
     [ "ReadFromWavefrontOBJ", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ad68fad226faed25b155e0569b1a5f713", null ],
     [ "bound_box", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b", null ],

@@ -2,11 +2,12 @@ var lbs__setproperty_8cc =
 [
     [ "BOUNDARY_CONDITION", "d6/de0/lbs__setproperty_8cc.html#a22984b5a51076b7e541d6af994c0761b", null ],
     [ "DISCRETIZATION_METHOD", "d6/de0/lbs__setproperty_8cc.html#ae193790426d8cb51a6acff87b17ccb81", null ],
-    [ "PARTITION_METHOD", "d6/de0/lbs__setproperty_8cc.html#a02fb9b23f583e1d7a05e1661a821a142", null ],
+    [ "PWLD", "d6/de0/lbs__setproperty_8cc.html#a0595f9617f7d66720e101ce447d7b2fa", null ],
     [ "PWLD1D", "d6/de0/lbs__setproperty_8cc.html#a0d1bcb84b824d3825e282d2d2283ddc6", null ],
     [ "PWLD2D", "d6/de0/lbs__setproperty_8cc.html#a29836df4871c4e1ea7e3e045226d8679", null ],
     [ "PWLD3D", "d6/de0/lbs__setproperty_8cc.html#a1d460cb2d88c4fd32ad24d3186efd4a1", null ],
     [ "READ_RESTART_DATA", "d6/de0/lbs__setproperty_8cc.html#a669d29634179bbc582fbcfe94f46f555", null ],
+    [ "SAVE_ANGULAR_FLUX", "d6/de0/lbs__setproperty_8cc.html#a9d38868274ae1e77442d6cb982f8d678", null ],
     [ "SCATTERING_ORDER", "d6/de0/lbs__setproperty_8cc.html#a5f35e03e81d8e3a3c0afa6153e0edc60", null ],
     [ "SWEEP_EAGER_LIMIT", "d6/de0/lbs__setproperty_8cc.html#a0545351d455115c0776951d54e6bd3af", null ],
     [ "WRITE_RESTART_DATA", "d6/de0/lbs__setproperty_8cc.html#acc2e73fae9358d58a018f902aa1996b5", null ],

@@ -1,5 +1,15 @@
 var NAVTREEINDEX6 =
 {
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a24cba99c8916d033eb124eb7ab5f9ada":[7,0,2,23,15],
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a27f29ee72d90a4ee65d8a6480304232a":[7,0,2,23,2],
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a372e01a7176fd3e1de6d35352a266f75":[7,0,2,23,14],
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a4122161c85ec2874848e7e611092fa33":[7,0,2,23,12],
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a5322640f58f0eaa78ea98314fb35f1d7":[7,0,2,23,17],
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a53e8b50b5c97714cae1e5fb79e8ee664":[7,0,2,23,8],
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a6341c18f836b57c52baaac411880a13a":[7,0,2,23,4],
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a6a6ac35df8db793510056e5bd5d62c11":[7,0,2,23,23],
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a6cce8c8394df8f55e6a01c5b990823db":[7,0,2,23,33],
+"d5/d8e/structchi__math_1_1_vector_n_x.html#a6cd5e5b541774bf6a310a859f0d4329e":[7,0,2,23,39],
 "d5/d8e/structchi__math_1_1_vector_n_x.html#a7bc5509328364ec8b7108dee4fdc1b32":[7,0,2,23,25],
 "d5/d8e/structchi__math_1_1_vector_n_x.html#a81f756f45f590de759416efdc252f405":[7,0,2,23,9],
 "d5/d8e/structchi__math_1_1_vector_n_x.html#a8f694593980c0ff766b3d58b253ed0fd":[7,0,2,23,21],
@@ -200,10 +210,6 @@ var NAVTREEINDEX6 =
 "d6/d27/spherical__harmonics_8cpp.html#a9e14d0363d22e3c60cfa29b0bc24bce0":[8,0,2,3,2,2,3,0],
 "d6/d27/spherical__harmonics_8cpp_source.html":[8,0,2,3,2,2,3],
 "d6/d28/spatial__discretization_8h.html":[8,0,2,3,5,3],
-"d6/d28/spatial__discretization_8h.html#a1ea045f317621419cbfbd99bfa9fc095":[8,0,2,3,5,3,3],
-"d6/d28/spatial__discretization_8h.html#a30b0d0653ddb948ca5cd24534cc0e79d":[8,0,2,3,5,3,2],
-"d6/d28/spatial__discretization_8h.html#a355b2067cccbfb31dc9835b0b0021b31":[8,0,2,3,5,3,4],
-"d6/d28/spatial__discretization_8h.html#a921b4f6fae3dd976141615af6bdd7afb":[8,0,2,3,5,3,1],
 "d6/d28/spatial__discretization_8h_source.html":[8,0,2,3,5,3],
 "d6/d32/classchi__diffusion_1_1_solver.html":[7,0,0,4],
 "d6/d32/classchi__diffusion_1_1_solver.html#a02eab2edfe4d885fdc71190297319975":[7,0,0,4,15],
@@ -243,11 +249,5 @@ var NAVTREEINDEX6 =
 "d6/d32/classchi__diffusion_1_1_solver.html#aa6fc147629e142ce991d9efdaf5d73f2":[7,0,0,4,44],
 "d6/d32/classchi__diffusion_1_1_solver.html#aaf627359dc9717744e0c8a5d792f66ea":[7,0,0,4,7],
 "d6/d32/classchi__diffusion_1_1_solver.html#abc327eb0fba5eedba248ca9d575e76a2":[7,0,0,4,22],
-"d6/d32/classchi__diffusion_1_1_solver.html#abea079eed4801e3afbfef81d8052960b":[7,0,0,4,27],
-"d6/d32/classchi__diffusion_1_1_solver.html#ac2461816873a8ffcd3c43d8e66567747":[7,0,0,4,30],
-"d6/d32/classchi__diffusion_1_1_solver.html#acbec56ac53ae8b2f9f56d284036e74a3":[7,0,0,4,3],
-"d6/d32/classchi__diffusion_1_1_solver.html#ad36245b1ea37348a48a3acdedbc151eb":[7,0,0,4,11],
-"d6/d32/classchi__diffusion_1_1_solver.html#ad718f8da9b395fe355c376109743e5ff":[7,0,0,4,10],
-"d6/d32/classchi__diffusion_1_1_solver.html#adc973e4389974b8615f267372721ac2a":[7,0,0,4,33],
-"d6/d32/classchi__diffusion_1_1_solver.html#ade535f862d3a1dc8fcc3904c83f24212":[7,0,0,4,43]
+"d6/d32/classchi__diffusion_1_1_solver.html#abea079eed4801e3afbfef81d8052960b":[7,0,0,4,27]
 };

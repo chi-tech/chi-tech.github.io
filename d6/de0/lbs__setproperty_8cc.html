@@ -94,8 +94,7 @@ $(document).ready(function(){initNavTree('d6/de0/lbs__setproperty_8cc.html','../
 <code>#include &quot;<a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">../lbs_linear_boltzmann_solver.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d8/d54/chi__physics_8h_source.html">ChiPhysics/chi_physics.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/d08/chi__math_8h_source.html">ChiMath/chi_math.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d4/d01/pwl_8h_source.html">ChiMath/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwl.h</a>&quot;</code><br />
-<code>#include &lt;<a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>&quot;</code><br />
 </div>
 <p><a href="../../d6/de0/lbs__setproperty_8cc_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -103,14 +102,14 @@ $(document).ready(function(){initNavTree('d6/de0/lbs__setproperty_8cc.html','../
 Macros</h2></td></tr>
 <tr class="memitem:ae193790426d8cb51a6acff87b17ccb81"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de0/lbs__setproperty_8cc.html#ae193790426d8cb51a6acff87b17ccb81">DISCRETIZATION_METHOD</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:ae193790426d8cb51a6acff87b17ccb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0595f9617f7d66720e101ce447d7b2fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de0/lbs__setproperty_8cc.html#a0595f9617f7d66720e101ce447d7b2fa">PWLD</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a0595f9617f7d66720e101ce447d7b2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d1bcb84b824d3825e282d2d2283ddc6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de0/lbs__setproperty_8cc.html#a0d1bcb84b824d3825e282d2d2283ddc6">PWLD1D</a>&#160;&#160;&#160;4</td></tr>
 <tr class="separator:a0d1bcb84b824d3825e282d2d2283ddc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29836df4871c4e1ea7e3e045226d8679"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de0/lbs__setproperty_8cc.html#a29836df4871c4e1ea7e3e045226d8679">PWLD2D</a>&#160;&#160;&#160;5</td></tr>
 <tr class="separator:a29836df4871c4e1ea7e3e045226d8679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d460cb2d88c4fd32ad24d3186efd4a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de0/lbs__setproperty_8cc.html#a1d460cb2d88c4fd32ad24d3186efd4a1">PWLD3D</a>&#160;&#160;&#160;6</td></tr>
 <tr class="separator:a1d460cb2d88c4fd32ad24d3186efd4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02fb9b23f583e1d7a05e1661a821a142"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de0/lbs__setproperty_8cc.html#a02fb9b23f583e1d7a05e1661a821a142">PARTITION_METHOD</a>&#160;&#160;&#160;2</td></tr>
-<tr class="separator:a02fb9b23f583e1d7a05e1661a821a142"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22984b5a51076b7e541d6af994c0761b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de0/lbs__setproperty_8cc.html#a22984b5a51076b7e541d6af994c0761b">BOUNDARY_CONDITION</a>&#160;&#160;&#160;3</td></tr>
 <tr class="separator:a22984b5a51076b7e541d6af994c0761b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0312cb6d6cbc719075d4e5380c387ab3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de0/lbs__setproperty_8cc.html#a0312cb6d6cbc719075d4e5380c387ab3">XMAX</a>&#160;&#160;&#160;31</td></tr>
@@ -133,6 +132,8 @@ Macros</h2></td></tr>
 <tr class="separator:a669d29634179bbc582fbcfe94f46f555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc2e73fae9358d58a018f902aa1996b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de0/lbs__setproperty_8cc.html#acc2e73fae9358d58a018f902aa1996b5">WRITE_RESTART_DATA</a>&#160;&#160;&#160;7</td></tr>
 <tr class="separator:acc2e73fae9358d58a018f902aa1996b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d38868274ae1e77442d6cb982f8d678"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de0/lbs__setproperty_8cc.html#a9d38868274ae1e77442d6cb982f8d678">SAVE_ANGULAR_FLUX</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a9d38868274ae1e77442d6cb982f8d678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -161,7 +162,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00019">19</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00016">16</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -177,23 +178,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00012">12</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00010">10</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
-<a id="a02fb9b23f583e1d7a05e1661a821a142"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02fb9b23f583e1d7a05e1661a821a142">&#9670;&nbsp;</a></span>PARTITION_METHOD</h2>
+<a id="a0595f9617f7d66720e101ce447d7b2fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0595f9617f7d66720e101ce447d7b2fa">&#9670;&nbsp;</a></span>PWLD</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PARTITION_METHOD&#160;&#160;&#160;2</td>
+          <td class="memname">#define PWLD&#160;&#160;&#160;3</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -209,7 +210,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00013">13</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00012">12</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -225,7 +226,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00013">13</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -241,7 +242,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -257,7 +258,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00031">31</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00028">28</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+
+</div>
+</div>
+<a id="a9d38868274ae1e77442d6cb982f8d678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d38868274ae1e77442d6cb982f8d678">&#9670;&nbsp;</a></span>SAVE_ANGULAR_FLUX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAVE_ANGULAR_FLUX&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00032">32</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -273,7 +290,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00027">27</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00024">24</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -289,7 +306,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00029">29</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00026">26</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -305,7 +322,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00033">33</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00030">30</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -321,7 +338,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00020">20</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -337,7 +354,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00021">21</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00018">18</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -353,7 +370,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00022">22</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00019">19</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -369,7 +386,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00023">23</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00020">20</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -385,7 +402,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00024">24</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00021">21</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
@@ -401,7 +418,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00025">25</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00022">22</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>

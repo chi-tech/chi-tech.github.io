@@ -22,6 +22,7 @@ var classchi__mesh_1_1_surface_mesh =
     [ "faces", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a7b7f440d25626c9ec33df91029916f4a", null ],
     [ "lines", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a266c47007602c64520651ef2b9b4cae5", null ],
     [ "normals", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a192255f941757bc673463c38433867c8", null ],
+    [ "physical_region_map", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a30d548e6a886ed1239e8cfe89c3e6ca1", null ],
     [ "poly_faces", "dd/d43/classchi__mesh_1_1_surface_mesh.html#aec615b9a7001706d64c95f0751820843", null ],
     [ "tex_vertices", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a4d793da75221e3358e39b6dec5fadb59", null ],
     [ "vertices", "dd/d43/classchi__mesh_1_1_surface_mesh.html#a8470300a9c7577c7b14585d7068459e1", null ]

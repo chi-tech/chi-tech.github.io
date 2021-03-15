@@ -15,6 +15,7 @@ var dir_f5cd9bfa74d11c0e10c7d98fd63dc019 =
     [ "lbs_01c_init_boundaries.cc", "d9/d28/lbs__01c__init__boundaries_8cc.html", null ],
     [ "lbs_01c_init_spat_discr.cc", "dc/da8/lbs__01c__init__spat__discr_8cc.html", "dc/da8/lbs__01c__init__spat__discr_8cc" ],
     [ "lbs_01d_initparrays.cc", "d4/de6/lbs__01d__initparrays_8cc.html", "d4/de6/lbs__01d__initparrays_8cc" ],
+    [ "lbs_01e_initgroupsets.cc", "dd/d02/lbs__01e__initgroupsets_8cc.html", null ],
     [ "lbs_02_main_execute.cc", "d3/d7d/lbs__02__main__execute_8cc.html", "d3/d7d/lbs__02__main__execute_8cc" ],
     [ "lbs_03a_compsweeporder.cc", "d2/dcf/lbs__03a__compsweeporder_8cc.html", "d2/dcf/lbs__03a__compsweeporder_8cc" ],
     [ "lbs_03b_initfluds.cc", "d4/dc6/lbs__03b__initfluds_8cc.html", "d4/dc6/lbs__03b__initfluds_8cc" ],
@@ -24,6 +25,7 @@ var dir_f5cd9bfa74d11c0e10c7d98fd63dc019 =
     [ "lbs_03e_tgdsa.cc", "d8/d54/lbs__03e__tgdsa_8cc.html", "d8/d54/lbs__03e__tgdsa_8cc" ],
     [ "lbs_03f_resetswporderings.cc", "d2/d48/lbs__03f__resetswporderings_8cc.html", "d2/d48/lbs__03f__resetswporderings_8cc" ],
     [ "lbs_04_restartdata.cc", "d5/d63/lbs__04__restartdata_8cc.html", "d5/d63/lbs__04__restartdata_8cc" ],
+    [ "lbs_05_angular_fluxes.cc", "d7/d05/lbs__05__angular__fluxes_8cc.html", "d7/d05/lbs__05__angular__fluxes_8cc" ],
     [ "lbs_linear_boltzmann_solver.h", "df/d26/lbs__linear__boltzmann__solver_8h.html", "df/d26/lbs__linear__boltzmann__solver_8h" ],
     [ "lbs_structs.h", "d9/dc3/lbs__structs_8h.html", "d9/dc3/lbs__structs_8h" ],
     [ "lbs_vectorassembly.cc", "d1/dbd/lbs__vectorassembly_8cc.html", null ]

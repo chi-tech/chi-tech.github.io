@@ -205,7 +205,8 @@ var menudata={children:[
 {text:"r",url:"globals_func_r.html#index_r"},
 {text:"v",url:"globals_func_v.html#index_v"}]},
 {text:"Variables",url:"globals_vars.html",children:[
-{text:"c",url:"globals_vars.html#index_c"}]},
+{text:"c",url:"globals_vars.html#index_c"},
+{text:"l",url:"globals_vars_l.html#index_l"}]},
 {text:"Typedefs",url:"globals_type.html",children:[
 {text:"a",url:"globals_type.html#index_a"},
 {text:"c",url:"globals_type.html#index_c"},
