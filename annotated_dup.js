@@ -17,7 +17,6 @@ var annotated_dup =
     [ "ChiPhysics", "d8/d9a/class_chi_physics.html", "d8/d9a/class_chi_physics" ],
     [ "ChiTech", "d5/d49/class_chi_tech.html", "d5/d49/class_chi_tech" ],
     [ "ChiTimer", "d7/d2e/class_chi_timer.html", "d7/d2e/class_chi_timer" ],
-    [ "CSTEvent", "d3/d41/struct_c_s_t_event.html", "d3/d41/struct_c_s_t_event" ],
     [ "CSTMemory", "d6/de4/struct_c_s_t_memory.html", "d6/de4/struct_c_s_t_memory" ],
     [ "DummyStream", "d9/d4e/struct_dummy_stream.html", "d9/d4e/struct_dummy_stream" ],
     [ "FFICellIntersection", "d1/da1/struct_f_f_i_cell_intersection.html", "d1/da1/struct_f_f_i_cell_intersection" ],

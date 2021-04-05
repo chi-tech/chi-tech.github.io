@@ -159,8 +159,8 @@ $(document).ready(function(){initNavTree('dd/daa/mesh__orthomacros__02__unpartit
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    umesh-&gt;raw_cells.push_back(cell);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  umesh-&gt;BuildMeshConnectivity();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  umesh-&gt;ComputeCentroids();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  umesh-&gt;ComputeCentroidsAndCheckQuality();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  umesh-&gt;BuildMeshConnectivity();</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  handler-&gt;unpartitionedmesh_stack.push_back(umesh);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="comment">//======================================== Create region</span></div>
@@ -252,8 +252,8 @@ $(document).ready(function(){initNavTree('dd/daa/mesh__orthomacros__02__unpartit
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }<span class="comment">//for j</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  }<span class="comment">//for i</span></div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  umesh-&gt;BuildMeshConnectivity();</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  umesh-&gt;ComputeCentroids();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  umesh-&gt;ComputeCentroidsAndCheckQuality();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  umesh-&gt;BuildMeshConnectivity();</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  handler-&gt;unpartitionedmesh_stack.push_back(umesh);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="comment">//======================================== Create region</span></div>
@@ -312,7 +312,7 @@ $(document).ready(function(){initNavTree('dd/daa/mesh__orthomacros__02__unpartit
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; vec : vertex_ijk_to_i_map)</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    vec.resize(Nx,VecInt(Nz));</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  umesh-&gt;vertices.reserve(Nx*Ny);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  umesh-&gt;vertices.reserve(Nx*Ny*Nz);</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordtype">int</span> c=-1;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;Ny; ++<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>)</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  {</div>
@@ -416,8 +416,8 @@ $(document).ready(function(){initNavTree('dd/daa/mesh__orthomacros__02__unpartit
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }<span class="comment">//for j</span></div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  }<span class="comment">//for i</span></div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  umesh-&gt;BuildMeshConnectivity();</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  umesh-&gt;ComputeCentroids();</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  umesh-&gt;ComputeCentroidsAndCheckQuality();</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  umesh-&gt;BuildMeshConnectivity();</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  handler-&gt;unpartitionedmesh_stack.push_back(umesh);</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="comment">//======================================== Create region</span></div>

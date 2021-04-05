@@ -88,11 +88,11 @@ $(document).ready(function(){initNavTree('d8/d83/chi__diffusion__utils_8cc_sourc
 <div class="contents">
 <a href="../../d8/d83/chi__diffusion__utils_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d11/chi__diffusion_8h.html">chi_diffusion.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d57/chi__mpi_8h.html">ChiMPI/chi_mpi.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../d8/d83/chi__diffusion__utils_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a>&amp; <a class="code" href="../../d8/d83/chi__diffusion__utils_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../d8/d83/chi__diffusion__utils_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d57/chi__mpi_8h.html">ChiMPI/chi_mpi.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a>&amp; <a class="code" href="../../d8/d83/chi__diffusion__utils_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/**Customized monitor for PETSc Krylov sub-space solvers.*/</span></div>
@@ -113,11 +113,11 @@ $(document).ready(function(){initNavTree('d8/d83/chi__diffusion__utils_8cc_sourc
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">char</span> buff[100];</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (rnorm/rhs_norm &lt; 1.0e-2)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      snprintf(buff,100,<span class="stringliteral">&quot;Diffusion iteration %4d - Residual %.3e\n&quot;</span>,n,rnorm/rhs_norm);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      snprintf(buff,100,<span class="stringliteral">&quot;Diffusion iteration %4lld - Residual %.3e\n&quot;</span>,n,rnorm/rhs_norm);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      snprintf(buff,100,<span class="stringliteral">&quot;Diffusion iteration %4d - Residual %.7f\n&quot;</span>,n,rnorm/rhs_norm);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      snprintf(buff,100,<span class="stringliteral">&quot;Diffusion iteration %4lld - Residual %.7f\n&quot;</span>,n,rnorm/rhs_norm);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../d8/d83/chi__diffusion__utils_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; buff;</div>

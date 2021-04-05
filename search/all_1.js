@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a_3',['a',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ae2e2030f035f36117cf747fa5c337787',1,'chi_math::SimplifiedLDFESQ::Quadrature::a()'],['../d6/d58/classchi__diffusion_1_1_boundary_robin.html#a8e9bf08c2505f5c8daf6fdb1aa355c42',1,'chi_diffusion::BoundaryRobin::a()'],['../d3/d82/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_f_u_n_c_t_i_o_n___w_e_i_g_h_t___f_r_o_m___r_h_o.html#ab34317e1a3de4f691e8a7773f91e854e',1,'chi_math::SimplifiedLDFESQ::FUNCTION_WEIGHT_FROM_RHO::A()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a3bbf908a022ee2739cfe98160d20fbb6',1,'chi_diffusion::Solver::A()'],['../d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html#a8871edce5e113e2d931e06f953098578',1,'HYDRO_BOUNDARY::A()'],['../d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e.html#af9eb8ad30726895f59d2bfe2fa6bba57',1,'HYDRO_VOLUME::A()']]],
+  ['a_3',['A',['../d3/d82/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_f_u_n_c_t_i_o_n___w_e_i_g_h_t___f_r_o_m___r_h_o.html#ab34317e1a3de4f691e8a7773f91e854e',1,'chi_math::SimplifiedLDFESQ::FUNCTION_WEIGHT_FROM_RHO::A()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a3bbf908a022ee2739cfe98160d20fbb6',1,'chi_diffusion::Solver::A()'],['../d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html#a8871edce5e113e2d931e06f953098578',1,'HYDRO_BOUNDARY::A()'],['../d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e.html#af9eb8ad30726895f59d2bfe2fa6bba57',1,'HYDRO_VOLUME::A()'],['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ae2e2030f035f36117cf747fa5c337787',1,'chi_math::SimplifiedLDFESQ::Quadrature::a()'],['../d6/d58/classchi__diffusion_1_1_boundary_robin.html#a8e9bf08c2505f5c8daf6fdb1aa355c42',1,'chi_diffusion::BoundaryRobin::a()']]],
   ['a_5fand_5fb_5finitialized_4',['a_and_b_initialized',['../d7/d3d/class_l_b_s_sweep_chunk_p_w_l.html#a0477c2c75986daf1c5932ddb44756486',1,'LBSSweepChunkPWL']]],
   ['a_5finv_5',['A_inv',['../d3/d82/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_f_u_n_c_t_i_o_n___w_e_i_g_h_t___f_r_o_m___r_h_o.html#a6b88be99a36aa8c6be2a0ac0d4199c74',1,'chi_math::SimplifiedLDFESQ::FUNCTION_WEIGHT_FROM_RHO']]],
   ['abscissae_6',['abscissae',['../d8/dd9/classchi__math_1_1_angular_quadrature.html#a4ce7c62325acf99f0910252a8f99a187',1,'chi_math::AngularQuadrature']]],
@@ -78,7 +78,7 @@ var searchData=
   ['assignsurfacetoboundary_78',['AssignSurfaceToBoundary',['../d0/d81/namespacechi__mesh.html#a10ba6abaf542d717584e31199a158958',1,'chi_mesh']]],
   ['assoc_5flegendrepoly_2ecc_79',['assoc_legendrepoly.cc',['../db/d04/assoc__legendrepoly_8cc.html',1,'']]],
   ['associated_5fface_80',['associated_face',['../d7/d1f/structchi__mesh_1_1sweep__management_1_1_face_nodal_mapping.html#acbebd1bf25a86967b98acc30dcd21d8c',1,'chi_mesh::sweep_management::FaceNodalMapping']]],
-  ['assoclegendre_81',['AssocLegendre',['../dc/d58/namespacechi__math.html#a584d116a16e18b7dcf058888e1f19a85',1,'chi_math']]],
+  ['assoclegendre_81',['AssocLegendre',['../dc/d58/namespacechi__math.html#ad55a1a5b25c9fb6ea889c7c73c5c5bfd',1,'chi_math']]],
   ['at_82',['at',['../df/d4b/classchi__math_1_1_dynamic_matrix.html#a2a0d936c69b3239b4d818b7de7c358e0',1,'chi_math::DynamicMatrix::at()'],['../db/d08/classchi__math_1_1_dynamic_vector.html#a1eb3b7f3d07f4d1283399b16fda93f6c',1,'chi_math::DynamicVector::at()']]],
   ['atemp_83',['Atemp',['../d7/d3d/class_l_b_s_sweep_chunk_p_w_l.html#aab42e6ba314f97dc5c7f21de660b17c8',1,'LBSSweepChunkPWL']]],
   ['attachunusedvertex_84',['AttachUnusedVertex',['../d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html#ac1eabeef3a999f35a5064b20ac794004',1,'chi_mesh::SurfaceMesherDelaunay::DelaunayPatch']]],
@@ -90,8 +90,7 @@ var searchData=
   ['average_5fduration_90',['AVERAGE_DURATION',['../d8/d1a/class_chi_log.html#a79cc0a14ad518f04e8fe5e06656eba8fa592d7a1c7412099b9bfd63feba88624c',1,'ChiLog']]],
   ['average_5fvalue_91',['AVERAGE_VALUE',['../d8/d1a/class_chi_log.html#a79cc0a14ad518f04e8fe5e06656eba8fac1b2803111445b2b15783f54679f4af9',1,'ChiLog']]],
   ['azimu_5fang_92',['azimu_ang',['../d5/df7/classchi__math_1_1_product_quadrature.html#a408e9ce3cf7bd90ace365d381b094046',1,'chi_math::ProductQuadrature']]],
-  ['azimuthal_93',['azimuthal',['../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a43bfa5b847742de540b4788480864af9',1,'chi_mesh::sweep_management::SPDS']]],
-  ['adding_20code_20to_20the_20system_94',['Adding code to the system',['../dc/d4c/_dev_man_adding_code.html',1,'ProgrammerManual']]],
-  ['adding_20lua_2dinput_20to_20the_20system_95',['Adding Lua-input to the system',['../d1/d86/_dev_man_adding_lua.html',1,'ProgrammerManual']]],
-  ['a_20meshing_96',['A Meshing',['../d9/d53/group___lua_mesh.html',1,'']]]
+  ['adding_20code_20to_20the_20system_93',['Adding code to the system',['../dc/d4c/_dev_man_adding_code.html',1,'ProgrammerManual']]],
+  ['adding_20lua_2dinput_20to_20the_20system_94',['Adding Lua-input to the system',['../d1/d86/_dev_man_adding_lua.html',1,'ProgrammerManual']]],
+  ['a_20meshing_95',['A Meshing',['../d9/d53/group___lua_mesh.html',1,'']]]
 ];

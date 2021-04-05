@@ -12,7 +12,7 @@ var sweep__namespace_8h =
       [ "MESSAGES_PENDING", "d1/d37/sweep__namespace_8h.html#a6f35c94844603249789b4e4ae4ece8c1aadee93faeba7a352b5cbecf1e5023ae8", null ]
     ] ],
     [ "CommunicateLocationDependencies", "d1/d37/sweep__namespace_8h.html#adf52c0345ec5612fbc2937da6a295a0c", null ],
-    [ "CreateSweepOrder", "d1/d37/sweep__namespace_8h.html#a1c01cea8ce5361c5a39651e5bd14a64a", null ],
+    [ "CreateSweepOrder", "d1/d37/sweep__namespace_8h.html#a36afcd614dce993def8e6a624255a155", null ],
     [ "PopulateCellRelationships", "d1/d37/sweep__namespace_8h.html#a9baa407203986273b9f4cdcffce2025b", null ],
     [ "PrintSweepOrdering", "d1/d37/sweep__namespace_8h.html#a14056bd4d6583fc03ff5400466e173bd", null ],
     [ "RemoveGlobalCyclicDependencies", "d1/d37/sweep__namespace_8h.html#ad9afacb8ef7ad0b18ef39c13db1dcc81", null ],

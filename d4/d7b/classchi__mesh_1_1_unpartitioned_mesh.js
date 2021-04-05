@@ -9,7 +9,7 @@ var classchi__mesh_1_1_unpartitioned_mesh =
       [ "DIVIDE_WORK", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a25c1e74a9ce635751a7961b67c7f9179ac72e0e0a41cc98aa8ccf47d9bb843a51", null ]
     ] ],
     [ "BuildMeshConnectivity", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a636d85ee971e6b9a1bda3bf5c5f5d76b", null ],
-    [ "ComputeCentroids", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#aedd12202b3f636c3cced713c60115fb5", null ],
+    [ "ComputeCentroidsAndCheckQuality", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a15c6974be982d4a472272d45bce149a7", null ],
     [ "CreateCellFromVTKHexahedron", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a1a31b78d1d5d918574fb32581b87adb7", null ],
     [ "CreateCellFromVTKPolygon", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ac91ac9efb659eba5be70ddb82b9f81f2", null ],
     [ "CreateCellFromVTKPolyhedron", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae44df63d61bcfb87fb8025e3b8f31365", null ],

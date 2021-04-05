@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('d7/db3/fieldfunction__mapping_8cc_sour
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">auto</span> pwl_sdm = std::static_pointer_cast&lt;SpatialDiscretization_PWLC&gt;(spatial_discretization);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">size_t</span> num_nodes_to_map = cell_node_component_tuples.size();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  std::vector&lt;int&gt; mapped_nodes;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  std::vector&lt;int64_t&gt; mapped_nodes;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> n=0; n&lt; num_nodes_to_map; n++)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">auto</span>&amp;    data             = cell_node_component_tuples[n];</div>
@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('d7/db3/fieldfunction__mapping_8cc_sour
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  VecCreateSeq(PETSC_COMM_SELF,mapped_nodes.size()+1,&amp;x_mapped);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  VecSet(x_mapped, 0.0);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  std::vector&lt;int&gt; int_mapping;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  std::vector&lt;int64_t&gt; int_mapping;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  std::copy(mapping.begin(),</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            mapping.end(),</div>

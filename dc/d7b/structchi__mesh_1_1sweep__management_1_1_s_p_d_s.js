@@ -4,7 +4,6 @@ var structchi__mesh_1_1sweep__management_1_1_s_p_d_s =
     [ "BuildTaskDependencyGraph", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#ae1403ff9fc717721804394e90dffd9e6", null ],
     [ "MapLocJToDeplocI", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#ab4c95f9c646719949adda4ddd38788cd", null ],
     [ "MapLocJToPrelocI", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a7c26150bad51f3398b42e7dab9a0f2a5", null ],
-    [ "azimuthal", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a43bfa5b847742de540b4788480864af9", null ],
     [ "delayed_location_dependencies", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#af9ac69f6779155114376826fe6fb4852", null ],
     [ "delayed_location_successors", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#ac9f67a780c7d3f6a6813442fac7168b5", null ],
     [ "global_dependencies", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#af9fa46b10977f9d12d068048817de236", null ],
@@ -14,6 +13,5 @@ var structchi__mesh_1_1sweep__management_1_1_s_p_d_s =
     [ "location_dependencies", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#aeef00fb30430e13eb7ca901a6783f791", null ],
     [ "location_successors", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#ad86381ead1a2c29a07b8e0deda58ba8d", null ],
     [ "omega", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a49a7583568fb8386a6ce8492d0d0d415", null ],
-    [ "polar", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a60977c0d085b490ded71d8ab90d4bfd2", null ],
     [ "spls", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a131ffdf45c99187ebed5f5741e820fe6", null ]
 ];

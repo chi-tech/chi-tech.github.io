@@ -49,7 +49,6 @@ var hierarchy =
     [ "ChiTech", "d5/d49/class_chi_tech.html", null ],
     [ "ChiTimer", "d7/d2e/class_chi_timer.html", null ],
     [ "chi_mesh::LocalCellHandler::const_iterator", "d3/dda/classchi__mesh_1_1_local_cell_handler_1_1const__iterator.html", null ],
-    [ "CSTEvent", "d3/d41/struct_c_s_t_event.html", null ],
     [ "CSTMemory", "d6/de4/struct_c_s_t_memory.html", null ],
     [ "chi_mesh::SurfaceMesherDelaunay::DelaunayMeshContext", "d0/d54/structchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_mesh_context.html", null ],
     [ "chi_graph::DirectedGraph", "dc/d15/classchi__graph_1_1_directed_graph.html", null ],
@@ -95,6 +94,7 @@ var hierarchy =
     [ "GolubFischer", "d5/d5e/class_golub_fischer.html", null ],
     [ "GraphCellInfo", "dd/d1d/struct_graph_cell_info.html", null ],
     [ "chi_graph::GraphVertex", "da/d1d/structchi__graph_1_1_graph_vertex.html", null ],
+    [ "chi_math::AngularQuadrature::HarmonicIndices", "d7/d0d/structchi__math_1_1_angular_quadrature_1_1_harmonic_indices.html", null ],
     [ "HYDRO_COMPONENT", "d4/d62/class_h_y_d_r_o___c_o_m_p_o_n_e_n_t.html", [
       [ "HYDRO_BOUNDARY", "d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html", null ],
       [ "HYDRO_VOLUME", "d3/d8f/class_h_y_d_r_o___v_o_l_u_m_e.html", null ]
@@ -105,8 +105,8 @@ var hierarchy =
     [ "chi_math::finite_element::InternalQuadraturePointData", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html", [
       [ "chi_math::finite_element::FaceQuadraturePointData", "d5/df3/classchi__math_1_1finite__element_1_1_face_quadrature_point_data.html", null ]
     ] ],
-    [ "chi_mesh::LocalCellHandler::iterator", "d2/dd3/classchi__mesh_1_1_local_cell_handler_1_1iterator.html", null ],
     [ "chi_graph::DirectedGraph::VertexAccessor::iterator", "dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html", null ],
+    [ "chi_mesh::LocalCellHandler::iterator", "d2/dd3/classchi__mesh_1_1_local_cell_handler_1_1iterator.html", null ],
     [ "KSPDataContext", "dd/dbc/struct_k_s_p_data_context.html", null ],
     [ "LBSGroup", "de/d7b/class_l_b_s_group.html", null ],
     [ "LBSGroupset", "d7/d7d/class_l_b_s_groupset.html", null ],

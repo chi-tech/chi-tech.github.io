@@ -3,7 +3,7 @@ var class_spatial_discretization___f_e =
     [ "QPDataFace", "d2/d19/class_spatial_discretization___f_e.html#a27b4389b62a5648bb3955a5748921652", null ],
     [ "QPDataVol", "d2/d19/class_spatial_discretization___f_e.html#a809f260d72cf8770e438cf3208ebf2ec", null ],
     [ "UIData", "d2/d19/class_spatial_discretization___f_e.html#a47f96d3efcf5adeefa9648a658a531b4", null ],
-    [ "SpatialDiscretization_FE", "d2/d19/class_spatial_discretization___f_e.html#ac9e34a8bc4ae218d203bc9001f8797fb", null ],
+    [ "SpatialDiscretization_FE", "d2/d19/class_spatial_discretization___f_e.html#a322bce5650112fcd5699b71e2e01080d", null ],
     [ "~SpatialDiscretization_FE", "d2/d19/class_spatial_discretization___f_e.html#a2313de9f68fc74713421fc33b75b3dd8", null ],
     [ "GetQPData_Surface", "d2/d19/class_spatial_discretization___f_e.html#a0be816cfc195c0067b0158f6a00fcfa0", null ],
     [ "GetQPData_Volumetric", "d2/d19/class_spatial_discretization___f_e.html#a826331d27250ea3af2d469e8e2ed899f", null ],

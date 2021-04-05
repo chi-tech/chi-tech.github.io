@@ -118,8 +118,8 @@ $(document).ready(function(){initNavTree('d3/dc6/assemble__pwlc_8cc_source.html'
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  cell_matrix.resize(num_nodes, Row(num_nodes, 0.0));</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  cell_rhs.resize(num_nodes, 0.0);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  std::vector&lt;int&gt; dof_global_row_ind(num_nodes, -1);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  std::vector&lt;int&gt; dof_global_col_ind(num_nodes, -1);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  std::vector&lt;int64_t&gt; dof_global_row_ind(num_nodes, -1);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  std::vector&lt;int64_t&gt; dof_global_col_ind(num_nodes, -1);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">//========================================= Loop over DOFs</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>&lt;num_nodes; <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>++)</div>
