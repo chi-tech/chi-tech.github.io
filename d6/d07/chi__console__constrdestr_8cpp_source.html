@@ -88,23 +88,25 @@ $(document).ready(function(){initNavTree('d6/d07/chi__console__constrdestr_8cpp_
 <div class="contents">
 <a href="../../d6/d07/chi__console__constrdestr_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">chi_console.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//############################################################################# Default constructor</span><span class="comment"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/** Default constructor for the console*/</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../dd/d62/class_chi_console.html#a33e15f5f5e9b57f896343737df58d50e">    5</a></span>&#160;<a class="code" href="../../dd/d62/class_chi_console.html#a33e15f5f5e9b57f896343737df58d50e">ChiConsole::ChiConsole</a>() noexcept</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="comment">//========================================== Initializing console</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  this-&gt;<a class="code" href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">consoleState</a> = luaL_newstate();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  luaL_openlibs(this-&gt;<a class="code" href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">consoleState</a>);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="comment">//========================================== Registering functions</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">  #include&quot;../ChiLua/chi_lua_register.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//############################################################################# Default constructor</span><span class="comment"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/** Default constructor for the console*/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../dd/d62/class_chi_console.html#a33e15f5f5e9b57f896343737df58d50e">    7</a></span>&#160;<a class="code" href="../../dd/d62/class_chi_console.html#a33e15f5f5e9b57f896343737df58d50e">ChiConsole::ChiConsole</a>() noexcept</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="comment">//========================================== Initializing console</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  this-&gt;<a class="code" href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">consoleState</a> = luaL_newstate();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  luaL_openlibs(this-&gt;<a class="code" href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">consoleState</a>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="comment">//========================================== Registering functions</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">  #include&quot;../ChiLua/chi_lua_register.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_chi_console_html_a6b03e4088cb1d5840f05c34382e72dbc"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">ChiConsole::consoleState</a></div><div class="ttdeci">lua_State * consoleState</div><div class="ttdoc">Pointer to lua console state.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00020">chi_console.h:20</a></div></div>
-<div class="ttc" id="aclass_chi_console_html_a33e15f5f5e9b57f896343737df58d50e"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#a33e15f5f5e9b57f896343737df58d50e">ChiConsole::ChiConsole</a></div><div class="ttdeci">ChiConsole() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d07/chi__console__constrdestr_8cpp_source.html#l00005">chi_console_constrdestr.cpp:5</a></div></div>
+<div class="ttc" id="aclass_chi_console_html_a33e15f5f5e9b57f896343737df58d50e"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#a33e15f5f5e9b57f896343737df58d50e">ChiConsole::ChiConsole</a></div><div class="ttdeci">ChiConsole() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d07/chi__console__constrdestr_8cpp_source.html#l00007">chi_console_constrdestr.cpp:7</a></div></div>
 <div class="ttc" id="achi__console_8h_html"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html">chi_console.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

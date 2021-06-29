@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['neighbor_4995',['NEIGHBOR',['../db/d70/chi__meshface_8h.html#ac37458b05fa7ffc23c7d126c12990a7c',1,'chi_meshface.h']]],
-  ['npt_5fclassicrichardson_4996',['NPT_CLASSICRICHARDSON',['../dc/d1a/lbs__iterativemethods_8h.html#a177361a132e6c6dbea8669045ede9fad',1,'lbs_iterativemethods.h']]],
-  ['npt_5fclassicrichardson_5fcycles_4997',['NPT_CLASSICRICHARDSON_CYCLES',['../dc/d1a/lbs__iterativemethods_8h.html#a7d55190f9e6e5a7e6aa6583269d335ff',1,'lbs_iterativemethods.h']]],
-  ['npt_5fgmres_4998',['NPT_GMRES',['../dc/d1a/lbs__iterativemethods_8h.html#abbeea2720699d1ad713fdb6fd4eeff3b',1,'lbs_iterativemethods.h']]],
-  ['npt_5fgmres_5fcycles_4999',['NPT_GMRES_CYCLES',['../dc/d1a/lbs__iterativemethods_8h.html#a4a1c29fc26fee0cca2b8ed7ead8eda2b',1,'lbs_iterativemethods.h']]]
+  ['op_5favg_5216',['OP_AVG',['../d2/d18/chi__ffinterpolation_8h.html#ae8926d2c4aa19c7bbf0ccc6cba3343ab',1,'chi_ffinterpolation.h']]],
+  ['op_5favg_5flua_5217',['OP_AVG_LUA',['../d2/d18/chi__ffinterpolation_8h.html#af048b1e2487700367b2d8b6c2fec27aa',1,'chi_ffinterpolation.h']]],
+  ['op_5fmax_5218',['OP_MAX',['../d2/d18/chi__ffinterpolation_8h.html#a96c6b949ef9a3fa992b27d2a0055c559',1,'chi_ffinterpolation.h']]],
+  ['op_5fmax_5flua_5219',['OP_MAX_LUA',['../d2/d18/chi__ffinterpolation_8h.html#abded4cc531a8b9ba28f0e72a14ba77aa',1,'chi_ffinterpolation.h']]],
+  ['op_5fsum_5220',['OP_SUM',['../d2/d18/chi__ffinterpolation_8h.html#a2c678dad124e2bdeb6861bf367df2bb8',1,'chi_ffinterpolation.h']]],
+  ['op_5fsum_5flua_5221',['OP_SUM_LUA',['../d2/d18/chi__ffinterpolation_8h.html#a4b429e3745cd6c3b549e9ce1db7a2ef4',1,'chi_ffinterpolation.h']]]
 ];

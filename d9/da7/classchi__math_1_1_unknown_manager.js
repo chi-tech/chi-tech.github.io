@@ -2,7 +2,7 @@ var classchi__math_1_1_unknown_manager =
 [
     [ "Unknown", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown" ],
     [ "UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html#ac388cbc518237033bba774b64b617592", null ],
-    [ "~UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html#ac10c2146c56c47d5ca63871c25d017f0", null ],
+    [ "~UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html#a4168fd268367f6b950d4b2a5dae640d6", null ],
     [ "AddUnknown", "d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78", null ],
     [ "GetTotalUnknownStructureSize", "d9/da7/classchi__math_1_1_unknown_manager.html#aeae89a6df303d449110f55c99207b509", null ],
     [ "MapUnknown", "d9/da7/classchi__math_1_1_unknown_manager.html#ab2532b96b6b686f895b6b226983dd18d", null ],

@@ -5,6 +5,7 @@ var classchi__mesh_1_1_mesh_continuum =
     [ "ClearCellReferences", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a9094fb9c39a89de86840a2e1c9d4c2e5", null ],
     [ "CommunicatePartitionNeighborCells", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a9da86f424ab451f711da2883168ff56d", null ],
     [ "ComputeCentroidFromListOfNodes", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a0f8c1e933d20254f3e4827a61a763d8e", null ],
+    [ "CountCellsInLogicalVolume", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a9a91c3eace5e55bb21995452e95e239d", null ],
     [ "ExportCellsToObj", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a249eca26d25dfe780c4975c3dfb46be6", null ],
     [ "ExportCellsToPython", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a6ce2c0f6bdb573e7ef09c0f4237d0cca", null ],
     [ "ExportCellsToVTK", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a5521ee6f7e666f865bfec8dfda45cb62", null ],
@@ -32,5 +33,5 @@ var classchi__mesh_1_1_mesh_continuum =
     [ "local_cells", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc", null ],
     [ "native_cells", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#ae49f10aa4206e4c8420992937de8c2dd", null ],
     [ "surface_mesh", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a45f60d8fe8704125bf92975406dd71e4", null ],
-    [ "vertices", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a69278f27a593bd90c21b9897d7df1f54", null ]
+    [ "vertices", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#acbdc07721f05d3d684cc1e596e21be42", null ]
 ];

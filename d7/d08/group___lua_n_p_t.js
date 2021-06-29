@@ -1,6 +1,8 @@
 var group___lua_n_p_t =
 [
     [ "LBS Groupsets", "d5/d03/group___lua_l_b_s_groupsets.html", "d5/d03/group___lua_l_b_s_groupsets" ],
+    [ "chiLBSComputeBalance", "d7/d08/group___lua_n_p_t.html#ga5b5241ab56617c614f1983654a858fcf", null ],
+    [ "chiLBSComputeBalance", "d7/d08/group___lua_n_p_t.html#gac551c3efb79ad88dca49350a90cdd5d1", null ],
     [ "chiLBSCreateSolver", "d7/d08/group___lua_n_p_t.html#gaa8ecbfc58922b856b87105c25a14ac1e", null ],
     [ "chiLBSCreateSolver", "d7/d08/group___lua_n_p_t.html#gac22fe79ba9c36650efcea56e11305751", null ],
     [ "chiLBSExecute", "d7/d08/group___lua_n_p_t.html#ga4325f93255469d8c33115055a0a41964", null ],

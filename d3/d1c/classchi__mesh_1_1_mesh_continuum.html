@@ -130,6 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1bd208a0afbfe85f6187b0d0d6f08ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add25e66a31973db57bc7436e3b0edfb8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#add25e66a31973db57bc7436e3b0edfb8">GetDomainUniqueBoundaryIDs</a> ()</td></tr>
 <tr class="separator:add25e66a31973db57bc7436e3b0edfb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a91c3eace5e55bb21995452e95e239d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a9a91c3eace5e55bb21995452e95e239d">CountCellsInLogicalVolume</a> (<a class="el" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html">chi_mesh::LogicalVolume</a> &amp;log_vol)</td></tr>
+<tr class="separator:a9a91c3eace5e55bb21995452e95e239d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -138,8 +140,8 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a69278f27a593bd90c21b9897d7df1f54"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a0c3635049b6a7727edc9a8a0b8b45f24">chi_mesh::Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a69278f27a593bd90c21b9897d7df1f54">vertices</a></td></tr>
-<tr class="separator:a69278f27a593bd90c21b9897d7df1f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdc07721f05d3d684cc1e596e21be42"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a0c3635049b6a7727edc9a8a0b8b45f24">chi_mesh::Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#acbdc07721f05d3d684cc1e596e21be42">vertices</a></td></tr>
+<tr class="separator:acbdc07721f05d3d684cc1e596e21be42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a227b26a2cc0e920fff45d31ed171e9cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d36/classchi__mesh_1_1_local_cell_handler.html">LocalCellHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">local_cells</a></td></tr>
 <tr class="separator:a227b26a2cc0e920fff45d31ed171e9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8290e6fd6bedfba721d4aabf73b806ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html">GlobalCellHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a8290e6fd6bedfba721d4aabf73b806ee">cells</a></td></tr>
@@ -242,7 +244,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <p>The function populates face_categories which is a structure containing pairs. Pair.first is the max dofs-per-face for the category and Pair.second is the number of faces in this category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00028">28</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00030">30</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -312,7 +314,28 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Computes the centroid from nodes specified by the given list. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00275">275</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00251">251</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+
+</div>
+</div>
+<a id="a9a91c3eace5e55bb21995452e95e239d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a91c3eace5e55bb21995452e95e239d">&#9670;&nbsp;</a></span>CountCellsInLogicalVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t chi_mesh::MeshContinuum::CountCellsInLogicalVolume </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html">chi_mesh::LogicalVolume</a> &amp;&#160;</td>
+          <td class="paramname"><em>log_vol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Counts the number of cells within a logical volume across all partitions. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00269">269</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -412,9 +435,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>On hold </p>
+<p>Exports just the mesh to VTK format. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d4c/chi__meshcontinuum__exportvtk_8cc_source.html#l00035">35</a> of file <a class="el" href="../../d1/d4c/chi__meshcontinuum__exportvtk_8cc_source.html">chi_meshcontinuum_exportvtk.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d4c/chi__meshcontinuum__exportvtk_8cc_source.html#l00033">33</a> of file <a class="el" href="../../d1/d4c/chi__meshcontinuum__exportvtk_8cc_source.html">chi_meshcontinuum_exportvtk.cc</a>.</p>
 
 </div>
 </div>
@@ -445,7 +468,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>General map vertices </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00197">197</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00199">199</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -505,7 +528,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Maps the face-histogram category number for a given face size. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00143">143</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00145">145</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -546,7 +569,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Check whether a cell is a boundary by checking if the key is found in the native or foreign cell maps. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00179">179</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00181">181</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -567,7 +590,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Check whether a cell is local by attempting to find the key in the native index map. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00165">165</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00167">167</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -588,7 +611,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Maps the face-histogram category number for a given face size. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00126">126</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00128">128</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -635,7 +658,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Gets the number of face-histogram categories. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00117">117</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00119">119</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -932,14 +955,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a69278f27a593bd90c21b9897d7df1f54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69278f27a593bd90c21b9897d7df1f54">&#9670;&nbsp;</a></span>vertices</h2>
+<a id="acbdc07721f05d3d684cc1e596e21be42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbdc07721f05d3d684cc1e596e21be42">&#9670;&nbsp;</a></span>vertices</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../d0/d81/namespacechi__mesh.html#a0c3635049b6a7727edc9a8a0b8b45f24">chi_mesh::Node</a>*&gt; chi_mesh::MeshContinuum::vertices</td>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d0/d81/namespacechi__mesh.html#a0c3635049b6a7727edc9a8a0b8b45f24">chi_mesh::Node</a>&gt; chi_mesh::MeshContinuum::vertices</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['write_5frestart_5fdata_5043',['WRITE_RESTART_DATA',['../d6/de0/lbs__setproperty_8cc.html#acc2e73fae9358d58a018f902aa1996b5',1,'lbs_setproperty.cc']]]
+  ['xmax_5260',['XMAX',['../d6/de0/lbs__setproperty_8cc.html#a0312cb6d6cbc719075d4e5380c387ab3',1,'lbs_setproperty.cc']]],
+  ['xmin_5261',['XMIN',['../d6/de0/lbs__setproperty_8cc.html#a6aee779504f876f9bed834f36b392da9',1,'lbs_setproperty.cc']]]
 ];

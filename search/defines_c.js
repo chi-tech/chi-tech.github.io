@@ -1,9 +1,15 @@
 var searchData=
 [
-  ['save_5fangular_5fflux_5025',['SAVE_ANGULAR_FLUX',['../d6/de0/lbs__setproperty_8cc.html#a9d38868274ae1e77442d6cb982f8d678',1,'lbs_setproperty.cc']]],
-  ['scattering_5forder_5026',['SCATTERING_ORDER',['../d6/de0/lbs__setproperty_8cc.html#a5f35e03e81d8e3a3c0afa6153e0edc60',1,'lbs_setproperty.cc']]],
-  ['sphere_5027',['SPHERE',['../d9/df5/chi__mesh__logicalvolume_8h.html#ad6372e14875f107f90642c7da8e10d12',1,'chi_mesh_logicalvolume.h']]],
-  ['sphere_5forigin_5028',['SPHERE_ORIGIN',['../d9/df5/chi__mesh__logicalvolume_8h.html#a8fa293695ca84c47fbcd8bf99f6357f7',1,'chi_mesh_logicalvolume.h']]],
-  ['surface_5029',['SURFACE',['../d9/df5/chi__mesh__logicalvolume_8h.html#a5ec2e414545e7c2a2f3ebe4c93600b76',1,'chi_mesh_logicalvolume.h']]],
-  ['sweep_5feager_5flimit_5030',['SWEEP_EAGER_LIMIT',['../d6/de0/lbs__setproperty_8cc.html#a0545351d455115c0776951d54e6bd3af',1,'lbs_setproperty.cc']]]
+  ['ta_5fbcpressure_5247',['TA_BCPRESSURE',['../df/ddc/chi__thermoalpha_8h.html#ab34ab8e8b72f74ca4220205d31d4f8d2',1,'chi_thermoalpha.h']]],
+  ['ta_5fbcpressuretemperature_5248',['TA_BCPRESSURETEMPERATURE',['../df/ddc/chi__thermoalpha_8h.html#af8aa8c53386971d52b9a5e526e0cceb0',1,'chi_thermoalpha.h']]],
+  ['ta_5fbctemperature_5249',['TA_BCTEMPERATURE',['../df/ddc/chi__thermoalpha_8h.html#ac939b244111ede87fbebe468016a06dc',1,'chi_thermoalpha.h']]],
+  ['ta_5fbcvoidfraction_5250',['TA_BCVOIDFRACTION',['../df/ddc/chi__thermoalpha_8h.html#a1745cc0b69800245ead537c24b6714ae',1,'chi_thermoalpha.h']]],
+  ['ta_5ffluid_5fwater_5251',['TA_FLUID_WATER',['../df/ddc/chi__thermoalpha_8h.html#ac1ab3ee9e217d955cdef52c9cccd436f',1,'chi_thermoalpha.h']]],
+  ['ta_5fjlosscoefficients_5252',['TA_JLOSSCOEFFICIENTS',['../df/ddc/chi__thermoalpha_8h.html#a6f99f6fc7f7278d2dec8dafcff3b620f',1,'chi_thermoalpha.h']]],
+  ['ta_5fjvelocity_5253',['TA_JVELOCITY',['../df/ddc/chi__thermoalpha_8h.html#a9bc03316ac53dd6ba1f2d7a536f509d9',1,'chi_thermoalpha.h']]],
+  ['ta_5fpressure_5254',['TA_PRESSURE',['../df/ddc/chi__thermoalpha_8h.html#aade92e1a0f6b58ddb9eec29ca22a9a3b',1,'chi_thermoalpha.h']]],
+  ['ta_5fpressuretemperature_5255',['TA_PRESSURETEMPERATURE',['../df/ddc/chi__thermoalpha_8h.html#aca2a24e899a915a5d4448db302629ad3',1,'chi_thermoalpha.h']]],
+  ['ta_5ftemperature_5256',['TA_TEMPERATURE',['../df/ddc/chi__thermoalpha_8h.html#a6bf11ff37e748c5fde14cd994ea7b5dd',1,'chi_thermoalpha.h']]],
+  ['ta_5fvelocity_5257',['TA_VELOCITY',['../df/ddc/chi__thermoalpha_8h.html#a3c4b797c4a935b07e8f4c86b0c240355',1,'chi_thermoalpha.h']]],
+  ['ta_5fvoidfraction_5258',['TA_VOIDFRACTION',['../df/ddc/chi__thermoalpha_8h.html#abc63a8ca97a345fcdf6701bbdcc71e75',1,'chi_thermoalpha.h']]]
 ];

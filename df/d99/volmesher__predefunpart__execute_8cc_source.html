@@ -138,81 +138,77 @@ $(document).ready(function(){initNavTree('df/d99/volmesher__predefunpart__execut
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">//======================================== Check partitioning params</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">int</span> Px = 1;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">int</span> Py = 1;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">int</span> Pz = 1;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#abc0ebd8604df6dc1c67efe66579de214">options</a>.<a class="code" href="../../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a32f6ec77f94ed50347932e331c531bcb">partition_type</a> == <a class="code" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3ac04afcc24c159516c1b664dbef84d936">KBA_STYLE_XYZ</a>)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    Px = mesh_handler-&gt;volume_mesher-&gt;options.partition_x;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    Py = mesh_handler-&gt;volume_mesher-&gt;options.partition_y;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    Pz = mesh_handler-&gt;volume_mesher-&gt;options.partition_z;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> desired_process_count = Px*Py*Pz;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (desired_process_count != <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#a51968d828ef0e022637679cc3c7d27ac">process_count</a>)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;ERROR: Number of processors available (&quot;</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        &lt;&lt; <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#a51968d828ef0e022637679cc3c7d27ac">process_count</a> &lt;&lt;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="stringliteral">&quot;) does not match amount of processors &quot;</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="stringliteral">&quot;required by partitioning parameters (&quot;</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        &lt;&lt; desired_process_count &lt;&lt; <span class="stringliteral">&quot;).&quot;</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#abc0ebd8604df6dc1c67efe66579de214">options</a>.<a class="code" href="../../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a32f6ec77f94ed50347932e331c531bcb">partition_type</a> == <a class="code" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3ac04afcc24c159516c1b664dbef84d936">KBA_STYLE_XYZ</a>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> Px = mesh_handler-&gt;volume_mesher-&gt;options.partition_x;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> Py = mesh_handler-&gt;volume_mesher-&gt;options.partition_y;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> Pz = mesh_handler-&gt;volume_mesher-&gt;options.partition_z;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> desired_process_count = Px*Py*Pz;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (desired_process_count != <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#a51968d828ef0e022637679cc3c7d27ac">process_count</a>)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;ERROR: Number of processors available (&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        &lt;&lt; <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#a51968d828ef0e022637679cc3c7d27ac">process_count</a> &lt;&lt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="stringliteral">&quot;) does not match amount of processors &quot;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="stringliteral">&quot;required by partitioning parameters (&quot;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        &lt;&lt; desired_process_count &lt;&lt; <span class="stringliteral">&quot;).&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">//======================================== Get unpartitioned mesh</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">auto</span> umesh = mesh_handler-&gt;unpartitionedmesh_stack.back();</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">//======================================== Get unpartitioned mesh</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">auto</span> umesh = mesh_handler-&gt;unpartitionedmesh_stack.back();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; <span class="stringliteral">&quot;Computed centroids&quot;</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  MPI_Barrier(MPI_COMM_WORLD);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; <span class="stringliteral">&quot;Computed centroids&quot;</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  MPI_Barrier(MPI_COMM_WORLD);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">//======================================== Apply partitioning scheme</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">auto</span> grid = <a class="code" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#adfe777c0c68dfa6f9dba9c0000efa1c4">chi_mesh::MeshContinuum::New</a>();</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">//======================================== Apply partitioning scheme</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">auto</span> grid = <a class="code" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#adfe777c0c68dfa6f9dba9c0000efa1c4">chi_mesh::MeshContinuum::New</a>();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#abc0ebd8604df6dc1c67efe66579de214">options</a>.<a class="code" href="../../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a32f6ec77f94ed50347932e331c531bcb">partition_type</a> == PartitionType::KBA_STYLE_XYZ)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="../../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#ad393839ef5c3527e3628802cc225b830">KBA</a>(umesh, grid);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3aed0554f9a725850503d18f232ea9c50f">PARMETIS</a>(umesh,grid);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#abc0ebd8604df6dc1c67efe66579de214">options</a>.<a class="code" href="../../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a32f6ec77f94ed50347932e331c531bcb">partition_type</a> == PartitionType::KBA_STYLE_XYZ)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="../../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#ad0b0180fbd669946c67061e4bca5dee9">KBA</a>(umesh, grid);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3aed0554f9a725850503d18f232ea9c50f">PARMETIS</a>(umesh,grid);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; <span class="stringliteral">&quot;Cells loaded.&quot;</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  MPI_Barrier(MPI_COMM_WORLD);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; <span class="stringliteral">&quot;Cells loaded.&quot;</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  MPI_Barrier(MPI_COMM_WORLD);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#aae9b61a9b96b08f67b794f65beefe581">AddContinuumToRegion</a>(grid, *mesh_handler-&gt;region_stack.back());</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#aae9b61a9b96b08f67b794f65beefe581">AddContinuumToRegion</a>(grid, *mesh_handler-&gt;region_stack.back());</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">//======================================== Concluding messages</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;VolumeMesherPredefinedUnpartitioned: Number of nodes in region = &quot;</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    &lt;&lt; grid-&gt;vertices.size()</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  grid-&gt;vertices.shrink_to_fit();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda">LOG_ALLVERBOSE_1</a>)</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;### LOCATION[&quot;</span> &lt;&lt; <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;] amount of local cells=&quot;</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    &lt;&lt; grid-&gt;local_cell_glob_indices.size();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="comment">//======================================== Concluding messages</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;VolumeMesherPredefinedUnpartitioned: Number of nodes in region = &quot;</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    &lt;&lt; grid-&gt;vertices.size()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  grid-&gt;vertices.shrink_to_fit();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda">LOG_ALLVERBOSE_1</a>)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;### LOCATION[&quot;</span> &lt;&lt; <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;] amount of local cells=&quot;</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    &lt;&lt; grid-&gt;local_cell_glob_indices.size();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  uint64_t total_local_cells = grid-&gt;local_cells.size();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  uint64_t total_global_cells = 0;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">int</span> total_local_cells = grid-&gt;local_cells.size();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">int</span> total_global_cells = 0;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  MPI_Allreduce(&amp;total_local_cells,</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                &amp;total_global_cells,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                1,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                MPI_INT,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                MPI_SUM,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                MPI_COMM_WORLD);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;VolumeMesherPredefinedUnpartitioned: Cells created = &quot;</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    &lt;&lt; total_global_cells</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  MPI_Allreduce(&amp;total_local_cells,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                &amp;total_global_cells,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                1,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                MPI_UNSIGNED_LONG_LONG,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                MPI_SUM,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                MPI_COMM_WORLD);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="../../df/d99/volmesher__predefunpart__execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;VolumeMesherPredefinedUnpartitioned: Cells created = &quot;</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    &lt;&lt; total_global_cells</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_predefined_unpartitioned_html_ad393839ef5c3527e3628802cc225b830"><div class="ttname"><a href="../../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#ad393839ef5c3527e3628802cc225b830">chi_mesh::VolumeMesherPredefinedUnpartitioned::KBA</a></div><div class="ttdeci">void KBA(chi_mesh::UnpartitionedMesh *umesh, chi_mesh::MeshContinuumPtr grid)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d87/volmesher__predefunpart__kba_8cc_source.html#l00071">volmesher_predefunpart_kba.cc:72</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a></div><div class="ttdeci">@ LOG_0</div><div class="ttdoc">Used only for location 0.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00009">chi_log.h:9</a></div></div>
 <div class="ttc" id="asurfacemesher_8h_html"><div class="ttname"><a href="../../d5/d47/surfacemesher_8h.html">surfacemesher.h</a></div></div>
@@ -223,6 +219,7 @@ $(document).ready(function(){initNavTree('df/d99/volmesher__predefunpart__execut
 <div class="ttc" id="astructchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s_html_a32f6ec77f94ed50347932e331c531bcb"><div class="ttname"><a href="../../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a32f6ec77f94ed50347932e331c531bcb">chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS::partition_type</a></div><div class="ttdeci">PartitionType partition_type</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dcb/chi__volumemesher_8h_source.html#l00053">chi_volumemesher.h:53</a></div></div>
 <div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
 <div class="ttc" id="aclass_chi_console_html_ad002c1736acab86ccafc85f7e029fb1d"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#ad002c1736acab86ccafc85f7e029fb1d">ChiConsole::GetMemoryUsageInMB</a></div><div class="ttdeci">double GetMemoryUsageInMB()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d9b/chi__console__memory_8cpp_source.html#l00059">chi_console_memory.cpp:59</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_predefined_unpartitioned_html_ad0b0180fbd669946c67061e4bca5dee9"><div class="ttname"><a href="../../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#ad0b0180fbd669946c67061e4bca5dee9">chi_mesh::VolumeMesherPredefinedUnpartitioned::KBA</a></div><div class="ttdeci">static void KBA(chi_mesh::UnpartitionedMesh *umesh, chi_mesh::MeshContinuumPtr &amp;grid)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d87/volmesher__predefunpart__kba_8cc_source.html#l00070">volmesher_predefunpart_kba.cc:71</a></div></div>
 <div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda">LOG_ALLVERBOSE_1</a></div><div class="ttdeci">@ LOG_ALLVERBOSE_1</div><div class="ttdoc">Used only if verbosity level equals 1.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00019">chi_log.h:19</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_html_abc0ebd8604df6dc1c67efe66579de214"><div class="ttname"><a href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#abc0ebd8604df6dc1c67efe66579de214">chi_mesh::VolumeMesher::options</a></div><div class="ttdeci">VOLUME_MESHER_OPTIONS options</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dcb/chi__volumemesher_8h_source.html#l00055">chi_volumemesher.h:55</a></div></div>
 <div class="ttc" id="aclass_chi_m_p_i_html_ad65e6925a081cffee9ec7427fddfee8b"><div class="ttname"><a href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">ChiMPI::location_id</a></div><div class="ttdeci">int location_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/chi__mpi_8h_source.html#l00032">chi_mpi.h:32</a></div></div>

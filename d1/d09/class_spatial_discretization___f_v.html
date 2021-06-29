@@ -110,10 +110,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6156810c6c520844fca68a77cb112b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea5e75b8ba089546fb1bc1f48b843a8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#aea5e75b8ba089546fb1bc1f48b843a8b">PreComputeNeighborCellSDValues</a> ()</td></tr>
 <tr class="separator:aea5e75b8ba089546fb1bc1f48b843a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b073029c04dfe1e0932816a8730bb0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/da9/class_cell_f_v_values.html">CellFVValues</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a3b073029c04dfe1e0932816a8730bb0e">MapFeView</a> (int cell_local_index)</td></tr>
-<tr class="separator:a3b073029c04dfe1e0932816a8730bb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cad96b7f15bf49bc2a1c4dfab88ba21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/da9/class_cell_f_v_values.html">CellFVValues</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a3cad96b7f15bf49bc2a1c4dfab88ba21">MapNeighborFeView</a> (int cell_global_index)</td></tr>
-<tr class="separator:a3cad96b7f15bf49bc2a1c4dfab88ba21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365afc126bd661286082b0affe6b5a43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/da9/class_cell_f_v_values.html">CellFVValues</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a365afc126bd661286082b0affe6b5a43">MapFeView</a> (uint64_t cell_local_index)</td></tr>
+<tr class="separator:a365afc126bd661286082b0affe6b5a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee82757edd44efbfce42383906a62ddd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/da9/class_cell_f_v_values.html">CellFVValues</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#aee82757edd44efbfce42383906a62ddd">MapNeighborFeView</a> (uint64_t cell_global_index)</td></tr>
+<tr class="separator:aee82757edd44efbfce42383906a62ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0686592ea37cc35f4feeecf9083a981"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#aa0686592ea37cc35f4feeecf9083a981">OrderNodes</a> ()</td></tr>
 <tr class="separator:aa0686592ea37cc35f4feeecf9083a981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a089fe89ddf9aca2dae990748e73158f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a089fe89ddf9aca2dae990748e73158f8">BuildSparsityPattern</a> (std::vector&lt; int64_t &gt; &amp;nodal_nnz_in_diag, std::vector&lt; int64_t &gt; &amp;nodal_nnz_off_diag, <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager) override</td></tr>
@@ -132,6 +132,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2022ba8796d99efbe6aace8512d05c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe0fd6ab80883cc671b7082f96ca3c2a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#abe0fd6ab80883cc671b7082f96ca3c2a">GetNumGhostDOFs</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> grid, <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager)</td></tr>
 <tr class="separator:abe0fd6ab80883cc671b7082f96ca3c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf16f54ae31172517759cd17ffa23dd2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#acf16f54ae31172517759cd17ffa23dd2">GetCellNumNodes</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell) const override</td></tr>
+<tr class="separator:acf16f54ae31172517759cd17ffa23dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29a2e74db29e41881eaea95de06e8510"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a29a2e74db29e41881eaea95de06e8510">GetGhostDOFIndices</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> grid, <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager, unsigned int unknown_id=0)</td></tr>
 <tr class="separator:a29a2e74db29e41881eaea95de06e8510"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d409700a8e544e59c52cbd02814407f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a7d409700a8e544e59c52cbd02814407f">LocalizePETScVector</a> (Vec petsc_vector, std::vector&lt; double &gt; &amp;local_vector, <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;unknown_manager) override</td></tr>
@@ -139,7 +141,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a2007568b536919f545d8f75ea03099cb"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html">SpatialDiscretization_FV</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a2007568b536919f545d8f75ea03099cb">New</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> &amp;in_grid, <a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a> in_cs_type=<a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1a0db45d2a4141101bdfe48e3314cfbca3">chi_math::CoordinateSystemType::CARTESIAN</a>)</td></tr>
+<tr class="memitem:a2007568b536919f545d8f75ea03099cb"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html">SpatialDiscretization_FV</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a2007568b536919f545d8f75ea03099cb">New</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> &amp;in_grid, <a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a> in_cs_type=chi_math::CoordinateSystemType::CARTESIAN)</td></tr>
 <tr class="separator:a2007568b536919f545d8f75ea03099cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -276,6 +278,36 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d2b/class_spatial_discretization.html#a95f837f71b1c541f21c620cf314b04ab">SpatialDiscretization</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/de6/fv__03__buildsparsity_8cc_source.html#l00008">8</a> of file <a class="el" href="../../d0/de6/fv__03__buildsparsity_8cc_source.html">fv_03_buildsparsity.cc</a>.</p>
+
+</div>
+</div>
+<a id="acf16f54ae31172517759cd17ffa23dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf16f54ae31172517759cd17ffa23dd2">&#9670;&nbsp;</a></span>GetCellNumNodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t SpatialDiscretization_FV::GetCellNumNodes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="../../da/d2b/class_spatial_discretization.html#a22ea628621cfcbf2e1de0a3fca9b4e0f">SpatialDiscretization</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d50/fv_8h_source.html#l00083">83</a> of file <a class="el" href="../../de/d50/fv_8h_source.html">fv.h</a>.</p>
 
 </div>
 </div>
@@ -656,8 +688,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a3b073029c04dfe1e0932816a8730bb0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b073029c04dfe1e0932816a8730bb0e">&#9670;&nbsp;</a></span>MapFeView()</h2>
+<a id="a365afc126bd661286082b0affe6b5a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a365afc126bd661286082b0affe6b5a43">&#9670;&nbsp;</a></span>MapFeView()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -665,7 +697,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../dd/da9/class_cell_f_v_values.html">CellFVValues</a> * SpatialDiscretization_FV::MapFeView </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>cell_local_index</em></td><td>)</td>
           <td></td>
         </tr>
@@ -677,8 +709,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a3cad96b7f15bf49bc2a1c4dfab88ba21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cad96b7f15bf49bc2a1c4dfab88ba21">&#9670;&nbsp;</a></span>MapNeighborFeView()</h2>
+<a id="aee82757edd44efbfce42383906a62ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee82757edd44efbfce42383906a62ddd">&#9670;&nbsp;</a></span>MapNeighborFeView()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -686,7 +718,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../dd/da9/class_cell_f_v_values.html">CellFVValues</a> * SpatialDiscretization_FV::MapNeighborFeView </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>cell_global_index</em></td><td>)</td>
           <td></td>
         </tr>
@@ -717,7 +749,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a>&#160;</td>
-          <td class="paramname"><em>in_cs_type</em> = <code><a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1a0db45d2a4141101bdfe48e3314cfbca3">chi_math::CoordinateSystemType::CARTESIAN</a></code>&#160;</td>
+          <td class="paramname"><em>in_cs_type</em> = <code>chi_math::CoordinateSystemType::CARTESIAN</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

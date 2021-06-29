@@ -1,5 +1,6 @@
 var _linear_boltzmann_solver_2lua_2lua__register_8h =
 [
+    [ "AddNamedConstantToNamespace", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#ac3b104f594a53fd9a170361c23fcdd25", null ],
     [ "AddNamedConstantToNamespace", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#ab51a81e44c1eb8233913ca2f661d4ebd", null ],
     [ "AddNamedConstantToNamespace", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#a4592e6f7a3fb92d7010065edc1869681", null ],
     [ "AddNamedConstantToNamespace", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#aca907847ebea08c25d71dd359d63b257", null ],
@@ -48,7 +49,7 @@ var _linear_boltzmann_solver_2lua_2lua__register_8h =
     [ "RegisterConstant", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#aa911fea807c20d9bee7a24db08f79fc7", null ],
     [ "RegisterConstant", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#ae3f57fe7373c94020ccb53273d00a249", null ],
     [ "RegisterFunction", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#a2ede2d4d22ec395c564f5c84ff7046d0", null ],
-    [ "RegisterFunction", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#a8ead97faa7514f356956f2cedd23e516", null ],
+    [ "RegisterFunction", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#a0b656b3ec51572767e4dab814b55c6b3", null ],
     [ "RegisterNamespace", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#a2b58a0762bfb6d49bd4eacf9de99d2e9", null ],
     [ "RegisterNamespace", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#ad0152816c7ce7f3a4fdca3b90336a100", null ],
     [ "RegisterNamespace", "d9/d6c/_linear_boltzmann_solver_2lua_2lua__register_8h.html#ad72502913be7bad6901a2780b921215d", null ],

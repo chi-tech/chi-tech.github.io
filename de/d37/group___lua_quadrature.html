@@ -99,6 +99,10 @@ Modules</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:gab7d8a43b56ecd0142d00231de4e0c526"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#gab7d8a43b56ecd0142d00231de4e0c526">chi_lua::chiCreateCustomAngularQuadrature</a> (array azimuthal_angles, array polar_angles, array weight)</td></tr>
 <tr class="separator:gab7d8a43b56ecd0142d00231de4e0c526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacdecc317c55c5f6fa7b7a9584c9aca0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#gacdecc317c55c5f6fa7b7a9584c9aca0e">chi_lua::chiCreateCylindricalProductQuadrature</a> (QuadratureType \param, values \param)</td></tr>
+<tr class="separator:gacdecc317c55c5f6fa7b7a9584c9aca0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0574494c0c4240338b5e1bb2c4d5bfe0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#ga0574494c0c4240338b5e1bb2c4d5bfe0">chi_lua::chiCreateSphericalProductQuadrature</a> (QuadratureType \param, values \param)</td></tr>
+<tr class="separator:ga0574494c0c4240338b5e1bb2c4d5bfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9600f3a9c8ef7a0f97a27d7317ebb3b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#ga9600f3a9c8ef7a0f97a27d7317ebb3b3">chi_lua::chiCreateProductQuadrature</a> (int QuadratureType, varying values)</td></tr>
 <tr class="separator:ga9600f3a9c8ef7a0f97a27d7317ebb3b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab8fde37d24b96f988753a7f18827d11f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d37/group___lua_quadrature.html#gab8fde37d24b96f988753a7f18827d11f">chi_lua::chiGetProductQuadrature</a> (int QuadHandle)</td></tr>
@@ -155,6 +159,60 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gacdecc317c55c5f6fa7b7a9584c9aca0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacdecc317c55c5f6fa7b7a9584c9aca0e">&#9670;&nbsp;</a></span>chiCreateCylindricalProductQuadrature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiCreateCylindricalProductQuadrature </td>
+          <td>(</td>
+          <td class="paramtype">QuadratureType \&#160;</td>
+          <td class="paramname"><em>param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">values \&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a curvilinear product quadrature suitable for cylindrical geometries.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuadratureType</td><td>int Quadrature identifier. </td></tr>
+    <tr><td class="paramname">values</td><td>varying Varying options based on the quadrature type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>_</h2>
+<h3>QuadratureType:\n</h3>
+<p>GAUSS_LEGENDRE_CHEBYSHEV<br  />
+ Gauss-Legendre quadrature for the polar angle and Gauss-Chebyshev quadrature for the azimuthal angle. Arguments for this quadrature type, in order:</p><ul>
+<li>Np : (int) number of polar angles</li>
+<li>Na : (int) number of azimuthal angles (unique number at each polar level), or (table&lt;int&gt;) number of azimuthal angles (diverse number at each polar level)</li>
+<li>verbose : (bool) verbosity flag (optional).</li>
+</ul>
+<h3>QuadratureType:\n</h3>
+<p>GAUSS_LEGENDRE_LEGENDRE<br  />
+ Gauss-Legendre quadrature for the polar angle and Gauss-Legendre quadrature for the azimuthal angle. Arguments for this quadrature type, in order:</p><ul>
+<li>Np : (int) number of polar angles</li>
+<li>Na : (int) number of azimuthal angles (unique number at each polar level), or (table&lt;int&gt;) number of azimuthal angles (diverse number at each polar level)</li>
+<li>verbose : (bool) verbosity flag (optional).</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00055">55</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
 <a id="ga9600f3a9c8ef7a0f97a27d7317ebb3b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9600f3a9c8ef7a0f97a27d7317ebb3b3">&#9670;&nbsp;</a></span>chiCreateProductQuadrature()</h2>
 
@@ -205,7 +263,7 @@ CUSTOM_QUADRATURE<br  />
 </p><dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00052">52</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00116">116</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -254,7 +312,59 @@ CUSTOM_QUADRATURE<br  />
 <p>GAUSS_LEGENDRE = Gauss-Legendre quadrature. GAUSS_CHEBYSHEV = Gauss-Chebyshev quadrature. </p><dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created quadrature rule</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00076">76</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00140">140</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="ga0574494c0c4240338b5e1bb2c4d5bfe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0574494c0c4240338b5e1bb2c4d5bfe0">&#9670;&nbsp;</a></span>chiCreateSphericalProductQuadrature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiCreateSphericalProductQuadrature </td>
+          <td>(</td>
+          <td class="paramtype">QuadratureType \&#160;</td>
+          <td class="paramname"><em>param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">values \&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a curvilinear product quadrature suitable for spherical geometries.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QuadratureType</td><td>int Quadrature identifier. </td></tr>
+    <tr><td class="paramname">values</td><td>varying Varying options based on the quadrature type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>_</h2>
+<h3>QuadratureType:\n</h3>
+<p>GAUSS_CHEBYSHEV<br  />
+ Gauss-Chebyshev quadrature for the polar angle and no quadrature for the azimuthal angle. Arguments for this quadrature type, in order:</p><ul>
+<li>Np : (int) number of polar angles</li>
+<li>verbose : (bool) verbosity flag (optional).</li>
+</ul>
+<h3>QuadratureType:\n</h3>
+<p>GAUSS_LEGENDRE<br  />
+ Gauss-Legendre quadrature for the polar angle and no quadrature for the azimuthal angle. Arguments for this quadrature type, in order:</p><ul>
+<li>Np : (int) number of polar angles</li>
+<li>verbose : (bool) verbosity flag (optional).</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00085">85</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -282,7 +392,7 @@ CUSTOM_QUADRATURE<br  />
 <dl class="section return"><dt>Returns</dt><dd>Table A lua table with each entry being another table with entries .weight .polar .azimuthal.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00060">60</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00124">124</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

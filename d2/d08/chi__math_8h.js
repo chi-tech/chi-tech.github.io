@@ -5,7 +5,9 @@ var chi__math_8h =
     [ "VecDbl", "d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94", null ],
     [ "CoordinateSystemType", "d2/d08/chi__math_8h.html#afe9e3188029ef8b07daf8af16eabc6b1", [
       [ "UNDEFINED", "d2/d08/chi__math_8h.html#afe9e3188029ef8b07daf8af16eabc6b1a0db45d2a4141101bdfe48e3314cfbca3", null ],
-      [ "CARTESIAN", "d2/d08/chi__math_8h.html#afe9e3188029ef8b07daf8af16eabc6b1ac02304094f2866a43251b12946a9a21b", null ]
+      [ "CARTESIAN", "d2/d08/chi__math_8h.html#afe9e3188029ef8b07daf8af16eabc6b1ac02304094f2866a43251b12946a9a21b", null ],
+      [ "CYLINDRICAL", "d2/d08/chi__math_8h.html#afe9e3188029ef8b07daf8af16eabc6b1af6840fd287b44b1616267bd19305909a", null ],
+      [ "SPHERICAL", "d2/d08/chi__math_8h.html#afe9e3188029ef8b07daf8af16eabc6b1a7f7d7e3a21bf7decf99d6fd26848772d", null ]
     ] ],
     [ "SpatialDiscretizationType", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0", [
       [ "UNDEFINED", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0a0db45d2a4141101bdfe48e3314cfbca3", null ],

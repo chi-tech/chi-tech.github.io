@@ -1,5 +1,6 @@
 var namespacechi__mesh =
 [
+    [ "mesh_cutting", "da/d62/namespacechi__mesh_1_1mesh__cutting.html", "da/d62/namespacechi__mesh_1_1mesh__cutting" ],
     [ "sweep_management", "d7/dc7/namespacechi__mesh_1_1sweep__management.html", "d7/dc7/namespacechi__mesh_1_1sweep__management" ],
     [ "BooleanLogicalVolume", "da/dca/classchi__mesh_1_1_boolean_logical_volume.html", "da/dca/classchi__mesh_1_1_boolean_logical_volume" ],
     [ "Boundary", "db/dc8/classchi__mesh_1_1_boundary.html", "db/dc8/classchi__mesh_1_1_boundary" ],

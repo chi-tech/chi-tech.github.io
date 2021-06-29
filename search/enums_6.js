@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operationtype_4784',['OperationType',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95',1,'chi_physics']]]
+  ['log_5flvl_4987',['LOG_LVL',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405',1,'chi_log.h']]]
 ];

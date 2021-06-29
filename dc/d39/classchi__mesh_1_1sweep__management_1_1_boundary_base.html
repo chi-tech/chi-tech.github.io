@@ -114,10 +114,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afaa749a8654e65644077b3ae5ac100be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a700695f7bd003a2e5f96bfca19b58570"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a700695f7bd003a2e5f96bfca19b58570">IsReflecting</a> () const</td></tr>
 <tr class="separator:a700695f7bd003a2e5f96bfca19b58570"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a783fa0daa30068dae1d724189347325e"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a783fa0daa30068dae1d724189347325e">HeterogenousPsiIncoming</a> (int angle_num, int cell_local_id, int face_num, int fi, int gs_ss_begin)</td></tr>
-<tr class="separator:a783fa0daa30068dae1d724189347325e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bc399d930dee9d87f743790be858179"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a3bc399d930dee9d87f743790be858179">HeterogenousPsiOutgoing</a> (int angle_num, int cell_local_id, int face_num, int fi, int gs_ss_begin)</td></tr>
-<tr class="separator:a3bc399d930dee9d87f743790be858179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af69a199f9064327c8f0d347fa8439b05"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#af69a199f9064327c8f0d347fa8439b05">HeterogenousPsiIncoming</a> (int angle_num, uint64_t cell_local_id, int face_num, int fi, int gs_ss_begin)</td></tr>
+<tr class="separator:af69a199f9064327c8f0d347fa8439b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d64d082c64503a6f9629f75549cec92"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a2d64d082c64503a6f9629f75549cec92">HeterogenousPsiOutgoing</a> (int angle_num, uint64_t cell_local_id, int face_num, int fi, int gs_ss_begin)</td></tr>
+<tr class="separator:a2d64d082c64503a6f9629f75549cec92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac90b4c491eb43b5a9690d876fbf870a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#ac90b4c491eb43b5a9690d876fbf870a6">UpdateAnglesReadyStatus</a> (std::vector&lt; int &gt; angles, int gs_ss)</td></tr>
 <tr class="separator:ac90b4c491eb43b5a9690d876fbf870a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae78e92ca8ac59fe95a7ba39686bc6c44"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#ae78e92ca8ac59fe95a7ba39686bc6c44">CheckAnglesReadyStatus</a> (std::vector&lt; int &gt; angles, int gs_ss)</td></tr>
@@ -241,8 +241,8 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a783fa0daa30068dae1d724189347325e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a783fa0daa30068dae1d724189347325e">&#9670;&nbsp;</a></span>HeterogenousPsiIncoming()</h2>
+<a id="af69a199f9064327c8f0d347fa8439b05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af69a199f9064327c8f0d347fa8439b05">&#9670;&nbsp;</a></span>HeterogenousPsiIncoming()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +259,7 @@ Data Fields</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>cell_local_id</em>, </td>
         </tr>
         <tr>
@@ -295,14 +295,14 @@ Data Fields</h2></td></tr>
 <h6></h6>
 <p>**Returns a flag indicating whether this bndry is reflecting or not.*&zwj;/ Returns a pointer to a heterogenous flux storage location. </p>
 
-<p>Reimplemented in <a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#af87ef6b24619ae1496cac96ac0fa5222">chi_mesh::sweep_management::BoundaryReflecting</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a8b8dddedef303cc9099cd80026a69223">chi_mesh::sweep_management::BoundaryReflecting</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d9b/sweep__boundaries_8cc_source.html#l00019">19</a> of file <a class="el" href="../../d9/d9b/sweep__boundaries_8cc_source.html">sweep_boundaries.cc</a>.</p>
 
 </div>
 </div>
-<a id="a3bc399d930dee9d87f743790be858179"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bc399d930dee9d87f743790be858179">&#9670;&nbsp;</a></span>HeterogenousPsiOutgoing()</h2>
+<a id="a2d64d082c64503a6f9629f75549cec92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d64d082c64503a6f9629f75549cec92">&#9670;&nbsp;</a></span>HeterogenousPsiOutgoing()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,7 +319,7 @@ Data Fields</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>cell_local_id</em>, </td>
         </tr>
         <tr>
@@ -354,7 +354,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns a pointer to a heterogenous flux storage location. </p>
 
-<p>Reimplemented in <a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a11c5fd50d383d08db9e3e5b93d2f6ff2">chi_mesh::sweep_management::BoundaryReflecting</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a273b3907bc0c67833a3e2f90a6696fc3">chi_mesh::sweep_management::BoundaryReflecting</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d9b/sweep__boundaries_8cc_source.html#l00035">35</a> of file <a class="el" href="../../d9/d9b/sweep__boundaries_8cc_source.html">sweep_boundaries.cc</a>.</p>
 

@@ -8,7 +8,8 @@ var dir_914fdd647a308646ae65a7aa95e7aae3 =
       [ "Options", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options" ],
       [ "BoundBox", "d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html", "d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box" ]
     ] ],
-    [ "unpartmesh_00_general.cc", "da/dab/unpartmesh__00__general_8cc.html", "da/dab/unpartmesh__00__general_8cc" ],
+    [ "unpartmesh_00a_general.cc", "de/dca/unpartmesh__00a__general_8cc.html", "de/dca/unpartmesh__00a__general_8cc" ],
+    [ "unpartmesh_00b_connectivity.cc", "d2/daf/unpartmesh__00b__connectivity_8cc.html", "d2/daf/unpartmesh__00b__connectivity_8cc" ],
     [ "unpartmesh_01_readfromvtu.cc", "d5/d93/unpartmesh__01__readfromvtu_8cc.html", "d5/d93/unpartmesh__01__readfromvtu_8cc" ],
     [ "unpartmesh_02_readfromensight.cc", "da/da5/unpartmesh__02__readfromensight_8cc.html", "da/da5/unpartmesh__02__readfromensight_8cc" ],
     [ "unpartmesh_03_readfromwavefrontobj.cc", "db/d49/unpartmesh__03__readfromwavefrontobj_8cc.html", "db/d49/unpartmesh__03__readfromwavefrontobj_8cc" ],

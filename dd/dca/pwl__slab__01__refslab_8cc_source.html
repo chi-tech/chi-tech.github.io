@@ -88,43 +88,45 @@ $(document).ready(function(){initNavTree('dd/dca/pwl__slab__01__refslab_8cc_sour
 <div class="contents">
 <a href="../../dd/dca/pwl__slab__01__refslab_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d15/pwl__slab_8h.html">pwl_slab.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a85befab42221ff27ff4c460e870fac14">    3</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a85befab42221ff27ff4c460e870fac14">SlabMappingFE_PWL::SlabShape</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> qpoint_index, <span class="keywordtype">bool</span> on_surface)</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">double</span> xi=0.0;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordflow">if</span> (!on_surface)</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    xi = <a class="code" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a6bf89fc96f1fef0f4b2f6d0d0a633eb1">arbitrary_volume_quadrature</a>.<a class="code" href="../../d3/dbf/classchi__math_1_1_quadrature.html#a7480896007597a2d0287705e293c8c1e">qpoints</a>.at(qpoint_index)[0];</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">if</span>      (index == 0) xi=-1.0;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (index == 1) xi= 1.0;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">double</span> value = 0.0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">if</span>      (index == 0)</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    value = 0.5*(1.0 - xi);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (index == 1)</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    value = 0.5*(1.0 + xi);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a5c8825e08823ad2fef23f66e507e9171">   21</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a5c8825e08823ad2fef23f66e507e9171">SlabMappingFE_PWL::SlabGradShape</a>(<span class="keywordtype">int</span> index)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">double</span> value = 0.0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">if</span> (index == 0)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    value = -1.0/<a class="code" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#aa3303bae12e92de5bee10949dfa91c31">h</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    value =  1.0/<a class="code" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#aa3303bae12e92de5bee10949dfa91c31">h</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a1a066f5c9b5937341f4f276efb4af354">    3</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a1a066f5c9b5937341f4f276efb4af354">SlabMappingFE_PWL::SlabShape</a>(<span class="keywordtype">int</span> index,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                    <span class="keyword">const</span> <a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>&amp; qpoint,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                    <span class="keywordtype">bool</span> on_surface,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                                    <span class="keyword">const</span> <span class="keywordtype">int</span> edge)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">double</span> xi=0.0;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordflow">if</span> (!on_surface)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    xi = qpoint.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472">x</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    xi = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(edge);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">double</span> value = 0.0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">if</span>      (index == 0)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    value = 1.0 - xi;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (index == 1)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    value = xi;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a985f4de64fb288825e532def38ba483f">   23</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a985f4de64fb288825e532def38ba483f">SlabMappingFE_PWL::SlabGradShape</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">double</span> value = 0.0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span> (index == 0)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    value = -1.0/<a class="code" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#aa3303bae12e92de5bee10949dfa91c31">h</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    value =  1.0/<a class="code" href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#aa3303bae12e92de5bee10949dfa91c31">h</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_slab_mapping_f_e___p_w_l_html_a85befab42221ff27ff4c460e870fac14"><div class="ttname"><a href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a85befab42221ff27ff4c460e870fac14">SlabMappingFE_PWL::SlabShape</a></div><div class="ttdeci">double SlabShape(int index, int qpoint_index, bool on_surface=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dca/pwl__slab__01__refslab_8cc_source.html#l00003">pwl_slab_01_refslab.cc:3</a></div></div>
 <div class="ttc" id="apwl__slab_8h_html"><div class="ttname"><a href="../../d4/d15/pwl__slab_8h.html">pwl_slab.h</a></div></div>
-<div class="ttc" id="aclasschi__math_1_1_quadrature_html_a7480896007597a2d0287705e293c8c1e"><div class="ttname"><a href="../../d3/dbf/classchi__math_1_1_quadrature.html#a7480896007597a2d0287705e293c8c1e">chi_math::Quadrature::qpoints</a></div><div class="ttdeci">std::vector&lt; chi_math::QuadraturePointXYZ &gt; qpoints</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d4c/quadrature_8h_source.html#l00034">quadrature.h:34</a></div></div>
-<div class="ttc" id="aclass_slab_mapping_f_e___p_w_l_html_aa3303bae12e92de5bee10949dfa91c31"><div class="ttname"><a href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#aa3303bae12e92de5bee10949dfa91c31">SlabMappingFE_PWL::h</a></div><div class="ttdeci">double h</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d15/pwl__slab_8h_source.html#l00019">pwl_slab.h:19</a></div></div>
-<div class="ttc" id="aclass_slab_mapping_f_e___p_w_l_html_a6bf89fc96f1fef0f4b2f6d0d0a633eb1"><div class="ttname"><a href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a6bf89fc96f1fef0f4b2f6d0d0a633eb1">SlabMappingFE_PWL::arbitrary_volume_quadrature</a></div><div class="ttdeci">const chi_math::QuadratureGaussLegendre &amp; arbitrary_volume_quadrature</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d15/pwl__slab_8h_source.html#l00018">pwl_slab.h:18</a></div></div>
-<div class="ttc" id="aclass_slab_mapping_f_e___p_w_l_html_a5c8825e08823ad2fef23f66e507e9171"><div class="ttname"><a href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a5c8825e08823ad2fef23f66e507e9171">SlabMappingFE_PWL::SlabGradShape</a></div><div class="ttdeci">double SlabGradShape(int index)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dca/pwl__slab__01__refslab_8cc_source.html#l00021">pwl_slab_01_refslab.cc:21</a></div></div>
+<div class="ttc" id="aclass_slab_mapping_f_e___p_w_l_html_a985f4de64fb288825e532def38ba483f"><div class="ttname"><a href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a985f4de64fb288825e532def38ba483f">SlabMappingFE_PWL::SlabGradShape</a></div><div class="ttdeci">double SlabGradShape(int index) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dca/pwl__slab__01__refslab_8cc_source.html#l00023">pwl_slab_01_refslab.cc:23</a></div></div>
+<div class="ttc" id="aclass_slab_mapping_f_e___p_w_l_html_a1a066f5c9b5937341f4f276efb4af354"><div class="ttname"><a href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#a1a066f5c9b5937341f4f276efb4af354">SlabMappingFE_PWL::SlabShape</a></div><div class="ttdeci">double SlabShape(int index, const chi_mesh::Vector3 &amp;qpoint, bool on_surface=false, const int edge=0) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dca/pwl__slab__01__refslab_8cc_source.html#l00003">pwl_slab_01_refslab.cc:3</a></div></div>
+<div class="ttc" id="aclass_slab_mapping_f_e___p_w_l_html_aa3303bae12e92de5bee10949dfa91c31"><div class="ttname"><a href="../../da/dea/class_slab_mapping_f_e___p_w_l.html#aa3303bae12e92de5bee10949dfa91c31">SlabMappingFE_PWL::h</a></div><div class="ttdeci">double h</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d15/pwl__slab_8h_source.html#l00018">pwl_slab.h:18</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00011">chi_meshvector.h:12</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_vector3_html_a3e75a0cebaa0134cdd89724f6c101472"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472">chi_mesh::Vector3::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">Element-0.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00013">chi_meshvector.h:13</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

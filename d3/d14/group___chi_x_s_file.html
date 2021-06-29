@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.19"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: Chi-Tech Cross-section format</title>
+<title>Chi-Tech: Chi-Tech Cross-section format 1</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -83,11 +83,10 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Chi-Tech Cross-section format<div class="ingroups"><a class="el" href="../../d3/d5a/group___lua_physics.html">C Physics</a> &raquo; <a class="el" href="../../d7/d11/group___lua_physics_materials.html">Materials</a></div></div>  </div>
+<div class="title">Chi-Tech Cross-section format 1<div class="ingroups"><a class="el" href="../../d3/d5a/group___lua_physics.html">C Physics</a> &raquo; <a class="el" href="../../d7/d11/group___lua_physics_materials.html">Materials</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>An example Chi-Tech cross-section file is shown below: </p><div class="fragment"><div class="line"><span class="preprocessor"># Bla bla bla</span></div>
-<div class="line"><span class="preprocessor"># This header can be as large as you please. The actual processing</span></div>
+<p>An example Chi-Tech cross-section file is shown below. The bare-bones format is shown below with more examples below: </p><div class="fragment"><div class="line"><span class="preprocessor"># This header can be as large as you please. The actual processing</span></div>
 <div class="line"><span class="preprocessor"># starts at NUM_GROUPS as the first word. After that, NUM_MOMENTS needs to</span></div>
 <div class="line"><span class="preprocessor"># be processed before any of the other keywords.</span></div>
 <div class="line">NUM_GROUPS 2</div>
@@ -97,7 +96,75 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <div class="line">1   0.5</div>
 <div class="line">SIGMA_T_END</div>
 <div class="line"> </div>
-<div class="line">Comments Bla Bla</div>
+<div class="line">Comments</div>
+<div class="line"> </div>
+<div class="line">TRANSFER_MOMENTS_BEGIN</div>
+<div class="line"><span class="preprocessor">#Zeroth moment (l=0)</span></div>
+<div class="line">M_GPRIME_G_VAL 0 0 0 0.01</div>
+<div class="line">M_GPRIME_G_VAL 0 0 1 0.09</div>
+<div class="line">M_GPRIME_G_VAL 0 1 1 0.08</div>
+<div class="line"> </div>
+<div class="line">#(l=1)</div>
+<div class="line">M_GPRIME_G_VAL 1 0 0 -0.001</div>
+<div class="line">M_GPRIME_G_VAL 1 0 1 0.001</div>
+<div class="line">M_GPRIME_G_VAL 1 1 1 0.001</div>
+<div class="line">TRANSFER_MOMENTS_END</div>
+</div><!-- fragment --><h2>Steady state simulations:</h2>
+<p>The cross sections can be used in simulations solving the steady state Linear Boltzmann Equation of the form:</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \vec{\Omega}_n \boldsymbol{\cdot} \vec{\nabla} \psi_{ng} + \sigma_{tg} \psi_{ng} = \sum_{\ell=0}^L \sum_{m=-\ell}^{+\ell} \frac{2\ell+1}{4\pi} Y_{\ell m} (\vec{\Omega}_n) \sum_{g'=0}^{G-1} \sigma_{s\ell,g'{\to}g} \phi_{\ell m,g'} + q_{ext,ng} + q_{fission,ng} \]" src="../../form_124.png" width="545" height="48"/>
+</p>
+<p>The two most prominent items required here includes <img class="formulaInl" alt="$ \sigma_{tg} $" src="../../form_121.png" width="20" height="12"/> and <img class="formulaInl" alt="$ \sigma_{s\ell,g'{\to}g} $" src="../../form_126.png" width="51" height="12"/>. The latter is an entry in a structure we call a generic transfer matrix for moment <img class="formulaInl" alt="$ \ell $" src="../../form_0.png" width="8" height="12"/> with rows <img class="formulaInl" alt="$g=0..G-1$" src="../../form_129.png" width="81" height="15"/> and columns <img class="formulaInl" alt="$g'=0..G-1$" src="../../form_130.png" width="86" height="15"/>. These two items are often the only items required in a transport simulation.</p>
+<p>In simulations with fission-sources, cross sections support two formats, the simple combined cross sections without delayed neutrons</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ q_{fission,ng} = \frac{\chi_g}{4\pi} \sum_{g'=0}^{G-1} \nu_{g'} \sigma_{fg'} \phi_{00g'} \]" src="../../form_131.png" width="210" height="48"/>
+</p>
+<p>and those with delayed neutrons, the latter which are currently only used in the KEigen solver.</p>
+<h2>KEigen-value related items</h2>
+<p>As stated before, the cross section file supports two formats, the simple combined cross sections without delayed neutrons which are depicted above and those with delayed neutrons shown below</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ q_{fission,ng} = \frac{\chi_g}{4\pi} \sum_{g'=0}^{G-1} \nu_{prompt,g'} \sigma_{fg'} \phi_{00g'} + \sum_{j=0}^{J-1} \frac{\chi_{delayed,jg}}{4\pi} \gamma_j \sum_{g'=0}^{G-1} \nu_{delayed,g'} \sigma_{fg'} \phi_{00g'} \]" src="../../form_142.png" width="525" height="48"/>
+</p>
+<p>.</p>
+<p>Codes may also choose to update precursor concentrations for which their decay constants, <img class="formulaInl" alt="$ \lambda_j $" src="../../form_138.png" width="14" height="17"/> are required.</p>
+<h2>Keyword definitions</h2>
+<ul>
+<li>NUM_GROUPS num_groups Required. Specifies the number of groups for this cross-section. Symbol <img class="formulaInl" alt="$ G $" src="../../form_118.png" width="12" height="12"/>.</li>
+<li>NUM_MOMENTS num_moments Required. The number of transfer matrices to allocate for this cross-section (whether used or not). Typically this number is one greater than the scattering order (i.e., <img class="formulaInl" alt="$ L+1 $" src="../../form_119.png" width="35" height="14"/>)</li>
+<li>NUM_PRECURSORS num_precursors Optional. Indicates how many precursors are used in this cross section. Symbol <img class="formulaInl" alt="$ J $" src="../../form_128.png" width="9" height="12"/></li>
+<li>Optional key words per line:<ul>
+<li>SIGMA_T_BEGIN. Optional. Starts a block that is terminated by a line SIGMA_T_END. Each line in the block processes the first two words as [Group, sigma_t]. Populates the sigma_tg field. Symbol <img class="formulaInl" alt="$ \sigma_{tg} $" src="../../form_121.png" width="20" height="12"/>.</li>
+<li>SIGMA_F_BEGIN. Optional. Starts a block that is terminated by a line SIGMA_F_END. Each line in the block processes the first two words as [Group, sigma_f]. Populates the sigma_fg field. Symbol <img class="formulaInl" alt="$ \sigma_{fg} $" src="../../form_132.png" width="21" height="12"/>.</li>
+<li>SIGMA_A_BEGIN. Optional. Starts a block that is terminated by a line SIGMA_A_END. Each line in the block processes the first two words as [Group, sigma_a]. Populates the sigma_ag field. Symbol <img class="formulaInl" alt="$ \sigma_{ag} $" src="../../form_143.png" width="21" height="12"/>. If this is not supplied then sigma_a is estimated from the transfer matrix and may erroneously estimate balance.</li>
+<li>NU_BEGIN. Optional. Starts a block that is terminated by a line NU_END. Each line in the block processes the first two words as [Group, nu]. Populates the nu field. Upon completing the file processing the nu_sigma_fg field gets populated from the product of nu and sigma_fg. Symbol <img class="formulaInl" alt="$ \nu_g $" src="../../form_133.png" width="14" height="12"/>.</li>
+<li>NU_PROMPT_BEGIN. Optional. Starts a block that is terminated by a line NU_PROMPT_END. Each line in the block processes the first two words as [Group, nu]. Populates the nu_prompt field. Upon completing the file processing the nu_p_sigma_fg field gets populated from the product of nu_prompt and sigma_fg. Symbol <img class="formulaInl" alt="$ \nu_{prompt,g} $" src="../../form_134.png" width="56" height="12"/>.</li>
+<li>NU_DELAYED_BEGIN. Optional. Starts a block that is terminated by a line NU_DELAYED_END. Each line in the block processes the first two words as [Group, nu]. Populates the nu_delayed field. Upon completing the file processing the nu_d_sigma_fg field gets populated from the product of nu_delayed and sigma_fg. Symbol <img class="formulaInl" alt="$ \nu_{delayed,g} $" src="../../form_135.png" width="57" height="12"/>.</li>
+<li>CHI_PROMPT_BEGIN. Optional. Starts a block that is terminated by a line CHI_PROMPT_END. Each line in the block processes the first two words as [Group, chi]. Populates the chi_g field. Symbol <img class="formulaInl" alt="$ \chi_{g} $" src="../../form_136.png" width="17" height="12"/>.</li>
+<li>DDT_COEFF_BEGIN. Optional. Starts a block that is terminated by a line DDT_COEFF_END. Each line in the block processes the first two words as [Group, ddt_coeff]. Populates the ddt_coeff field. Symbol <img class="formulaInl" alt="$ \frac{1}{v_g} $" src="../../form_137.png" width="15" height="23"/>.</li>
+<li>PRECURSOR_LAMBDA_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_LAMBDA_END. Each line in the block processes the first two words as [precursor, lambda]. Populates the lambda field (the precursor decay constant). Symbol <img class="formulaInl" alt="$ \lambda_j $" src="../../form_138.png" width="14" height="17"/>.</li>
+<li>PRECURSOR_GAMMA_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_GAMMA_END. Each line in the block processes the first two words as [precursor, gamma]. Populates the gamma field (the precursor production fraction per fission). Symbol <img class="formulaInl" alt="$ \gamma_j $" src="../../form_139.png" width="14" height="12"/>.</li>
+<li>CHI_DELAYED_BEGIN. Optional. Starts a block that is terminated by a line CHI_DELAYED_END. Each line in the block processes the first word as the group index and the remaining NUM_PRECURSORS words as the the individual precursor's associated delayed spectrum (chi). Populates the chi_d field. Symbol <img class="formulaInl" alt="$ \chi_{delayed,jg} $" src="../../form_141.png" width="66" height="12"/>.</li>
+<li>TRANSFER_MOMENTS_BEGIN. Optional. Starts a block that is terminated by a line TRANSFER_MOMENTS_END. Each line in the block processes a line only if it starts with the keyword M_GPRIME_G_VAL which needs to be followed by four values [moment,gprime,g,value]. Populates transfer-matrix for moment m, row g, column gprime, with value. Symbol <img class="formulaInl" alt="$ \sigma_{s\ell,g'{\to}g} $" src="../../form_126.png" width="51" height="12"/>.</li>
+</ul>
+</li>
+<li>Comments can be between individual blocks but only the TRANSFER_MOMENTS block may have comments between the _BEGIN and _END</li>
+<li>Comments do not have to start with any specific character since the file format is keyword driven.</li>
+<li>Any number that is not convertible to its required type (integer, double) will throw an error to that effect.</li>
+<li>All errors will indicate the current file, line number and nature of the error.</li>
+</ul>
+<h2>More Advanced Examples</h2>
+<div class="fragment"><div class="line"><span class="preprocessor"># This header can be as large as you please. The actual processing</span></div>
+<div class="line"><span class="preprocessor"># starts at NUM_GROUPS as the first word. After that, NUM_MOMENTS needs to</span></div>
+<div class="line"><span class="preprocessor"># be processed before any of the other keywords.</span></div>
+<div class="line">NUM_GROUPS 2</div>
+<div class="line">NUM_MOMENTS 2</div>
+<div class="line">NUM_PRECURSORS 3</div>
+<div class="line">SIGMA_T_BEGIN</div>
+<div class="line">0   0.5</div>
+<div class="line">1   0.5</div>
+<div class="line">SIGMA_T_END</div>
+<div class="line"> </div>
+<div class="line">Comments</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">SIGMA_F_BEGIN</div>
@@ -105,14 +172,14 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <div class="line">1   0.40737</div>
 <div class="line">SIGMA_F_END</div>
 <div class="line"> </div>
-<div class="line">NU_BEGIN</div>
-<div class="line">0    2.5</div>
-<div class="line">1    2.5</div>
-<div class="line">NU_END</div>
-<div class="line">CHI_BEGIN</div>
+<div class="line">NU_PROMPT_BEGIN</div>
+<div class="line">0    2.45</div>
+<div class="line">1    2.45</div>
+<div class="line">NU_PROMPT_END</div>
+<div class="line">CHI_PROMPT_BEGIN</div>
 <div class="line">0    1.0</div>
 <div class="line">1    0.0</div>
-<div class="line">CHI_END</div>
+<div class="line">CHI_PROMPT_END</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor"># 1/v terms</span></div>
 <div class="line">DDT_COEFF_BEGIN</div>
@@ -132,25 +199,32 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <div class="line">M_GPRIME_G_VAL 1 0 1 0.001</div>
 <div class="line">M_GPRIME_G_VAL 1 1 1 0.001</div>
 <div class="line">TRANSFER_MOMENTS_END</div>
-</div><!-- fragment --><h2>Details:</h2>
-<ul>
-<li>NUM_GROUPS G Required. Specified the number of groups for this cross-section</li>
-<li>NUM_MOMENTS M Required. Transfer matrices to allocate for this cross-section (whether used or not).</li>
-<li>Optional key words per line:<ul>
-<li>SIGMA_T_BEGIN. Starts a block that is terminated by a line SIGMA_T_END. Each line in the block processes the first two words as [Group, sigma_t]. Populates the sigma_tg field.</li>
-<li>SIGMA_F_BEGIN. Starts a block that is terminated by a line SIGMA_F_END. Each line in the block processes the first two words as [Group, sigma_f]. Populates the sigma_fg field.</li>
-<li>NU_BEGIN. Starts a block that is terminated by a line NU_END. Each line in the block processes the first two words as [Group, nu]. Populates the nu_sigma_fg field. Upon completing the file processing the nu_sigma_fg field gets multiplied by sigma_fg.</li>
-<li>CHI_BEGIN. Starts a block that is terminated by a line CHI_END. Each line in the block processes the first two words as [Group, chi]. Populates the chi_g field.</li>
-<li>DDT_COEFF_BEGIN. Starts a block that is terminated by a line DDT_COEFF_END. Each line in the block processes the first two words as [Group, ddt_coeff]. Populates the ddt_coeff field.</li>
-<li>TRANSFER_MOMENTS_BEGIN. Starts a block that is terminated by a line TRANSFER_MOMENTS_END. Each line in the block processes a line only if it starts with the keyword M_GPRIME_G_VAL which needs to be followed by four values [moment,gprime,g,value]. Populates transfer-matrix for moment m, row g, column gprime, with value.</li>
-</ul>
-</li>
-<li>Comments can be between individual blocks but only the TRANSFER_MOMENTS block may have comments between the _BEGIN and _END</li>
-<li>Comments do not have to start with any specific character since the file format is keyword driven.</li>
-<li>Any number that is not convertible to its required type (integer, double) will throw an error to that effect.</li>
-<li>All errors will indicate the current file, line number and nature of the error. </li>
-</ul>
-</div><!-- contents -->
+<div class="line"> </div>
+<div class="line">PRECURSOR_LAMBDA_BEGIN</div>
+<div class="line">0   0.1</div>
+<div class="line">1   0.2</div>
+<div class="line">2   0.3</div>
+<div class="line">PRECURSOR_LAMBDA_END</div>
+<div class="line">PRECURSOR_GAMMA_BEGIN</div>
+<div class="line">0   0.25</div>
+<div class="line">1   0.5</div>
+<div class="line">2   0.25</div>
+<div class="line">PRECURSOR_GAMMA_END</div>
+<div class="line">NU_DELAYED_BEGIN</div>
+<div class="line">0   0.01</div>
+<div class="line">1   0.02</div>
+<div class="line">2   0.01</div>
+<div class="line">NU_DELAYED_END</div>
+<div class="line">CHI_DELAYED_BEGIN</div>
+<div class="line">G_PRECURSORJ_VAL 0  0 1.0</div>
+<div class="line">G_PRECURSORJ_VAL 0  1 1.0</div>
+<div class="line">G_PRECURSORJ_VAL 0  2 1.0</div>
+<div class="line"> </div>
+<div class="line">G_PRECURSORJ_VAL 1  0 0.0</div>
+<div class="line">G_PRECURSORJ_VAL 1  1 0.0</div>
+<div class="line">G_PRECURSORJ_VAL 1  2 0.0</div>
+<div class="line">CHI_DELAYED_END</div>
+</div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -89,14 +89,25 @@ $(document).ready(function(){initNavTree('dc/d1a/lbs__iterativemethods_8h_source
 <a href="../../dc/d1a/lbs__iterativemethods_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LBS_ITERATIVE_METHODS_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LBS_ITERATIVE_METHODS_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="../../dc/d1a/lbs__iterativemethods_8h.html#a177361a132e6c6dbea8669045ede9fad">    4</a></span>&#160;<span class="preprocessor">#define NPT_CLASSICRICHARDSON        1</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../dc/d1a/lbs__iterativemethods_8h.html#a7d55190f9e6e5a7e6aa6583269d335ff">    5</a></span>&#160;<span class="preprocessor">#define NPT_CLASSICRICHARDSON_CYCLES 2</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../dc/d1a/lbs__iterativemethods_8h.html#abbeea2720699d1ad713fdb6fd4eeff3b">    6</a></span>&#160;<span class="preprocessor">#define NPT_GMRES                    3</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../dc/d1a/lbs__iterativemethods_8h.html#a4a1c29fc26fee0cca2b8ed7ead8eda2b">    7</a></span>&#160;<span class="preprocessor">#define NPT_GMRES_CYCLES             4</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d7/d19/namespace_linear_boltzmann.html">LinearBoltzmann</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d7/d19/namespace_linear_boltzmann.html#a7062fc37c9063039e1e6be69e56d280f">    6</a></span>&#160;  <span class="keyword">enum class</span> <a class="code" href="../../d7/d19/namespace_linear_boltzmann.html#a7062fc37c9063039e1e6be69e56d280f">IterativeMethod</a> : int</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    NONE                     = 0,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    CLASSICRICHARDSON        = 1, <span class="comment">///&lt; Otherwise known as Source Iteration</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span>    CLASSICRICHARDSON_CYCLES = 2, <span class="comment">///&lt; Source Iteration with Cycles support</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span>    <a class="code" href="../../d7/d19/namespace_linear_boltzmann.html#a7062fc37c9063039e1e6be69e56d280fac1bfd84e7215afa3204b8e1cdb21a2bd">GMRES</a>                    = 3, <span class="comment">///&lt; GMRES iterative algorithm</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span>    <a class="code" href="../../d7/d19/namespace_linear_boltzmann.html#a7062fc37c9063039e1e6be69e56d280fab50339a10e1de285ac99d4c3990b8693">GMRES_CYCLES</a>             = 4  <span class="comment">///&lt; GMRES with Cycles support</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span>  };</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespace_linear_boltzmann_html_a7062fc37c9063039e1e6be69e56d280fac1bfd84e7215afa3204b8e1cdb21a2bd"><div class="ttname"><a href="../../d7/d19/namespace_linear_boltzmann.html#a7062fc37c9063039e1e6be69e56d280fac1bfd84e7215afa3204b8e1cdb21a2bd">LinearBoltzmann::IterativeMethod::GMRES</a></div><div class="ttdeci">@ GMRES</div><div class="ttdoc">GMRES iterative algorithm.</div></div>
+<div class="ttc" id="anamespace_linear_boltzmann_html"><div class="ttname"><a href="../../d7/d19/namespace_linear_boltzmann.html">LinearBoltzmann</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/ddd/k__eigenvalue__solver_8h_source.html#l00009">k_eigenvalue_solver.h:9</a></div></div>
+<div class="ttc" id="anamespace_linear_boltzmann_html_a7062fc37c9063039e1e6be69e56d280fab50339a10e1de285ac99d4c3990b8693"><div class="ttname"><a href="../../d7/d19/namespace_linear_boltzmann.html#a7062fc37c9063039e1e6be69e56d280fab50339a10e1de285ac99d4c3990b8693">LinearBoltzmann::IterativeMethod::NONE</a></div><div class="ttdeci">@ NONE</div></div>
+<div class="ttc" id="anamespace_linear_boltzmann_html_a7062fc37c9063039e1e6be69e56d280f"><div class="ttname"><a href="../../d7/d19/namespace_linear_boltzmann.html#a7062fc37c9063039e1e6be69e56d280f">LinearBoltzmann::IterativeMethod</a></div><div class="ttdeci">IterativeMethod</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d1a/lbs__iterativemethods_8h_source.html#l00006">lbs_iterativemethods.h:7</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

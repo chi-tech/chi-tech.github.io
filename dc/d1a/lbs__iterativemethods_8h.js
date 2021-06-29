@@ -1,7 +1,10 @@
 var lbs__iterativemethods_8h =
 [
-    [ "NPT_CLASSICRICHARDSON", "dc/d1a/lbs__iterativemethods_8h.html#a177361a132e6c6dbea8669045ede9fad", null ],
-    [ "NPT_CLASSICRICHARDSON_CYCLES", "dc/d1a/lbs__iterativemethods_8h.html#a7d55190f9e6e5a7e6aa6583269d335ff", null ],
-    [ "NPT_GMRES", "dc/d1a/lbs__iterativemethods_8h.html#abbeea2720699d1ad713fdb6fd4eeff3b", null ],
-    [ "NPT_GMRES_CYCLES", "dc/d1a/lbs__iterativemethods_8h.html#a4a1c29fc26fee0cca2b8ed7ead8eda2b", null ]
+    [ "IterativeMethod", "dc/d1a/lbs__iterativemethods_8h.html#a7062fc37c9063039e1e6be69e56d280f", [
+      [ "NONE", "dc/d1a/lbs__iterativemethods_8h.html#a7062fc37c9063039e1e6be69e56d280fab50339a10e1de285ac99d4c3990b8693", null ],
+      [ "CLASSICRICHARDSON", "dc/d1a/lbs__iterativemethods_8h.html#a7062fc37c9063039e1e6be69e56d280fa3bb90fc46a530e40e99ed9421d0de02e", null ],
+      [ "CLASSICRICHARDSON_CYCLES", "dc/d1a/lbs__iterativemethods_8h.html#a7062fc37c9063039e1e6be69e56d280fa4f85ab00b66937b1318d55adde638903", null ],
+      [ "GMRES", "dc/d1a/lbs__iterativemethods_8h.html#a7062fc37c9063039e1e6be69e56d280fac1bfd84e7215afa3204b8e1cdb21a2bd", null ],
+      [ "GMRES_CYCLES", "dc/d1a/lbs__iterativemethods_8h.html#a7062fc37c9063039e1e6be69e56d280fa08d9076af853f7b1be106ad706a5f772", null ]
+    ] ]
 ];

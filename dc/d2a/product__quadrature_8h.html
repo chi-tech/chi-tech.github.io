@@ -85,13 +85,13 @@ $(document).ready(function(){initNavTree('dc/d2a/product__quadrature_8h.html','.
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">product_quadrature.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="../../d3/dcb/chi__mesh_8h_source.html">../../ChiMesh/chi_mesh.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;map&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d27/angular__quadrature__base_8h_source.html">angular_quadrature_base.h</a>&quot;</code><br />
 </div>
 <p><a href="../../dc/d2a/product__quadrature_8h_source.html">Go to the source code of this file.</a></p>
@@ -106,100 +106,20 @@ Namespaces</h2></td></tr>
 <tr class="memitem:dc/d58/namespacechi__math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html">chi_math</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a1c3b5a7292aedaed8300b88c0e4512ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2a/product__quadrature_8h.html#a1c3b5a7292aedaed8300b88c0e4512ac">GAUSS_LEGENDRE</a>&#160;&#160;&#160;1</td></tr>
-<tr class="separator:a1c3b5a7292aedaed8300b88c0e4512ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6ae93c90062ff7a8e26da2819cb0e89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2a/product__quadrature_8h.html#aa6ae93c90062ff7a8e26da2819cb0e89">GAUSS_CHEBYSHEV</a>&#160;&#160;&#160;2</td></tr>
-<tr class="separator:aa6ae93c90062ff7a8e26da2819cb0e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9363585a75540c9bae3f64b53c5da9df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2a/product__quadrature_8h.html#a9363585a75540c9bae3f64b53c5da9df">GAUSS_LEGENDRE_LEGENDRE</a>&#160;&#160;&#160;3</td></tr>
-<tr class="separator:a9363585a75540c9bae3f64b53c5da9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae531fda24c484b933dcfb6deae925068"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2a/product__quadrature_8h.html#ae531fda24c484b933dcfb6deae925068">GAUSS_LEGENDRE_CHEBYSHEV</a>&#160;&#160;&#160;4</td></tr>
-<tr class="separator:ae531fda24c484b933dcfb6deae925068"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77ccefb7de78d084986734bf186bae0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2a/product__quadrature_8h.html#a77ccefb7de78d084986734bf186bae0a">CUSTOM_QUADRATURE</a>&#160;&#160;&#160;5</td></tr>
-<tr class="separator:a77ccefb7de78d084986734bf186bae0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a7bc75ac743b63d66fa503282e8afa791"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791">chi_math::ProductQuadratureType</a> { <br />
+&#160;&#160;<a class="el" href="../../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791a696b031073e74bf2cb98e5ef201d4aa3">chi_math::ProductQuadratureType::UNKNOWN</a> = 0, 
+<a class="el" href="../../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791aedffa437abaf9cf92de7bd895cf5c986">chi_math::ProductQuadratureType::GAUSS_LEGENDRE</a> = 1, 
+<a class="el" href="../../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791a31fa4c60f7456b3040a332578fdf65f7">chi_math::ProductQuadratureType::GAUSS_CHEBYSHEV</a> = 2, 
+<a class="el" href="../../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791aea57cdacf46597ab51b1b725f76366fe">chi_math::ProductQuadratureType::GAUSS_LEGENDRE_LEGENDRE</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="../../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791ab6aa52ebfa8ccd76f9dbd62a55e0863c">chi_math::ProductQuadratureType::GAUSS_LEGENDRE_CHEBYSHEV</a> = 4, 
+<a class="el" href="../../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791aaee8e3fd1e34806b94439252ea51aa8c">chi_math::ProductQuadratureType::CUSTOM_QUADRATURE</a> = 5
+<br />
+ }</td></tr>
+<tr class="separator:a7bc75ac743b63d66fa503282e8afa791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a77ccefb7de78d084986734bf186bae0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77ccefb7de78d084986734bf186bae0a">&#9670;&nbsp;</a></span>CUSTOM_QUADRATURE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CUSTOM_QUADRATURE&#160;&#160;&#160;5</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d2a/product__quadrature_8h_source.html#l00011">11</a> of file <a class="el" href="../../dc/d2a/product__quadrature_8h_source.html">product_quadrature.h</a>.</p>
-
-</div>
-</div>
-<a id="aa6ae93c90062ff7a8e26da2819cb0e89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6ae93c90062ff7a8e26da2819cb0e89">&#9670;&nbsp;</a></span>GAUSS_CHEBYSHEV</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GAUSS_CHEBYSHEV&#160;&#160;&#160;2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d2a/product__quadrature_8h_source.html#l00008">8</a> of file <a class="el" href="../../dc/d2a/product__quadrature_8h_source.html">product_quadrature.h</a>.</p>
-
-</div>
-</div>
-<a id="a1c3b5a7292aedaed8300b88c0e4512ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c3b5a7292aedaed8300b88c0e4512ac">&#9670;&nbsp;</a></span>GAUSS_LEGENDRE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GAUSS_LEGENDRE&#160;&#160;&#160;1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d2a/product__quadrature_8h_source.html#l00007">7</a> of file <a class="el" href="../../dc/d2a/product__quadrature_8h_source.html">product_quadrature.h</a>.</p>
-
-</div>
-</div>
-<a id="ae531fda24c484b933dcfb6deae925068"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae531fda24c484b933dcfb6deae925068">&#9670;&nbsp;</a></span>GAUSS_LEGENDRE_CHEBYSHEV</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GAUSS_LEGENDRE_CHEBYSHEV&#160;&#160;&#160;4</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d2a/product__quadrature_8h_source.html#l00010">10</a> of file <a class="el" href="../../dc/d2a/product__quadrature_8h_source.html">product_quadrature.h</a>.</p>
-
-</div>
-</div>
-<a id="a9363585a75540c9bae3f64b53c5da9df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9363585a75540c9bae3f64b53c5da9df">&#9670;&nbsp;</a></span>GAUSS_LEGENDRE_LEGENDRE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GAUSS_LEGENDRE_LEGENDRE&#160;&#160;&#160;3</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d2a/product__quadrature_8h_source.html#l00009">9</a> of file <a class="el" href="../../dc/d2a/product__quadrature_8h_source.html">product_quadrature.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

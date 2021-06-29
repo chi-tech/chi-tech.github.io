@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['rcc_5019',['RCC',['../d9/df5/chi__mesh__logicalvolume_8h.html#a74944438a086975793d26ae48d5882d4',1,'chi_mesh_logicalvolume.h']]],
-  ['read_5frestart_5fdata_5020',['READ_RESTART_DATA',['../d6/de0/lbs__setproperty_8cc.html#a669d29634179bbc582fbcfe94f46f555',1,'lbs_setproperty.cc']]],
-  ['registerconstant_5021',['RegisterConstant',['../da/dbe/lua__register_8txt.html#a4c9f9611459fc4e30e78c64237a121b2',1,'lua_register.txt']]],
-  ['registerfunction_5022',['RegisterFunction',['../da/dbe/lua__register_8txt.html#a3c11846e61db5cc62fad5bad66797ea8',1,'lua_register.txt']]],
-  ['registernamespace_5023',['RegisterNamespace',['../da/dbe/lua__register_8txt.html#a264150b5ad6d3d015c65a6d16a2acd7b',1,'lua_register.txt']]],
-  ['rpp_5024',['RPP',['../d9/df5/chi__mesh__logicalvolume_8h.html#ab27b91d4128c63b2fa1ff9d4c7f179a5',1,'chi_mesh_logicalvolume.h']]]
+  ['save_5fangular_5fflux_5241',['SAVE_ANGULAR_FLUX',['../d6/de0/lbs__setproperty_8cc.html#a9d38868274ae1e77442d6cb982f8d678',1,'lbs_setproperty.cc']]],
+  ['scattering_5forder_5242',['SCATTERING_ORDER',['../d6/de0/lbs__setproperty_8cc.html#a5f35e03e81d8e3a3c0afa6153e0edc60',1,'lbs_setproperty.cc']]],
+  ['sphere_5243',['SPHERE',['../d9/df5/chi__mesh__logicalvolume_8h.html#ad6372e14875f107f90642c7da8e10d12',1,'chi_mesh_logicalvolume.h']]],
+  ['sphere_5forigin_5244',['SPHERE_ORIGIN',['../d9/df5/chi__mesh__logicalvolume_8h.html#a8fa293695ca84c47fbcd8bf99f6357f7',1,'chi_mesh_logicalvolume.h']]],
+  ['surface_5245',['SURFACE',['../d9/df5/chi__mesh__logicalvolume_8h.html#a5ec2e414545e7c2a2f3ebe4c93600b76',1,'chi_mesh_logicalvolume.h']]],
+  ['sweep_5feager_5flimit_5246',['SWEEP_EAGER_LIMIT',['../d6/de0/lbs__setproperty_8cc.html#a0545351d455115c0776951d54e6bd3af',1,'lbs_setproperty.cc']]]
 ];

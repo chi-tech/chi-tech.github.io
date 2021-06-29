@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['unknownstoragetype_4796',['UnknownStorageType',['../dc/d58/namespacechi__math.html#a863c3eb4ef311ca7cd86c5e26f89f44c',1,'chi_math']]],
-  ['unknowntype_4797',['UnknownType',['../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1d',1,'chi_math']]]
+  ['templatetype_5001',['TemplateType',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a0397c6d3b836f2132697065ef26bb4d5',1,'chi_mesh::VolumeMesherExtruder']]]
 ];

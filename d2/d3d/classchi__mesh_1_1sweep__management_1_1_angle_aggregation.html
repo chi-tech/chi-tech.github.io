@@ -103,12 +103,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abfcbc23790402886ba120966e780de6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4518965f4752364a0fc460a6fb648439"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a4518965f4752364a0fc460a6fb648439">InitializeReflectingBCs</a> ()</td></tr>
 <tr class="separator:a4518965f4752364a0fc460a6fb648439"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ce75f092e903062ebe1a6b3bb6cdba1"><td class="memItemLeft" align="right" valign="top">std::pair&lt; size_t, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a4ce75f092e903062ebe1a6b3bb6cdba1">GetNumberOfAngularUnknowns</a> ()</td></tr>
-<tr class="separator:a4ce75f092e903062ebe1a6b3bb6cdba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38b9b497e8e6078461e23cdd247b917b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a38b9b497e8e6078461e23cdd247b917b">AssembleAngularUnknowns</a> (int &amp;index, double *x_ref)</td></tr>
-<tr class="separator:a38b9b497e8e6078461e23cdd247b917b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9064acb82c5645b357cb3d7aa0e72b5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a9064acb82c5645b357cb3d7aa0e72b5d">DisassembleAngularUnknowns</a> (int &amp;index, const double *x_ref)</td></tr>
-<tr class="separator:a9064acb82c5645b357cb3d7aa0e72b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7511e4c914b6fa10a356e10d49513a"><td class="memItemLeft" align="right" valign="top">std::pair&lt; size_t, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#aee7511e4c914b6fa10a356e10d49513a">GetNumDelayedAngularDOFs</a> ()</td></tr>
+<tr class="separator:aee7511e4c914b6fa10a356e10d49513a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13374ebab8c6704f94d3597c44eecef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a13374ebab8c6704f94d3597c44eecef9">AppendDelayedAngularDOFsToArray</a> (int &amp;index, double *x_ref)</td></tr>
+<tr class="separator:a13374ebab8c6704f94d3597c44eecef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78363f38b8b3e88184c585cd313f6be0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a78363f38b8b3e88184c585cd313f6be0">SetDelayedAngularDOFsFromArray</a> (int &amp;index, const double *x_ref)</td></tr>
+<tr class="separator:a78363f38b8b3e88184c585cd313f6be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acedca758f3464b215c46147f91e7fa8f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#acedca758f3464b215c46147f91e7fa8f">GetDelayedAngularDOFsAsSTLVector</a> ()</td></tr>
+<tr class="separator:acedca758f3464b215c46147f91e7fa8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e453f3daf469ed47e6c5a0b34a5b70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a98e453f3daf469ed47e6c5a0b34a5b70">SetDelayedAngularDOFsFromSTLVector</a> (const std::vector&lt; double &gt; &amp;stl_vector)</td></tr>
+<tr class="separator:a98e453f3daf469ed47e6c5a0b34a5b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -141,14 +145,14 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d7a/angleaggregation_8h_source.html#l00028">28</a> of file <a class="el" href="../../d1/d7a/angleaggregation_8h_source.html">angleaggregation.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a38b9b497e8e6078461e23cdd247b917b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38b9b497e8e6078461e23cdd247b917b">&#9670;&nbsp;</a></span>AssembleAngularUnknowns()</h2>
+<a id="a13374ebab8c6704f94d3597c44eecef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13374ebab8c6704f94d3597c44eecef9">&#9670;&nbsp;</a></span>AppendDelayedAngularDOFsToArray()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_mesh::sweep_management::AngleAggregation::AssembleAngularUnknowns </td>
+          <td class="memname">void chi_mesh::sweep_management::AngleAggregation::AppendDelayedAngularDOFsToArray </td>
           <td>(</td>
           <td class="paramtype">int &amp;&#160;</td>
           <td class="paramname"><em>index</em>, </td>
@@ -168,59 +172,47 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Assembles angular unknowns into the reference vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00309">309</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00264">264</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
-<a id="a9064acb82c5645b357cb3d7aa0e72b5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9064acb82c5645b357cb3d7aa0e72b5d">&#9670;&nbsp;</a></span>DisassembleAngularUnknowns()</h2>
+<a id="acedca758f3464b215c46147f91e7fa8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acedca758f3464b215c46147f91e7fa8f">&#9670;&nbsp;</a></span>GetDelayedAngularDOFsAsSTLVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_mesh::sweep_management::AngleAggregation::DisassembleAngularUnknowns </td>
-          <td>(</td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double *&#160;</td>
-          <td class="paramname"><em>x_ref</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Assembles angular unknowns into the reference vector. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00346">346</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
-
-</div>
-</div>
-<a id="a4ce75f092e903062ebe1a6b3bb6cdba1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ce75f092e903062ebe1a6b3bb6cdba1">&#9670;&nbsp;</a></span>GetNumberOfAngularUnknowns()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::pair&lt; size_t, size_t &gt; chi_mesh::sweep_management::AngleAggregation::GetNumberOfAngularUnknowns </td>
+          <td class="memname">std::vector&lt; double &gt; chi_mesh::sweep_management::AngleAggregation::GetDelayedAngularDOFsAsSTLVector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<h6></h6>
-<p>** Initializes reflecting boundary conditions. *&zwj;/ Get number of angular unknowns. </p>
+<p>Gets the current values of the angular unknowns as an STL vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00247">247</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00338">338</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+
+</div>
+</div>
+<a id="aee7511e4c914b6fa10a356e10d49513a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7511e4c914b6fa10a356e10d49513a">&#9670;&nbsp;</a></span>GetNumDelayedAngularDOFs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; size_t, size_t &gt; chi_mesh::sweep_management::AngleAggregation::GetNumDelayedAngularDOFs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a pair of numbers containing the number of delayed angular unknowns both locally and globally, respectively. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00202">202</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -240,7 +232,59 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Initializes reflecting boundary conditions. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00104">104</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00081">81</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+
+</div>
+</div>
+<a id="a78363f38b8b3e88184c585cd313f6be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78363f38b8b3e88184c585cd313f6be0">&#9670;&nbsp;</a></span>SetDelayedAngularDOFsFromArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_mesh::sweep_management::AngleAggregation::SetDelayedAngularDOFsFromArray </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>x_ref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assembles angular unknowns into the reference vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00301">301</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+
+</div>
+</div>
+<a id="a98e453f3daf469ed47e6c5a0b34a5b70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e453f3daf469ed47e6c5a0b34a5b70">&#9670;&nbsp;</a></span>SetDelayedAngularDOFsFromSTLVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_mesh::sweep_management::AngleAggregation::SetDelayedAngularDOFsFromSTLVector </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>stl_vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the current values of the angular unknowns as an STL vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00382">382</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -309,7 +353,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Resets all the incoming intra-location and inter-location cyclic interfaces. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00068">68</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00045">45</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -327,10 +371,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<h6></h6>
-<p>** Gets the L^infinity norm of the relative change of the Resets all the outgoing intra-location and inter-location cyclic interfaces. </p>
+<p>Resets all the outgoing intra-location and inter-location cyclic interfaces. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00053">53</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00030">30</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>

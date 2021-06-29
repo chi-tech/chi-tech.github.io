@@ -2,6 +2,7 @@ var class_spatial_discretization___f_v =
 [
     [ "SpatialDiscretization_FV", "d1/d09/class_spatial_discretization___f_v.html#ad5483839ad210e0a54401fbc06335454", null ],
     [ "BuildSparsityPattern", "d1/d09/class_spatial_discretization___f_v.html#a089fe89ddf9aca2dae990748e73158f8", null ],
+    [ "GetCellNumNodes", "d1/d09/class_spatial_discretization___f_v.html#acf16f54ae31172517759cd17ffa23dd2", null ],
     [ "GetGhostDOFIndices", "d1/d09/class_spatial_discretization___f_v.html#a29a2e74db29e41881eaea95de06e8510", null ],
     [ "GetNumGhostDOFs", "d1/d09/class_spatial_discretization___f_v.html#abe0fd6ab80883cc671b7082f96ca3c2a", null ],
     [ "GetNumGlobalDOFs", "d1/d09/class_spatial_discretization___f_v.html#a2022ba8796d99efbe6aace8512d05c7d", null ],
@@ -11,8 +12,8 @@ var class_spatial_discretization___f_v =
     [ "MapDOF", "d1/d09/class_spatial_discretization___f_v.html#a02d0cbd1c72b52d4a347a1d405361e37", null ],
     [ "MapDOFLocal", "d1/d09/class_spatial_discretization___f_v.html#a999544ad0ff46bbff848af3179935860", null ],
     [ "MapDOFLocal", "d1/d09/class_spatial_discretization___f_v.html#a26af18659e1b86ad10852fc00d984cbf", null ],
-    [ "MapFeView", "d1/d09/class_spatial_discretization___f_v.html#a3b073029c04dfe1e0932816a8730bb0e", null ],
-    [ "MapNeighborFeView", "d1/d09/class_spatial_discretization___f_v.html#a3cad96b7f15bf49bc2a1c4dfab88ba21", null ],
+    [ "MapFeView", "d1/d09/class_spatial_discretization___f_v.html#a365afc126bd661286082b0affe6b5a43", null ],
+    [ "MapNeighborFeView", "d1/d09/class_spatial_discretization___f_v.html#aee82757edd44efbfce42383906a62ddd", null ],
     [ "New", "d1/d09/class_spatial_discretization___f_v.html#a2007568b536919f545d8f75ea03099cb", null ],
     [ "OrderNodes", "d1/d09/class_spatial_discretization___f_v.html#aa0686592ea37cc35f4feeecf9083a981", null ],
     [ "PreComputeCellSDValues", "d1/d09/class_spatial_discretization___f_v.html#a6156810c6c520844fca68a77cb112b96", null ],

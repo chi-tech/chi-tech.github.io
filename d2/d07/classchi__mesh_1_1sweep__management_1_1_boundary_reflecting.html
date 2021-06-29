@@ -117,10 +117,10 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb101b19575ebb4fe3d7aaead154ef25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#aeb101b19575ebb4fe3d7aaead154ef25">BoundaryReflecting</a> (std::vector&lt; double &gt; &amp;ref_boundary_flux, <a class="el" href="../../d0/d81/namespacechi__mesh.html#a7e8ffeada9f9616fe9eef023a8533a7b">chi_mesh::Normal</a> in_normal)</td></tr>
 <tr class="separator:aeb101b19575ebb4fe3d7aaead154ef25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af87ef6b24619ae1496cac96ac0fa5222"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#af87ef6b24619ae1496cac96ac0fa5222">HeterogenousPsiIncoming</a> (int angle_num, int cell_local_id, int face_num, int fi, int gs_ss_begin) override</td></tr>
-<tr class="separator:af87ef6b24619ae1496cac96ac0fa5222"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11c5fd50d383d08db9e3e5b93d2f6ff2"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a11c5fd50d383d08db9e3e5b93d2f6ff2">HeterogenousPsiOutgoing</a> (int angle_num, int cell_local_id, int face_num, int fi, int gs_ss_begin) override</td></tr>
-<tr class="separator:a11c5fd50d383d08db9e3e5b93d2f6ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8dddedef303cc9099cd80026a69223"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a8b8dddedef303cc9099cd80026a69223">HeterogenousPsiIncoming</a> (int angle_num, uint64_t cell_local_id, int face_num, int fi, int gs_ss_begin) override</td></tr>
+<tr class="separator:a8b8dddedef303cc9099cd80026a69223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a273b3907bc0c67833a3e2f90a6696fc3"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a273b3907bc0c67833a3e2f90a6696fc3">HeterogenousPsiOutgoing</a> (int angle_num, uint64_t cell_local_id, int face_num, int fi, int gs_ss_begin) override</td></tr>
+<tr class="separator:a273b3907bc0c67833a3e2f90a6696fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01dd07bfa7197de617d258e49c8e5a6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a01dd07bfa7197de617d258e49c8e5a6d">UpdateAnglesReadyStatus</a> (std::vector&lt; int &gt; angles, int gs_ss) override</td></tr>
 <tr class="separator:a01dd07bfa7197de617d258e49c8e5a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7099114bf8f6f8ead970a24e2fcd3a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#ab7099114bf8f6f8ead970a24e2fcd3a8">CheckAnglesReadyStatus</a> (std::vector&lt; int &gt; angles, int gs_ss) override</td></tr>
@@ -311,8 +311,8 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="af87ef6b24619ae1496cac96ac0fa5222"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af87ef6b24619ae1496cac96ac0fa5222">&#9670;&nbsp;</a></span>HeterogenousPsiIncoming()</h2>
+<a id="a8b8dddedef303cc9099cd80026a69223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b8dddedef303cc9099cd80026a69223">&#9670;&nbsp;</a></span>HeterogenousPsiIncoming()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +329,7 @@ Data Fields</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>cell_local_id</em>, </td>
         </tr>
         <tr>
@@ -364,14 +364,14 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns a pointer to a heterogenous flux storage location. </p>
 
-<p>Reimplemented from <a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a783fa0daa30068dae1d724189347325e">chi_mesh::sweep_management::BoundaryBase</a>.</p>
+<p>Reimplemented from <a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#af69a199f9064327c8f0d347fa8439b05">chi_mesh::sweep_management::BoundaryBase</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d9b/sweep__boundaries_8cc_source.html#l00051">51</a> of file <a class="el" href="../../d9/d9b/sweep__boundaries_8cc_source.html">sweep_boundaries.cc</a>.</p>
 
 </div>
 </div>
-<a id="a11c5fd50d383d08db9e3e5b93d2f6ff2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11c5fd50d383d08db9e3e5b93d2f6ff2">&#9670;&nbsp;</a></span>HeterogenousPsiOutgoing()</h2>
+<a id="a273b3907bc0c67833a3e2f90a6696fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a273b3907bc0c67833a3e2f90a6696fc3">&#9670;&nbsp;</a></span>HeterogenousPsiOutgoing()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -388,7 +388,7 @@ Data Fields</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>cell_local_id</em>, </td>
         </tr>
         <tr>
@@ -423,7 +423,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns a pointer to a heterogenous flux storage location. </p>
 
-<p>Reimplemented from <a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a3bc399d930dee9d87f743790be858179">chi_mesh::sweep_management::BoundaryBase</a>.</p>
+<p>Reimplemented from <a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a2d64d082c64503a6f9629f75549cec92">chi_mesh::sweep_management::BoundaryBase</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d9b/sweep__boundaries_8cc_source.html#l00083">83</a> of file <a class="el" href="../../d9/d9b/sweep__boundaries_8cc_source.html">sweep_boundaries.cc</a>.</p>
 

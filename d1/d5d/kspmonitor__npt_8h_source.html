@@ -86,20 +86,23 @@ $(document).ready(function(){initNavTree('d1/d5d/kspmonitor__npt_8h_source.html'
 <div class="title">kspmonitor_npt.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d1/d5d/kspmonitor__npt_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;petscksp.h&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;PetscErrorCode <a class="code" href="../../d1/d5d/kspmonitor__npt_8h.html#ab3a995a1f70d073bd8fb51298f7bdb81">KSPMonitorNPT</a>(KSP ksp,</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                             PetscInt n,</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                             PetscReal rnorm,</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                             <span class="keywordtype">void</span> *monitordestroy);</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;PetscErrorCode <a class="code" href="../../d1/d5d/kspmonitor__npt_8h.html#a9e5abc863abbfaf04884b4d1ecc7775d">KSPConvergenceTestNPT</a>(</div>
+<a href="../../d1/d5d/kspmonitor__npt_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LBS_KSP_MONITORS_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LBS_KSP_MONITORS_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;petscksp.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d7/d19/namespace_linear_boltzmann.html">LinearBoltzmann</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;PetscErrorCode <a class="code" href="../../d7/d19/namespace_linear_boltzmann.html#a97a4f5373e0b29ed8b07f0a370ce4605">KSPConvergenceTestNPT</a>(</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                KSP ksp, PetscInt n, PetscReal rnorm,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                KSPConvergedReason* convergedReason, <span class="keywordtype">void</span> *monitordestroy);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                KSPConvergedReason* convergedReason, <span class="keywordtype">void</span>* monitordestroy);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif //LBS_KSP_MONITORS_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="akspmonitor__npt_8h_html_ab3a995a1f70d073bd8fb51298f7bdb81"><div class="ttname"><a href="../../d1/d5d/kspmonitor__npt_8h.html#ab3a995a1f70d073bd8fb51298f7bdb81">KSPMonitorNPT</a></div><div class="ttdeci">PetscErrorCode KSPMonitorNPT(KSP ksp, PetscInt n, PetscReal rnorm, void *monitordestroy)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d99/kspmonitor__npt_8cc_source.html#l00016">kspmonitor_npt.cc:16</a></div></div>
-<div class="ttc" id="akspmonitor__npt_8h_html_a9e5abc863abbfaf04884b4d1ecc7775d"><div class="ttname"><a href="../../d1/d5d/kspmonitor__npt_8h.html#a9e5abc863abbfaf04884b4d1ecc7775d">KSPConvergenceTestNPT</a></div><div class="ttdeci">PetscErrorCode KSPConvergenceTestNPT(KSP ksp, PetscInt n, PetscReal rnorm, KSPConvergedReason *convergedReason, void *monitordestroy)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d99/kspmonitor__npt_8cc_source.html#l00035">kspmonitor_npt.cc:35</a></div></div>
+<div class="ttc" id="anamespace_linear_boltzmann_html"><div class="ttname"><a href="../../d7/d19/namespace_linear_boltzmann.html">LinearBoltzmann</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/ddd/k__eigenvalue__solver_8h_source.html#l00009">k_eigenvalue_solver.h:9</a></div></div>
+<div class="ttc" id="anamespace_linear_boltzmann_html_a97a4f5373e0b29ed8b07f0a370ce4605"><div class="ttname"><a href="../../d7/d19/namespace_linear_boltzmann.html#a97a4f5373e0b29ed8b07f0a370ce4605">LinearBoltzmann::KSPConvergenceTestNPT</a></div><div class="ttdeci">PetscErrorCode KSPConvergenceTestNPT(KSP ksp, PetscInt n, PetscReal rnorm, KSPConvergedReason *convergedReason, void *monitordestroy)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d99/kspmonitor__npt_8cc_source.html#l00015">kspmonitor_npt.cc:16</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

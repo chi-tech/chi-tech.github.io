@@ -6,11 +6,18 @@ var dir_eea7055961cf37dd5c57ededab0b198f =
     [ "SLDFESQ", "dir_28ac5d8a8251ec41fd568fe49dd317be.html", "dir_28ac5d8a8251ec41fd568fe49dd317be" ],
     [ "angular_quadrature_base.cc", "d8/de6/angular__quadrature__base_8cc.html", "d8/de6/angular__quadrature__base_8cc" ],
     [ "angular_quadrature_base.h", "d5/d27/angular__quadrature__base_8h.html", "d5/d27/angular__quadrature__base_8h" ],
+    [ "curvilinear_angular_quadrature.h", "da/dec/curvilinear__angular__quadrature_8h.html", [
+      [ "CurvilinearAngularQuadrature", "d9/dc1/classchi__math_1_1_curvilinear_angular_quadrature.html", "d9/dc1/classchi__math_1_1_curvilinear_angular_quadrature" ]
+    ] ],
+    [ "cylindrical_angular_quadrature.cc", "dc/dd2/cylindrical__angular__quadrature_8cc.html", "dc/dd2/cylindrical__angular__quadrature_8cc" ],
+    [ "cylindrical_angular_quadrature.h", "df/da7/cylindrical__angular__quadrature_8h.html", [
+      [ "CylindricalAngularQuadrature", "d8/d60/classchi__math_1_1_cylindrical_angular_quadrature.html", "d8/d60/classchi__math_1_1_cylindrical_angular_quadrature" ]
+    ] ],
     [ "product_quadrature.cc", "d7/d9c/product__quadrature_8cc.html", "d7/d9c/product__quadrature_8cc" ],
     [ "product_quadrature.h", "dc/d2a/product__quadrature_8h.html", "dc/d2a/product__quadrature_8h" ],
     [ "quadrature.cc", "d6/d90/quadrature_8cc.html", null ],
     [ "quadrature.h", "d5/d4c/quadrature_8h.html", "d5/d4c/quadrature_8h" ],
-    [ "quadrature_gausschebyshev.cc", "d4/d44/quadrature__gausschebyshev_8cc.html", null ],
+    [ "quadrature_gausschebyshev.cc", "d4/d44/quadrature__gausschebyshev_8cc.html", "d4/d44/quadrature__gausschebyshev_8cc" ],
     [ "quadrature_gausschebyshev.h", "d0/d18/quadrature__gausschebyshev_8h.html", [
       [ "QuadratureGaussChebyshev", "d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev.html", "d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev" ]
     ] ],
@@ -21,6 +28,9 @@ var dir_eea7055961cf37dd5c57ededab0b198f =
     [ "quadrature_hexahedron.cc", "d2/d95/quadrature__hexahedron_8cc.html", null ],
     [ "quadrature_hexahedron.h", "db/d6b/quadrature__hexahedron_8h.html", [
       [ "QuadratureHexahedron", "d2/d67/classchi__math_1_1_quadrature_hexahedron.html", "d2/d67/classchi__math_1_1_quadrature_hexahedron" ]
+    ] ],
+    [ "quadrature_line.h", "d7/dda/quadrature__line_8h.html", [
+      [ "QuadratureLine", "d8/d8d/classchi__math_1_1_quadrature_line.html", "d8/d8d/classchi__math_1_1_quadrature_line" ]
     ] ],
     [ "quadrature_quadrilateral.cc", "d9/d06/quadrature__quadrilateral_8cc.html", null ],
     [ "quadrature_quadrilateral.h", "d8/d20/quadrature__quadrilateral_8h.html", [
@@ -33,5 +43,9 @@ var dir_eea7055961cf37dd5c57ededab0b198f =
     [ "quadrature_triangle.cc", "dc/d00/quadrature__triangle_8cc.html", null ],
     [ "quadrature_triangle.h", "df/d98/quadrature__triangle_8h.html", [
       [ "QuadratureTriangle", "d0/d61/classchi__math_1_1_quadrature_triangle.html", "d0/d61/classchi__math_1_1_quadrature_triangle" ]
+    ] ],
+    [ "spherical_angular_quadrature.cc", "da/d3b/spherical__angular__quadrature_8cc.html", "da/d3b/spherical__angular__quadrature_8cc" ],
+    [ "spherical_angular_quadrature.h", "de/d43/spherical__angular__quadrature_8h.html", [
+      [ "SphericalAngularQuadrature", "de/de3/classchi__math_1_1_spherical_angular_quadrature.html", "de/de3/classchi__math_1_1_spherical_angular_quadrature" ]
     ] ]
 ];

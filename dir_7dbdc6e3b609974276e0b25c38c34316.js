@@ -1,6 +1,7 @@
 var dir_7dbdc6e3b609974276e0b25c38c34316 =
 [
     [ "lbs_angular_fluxes.cc", "dc/d6e/lbs__angular__fluxes_8cc.html", "dc/d6e/lbs__angular__fluxes_8cc" ],
+    [ "lbs_compute_balance.cc", "dc/d70/lua_2lbs__compute__balance_8cc.html", "dc/d70/lua_2lbs__compute__balance_8cc" ],
     [ "lbs_execute.cc", "dc/def/lbs__execute_8cc.html", "dc/def/lbs__execute_8cc" ],
     [ "lbs_getfieldfuncs.cc", "d8/dd9/lbs__getfieldfuncs_8cc.html", "d8/dd9/lbs__getfieldfuncs_8cc" ],
     [ "lbs_groupset_ops.cc", "dc/dee/lbs__groupset__ops_8cc.html", "dc/dee/lbs__groupset__ops_8cc" ],

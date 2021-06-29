@@ -101,162 +101,582 @@ $(document).ready(function(){initNavTree('d5/d93/unpartmesh__01__readfromvtu_8cc
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vtkUnstructuredGrid.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/d92/vtk_clean_unstructured_grid_8h.html">vtkCleanUnstructuredGrid.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vtkCellType.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vtkDataObject.h&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/**Reads a VTK unstructured mesh.*/</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972">chi_mesh::UnpartitionedMesh::</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972">  ReadFromVTU</a>(<span class="keyword">const</span> <a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html">chi_mesh::UnpartitionedMesh::Options</a> &amp;options)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="comment">//======================================== Attempt to open file</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  std::ifstream <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>.open(options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vtkCellData.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vtkDataArray.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;vtkPolyhedron.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;vtkHexahedron.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;vtkTetra.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vtkPolygon.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vtkQuad.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;vtkTriangle.h&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>.is_open())</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;Failed to open file: &quot;</span>&lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt;<span class="stringliteral">&quot; in call &quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;to ReadFromVTU \n&quot;</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>.close();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">//======================================== Read the file</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  vtkSmartPointer&lt;vtkXMLUnstructuredGridReader&gt; reader =</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    vtkSmartPointer&lt;vtkXMLUnstructuredGridReader&gt;::New();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  reader-&gt;SetFileName(options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a>.c_str());</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;Reading VTU file     : \&quot;&quot;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt; <span class="stringliteral">&quot;\&quot;.&quot;</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  reader-&gt;Update();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;Done reading VTU file: \&quot;&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt; <span class="stringliteral">&quot;\&quot;.&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;vtkLine.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;vtkVertex.h&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/**Creates a raw polyhedron cell from a vtk-polyhedron.*/</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae44df63d61bcfb87fb8025e3b8f31365">   33</a></span>&#160;<a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">chi_mesh::UnpartitionedMesh::LightWeightCell</a>* <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae44df63d61bcfb87fb8025e3b8f31365">chi_mesh::UnpartitionedMesh::</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae44df63d61bcfb87fb8025e3b8f31365">CreateCellFromVTKPolyhedron</a>(vtkCell *vtk_cell)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">auto</span> polyh_cell  = <span class="keyword">new</span> <a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">LightWeightCell</a>(<a class="code" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a30047325d9201304e95ffb83105002de">chi_mesh::CellType::POLYHEDRON</a>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">auto</span> vtk_polyh   = vtkPolyhedron::SafeDownCast(vtk_cell);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">auto</span> num_cpoints = vtk_polyh-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">auto</span> num_cfaces  = vtk_polyh-&gt;GetNumberOfFaces();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  polyh_cell-&gt;vertex_ids.reserve(num_cpoints);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">auto</span> point_ids   = vtk_polyh-&gt;GetPointIds();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;num_cpoints; ++p)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    uint64_t point_id = point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    polyh_cell-&gt;vertex_ids.push_back(point_id);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }<span class="comment">//for p</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">//======================================== Remove duplicate vertices</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  vtkSmartPointer&lt;vtkCleanUnstructuredGrid&gt; cleaner =</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    vtkSmartPointer&lt;vtkCleanUnstructuredGrid&gt;::New();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  cleaner-&gt;SetInputData(reader-&gt;GetOutput());</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  cleaner-&gt;Update();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">auto</span> ugrid = cleaner-&gt;GetOutput();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//  auto ugrid = reader-&gt;GetOutput();</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">int</span> total_cell_count  = ugrid-&gt;GetNumberOfCells();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">int</span> total_point_count = ugrid-&gt;GetNumberOfPoints();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;Clean grid num cells and points: &quot;</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    &lt;&lt; total_cell_count &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    &lt;&lt; total_point_count;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">//======================================== Push cells</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">size_t</span> num_polyhedrons  = 0;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">size_t</span> num_hexahedrons  = 0;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">size_t</span> num_tetrahedrons = 0;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">size_t</span> num_polygons     = 0;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">size_t</span> num_quads        = 0;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">size_t</span> num_triangles    = 0;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c=0; c&lt;total_cell_count; ++c)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">auto</span> vtk_cell = ugrid-&gt;GetCell(c);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">auto</span> vtk_celltype = vtk_cell-&gt;GetCellType();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (vtk_celltype == VTK_POLYHEDRON)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a54f13d709bd55611f09c9c4007097505">raw_cells</a>.push_back(<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae44df63d61bcfb87fb8025e3b8f31365">CreateCellFromVTKPolyhedron</a>(vtk_cell));</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      ++num_polyhedrons;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_HEXAHEDRON)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a54f13d709bd55611f09c9c4007097505">raw_cells</a>.push_back(<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a1a31b78d1d5d918574fb32581b87adb7">CreateCellFromVTKHexahedron</a>(vtk_cell));</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      ++num_hexahedrons;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_TETRA)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a54f13d709bd55611f09c9c4007097505">raw_cells</a>.push_back(<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a70c9e81810de07e8a0ab4041bd920ea9">CreateCellFromVTKTetrahedron</a>(vtk_cell));</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      ++num_tetrahedrons;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_POLYGON)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a54f13d709bd55611f09c9c4007097505">raw_cells</a>.push_back(<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ac91ac9efb659eba5be70ddb82b9f81f2">CreateCellFromVTKPolygon</a>(vtk_cell));</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      ++num_polygons;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_QUAD)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a54f13d709bd55611f09c9c4007097505">raw_cells</a>.push_back(<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87b8d5975edce7850b9441053ad554b4">CreateCellFromVTKQuad</a>(vtk_cell));</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      ++num_quads;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_TRIANGLE)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a54f13d709bd55611f09c9c4007097505">raw_cells</a>.push_back(<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a92ef577a3a892387cb30560a30e8e628">CreateCellFromVTKTriangle</a>(vtk_cell));</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      ++num_triangles;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordflow">throw</span> std::invalid_argument(std::string(__FUNCTION__) +</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                  <span class="stringliteral">&quot;: Unsupported cell type.&quot;</span>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }<span class="comment">//for c</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Number cells read: &quot;</span> &lt;&lt; total_cell_count &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;polyhedrons  : &quot;</span> &lt;&lt; num_polyhedrons  &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;hexahedrons  : &quot;</span> &lt;&lt; num_hexahedrons  &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;tetrahedrons : &quot;</span> &lt;&lt; num_tetrahedrons &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;polygons     : &quot;</span> &lt;&lt; num_polygons     &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;quads        : &quot;</span> &lt;&lt; num_quads        &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;triangles    : &quot;</span> &lt;&lt; num_triangles;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="comment">//======================================== Push points</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;total_point_count; ++p)</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">auto</span> point = ugrid-&gt;GetPoint(p);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a71b720504b36cbe60fc569d8ea17eab0">vertices</a>.push_back(<span class="keyword">new</span> <a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vertex</a>(point[0],point[1],point[2]));</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span> (point[0] &lt; <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#a5c016b281fc6d0377409c96624f12d8a">xmin</a>) <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#a5c016b281fc6d0377409c96624f12d8a">xmin</a> = point[0];</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (point[0] &gt; <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#ad6e82a41929aa8b13c21ea88f9ad8c8e">xmax</a>) <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#ad6e82a41929aa8b13c21ea88f9ad8c8e">xmax</a> = point[0];</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span> (point[1] &lt; <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abac16fd3161e5380153a454ff94bc146">ymin</a>) <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abac16fd3161e5380153a454ff94bc146">ymin</a> = point[1];</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span> (point[1] &gt; <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#acf069e314cf0e7ff13d047e8836ecd14">ymax</a>) <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#acf069e314cf0e7ff13d047e8836ecd14">ymax</a> = point[1];</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> (point[2] &lt; <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abb34b84bd703829e020e190928c0618b">zmin</a>) <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abb34b84bd703829e020e190928c0618b">zmin</a> = point[2];</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">if</span> (point[2] &gt; <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#a43e393bd9fed88a0265daafb31b19b9d">zmax</a>) <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a>.<a class="code" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#a43e393bd9fed88a0265daafb31b19b9d">zmax</a> = point[2];</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="comment">//======================================== Always do this</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a15c6974be982d4a472272d45bce149a7">ComputeCentroidsAndCheckQuality</a>();</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a636d85ee971e6b9a1bda3bf5c5f5d76b">BuildMeshConnectivity</a>();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  polyh_cell-&gt;faces.reserve(num_cfaces);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f=0; f&lt;num_cfaces; ++f)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">LightWeightFace</a> face;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">auto</span> vtk_face = vtk_polyh-&gt;GetFace(f);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">auto</span> num_face_points = vtk_face-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(num_face_points);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">auto</span> face_point_ids = vtk_face-&gt;GetPointIds();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p = 0; p &lt; num_face_points; ++p) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      uint64_t point_id = face_point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(point_id);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    polyh_cell-&gt;faces.push_back(face);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">return</span> polyh_cell;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">/**Creates a raw polyhedron cell from a vtk-hexahedron.*/</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a1a31b78d1d5d918574fb32581b87adb7">   72</a></span>&#160;<a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">chi_mesh::UnpartitionedMesh::LightWeightCell</a>* <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a1a31b78d1d5d918574fb32581b87adb7">chi_mesh::UnpartitionedMesh::</a></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a1a31b78d1d5d918574fb32581b87adb7">CreateCellFromVTKHexahedron</a>(vtkCell *vtk_cell)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">auto</span> polyh_cell  = <span class="keyword">new</span> <a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">LightWeightCell</a>(<a class="code" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a30047325d9201304e95ffb83105002de">chi_mesh::CellType::POLYHEDRON</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">auto</span> vtk_hex     = vtkHexahedron::SafeDownCast(vtk_cell);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">auto</span> num_cpoints = vtk_hex-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">auto</span> num_cfaces  = vtk_hex-&gt;GetNumberOfFaces();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  polyh_cell-&gt;vertex_ids.reserve(num_cpoints);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">auto</span> point_ids   = vtk_hex-&gt;GetPointIds();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;num_cpoints; ++p)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    uint64_t point_id = point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    polyh_cell-&gt;vertex_ids.push_back(point_id);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }<span class="comment">//for p</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  polyh_cell-&gt;faces.reserve(num_cfaces);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f=0; f&lt;num_cfaces; ++f)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">LightWeightFace</a> face;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">auto</span> vtk_face = vtk_hex-&gt;GetFace(f);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">auto</span> num_face_points = vtk_face-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(num_face_points);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">auto</span> face_point_ids = vtk_face-&gt;GetPointIds();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p = 0; p &lt; num_face_points; ++p) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      uint64_t point_id = face_point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(point_id);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    polyh_cell-&gt;faces.push_back(face);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">return</span> polyh_cell;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/**Creates a raw polyhedron cell from a vtk-tetrahedron.*/</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a70c9e81810de07e8a0ab4041bd920ea9">  111</a></span>&#160;<a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">chi_mesh::UnpartitionedMesh::LightWeightCell</a>* <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a70c9e81810de07e8a0ab4041bd920ea9">chi_mesh::UnpartitionedMesh::</a></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a70c9e81810de07e8a0ab4041bd920ea9">CreateCellFromVTKTetrahedron</a>(vtkCell *vtk_cell)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keyword">auto</span> polyh_cell  = <span class="keyword">new</span> <a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">LightWeightCell</a>(<a class="code" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a30047325d9201304e95ffb83105002de">chi_mesh::CellType::POLYHEDRON</a>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keyword">auto</span> vtk_tet     = vtkTetra::SafeDownCast(vtk_cell);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">auto</span> num_cpoints = vtk_tet-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">auto</span> num_cfaces  = vtk_tet-&gt;GetNumberOfFaces();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  polyh_cell-&gt;vertex_ids.reserve(num_cpoints);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">auto</span> point_ids   = vtk_tet-&gt;GetPointIds();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;num_cpoints; ++p)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    uint64_t point_id = point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    polyh_cell-&gt;vertex_ids.push_back(point_id);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }<span class="comment">//for p</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  polyh_cell-&gt;faces.reserve(num_cfaces);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f=0; f&lt;num_cfaces; ++f)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">LightWeightFace</a> face;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">auto</span> vtk_face = vtk_tet-&gt;GetFace(f);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">auto</span> num_face_points = vtk_face-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(num_face_points);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">auto</span> face_point_ids = vtk_face-&gt;GetPointIds();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p = 0; p &lt; num_face_points; ++p) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      uint64_t point_id = face_point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(point_id);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    polyh_cell-&gt;faces.push_back(face);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordflow">return</span> polyh_cell;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">/**Creates a raw polygon cell from a vtk-polygon.*/</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ac91ac9efb659eba5be70ddb82b9f81f2">  150</a></span>&#160;<a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">chi_mesh::UnpartitionedMesh::LightWeightCell</a>* <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ac91ac9efb659eba5be70ddb82b9f81f2">chi_mesh::UnpartitionedMesh::</a></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ac91ac9efb659eba5be70ddb82b9f81f2">CreateCellFromVTKPolygon</a>(vtkCell *vtk_cell)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keyword">auto</span> poly_cell   = <span class="keyword">new</span> <a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">LightWeightCell</a>(chi_mesh::CellType::POLYGON);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keyword">auto</span> vtk_polygon = vtkPolygon::SafeDownCast(vtk_cell);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">auto</span> num_cpoints = vtk_polygon-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keyword">auto</span> num_cfaces  = num_cpoints;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  poly_cell-&gt;vertex_ids.reserve(num_cpoints);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keyword">auto</span> point_ids   = vtk_polygon-&gt;GetPointIds();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;num_cpoints; ++p)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    uint64_t point_id = point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    poly_cell-&gt;vertex_ids.push_back(point_id);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  }<span class="comment">//for p</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  poly_cell-&gt;faces.reserve(num_cfaces);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f=0; f&lt;num_cfaces; ++f)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">LightWeightFace</a> face;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">auto</span> v0_id = poly_cell-&gt;<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[f];</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">auto</span> v1_id = (f&lt;(num_cfaces-1))? poly_cell-&gt;vertex_ids[f+1] :</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                 poly_cell-&gt;vertex_ids[0];</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(2);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(v0_id);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(v1_id);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    poly_cell-&gt;faces.push_back(face);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordflow">return</span> poly_cell;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">/**Creates a raw polygon cell from a vtk-quad.*/</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87b8d5975edce7850b9441053ad554b4">  188</a></span>&#160;<a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">chi_mesh::UnpartitionedMesh::LightWeightCell</a>* <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87b8d5975edce7850b9441053ad554b4">chi_mesh::UnpartitionedMesh::</a></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87b8d5975edce7850b9441053ad554b4">CreateCellFromVTKQuad</a>(vtkCell *vtk_cell)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;{</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keyword">auto</span> poly_cell   = <span class="keyword">new</span> <a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">LightWeightCell</a>(chi_mesh::CellType::POLYGON);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keyword">auto</span> vtk_quad    = vtkQuad::SafeDownCast(vtk_cell);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keyword">auto</span> num_cpoints = vtk_quad-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keyword">auto</span> num_cfaces  = num_cpoints;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  poly_cell-&gt;vertex_ids.reserve(num_cpoints);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keyword">auto</span> point_ids   = vtk_quad-&gt;GetPointIds();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;num_cpoints; ++p)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    uint64_t point_id = point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    poly_cell-&gt;vertex_ids.push_back(point_id);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  }<span class="comment">//for p</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  poly_cell-&gt;faces.reserve(num_cfaces);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f=0; f&lt;num_cfaces; ++f)</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">LightWeightFace</a> face;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">auto</span> v0_id = poly_cell-&gt;<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[f];</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">auto</span> v1_id = (f&lt;(num_cfaces-1))? poly_cell-&gt;vertex_ids[f+1] :</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                 poly_cell-&gt;vertex_ids[0];</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(2);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(v0_id);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(v1_id);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    poly_cell-&gt;faces.push_back(face);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordflow">return</span> poly_cell;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">/**Creates a raw polygon cell from a vtk-triangle.*/</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a92ef577a3a892387cb30560a30e8e628">  226</a></span>&#160;<a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">chi_mesh::UnpartitionedMesh::LightWeightCell</a>* <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a92ef577a3a892387cb30560a30e8e628">chi_mesh::UnpartitionedMesh::</a></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a92ef577a3a892387cb30560a30e8e628">CreateCellFromVTKTriangle</a>(vtkCell *vtk_cell)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;{</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keyword">auto</span> poly_cell   = <span class="keyword">new</span> <a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">LightWeightCell</a>(chi_mesh::CellType::POLYGON);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <span class="keyword">auto</span> vtk_triangle= vtkTriangle::SafeDownCast(vtk_cell);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keyword">auto</span> num_cpoints = vtk_triangle-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keyword">auto</span> num_cfaces  = num_cpoints;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  poly_cell-&gt;vertex_ids.reserve(num_cpoints);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keyword">auto</span> point_ids   = vtk_triangle-&gt;GetPointIds();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;num_cpoints; ++p)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    uint64_t point_id = point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    poly_cell-&gt;vertex_ids.push_back(point_id);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  }<span class="comment">//for p</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  poly_cell-&gt;faces.reserve(num_cfaces);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f=0; f&lt;num_cfaces; ++f)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">LightWeightFace</a> face;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keyword">auto</span> v0_id = poly_cell-&gt;<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[f];</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">auto</span> v1_id = (f&lt;(num_cfaces-1))? poly_cell-&gt;vertex_ids[f+1] :</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                 poly_cell-&gt;vertex_ids[0];</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(2);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(v0_id);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(v1_id);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    poly_cell-&gt;faces.push_back(face);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="keywordflow">return</span> poly_cell;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">/**Creates a raw slab cell from a vtk-line.*/</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a108de01f5e69c66410928134868044bf">  264</a></span>&#160;<a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">chi_mesh::UnpartitionedMesh::LightWeightCell</a>* <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a108de01f5e69c66410928134868044bf">chi_mesh::UnpartitionedMesh::</a></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a108de01f5e69c66410928134868044bf">  CreateCellFromVTKLine</a>(vtkCell *vtk_cell)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;{</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keyword">auto</span> slab_cell   = <span class="keyword">new</span> <a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">LightWeightCell</a>(chi_mesh::CellType::SLAB);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keyword">auto</span> vtk_line    = vtkLine::SafeDownCast(vtk_cell);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keyword">auto</span> num_cpoints = vtk_line-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keyword">auto</span> num_cfaces  = num_cpoints;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  slab_cell-&gt;vertex_ids.reserve(num_cpoints);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keyword">auto</span> point_ids   = vtk_line-&gt;GetPointIds();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;num_cpoints; ++p)</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    uint64_t point_id = point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    slab_cell-&gt;vertex_ids.push_back(point_id);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  }<span class="comment">//for p</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  slab_cell-&gt;faces.reserve(num_cfaces);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f=0; f&lt;num_cfaces; ++f)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">LightWeightFace</a> face;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keyword">auto</span> v_id = slab_cell-&gt;<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[f];</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(1);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    face.<a class="code" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(v_id);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    slab_cell-&gt;faces.push_back(face);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordflow">return</span> slab_cell;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">/**Creates a raw point cell from a vtk-vertex.*/</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87d97b3a0ad75d8dcc89f89937d96639">  299</a></span>&#160;<a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">chi_mesh::UnpartitionedMesh::LightWeightCell</a>* <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87d97b3a0ad75d8dcc89f89937d96639">chi_mesh::UnpartitionedMesh::</a></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87d97b3a0ad75d8dcc89f89937d96639">  CreateCellFromVTKVertex</a>(vtkCell *vtk_cell)</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;{</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="keyword">auto</span> point_cell  = <span class="keyword">new</span> <a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">LightWeightCell</a>(chi_mesh::CellType::GHOST);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="keyword">auto</span> vtk_vertex  = vtkVertex::SafeDownCast(vtk_cell);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="keyword">auto</span> num_cpoints = vtk_vertex-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  point_cell-&gt;vertex_ids.reserve(num_cpoints);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="keyword">auto</span> point_ids   = vtk_vertex-&gt;GetPointIds();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;num_cpoints; ++p)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    uint64_t point_id = point_ids-&gt;GetId(p);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    point_cell-&gt;vertex_ids.push_back(point_id);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  }<span class="comment">//for p</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordflow">return</span> point_cell;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">/**Reads a VTK unstructured mesh.*/</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno"><a class="line" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972">  320</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972">chi_mesh::UnpartitionedMesh::</a></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<a class="code" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972">  ReadFromVTU</a>(<span class="keyword">const</span> <a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html">chi_mesh::UnpartitionedMesh::Options</a> &amp;options)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <span class="comment">//======================================== Attempt to open file</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  std::ifstream <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>.open(options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a>);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>.is_open())</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;Failed to open file: &quot;</span>&lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt;<span class="stringliteral">&quot; in call &quot;</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;to ReadFromVTU \n&quot;</span>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a>.close();</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="comment">//======================================== Read the file</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  <span class="keyword">auto</span> reader = vtkSmartPointer&lt;vtkXMLUnstructuredGridReader&gt;::New();</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  reader-&gt;SetFileName(options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a>.c_str());</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;Reading VTU file     : \&quot;&quot;</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt; <span class="stringliteral">&quot;\&quot;.&quot;</span>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  reader-&gt;Update();</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;Done reading VTU file: \&quot;&quot;</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt; <span class="stringliteral">&quot;\&quot;.&quot;</span>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  <span class="comment">//======================================== Remove duplicate vertices</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  <span class="keyword">auto</span> cleaner = vtkSmartPointer&lt;vtkCleanUnstructuredGrid&gt;::New();</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  cleaner-&gt;SetInputData(reader-&gt;GetOutput());</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  cleaner-&gt;Update();</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  <span class="keyword">auto</span> ugrid = cleaner-&gt;GetOutput();</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  uint64_t total_cell_count  = ugrid-&gt;GetNumberOfCells();</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  uint64_t total_point_count = ugrid-&gt;GetNumberOfPoints();</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;Clean grid num cells and points: &quot;</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    &lt;&lt; total_cell_count &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    &lt;&lt; total_point_count;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  <span class="comment">//======================================== Determine if reading</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  <span class="comment">//                                         cell identifiers</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  <span class="keywordflow">if</span> (options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ae315a9eabb6e72ca5347cbc6b28cf971">material_id_fieldname</a> != options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#aced47c0461ce1d19dccbebfb70d173ff">boundary_id_fieldname</a>)</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;The VTU reader expects material identifiers and boundary identifiers &quot;</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;to be defined in the same field.&quot;</span>;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    std::exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  vtkDataArray* cell_id_array_ptr = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="keywordflow">if</span> (options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ae315a9eabb6e72ca5347cbc6b28cf971">material_id_fieldname</a>.empty())</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;A user-supplied field name from which to recover cell identifiers &quot;</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;has not been provided. Only the mesh will be read.&quot;</span>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  }</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>)</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;A user-supplied field name from which to recover cell identifiers &quot;</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;has been provided. The mesh will be read and both material ID and &quot;</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;boundary ID will be read from the vtkCellData field with name : \&quot;&quot;</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ae315a9eabb6e72ca5347cbc6b28cf971">material_id_fieldname</a> &lt;&lt; <span class="stringliteral">&quot;\&quot;.&quot;</span>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> vtk_abstract_array_ptr =</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      ugrid-&gt;GetCellData()-&gt;GetAbstractArray(options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ae315a9eabb6e72ca5347cbc6b28cf971">material_id_fieldname</a>.c_str());</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">if</span> (!vtk_abstract_array_ptr)</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;The VTU file : \&quot;&quot;</span> &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;does not contain a vtkCellData field of name : \&quot;&quot;</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ae315a9eabb6e72ca5347cbc6b28cf971">material_id_fieldname</a> &lt;&lt; <span class="stringliteral">&quot;\&quot;.&quot;</span>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;      std::exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    cell_id_array_ptr = vtkArrayDownCast&lt;vtkDataArray&gt;(vtk_abstract_array_ptr);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">if</span> (!cell_id_array_ptr)</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    {</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;The VTU file : \&quot;&quot;</span> &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;with vtkCellData field of name : \&quot;&quot;</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ae315a9eabb6e72ca5347cbc6b28cf971">material_id_fieldname</a> &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;cannot be downcast to vtkDataArray&quot;</span>;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      std::exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    }</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> cell_id_n_tup = cell_id_array_ptr-&gt;GetNumberOfTuples();</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordflow">if</span> (cell_id_n_tup != total_cell_count)</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    {</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;      <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;The VTU file : \&quot;&quot;</span> &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;with vtkCellData field of name : \&quot;&quot;</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ae315a9eabb6e72ca5347cbc6b28cf971">material_id_fieldname</a> &lt;&lt; <span class="stringliteral">&quot;\&quot; has n. tuples : &quot;</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        &lt;&lt; cell_id_n_tup &lt;&lt; <span class="stringliteral">&quot;, but differs from the value expected : &quot;</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        &lt;&lt; total_cell_count &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;      std::exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    }</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> cell_id_n_val = cell_id_array_ptr-&gt;GetNumberOfValues();</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">if</span> (cell_id_n_val != total_cell_count)</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    {</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;      <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;The VTU file : \&quot;&quot;</span> &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;with vtkCellData field of name : \&quot;&quot;</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ae315a9eabb6e72ca5347cbc6b28cf971">material_id_fieldname</a> &lt;&lt; <span class="stringliteral">&quot;\&quot; has n. values : &quot;</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        &lt;&lt; cell_id_n_val &lt;&lt; <span class="stringliteral">&quot;, but differs from the value expected : &quot;</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        &lt;&lt; total_cell_count &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      std::exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    }</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  }</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="comment">//======================================== Scan for mesh dimension</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  <span class="keywordtype">int</span> mesh_dim = 0;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> c = 0; c &lt; total_cell_count; ++c)</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> vtk_cell = ugrid-&gt;GetCell(c);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> vtk_cell_dim = vtk_cell-&gt;GetCellDimension();</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    mesh_dim = std::max(vtk_cell_dim, mesh_dim);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  <span class="keywordflow">if</span> (mesh_dim &lt; 1 || mesh_dim &gt; 3)</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>)</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;The VTU file : \&quot;&quot;</span> &lt;&lt; options.<a class="code" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">file_name</a> &lt;&lt; <span class="stringliteral">&quot;\&quot; &quot;</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;does not identify a mesh of valid dimension.&quot;</span>;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    std::exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  }</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  <span class="comment">//======================================== Push cells</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  <span class="keywordtype">size_t</span> num_polyhedrons  = 0;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  <span class="keywordtype">size_t</span> num_hexahedrons  = 0;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  <span class="keywordtype">size_t</span> num_tetrahedrons = 0;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  <span class="keywordtype">size_t</span> num_polygons     = 0;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  <span class="keywordtype">size_t</span> num_quads        = 0;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;  <span class="keywordtype">size_t</span> num_triangles    = 0;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;  <span class="keywordtype">size_t</span> num_lines        = 0;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;  <span class="keywordtype">size_t</span> num_vertices     = 0;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> c = 0; c &lt; total_cell_count; ++c)</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;  {</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> vtk_cell = ugrid-&gt;GetCell(c);</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> vtk_celltype = vtk_cell-&gt;GetCellType();</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> vtk_cell_dim = vtk_cell-&gt;GetCellDimension();</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160; </div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="comment">//  construct cell</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <a class="code" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">LightWeightCell</a>* chi_lwc = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordflow">if</span> (vtk_celltype == VTK_POLYHEDRON)</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    {</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;      chi_lwc = CreateCellFromVTKPolyhedron(vtk_cell);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;      ++num_polyhedrons;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    }</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_HEXAHEDRON)</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;      chi_lwc = CreateCellFromVTKHexahedron(vtk_cell);</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;      ++num_hexahedrons;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    }</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_TETRA)</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    {</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;      chi_lwc = CreateCellFromVTKTetrahedron(vtk_cell);</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;      ++num_tetrahedrons;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    }</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_POLYGON)</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    {</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;      chi_lwc = CreateCellFromVTKPolygon(vtk_cell);</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;      ++num_polygons;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    }</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_QUAD)</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    {</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;      chi_lwc = CreateCellFromVTKQuad(vtk_cell);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;      ++num_quads;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    }</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_TRIANGLE)</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    {</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;      chi_lwc = CreateCellFromVTKTriangle(vtk_cell);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;      ++num_triangles;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    }</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_LINE)</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    {</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;      chi_lwc = CreateCellFromVTKLine(vtk_cell);</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;      ++num_lines;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    }</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_celltype == VTK_VERTEX)</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    {</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;      chi_lwc = CreateCellFromVTKVertex(vtk_cell);</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;      ++num_vertices;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    }</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;      <span class="keywordflow">throw</span> std::invalid_argument(std::string(__FUNCTION__) +</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                                  <span class="stringliteral">&quot;: Unsupported cell type.&quot;</span>);</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160; </div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="comment">//  append to appropriate collection</span></div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keywordflow">if</span> (vtk_cell_dim == mesh_dim)</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;      raw_cells.emplace_back(chi_lwc);</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_cell_dim == mesh_dim-1)</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;      raw_boundary_cells.emplace_back(chi_lwc);</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160; </div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="comment">//  apply cell identifier</span></div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <span class="keywordflow">if</span> (cell_id_array_ptr)</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    {</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;      std::vector&lt;double&gt; cell_id_vec(1);</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;      cell_id_array_ptr-&gt;GetTuple(c, cell_id_vec.data());</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> cell_id = (int)cell_id_vec.front();</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160; </div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;      <span class="keywordflow">if</span> (vtk_cell_dim == mesh_dim)</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        raw_cells.back()-&gt;material_id = cell_id;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtk_cell_dim == mesh_dim-1)</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        raw_boundary_cells.back()-&gt;material_id = cell_id;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    }</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;  }<span class="comment">//for c</span></div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;  <a class="code" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Number cells read: &quot;</span> &lt;&lt; total_cell_count &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;polyhedrons  : &quot;</span> &lt;&lt; num_polyhedrons  &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;hexahedrons  : &quot;</span> &lt;&lt; num_hexahedrons  &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;tetrahedrons : &quot;</span> &lt;&lt; num_tetrahedrons &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;polygons     : &quot;</span> &lt;&lt; num_polygons     &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;quads        : &quot;</span> &lt;&lt; num_quads        &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;triangles    : &quot;</span> &lt;&lt; num_triangles    &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;lines        : &quot;</span> &lt;&lt; num_lines        &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    &lt;&lt; <span class="stringliteral">&quot;vertices     : &quot;</span> &lt;&lt; num_vertices;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160; </div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;  <span class="comment">//======================================== Push points</span></div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;total_point_count; ++p)</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;  {</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keyword">auto</span> point = ugrid-&gt;GetPoint(p);</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    vertices.emplace_back(point[0],point[1],point[2]);</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160; </div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <span class="keywordflow">if</span> (point[0] &lt; bound_box.xmin) bound_box.xmin = point[0];</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <span class="keywordflow">if</span> (point[0] &gt; bound_box.xmax) bound_box.xmax = point[0];</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keywordflow">if</span> (point[1] &lt; bound_box.ymin) bound_box.ymin = point[1];</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keywordflow">if</span> (point[1] &gt; bound_box.ymax) bound_box.ymax = point[1];</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <span class="keywordflow">if</span> (point[2] &lt; bound_box.zmin) bound_box.zmin = point[2];</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    <span class="keywordflow">if</span> (point[2] &gt; bound_box.zmax) bound_box.zmax = point[2];</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;  }</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160; </div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;  <span class="comment">//======================================== Always do this</span></div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;  ComputeCentroidsAndCheckQuality();</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;  BuildMeshConnectivity();</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;}</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__unpartitioned__mesh_8h_html"><div class="ttname"><a href="../../d6/d60/chi__unpartitioned__mesh_8h.html">chi_unpartitioned_mesh.h</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a70c9e81810de07e8a0ab4041bd920ea9"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a70c9e81810de07e8a0ab4041bd920ea9">chi_mesh::UnpartitionedMesh::CreateCellFromVTKTetrahedron</a></div><div class="ttdeci">LightWeightCell * CreateCellFromVTKTetrahedron(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dab/unpartmesh__00__general_8cc_source.html#l00099">unpartmesh_00_general.cc:100</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face_html"><div class="ttname"><a href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">chi_mesh::UnpartitionedMesh::LightWeightFace</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00015">chi_unpartitioned_mesh.h:16</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a70c9e81810de07e8a0ab4041bd920ea9"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a70c9e81810de07e8a0ab4041bd920ea9">chi_mesh::UnpartitionedMesh::CreateCellFromVTKTetrahedron</a></div><div class="ttdeci">static LightWeightCell * CreateCellFromVTKTetrahedron(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00111">unpartmesh_01_readfromvtu.cc:112</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_ac0040cc3dbd19fdbf7d5dc46e61a5ca9a30047325d9201304e95ffb83105002de"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a30047325d9201304e95ffb83105002de">chi_mesh::CellType::GHOST</a></div><div class="ttdeci">@ GHOST</div></div>
 <div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a></div><div class="ttdeci">@ LOG_0</div><div class="ttdoc">Used only for location 0.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00009">chi_log.h:9</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a285b47c61e3b2a5c81d645255b6beb1b"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">chi_mesh::UnpartitionedMesh::bound_box</a></div><div class="ttdeci">struct chi_mesh::UnpartitionedMesh::BoundBox bound_box</div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a15c6974be982d4a472272d45bce149a7"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a15c6974be982d4a472272d45bce149a7">chi_mesh::UnpartitionedMesh::ComputeCentroidsAndCheckQuality</a></div><div class="ttdeci">void ComputeCentroidsAndCheckQuality()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dab/unpartmesh__00__general_8cc_source.html#l00336">unpartmesh_00_general.cc:336</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a71b720504b36cbe60fc569d8ea17eab0"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a71b720504b36cbe60fc569d8ea17eab0">chi_mesh::UnpartitionedMesh::vertices</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Vertex * &gt; vertices</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00033">chi_unpartitioned_mesh.h:33</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a636d85ee971e6b9a1bda3bf5c5f5d76b"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a636d85ee971e6b9a1bda3bf5c5f5d76b">chi_mesh::UnpartitionedMesh::BuildMeshConnectivity</a></div><div class="ttdeci">void BuildMeshConnectivity()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dab/unpartmesh__00__general_8cc_source.html#l00252">unpartmesh_00_general.cc:252</a></div></div>
 <div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a></div><div class="ttdeci">@ LOG_ALLERROR</div><div class="ttdoc">Error for any location.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00017">chi_log.h:17</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box_html_abb34b84bd703829e020e190928c0618b"><div class="ttname"><a href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abb34b84bd703829e020e190928c0618b">chi_mesh::UnpartitionedMesh::BoundBox::zmin</a></div><div class="ttdeci">double zmin</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00053">chi_unpartitioned_mesh.h:53</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box_html_ad6e82a41929aa8b13c21ea88f9ad8c8e"><div class="ttname"><a href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#ad6e82a41929aa8b13c21ea88f9ad8c8e">chi_mesh::UnpartitionedMesh::BoundBox::xmax</a></div><div class="ttdeci">double xmax</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00051">chi_unpartitioned_mesh.h:51</a></div></div>
 <div class="ttc" id="avtk_clean_unstructured_grid_8h_html"><div class="ttname"><a href="../../dd/d92/vtk_clean_unstructured_grid_8h.html">vtkCleanUnstructuredGrid.h</a></div></div>
 <div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
 <div class="ttc" id="aclass_chi_log_html_ac2d1869abb6b7dd125a89ea20b977dbc"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00028">chi_log.cc:28</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_options_html_ad365cd8da54610ef8be240becbcb6fef"><div class="ttname"><a href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">chi_mesh::UnpartitionedMesh::Options::file_name</a></div><div class="ttdeci">std::string file_name</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00044">chi_unpartitioned_mesh.h:44</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a92ef577a3a892387cb30560a30e8e628"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a92ef577a3a892387cb30560a30e8e628">chi_mesh::UnpartitionedMesh::CreateCellFromVTKTriangle</a></div><div class="ttdeci">LightWeightCell * CreateCellFromVTKTriangle(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dab/unpartmesh__00__general_8cc_source.html#l00214">unpartmesh_00_general.cc:215</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_options_html_ad365cd8da54610ef8be240becbcb6fef"><div class="ttname"><a href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef">chi_mesh::UnpartitionedMesh::Options::file_name</a></div><div class="ttdeci">std::string file_name</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00046">chi_unpartitioned_mesh.h:46</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a92ef577a3a892387cb30560a30e8e628"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a92ef577a3a892387cb30560a30e8e628">chi_mesh::UnpartitionedMesh::CreateCellFromVTKTriangle</a></div><div class="ttdeci">static LightWeightCell * CreateCellFromVTKTriangle(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00226">unpartmesh_01_readfromvtu.cc:227</a></div></div>
 <div class="ttc" id="aunpartmesh__01__readfromvtu_8cc_html_aff18523449a2997a122381af7ab97f4d"><div class="ttname"><a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a></div><div class="ttdeci">ChiMPI &amp; chi_mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00028">chi_runtime.cc:28</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_ac91ac9efb659eba5be70ddb82b9f81f2"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ac91ac9efb659eba5be70ddb82b9f81f2">chi_mesh::UnpartitionedMesh::CreateCellFromVTKPolygon</a></div><div class="ttdeci">LightWeightCell * CreateCellFromVTKPolygon(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dab/unpartmesh__00__general_8cc_source.html#l00138">unpartmesh_00_general.cc:139</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box_html_abac16fd3161e5380153a454ff94bc146"><div class="ttname"><a href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abac16fd3161e5380153a454ff94bc146">chi_mesh::UnpartitionedMesh::BoundBox::ymin</a></div><div class="ttdeci">double ymin</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00052">chi_unpartitioned_mesh.h:52</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a87b8d5975edce7850b9441053ad554b4"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87b8d5975edce7850b9441053ad554b4">chi_mesh::UnpartitionedMesh::CreateCellFromVTKQuad</a></div><div class="ttdeci">LightWeightCell * CreateCellFromVTKQuad(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dab/unpartmesh__00__general_8cc_source.html#l00176">unpartmesh_00_general.cc:177</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00011">chi_meshvector.h:12</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_ac91ac9efb659eba5be70ddb82b9f81f2"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ac91ac9efb659eba5be70ddb82b9f81f2">chi_mesh::UnpartitionedMesh::CreateCellFromVTKPolygon</a></div><div class="ttdeci">static LightWeightCell * CreateCellFromVTKPolygon(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00150">unpartmesh_01_readfromvtu.cc:151</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_options_html_ae315a9eabb6e72ca5347cbc6b28cf971"><div class="ttname"><a href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ae315a9eabb6e72ca5347cbc6b28cf971">chi_mesh::UnpartitionedMesh::Options::material_id_fieldname</a></div><div class="ttdeci">std::string material_id_fieldname</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00047">chi_unpartitioned_mesh.h:47</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a87b8d5975edce7850b9441053ad554b4"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87b8d5975edce7850b9441053ad554b4">chi_mesh::UnpartitionedMesh::CreateCellFromVTKQuad</a></div><div class="ttdeci">static LightWeightCell * CreateCellFromVTKQuad(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00188">unpartmesh_01_readfromvtu.cc:189</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a108de01f5e69c66410928134868044bf"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a108de01f5e69c66410928134868044bf">chi_mesh::UnpartitionedMesh::CreateCellFromVTKLine</a></div><div class="ttdeci">static LightWeightCell * CreateCellFromVTKLine(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00264">unpartmesh_01_readfromvtu.cc:265</a></div></div>
 <div class="ttc" id="anamespace_z_compile_and_run_html_a3f5f620160c2772d4cf69ca3cbb34eb4"><div class="ttname"><a href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">ZCompileAndRun.file</a></div><div class="ttdeci">file</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4d/_z_compile_and_run_8py_source.html#l00034">ZCompileAndRun.py:34</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box_html_a5c016b281fc6d0377409c96624f12d8a"><div class="ttname"><a href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#a5c016b281fc6d0377409c96624f12d8a">chi_mesh::UnpartitionedMesh::BoundBox::xmin</a></div><div class="ttdeci">double xmin</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00051">chi_unpartitioned_mesh.h:51</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box_html_a43e393bd9fed88a0265daafb31b19b9d"><div class="ttname"><a href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#a43e393bd9fed88a0265daafb31b19b9d">chi_mesh::UnpartitionedMesh::BoundBox::zmax</a></div><div class="ttdeci">double zmax</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00053">chi_unpartitioned_mesh.h:53</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_ae44df63d61bcfb87fb8025e3b8f31365"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae44df63d61bcfb87fb8025e3b8f31365">chi_mesh::UnpartitionedMesh::CreateCellFromVTKPolyhedron</a></div><div class="ttdeci">LightWeightCell * CreateCellFromVTKPolyhedron(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dab/unpartmesh__00__general_8cc_source.html#l00021">unpartmesh_00_general.cc:22</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a1a31b78d1d5d918574fb32581b87adb7"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a1a31b78d1d5d918574fb32581b87adb7">chi_mesh::UnpartitionedMesh::CreateCellFromVTKHexahedron</a></div><div class="ttdeci">LightWeightCell * CreateCellFromVTKHexahedron(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dab/unpartmesh__00__general_8cc_source.html#l00060">unpartmesh_00_general.cc:61</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box_html_acf069e314cf0e7ff13d047e8836ecd14"><div class="ttname"><a href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#acf069e314cf0e7ff13d047e8836ecd14">chi_mesh::UnpartitionedMesh::BoundBox::ymax</a></div><div class="ttdeci">double ymax</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00052">chi_unpartitioned_mesh.h:52</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a54f13d709bd55611f09c9c4007097505"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a54f13d709bd55611f09c9c4007097505">chi_mesh::UnpartitionedMesh::raw_cells</a></div><div class="ttdeci">std::vector&lt; LightWeightCell * &gt; raw_cells</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00034">chi_unpartitioned_mesh.h:34</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_options_html"><div class="ttname"><a href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html">chi_mesh::UnpartitionedMesh::Options</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00042">chi_unpartitioned_mesh.h:43</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_ae44df63d61bcfb87fb8025e3b8f31365"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae44df63d61bcfb87fb8025e3b8f31365">chi_mesh::UnpartitionedMesh::CreateCellFromVTKPolyhedron</a></div><div class="ttdeci">static LightWeightCell * CreateCellFromVTKPolyhedron(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00033">unpartmesh_01_readfromvtu.cc:34</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a1a31b78d1d5d918574fb32581b87adb7"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a1a31b78d1d5d918574fb32581b87adb7">chi_mesh::UnpartitionedMesh::CreateCellFromVTKHexahedron</a></div><div class="ttdeci">static LightWeightCell * CreateCellFromVTKHexahedron(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00072">unpartmesh_01_readfromvtu.cc:73</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face_html_af120a1294b889bba49e810e194fc9f26"><div class="ttname"><a href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">chi_mesh::UnpartitionedMesh::LightWeightFace::vertex_ids</a></div><div class="ttdeci">std::vector&lt; uint64_t &gt; vertex_ids</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00017">chi_unpartitioned_mesh.h:17</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_options_html"><div class="ttname"><a href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html">chi_mesh::UnpartitionedMesh::Options</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00044">chi_unpartitioned_mesh.h:45</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_options_html_aced47c0461ce1d19dccbebfb70d173ff"><div class="ttname"><a href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#aced47c0461ce1d19dccbebfb70d173ff">chi_mesh::UnpartitionedMesh::Options::boundary_id_fieldname</a></div><div class="ttdeci">std::string boundary_id_fieldname</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00048">chi_unpartitioned_mesh.h:48</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell_html"><div class="ttname"><a href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">chi_mesh::UnpartitionedMesh::LightWeightCell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00021">chi_unpartitioned_mesh.h:22</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a87d97b3a0ad75d8dcc89f89937d96639"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87d97b3a0ad75d8dcc89f89937d96639">chi_mesh::UnpartitionedMesh::CreateCellFromVTKVertex</a></div><div class="ttdeci">static LightWeightCell * CreateCellFromVTKVertex(vtkCell *vtk_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00299">unpartmesh_01_readfromvtu.cc:300</a></div></div>
 <div class="ttc" id="aunpartmesh__01__readfromvtu_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
 <div class="ttc" id="aclass_chi_m_p_i_html"><div class="ttname"><a href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/chi__mpi_8h_source.html#l00029">chi_mpi.h:30</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a59f08ff23fd30d5dda99a94f5a627972"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972">chi_mesh::UnpartitionedMesh::ReadFromVTU</a></div><div class="ttdeci">void ReadFromVTU(const Options &amp;options)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00020">unpartmesh_01_readfromvtu.cc:21</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a59f08ff23fd30d5dda99a94f5a627972"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972">chi_mesh::UnpartitionedMesh::ReadFromVTU</a></div><div class="ttdeci">void ReadFromVTU(const Options &amp;options)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00320">unpartmesh_01_readfromvtu.cc:321</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

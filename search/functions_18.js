@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ylm_3921',['Ylm',['../dc/d58/namespacechi__math.html#a9c9dcd08b5ba5ae11f987a038494d6c5',1,'chi_math']]]
+  ['xsmapping_4104',['XSMapping',['../d6/da1/class_linear_boltzmann_1_1_cell_l_b_s_view.html#a4486dbc6c83e0220b3b16a3c416c5143',1,'LinearBoltzmann::CellLBSView']]]
 ];

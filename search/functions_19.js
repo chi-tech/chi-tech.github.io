@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['zeroincomingdelayedpsi_3922',['ZeroIncomingDelayedPsi',['../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#abfcbc23790402886ba120966e780de6a',1,'chi_mesh::sweep_management::AngleAggregation']]],
-  ['zerooutgoingdelayedpsi_3923',['ZeroOutgoingDelayedPsi',['../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a18ac8749a1bea3cc0c57c99d85d1169d',1,'chi_mesh::sweep_management::AngleAggregation']]],
-  ['zeropsidatastructures_3924',['ZeroPsiDataStructures',['../d7/d7d/class_l_b_s_groupset.html#a716d45570bf573db151114b342597966',1,'LBSGroupset']]]
+  ['ylm_4105',['Ylm',['../dc/d58/namespacechi__math.html#a9c9dcd08b5ba5ae11f987a038494d6c5',1,'chi_math']]]
 ];

@@ -85,7 +85,8 @@ $(document).ready(function(){initNavTree('d3/dbf/classchi__math_1_1_quadrature.h
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Data Fields</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">chi_math::Quadrature Class Reference</div>  </div>
 </div><!--header-->
@@ -111,8 +112,10 @@ Inheritance diagram for chi_math::Quadrature:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acbf5d07c68e6d275fd93a6a831e625de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbf/classchi__math_1_1_quadrature.html#acbf5d07c68e6d275fd93a6a831e625de">Scale</a> (std::pair&lt; double, double &gt; old_range, std::pair&lt; double, double &gt; new_range)</td></tr>
-<tr class="separator:acbf5d07c68e6d275fd93a6a831e625de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece175b869acfaaf2f6ad29c9907c11c"><td class="memItemLeft" align="right" valign="top">const std::pair&lt; double, double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbf/classchi__math_1_1_quadrature.html#aece175b869acfaaf2f6ad29c9907c11c">GetRange</a> () const</td></tr>
+<tr class="separator:aece175b869acfaaf2f6ad29c9907c11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3adce26c37f3464b2768ef0df4621e34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbf/classchi__math_1_1_quadrature.html#a3adce26c37f3464b2768ef0df4621e34">SetRange</a> (const std::pair&lt; double, double &gt; &amp;in_range)</td></tr>
+<tr class="separator:a3adce26c37f3464b2768ef0df4621e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -127,6 +130,11 @@ Data Fields</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab3a8253b2fe9ac41606512fa918523c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbf/classchi__math_1_1_quadrature.html#ab3a8253b2fe9ac41606512fa918523c8">Quadrature</a> (<a class="el" href="../../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9">QuadratureOrder</a> in_order)</td></tr>
 <tr class="separator:ab3a8253b2fe9ac41606512fa918523c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aa82cf5205610ff464762e6b2809bc593"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbf/classchi__math_1_1_quadrature.html#aa82cf5205610ff464762e6b2809bc593">range</a></td></tr>
+<tr class="separator:aa82cf5205610ff464762e6b2809bc593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Parent class for quadratures. </p>
@@ -157,39 +165,57 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d4c/quadrature_8h_source.html#l00039">39</a> of file <a class="el" href="../../d5/d4c/quadrature_8h_source.html">quadrature.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d4c/quadrature_8h_source.html#l00043">43</a> of file <a class="el" href="../../d5/d4c/quadrature_8h_source.html">quadrature.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="acbf5d07c68e6d275fd93a6a831e625de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbf5d07c68e6d275fd93a6a831e625de">&#9670;&nbsp;</a></span>Scale()</h2>
+<a id="aece175b869acfaaf2f6ad29c9907c11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece175b869acfaaf2f6ad29c9907c11c">&#9670;&nbsp;</a></span>GetRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::pair&lt;double, double&gt;&amp; chi_math::Quadrature::GetRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the range on which the quadrature is defined (relevant for one-dimensional quadratures only). </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d4c/quadrature_8h_source.html#l00048">48</a> of file <a class="el" href="../../d5/d4c/quadrature_8h_source.html">quadrature.h</a>.</p>
+
+</div>
+</div>
+<a id="a3adce26c37f3464b2768ef0df4621e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3adce26c37f3464b2768ef0df4621e34">&#9670;&nbsp;</a></span>SetRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_math::Quadrature::Scale </td>
+          <td class="memname">void chi_math::Quadrature::SetRange </td>
           <td>(</td>
-          <td class="paramtype">std::pair&lt; double, double &gt;&#160;</td>
-          <td class="paramname"><em>old_range</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const std::pair&lt; double, double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>in_range</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::pair&lt; double, double &gt;&#160;</td>
-          <td class="paramname"><em>new_range</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Scales 1D quadratures from an old range to a new range. </p>
+<p>Set the range on which the quadrature is defined. (relevant for one-dimensional quadratures only). Note that calling this method results in translation of the abscissae and scaling of the weights. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d90/quadrature_8cc_source.html#l00006">6</a> of file <a class="el" href="../../d6/d90/quadrature_8cc_source.html">quadrature.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d90/quadrature_8cc_source.html#l00007">7</a> of file <a class="el" href="../../d6/d90/quadrature_8cc_source.html">quadrature.cc</a>.</p>
 
 </div>
 </div>
@@ -223,6 +249,31 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d4c/quadrature_8h_source.html#l00034">34</a> of file <a class="el" href="../../d5/d4c/quadrature_8h_source.html">quadrature.h</a>.</p>
+
+</div>
+</div>
+<a id="aa82cf5205610ff464762e6b2809bc593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82cf5205610ff464762e6b2809bc593">&#9670;&nbsp;</a></span>range</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;double, double&gt; chi_math::Quadrature::range</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Interval on which the quadrature is defined (relevant for one-dimensional quadratures only). </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d4c/quadrature_8h_source.html#l00039">39</a> of file <a class="el" href="../../d5/d4c/quadrature_8h_source.html">quadrature.h</a>.</p>
 
 </div>
 </div>

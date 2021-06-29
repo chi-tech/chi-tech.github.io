@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['log_5flvl_4783',['LOG_LVL',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405',1,'chi_log.h']]]
+  ['iterativemethod_4986',['IterativeMethod',['../d7/d19/namespace_linear_boltzmann.html#a7062fc37c9063039e1e6be69e56d280f',1,'LinearBoltzmann']]]
 ];
