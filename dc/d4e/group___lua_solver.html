@@ -93,10 +93,14 @@ $(document).ready(function(){initNavTree('dc/d4e/group___lua_solver.html','../..
 Functions</h2></td></tr>
 <tr class="memitem:gaf32795816e761d2c9bf86f65efeff25d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4e/group___lua_solver.html#gaf32795816e761d2c9bf86f65efeff25d">chiGetFieldFunctionList</a> (lua_State *L)</td></tr>
 <tr class="separator:gaf32795816e761d2c9bf86f65efeff25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga092b8da99b64223a021b47df244a4fa7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4e/group___lua_solver.html#ga092b8da99b64223a021b47df244a4fa7">chi_lua::chiSolverExecute</a> ()</td></tr>
-<tr class="separator:ga092b8da99b64223a021b47df244a4fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab5fe2a50838ea4c4f573979d6d7540e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4e/group___lua_solver.html#gab5fe2a50838ea4c4f573979d6d7540e4">chi_lua::chiSolverAddRegion</a> (int SolverHandle, int RegionHandle)</td></tr>
-<tr class="separator:gab5fe2a50838ea4c4f573979d6d7540e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2470af5f6becc5dea0121c565dfbbb26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4e/group___lua_solver.html#ga2470af5f6becc5dea0121c565dfbbb26">chi_lua::chiSolverAddRegion</a> (int solver_handle, int region_handle)</td></tr>
+<tr class="separator:ga2470af5f6becc5dea0121c565dfbbb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab111ae74c9f19f0619761ca0e86a1ba9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4e/group___lua_solver.html#gab111ae74c9f19f0619761ca0e86a1ba9">chi_lua::chiSolverInitialize</a> (int solver_handle)</td></tr>
+<tr class="separator:gab111ae74c9f19f0619761ca0e86a1ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e117013f8cf267734dc7db4a8ee380a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4e/group___lua_solver.html#ga8e117013f8cf267734dc7db4a8ee380a">chi_lua::chiSolverExecute</a> (int solver_handle)</td></tr>
+<tr class="separator:ga8e117013f8cf267734dc7db4a8ee380a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4dac22bb244e99b51882ab8d1640efac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4e/group___lua_solver.html#ga4dac22bb244e99b51882ab8d1640efac">chi_lua::chiSolverSetBasicOption</a> (int solver_handle, string option_name, varying option_value)</td></tr>
+<tr class="separator:ga4dac22bb244e99b51882ab8d1640efac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -127,8 +131,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gab5fe2a50838ea4c4f573979d6d7540e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab5fe2a50838ea4c4f573979d6d7540e4">&#9670;&nbsp;</a></span>chiSolverAddRegion()</h2>
+<a id="ga2470af5f6becc5dea0121c565dfbbb26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2470af5f6becc5dea0121c565dfbbb26">&#9670;&nbsp;</a></span>chiSolverAddRegion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,13 +141,13 @@ Functions</h2></td></tr>
           <td class="memname">int chi_lua::chiSolverAddRegion </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>SolverHandle</em>, </td>
+          <td class="paramname"><em>solver_handle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>RegionHandle</em>&#160;</td>
+          <td class="paramname"><em>region_handle</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -155,19 +159,19 @@ Functions</h2></td></tr>
 <p>Adds a region to a solver.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">SolverHandle</td><td>int Handle to the solver. </td></tr>
-    <tr><td class="paramname">RegionHandle</td><td>int Handle to the region.</td></tr>
+    <tr><td class="paramname">solver_handle</td><td>int Handle to the solver. </td></tr>
+    <tr><td class="paramname">region_handle</td><td>int Handle to the region.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01172">1172</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01032">1032</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
-<a id="ga092b8da99b64223a021b47df244a4fa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga092b8da99b64223a021b47df244a4fa7">&#9670;&nbsp;</a></span>chiSolverExecute()</h2>
+<a id="ga8e117013f8cf267734dc7db4a8ee380a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8e117013f8cf267734dc7db4a8ee380a">&#9670;&nbsp;</a></span>chiSolverExecute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,15 +179,93 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int chi_lua::chiSolverExecute </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>solver_handle</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Adds a region to a solver.</p>
+<p>Executes the solver at the given handle. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solver_handle</td><td>int Handle to the solver.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01019">1019</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01044">1044</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="gab111ae74c9f19f0619761ca0e86a1ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab111ae74c9f19f0619761ca0e86a1ba9">&#9670;&nbsp;</a></span>chiSolverInitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiSolverInitialize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>solver_handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the solver at the given handle. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solver_handle</td><td>int Handle to the solver.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01038">1038</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="ga4dac22bb244e99b51882ab8d1640efac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4dac22bb244e99b51882ab8d1640efac">&#9670;&nbsp;</a></span>chiSolverSetBasicOption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_lua::chiSolverSetBasicOption </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>solver_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>option_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">varying&#160;</td>
+          <td class="paramname"><em>option_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets a basic option of a solver. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solver_handle</td><td>int Handle to the reference solver. </td></tr>
+    <tr><td class="paramname">option_name</td><td>string String-name of the option. </td></tr>
+    <tr><td class="paramname">option_value</td><td>varying The value to assign to the option.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01052">1052</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

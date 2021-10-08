@@ -14,9 +14,5 @@ var dir_914fdd647a308646ae65a7aa95e7aae3 =
     [ "unpartmesh_02_readfromensight.cc", "da/da5/unpartmesh__02__readfromensight_8cc.html", "da/da5/unpartmesh__02__readfromensight_8cc" ],
     [ "unpartmesh_03_readfromwavefrontobj.cc", "db/d49/unpartmesh__03__readfromwavefrontobj_8cc.html", "db/d49/unpartmesh__03__readfromwavefrontobj_8cc" ],
     [ "unpartmesh_04_readfrommsh.cc", "d8/d9a/unpartmesh__04__readfrommsh_8cc.html", "d8/d9a/unpartmesh__04__readfrommsh_8cc" ],
-    [ "unpartmesh_ortho_cutting.cc", "dd/d4f/unpartmesh__ortho__cutting_8cc.html", null ],
-    [ "vtkCleanUnstructuredGrid.cc", "da/d1b/vtk_clean_unstructured_grid_8cc.html", "da/d1b/vtk_clean_unstructured_grid_8cc" ],
-    [ "vtkCleanUnstructuredGrid.h", "dd/d92/vtk_clean_unstructured_grid_8h.html", [
-      [ "vtkCleanUnstructuredGrid", "d8/dce/classvtk_clean_unstructured_grid.html", "d8/dce/classvtk_clean_unstructured_grid" ]
-    ] ]
+    [ "unpartmesh_ortho_cutting.cc", "dd/d4f/unpartmesh__ortho__cutting_8cc.html", null ]
 ];

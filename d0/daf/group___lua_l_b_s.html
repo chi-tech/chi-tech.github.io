@@ -145,7 +145,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01393">1393</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01407">1407</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -164,7 +164,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Creates a Neutral Particle Transport solver. </p><dl class="section return"><dt>Returns</dt><dd>SolverHandle int Handle to the solver created. <div class="fragment"><div class="line">phys1 = <a class="code" href="../../d0/daf/group___lua_l_b_s.html#gaa8ecbfc58922b856b87105c25a14ac1e">chiLBSCreateSolver</a>()</div>
-<div class="line"><a class="code" href="../../dc/d4e/group___lua_solver.html#gab5fe2a50838ea4c4f573979d6d7540e4">chiSolverAddRegion</a>(phys1,region1)</div>
+<div class="line"><a class="code" href="../../dc/d4e/group___lua_solver.html#ga2470af5f6becc5dea0121c565dfbbb26">chiSolverAddRegion</a>(phys1,region1)</div>
 <div class="line">--</div>
 <div class="line">-- Add Groupset construction here</div>
 <div class="line">--</div>
@@ -177,7 +177,7 @@ Functions</h2></td></tr>
 <div class="line">fflist,count = <a class="code" href="../../d0/daf/group___lua_l_b_s.html#ga5d938e5ed990f5c34953f0d6928cbbf4">chiLBSGetScalarFieldFunctionList</a>(phys1)</div>
 </div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01769">1769</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01822">1822</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -203,7 +203,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01775">1775</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01828">1828</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -232,7 +232,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>table,count Returns an array of handles and the amount of elements in it (indexed from 1).</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01740">1740</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01793">1793</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -260,7 +260,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>table,count Returns an array of handles and the amount of elements in it (indexed from 1).</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01749">1749</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01802">1802</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -286,7 +286,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01711">1711</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01764">1764</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -339,6 +339,18 @@ SWEEP_EAGER_LIMIT<br  />
 READ_RESTART_DATA<br  />
  Indicates the reading of restart data from restart file. The value can be followed by two optional strings. The first is the folder name which can be relative or absolute, and the second is the file base name. These are defaulted to "YRestart" and "restart" respectively.<br  />
 <br  />
+USE_SOURCE_MOMENTS<br  />
+ Flag for using a vector of source moments instead the regular material/boundary source. Default false. This expects to be followed by a boolean.<br  />
+<br  />
+VERBOSE_INNER_ITERATIONS<br  />
+ Flag for printing inner iteration information. This is primarily used for printing information related to group-set-level iterative methods. Default true. Expects to be followed by a boolean.<br  />
+<br  />
+VERBOSE_OUTER_ITERATIONS<br  />
+ Flag for printing outer iteration information. This is primarily used for printing information aggregated over group sets such as k-eigenvalue iterations. Default true. Expects to be followed by a boolean.<br  />
+<br  />
+USE_PRECURSORS<br  />
+ Flag for using delayed neutron precursors. Default false. This expects to be followed by a boolean.<br  />
+<br  />
 </p><div class="fragment"><div class="line"><a class="code" href="../../d0/daf/group___lua_l_b_s.html#ga0ff2334b7745f760ecdfbf378b668841">chiLBSSetProperty</a>(phys1,READ_RESTART_DATA,<span class="stringliteral">&quot;YRestart1&quot;</span>)</div>
 </div><!-- fragment --><p> WRITE_RESTART_DATA<br  />
  Indicates the writing of restart data to restart files. The value can be followed by two optional strings and a number optional strings. The first string is the folder name which can be relative or absolute, and the second string is the file base name. The number is the time interval (in minutes) for a restart write to be triggered (apart from GMRES restarts and the conclusion of groupset completions) .These are defaulted to "YRestart", "restart" and 30 minutes respectively.<br  />
@@ -370,18 +382,18 @@ LBSBoundaryTypes.REFLECTING<br  />
 Reflecting boundary condition. Beware, when opposing reflecting boundary conditions are used this enduces a cyclic dependency which will increase the iteration convergence behavior. </p><h3>Note on the Eager limit</h3>
 <p>The eager limit is the message size limit before which non-blocking MPI send calls will execute without waiting for a matching receive call. The limit is platform dependent but in general 64 kb. Some systems have 32 kb as a limit and therefore we use that as a default limit in <a class="el" href="../../d5/d49/class_chi_tech.html">ChiTech</a>. There is a fine interplay between message size and the shear amount of messages that will be sent. In general smaller messages tend to be more efficient, however, when there are too many small messages being sent around the communication system on the given platform will start to suffer. One can gain a small amount of parallel efficiency by lowering this limit, however, there is a point where the parallel efficiency will actually get worse so use with caution. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01386">1386</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01400">1400</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup___lua_l_b_s_html_ga4325f93255469d8c33115055a0a41964"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#ga4325f93255469d8c33115055a0a41964">chi_lua::chiLBSExecute</a></div><div class="ttdeci">int chiLBSExecute(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01775">lua_functions.c:1775</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_html_ga0ff2334b7745f760ecdfbf378b668841"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#ga0ff2334b7745f760ecdfbf378b668841">chi_lua::chiLBSSetProperty</a></div><div class="ttdeci">int chiLBSSetProperty(int SolverIndex, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01386">lua_functions.c:1386</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_html_ga64539ea4595365ed48c1e8458028c443"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#ga64539ea4595365ed48c1e8458028c443">chi_lua::chiLBSInitialize</a></div><div class="ttdeci">int chiLBSInitialize(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01711">lua_functions.c:1711</a></div></div>
-<div class="ttc" id="agroup___lua_solver_html_gab5fe2a50838ea4c4f573979d6d7540e4"><div class="ttname"><a href="../../dc/d4e/group___lua_solver.html#gab5fe2a50838ea4c4f573979d6d7540e4">chi_lua::chiSolverAddRegion</a></div><div class="ttdeci">int chiSolverAddRegion(int SolverHandle, int RegionHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01172">lua_functions.c:1172</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_html_ga5d938e5ed990f5c34953f0d6928cbbf4"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#ga5d938e5ed990f5c34953f0d6928cbbf4">chi_lua::chiLBSGetScalarFieldFunctionList</a></div><div class="ttdeci">int chiLBSGetScalarFieldFunctionList(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01749">lua_functions.c:1749</a></div></div>
-<div class="ttc" id="agroup___lua_l_b_s_html_gaa8ecbfc58922b856b87105c25a14ac1e"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#gaa8ecbfc58922b856b87105c25a14ac1e">chi_lua::chiLBSCreateSolver</a></div><div class="ttdeci">int chiLBSCreateSolver()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01769">lua_functions.c:1769</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_html_ga4325f93255469d8c33115055a0a41964"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#ga4325f93255469d8c33115055a0a41964">chi_lua::chiLBSExecute</a></div><div class="ttdeci">int chiLBSExecute(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01828">lua_functions.c:1828</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_html_ga0ff2334b7745f760ecdfbf378b668841"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#ga0ff2334b7745f760ecdfbf378b668841">chi_lua::chiLBSSetProperty</a></div><div class="ttdeci">int chiLBSSetProperty(int SolverIndex, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01400">lua_functions.c:1400</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_html_ga64539ea4595365ed48c1e8458028c443"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#ga64539ea4595365ed48c1e8458028c443">chi_lua::chiLBSInitialize</a></div><div class="ttdeci">int chiLBSInitialize(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01764">lua_functions.c:1764</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_html_ga5d938e5ed990f5c34953f0d6928cbbf4"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#ga5d938e5ed990f5c34953f0d6928cbbf4">chi_lua::chiLBSGetScalarFieldFunctionList</a></div><div class="ttdeci">int chiLBSGetScalarFieldFunctionList(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01802">lua_functions.c:1802</a></div></div>
+<div class="ttc" id="agroup___lua_l_b_s_html_gaa8ecbfc58922b856b87105c25a14ac1e"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#gaa8ecbfc58922b856b87105c25a14ac1e">chi_lua::chiLBSCreateSolver</a></div><div class="ttdeci">int chiLBSCreateSolver()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01822">lua_functions.c:1822</a></div></div>
+<div class="ttc" id="agroup___lua_solver_html_ga2470af5f6becc5dea0121c565dfbbb26"><div class="ttname"><a href="../../dc/d4e/group___lua_solver.html#ga2470af5f6becc5dea0121c565dfbbb26">chi_lua::chiSolverAddRegion</a></div><div class="ttdeci">int chiSolverAddRegion(int solver_handle, int region_handle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01032">lua_functions.c:1032</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -10,7 +10,7 @@ var classchi__math_1_1_sparse_matrix =
     [ "NumRows", "de/d51/classchi__math_1_1_sparse_matrix.html#aa98fc10d62a07525289fceec4dbd9fe4", null ],
     [ "PrintS", "de/d51/classchi__math_1_1_sparse_matrix.html#a646a4df715cd39b7590c2c6bbbb82bdc", null ],
     [ "SetDiagonal", "de/d51/classchi__math_1_1_sparse_matrix.html#af69a51428ee9e7ffe16a2490849be58c", null ],
-    [ "ValueIJ", "de/d51/classchi__math_1_1_sparse_matrix.html#acdca0413feb25c5a88f463674d540e06", null ],
+    [ "ValueIJ", "de/d51/classchi__math_1_1_sparse_matrix.html#aad7ccbd817b2ff08d51f7c6f652dcb29", null ],
     [ "col_size", "de/d51/classchi__math_1_1_sparse_matrix.html#ac8c744b3f254d0e0985dd714a7cc4689", null ],
     [ "row_size", "de/d51/classchi__math_1_1_sparse_matrix.html#a673a21d70376569430ac9e6bf9221f68", null ],
     [ "rowI_indices", "de/d51/classchi__math_1_1_sparse_matrix.html#a2241c444e10aacf231ec80fafa16b728", null ],

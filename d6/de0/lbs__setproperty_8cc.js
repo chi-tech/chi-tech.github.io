@@ -2,6 +2,7 @@ var lbs__setproperty_8cc =
 [
     [ "BOUNDARY_CONDITION", "d6/de0/lbs__setproperty_8cc.html#a22984b5a51076b7e541d6af994c0761b", null ],
     [ "DISCRETIZATION_METHOD", "d6/de0/lbs__setproperty_8cc.html#ae193790426d8cb51a6acff87b17ccb81", null ],
+    [ "FACE_COSINE_TOLERANCE", "d6/de0/lbs__setproperty_8cc.html#abc0cc162bc11ba13e0485fb2154c0275", null ],
     [ "PWLD", "d6/de0/lbs__setproperty_8cc.html#a0595f9617f7d66720e101ce447d7b2fa", null ],
     [ "PWLD1D", "d6/de0/lbs__setproperty_8cc.html#a0d1bcb84b824d3825e282d2d2283ddc6", null ],
     [ "PWLD2D", "d6/de0/lbs__setproperty_8cc.html#a29836df4871c4e1ea7e3e045226d8679", null ],
@@ -10,6 +11,8 @@ var lbs__setproperty_8cc =
     [ "SAVE_ANGULAR_FLUX", "d6/de0/lbs__setproperty_8cc.html#a9d38868274ae1e77442d6cb982f8d678", null ],
     [ "SCATTERING_ORDER", "d6/de0/lbs__setproperty_8cc.html#a5f35e03e81d8e3a3c0afa6153e0edc60", null ],
     [ "SWEEP_EAGER_LIMIT", "d6/de0/lbs__setproperty_8cc.html#a0545351d455115c0776951d54e6bd3af", null ],
+    [ "VERBOSE_INNER_ITERATIONS", "d6/de0/lbs__setproperty_8cc.html#a5a602702444ce9f1eedb586dd58a2b45", null ],
+    [ "VERBOSE_OUTER_ITERATIONS", "d6/de0/lbs__setproperty_8cc.html#af1cf00a42430571d774f36b31bb6d0bb", null ],
     [ "WRITE_RESTART_DATA", "d6/de0/lbs__setproperty_8cc.html#acc2e73fae9358d58a018f902aa1996b5", null ],
     [ "XMAX", "d6/de0/lbs__setproperty_8cc.html#a0312cb6d6cbc719075d4e5380c387ab3", null ],
     [ "XMIN", "d6/de0/lbs__setproperty_8cc.html#a6aee779504f876f9bed834f36b392da9", null ],

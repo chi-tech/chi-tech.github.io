@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ymax_5262',['YMAX',['../d6/de0/lbs__setproperty_8cc.html#a610d6ad95b18966b70b6845de2a9c56b',1,'lbs_setproperty.cc']]],
-  ['ymin_5263',['YMIN',['../d6/de0/lbs__setproperty_8cc.html#aa025181dff552575490c5148a493ff65',1,'lbs_setproperty.cc']]]
+  ['xmax_5277',['XMAX',['../d6/de0/lbs__setproperty_8cc.html#a0312cb6d6cbc719075d4e5380c387ab3',1,'lbs_setproperty.cc']]],
+  ['xmin_5278',['XMIN',['../d6/de0/lbs__setproperty_8cc.html#a6aee779504f876f9bed834f36b392da9',1,'lbs_setproperty.cc']]]
 ];

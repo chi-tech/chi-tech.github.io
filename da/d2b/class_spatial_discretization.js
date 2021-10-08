@@ -3,6 +3,7 @@ var class_spatial_discretization =
     [ "SDMType", "da/d2b/class_spatial_discretization.html#a40c4cadaab0ba12e0ede03f1b802d901", null ],
     [ "SpatialDiscretization", "da/d2b/class_spatial_discretization.html#a869384623b7be3b7e2e3abaa1c843237", null ],
     [ "BuildSparsityPattern", "da/d2b/class_spatial_discretization.html#a95f837f71b1c541f21c620cf314b04ab", null ],
+    [ "GetCellNodeLocations", "da/d2b/class_spatial_discretization.html#a731f951add8638fb54ea6e14cade7f2c", null ],
     [ "GetCellNumNodes", "da/d2b/class_spatial_discretization.html#a22ea628621cfcbf2e1de0a3fca9b4e0f", null ],
     [ "GetNumGlobalDOFs", "da/d2b/class_spatial_discretization.html#a7a9160398a1e24dff8746647d19ed0a8", null ],
     [ "GetNumLocalDOFs", "da/d2b/class_spatial_discretization.html#a7c4464f1f7495fcda44f81330c818ffe", null ],

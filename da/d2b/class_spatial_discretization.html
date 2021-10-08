@@ -124,6 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7a9160398a1e24dff8746647d19ed0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22ea628621cfcbf2e1de0a3fca9b4e0f"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#a22ea628621cfcbf2e1de0a3fca9b4e0f">GetCellNumNodes</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell) const =0</td></tr>
 <tr class="separator:a22ea628621cfcbf2e1de0a3fca9b4e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731f951add8638fb54ea6e14cade7f2c"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2b/class_spatial_discretization.html#a731f951add8638fb54ea6e14cade7f2c">GetCellNodeLocations</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell) const =0</td></tr>
+<tr class="separator:a731f951add8638fb54ea6e14cade7f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -152,7 +154,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00011">11</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00012">12</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a40c4cadaab0ba12e0ede03f1b802d901"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40c4cadaab0ba12e0ede03f1b802d901">&#9670;&nbsp;</a></span>SDMType</h2>
@@ -174,7 +176,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00021">21</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00022">22</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -225,7 +227,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00026">26</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00027">27</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -272,7 +274,35 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a089fe89ddf9aca2dae990748e73158f8">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#ab3f3e7efcae9ae9c1e7fb114325f5e13">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#a2c19cbdccee75aba0bb32c0a5539d5aa">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00043">43</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00044">44</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+
+</div>
+</div>
+<a id="a731f951add8638fb54ea6e14cade7f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731f951add8638fb54ea6e14cade7f2c">&#9670;&nbsp;</a></span>GetCellNodeLocations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;<a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>&gt; SpatialDiscretization::GetCellNodeLocations </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a0ac42668e92ae850252e37fd5bf39377">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a82e8d8f4eeb7411d673256f22bf28a75">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#ae791800a1e8ee8f74f4be29535cd3a60">SpatialDiscretization_PWLD</a>.</p>
 
 </div>
 </div>
@@ -330,7 +360,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a2022ba8796d99efbe6aace8512d05c7d">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#aacdfda609d452467efcf692feb6c8d15">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#ac54ce8b6a7c9e4e83ec0f48c871336cb">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00071">71</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00072">72</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -360,7 +390,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a065ad1d2a32522801dd47b6b7105c3b7">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#af3ac4d3cbb302fccee59bf6e4bb455be">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#ad91d6e3387b6f2dbc9948424ea33bdbe">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00068">68</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00069">69</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -407,7 +437,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a7d409700a8e544e59c52cbd02814407f">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a115b36152ab6672b02135a48add1cff8">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#a9f2c2cd8985fbe5fcdfd4c0cd911eb3e">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00082">82</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00087">87</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -447,7 +477,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a8775581a5bd71f1257d1009bb5da7760">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a1d820ff329db29670f13b620f86d3839">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#a74f22ccfc77d1d3bf2059cc7188d480a">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00063">63</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00064">64</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -505,7 +535,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a02d0cbd1c72b52d4a347a1d405361e37">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#ae0cb413899e368a0656a57b79c3b5666">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#ad9e54fdfc3de4c6942ff1125df864d1c">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00049">49</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00050">50</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -545,7 +575,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a999544ad0ff46bbff848af3179935860">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a0a36625adbf3ed7d50ef7d0b353f8c55">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#af7a0c71e990e59d8087e77eba42c3714">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00065">65</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00066">66</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -603,7 +633,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a26af18659e1b86ad10852fc00d984cbf">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#a964c55429ce594238f16befe07c453bf">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#a604bfd9417ceafe6b3d52d7bc3b408f5">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00056">56</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00057">57</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -632,7 +662,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a6156810c6c520844fca68a77cb112b96">SpatialDiscretization_FV</a>, <a class="el" href="../../d5/d33/class_spatial_discretization___p_w_l_c.html#ad497bc8da02192aa48fdd565491ac304">SpatialDiscretization_PWLC</a>, and <a class="el" href="../../d9/dd4/class_spatial_discretization___p_w_l_d.html#ae1e523184541403a1bdf4b4f5a6b7e85">SpatialDiscretization_PWLD</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00039">39</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00040">40</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -649,7 +679,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00018">18</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00019">19</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -665,7 +695,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00014">14</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00015">15</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -681,7 +711,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00017">17</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00018">18</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>
@@ -697,7 +727,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00015">15</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html#l00016">16</a> of file <a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">spatial_discretization.h</a>.</p>
 
 </div>
 </div>

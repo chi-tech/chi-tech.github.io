@@ -152,7 +152,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01394">1394</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01400">1400</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -212,7 +212,7 @@ Functions</h2></td></tr>
 <div class="line">fflist,count = <a class="code" href="../../d7/d08/group___lua_n_p_t.html#ga5d938e5ed990f5c34953f0d6928cbbf4">chiLBSGetScalarFieldFunctionList</a>(phys1)</div>
 </div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01736">1736</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01742">1742</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -272,7 +272,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01762">1762</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01768">1768</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -327,7 +327,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>table,count Returns an array of handles and the amount of elements in it (indexed from 1).</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01705">1705</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01711">1711</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -384,7 +384,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>table,count Returns an array of handles and the amount of elements in it (indexed from 1).</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01714">1714</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01720">1720</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -439,7 +439,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01696">1696</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01702">1702</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -524,7 +524,10 @@ READ_RESTART_DATA<br  />
  Indicates the writing of restart data to restart files. The value can be followed by two optional strings and a number optional strings. The first string is the folder name which can be relative or absolute, and the second string is the file base name. The number is the time interval (in minutes) for a restart write to be triggered (apart from GMRES restarts and the conclusion of groupset completions) .These are defaulted to "YRestart", "restart" and 30 minutes respectively.<br  />
 <br  />
 </p><div class="fragment"><div class="line"><a class="code" href="../../d7/d08/group___lua_n_p_t.html#ga0ff2334b7745f760ecdfbf378b668841">chiLBSSetProperty</a>(phys1,<a class="code" href="../../d6/de0/lbs__setproperty_8cc.html#acc2e73fae9358d58a018f902aa1996b5">WRITE_RESTART_DATA</a>,<span class="stringliteral">&quot;YRestart1&quot;</span>,<span class="stringliteral">&quot;restart&quot;</span>,1)</div>
-</div><!-- fragment --> <h3>Discretization methods</h3>
+</div><!-- fragment --><p> FACE_COSINE_TOLERANCE<br  />
+ Cell dependencies are determined by the cosine formed between the face normal and the sweep angle, omega. If this cosine is zero then there is no dependency, however, machine precision can lead to an inconsistency between incoming and outgoing faces and therefore this tolerance allows us to ignore faces with a cosine within a tolerance of zero. Default: 1.0e-12<br  />
+<br  />
+</p><h3>Discretization methods</h3>
 <p>PWLD2D = Piecewise Linear Finite Element 2D.<br  />
  PWLD3D = Piecewise Linear Finite Element 3D. </p><h3>Partitioning methods</h3>
 <p>SERIAL = No multi-processing.<br  />
@@ -550,7 +553,7 @@ LBSBoundaryTypes.REFLECTING<br  />
 Reflecting boundary condition. Beware, when opposing reflecting boundary conditions are used this enduces a cyclic dependency which will increase the iteration convergence behavior. </p><h3>Note on the Eager limit</h3>
 <p>The eager limit is the message size limit before which non-blocking MPI send calls will execute without waiting for a matching receive call. The limit is platform dependent but in general 64 kb. Some systems have 32 kb as a limit and therefore we use that as a default limit in <a class="el" href="../../d5/d49/class_chi_tech.html">ChiTech</a>. There is a fine interplay between message size and the shear amount of messages that will be sent. In general smaller messages tend to be more efficient, however, when there are too many small messages being sent around the communication system on the given platform will start to suffer. One can gain a small amount of parallel efficiency by lowering this limit, however, there is a point where the parallel efficiency will actually get worse so use with caution. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01387">1387</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01393">1393</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -598,7 +601,10 @@ Reflecting boundary condition. Beware, when opposing reflecting boundary conditi
  Indicates the writing of restart data to restart files. The value can be followed by two optional strings and a number optional strings. The first string is the folder name which can be relative or absolute, and the second string is the file base name. The number is the time interval (in minutes) for a restart write to be triggered (apart from GMRES restarts and the conclusion of groupset completions) .These are defaulted to "YRestart", "restart" and 30 minutes respectively.<br  />
 <br  />
  </p><div class="fragment"><div class="line"><a class="code" href="../../d7/d08/group___lua_n_p_t.html#ga832b6ad37f811083c99935234e834359">chiLBSSetProperty</a>(phys1,<a class="code" href="../../d6/de0/lbs__setproperty_8cc.html#acc2e73fae9358d58a018f902aa1996b5">WRITE_RESTART_DATA</a>,<span class="stringliteral">&quot;YRestart1&quot;</span>,<span class="stringliteral">&quot;restart&quot;</span>,1)</div>
-</div><!-- fragment --><h3>Discretization methods</h3>
+</div><!-- fragment --><p>FACE_COSINE_TOLERANCE<br  />
+ Cell dependencies are determined by the cosine formed between the face normal and the sweep angle, omega. If this cosine is zero then there is no dependency, however, machine precision can lead to an inconsistency between incoming and outgoing faces and therefore this tolerance allows us to ignore faces with a cosine within a tolerance of zero. Default: 1.0e-12<br  />
+<br  />
+ </p><h3>Discretization methods</h3>
 <p>PWLD2D = Piecewise Linear Finite Element 2D.<br  />
  PWLD3D = Piecewise Linear Finite Element 3D.</p>
 <h3>Partitioning methods</h3>
@@ -627,28 +633,28 @@ Reflecting boundary condition. Beware, when opposing reflecting boundary conditi
 <h3>Note on the Eager limit</h3>
 <p>The eager limit is the message size limit before which non-blocking MPI send calls will execute without waiting for a matching receive call. The limit is platform dependent but in general 64 kb. Some systems have 32 kb as a limit and therefore we use that as a default limit in <a class="el" href="../../d5/d49/class_chi_tech.html">ChiTech</a>. There is a fine interplay between message size and the shear amount of messages that will be sent. In general smaller messages tend to be more efficient, however, when there are too many small messages being sent around the communication system on the given platform will start to suffer. One can gain a small amount of parallel efficiency by lowering this limit, however, there is a point where the parallel efficiency will actually get worse so use with caution. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00139">139</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html#l00151">151</a> of file <a class="el" href="../../d6/de0/lbs__setproperty_8cc_source.html">lbs_setproperty.cc</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup___lua_n_p_t_html_ga0ff2334b7745f760ecdfbf378b668841"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga0ff2334b7745f760ecdfbf378b668841">chi_lua::chiLBSSetProperty</a></div><div class="ttdeci">int chiLBSSetProperty(int SolverIndex, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01387">lua_functions.c:1387</a></div></div>
-<div class="ttc" id="agroup___lua_n_p_t_html_ga5d938e5ed990f5c34953f0d6928cbbf4"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga5d938e5ed990f5c34953f0d6928cbbf4">chi_lua::chiLBSGetScalarFieldFunctionList</a></div><div class="ttdeci">int chiLBSGetScalarFieldFunctionList(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01714">lua_functions.c:1714</a></div></div>
+<div class="ttc" id="agroup___lua_n_p_t_html_ga0ff2334b7745f760ecdfbf378b668841"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga0ff2334b7745f760ecdfbf378b668841">chi_lua::chiLBSSetProperty</a></div><div class="ttdeci">int chiLBSSetProperty(int SolverIndex, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01393">lua_functions.c:1393</a></div></div>
+<div class="ttc" id="agroup___lua_n_p_t_html_ga5d938e5ed990f5c34953f0d6928cbbf4"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga5d938e5ed990f5c34953f0d6928cbbf4">chi_lua::chiLBSGetScalarFieldFunctionList</a></div><div class="ttdeci">int chiLBSGetScalarFieldFunctionList(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01720">lua_functions.c:1720</a></div></div>
 <div class="ttc" id="albs__setproperty_8cc_html_a1d460cb2d88c4fd32ad24d3186efd4a1"><div class="ttname"><a href="../../d6/de0/lbs__setproperty_8cc.html#a1d460cb2d88c4fd32ad24d3186efd4a1">PWLD3D</a></div><div class="ttdeci">#define PWLD3D</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de0/lbs__setproperty_8cc_source.html#l00014">lbs_setproperty.cc:14</a></div></div>
 <div class="ttc" id="albs__setproperty_8cc_html_ae193790426d8cb51a6acff87b17ccb81"><div class="ttname"><a href="../../d6/de0/lbs__setproperty_8cc.html#ae193790426d8cb51a6acff87b17ccb81">DISCRETIZATION_METHOD</a></div><div class="ttdeci">#define DISCRETIZATION_METHOD</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de0/lbs__setproperty_8cc_source.html#l00010">lbs_setproperty.cc:10</a></div></div>
-<div class="ttc" id="agroup___lua_n_p_t_html_ga64539ea4595365ed48c1e8458028c443"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga64539ea4595365ed48c1e8458028c443">chi_lua::chiLBSInitialize</a></div><div class="ttdeci">int chiLBSInitialize(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01696">lua_functions.c:1696</a></div></div>
+<div class="ttc" id="agroup___lua_n_p_t_html_ga64539ea4595365ed48c1e8458028c443"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga64539ea4595365ed48c1e8458028c443">chi_lua::chiLBSInitialize</a></div><div class="ttdeci">int chiLBSInitialize(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01702">lua_functions.c:1702</a></div></div>
 <div class="ttc" id="agroup___lua_n_p_t_html_ga8edc85d01505fc5ae4210eaab19f1bd5"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga8edc85d01505fc5ae4210eaab19f1bd5">chiLBSGetScalarFieldFunctionList</a></div><div class="ttdeci">int chiLBSGetScalarFieldFunctionList(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dd9/lbs__getfieldfuncs_8cc_source.html#l00081">lbs_getfieldfuncs.cc:81</a></div></div>
 <div class="ttc" id="agroup___lua_n_p_t_html_ga27dc6ff63724ffdb814ac17788a4ba64"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga27dc6ff63724ffdb814ac17788a4ba64">chiLBSInitialize</a></div><div class="ttdeci">int chiLBSInitialize(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d5d/lbs__initialize_8cc_source.html#l00016">lbs_initialize.cc:16</a></div></div>
 <div class="ttc" id="agroup___lua_n_p_t_html_gac22fe79ba9c36650efcea56e11305751"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#gac22fe79ba9c36650efcea56e11305751">chiLBSCreateSolver</a></div><div class="ttdeci">int chiLBSCreateSolver(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1c/lbs__solvercreate_8cc_source.html#l00035">lbs_solvercreate.cc:35</a></div></div>
 <div class="ttc" id="albs__setproperty_8cc_html_a669d29634179bbc582fbcfe94f46f555"><div class="ttname"><a href="../../d6/de0/lbs__setproperty_8cc.html#a669d29634179bbc582fbcfe94f46f555">READ_RESTART_DATA</a></div><div class="ttdeci">#define READ_RESTART_DATA</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de0/lbs__setproperty_8cc_source.html#l00028">lbs_setproperty.cc:28</a></div></div>
-<div class="ttc" id="agroup___lua_n_p_t_html_gaa8ecbfc58922b856b87105c25a14ac1e"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#gaa8ecbfc58922b856b87105c25a14ac1e">chi_lua::chiLBSCreateSolver</a></div><div class="ttdeci">int chiLBSCreateSolver()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01736">lua_functions.c:1736</a></div></div>
-<div class="ttc" id="agroup___lua_n_p_t_html_ga832b6ad37f811083c99935234e834359"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga832b6ad37f811083c99935234e834359">chiLBSSetProperty</a></div><div class="ttdeci">int chiLBSSetProperty(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de0/lbs__setproperty_8cc_source.html#l00139">lbs_setproperty.cc:139</a></div></div>
+<div class="ttc" id="agroup___lua_n_p_t_html_gaa8ecbfc58922b856b87105c25a14ac1e"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#gaa8ecbfc58922b856b87105c25a14ac1e">chi_lua::chiLBSCreateSolver</a></div><div class="ttdeci">int chiLBSCreateSolver()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01742">lua_functions.c:1742</a></div></div>
+<div class="ttc" id="agroup___lua_n_p_t_html_ga832b6ad37f811083c99935234e834359"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga832b6ad37f811083c99935234e834359">chiLBSSetProperty</a></div><div class="ttdeci">int chiLBSSetProperty(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de0/lbs__setproperty_8cc_source.html#l00151">lbs_setproperty.cc:151</a></div></div>
 <div class="ttc" id="agroup___lua_solver_html_gab5fe2a50838ea4c4f573979d6d7540e4"><div class="ttname"><a href="../../dc/d4e/group___lua_solver.html#gab5fe2a50838ea4c4f573979d6d7540e4">chi_lua::chiSolverAddRegion</a></div><div class="ttdeci">int chiSolverAddRegion(int SolverHandle, int RegionHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01172">lua_functions.c:1172</a></div></div>
 <div class="ttc" id="albs__setproperty_8cc_html_acc2e73fae9358d58a018f902aa1996b5"><div class="ttname"><a href="../../d6/de0/lbs__setproperty_8cc.html#acc2e73fae9358d58a018f902aa1996b5">WRITE_RESTART_DATA</a></div><div class="ttdeci">#define WRITE_RESTART_DATA</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de0/lbs__setproperty_8cc_source.html#l00030">lbs_setproperty.cc:30</a></div></div>
 <div class="ttc" id="agroup___lua_n_p_t_html_ga25fc61982936e5a9829ab6f3c664c75e"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga25fc61982936e5a9829ab6f3c664c75e">chiLBSExecute</a></div><div class="ttdeci">int chiLBSExecute(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/def/lbs__execute_8cc_source.html#l00015">lbs_execute.cc:15</a></div></div>
 <div class="ttc" id="albs__setproperty_8cc_html_a5f35e03e81d8e3a3c0afa6153e0edc60"><div class="ttname"><a href="../../d6/de0/lbs__setproperty_8cc.html#a5f35e03e81d8e3a3c0afa6153e0edc60">SCATTERING_ORDER</a></div><div class="ttdeci">#define SCATTERING_ORDER</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de0/lbs__setproperty_8cc_source.html#l00024">lbs_setproperty.cc:24</a></div></div>
-<div class="ttc" id="agroup___lua_n_p_t_html_ga4325f93255469d8c33115055a0a41964"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga4325f93255469d8c33115055a0a41964">chi_lua::chiLBSExecute</a></div><div class="ttdeci">int chiLBSExecute(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01762">lua_functions.c:1762</a></div></div>
+<div class="ttc" id="agroup___lua_n_p_t_html_ga4325f93255469d8c33115055a0a41964"><div class="ttname"><a href="../../d7/d08/group___lua_n_p_t.html#ga4325f93255469d8c33115055a0a41964">chi_lua::chiLBSExecute</a></div><div class="ttdeci">int chiLBSExecute(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01768">lua_functions.c:1768</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

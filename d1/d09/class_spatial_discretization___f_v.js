@@ -1,7 +1,9 @@
 var class_spatial_discretization___f_v =
 [
     [ "SpatialDiscretization_FV", "d1/d09/class_spatial_discretization___f_v.html#ad5483839ad210e0a54401fbc06335454", null ],
+    [ "~SpatialDiscretization_FV", "d1/d09/class_spatial_discretization___f_v.html#a9405f21f0257655800beb6422703597a", null ],
     [ "BuildSparsityPattern", "d1/d09/class_spatial_discretization___f_v.html#a089fe89ddf9aca2dae990748e73158f8", null ],
+    [ "GetCellNodeLocations", "d1/d09/class_spatial_discretization___f_v.html#a0ac42668e92ae850252e37fd5bf39377", null ],
     [ "GetCellNumNodes", "d1/d09/class_spatial_discretization___f_v.html#acf16f54ae31172517759cd17ffa23dd2", null ],
     [ "GetGhostDOFIndices", "d1/d09/class_spatial_discretization___f_v.html#a29a2e74db29e41881eaea95de06e8510", null ],
     [ "GetNumGhostDOFs", "d1/d09/class_spatial_discretization___f_v.html#abe0fd6ab80883cc671b7082f96ca3c2a", null ],

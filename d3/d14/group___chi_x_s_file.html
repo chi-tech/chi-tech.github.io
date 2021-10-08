@@ -139,10 +139,12 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <li>NU_BEGIN. Optional. Starts a block that is terminated by a line NU_END. Each line in the block processes the first two words as [Group, nu]. Populates the nu field. Upon completing the file processing the nu_sigma_fg field gets populated from the product of nu and sigma_fg. Symbol <img class="formulaInl" alt="$ \nu_g $" src="../../form_133.png" width="14" height="12"/>.</li>
 <li>NU_PROMPT_BEGIN. Optional. Starts a block that is terminated by a line NU_PROMPT_END. Each line in the block processes the first two words as [Group, nu]. Populates the nu_prompt field. Upon completing the file processing the nu_p_sigma_fg field gets populated from the product of nu_prompt and sigma_fg. Symbol <img class="formulaInl" alt="$ \nu_{prompt,g} $" src="../../form_134.png" width="56" height="12"/>.</li>
 <li>NU_DELAYED_BEGIN. Optional. Starts a block that is terminated by a line NU_DELAYED_END. Each line in the block processes the first two words as [Group, nu]. Populates the nu_delayed field. Upon completing the file processing the nu_d_sigma_fg field gets populated from the product of nu_delayed and sigma_fg. Symbol <img class="formulaInl" alt="$ \nu_{delayed,g} $" src="../../form_135.png" width="57" height="12"/>.</li>
-<li>CHI_PROMPT_BEGIN. Optional. Starts a block that is terminated by a line CHI_PROMPT_END. Each line in the block processes the first two words as [Group, chi]. Populates the chi_g field. Symbol <img class="formulaInl" alt="$ \chi_{g} $" src="../../form_136.png" width="17" height="12"/>.</li>
-<li>DDT_COEFF_BEGIN. Optional. Starts a block that is terminated by a line DDT_COEFF_END. Each line in the block processes the first two words as [Group, ddt_coeff]. Populates the ddt_coeff field. Symbol <img class="formulaInl" alt="$ \frac{1}{v_g} $" src="../../form_137.png" width="15" height="23"/>.</li>
+<li>CHI_BEGIN. Optional. Starts a block that is terminated by a line CHI_END. Each line in the block processes the first two words as [Group, chi]. Populates the chi field. Symbol <img class="formulaInl" alt="$ \chi_{g} $" src="../../form_136.png" width="17" height="12"/>.</li>
+<li>CHI_PROMPT_BEGIN. Optional. Starts a block that is terminated by a line CHI_PROMPT_END. Each line in the block processes the first two words as [Group, chi]. Populates the chi_prompt field. Symbol <img class="formulaInl" alt="$ \chi_{prompt, g} $" src="../../form_144.png" width="60" height="12"/>.</li>
+<li>VELOCITY_BEGIN. Optional. Starts a block that is terminated by a line VELOCITY_END. Each line in the block processes the first two words as [Group, velocity]. Populates the inv_velocity field by inverting parsed values. Symbol <img class="formulaInl" alt="$ \frac{1}{v_g} $" src="../../form_137.png" width="15" height="23"/>.</li>
+<li>INV_VELOCITY_BEGIN. Optional. Starts a block that is terminated by a line INV_VELOCITY_END. Each line in the block processes the first two words as [Group, inv_velocity]. Populates the inv_velocity field. Symbol <img class="formulaInl" alt="$ \frac{1}{v_g} $" src="../../form_137.png" width="15" height="23"/>.</li>
 <li>PRECURSOR_LAMBDA_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_LAMBDA_END. Each line in the block processes the first two words as [precursor, lambda]. Populates the lambda field (the precursor decay constant). Symbol <img class="formulaInl" alt="$ \lambda_j $" src="../../form_138.png" width="14" height="17"/>.</li>
-<li>PRECURSOR_GAMMA_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_GAMMA_END. Each line in the block processes the first two words as [precursor, gamma]. Populates the gamma field (the precursor production fraction per fission). Symbol <img class="formulaInl" alt="$ \gamma_j $" src="../../form_139.png" width="14" height="12"/>.</li>
+<li>PRECURSOR_YIELD_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_YIELD_END. Each line in the block processes the first two words as [precursor, gamma]. Populates the gamma field (the precursor production fraction per fission). Symbol <img class="formulaInl" alt="$ \gamma_j $" src="../../form_139.png" width="14" height="12"/>.</li>
 <li>CHI_DELAYED_BEGIN. Optional. Starts a block that is terminated by a line CHI_DELAYED_END. Each line in the block processes the first word as the group index and the remaining NUM_PRECURSORS words as the the individual precursor's associated delayed spectrum (chi). Populates the chi_d field. Symbol <img class="formulaInl" alt="$ \chi_{delayed,jg} $" src="../../form_141.png" width="66" height="12"/>.</li>
 <li>TRANSFER_MOMENTS_BEGIN. Optional. Starts a block that is terminated by a line TRANSFER_MOMENTS_END. Each line in the block processes a line only if it starts with the keyword M_GPRIME_G_VAL which needs to be followed by four values [moment,gprime,g,value]. Populates transfer-matrix for moment m, row g, column gprime, with value. Symbol <img class="formulaInl" alt="$ \sigma_{s\ell,g'{\to}g} $" src="../../form_126.png" width="51" height="12"/>.</li>
 </ul>
@@ -166,7 +168,6 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <div class="line"> </div>
 <div class="line">Comments</div>
 <div class="line"> </div>
-<div class="line"> </div>
 <div class="line">SIGMA_F_BEGIN</div>
 <div class="line">0   0.01</div>
 <div class="line">1   0.40737</div>
@@ -176,17 +177,16 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <div class="line">0    2.45</div>
 <div class="line">1    2.45</div>
 <div class="line">NU_PROMPT_END</div>
+<div class="line"> </div>
 <div class="line">CHI_PROMPT_BEGIN</div>
 <div class="line">0    1.0</div>
 <div class="line">1    0.0</div>
 <div class="line">CHI_PROMPT_END</div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor"># 1/v terms</span></div>
-<div class="line">DDT_COEFF_BEGIN</div>
-<div class="line">0    4.5454e-10   #1/2.2e10</div>
-<div class="line">1    3.6745e-3</div>
-<div class="line">DDT_COEFF_END</div>
-<div class="line"> </div>
+<div class="line">VELOCITY_BEGIN</div>
+<div class="line">0    2.2e10</div>
+<div class="line">1    272.145</div>
+<div class="line">VELOCITY_END</div>
 <div class="line"> </div>
 <div class="line">TRANSFER_MOMENTS_BEGIN</div>
 <div class="line"><span class="preprocessor">#Zeroth moment (l=0)</span></div>
@@ -205,16 +205,19 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <div class="line">1   0.2</div>
 <div class="line">2   0.3</div>
 <div class="line">PRECURSOR_LAMBDA_END</div>
+<div class="line"> </div>
 <div class="line">PRECURSOR_GAMMA_BEGIN</div>
 <div class="line">0   0.25</div>
 <div class="line">1   0.5</div>
 <div class="line">2   0.25</div>
 <div class="line">PRECURSOR_GAMMA_END</div>
+<div class="line"> </div>
 <div class="line">NU_DELAYED_BEGIN</div>
 <div class="line">0   0.01</div>
 <div class="line">1   0.02</div>
 <div class="line">2   0.01</div>
 <div class="line">NU_DELAYED_END</div>
+<div class="line"> </div>
 <div class="line">CHI_DELAYED_BEGIN</div>
 <div class="line">G_PRECURSORJ_VAL 0  0 1.0</div>
 <div class="line">G_PRECURSORJ_VAL 0  1 1.0</div>

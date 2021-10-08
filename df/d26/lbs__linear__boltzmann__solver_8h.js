@@ -14,7 +14,8 @@ var lbs__linear__boltzmann__solver_8h =
       [ "APPLY_MATERIAL_SOURCE", "df/d26/lbs__linear__boltzmann__solver_8h.html#ab6ed56e1138ade5b8ba649efda733c36a06e16ba225007726051da20b59d851ab", null ],
       [ "APPLY_WGS_SCATTER_SOURCE", "df/d26/lbs__linear__boltzmann__solver_8h.html#ab6ed56e1138ade5b8ba649efda733c36adc16e539388e35b93eeb1b2fe15d1e45", null ],
       [ "APPLY_AGS_SCATTER_SOURCE", "df/d26/lbs__linear__boltzmann__solver_8h.html#ab6ed56e1138ade5b8ba649efda733c36a66f32295202bba81426811b6908df77c", null ],
-      [ "APPLY_FISSION_SOURCE", "df/d26/lbs__linear__boltzmann__solver_8h.html#ab6ed56e1138ade5b8ba649efda733c36a82ae27e0280e6d4c6234aacce43dacb7", null ]
+      [ "APPLY_WGS_FISSION_SOURCE", "df/d26/lbs__linear__boltzmann__solver_8h.html#ab6ed56e1138ade5b8ba649efda733c36a4d7c129e57244c467622dc558be68f9e", null ],
+      [ "APPLY_AGS_FISSION_SOURCE", "df/d26/lbs__linear__boltzmann__solver_8h.html#ab6ed56e1138ade5b8ba649efda733c36ac819fd0aff1374503c5e924570c95695", null ]
     ] ],
     [ "operator|", "df/d26/lbs__linear__boltzmann__solver_8h.html#a228c229ac772ca678ae62445b6d0ba1a", null ]
 ];

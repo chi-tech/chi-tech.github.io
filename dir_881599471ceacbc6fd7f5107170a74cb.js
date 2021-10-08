@@ -1,6 +1,7 @@
 var dir_881599471ceacbc6fd7f5107170a74cb =
 [
     [ "ChiConsole", "dir_39c325140f224528f8bddaed75cd534f.html", "dir_39c325140f224528f8bddaed75cd534f" ],
+    [ "ChiDataTypes", "dir_e7c597ffdb9298371f960226d3e3e2c8.html", "dir_e7c597ffdb9298371f960226d3e3e2c8" ],
     [ "ChiGraph", "dir_99afb48a394876214987dac0079f1807.html", "dir_99afb48a394876214987dac0079f1807" ],
     [ "ChiLog", "dir_3d6d93b03273d88ea349554336069b1f.html", "dir_3d6d93b03273d88ea349554336069b1f" ],
     [ "ChiMath", "dir_b38d3186440610780b535c2057083989.html", "dir_b38d3186440610780b535c2057083989" ],

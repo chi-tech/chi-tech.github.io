@@ -1,5 +1,6 @@
 var namespaces_dup =
 [
+    [ "chi_data_types", "d5/d1b/namespacechi__data__types.html", null ],
     [ "chi_diffusion", "de/d73/namespacechi__diffusion.html", null ],
     [ "chi_graph", "d3/d00/namespacechi__graph.html", null ],
     [ "chi_lua", "d8/dd9/namespacechi__lua.html", null ],

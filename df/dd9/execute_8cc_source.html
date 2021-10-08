@@ -89,63 +89,48 @@ $(document).ready(function(){initNavTree('df/dd9/execute_8cc_source.html','../..
 <a href="../../df/dd9/execute_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;ChiLua/chi_lua.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../k_eigenvalue_solver.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d54/chi__physics_8h.html">ChiPhysics/chi_physics.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a>&amp;  <a class="code" href="../../df/dd9/execute_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../df/dd9/execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d7/d19/namespace_linear_boltzmann.html">LinearBoltzmann</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/**Executes the k-eigenvalue solver.*/</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../df/dd9/execute_8cc.html#a7d5673b8e586cfa2c31c9d3ad2274202">   15</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/dd9/execute_8cc.html#a7d5673b8e586cfa2c31c9d3ad2274202">chiKEigenvalueLBSExecute</a>(lua_State *L)</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L,1);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">//============================================= Get pointer to solver</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="../../d9/d3a/classchi__physics_1_1_solver.html">chi_physics::Solver</a>* psolver;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="../../d5/dd1/class_linear_boltzmann_1_1_k_eigenvalue_1_1_solver.html">KEigenvalue::Solver</a>* solver;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    psolver = <a class="code" href="../../df/dd9/execute_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a>.<a class="code" href="../../d8/d9a/class_chi_physics.html#a5eea4ecebd52f4289ed9edaab8936d37">solver_stack</a>.at(solver_index);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    solver = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d5/dd1/class_linear_boltzmann_1_1_k_eigenvalue_1_1_solver.html">KEigenvalue::Solver</a>*<span class="keyword">&gt;</span>(psolver);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (not solver)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <a class="code" href="../../df/dd9/execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>) &lt;&lt; <span class="stringliteral">&quot;chiLBSKEigenvalueExecute: Incorrect solver-type.&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                   <span class="stringliteral">&quot; Cannot cast to KEigenvalue::Solver\n&quot;</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">catch</span>(<span class="keyword">const</span> std::out_of_range&amp; o)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../df/dd9/execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a>) &lt;&lt; <span class="stringliteral">&quot;chiLBSKEigenvalueExecute: Invalid handle to solver\n&quot;</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  solver-&gt;<a class="code" href="../../d5/dd1/class_linear_boltzmann_1_1_k_eigenvalue_1_1_solver.html#a92b344a55db0078380dacfda0f7c7390">ExecuteKSolver</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d7/dd2/lua__utils_8h.html">lua_utils.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d54/chi__physics_8h.html">ChiPhysics/chi_physics.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a>&amp; <a class="code" href="../../df/dd9/execute_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code" href="../../df/dd9/execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/**Executes the k-eigenvalue solver.*/</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../df/dd9/execute_8cc.html#a7d5673b8e586cfa2c31c9d3ad2274202">   14</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/dd9/execute_8cc.html#a7d5673b8e586cfa2c31c9d3ad2274202">chiKEigenvalueLBSExecute</a>(lua_State* L)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">if</span> (num_args != 1)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    LuaPostArgAmountError(__FUNCTION__, 1, num_args);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  LuaCheckNilValue(__FUNCTION__, L, 1);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  LuaCheckIntegerValue(__FUNCTION__, L, 1);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">int</span> solver_index = lua_tonumber(L, 1);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="comment">//============================================= Get pointer to solver</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">auto</span> solver = <a class="code" href="../../dc/d09/namespace_linear_boltzmann_1_1lua__utils.html#a55339f7265234612ab2173e95c9876a2">LinearBoltzmann::lua_utils::</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="../../dc/d09/namespace_linear_boltzmann_1_1lua__utils.html#a55339f7265234612ab2173e95c9876a2">    GetKEigenvalueSolverByHandle</a>(solver_index, __FUNCTION__);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  solver-&gt;ExecuteKSolver();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_chi_physics_html_a5eea4ecebd52f4289ed9edaab8936d37"><div class="ttname"><a href="../../d8/d9a/class_chi_physics.html#a5eea4ecebd52f4289ed9edaab8936d37">ChiPhysics::solver_stack</a></div><div class="ttdeci">std::vector&lt; chi_physics::Solver * &gt; solver_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d54/chi__physics_8h_source.html#l00020">chi_physics.h:20</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_solver_html"><div class="ttname"><a href="../../d9/d3a/classchi__physics_1_1_solver.html">chi_physics::Solver</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/chi__solver_8h_source.html#l00014">chi_solver.h:15</a></div></div>
+<div class="ttc" id="alua__utils_8h_html"><div class="ttname"><a href="../../d7/dd2/lua__utils_8h.html">lua_utils.h</a></div></div>
 <div class="ttc" id="aclass_chi_physics_html"><div class="ttname"><a href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d54/chi__physics_8h_source.html#l00014">chi_physics.h:15</a></div></div>
 <div class="ttc" id="aexecute_8cc_html_a87694d946c53737d94052d065be89b53"><div class="ttname"><a href="../../df/dd9/execute_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a></div><div class="ttdeci">ChiPhysics &amp; chi_physics_handler</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00030">chi_runtime.cc:30</a></div></div>
-<div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a></div><div class="ttdeci">@ LOG_ALLERROR</div><div class="ttdoc">Error for any location.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00017">chi_log.h:17</a></div></div>
-<div class="ttc" id="anamespace_linear_boltzmann_html"><div class="ttname"><a href="../../d7/d19/namespace_linear_boltzmann.html">LinearBoltzmann</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/ddd/k__eigenvalue__solver_8h_source.html#l00009">k_eigenvalue_solver.h:9</a></div></div>
 <div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_ac2d1869abb6b7dd125a89ea20b977dbc"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00028">chi_log.cc:28</a></div></div>
 <div class="ttc" id="aexecute_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../df/dd9/execute_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
 <div class="ttc" id="achi__physics_8h_html"><div class="ttname"><a href="../../d8/d54/chi__physics_8h.html">chi_physics.h</a></div></div>
-<div class="ttc" id="aclass_linear_boltzmann_1_1_k_eigenvalue_1_1_solver_html"><div class="ttname"><a href="../../d5/dd1/class_linear_boltzmann_1_1_k_eigenvalue_1_1_solver.html">LinearBoltzmann::KEigenvalue::Solver</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/ddd/k__eigenvalue__solver_8h_source.html#l00013">k_eigenvalue_solver.h:14</a></div></div>
-<div class="ttc" id="aclass_linear_boltzmann_1_1_k_eigenvalue_1_1_solver_html_a92b344a55db0078380dacfda0f7c7390"><div class="ttname"><a href="../../d5/dd1/class_linear_boltzmann_1_1_k_eigenvalue_1_1_solver.html#a92b344a55db0078380dacfda0f7c7390">LinearBoltzmann::KEigenvalue::Solver::ExecuteKSolver</a></div><div class="ttdeci">void ExecuteKSolver()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d67/execute__k__solver_8cc_source.html#l00015">execute_k_solver.cc:15</a></div></div>
-<div class="ttc" id="aexecute_8cc_html_a7d5673b8e586cfa2c31c9d3ad2274202"><div class="ttname"><a href="../../df/dd9/execute_8cc.html#a7d5673b8e586cfa2c31c9d3ad2274202">chiKEigenvalueLBSExecute</a></div><div class="ttdeci">int chiKEigenvalueLBSExecute(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd9/execute_8cc_source.html#l00015">execute.cc:15</a></div></div>
+<div class="ttc" id="anamespace_linear_boltzmann_1_1lua__utils_html_a55339f7265234612ab2173e95c9876a2"><div class="ttname"><a href="../../dc/d09/namespace_linear_boltzmann_1_1lua__utils.html#a55339f7265234612ab2173e95c9876a2">LinearBoltzmann::lua_utils::GetKEigenvalueSolverByHandle</a></div><div class="ttdeci">LinearBoltzmann::KEigenvalue::Solver * GetKEigenvalueSolverByHandle(int handle, const std::string &amp;calling_function_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/ddb/lua__utils_8cc_source.html#l00006">lua_utils.cc:7</a></div></div>
+<div class="ttc" id="aexecute_8cc_html_a7d5673b8e586cfa2c31c9d3ad2274202"><div class="ttname"><a href="../../df/dd9/execute_8cc.html#a7d5673b8e586cfa2c31c9d3ad2274202">chiKEigenvalueLBSExecute</a></div><div class="ttdeci">int chiKEigenvalueLBSExecute(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd9/execute_8cc_source.html#l00014">execute.cc:14</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

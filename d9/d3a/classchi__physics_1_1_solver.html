@@ -84,9 +84,10 @@ $(document).ready(function(){initNavTree('d9/d3a/classchi__physics_1_1_solver.ht
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a>  </div>
+<a href="#pub-attribs">Data Fields</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
-<div class="title">chi_physics::Solver Class Reference</div>  </div>
+<div class="title">chi_physics::Solver Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -106,24 +107,105 @@ Inheritance diagram for chi_physics::Solver:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a444193626cdbc621e06dfd4ad01fc35f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a444193626cdbc621e06dfd4ad01fc35f">Solver</a> (const std::string &amp;in_text_name)</td></tr>
+<tr class="separator:a444193626cdbc621e06dfd4ad01fc35f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8b3a3fce2bfa1d2b46c6248f8bfa9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a2b8b3a3fce2bfa1d2b46c6248f8bfa9b">Solver</a> (const std::string &amp;in_text_name, std::initializer_list&lt; <a class="el" href="../../d2/dd8/classchi__physics_1_1_basic_option.html">BasicOption</a> &gt; in_options)</td></tr>
+<tr class="separator:a2b8b3a3fce2bfa1d2b46c6248f8bfa9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ad4b37d7da845300fb6c80d11fa1b3b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a6ad4b37d7da845300fb6c80d11fa1b3b">~Solver</a> ()</td></tr>
 <tr class="separator:a6ad4b37d7da845300fb6c80d11fa1b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b087a92fd17788519515b5bd331d87b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a0b087a92fd17788519515b5bd331d87b">TextName</a> () const</td></tr>
+<tr class="separator:a0b087a92fd17788519515b5bd331d87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ed879cea25e00e88651995de0a34328"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a4ed879cea25e00e88651995de0a34328">AddRegion</a> (<a class="el" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a> *region)</td></tr>
 <tr class="separator:a4ed879cea25e00e88651995de0a34328"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa416dcd9ba22712272ebd0ec4414046d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#aa416dcd9ba22712272ebd0ec4414046d">Execute</a> ()</td></tr>
-<tr class="separator:aa416dcd9ba22712272ebd0ec4414046d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d0ce0ff45ec205b72ed871bc2b63ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a32d0ce0ff45ec205b72ed871bc2b63ce">Initialize</a> ()=0</td></tr>
+<tr class="separator:a32d0ce0ff45ec205b72ed871bc2b63ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c87ca4fe5e004c13ea5555df1cd672"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ac8c87ca4fe5e004c13ea5555df1cd672">Execute</a> ()=0</td></tr>
+<tr class="separator:ac8c87ca4fe5e004c13ea5555df1cd672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
+<tr class="memitem:a66605765e5c38fb04a5d8bf4d5906122"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d7c/classchi__physics_1_1_basic_options.html">BasicOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a66605765e5c38fb04a5d8bf4d5906122">basic_options</a></td></tr>
+<tr class="separator:a66605765e5c38fb04a5d8bf4d5906122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e88bba35bb5b67908a64fe5944db62a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d1/d9a/classchi__mesh_1_1_region.html">chi_mesh::Region</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a1e88bba35bb5b67908a64fe5944db62a">regions</a></td></tr>
 <tr class="separator:a1e88bba35bb5b67908a64fe5944db62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad89e44b9876d6f1158a5f53f29822a1f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">FieldFunction</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ad89e44b9876d6f1158a5f53f29822a1f">field_functions</a></td></tr>
 <tr class="separator:ad89e44b9876d6f1158a5f53f29822a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:abfc499e4991b1add613fca7a2ca93c74"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#abfc499e4991b1add613fca7a2ca93c74">text_name</a></td></tr>
+<tr class="separator:abfc499e4991b1add613fca7a2ca93c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00014">14</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00016">16</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a444193626cdbc621e06dfd4ad01fc35f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a444193626cdbc621e06dfd4ad01fc35f">&#9670;&nbsp;</a></span>Solver() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_physics::Solver::Solver </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>in_text_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00027">27</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
+
+</div>
+</div>
+<a id="a2b8b3a3fce2bfa1d2b46c6248f8bfa9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b8b3a3fce2bfa1d2b46c6248f8bfa9b">&#9670;&nbsp;</a></span>Solver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_physics::Solver::Solver </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>in_text_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="../../d2/dd8/classchi__physics_1_1_basic_option.html">BasicOption</a> &gt;&#160;</td>
+          <td class="paramname"><em>in_options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00028">28</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
+
+</div>
+</div>
 <a id="a6ad4b37d7da845300fb6c80d11fa1b3b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ad4b37d7da845300fb6c80d11fa1b3b">&#9670;&nbsp;</a></span>~Solver()</h2>
 
@@ -149,7 +231,7 @@ Data Fields</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d2/dc1/class_linear_boltzmann_1_1_solver.html#aa92852f843a89938093b3e1b61cd0006">LinearBoltzmann::Solver</a>, and <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a2de514bc22f33a4f896f9e2a94a6602c">chi_diffusion::Solver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00021">21</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00032">32</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
 
 </div>
 </div>
@@ -171,12 +253,12 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Adds a region to a solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d87/chi__solver__01__addregion_8cc_source.html#l00006">6</a> of file <a class="el" href="../../da/d87/chi__solver__01__addregion_8cc_source.html">chi_solver_01_addregion.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d87/chi__solver__01__addregion_8cc_source.html#l00005">5</a> of file <a class="el" href="../../da/d87/chi__solver__01__addregion_8cc_source.html">chi_solver_01_addregion.cc</a>.</p>
 
 </div>
 </div>
-<a id="aa416dcd9ba22712272ebd0ec4414046d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa416dcd9ba22712272ebd0ec4414046d">&#9670;&nbsp;</a></span>Execute()</h2>
+<a id="ac8c87ca4fe5e004c13ea5555df1cd672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c87ca4fe5e004c13ea5555df1cd672">&#9670;&nbsp;</a></span>Execute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +267,7 @@ Data Fields</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_physics::Solver::Execute </td>
+          <td class="memname">virtual void chi_physics::Solver::Execute </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -193,18 +275,86 @@ Data Fields</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d2/dc1/class_linear_boltzmann_1_1_solver.html#aa393816cd5341d41048d333ea6a81969">LinearBoltzmann::Solver</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/dc1/class_linear_boltzmann_1_1_solver.html#aa393816cd5341d41048d333ea6a81969">LinearBoltzmann::Solver</a>, and <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a9c851b93398bd7068ea7b7b37f125765">chi_diffusion::Solver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d68/chi__solver__02__execute_8cc_source.html#l00003">3</a> of file <a class="el" href="../../dd/d68/chi__solver__02__execute_8cc_source.html">chi_solver_02_execute.cc</a>.</p>
+</div>
+</div>
+<a id="a32d0ce0ff45ec205b72ed871bc2b63ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d0ce0ff45ec205b72ed871bc2b63ce">&#9670;&nbsp;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_physics::Solver::Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d2/dc1/class_linear_boltzmann_1_1_solver.html#a3e7bc3a311d5dd30dc72d10b7cf09a22">LinearBoltzmann::Solver</a>, <a class="el" href="../../d5/dd1/class_linear_boltzmann_1_1_k_eigenvalue_1_1_solver.html#a3dc35b6f7b9c6f38c6a622569e30531e">LinearBoltzmann::KEigenvalue::Solver</a>, and <a class="el" href="../../d6/d32/classchi__diffusion_1_1_solver.html#ab1521641f59b5e88b058557924f70840">chi_diffusion::Solver</a>.</p>
+
+</div>
+</div>
+<a id="a0b087a92fd17788519515b5bd331d87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b087a92fd17788519515b5bd331d87b">&#9670;&nbsp;</a></span>TextName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string chi_physics::Solver::TextName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00034">34</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="a66605765e5c38fb04a5d8bf4d5906122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66605765e5c38fb04a5d8bf4d5906122">&#9670;&nbsp;</a></span>basic_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d7c/classchi__physics_1_1_basic_options.html">BasicOptions</a> chi_physics::Solver::basic_options</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00021">21</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
+
+</div>
+</div>
 <a id="ad89e44b9876d6f1158a5f53f29822a1f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad89e44b9876d6f1158a5f53f29822a1f">&#9670;&nbsp;</a></span>field_functions</h2>
 
@@ -217,7 +367,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00018">18</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00023">23</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
 
 </div>
 </div>
@@ -233,14 +383,37 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00017">17</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00022">22</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
+
+</div>
+</div>
+<a id="abfc499e4991b1add613fca7a2ca93c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc499e4991b1add613fca7a2ca93c74">&#9670;&nbsp;</a></span>text_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string chi_physics::Solver::text_name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d54/chi__solver_8h_source.html#l00019">19</a> of file <a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>ChiTech/ChiPhysics/SolverBase/<a class="el" href="../../d7/d54/chi__solver_8h_source.html">chi_solver.h</a></li>
 <li>ChiTech/ChiPhysics/SolverBase/<a class="el" href="../../da/d87/chi__solver__01__addregion_8cc_source.html">chi_solver_01_addregion.cc</a></li>
-<li>ChiTech/ChiPhysics/SolverBase/<a class="el" href="../../dd/d68/chi__solver__02__execute_8cc_source.html">chi_solver_02_execute.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

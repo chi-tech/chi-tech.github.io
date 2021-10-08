@@ -13,6 +13,8 @@ var hierarchy =
       [ "chi_math::SimplifiedLDFESQ::Quadrature", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html", null ]
     ] ],
     [ "chi_math::SimplifiedLDFESQ::BaseFunctor", "de/dc6/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_base_functor.html", null ],
+    [ "chi_physics::BasicOption", "d2/dd8/classchi__physics_1_1_basic_option.html", null ],
+    [ "chi_physics::BasicOptions", "d1/d7c/classchi__physics_1_1_basic_options.html", null ],
     [ "chi_mesh::Boundary", "db/dc8/classchi__mesh_1_1_boundary.html", null ],
     [ "chi_diffusion::Boundary", "d7/dae/classchi__diffusion_1_1_boundary.html", [
       [ "chi_diffusion::BoundaryDirichlet", "de/d2e/classchi__diffusion_1_1_boundary_dirichlet.html", null ],
@@ -78,8 +80,8 @@ var hierarchy =
     [ "HexahedronMappingFE_PWL::FEnodeFaceMap", "d6/ddd/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_enode_face_map.html", null ],
     [ "PolyhedronMappingFE_PWL::FEnodeMap", "dd/d69/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_map.html", null ],
     [ "HexahedronMappingFE_PWL::FEnodeMap", "d9/db2/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_enode_map.html", null ],
-    [ "HexahedronMappingFE_PWL::FEnodeSideMap", "d5/dd4/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_enode_side_map.html", null ],
     [ "PolyhedronMappingFE_PWL::FEnodeSideMap", "dc/d9e/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_side_map.html", null ],
+    [ "HexahedronMappingFE_PWL::FEnodeSideMap", "d5/dd4/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_enode_side_map.html", null ],
     [ "HexahedronMappingFE_PWL::FEqp_data3d", "df/d07/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_eqp__data3d.html", null ],
     [ "PolygonMappingFE_PWL::FEside_data2d", "d1/dfa/struct_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d.html", null ],
     [ "HexahedronMappingFE_PWL::FEside_data3d", "d5/de2/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html", null ],
@@ -114,8 +116,8 @@ var hierarchy =
     [ "chi_math::finite_element::InternalQuadraturePointData", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html", [
       [ "chi_math::finite_element::FaceQuadraturePointData", "d5/df3/classchi__math_1_1finite__element_1_1_face_quadrature_point_data.html", null ]
     ] ],
-    [ "chi_graph::DirectedGraph::VertexAccessor::iterator", "dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html", null ],
     [ "chi_mesh::LocalCellHandler::iterator", "d2/dd3/classchi__mesh_1_1_local_cell_handler_1_1iterator.html", null ],
+    [ "chi_graph::DirectedGraph::VertexAccessor::iterator", "dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html", null ],
     [ "LinearBoltzmann::KSPDataContext", "d0/db3/struct_linear_boltzmann_1_1_k_s_p_data_context.html", null ],
     [ "LBSGroup", "de/d7b/class_l_b_s_group.html", null ],
     [ "LBSGroupset", "d7/d7d/class_l_b_s_groupset.html", null ],
@@ -216,6 +218,7 @@ var hierarchy =
     [ "chi_math::UnknownManager::Unknown", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html", null ],
     [ "chi_math::UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html", null ],
     [ "chi_mesh::UnpartitionedMesh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html", null ],
+    [ "chi_data_types::Varying", "d8/d30/classchi__data__types_1_1_varying.html", null ],
     [ "chi_mesh::Vector3", "dd/d54/structchi__mesh_1_1_vector3.html", null ],
     [ "chi_math::VectorNX< N, NumberFormat >", "d5/d8e/structchi__math_1_1_vector_n_x.html", null ],
     [ "chi_graph::DirectedGraph::VertexAccessor", "df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html", null ],
@@ -223,8 +226,5 @@ var hierarchy =
     [ "chi_mesh::VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", [
       [ "chi_mesh::VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", null ],
       [ "chi_mesh::VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", null ]
-    ] ],
-    [ "vtkUnstructuredGridAlgorithm", null, [
-      [ "vtkCleanUnstructuredGrid", "d8/dce/classvtk_clean_unstructured_grid.html", null ]
     ] ]
 ];

@@ -3,6 +3,7 @@ var class_spatial_discretization___p_w_l_c =
     [ "SpatialDiscretization_PWLC", "d5/d33/class_spatial_discretization___p_w_l_c.html#a7dce672a069dc9d5b495f64da72d1bd7", null ],
     [ "BuildSparsityPattern", "d5/d33/class_spatial_discretization___p_w_l_c.html#ab3f3e7efcae9ae9c1e7fb114325f5e13", null ],
     [ "GetCellMappingFE", "d5/d33/class_spatial_discretization___p_w_l_c.html#a1712a8cf64d26ca2ecf0d1eea3f337b7", null ],
+    [ "GetCellNodeLocations", "d5/d33/class_spatial_discretization___p_w_l_c.html#a82e8d8f4eeb7411d673256f22bf28a75", null ],
     [ "GetCellNumNodes", "d5/d33/class_spatial_discretization___p_w_l_c.html#a07e01dc8cf4be89313fde161083ac4f6", null ],
     [ "GetNumGlobalDOFs", "d5/d33/class_spatial_discretization___p_w_l_c.html#aacdfda609d452467efcf692feb6c8d15", null ],
     [ "GetNumLocalDOFs", "d5/d33/class_spatial_discretization___p_w_l_c.html#af3ac4d3cbb302fccee59bf6e4bb455be", null ],

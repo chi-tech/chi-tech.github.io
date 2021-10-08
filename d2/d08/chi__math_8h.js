@@ -19,6 +19,7 @@ var chi__math_8h =
     ] ],
     [ "Determinant", "d2/d08/chi__math_8h.html#a98e795181c199b5da2f45df80a31706b", null ],
     [ "Dot", "d2/d08/chi__math_8h.html#acafbf241afadc0b99da0c43a8832e058", null ],
+    [ "Factorial", "d2/d08/chi__math_8h.html#a0bf04aa9bd9950e708bf6ec828d9cafa", null ],
     [ "GaussElimination", "d2/d08/chi__math_8h.html#ac5008abb8163f2ed4c36a231352d42a8", null ],
     [ "Inverse", "d2/d08/chi__math_8h.html#a7d48371b6d078244114ce3d3053774d8", null ],
     [ "InverseGEPivoting", "d2/d08/chi__math_8h.html#ae0e143c398fa3d3b5fdeb165fca3009b", null ],

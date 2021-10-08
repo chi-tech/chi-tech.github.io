@@ -143,7 +143,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Posts a generalized error message indicating that the expected amount of arguments don't match the given amount. Checks if the lua variable at the stack location indicated by &lt;arg&gt; is a nil value. Throws an error if it is. Checks if the lua variable at the stack location indicated by &lt;arg&gt; is an actual table. Throws an error if it is not. Gets information about an error state. Performs the necessary checks and converts a lua-table, formatted as a 1D array (i.e. numerical keys) to a std::vector. If the table is not convertable, an error message is posted. Creates an angular quadrature.</p>
+<p>Posts a generalized error message indicating that the expected amount of arguments don't match the given amount. Checks if the lua variable at the stack location indicated by &lt;arg&gt; is a nil value. Throws an error if it is. Checks if the lua variable at the stack location indicated by &lt;arg&gt; is a string. Throws an error if it is not. Checks if the lua variable at the stack location indicated by &lt;arg&gt; is a boolean. Throws an error if it is not. Checks if the lua variable at the stack location indicated by &lt;arg&gt; is a number. Throws an error if it is not. Checks if the lua variable at the stack location indicated by &lt;arg&gt; is an integer. Throws an error if it is not. Checks if the lua variable at the stack location indicated by &lt;arg&gt; is an actual table. Throws an error if it is not. Gets information about an error state. Performs the necessary checks and converts a lua-table, formatted as a 1D array (i.e. numerical keys) to a std::vector. If the table is not convertable, an error message is posted. Creates an angular quadrature.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">azimuthal_angles</td><td>array A lua table with N entries each being an azimuthal angle. </td></tr>
@@ -155,7 +155,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created angular quadrature</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00021">21</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00029">29</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -209,7 +209,7 @@ Functions</h2></td></tr>
 </ul>
 <dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00055">55</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00063">63</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -263,7 +263,7 @@ CUSTOM_QUADRATURE<br  />
 </p><dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00116">116</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00124">124</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -312,7 +312,7 @@ CUSTOM_QUADRATURE<br  />
 <p>GAUSS_LEGENDRE = Gauss-Legendre quadrature. GAUSS_CHEBYSHEV = Gauss-Chebyshev quadrature. </p><dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created quadrature rule</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00140">140</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00148">148</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -364,7 +364,7 @@ CUSTOM_QUADRATURE<br  />
 </ul>
 <dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00085">85</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00093">93</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -392,7 +392,7 @@ CUSTOM_QUADRATURE<br  />
 <dl class="section return"><dt>Returns</dt><dd>Table A lua table with each entry being another table with entries .weight .polar .azimuthal.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00124">124</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00132">132</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

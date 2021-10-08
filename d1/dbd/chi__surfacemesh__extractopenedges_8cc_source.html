@@ -133,16 +133,15 @@ $(document).ready(function(){initNavTree('d1/dbd/chi__surfacemesh__extractopened
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;v &quot;</span> &lt;&lt; v1.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472">x</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; v1.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a8b89a79cfebafd04dbda021f626a9694">y</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; v1.<a class="code" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a95963ca137a97c9d927bc9d10a98a36f">z</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">int</span> v_count=-1;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> vert_pair : edges)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    v_count += 2;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#ad8b12e917fa074449fa9d3e52b092bab">outfile</a> &lt;&lt; <span class="stringliteral">&quot;l &quot;</span> &lt;&lt; v_count &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; v_count + 1 &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> e = 0; e &lt; edges.size(); ++e)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> v_count = 2 * e + 1;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#ad8b12e917fa074449fa9d3e52b092bab">outfile</a> &lt;&lt; <span class="stringliteral">&quot;l &quot;</span> &lt;&lt; v_count &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; v_count + 1 &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#ad8b12e917fa074449fa9d3e52b092bab">outfile</a>.close();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="../../d8/d65/namespace_z_compile_and_run.html#ad8b12e917fa074449fa9d3e52b092bab">outfile</a>.close();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>

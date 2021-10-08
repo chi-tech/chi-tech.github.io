@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "chi_data_types", "d5/d1b/namespacechi__data__types.html", "d5/d1b/namespacechi__data__types" ],
     [ "chi_diffusion", "de/d73/namespacechi__diffusion.html", "de/d73/namespacechi__diffusion" ],
     [ "chi_graph", "d3/d00/namespacechi__graph.html", "d3/d00/namespacechi__graph" ],
     [ "chi_math", "dc/d58/namespacechi__math.html", "dc/d58/namespacechi__math" ],
@@ -47,6 +48,5 @@ var annotated_dup =
     [ "SpatialDiscretization_FV", "d1/d09/class_spatial_discretization___f_v.html", "d1/d09/class_spatial_discretization___f_v" ],
     [ "SpatialDiscretization_PWLC", "d5/d33/class_spatial_discretization___p_w_l_c.html", "d5/d33/class_spatial_discretization___p_w_l_c" ],
     [ "SpatialDiscretization_PWLD", "d9/dd4/class_spatial_discretization___p_w_l_d.html", "d9/dd4/class_spatial_discretization___p_w_l_d" ],
-    [ "ThermoAlpha", "d6/d08/class_thermo_alpha.html", "d6/d08/class_thermo_alpha" ],
-    [ "vtkCleanUnstructuredGrid", "d8/dce/classvtk_clean_unstructured_grid.html", "d8/dce/classvtk_clean_unstructured_grid" ]
+    [ "ThermoAlpha", "d6/d08/class_thermo_alpha.html", "d6/d08/class_thermo_alpha" ]
 ];
