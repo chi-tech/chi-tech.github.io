@@ -315,74 +315,76 @@ $(document).ready(function(){initNavTree('d2/d7c/export__multiple__vtk_8cc_sourc
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        ugrid-&gt;GetPointData()-&gt;AddArray(unk_arr);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      }<span class="comment">//scalar</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keywordflow">if</span> (unknown.type == chi_math::UnknownType::VECTOR_N)</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> comp=0; comp&lt;unknown.num_components; ++comp)</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> component = ff-&gt;unknown_manager.MapUnknown(ref_unknown, comp);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;          <span class="keyword">auto</span> unk_arr = vtkSmartPointer&lt;vtkDoubleArray&gt;::New();</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;          <span class="keywordflow">if</span> (unknown.component_text_names[comp].empty())</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            unk_arr-&gt;SetName((std::string(<span class="stringliteral">&quot;Component_&quot;</span>)+</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                              std::to_string(comp)).c_str());</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;          <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            unk_arr-&gt;SetName(unknown.component_text_names[comp].c_str());</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;          uint64_t c=0;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#ac01efa055c239381c32d6aa8ac5b0768">grid</a>-&gt;local_cells)</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;          {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v=0; v &lt; cell.vertex_ids.size(); ++v)</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;              uint64_t local_mapping = c*N + component;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;              ++c;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;              <span class="keywordtype">double</span> value = (*ff-&gt;field_vector_local)[local_mapping];</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keywordflow">if</span> (unknown.type == chi_math::UnknownType::VECTOR_2 or</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;          unknown.type == chi_math::UnknownType::VECTOR_3 or</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;          unknown.type == chi_math::UnknownType::VECTOR_N)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> comp=0; comp&lt;unknown.num_components; ++comp)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> component = ff-&gt;unknown_manager.MapUnknown(ref_unknown, comp);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;          <span class="keyword">auto</span> unk_arr = vtkSmartPointer&lt;vtkDoubleArray&gt;::New();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;          <span class="keywordflow">if</span> (unknown.component_text_names[comp].empty())</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            unk_arr-&gt;SetName((std::string(<span class="stringliteral">&quot;Component_&quot;</span>)+</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                              std::to_string(comp)).c_str());</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;          <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            unk_arr-&gt;SetName(unknown.component_text_names[comp].c_str());</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;          uint64_t c=0;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#ac01efa055c239381c32d6aa8ac5b0768">grid</a>-&gt;local_cells)</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;          {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> v=0; v &lt; cell.vertex_ids.size(); ++v)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;              uint64_t local_mapping = c*N + component;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;              ++c;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;              unk_arr-&gt;InsertNextValue(value);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            }<span class="comment">//for vid</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;          }<span class="comment">//for cell</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;          ugrid-&gt;GetPointData()-&gt;AddArray(unk_arr);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }<span class="comment">//for c</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      }<span class="comment">//scalar</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="comment">//============================================= Construct file name</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  std::string base_filename     = std::string(file_base_name);</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  std::string location_filename = base_filename +</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                                  std::string(<span class="stringliteral">&quot;_&quot;</span>) +</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                                  std::to_string(<a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a>) +</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                                  std::string(<span class="stringliteral">&quot;.vtu&quot;</span>);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="comment">//============================================= Write master file</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a> == 0)</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    std::string pvtu_file_name = base_filename + std::string(<span class="stringliteral">&quot;.pvtu&quot;</span>);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">auto</span> pgrid_writer = vtkSmartPointer&lt;vtkXMLPUnstructuredGridWriter&gt;::New();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;              <span class="keywordtype">double</span> value = (*ff-&gt;field_vector_local)[local_mapping];</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;              unk_arr-&gt;InsertNextValue(value);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            }<span class="comment">//for vid</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;          }<span class="comment">//for cell</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;          ugrid-&gt;GetPointData()-&gt;AddArray(unk_arr);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }<span class="comment">//for c</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      }<span class="comment">//scalar</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="comment">//============================================= Construct file name</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  std::string base_filename     = std::string(file_base_name);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  std::string location_filename = base_filename +</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                                  std::string(<span class="stringliteral">&quot;_&quot;</span>) +</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                  std::to_string(<a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a>) +</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                                  std::string(<span class="stringliteral">&quot;.vtu&quot;</span>);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="comment">//============================================= Write master file</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a> == 0)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    std::string pvtu_file_name = base_filename + std::string(<span class="stringliteral">&quot;.pvtu&quot;</span>);</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    pgrid_writer-&gt;EncodeAppendedDataOff();</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    pgrid_writer-&gt;SetFileName(pvtu_file_name.c_str());</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    pgrid_writer-&gt;SetNumberOfPieces(<a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#a51968d828ef0e022637679cc3c7d27ac">process_count</a>);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    pgrid_writer-&gt;SetStartPiece(<a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a>);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    pgrid_writer-&gt;SetEndPiece(<a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#a51968d828ef0e022637679cc3c7d27ac">process_count</a>-1);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    pgrid_writer-&gt;SetInputData(ugrid);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    pgrid_writer-&gt;Write();</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  MPI_Barrier(MPI_COMM_WORLD);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="comment">//============================================= Serial output each piece</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="keyword">auto</span> grid_writer = vtkSmartPointer&lt;vtkXMLUnstructuredGridWriter&gt;::New();</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  grid_writer-&gt;SetInputData(ugrid);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  grid_writer-&gt;SetFileName(location_filename.c_str());</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  grid_writer-&gt;Write();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">auto</span> pgrid_writer = vtkSmartPointer&lt;vtkXMLPUnstructuredGridWriter&gt;::New();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    pgrid_writer-&gt;EncodeAppendedDataOff();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    pgrid_writer-&gt;SetFileName(pvtu_file_name.c_str());</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    pgrid_writer-&gt;SetNumberOfPieces(<a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#a51968d828ef0e022637679cc3c7d27ac">process_count</a>);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    pgrid_writer-&gt;SetStartPiece(<a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a>);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    pgrid_writer-&gt;SetEndPiece(<a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#a51968d828ef0e022637679cc3c7d27ac">process_count</a>-1);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    pgrid_writer-&gt;SetInputData(ugrid);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    pgrid_writer-&gt;Write();</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  MPI_Barrier(MPI_COMM_WORLD);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="comment">//============================================= Serial output each piece</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keyword">auto</span> grid_writer = vtkSmartPointer&lt;vtkXMLUnstructuredGridWriter&gt;::New();</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  grid_writer-&gt;SetInputData(ugrid);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  grid_writer-&gt;SetFileName(location_filename.c_str());</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; <span class="stringliteral">&quot;Done exporting field functions to VTK.&quot;</span>;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  grid_writer-&gt;Write();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <a class="code" href="../../d2/d7c/export__multiple__vtk_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a>) &lt;&lt; <span class="stringliteral">&quot;Done exporting field functions to VTK.&quot;</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>

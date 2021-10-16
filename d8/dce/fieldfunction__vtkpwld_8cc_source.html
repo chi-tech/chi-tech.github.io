@@ -126,9 +126,9 @@ $(document).ready(function(){initNavTree('d8/dce/fieldfunction__vtkpwld_8cc_sour
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">//============================================= Init vtk items</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ff_uk = this-&gt;<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a9a5c1e5580af3e7a1a1a533166d657d2">unknown_manager</a>.<a class="code" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a71cc82006a7ae7a4a788d9ae3a2e345c">unknowns</a>[<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#ad1967ba7fb71bdcbdfaa39e23ab4fd32">ref_variable</a>];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ff_unknown = this-&gt;<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a9a5c1e5580af3e7a1a1a533166d657d2">unknown_manager</a>.<a class="code" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a71cc82006a7ae7a4a788d9ae3a2e345c">unknowns</a>[<a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#ad1967ba7fb71bdcbdfaa39e23ab4fd32">ref_variable</a>];</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">size_t</span> num_components = all_components? ff_uk.num_components : 1;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">size_t</span> num_components = all_components ? ff_unknown.num_components : 1;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  vtkNew&lt;vtkUnstructuredGrid&gt;         ugrid;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  vtkNew&lt;vtkPoints&gt;                   points;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  vtkNew&lt;vtkIntArray&gt;                 material_array;</div>
@@ -148,82 +148,84 @@ $(document).ready(function(){initNavTree('d8/dce/fieldfunction__vtkpwld_8cc_sour
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                          std::string(<span class="stringliteral">&quot;-avg&quot;</span>)).c_str());</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c=0; c &lt; num_components; ++c)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      component_names[c] = field_name + ff_uk.component_text_names[c];</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      field_node_array[c]-&gt;SetName(component_names[c].c_str());</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      field_cell_avg_array[c]-&gt;SetName((component_names[c] +</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                        std::string(<span class="stringliteral">&quot;-avg&quot;</span>)).c_str());</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="comment">//############################################# Populate cell information</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  int64_t node_count=0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#ac01efa055c239381c32d6aa8ac5b0768">grid</a>-&gt;local_cells)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a0b05a22dab998e7fbadcac5f659d84bf">UploadCellGeometry</a>(cell, node_count, points, ugrid);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    material_array-&gt;InsertNextValue(cell.material_id);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    partition_id_array-&gt;InsertNextValue(cell.partition_id);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">//Populate Arrays</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">size_t</span> num_nodes = cell.vertex_ids.size();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::vector&lt;uint64_t&gt; mapping;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::vector&lt;std::tuple&lt;uint64_t,uint,uint&gt;&gt; cell_node_component_tuples;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c=0; c &lt; num_components; ++c)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v=0; v &lt; num_nodes; ++v)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        cell_node_component_tuples.emplace_back(cell.local_id, v,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                                (num_components==1)?</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a3c414b1229129415690c193e3abed856">ref_component</a> : c);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a5047ee6c4fc0c7492c3b65619af3fdfc">CreatePWLDMappingLocal</a>(cell_node_component_tuples, mapping);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> c=0; c &lt; num_components; ++c)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      component_names[c] = field_name + ff_unknown.component_text_names[c];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      field_node_array[c]-&gt;SetName(component_names[c].c_str());</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      field_cell_avg_array[c]-&gt;SetName((component_names[c] +</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                        std::string(<span class="stringliteral">&quot;-avg&quot;</span>)).c_str());</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }<span class="comment">//for c</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">//############################################# Populate cell information</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  int64_t node_count=0;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#ac01efa055c239381c32d6aa8ac5b0768">grid</a>-&gt;local_cells)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a0b05a22dab998e7fbadcac5f659d84bf">UploadCellGeometry</a>(cell, node_count, points, ugrid);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    material_array-&gt;InsertNextValue(cell.material_id);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    partition_id_array-&gt;InsertNextValue(cell.partition_id);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//Populate Arrays</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">size_t</span> num_nodes = cell.vertex_ids.size();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::vector&lt;uint64_t&gt; mapping;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::vector&lt;std::tuple&lt;uint64_t,uint,uint&gt;&gt; cell_node_component_tuples;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> c=0; c &lt; num_components; ++c)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> v=0; v &lt; num_nodes; ++v)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        cell_node_component_tuples.emplace_back(cell.local_id, v,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                                (num_components==1)?</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                                <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a3c414b1229129415690c193e3abed856">ref_component</a> : c);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">size_t</span> counter=0;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c=0; c &lt; num_components; ++c)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordtype">double</span> cell_avg_value = 0.0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> v=0; v &lt; num_nodes; ++v)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">double</span> dof_value = <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a9978edd1dd0f029622a4bc6d5c5b2f15">field_vector_local</a>-&gt;operator[](mapping[counter]);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        cell_avg_value+= dof_value;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        field_node_array[c]-&gt;InsertNextValue(dof_value);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        ++counter;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      field_cell_avg_array[c]-&gt;InsertNextValue(cell_avg_value /</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                               <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(num_nodes));</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }<span class="comment">//for component</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }<span class="comment">//for local cells</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  ugrid-&gt;SetPoints(points);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a5047ee6c4fc0c7492c3b65619af3fdfc">CreatePWLDMappingLocal</a>(cell_node_component_tuples, mapping);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">size_t</span> counter=0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> c=0; c &lt; num_components; ++c)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="keywordtype">double</span> cell_avg_value = 0.0;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> v=0; v &lt; num_nodes; ++v)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">double</span> dof_value = <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#a9978edd1dd0f029622a4bc6d5c5b2f15">field_vector_local</a>-&gt;operator[](mapping[counter]);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        cell_avg_value+= dof_value;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        field_node_array[c]-&gt;InsertNextValue(dof_value);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        ++counter;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      field_cell_avg_array[c]-&gt;InsertNextValue(cell_avg_value /</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                               <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(num_nodes));</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }<span class="comment">//for component</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }<span class="comment">//for local cells</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="comment">//============================================= Construct file name</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  std::string base_filename     = std::string(base_name);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  std::string location_filename = base_filename +</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                  std::string(<span class="stringliteral">&quot;_&quot;</span>) +</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                  std::to_string(<a class="code" href="../../d8/dce/fieldfunction__vtkpwld_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a>) +</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                  std::string(<span class="stringliteral">&quot;.vtu&quot;</span>);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="comment">//============================================= Serial Output each piece</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  vtkNew&lt;vtkXMLUnstructuredGridWriter&gt; grid_writer;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  ugrid-&gt;GetCellData()-&gt;AddArray(material_array);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  ugrid-&gt;GetCellData()-&gt;AddArray(partition_id_array);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c=0; c&lt;num_components; ++c)</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    ugrid-&gt;GetPointData()-&gt;AddArray(field_node_array[c]);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    ugrid-&gt;GetCellData()-&gt;AddArray(field_cell_avg_array[c]);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  grid_writer-&gt;SetInputData(ugrid);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  grid_writer-&gt;SetFileName(location_filename.c_str());</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  grid_writer-&gt;Write();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  ugrid-&gt;SetPoints(points);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="comment">//============================================= Construct file name</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  std::string base_filename     = std::string(base_name);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  std::string location_filename = base_filename +</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                  std::string(<span class="stringliteral">&quot;_&quot;</span>) +</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                  std::to_string(<a class="code" href="../../d8/dce/fieldfunction__vtkpwld_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a>) +</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                  std::string(<span class="stringliteral">&quot;.vtu&quot;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="comment">//============================================= Serial Output each piece</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  vtkNew&lt;vtkXMLUnstructuredGridWriter&gt; grid_writer;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  ugrid-&gt;GetCellData()-&gt;AddArray(material_array);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  ugrid-&gt;GetCellData()-&gt;AddArray(partition_id_array);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> c=0; c&lt;num_components; ++c)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    ugrid-&gt;GetPointData()-&gt;AddArray(field_node_array[c]);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    ugrid-&gt;GetCellData()-&gt;AddArray(field_cell_avg_array[c]);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  grid_writer-&gt;SetInputData(ugrid);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  grid_writer-&gt;SetFileName(location_filename.c_str());</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="comment">//============================================= Parallel summary file</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="../../d8/dce/fieldfunction__vtkpwld_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a> == 0)</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#abb447a8fe5767e3fecfdc5b37c31dc2b">WritePVTU</a>(base_filename, field_name, component_names);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  grid_writer-&gt;Write();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="comment">//============================================= Parallel summary file</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="../../d8/dce/fieldfunction__vtkpwld_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a> == 0)</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      <a class="code" href="../../df/de9/classchi__physics_1_1_field_function.html#abb447a8fe5767e3fecfdc5b37c31dc2b">WritePVTU</a>(base_filename, field_name, component_names);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclasschi__physics_1_1_field_function_html_a41a85444905665638fdadbd66b824cb6"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a41a85444905665638fdadbd66b824cb6">chi_physics::FieldFunction::spatial_discretization</a></div><div class="ttdeci">std::shared_ptr&lt; SpatialDiscretization &gt; spatial_discretization</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00036">fieldfunction.h:36</a></div></div>
