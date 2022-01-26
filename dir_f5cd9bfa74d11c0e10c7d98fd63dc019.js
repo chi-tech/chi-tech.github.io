@@ -29,6 +29,7 @@ var dir_f5cd9bfa74d11c0e10c7d98fd63dc019 =
     [ "lbs_04b_angular_fluxes.cc", "d7/dde/lbs__04b__angular__fluxes_8cc.html", "d7/dde/lbs__04b__angular__fluxes_8cc" ],
     [ "lbs_04c_io_flux_moments.cc", "d6/da4/lbs__04c__io__flux__moments_8cc.html", "d6/da4/lbs__04c__io__flux__moments_8cc" ],
     [ "lbs_compute_balance.cc", "d9/dfd/lbs__compute__balance_8cc.html", "d9/dfd/lbs__compute__balance_8cc" ],
+    [ "lbs_compute_precursors.cc", "d9/d37/lbs__compute__precursors_8cc.html", "d9/d37/lbs__compute__precursors_8cc" ],
     [ "lbs_linear_boltzmann_solver.h", "df/d26/lbs__linear__boltzmann__solver_8h.html", "df/d26/lbs__linear__boltzmann__solver_8h" ],
     [ "lbs_structs.h", "d9/dc3/lbs__structs_8h.html", "d9/dc3/lbs__structs_8h" ],
     [ "lbs_vectorassembly.cc", "d1/dbd/lbs__vectorassembly_8cc.html", null ]

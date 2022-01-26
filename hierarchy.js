@@ -28,12 +28,9 @@ var hierarchy =
       [ "chi_mesh::sweep_management::BoundaryVacuum", "dc/d41/classchi__mesh_1_1sweep__management_1_1_boundary_vacuum.html", null ]
     ] ],
     [ "chi_mesh::UnpartitionedMesh::BoundBox", "d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html", null ],
+    [ "chi_data_types::ByteArray", "d5/d5b/classchi__data__types_1_1_byte_array.html", null ],
     [ "chi_math::CDFSampler", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html", null ],
-    [ "chi_mesh::Cell", "d8/d7c/classchi__mesh_1_1_cell.html", [
-      [ "chi_mesh::CellPolygon", "dc/d11/classchi__mesh_1_1_cell_polygon.html", null ],
-      [ "chi_mesh::CellPolyhedron", "d6/d71/classchi__mesh_1_1_cell_polyhedron.html", null ],
-      [ "chi_mesh::CellSlab", "da/dd2/classchi__mesh_1_1_cell_slab.html", null ]
-    ] ],
+    [ "chi_mesh::Cell", "d8/d7c/classchi__mesh_1_1_cell.html", null ],
     [ "chi_mesh::CellFace", "db/d1b/classchi__mesh_1_1_cell_face.html", null ],
     [ "CellFVValues", "dd/da9/class_cell_f_v_values.html", [
       [ "PolygonFVValues", "d5/d99/class_polygon_f_v_values.html", null ],
@@ -42,7 +39,6 @@ var hierarchy =
     ] ],
     [ "LinearBoltzmann::CellLBSView", "d6/da1/class_linear_boltzmann_1_1_cell_l_b_s_view.html", null ],
     [ "CellMappingFE_PWL", "db/d41/class_cell_mapping_f_e___p_w_l.html", [
-      [ "HexahedronMappingFE_PWL", "d6/dbe/class_hexahedron_mapping_f_e___p_w_l.html", null ],
       [ "PolygonMappingFE_PWL", "d1/d2d/class_polygon_mapping_f_e___p_w_l.html", [
         [ "PolygonMappingFE_PWL_Cylindrical", "d5/d8f/class_polygon_mapping_f_e___p_w_l___cylindrical.html", null ]
       ] ],
@@ -74,17 +70,11 @@ var hierarchy =
     [ "ChiLog::EventInfo", "db/d4a/struct_chi_log_1_1_event_info.html", null ],
     [ "chi_mesh::Face", "d4/dd2/structchi__mesh_1_1_face.html", null ],
     [ "chi_mesh::sweep_management::FaceNodalMapping", "d7/d1f/structchi__mesh_1_1sweep__management_1_1_face_nodal_mapping.html", null ],
-    [ "HexahedronMappingFE_PWL::FEface_data", "d4/d26/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_eface__data.html", null ],
     [ "PolyhedronMappingFE_PWL::FEface_data", "d3/d73/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eface__data.html", null ],
     [ "PolyhedronMappingFE_PWL::FEnodeFaceMap", "db/dcc/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_face_map.html", null ],
-    [ "HexahedronMappingFE_PWL::FEnodeFaceMap", "d6/ddd/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_enode_face_map.html", null ],
     [ "PolyhedronMappingFE_PWL::FEnodeMap", "dd/d69/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_map.html", null ],
-    [ "HexahedronMappingFE_PWL::FEnodeMap", "d9/db2/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_enode_map.html", null ],
     [ "PolyhedronMappingFE_PWL::FEnodeSideMap", "dc/d9e/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_side_map.html", null ],
-    [ "HexahedronMappingFE_PWL::FEnodeSideMap", "d5/dd4/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_enode_side_map.html", null ],
-    [ "HexahedronMappingFE_PWL::FEqp_data3d", "df/d07/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_eqp__data3d.html", null ],
     [ "PolygonMappingFE_PWL::FEside_data2d", "d1/dfa/struct_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d.html", null ],
-    [ "HexahedronMappingFE_PWL::FEside_data3d", "d5/de2/struct_hexahedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html", null ],
     [ "PolyhedronMappingFE_PWL::FEside_data3d", "de/d70/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html", null ],
     [ "FFICellIntersection", "d1/da1/struct_f_f_i_cell_intersection.html", null ],
     [ "FFIFaceEdgeIntersection", "db/d9e/struct_f_f_i_face_edge_intersection.html", null ],
@@ -116,8 +106,8 @@ var hierarchy =
     [ "chi_math::finite_element::InternalQuadraturePointData", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html", [
       [ "chi_math::finite_element::FaceQuadraturePointData", "d5/df3/classchi__math_1_1finite__element_1_1_face_quadrature_point_data.html", null ]
     ] ],
-    [ "chi_mesh::LocalCellHandler::iterator", "d2/dd3/classchi__mesh_1_1_local_cell_handler_1_1iterator.html", null ],
     [ "chi_graph::DirectedGraph::VertexAccessor::iterator", "dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html", null ],
+    [ "chi_mesh::LocalCellHandler::iterator", "d2/dd3/classchi__mesh_1_1_local_cell_handler_1_1iterator.html", null ],
     [ "LinearBoltzmann::KSPDataContext", "d0/db3/struct_linear_boltzmann_1_1_k_s_p_data_context.html", null ],
     [ "LBSGroup", "de/d7b/class_l_b_s_group.html", null ],
     [ "LBSGroupset", "d7/d7d/class_l_b_s_groupset.html", null ],
@@ -172,7 +162,7 @@ var hierarchy =
       [ "chi_diffusion::Solver", "d6/d32/classchi__diffusion_1_1_solver.html", null ],
       [ "LinearBoltzmann::Solver", "d2/dc1/class_linear_boltzmann_1_1_solver.html", [
         [ "LBSCurvilinear::Solver", "d9/d34/class_l_b_s_curvilinear_1_1_solver.html", null ],
-        [ "LinearBoltzmann::KEigenvalue::Solver", "d5/dd1/class_linear_boltzmann_1_1_k_eigenvalue_1_1_solver.html", null ]
+        [ "LinearBoltzmann::KEigenvalueSolver", "db/d6f/class_linear_boltzmann_1_1_k_eigenvalue_solver.html", null ]
       ] ]
     ] ],
     [ "chi_math::SparseMatrix", "de/d51/classchi__math_1_1_sparse_matrix.html", null ],
@@ -222,6 +212,7 @@ var hierarchy =
     [ "chi_mesh::Vector3", "dd/d54/structchi__mesh_1_1_vector3.html", null ],
     [ "chi_math::VectorNX< N, NumberFormat >", "d5/d8e/structchi__math_1_1_vector_n_x.html", null ],
     [ "chi_graph::DirectedGraph::VertexAccessor", "df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html", null ],
+    [ "chi_mesh::VertexHandler", "d1/d59/classchi__mesh_1_1_vertex_handler.html", null ],
     [ "chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html", null ],
     [ "chi_mesh::VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", [
       [ "chi_mesh::VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", null ],

@@ -13,7 +13,7 @@ var petsc__utils_8h =
     [ "CreateVectorWithGhosts", "da/d0e/petsc__utils_8h.html#a3431beefda260df6f2d7b723255de460", null ],
     [ "GeneralKSPMonitor", "da/d0e/petsc__utils_8h.html#a36287c7a7d1689a4ba48eaacb123e406", null ],
     [ "GetGhostVectorLocalViewRead", "da/d0e/petsc__utils_8h.html#a16e62cffedce8767d3214a64f02cc5f1", null ],
-    [ "InitMatrixSparsity", "da/d0e/petsc__utils_8h.html#a1d2e68991810843866922f7d7b408805", null ],
+    [ "InitMatrixSparsity", "da/d0e/petsc__utils_8h.html#a90c2fe306b9259c0f15fb7d5fde9508a", null ],
     [ "RelativeResidualConvergenceTest", "da/d0e/petsc__utils_8h.html#a77fd6feef9f909de887c2533d2ca144c", null ],
     [ "RestoreGhostVectorLocalViewRead", "da/d0e/petsc__utils_8h.html#a0c5eb90fb46ec9271439481a67c2bc12", null ]
 ];

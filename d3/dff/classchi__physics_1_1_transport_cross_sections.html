@@ -133,12 +133,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a63ad022618b97d9fbe8a11501710ca8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d0217d5570ba619ccdf46ff6b86337f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a2d0217d5570ba619ccdf46ff6b86337f">EnergyCollapse</a> (std::vector&lt; double &gt; &amp;ref_xi, double &amp;D, double &amp;<a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a95374be4030fdd97856f6b5e4ecf206c">sigma_a</a>, int collapse_type=<a class="el" href="../../db/dda/material__property__transportxsections_8h.html#a8dec9a07146f396f424fded66f2b1a15">E_COLLAPSE_JACOBI</a>)</td></tr>
 <tr class="separator:a2d0217d5570ba619ccdf46ff6b86337f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30f8875cd946c7e26495305ca2e3ab9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a30f8875cd946c7e26495305ca2e3ab9f">ComputeDiscreteScattering</a> (int in_L)</td></tr>
-<tr class="separator:a30f8875cd946c7e26495305ca2e3ab9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afabf684416ac963367fa097a998919fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#afabf684416ac963367fa097a998919fb">Sample_gprime</a> (int g, double rn)</td></tr>
-<tr class="separator:afabf684416ac963367fa097a998919fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9655ec1ae091cc4fe220cd5ee7b12db6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a9655ec1ae091cc4fe220cd5ee7b12db6">SampleMu_gprime_g</a> (int g, int gprime, double rn, bool isotropic=false)</td></tr>
-<tr class="separator:a9655ec1ae091cc4fe220cd5ee7b12db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa76b437ffcd4f71e739411b0050eef80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#aa76b437ffcd4f71e739411b0050eef80">PushLuaTable</a> (lua_State *L) override</td></tr>
 <tr class="separator:aa76b437ffcd4f71e739411b0050eef80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68789638aedb16da6f41a9e8220d045d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a68789638aedb16da6f41a9e8220d045d">ExportToChiFormat</a> (const std::string &amp;file_name)</td></tr>
@@ -369,27 +363,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/df0/prop__transportxs__02__diffparams_8cc_source.html#l00007">7</a> of file <a class="el" href="../../db/df0/prop__transportxs__02__diffparams_8cc_source.html">prop_transportxs_02_diffparams.cc</a>.</p>
-
-</div>
-</div>
-<a id="a30f8875cd946c7e26495305ca2e3ab9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30f8875cd946c7e26495305ca2e3ab9f">&#9670;&nbsp;</a></span>ComputeDiscreteScattering()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void chi_physics::TransportCrossSections::ComputeDiscreteScattering </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>in_L</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Computes the discrete scattering tables. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d81/prop__transportxs__04__scatangles_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d9/d81/prop__transportxs__04__scatangles_8cc_source.html">prop_transportxs_04_scatangles.cc</a>.</p>
 
 </div>
 </div>
@@ -678,80 +651,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/dda/material__property__transportxsections_8h_source.html#l00075">75</a> of file <a class="el" href="../../db/dda/material__property__transportxsections_8h_source.html">material_property_transportxsections.h</a>.</p>
-
-</div>
-</div>
-<a id="afabf684416ac963367fa097a998919fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afabf684416ac963367fa097a998919fb">&#9670;&nbsp;</a></span>Sample_gprime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int chi_physics::TransportCrossSections::Sample_gprime </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>gp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rn</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Samples the g to gprime scattering probability to determine exit energy. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d81/prop__transportxs__04__scatangles_8cc_source.html#l00133">133</a> of file <a class="el" href="../../d9/d81/prop__transportxs__04__scatangles_8cc_source.html">prop_transportxs_04_scatangles.cc</a>.</p>
-
-</div>
-</div>
-<a id="a9655ec1ae091cc4fe220cd5ee7b12db6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9655ec1ae091cc4fe220cd5ee7b12db6">&#9670;&nbsp;</a></span>SampleMu_gprime_g()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double chi_physics::TransportCrossSections::SampleMu_gprime_g </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>gp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rn</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isotropic</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Sample scattering angles. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d81/prop__transportxs__04__scatangles_8cc_source.html#l00146">146</a> of file <a class="el" href="../../d9/d81/prop__transportxs__04__scatangles_8cc_source.html">prop_transportxs_04_scatangles.cc</a>.</p>
 
 </div>
 </div>
@@ -1364,7 +1263,6 @@ Private Attributes</h2></td></tr>
 <li>ChiTech/ChiPhysics/PhysicsMaterial/transportxsections/<a class="el" href="../../de/dd6/prop__transportxs__01c__finalize_8cc_source.html">prop_transportxs_01c_finalize.cc</a></li>
 <li>ChiTech/ChiPhysics/PhysicsMaterial/transportxsections/<a class="el" href="../../db/df0/prop__transportxs__02__diffparams_8cc_source.html">prop_transportxs_02_diffparams.cc</a></li>
 <li>ChiTech/ChiPhysics/PhysicsMaterial/transportxsections/<a class="el" href="../../d1/db7/prop__transportxs__03__ecollapse_8cc_source.html">prop_transportxs_03_ecollapse.cc</a></li>
-<li>ChiTech/ChiPhysics/PhysicsMaterial/transportxsections/<a class="el" href="../../d9/d81/prop__transportxs__04__scatangles_8cc_source.html">prop_transportxs_04_scatangles.cc</a></li>
 <li>ChiTech/ChiPhysics/PhysicsMaterial/transportxsections/<a class="el" href="../../da/dd1/prop__transportxs__05__pushlua_8cc_source.html">prop_transportxs_05_pushlua.cc</a></li>
 <li>ChiTech/ChiPhysics/PhysicsMaterial/transportxsections/<a class="el" href="../../d1/d7b/prop__transportxs__06__export_8cc_source.html">prop_transportxs_06_export.cc</a></li>
 </ul>

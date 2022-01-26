@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['vacuum_5231',['VACUUM',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da9a311ef6dad816cb7a15c0ab41920ad8',1,'chi_mesh::sweep_management::VACUUM()'],['../d7/d19/namespace_linear_boltzmann.html#adbbca7e17fa06fd6baeaa5ff4b1b4f03a9a311ef6dad816cb7a15c0ab41920ad8',1,'LinearBoltzmann::VACUUM()'],['../de/d73/namespacechi__diffusion.html#ac4e189795be6769fcad88cf3ebf1d79fa6cd4b7d03bb6843a34ee39757178fb10',1,'chi_diffusion::Vacuum()']]],
-  ['vector_5f2_5232',['VECTOR_2',['../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1da20760c37f74c5ecf95beeadd1407fbef',1,'chi_math']]],
-  ['vector_5f3_5233',['VECTOR_3',['../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1da28d37be09a3d36f452147d018301ee87',1,'chi_math']]],
-  ['vector_5fn_5234',['VECTOR_N',['../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4',1,'chi_math']]],
-  ['void_5235',['VOID',['../d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542a6d0c9fc747131795e6e5d0c5119f12cb',1,'chi_data_types']]]
+  ['undefined_5219',['UNDEFINED',['../d7/d19/namespace_linear_boltzmann.html#a81271899dfd6e333d69122be69185ff0a0db45d2a4141101bdfe48e3314cfbca3',1,'LinearBoltzmann::UNDEFINED()'],['../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0a0db45d2a4141101bdfe48e3314cfbca3',1,'chi_math::UNDEFINED()'],['../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1a0db45d2a4141101bdfe48e3314cfbca3',1,'chi_math::UNDEFINED()']]],
+  ['unknown_5220',['UNKNOWN',['../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791a696b031073e74bf2cb98e5ef201d4aa3',1,'chi_math']]],
+  ['unpartitioned_5221',['UNPARTITIONED',['../d0/d81/namespacechi__mesh.html#a3ff8e76f208eff98d2d3e9fe169edbf1a4ff11a25c75f2e5deefd836afcbec82a',1,'chi_mesh']]],
+  ['unpartitioned_5fmesh_5222',['UNPARTITIONED_MESH',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a0397c6d3b836f2132697065ef26bb4d5a5d7b35a7c355c1a874955eb2654c9d74',1,'chi_mesh::VolumeMesherExtruder']]]
 ];

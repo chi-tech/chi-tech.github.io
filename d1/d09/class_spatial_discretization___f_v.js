@@ -27,5 +27,5 @@ var class_spatial_discretization___f_v =
     [ "locJ_block_size", "d1/d09/class_spatial_discretization___f_v.html#a49e7f29c6f6f849082f56ed4493d28c0", null ],
     [ "mapping_initialized", "d1/d09/class_spatial_discretization___f_v.html#adcc59f6f52b9bbcbb50e60af99945048", null ],
     [ "neighbor_cell_fv_views", "d1/d09/class_spatial_discretization___f_v.html#ad92dff7da2766ac3a526023e10cdd120", null ],
-    [ "neighbor_cells", "d1/d09/class_spatial_discretization___f_v.html#a4ecad9038967b536c21c9a30200f641a", null ]
+    [ "neighbor_cells", "d1/d09/class_spatial_discretization___f_v.html#a841d6e6a7da6223436e287c1fc11c31f", null ]
 ];

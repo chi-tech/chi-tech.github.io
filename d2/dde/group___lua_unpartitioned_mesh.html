@@ -91,6 +91,16 @@ $(document).ready(function(){initNavTree('d2/dde/group___lua_unpartitioned_mesh.
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga7bf11e8245cc5965b3c35c1df892bc4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a> (lua_State *L)</td></tr>
+<tr class="separator:ga7bf11e8245cc5965b3c35c1df892bc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a824614423ad50e9feee8eba181f189"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga6a824614423ad50e9feee8eba181f189">chiUnpartitionedMeshUploadCell</a> (lua_State *L)</td></tr>
+<tr class="separator:ga6a824614423ad50e9feee8eba181f189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa60b90215837f5d1ad8b0c4be6f2fabb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dde/group___lua_unpartitioned_mesh.html#gaa60b90215837f5d1ad8b0c4be6f2fabb">chiUnpartitionedMeshFinalizeEmpty</a> (lua_State *L)</td></tr>
+<tr class="separator:gaa60b90215837f5d1ad8b0c4be6f2fabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ba84ea385c6151304caad15bf2a101b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga0ba84ea385c6151304caad15bf2a101b">chiCreateEmptyUnpartitionedMesh</a> (lua_State *L)</td></tr>
+<tr class="separator:ga0ba84ea385c6151304caad15bf2a101b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68cec08ee6d578fabe0b543c4978e138"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga68cec08ee6d578fabe0b543c4978e138">chiDestroyUnpartitionedMesh</a> (lua_State *L)</td></tr>
+<tr class="separator:ga68cec08ee6d578fabe0b543c4978e138"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7cec185479aa8cce6b469203ea0ab360"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7cec185479aa8cce6b469203ea0ab360">chiUnpartitionedMeshFromVTU</a> (lua_State *L)</td></tr>
 <tr class="separator:ga7cec185479aa8cce6b469203ea0ab360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaec8e0a8206f9297312fa5b1ab6639015"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dde/group___lua_unpartitioned_mesh.html#gaec8e0a8206f9297312fa5b1ab6639015">chiUnpartitionedMeshFromEnsightGold</a> (lua_State *L)</td></tr>
@@ -102,6 +112,113 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga0ba84ea385c6151304caad15bf2a101b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ba84ea385c6151304caad15bf2a101b">&#9670;&nbsp;</a></span>chiCreateEmptyUnpartitionedMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chiCreateEmptyUnpartitionedMesh </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an empty unpartitioned mesh. An empty unpartitioned mesh is meant to be manipulated with calls to <a class="el" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex()</a> and <a class="el" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga6a824614423ad50e9feee8eba181f189">chiUnpartitionedMeshUploadCell()</a>. It essentially supports building a mesh manually.</p>
+<h2>_</h2>
+<h3>Example</h3>
+<p>Example usage </p><div class="fragment"><div class="line">umesh = <a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga0ba84ea385c6151304caad15bf2a101b">chiCreateEmptyUnpartitionedMesh</a>()</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="../../df/d22/create_8cc_source.html#l00025">25</a> of file <a class="el" href="../../df/d22/create_8cc_source.html">create.cc</a>.</p>
+
+</div>
+</div>
+<a id="ga68cec08ee6d578fabe0b543c4978e138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68cec08ee6d578fabe0b543c4978e138">&#9670;&nbsp;</a></span>chiDestroyUnpartitionedMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chiDestroyUnpartitionedMesh </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destroy an unpartitioned mesh. This routine should be called for memory sensitive simulations because each process will have a full copy of this data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>int Handle to mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>_</h2>
+<h3>Example</h3>
+<p>Example usage </p><div class="fragment"><div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga68cec08ee6d578fabe0b543c4978e138">chiDestroyUnpartitionedMesh</a>(umesh)</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="../../df/d22/create_8cc_source.html#l00055">55</a> of file <a class="el" href="../../df/d22/create_8cc_source.html">create.cc</a>.</p>
+
+</div>
+</div>
+<a id="gaa60b90215837f5d1ad8b0c4be6f2fabb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa60b90215837f5d1ad8b0c4be6f2fabb">&#9670;&nbsp;</a></span>chiUnpartitionedMeshFinalizeEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chiUnpartitionedMeshFinalizeEmpty </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Finalizes a mesh. This usually involves computing centroids and establishing connectivity.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>int Handle to mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>_</h2>
+<h3>Example</h3>
+<p>Example usage </p><div class="fragment"><div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 0, 0, 0)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 1, 0, 0)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 1, 1, 0)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 0, 1, 0)</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 0, 0, 1)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 1, 0, 1)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 1, 1, 1)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 0, 1, 1)</div>
+<div class="line"> </div>
+<div class="line">cell = {}</div>
+<div class="line">cell.type        = <span class="stringliteral">&quot;POLYHEDRON&quot;</span></div>
+<div class="line">cell.sub_type    = <span class="stringliteral">&quot;HEXAHEDRON&quot;</span></div>
+<div class="line">cell.num_faces   = 6</div>
+<div class="line">cell.material_id = 0</div>
+<div class="line">cell.face0 = {1,2,6,5}</div>
+<div class="line">cell.face1 = {0,4,7,3}</div>
+<div class="line">cell.face2 = {2,3,7,6}</div>
+<div class="line">cell.face3 = {0,1,5,4}</div>
+<div class="line">cell.face4 = {4,5,6,7}</div>
+<div class="line">cell.face5 = {0,3,2,1}</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga6a824614423ad50e9feee8eba181f189">chiUnpartitionedMeshUploadCell</a>(umesh, cell, <span class="keyword">true</span>)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#gaa60b90215837f5d1ad8b0c4be6f2fabb">chiUnpartitionedMeshFinalizeEmpty</a>(umesh)</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/basic__operations_8cc_source.html#l00248">248</a> of file <a class="el" href="../../d9/d85/basic__operations_8cc_source.html">basic_operations.cc</a>.</p>
+
+</div>
+</div>
 <a id="gaec8e0a8206f9297312fa5b1ab6639015"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaec8e0a8206f9297312fa5b1ab6639015">&#9670;&nbsp;</a></span>chiUnpartitionedMeshFromEnsightGold()</h2>
 
@@ -141,7 +258,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chiVolumeMesherExecute</a>()</div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A handle to the newly created UnpartitionedMesh </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/create_8cc_source.html#l00099">99</a> of file <a class="el" href="../../df/d22/create_8cc_source.html">create.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d22/create_8cc_source.html#l00175">175</a> of file <a class="el" href="../../df/d22/create_8cc_source.html">create.cc</a>.</p>
 
 </div>
 </div>
@@ -183,7 +300,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chiVolumeMesherExecute</a>()</div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A handle to the newly created UnpartitionedMesh </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/create_8cc_source.html#l00209">209</a> of file <a class="el" href="../../df/d22/create_8cc_source.html">create.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d22/create_8cc_source.html#l00287">287</a> of file <a class="el" href="../../df/d22/create_8cc_source.html">create.cc</a>.</p>
 
 </div>
 </div>
@@ -226,7 +343,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chiVolumeMesherExecute</a>()</div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A handle to the newly created UnpartitionedMesh </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/create_8cc_source.html#l00040">40</a> of file <a class="el" href="../../df/d22/create_8cc_source.html">create.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d22/create_8cc_source.html#l00115">115</a> of file <a class="el" href="../../df/d22/create_8cc_source.html">create.cc</a>.</p>
 
 </div>
 </div>
@@ -268,23 +385,126 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chiVolumeMesherExecute</a>()</div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A handle to the newly created UnpartitionedMesh </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d22/create_8cc_source.html#l00155">155</a> of file <a class="el" href="../../df/d22/create_8cc_source.html">create.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d22/create_8cc_source.html#l00232">232</a> of file <a class="el" href="../../df/d22/create_8cc_source.html">create.cc</a>.</p>
+
+</div>
+</div>
+<a id="ga6a824614423ad50e9feee8eba181f189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a824614423ad50e9feee8eba181f189">&#9670;&nbsp;</a></span>chiUnpartitionedMeshUploadCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chiUnpartitionedMeshUploadCell </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Uploads a cell</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>int Handle to mesh. </td></tr>
+    <tr><td class="paramname">cell_table</td><td>lua_table A Lua-table containing fields of data. See cell_table below.</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>_</h2>
+<h3>cell_table</h3>
+<p>A lua-table with the following fields:</p><ul>
+<li><code>type</code> <em>string</em>. The value of this field contains the cell's primary type. The value can be "SLAB", "POLYGON" or "POLYHEDRON".</li>
+<li><code>sub_type</code> <em>string</em>. The value of this field constains the cell's secondary type. The value can be "SLAB", "POLYGON", "TRIANGLE", "QUADRILATERAL", "POLYHEDRON", "TETRAHEDRON" or "HEXAHEDRON".</li>
+<li><code>num_faces</code> <em>int</em>. The value of this field represent the number of faces specified for this cell. Each face is contained in a field "faceX" where X is the face index.</li>
+<li><code>material_id</code> <em>int</em>. (Optional) The value of this field holds a material identifier. If not provided, will be defaulted to -1.</li>
+<li><code>faceX</code> <em>table</em>. A field holding a lua-table containing the vertex-ids of face X. There must be <code>num_faces</code> of these fields, i.e., "face0", "face1", etc.</li>
+</ul>
+<h3>Example</h3>
+<p>Example usage </p><div class="fragment"><div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 0, 0, 0)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 1, 0, 0)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 1, 1, 0)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 0, 1, 0)</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 0, 0, 1)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 1, 0, 1)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 1, 1, 1)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 0, 1, 1)</div>
+<div class="line"> </div>
+<div class="line">cell = {}</div>
+<div class="line">cell.type        = <span class="stringliteral">&quot;POLYHEDRON&quot;</span></div>
+<div class="line">cell.sub_type    = <span class="stringliteral">&quot;HEXAHEDRON&quot;</span></div>
+<div class="line">cell.num_faces   = 6</div>
+<div class="line">cell.material_id = 0</div>
+<div class="line">cell.face0 = {1,2,6,5}</div>
+<div class="line">cell.face1 = {0,4,7,3}</div>
+<div class="line">cell.face2 = {2,3,7,6}</div>
+<div class="line">cell.face3 = {0,1,5,4}</div>
+<div class="line">cell.face4 = {4,5,6,7}</div>
+<div class="line">cell.face5 = {0,3,2,1}</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga6a824614423ad50e9feee8eba181f189">chiUnpartitionedMeshUploadCell</a>(umesh, cell, <span class="keyword">true</span>)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#gaa60b90215837f5d1ad8b0c4be6f2fabb">chiUnpartitionedMeshFinalizeEmpty</a>(umesh)</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/basic__operations_8cc_source.html#l00111">111</a> of file <a class="el" href="../../d9/d85/basic__operations_8cc_source.html">basic_operations.cc</a>.</p>
+
+</div>
+</div>
+<a id="ga7bf11e8245cc5965b3c35c1df892bc4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7bf11e8245cc5965b3c35c1df892bc4c">&#9670;&nbsp;</a></span>chiUnpartitionedMeshUploadVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chiUnpartitionedMeshUploadVertex </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Uploads a vertex.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>int Handle to mesh. </td></tr>
+    <tr><td class="paramname">x</td><td>double x-coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>double y-coordinate. </td></tr>
+    <tr><td class="paramname">z</td><td>double z-coordinate.</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>_</h2>
+<h3>Example</h3>
+<p>Example usage </p><div class="fragment"><div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 0, 0, 0)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 1, 0, 0)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 1, 1, 0)</div>
+<div class="line"><a class="code" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a>(umesh, 0, 1, 0)</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d85/basic__operations_8cc_source.html#l00028">28</a> of file <a class="el" href="../../d9/d85/basic__operations_8cc_source.html">basic_operations.cc</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="agroup___lua_mesh_handler_html_ga57ff5c2bfc92cd5cf102d26a3611bd3e"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">int chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00570">lua_functions.c:570</a></div></div>
+<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_ga68cec08ee6d578fabe0b543c4978e138"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga68cec08ee6d578fabe0b543c4978e138">chiDestroyUnpartitionedMesh</a></div><div class="ttdeci">int chiDestroyUnpartitionedMesh(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d22/create_8cc_source.html#l00055">create.cc:55</a></div></div>
 <div class="ttc" id="agroup___lua_volume_mesher_html_ga2cbae637b293223c824105bf422c0ab8"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chi_lua::chiVolumeMesherExecute</a></div><div class="ttdeci">int chiVolumeMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00731">lua_functions.c:731</a></div></div>
-<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_gaf5c1444c5e005f79330c570c0886d03a"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#gaf5c1444c5e005f79330c570c0886d03a">chiUnpartitionedMeshFromMshFormat</a></div><div class="ttdeci">int chiUnpartitionedMeshFromMshFormat(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d22/create_8cc_source.html#l00209">create.cc:209</a></div></div>
-<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_ga7cec185479aa8cce6b469203ea0ab360"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7cec185479aa8cce6b469203ea0ab360">chiUnpartitionedMeshFromVTU</a></div><div class="ttdeci">int chiUnpartitionedMeshFromVTU(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d22/create_8cc_source.html#l00040">create.cc:40</a></div></div>
-<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_gaec8e0a8206f9297312fa5b1ab6639015"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#gaec8e0a8206f9297312fa5b1ab6639015">chiUnpartitionedMeshFromEnsightGold</a></div><div class="ttdeci">int chiUnpartitionedMeshFromEnsightGold(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d22/create_8cc_source.html#l00099">create.cc:99</a></div></div>
+<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_gaf5c1444c5e005f79330c570c0886d03a"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#gaf5c1444c5e005f79330c570c0886d03a">chiUnpartitionedMeshFromMshFormat</a></div><div class="ttdeci">int chiUnpartitionedMeshFromMshFormat(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d22/create_8cc_source.html#l00287">create.cc:287</a></div></div>
+<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_ga7cec185479aa8cce6b469203ea0ab360"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7cec185479aa8cce6b469203ea0ab360">chiUnpartitionedMeshFromVTU</a></div><div class="ttdeci">int chiUnpartitionedMeshFromVTU(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d22/create_8cc_source.html#l00115">create.cc:115</a></div></div>
+<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_gaa60b90215837f5d1ad8b0c4be6f2fabb"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#gaa60b90215837f5d1ad8b0c4be6f2fabb">chiUnpartitionedMeshFinalizeEmpty</a></div><div class="ttdeci">int chiUnpartitionedMeshFinalizeEmpty(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d85/basic__operations_8cc_source.html#l00248">basic_operations.cc:248</a></div></div>
+<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_ga6a824614423ad50e9feee8eba181f189"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga6a824614423ad50e9feee8eba181f189">chiUnpartitionedMeshUploadCell</a></div><div class="ttdeci">int chiUnpartitionedMeshUploadCell(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d85/basic__operations_8cc_source.html#l00111">basic_operations.cc:111</a></div></div>
+<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_ga7bf11e8245cc5965b3c35c1df892bc4c"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga7bf11e8245cc5965b3c35c1df892bc4c">chiUnpartitionedMeshUploadVertex</a></div><div class="ttdeci">int chiUnpartitionedMeshUploadVertex(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d85/basic__operations_8cc_source.html#l00028">basic_operations.cc:28</a></div></div>
+<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_gaec8e0a8206f9297312fa5b1ab6639015"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#gaec8e0a8206f9297312fa5b1ab6639015">chiUnpartitionedMeshFromEnsightGold</a></div><div class="ttdeci">int chiUnpartitionedMeshFromEnsightGold(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d22/create_8cc_source.html#l00175">create.cc:175</a></div></div>
 <div class="ttc" id="agroup___lua_region_html_ga43a351b3c89be7a78be0fd2572fcda99"><div class="ttname"><a href="../../df/dda/group___lua_region.html#ga43a351b3c89be7a78be0fd2572fcda99">chi_lua::chiRegionCreate</a></div><div class="ttdeci">int chiRegionCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00503">lua_functions.c:503</a></div></div>
-<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_ga286f0bc546cea12d9a2a90415eeec1c4"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga286f0bc546cea12d9a2a90415eeec1c4">chiUnpartitionedMeshFromWavefrontOBJ</a></div><div class="ttdeci">int chiUnpartitionedMeshFromWavefrontOBJ(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d22/create_8cc_source.html#l00155">create.cc:155</a></div></div>
+<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_ga286f0bc546cea12d9a2a90415eeec1c4"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga286f0bc546cea12d9a2a90415eeec1c4">chiUnpartitionedMeshFromWavefrontOBJ</a></div><div class="ttdeci">int chiUnpartitionedMeshFromWavefrontOBJ(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d22/create_8cc_source.html#l00232">create.cc:232</a></div></div>
 <div class="ttc" id="agroup___lua_volume_mesher_html_ga51e2ce3f00d88c1bb3811b3361f0c2df"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#ga51e2ce3f00d88c1bb3811b3361f0c2df">chi_lua::chiVolumeMesherCreate</a></div><div class="ttdeci">int chiVolumeMesherCreate(int Type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00726">lua_functions.c:726</a></div></div>
 <div class="ttc" id="agroup___lua_surface_mesher_html_ga0c2548f1aad3017bd1aa8732fe8ae3ba"><div class="ttname"><a href="../../d1/d9b/group___lua_surface_mesher.html#ga0c2548f1aad3017bd1aa8732fe8ae3ba">chi_lua::chiSurfaceMesherCreate</a></div><div class="ttdeci">int chiSurfaceMesherCreate(int Type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00669">lua_functions.c:669</a></div></div>
 <div class="ttc" id="agroup___lua_surface_mesher_html_gae977f4ef9c66248e03bbc9c2a5e9c24b"><div class="ttname"><a href="../../d1/d9b/group___lua_surface_mesher.html#gae977f4ef9c66248e03bbc9c2a5e9c24b">chi_lua::chiSurfaceMesherExecute</a></div><div class="ttdeci">int chiSurfaceMesherExecute(bool ExportLoadBalance)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00643">lua_functions.c:643</a></div></div>
 <div class="ttc" id="agroup___lua_region_html_ga4afda824d5a22f89daf3be9b71584a35"><div class="ttname"><a href="../../df/dda/group___lua_region.html#ga4afda824d5a22f89daf3be9b71584a35">chi_lua::chiRegionAddEmptyBoundary</a></div><div class="ttdeci">int chiRegionAddEmptyBoundary(int RegionHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00561">lua_functions.c:561</a></div></div>
+<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_ga0ba84ea385c6151304caad15bf2a101b"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga0ba84ea385c6151304caad15bf2a101b">chiCreateEmptyUnpartitionedMesh</a></div><div class="ttdeci">int chiCreateEmptyUnpartitionedMesh(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d22/create_8cc_source.html#l00025">create.cc:25</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

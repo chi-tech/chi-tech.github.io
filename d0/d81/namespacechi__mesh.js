@@ -6,9 +6,6 @@ var namespacechi__mesh =
     [ "Boundary", "db/dc8/classchi__mesh_1_1_boundary.html", "db/dc8/classchi__mesh_1_1_boundary" ],
     [ "Cell", "d8/d7c/classchi__mesh_1_1_cell.html", "d8/d7c/classchi__mesh_1_1_cell" ],
     [ "CellFace", "db/d1b/classchi__mesh_1_1_cell_face.html", "db/d1b/classchi__mesh_1_1_cell_face" ],
-    [ "CellPolygon", "dc/d11/classchi__mesh_1_1_cell_polygon.html", "dc/d11/classchi__mesh_1_1_cell_polygon" ],
-    [ "CellPolyhedron", "d6/d71/classchi__mesh_1_1_cell_polyhedron.html", "d6/d71/classchi__mesh_1_1_cell_polyhedron" ],
-    [ "CellSlab", "da/dd2/classchi__mesh_1_1_cell_slab.html", "da/dd2/classchi__mesh_1_1_cell_slab" ],
     [ "Edge", "d9/d36/structchi__mesh_1_1_edge.html", "d9/d36/structchi__mesh_1_1_edge" ],
     [ "EdgeLoop", "d5/d30/structchi__mesh_1_1_edge_loop.html", "d5/d30/structchi__mesh_1_1_edge_loop" ],
     [ "Face", "d4/dd2/structchi__mesh_1_1_face.html", "d4/dd2/structchi__mesh_1_1_face" ],
@@ -39,6 +36,7 @@ var namespacechi__mesh =
     [ "TensorRank2Dim3", "d8/d2c/structchi__mesh_1_1_tensor_rank2_dim3.html", "d8/d2c/structchi__mesh_1_1_tensor_rank2_dim3" ],
     [ "UnpartitionedMesh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh" ],
     [ "Vector3", "dd/d54/structchi__mesh_1_1_vector3.html", "dd/d54/structchi__mesh_1_1_vector3" ],
+    [ "VertexHandler", "d1/d59/classchi__mesh_1_1_vertex_handler.html", "d1/d59/classchi__mesh_1_1_vertex_handler" ],
     [ "VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", "de/df0/classchi__mesh_1_1_volume_mesher" ],
     [ "VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", "de/d89/classchi__mesh_1_1_volume_mesher_extruder" ],
     [ "VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned" ]

@@ -127,6 +127,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad68fad226faed25b155e0569b1a5f713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad870fede14345f786340622beaf81eba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ad870fede14345f786340622beaf81eba">ReadFromMsh</a> (const <a class="el" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html">Options</a> &amp;options)</td></tr>
 <tr class="separator:ad870fede14345f786340622beaf81eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510a89d8c41e8c19eccbe645ff4fa1e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a510a89d8c41e8c19eccbe645ff4fa1e7">PushProxyCell</a> (const std::string &amp;type_str, const std::string &amp;sub_type_str, int cell_num_faces, int cell_material_id, const std::vector&lt; std::vector&lt; uint64_t &gt;&gt; &amp;proxy_faces)</td></tr>
+<tr class="separator:a510a89d8c41e8c19eccbe645ff4fa1e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea0b47c170a9e5d498907fca19abb8a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#aea0b47c170a9e5d498907fca19abb8a2">~UnpartitionedMesh</a> ()</td></tr>
+<tr class="separator:aea0b47c170a9e5d498907fca19abb8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -155,6 +159,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:a54f13d709bd55611f09c9c4007097505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c40ffc06d1253bdced14564a8ceb957"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">LightWeightCell</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a5c40ffc06d1253bdced14564a8ceb957">raw_boundary_cells</a></td></tr>
 <tr class="separator:a5c40ffc06d1253bdced14564a8ceb957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae95ae8984e89dfe0ada3e27e6d366eab"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::set&lt; uint64_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae95ae8984e89dfe0ada3e27e6d366eab">vertex_cell_subscriptions</a></td></tr>
+<tr class="separator:ae95ae8984e89dfe0ada3e27e6d366eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aede1055a5f2c7ab57de4fa1e9b8d2afb"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html">chi_mesh::UnpartitionedMesh::Options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#aede1055a5f2c7ab57de4fa1e9b8d2afb">mesh_options</a></td></tr>
 <tr class="separator:aede1055a5f2c7ab57de4fa1e9b8d2afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a285b47c61e3b2a5c81d645255b6beb1b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html">chi_mesh::UnpartitionedMesh::BoundBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a285b47c61e3b2a5c81d645255b6beb1b">bound_box</a></td></tr>
@@ -189,7 +195,35 @@ Data Fields</h2></td></tr>
 <tr><td class="fieldname"><a id="a25c1e74a9ce635751a7961b67c7f9179ac72e0e0a41cc98aa8ccf47d9bb843a51"></a>DIVIDE_WORK&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00039">39</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00049">49</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aea0b47c170a9e5d498907fca19abb8a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea0b47c170a9e5d498907fca19abb8a2">&#9670;&nbsp;</a></span>~UnpartitionedMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_mesh::UnpartitionedMesh::~UnpartitionedMesh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00097">97</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -210,7 +244,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Establishes neighbor connectivity for the light-weight mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/daf/unpartmesh__00b__connectivity_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d2/daf/unpartmesh__00b__connectivity_8cc_source.html">unpartmesh_00b_connectivity.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/daf/unpartmesh__00b__connectivity_8cc_source.html#l00013">13</a> of file <a class="el" href="../../d2/daf/unpartmesh__00b__connectivity_8cc_source.html">unpartmesh_00b_connectivity.cc</a>.</p>
 
 </div>
 </div>
@@ -259,7 +293,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a raw polyhedron cell from a vtk-hexahedron. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00073">73</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00074">74</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
 
 </div>
 </div>
@@ -288,7 +322,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a raw slab cell from a vtk-line. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00265">265</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00271">271</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
 
 </div>
 </div>
@@ -317,7 +351,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a raw polygon cell from a vtk-polygon. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00151">151</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00154">154</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
 
 </div>
 </div>
@@ -375,7 +409,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a raw polygon cell from a vtk-quad. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00189">189</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00193">193</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
 
 </div>
 </div>
@@ -404,7 +438,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a raw polyhedron cell from a vtk-tetrahedron. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00112">112</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00114">114</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
 
 </div>
 </div>
@@ -433,7 +467,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a raw polygon cell from a vtk-triangle. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00227">227</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00232">232</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
 
 </div>
 </div>
@@ -462,7 +496,56 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a raw point cell from a vtk-vertex. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00300">300</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00307">307</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
+
+</div>
+</div>
+<a id="a510a89d8c41e8c19eccbe645ff4fa1e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510a89d8c41e8c19eccbe645ff4fa1e7">&#9670;&nbsp;</a></span>PushProxyCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_mesh::UnpartitionedMesh::PushProxyCell </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>sub_type_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cell_num_faces</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cell_material_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; uint64_t &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>proxy_faces</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Makes a cell from proxy information and pushes the cell to the mesh. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/db8/unpartmesh__05__pushproxycell_8cc_source.html#l00005">5</a> of file <a class="el" href="../../db/db8/unpartmesh__05__pushproxycell_8cc_source.html">unpartmesh_05_pushproxycell.cc</a>.</p>
 
 </div>
 </div>
@@ -508,6 +591,7 @@ Data Fields</h2></td></tr>
 <p>Lamda for checking if an element is 2D.</p>
 <p>Lamda for checking if an element is 2D.</p>
 <p>Lambda for checking supported elements.</p>
+<p>Lambda giving the cell subtype, given the MSH cell type.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d9a/unpartmesh__04__readfrommsh_8cc_source.html#l00012">12</a> of file <a class="el" href="../../d8/d9a/unpartmesh__04__readfrommsh_8cc_source.html">unpartmesh_04_readfrommsh.cc</a>.</p>
 
@@ -530,7 +614,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Reads a VTK unstructured mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00321">321</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html#l00329">329</a> of file <a class="el" href="../../d5/d93/unpartmesh__01__readfromvtu_8cc_source.html">unpartmesh_01_readfromvtu.cc</a>.</p>
 
 </div>
 </div>
@@ -596,7 +680,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00036">36</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00045">45</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -612,7 +696,23 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00035">35</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00044">44</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+
+</div>
+</div>
+<a id="ae95ae8984e89dfe0ada3e27e6d366eab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95ae8984e89dfe0ada3e27e6d366eab">&#9670;&nbsp;</a></span>vertex_cell_subscriptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::set&lt;uint64_t&gt; &gt; chi_mesh::UnpartitionedMesh::vertex_cell_subscriptions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00046">46</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -628,7 +728,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00034">34</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00043">43</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -640,6 +740,7 @@ Data Fields</h2></td></tr>
 <li>ChiTech/ChiMesh/UnpartitionedMesh/<a class="el" href="../../da/da5/unpartmesh__02__readfromensight_8cc_source.html">unpartmesh_02_readfromensight.cc</a></li>
 <li>ChiTech/ChiMesh/UnpartitionedMesh/<a class="el" href="../../db/d49/unpartmesh__03__readfromwavefrontobj_8cc_source.html">unpartmesh_03_readfromwavefrontobj.cc</a></li>
 <li>ChiTech/ChiMesh/UnpartitionedMesh/<a class="el" href="../../d8/d9a/unpartmesh__04__readfrommsh_8cc_source.html">unpartmesh_04_readfrommsh.cc</a></li>
+<li>ChiTech/ChiMesh/UnpartitionedMesh/<a class="el" href="../../db/db8/unpartmesh__05__pushproxycell_8cc_source.html">unpartmesh_05_pushproxycell.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -8,6 +8,7 @@ var classchi__mesh_1_1_unpartitioned_mesh =
       [ "ALL_FROM_HOME", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a25c1e74a9ce635751a7961b67c7f9179a3ec10a5142a4eb8302ba550e0097cfbc", null ],
       [ "DIVIDE_WORK", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a25c1e74a9ce635751a7961b67c7f9179ac72e0e0a41cc98aa8ccf47d9bb843a51", null ]
     ] ],
+    [ "~UnpartitionedMesh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#aea0b47c170a9e5d498907fca19abb8a2", null ],
     [ "BuildMeshConnectivity", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a636d85ee971e6b9a1bda3bf5c5f5d76b", null ],
     [ "ComputeCentroidsAndCheckQuality", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a15c6974be982d4a472272d45bce149a7", null ],
     [ "CreateCellFromVTKHexahedron", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a1a31b78d1d5d918574fb32581b87adb7", null ],
@@ -18,6 +19,7 @@ var classchi__mesh_1_1_unpartitioned_mesh =
     [ "CreateCellFromVTKTetrahedron", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a70c9e81810de07e8a0ab4041bd920ea9", null ],
     [ "CreateCellFromVTKTriangle", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a92ef577a3a892387cb30560a30e8e628", null ],
     [ "CreateCellFromVTKVertex", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a87d97b3a0ad75d8dcc89f89937d96639", null ],
+    [ "PushProxyCell", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a510a89d8c41e8c19eccbe645ff4fa1e7", null ],
     [ "ReadFromEnsightGold", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a84fe0cda8fac49b32bcfd60f77e1721f", null ],
     [ "ReadFromMsh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ad870fede14345f786340622beaf81eba", null ],
     [ "ReadFromVTU", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972", null ],
@@ -26,5 +28,6 @@ var classchi__mesh_1_1_unpartitioned_mesh =
     [ "mesh_options", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#aede1055a5f2c7ab57de4fa1e9b8d2afb", null ],
     [ "raw_boundary_cells", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a5c40ffc06d1253bdced14564a8ceb957", null ],
     [ "raw_cells", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a54f13d709bd55611f09c9c4007097505", null ],
+    [ "vertex_cell_subscriptions", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae95ae8984e89dfe0ada3e27e6d366eab", null ],
     [ "vertices", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae739d4bf77ae6ae12efd675ec23ebf48", null ]
 ];

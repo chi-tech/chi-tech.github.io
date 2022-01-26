@@ -179,8 +179,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:adcc59f6f52b9bbcbb50e60af99945048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a373bcf8df86ed576c3944c8ebd54c7ce"><td class="memItemLeft" align="right" valign="top">std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a373bcf8df86ed576c3944c8ebd54c7ce">cell_view_added_flags</a></td></tr>
 <tr class="separator:a373bcf8df86ed576c3944c8ebd54c7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ecad9038967b536c21c9a30200f641a"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a4ecad9038967b536c21c9a30200f641a">neighbor_cells</a></td></tr>
-<tr class="separator:a4ecad9038967b536c21c9a30200f641a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a841d6e6a7da6223436e287c1fc11c31f"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, std::unique_ptr&lt; <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#a841d6e6a7da6223436e287c1fc11c31f">neighbor_cells</a></td></tr>
+<tr class="separator:a841d6e6a7da6223436e287c1fc11c31f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad92dff7da2766ac3a526023e10cdd120"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, <a class="el" href="../../dd/da9/class_cell_f_v_values.html">CellFVValues</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d09/class_spatial_discretization___f_v.html#ad92dff7da2766ac3a526023e10cdd120">neighbor_cell_fv_views</a></td></tr>
 <tr class="separator:ad92dff7da2766ac3a526023e10cdd120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -764,7 +764,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Maps the cell index to a position stored locally. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html#l00157">157</a> of file <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html">fv_01_addviewofcont.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html#l00127">127</a> of file <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html">fv_01_addviewofcont.cc</a>.</p>
 
 </div>
 </div>
@@ -785,7 +785,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Maps the cell index to a position stored locally. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html#l00175">175</a> of file <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html">fv_01_addviewofcont.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html#l00145">145</a> of file <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html">fv_01_addviewofcont.cc</a>.</p>
 
 </div>
 </div>
@@ -873,7 +873,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../da/d2b/class_spatial_discretization.html#a503e258d53186f8ec8665fcd0dad0a23">SpatialDiscretization</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html#l00020">20</a> of file <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html">fv_01_addviewofcont.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html">fv_01_addviewofcont.cc</a>.</p>
 
 </div>
 </div>
@@ -893,7 +893,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Adds a PWL Finite Element for each cell of the local problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html#l00077">77</a> of file <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html">fv_01_addviewofcont.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html#l00069">69</a> of file <a class="el" href="../../d8/da3/fv__01__addviewofcont_8cc_source.html">fv_01_addviewofcont.cc</a>.</p>
 
 </div>
 </div>
@@ -1042,8 +1042,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4ecad9038967b536c21c9a30200f641a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ecad9038967b536c21c9a30200f641a">&#9670;&nbsp;</a></span>neighbor_cells</h2>
+<a id="a841d6e6a7da6223436e287c1fc11c31f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a841d6e6a7da6223436e287c1fc11c31f">&#9670;&nbsp;</a></span>neighbor_cells</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1052,7 +1052,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;uint64_t, <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>*&gt; SpatialDiscretization_FV::neighbor_cells</td>
+          <td class="memname">std::map&lt;uint64_t, std::unique_ptr&lt;<a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>&gt; &gt; SpatialDiscretization_FV::neighbor_cells</td>
         </tr>
       </table>
   </td>

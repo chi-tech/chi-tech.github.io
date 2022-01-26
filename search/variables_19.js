@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['y_4948',['y',['../dd/d54/structchi__mesh_1_1_vector3.html#a8b89a79cfebafd04dbda021f626a9694',1,'chi_mesh::Vector3']]],
-  ['y0_4949',['y0',['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#a247ddbbadf9ebf5710169b7ea32e6960',1,'chi_mesh::SphereLogicalVolume::y0()'],['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#aa5e066c297e337f5426d5190080889f5',1,'chi_mesh::RCCLogicalVolume::y0()']]],
-  ['y_5fi_4950',['y_i',['../d6/dbe/class_hexahedron_mapping_f_e___p_w_l.html#a037e3106d1998acca228d34cb9a91e26',1,'HexahedronMappingFE_PWL']]],
-  ['ybounds_4951',['ybounds',['../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html#a67888543263ecb183fa08c1c50b4edf8',1,'chi_mesh::SurfaceMeshLogicalVolume']]],
-  ['ycuts_4952',['ycuts',['../df/d7e/classchi__mesh_1_1_surface_mesher.html#a92648f16f9f67eb552c70d5cee441d99',1,'chi_mesh::SurfaceMesher::ycuts()'],['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#af3e2b3f942221bc52081bebbe33f64a4',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS::ycuts()']]],
-  ['ymax_4953',['ymax',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#ade20a6073a509c9065abac340c5d9007',1,'chi_mesh::RPPLogicalVolume::ymax()'],['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#acf069e314cf0e7ff13d047e8836ecd14',1,'chi_mesh::UnpartitionedMesh::BoundBox::ymax()']]],
-  ['ymin_4954',['ymin',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#a9f70e3f3c89eced3c81d22bc3b08f73c',1,'chi_mesh::RPPLogicalVolume::ymin()'],['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abac16fd3161e5380153a454ff94bc146',1,'chi_mesh::UnpartitionedMesh::BoundBox::ymin()']]]
+  ['z_4944',['z',['../dd/d54/structchi__mesh_1_1_vector3.html#a95963ca137a97c9d927bc9d10a98a36f',1,'chi_mesh::Vector3']]],
+  ['z0_4945',['z0',['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#a0f1890d23d259865a8e54dff0b8a6292',1,'chi_mesh::SphereLogicalVolume::z0()'],['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a80610d52355ab5a26d74228aa5196eba',1,'chi_mesh::RCCLogicalVolume::z0()']]],
+  ['zbounds_4946',['zbounds',['../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html#a3ca3beee8554e4b07d7360b5a2656d81',1,'chi_mesh::SurfaceMeshLogicalVolume']]],
+  ['zcuts_4947',['zcuts',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a03ce3d072f1e068a25a5f71014de601e',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS']]],
+  ['zero_5fboundary_4948',['zero_boundary',['../d2/dc1/class_linear_boltzmann_1_1_solver.html#a388cfe74b2130b5b9dbe420b548a0850',1,'LinearBoltzmann::Solver']]],
+  ['zero_5fboundary_5fflux_4949',['zero_boundary_flux',['../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a45c70db97d8fb9a3a080c9a1c3ea42c0',1,'chi_mesh::sweep_management::BoundaryBase']]],
+  ['zmax_4950',['zmax',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#a095626efd367180885e94dc5a6e70944',1,'chi_mesh::RPPLogicalVolume::zmax()'],['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#a43e393bd9fed88a0265daafb31b19b9d',1,'chi_mesh::UnpartitionedMesh::BoundBox::zmax()']]],
+  ['zmin_4951',['zmin',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#a33478b594df2c60f9d6bd50e4f88333d',1,'chi_mesh::RPPLogicalVolume::zmin()'],['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abb34b84bd703829e020e190928c0618b',1,'chi_mesh::UnpartitionedMesh::BoundBox::zmin()']]]
 ];

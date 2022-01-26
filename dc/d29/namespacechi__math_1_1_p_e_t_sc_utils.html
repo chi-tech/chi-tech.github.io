@@ -109,8 +109,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad3c389879eeafb68d9b7540887b883cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd2c2c48b9007d3effa0a21e05665d50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#acd2c2c48b9007d3effa0a21e05665d50">CreateSquareMatrix</a> (Mat &amp;A, int64_t local_size, int64_t global_size)</td></tr>
 <tr class="separator:acd2c2c48b9007d3effa0a21e05665d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d2e68991810843866922f7d7b408805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a1d2e68991810843866922f7d7b408805">InitMatrixSparsity</a> (Mat A, std::vector&lt; int64_t &gt; &amp;nodal_nnz_in_diag, std::vector&lt; int64_t &gt; &amp;nodal_nnz_off_diag)</td></tr>
-<tr class="separator:a1d2e68991810843866922f7d7b408805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c2fe306b9259c0f15fb7d5fde9508a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a90c2fe306b9259c0f15fb7d5fde9508a">InitMatrixSparsity</a> (Mat A, const std::vector&lt; int64_t &gt; &amp;nodal_nnz_in_diag, const std::vector&lt; int64_t &gt; &amp;nodal_nnz_off_diag)</td></tr>
+<tr class="separator:a90c2fe306b9259c0f15fb7d5fde9508a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37a0a18406153bbfe2b10c8673080466"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html">PETScSolverSetup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a37a0a18406153bbfe2b10c8673080466">CreateCommonKrylovSolverSetup</a> (Mat ref_matrix, std::string in_solver_name=&quot;KSPSolver&quot;, std::string in_solver_type=KSPGMRES, std::string in_preconditioner_type=PCNONE, double in_relative_residual_tolerance=1.0e-6, int64_t in_maximum_iterations=100)</td></tr>
 <tr class="separator:a37a0a18406153bbfe2b10c8673080466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77fd6feef9f909de887c2533d2ca144c"><td class="memItemLeft" align="right" valign="top">PetscErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a77fd6feef9f909de887c2533d2ca144c">RelativeResidualConvergenceTest</a> (KSP ksp, PetscInt n, PetscReal rnorm, KSPConvergedReason *convergedReason, void *monitordestroy)</td></tr>
@@ -575,8 +575,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1d2e68991810843866922f7d7b408805"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d2e68991810843866922f7d7b408805">&#9670;&nbsp;</a></span>InitMatrixSparsity()</h2>
+<a id="a90c2fe306b9259c0f15fb7d5fde9508a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c2fe306b9259c0f15fb7d5fde9508a">&#9670;&nbsp;</a></span>InitMatrixSparsity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -590,13 +590,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; int64_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; int64_t &gt; &amp;&#160;</td>
           <td class="paramname"><em>nodal_nnz_in_diag</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; int64_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; int64_t &gt; &amp;&#160;</td>
           <td class="paramname"><em>nodal_nnz_off_diag</em>&#160;</td>
         </tr>
         <tr>

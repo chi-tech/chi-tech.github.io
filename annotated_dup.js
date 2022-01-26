@@ -26,7 +26,6 @@ var annotated_dup =
     [ "FieldFunctionContext", "d9/db7/struct_field_function_context.html", "d9/db7/struct_field_function_context" ],
     [ "GolubFischer", "d5/d5e/class_golub_fischer.html", "d5/d5e/class_golub_fischer" ],
     [ "GraphCellInfo", "dd/d1d/struct_graph_cell_info.html", "dd/d1d/struct_graph_cell_info" ],
-    [ "HexahedronMappingFE_PWL", "d6/dbe/class_hexahedron_mapping_f_e___p_w_l.html", "d6/dbe/class_hexahedron_mapping_f_e___p_w_l" ],
     [ "HYDRO_BOUNDARY", "d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html", "d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y" ],
     [ "HYDRO_COMPONENT", "d4/d62/class_h_y_d_r_o___c_o_m_p_o_n_e_n_t.html", "d4/d62/class_h_y_d_r_o___c_o_m_p_o_n_e_n_t" ],
     [ "HYDRO_SJUNCTION", "d3/de5/class_h_y_d_r_o___s_j_u_n_c_t_i_o_n.html", "d3/de5/class_h_y_d_r_o___s_j_u_n_c_t_i_o_n" ],

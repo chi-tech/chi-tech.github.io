@@ -6,6 +6,7 @@ var namespaces_dup =
     [ "chi_lua", "d8/dd9/namespacechi__lua.html", null ],
     [ "chi_math", "dc/d58/namespacechi__math.html", "dc/d58/namespacechi__math" ],
     [ "chi_mesh", "d0/d81/namespacechi__mesh.html", "d0/d81/namespacechi__mesh" ],
+    [ "chi_mpi_utils", "dc/d8f/namespacechi__mpi__utils.html", null ],
     [ "chi_physics", "d6/d5f/namespacechi__physics.html", null ],
     [ "LBSCurvilinear", "df/dac/namespace_l_b_s_curvilinear.html", null ],
     [ "LinearBoltzmann", "d7/d19/namespace_linear_boltzmann.html", "d7/d19/namespace_linear_boltzmann" ],

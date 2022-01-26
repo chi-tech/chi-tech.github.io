@@ -2,6 +2,7 @@ var group___lua_l_b_s =
 [
     [ "Basic Simulation Setup", "d7/dec/group___lua_l_b_s__01.html", null ],
     [ "LBS Groupsets", "d5/d03/group___lua_l_b_s_groupsets.html", "d5/d03/group___lua_l_b_s_groupsets" ],
+    [ "chiLBKESExecute", "d0/daf/group___lua_l_b_s.html#gae4a2e98e2f8200f0296ff4d94b3e6214", null ],
     [ "chiLBSComputeBalance", "d0/daf/group___lua_l_b_s.html#ga5b5241ab56617c614f1983654a858fcf", null ],
     [ "chiLBSCreateSolver", "d0/daf/group___lua_l_b_s.html#gaa8ecbfc58922b856b87105c25a14ac1e", null ],
     [ "chiLBSExecute", "d0/daf/group___lua_l_b_s.html#ga4325f93255469d8c33115055a0a41964", null ],

@@ -24,5 +24,6 @@ var searchData=
   ['_7esurfacemesh_4182',['~SurfaceMesh',['../dd/d43/classchi__mesh_1_1_surface_mesh.html#aa670f6ea91c145a8fa95ae2ff6fdd651',1,'chi_mesh::SurfaceMesh']]],
   ['_7esweepchunk_4183',['~SweepChunk',['../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#a4e2beaf44497a9a79268943a3e1323d7',1,'chi_mesh::sweep_management::SweepChunk']]],
   ['_7eunknownmanager_4184',['~UnknownManager',['../d9/da7/classchi__math_1_1_unknown_manager.html#a4168fd268367f6b950d4b2a5dae640d6',1,'chi_math::UnknownManager']]],
-  ['_7evarying_4185',['~Varying',['../d8/d30/classchi__data__types_1_1_varying.html#adc0fa89ea2158f27293180753f8bcd03',1,'chi_data_types::Varying']]]
+  ['_7eunpartitionedmesh_4185',['~UnpartitionedMesh',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#aea0b47c170a9e5d498907fca19abb8a2',1,'chi_mesh::UnpartitionedMesh']]],
+  ['_7evarying_4186',['~Varying',['../d8/d30/classchi__data__types_1_1_varying.html#adc0fa89ea2158f27293180753f8bcd03',1,'chi_data_types::Varying']]]
 ];

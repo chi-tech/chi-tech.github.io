@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('d4/d01/chi__meshcontinuum__globalcellh
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#ac422fabdd933985e7c29943e8b93fa25">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#ac422fabdd933985e7c29943e8b93fa25">chi_mesh::GlobalCellHandler::</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#ac422fabdd933985e7c29943e8b93fa25">  push_back</a>(<a class="code" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> *new_cell)</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span> (new_cell-&gt;<a class="code" href="../../d8/d7c/classchi__mesh_1_1_cell.html#adaf729b7d2d8dc0f9f4a8f21a630e057">partition_id</a> == <a class="code" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">location_id</a>)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span> (new_cell-&gt;<a class="code" href="../../d8/d7c/classchi__mesh_1_1_cell.html#adaf729b7d2d8dc0f9f4a8f21a630e057">partition_id</a> == <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(<a class="code" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a>.<a class="code" href="../../dc/d52/class_chi_m_p_i.html#ab59ff8bee710888875656d3038fb7439">location_id</a>))</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a578efb3e058e8cc29f8c4cfda5b9d3b0">local_cell_glob_indices</a>.push_back(new_cell-&gt;<a class="code" href="../../d8/d7c/classchi__mesh_1_1_cell.html#aea49dd23ca8f09e588eb87e9a9f186d5">global_id</a>);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">size_t</span> local_cell_index = <a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a578efb3e058e8cc29f8c4cfda5b9d3b0">local_cell_glob_indices</a>.size() - 1;</div>
@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('d4/d01/chi__meshcontinuum__globalcellh
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/**Returns a pointer to a cell given its global cell index.*/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/**Returns a reference to a cell given its global cell index.*/</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a793701b7ff285bc48c35ab94543aaae2">   37</a></span>&#160;<a class="code" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>&amp; <a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a793701b7ff285bc48c35ab94543aaae2">chi_mesh::GlobalCellHandler::</a></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a793701b7ff285bc48c35ab94543aaae2">  operator[]</a>(uint64_t cell_global_index)</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
@@ -145,56 +145,80 @@ $(document).ready(function(){initNavTree('d4/d01/chi__meshcontinuum__globalcellh
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/**Returns the total number of global cells.*/</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a1bd208a0afbfe85f6187b0d0d6f08ce8">   61</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a1bd208a0afbfe85f6187b0d0d6f08ce8">chi_mesh::MeshContinuum::GetGlobalNumberOfCells</a>()</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">size_t</span> num_local_cells = native_cells.size();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">size_t</span> num_globl_cells = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/**Returns a const reference to a cell given its global cell index.*/</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a0a32b424cc61067cfa80cbb8a5d3b6ce">   61</a></span>&#160;<span class="keyword">const</span> <a class="code" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>&amp; <a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a793701b7ff285bc48c35ab94543aaae2">chi_mesh::GlobalCellHandler::</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a793701b7ff285bc48c35ab94543aaae2">  operator[]</a>(uint64_t cell_global_index)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">auto</span> native_location = global_cell_id_to_native_id_map.find(cell_global_index);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  MPI_Allreduce(&amp;num_local_cells,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                &amp;num_globl_cells,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                1,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                MPI_UNSIGNED_LONG_LONG,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                MPI_SUM,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                MPI_COMM_WORLD);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">return</span> num_globl_cells;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/**Returns the cell global ids of all ghost cells. These are cells that</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> * neighbors to this partition&#39;s cells but are on a different</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> * partition.*/</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a313a02cb9a237097cb32570693da5276">   80</a></span>&#160;std::vector&lt;uint64_t&gt; <a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a313a02cb9a237097cb32570693da5276">chi_mesh::GlobalCellHandler::</a></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a313a02cb9a237097cb32570693da5276">  GetGhostGlobalIDs</a>()</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  std::vector&lt;uint64_t&gt; ids;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  ids.reserve(GetNumGhosts());</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : foreign_cells)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    ids.push_back(cell-&gt;global_id);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">return</span> ids;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">/**Returns the local storage address of a ghost cell. If the</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> * ghost is not truly a ghost then -1 is returned, but is wasteful and</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> * therefore the user of this function should implement code</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"> * to prevent it.*/</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a51b692082c795a705422ee40bb929f46">   97</a></span>&#160;uint64_t <a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a51b692082c795a705422ee40bb929f46">chi_mesh::GlobalCellHandler::</a></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a51b692082c795a705422ee40bb929f46">  GetGhostLocalID</a>(<span class="keywordtype">int</span> cell_global_index)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">auto</span> foreign_location = global_cell_id_to_foreign_id_map.find(cell_global_index);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">if</span> (foreign_location != global_cell_id_to_foreign_id_map.end())</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> foreign_location-&gt;second;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  std::stringstream ostr;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  ostr &lt;&lt; <span class="stringliteral">&quot;Grid GetGhostLocalID failed to find cell &quot;</span> &lt;&lt; cell_global_index;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">throw</span> std::invalid_argument(ostr.str());</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">if</span> (native_location != global_cell_id_to_native_id_map.end())</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> *native_cells[native_location-&gt;second];</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">auto</span> foreign_location = global_cell_id_to_foreign_id_map.find(cell_global_index);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> (foreign_location != global_cell_id_to_foreign_id_map.end())</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> *foreign_cells[foreign_location-&gt;second];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  std::stringstream ostr;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  ostr &lt;&lt; <span class="stringliteral">&quot;chi_mesh::MeshContinuum::cells. Mapping error.&quot;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;       &lt;&lt; cell_global_index;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">throw</span> std::invalid_argument(ostr.str());</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/**Returns the total number of global cells.*/</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aeb466c76d1b4d532fe8bc5fc7765a338">   85</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aeb466c76d1b4d532fe8bc5fc7765a338">chi_mesh::MeshContinuum::GetGlobalNumberOfCells</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">size_t</span> num_local_cells = native_cells.size();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">size_t</span> num_globl_cells = 0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  MPI_Allreduce(&amp;num_local_cells,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                &amp;num_globl_cells,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                1,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                MPI_UNSIGNED_LONG_LONG,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                MPI_SUM,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                MPI_COMM_WORLD);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">return</span> num_globl_cells;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">/**Returns the cell global ids of all ghost cells. These are cells that</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"> * neighbors to this partition&#39;s cells but are on a different</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"> * partition.*/</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a313a02cb9a237097cb32570693da5276">  104</a></span>&#160;std::vector&lt;uint64_t&gt; <a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a313a02cb9a237097cb32570693da5276">chi_mesh::GlobalCellHandler::</a></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a313a02cb9a237097cb32570693da5276">  GetGhostGlobalIDs</a>()</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  std::vector&lt;uint64_t&gt; ids;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  ids.reserve(GetNumGhosts());</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : foreign_cells)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    ids.push_back(cell-&gt;global_id);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">return</span> ids;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">/**Returns the local storage address of a ghost cell. If the</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"> * ghost is not truly a ghost then -1 is returned, but is wasteful and</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"> * therefore the user of this function should implement code</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"> * to prevent it.*/</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a51b692082c795a705422ee40bb929f46">  121</a></span>&#160;uint64_t <a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a51b692082c795a705422ee40bb929f46">chi_mesh::GlobalCellHandler::</a></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<a class="code" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a51b692082c795a705422ee40bb929f46">  GetGhostLocalID</a>(<span class="keywordtype">int</span> cell_global_index)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">auto</span> foreign_location = global_cell_id_to_foreign_id_map.find(cell_global_index);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">if</span> (foreign_location != global_cell_id_to_foreign_id_map.end())</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> foreign_location-&gt;second;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  std::stringstream ostr;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  ostr &lt;&lt; <span class="stringliteral">&quot;Grid GetGhostLocalID failed to find cell &quot;</span> &lt;&lt; cell_global_index;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">throw</span> std::invalid_argument(ostr.str());</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
@@ -202,23 +226,23 @@ $(document).ready(function(){initNavTree('d4/d01/chi__meshcontinuum__globalcellh
 <div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_ad3142b5759d57ac808c443ce1599746a"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#ad3142b5759d57ac808c443ce1599746a">chi_mesh::GlobalCellHandler::global_cell_id_to_native_id_map</a></div><div class="ttdeci">std::map&lt; uint64_t, uint64_t &gt; &amp; global_cell_id_to_native_id_map</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/df3/chi__meshcontinuum__globalcellhandler_8h_source.html#l00021">chi_meshcontinuum_globalcellhandler.h:21</a></div></div>
 <div class="ttc" id="achi__meshcontinuum__globalcellhandler_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
 <div class="ttc" id="achi__meshcontinuum__globalcellhandler_8cc_html_aff18523449a2997a122381af7ab97f4d"><div class="ttname"><a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc.html#aff18523449a2997a122381af7ab97f4d">chi_mpi</a></div><div class="ttdeci">ChiMPI &amp; chi_mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00028">chi_runtime.cc:28</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_cell_html_aea49dd23ca8f09e588eb87e9a9f186d5"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html#aea49dd23ca8f09e588eb87e9a9f186d5">chi_mesh::Cell::global_id</a></div><div class="ttdeci">uint64_t global_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00057">cell.h:57</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_cell_html_aea49dd23ca8f09e588eb87e9a9f186d5"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html#aea49dd23ca8f09e588eb87e9a9f186d5">chi_mesh::Cell::global_id</a></div><div class="ttdeci">uint64_t global_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00072">cell.h:72</a></div></div>
 <div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_cell_html_aa32bfac9ee2a5465f06bd3192faa2441"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html#aa32bfac9ee2a5465f06bd3192faa2441">chi_mesh::Cell::local_id</a></div><div class="ttdeci">uint64_t local_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00058">cell.h:58</a></div></div>
-<div class="ttc" id="aclass_chi_m_p_i_html_ad65e6925a081cffee9ec7427fddfee8b"><div class="ttname"><a href="../../dc/d52/class_chi_m_p_i.html#ad65e6925a081cffee9ec7427fddfee8b">ChiMPI::location_id</a></div><div class="ttdeci">int location_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/chi__mpi_8h_source.html#l00032">chi_mpi.h:32</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_cell_html_adaf729b7d2d8dc0f9f4a8f21a630e057"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html#adaf729b7d2d8dc0f9f4a8f21a630e057">chi_mesh::Cell::partition_id</a></div><div class="ttdeci">uint64_t partition_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00059">cell.h:59</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_cell_html_aa32bfac9ee2a5465f06bd3192faa2441"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html#aa32bfac9ee2a5465f06bd3192faa2441">chi_mesh::Cell::local_id</a></div><div class="ttdeci">uint64_t local_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00073">cell.h:73</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_aeb466c76d1b4d532fe8bc5fc7765a338"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aeb466c76d1b4d532fe8bc5fc7765a338">chi_mesh::MeshContinuum::GetGlobalNumberOfCells</a></div><div class="ttdeci">size_t GetGlobalNumberOfCells() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00085">chi_meshcontinuum_globalcellhandler.cc:85</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_cell_html_adaf729b7d2d8dc0f9f4a8f21a630e057"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html#adaf729b7d2d8dc0f9f4a8f21a630e057">chi_mesh::Cell::partition_id</a></div><div class="ttdeci">uint64_t partition_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00074">cell.h:74</a></div></div>
 <div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_a3512b3b6edb213ad842d6ad2f46d8980"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a3512b3b6edb213ad842d6ad2f46d8980">chi_mesh::GlobalCellHandler::global_cell_id_to_foreign_id_map</a></div><div class="ttdeci">std::map&lt; uint64_t, uint64_t &gt; &amp; global_cell_id_to_foreign_id_map</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/df3/chi__meshcontinuum__globalcellhandler_8h_source.html#l00022">chi_meshcontinuum_globalcellhandler.h:22</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_a6e361f388fd68ecfef2e36eee092ac72"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a6e361f388fd68ecfef2e36eee092ac72">chi_mesh::GlobalCellHandler::foreign_cells</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Cell * &gt; &amp; foreign_cells</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/df3/chi__meshcontinuum__globalcellhandler_8h_source.html#l00019">chi_meshcontinuum_globalcellhandler.h:19</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_a51b692082c795a705422ee40bb929f46"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a51b692082c795a705422ee40bb929f46">chi_mesh::GlobalCellHandler::GetGhostLocalID</a></div><div class="ttdeci">uint64_t GetGhostLocalID(int cell_global_index)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00097">chi_meshcontinuum_globalcellhandler.cc:98</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_a313a02cb9a237097cb32570693da5276"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a313a02cb9a237097cb32570693da5276">chi_mesh::GlobalCellHandler::GetGhostGlobalIDs</a></div><div class="ttdeci">std::vector&lt; uint64_t &gt; GetGhostGlobalIDs()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00080">chi_meshcontinuum_globalcellhandler.cc:81</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_a51b692082c795a705422ee40bb929f46"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a51b692082c795a705422ee40bb929f46">chi_mesh::GlobalCellHandler::GetGhostLocalID</a></div><div class="ttdeci">uint64_t GetGhostLocalID(int cell_global_index)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00121">chi_meshcontinuum_globalcellhandler.cc:122</a></div></div>
+<div class="ttc" id="aclass_chi_m_p_i_html_ab59ff8bee710888875656d3038fb7439"><div class="ttname"><a href="../../dc/d52/class_chi_m_p_i.html#ab59ff8bee710888875656d3038fb7439">ChiMPI::location_id</a></div><div class="ttdeci">const int &amp; location_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/chi__mpi_8h_source.html#l00037">chi_mpi.h:37</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_a313a02cb9a237097cb32570693da5276"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a313a02cb9a237097cb32570693da5276">chi_mesh::GlobalCellHandler::GetGhostGlobalIDs</a></div><div class="ttdeci">std::vector&lt; uint64_t &gt; GetGhostGlobalIDs()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00104">chi_meshcontinuum_globalcellhandler.cc:105</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_ab48726473e84c4e03a35a4b773c4c3c1"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#ab48726473e84c4e03a35a4b773c4c3c1">chi_mesh::GlobalCellHandler::native_cells</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Cell * &gt; &amp; native_cells</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/df3/chi__meshcontinuum__globalcellhandler_8h_source.html#l00018">chi_meshcontinuum_globalcellhandler.h:18</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_a578efb3e058e8cc29f8c4cfda5b9d3b0"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a578efb3e058e8cc29f8c4cfda5b9d3b0">chi_mesh::GlobalCellHandler::local_cell_glob_indices</a></div><div class="ttdeci">std::vector&lt; uint64_t &gt; &amp; local_cell_glob_indices</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/df3/chi__meshcontinuum__globalcellhandler_8h_source.html#l00016">chi_meshcontinuum_globalcellhandler.h:16</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_cell_html"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00054">cell.h:55</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a1bd208a0afbfe85f6187b0d0d6f08ce8"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a1bd208a0afbfe85f6187b0d0d6f08ce8">chi_mesh::MeshContinuum::GetGlobalNumberOfCells</a></div><div class="ttdeci">size_t GetGlobalNumberOfCells()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00061">chi_meshcontinuum_globalcellhandler.cc:61</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_cell_html"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00065">cell.h:66</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_ac422fabdd933985e7c29943e8b93fa25"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#ac422fabdd933985e7c29943e8b93fa25">chi_mesh::GlobalCellHandler::push_back</a></div><div class="ttdeci">void push_back(chi_mesh::Cell *new_cell)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00011">chi_meshcontinuum_globalcellhandler.cc:12</a></div></div>
-<div class="ttc" id="aclass_chi_m_p_i_html"><div class="ttname"><a href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/chi__mpi_8h_source.html#l00029">chi_mpi.h:30</a></div></div>
+<div class="ttc" id="aclass_chi_m_p_i_html"><div class="ttname"><a href="../../dc/d52/class_chi_m_p_i.html">ChiMPI</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d57/chi__mpi_8h_source.html#l00031">chi_mpi.h:32</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
