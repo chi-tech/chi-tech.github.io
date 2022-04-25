@@ -6,7 +6,7 @@ var classchi__mesh_1_1_vertex_handler =
     [ "end", "d1/d59/classchi__mesh_1_1_vertex_handler.html#abacf16f6d81b95c7116c9a3a976f6623", null ],
     [ "end", "d1/d59/classchi__mesh_1_1_vertex_handler.html#aba60796f7c1253b9061ea55c9e00750d", null ],
     [ "Insert", "d1/d59/classchi__mesh_1_1_vertex_handler.html#a5b8f3ed0db8fdd437691b163715ded04", null ],
-    [ "operator[]", "d1/d59/classchi__mesh_1_1_vertex_handler.html#a5add7ec1d2d8d32284d2a63b5d73a132", null ],
-    [ "operator[]", "d1/d59/classchi__mesh_1_1_vertex_handler.html#a282c1917c2186462a01020d6659da8ad", null ],
+    [ "operator[]", "d1/d59/classchi__mesh_1_1_vertex_handler.html#a33354606f24df810d183f2d9a00f1a1b", null ],
+    [ "operator[]", "d1/d59/classchi__mesh_1_1_vertex_handler.html#a58bb31b1c5498407e433bac4a1f62c4f", null ],
     [ "m_global_id_vertex_map", "d1/d59/classchi__mesh_1_1_vertex_handler.html#a527837390e31460f8feb9665f2b56176", null ]
 ];

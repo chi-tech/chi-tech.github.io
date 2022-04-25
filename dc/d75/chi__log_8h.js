@@ -1,9 +1,9 @@
 var chi__log_8h =
 [
     [ "ChiLog", "d8/d1a/class_chi_log.html", "d8/d1a/class_chi_log" ],
-    [ "EventInfo", "db/d4a/struct_chi_log_1_1_event_info.html", "db/d4a/struct_chi_log_1_1_event_info" ],
-    [ "Event", "de/d2b/struct_chi_log_1_1_event.html", "de/d2b/struct_chi_log_1_1_event" ],
-    [ "RepeatingEvent", "dc/dff/class_chi_log_1_1_repeating_event.html", "dc/dff/class_chi_log_1_1_repeating_event" ],
+    [ "ChiLog::EventInfo", "db/d4a/struct_chi_log_1_1_event_info.html", "db/d4a/struct_chi_log_1_1_event_info" ],
+    [ "ChiLog::Event", "de/d2b/struct_chi_log_1_1_event.html", "de/d2b/struct_chi_log_1_1_event" ],
+    [ "ChiLog::RepeatingEvent", "dc/dff/class_chi_log_1_1_repeating_event.html", "dc/dff/class_chi_log_1_1_repeating_event" ],
     [ "LOG_LVL", "dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405", [
       [ "LOG_0", "dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8", null ],
       [ "LOG_0WARNING", "dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a2eeeaef39b7d7267030f18c9359726d7", null ],

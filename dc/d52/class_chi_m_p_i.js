@@ -1,7 +1,7 @@
 var class_chi_m_p_i =
 [
     [ "ChiMPI", "dc/d52/class_chi_m_p_i.html#ac280588c809f2543dc70220678660c8e", null ],
-    [ "GetInstance", "dc/d52/class_chi_m_p_i.html#a9814ae50f156b75888bd1307179ef250", null ],
+    [ "GetInstance", "dc/d52/class_chi_m_p_i.html#af0eaef43af8a89bdbc7a7701c3d70b60", null ],
     [ "SetLocationID", "dc/d52/class_chi_m_p_i.html#aafc71cae1cbbf7e5359d0a08fedab068", null ],
     [ "SetProcessCount", "dc/d52/class_chi_m_p_i.html#a0dff588eba4fe96f0be19f5d13cecf0e", null ],
     [ "ChiTech::Initialize", "dc/d52/class_chi_m_p_i.html#a8befa09a3a605699ba308adc5475840a", null ],

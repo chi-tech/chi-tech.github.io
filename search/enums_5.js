@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iterativemethod_5023',['IterativeMethod',['../d7/d19/namespace_linear_boltzmann.html#a7062fc37c9063039e1e6be69e56d280f',1,'LinearBoltzmann']]]
+  ['iterativemethod_0',['IterativeMethod',['../d9/d42/namespacelbs.html#a74e6ab7d8963411bcda1c642e3098508',1,'lbs']]]
 ];

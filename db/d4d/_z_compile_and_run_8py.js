@@ -1,6 +1,6 @@
 var _z_compile_and_run_8py =
 [
-    [ "SubOutput", "d9/dd2/class_z_compile_and_run_1_1_sub_output.html", "d9/dd2/class_z_compile_and_run_1_1_sub_output" ],
+    [ "ZCompileAndRun.SubOutput", "d9/dd2/class_z_compile_and_run_1_1_sub_output.html", "d9/dd2/class_z_compile_and_run_1_1_sub_output" ],
     [ "ExecSub", "db/d4d/_z_compile_and_run_8py.html#aa1ae41fd6c70ee73c8ceb885c0f3a211", null ],
     [ "cmd", "db/d4d/_z_compile_and_run_8py.html#a2e096d2ea1f68d263d5d0fbf45306778", null ],
     [ "dot", "db/d4d/_z_compile_and_run_8py.html#a484e93bca4059e666aca1a81374818bb", null ],

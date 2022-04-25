@@ -1,7 +1,7 @@
 var classchi__math_1_1finite__element_1_1_internal_quadrature_point_data =
 [
     [ "FaceDofMapping", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a7622d6a1cd9553b16e2e02b784d8635f", null ],
-    [ "InitializeData", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a1eb18413ebd4394092a444f80e536813", null ],
+    [ "InitializeData", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#aa1daef6ff4e873de3b5e1811f2f8d965", null ],
     [ "JxW", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a221610e84da37474cf16dadb07d6d27a", null ],
     [ "NumNodes", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a09a4c8e98d18c372279667a92555fc36", null ],
     [ "QPointXYZ", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#ad9935574d332f19a9863886d1f2079ca", null ],

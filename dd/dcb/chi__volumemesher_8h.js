@@ -1,7 +1,7 @@
 var chi__volumemesher_8h =
 [
-    [ "VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", "de/df0/classchi__mesh_1_1_volume_mesher" ],
-    [ "VOLUME_MESHER_OPTIONS", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s" ],
+    [ "chi_mesh::VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", "de/df0/classchi__mesh_1_1_volume_mesher" ],
+    [ "chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s" ],
     [ "VolumeMesherProperty", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5", [
       [ "FORCE_POLYGONS", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a29157e47118ce8eaa75b5e63346e3159", null ],
       [ "MESH_GLOBAL", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a8be35b214a8a2227dda38881e16e35a0", null ],

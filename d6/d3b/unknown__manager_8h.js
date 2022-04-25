@@ -1,7 +1,7 @@
 var unknown__manager_8h =
 [
-    [ "UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html", "d9/da7/classchi__math_1_1_unknown_manager" ],
-    [ "Unknown", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown" ],
+    [ "chi_math::UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html", "d9/da7/classchi__math_1_1_unknown_manager" ],
+    [ "chi_math::UnknownManager::Unknown", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown" ],
     [ "UnknownStorageType", "d6/d3b/unknown__manager_8h.html#a863c3eb4ef311ca7cd86c5e26f89f44c", [
       [ "NODAL", "d6/d3b/unknown__manager_8h.html#a863c3eb4ef311ca7cd86c5e26f89f44cad0a56035f3937389f4e549d396da1805", null ],
       [ "BLOCK", "d6/d3b/unknown__manager_8h.html#a863c3eb4ef311ca7cd86c5e26f89f44ca4d34f53389ed7f28ca91fc31ea360a66", null ]

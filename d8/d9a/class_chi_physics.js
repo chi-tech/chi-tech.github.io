@@ -1,7 +1,7 @@
 var class_chi_physics =
 [
     [ "ChiPhysics", "d8/d9a/class_chi_physics.html#a9982d1c4be11d3909f0c07406556bcaf", null ],
-    [ "GetInstance", "d8/d9a/class_chi_physics.html#a9ba527d0f09b930871655e585c5cdd6b", null ],
+    [ "GetInstance", "d8/d9a/class_chi_physics.html#aa938663cee96446aa5f93fee309c0fc4", null ],
     [ "InitPetSc", "d8/d9a/class_chi_physics.html#a240571d48a16d5141a4609911b2cf3c6", null ],
     [ "PrintPerformanceData", "d8/d9a/class_chi_physics.html#aadc21a2fb898fd3f3c6649573b26b361", null ],
     [ "RunPhysicsLoop", "d8/d9a/class_chi_physics.html#a82ba8d3b84e140aa6510550b0658f10f", null ],

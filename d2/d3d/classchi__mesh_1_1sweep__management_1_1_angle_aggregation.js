@@ -6,7 +6,7 @@ var classchi__mesh_1_1sweep__management_1_1_angle_aggregation =
     [ "InitializeReflectingBCs", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a4518965f4752364a0fc460a6fb648439", null ],
     [ "SetDelayedAngularDOFsFromArray", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a78363f38b8b3e88184c585cd313f6be0", null ],
     [ "SetDelayedAngularDOFsFromSTLVector", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a98e453f3daf469ed47e6c5a0b34a5b70", null ],
-    [ "Setup", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#af7cd810a9f9d14da9d655af22b3b3e89", null ],
+    [ "Setup", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a47b4264a5673a24314af146c62a79b15", null ],
     [ "ZeroIncomingDelayedPsi", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#abfcbc23790402886ba120966e780de6a", null ],
     [ "ZeroOutgoingDelayedPsi", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a18ac8749a1bea3cc0c57c99d85d1169d", null ],
     [ "angle_set_groups", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a0077bc7395ee0ee4f028ffd7cf58e317", null ],

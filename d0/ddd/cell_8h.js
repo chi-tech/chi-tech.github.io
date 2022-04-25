@@ -1,7 +1,7 @@
 var cell_8h =
 [
-    [ "CellFace", "db/d1b/classchi__mesh_1_1_cell_face.html", "db/d1b/classchi__mesh_1_1_cell_face" ],
-    [ "Cell", "d8/d7c/classchi__mesh_1_1_cell.html", "d8/d7c/classchi__mesh_1_1_cell" ],
+    [ "chi_mesh::CellFace", "db/d1b/classchi__mesh_1_1_cell_face.html", "db/d1b/classchi__mesh_1_1_cell_face" ],
+    [ "chi_mesh::Cell", "d8/d7c/classchi__mesh_1_1_cell.html", "d8/d7c/classchi__mesh_1_1_cell" ],
     [ "CellType", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9", [
       [ "GHOST", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a30047325d9201304e95ffb83105002de", null ],
       [ "SLAB", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9ad1360da3ac37ed5c02244bbe2ef9a34e", null ],

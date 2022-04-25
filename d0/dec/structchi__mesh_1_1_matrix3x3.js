@@ -11,13 +11,13 @@ var structchi__mesh_1_1_matrix3x3 =
     [ "operator*", "d0/dec/structchi__mesh_1_1_matrix3x3.html#ac4b90352191ce540ffcf0c782a36c739", null ],
     [ "operator+", "d0/dec/structchi__mesh_1_1_matrix3x3.html#acab917f410cccd63eb127b418c84c7a7", null ],
     [ "operator-", "d0/dec/structchi__mesh_1_1_matrix3x3.html#adf9aaf2fb21c690fad56525e7647f10d", null ],
-    [ "operator=", "d0/dec/structchi__mesh_1_1_matrix3x3.html#a00dac063a90b77d4f8742cee6bfb4e4c", null ],
+    [ "operator=", "d0/dec/structchi__mesh_1_1_matrix3x3.html#aaae5d957a67b257aa4ff8395f026693d", null ],
     [ "PrintS", "d0/dec/structchi__mesh_1_1_matrix3x3.html#aea0137938e26e1eb17dd2185db9412c1", null ],
     [ "SetColJVec", "d0/dec/structchi__mesh_1_1_matrix3x3.html#a1a912bb50d7a43f7cc8c4f072b3f6e8c", null ],
     [ "SetDiagonalVec", "d0/dec/structchi__mesh_1_1_matrix3x3.html#a39d73300b1a8b6b691811fa5cb03cc3d", null ],
     [ "SetIJ", "d0/dec/structchi__mesh_1_1_matrix3x3.html#a7d84a402ed9231cd5818e8546a4dc6db", null ],
     [ "SetRowIVec", "d0/dec/structchi__mesh_1_1_matrix3x3.html#a9c2ed83eb51090af69cd93688c8550d3", null ],
     [ "Transpose", "d0/dec/structchi__mesh_1_1_matrix3x3.html#acc7fe442b2765ef005e56d65891f225e", null ],
-    [ "operator<<", "d0/dec/structchi__mesh_1_1_matrix3x3.html#a94438ba745945c0e2d4984f8999822d2", null ],
+    [ "operator<<", "d0/dec/structchi__mesh_1_1_matrix3x3.html#a660bcc7834a4c6a1774d001a2ae910d0", null ],
     [ "vals", "d0/dec/structchi__mesh_1_1_matrix3x3.html#a9f9a9ef0d7f59c9eb0357cf1ad388afe", null ]
 ];

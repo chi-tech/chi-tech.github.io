@@ -17,6 +17,6 @@ var dir_107e041f54db810be0be40e861c0d652 =
     [ "remove_local_cyclicdep.cc", "d7/d45/remove__local__cyclicdep_8cc.html", "d7/d45/remove__local__cyclicdep_8cc" ],
     [ "sweep_namespace.h", "d1/d37/sweep__namespace_8h.html", "d1/d37/sweep__namespace_8h" ],
     [ "sweepchunk_base.h", "d1/dc1/sweepchunk__base_8h.html", [
-      [ "SweepChunk", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk" ]
+      [ "chi_mesh::sweep_management::SweepChunk", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk" ]
     ] ]
 ];

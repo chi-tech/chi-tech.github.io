@@ -1,9 +1,11 @@
 var dir_b38d3186440610780b535c2057083989 =
 [
     [ "GolubFischer", "dir_526a6480bfb23fe4bd988c0d74959418.html", "dir_526a6480bfb23fe4bd988c0d74959418" ],
+    [ "lua", "dir_a9ac200d8477d8318cd4508956cc1f4c.html", "dir_a9ac200d8477d8318cd4508956cc1f4c" ],
     [ "PETScUtils", "dir_28984dacf6eb55a706e21b9a938a53d6.html", "dir_28984dacf6eb55a706e21b9a938a53d6" ],
     [ "Quadratures", "dir_eea7055961cf37dd5c57ededab0b198f.html", "dir_eea7055961cf37dd5c57ededab0b198f" ],
     [ "RandomNumberGeneration", "dir_daf28e8199d433550a8e33cbec36c41e.html", "dir_daf28e8199d433550a8e33cbec36c41e" ],
+    [ "SerialNewtonIteration", "dir_9c3e5de2245747cb1457f3228b107f10.html", "dir_9c3e5de2245747cb1457f3228b107f10" ],
     [ "SparseMatrix", "dir_4b5297c23108c9934da2bf23951a9c66.html", "dir_4b5297c23108c9934da2bf23951a9c66" ],
     [ "SpatialDiscretization", "dir_81f46582a39be8e66e85f29056b7e655.html", "dir_81f46582a39be8e66e85f29056b7e655" ],
     [ "Statistics", "dir_83fd04a0d510864b5a8305fe31a6f82e.html", "dir_83fd04a0d510864b5a8305fe31a6f82e" ],

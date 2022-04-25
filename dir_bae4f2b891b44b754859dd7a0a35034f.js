@@ -6,7 +6,7 @@ var dir_bae4f2b891b44b754859dd7a0a35034f =
     ] ],
     [ "pwl_polygon.h", "dd/d7b/pwl__polygon_8h.html", [
       [ "PolygonMappingFE_PWL", "d1/d2d/class_polygon_mapping_f_e___p_w_l.html", "d1/d2d/class_polygon_mapping_f_e___p_w_l" ],
-      [ "FEside_data2d", "d1/dfa/struct_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d.html", "d1/dfa/struct_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d" ]
+      [ "PolygonMappingFE_PWL::FEside_data2d", "d1/dfa/struct_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d.html", "d1/dfa/struct_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d" ]
     ] ],
     [ "pwl_polygon_00_constrdestr.cc", "d7/df2/pwl__polygon__00__constrdestr_8cc.html", null ],
     [ "pwl_polygon_01_reftriangle.cc", "d8/d64/pwl__polygon__01__reftriangle_8cc.html", null ],
@@ -17,11 +17,11 @@ var dir_bae4f2b891b44b754859dd7a0a35034f =
     ] ],
     [ "pwl_polyhedron.h", "dd/d33/pwl__polyhedron_8h.html", [
       [ "PolyhedronMappingFE_PWL", "d4/d05/class_polyhedron_mapping_f_e___p_w_l.html", "d4/d05/class_polyhedron_mapping_f_e___p_w_l" ],
-      [ "FEside_data3d", "de/d70/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html", "de/d70/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d" ],
-      [ "FEface_data", "d3/d73/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eface__data.html", "d3/d73/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eface__data" ],
-      [ "FEnodeSideMap", "dc/d9e/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_side_map.html", "dc/d9e/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_side_map" ],
-      [ "FEnodeFaceMap", "db/dcc/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_face_map.html", "db/dcc/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_face_map" ],
-      [ "FEnodeMap", "dd/d69/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_map.html", "dd/d69/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_map" ]
+      [ "PolyhedronMappingFE_PWL::FEside_data3d", "de/d70/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html", "de/d70/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d" ],
+      [ "PolyhedronMappingFE_PWL::FEface_data", "d3/d73/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eface__data.html", "d3/d73/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eface__data" ],
+      [ "PolyhedronMappingFE_PWL::FEnodeSideMap", "dc/d9e/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_side_map.html", "dc/d9e/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_side_map" ],
+      [ "PolyhedronMappingFE_PWL::FEnodeFaceMap", "db/dcc/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_face_map.html", "db/dcc/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_face_map" ],
+      [ "PolyhedronMappingFE_PWL::FEnodeMap", "dd/d69/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_map.html", "dd/d69/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_map" ]
     ] ],
     [ "pwl_polyhedron_00_constrdestr.cc", "db/df4/pwl__polyhedron__00__constrdestr_8cc.html", "db/df4/pwl__polyhedron__00__constrdestr_8cc" ],
     [ "pwl_polyhedron_01a_reftet.cc", "dc/d3b/pwl__polyhedron__01a__reftet_8cc.html", null ],

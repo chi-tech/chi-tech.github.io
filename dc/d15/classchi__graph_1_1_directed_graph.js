@@ -17,6 +17,6 @@ var classchi__graph_1_1_directed_graph =
     [ "RemoveCyclicDependencies", "dc/d15/classchi__graph_1_1_directed_graph.html#a954af4f6545458f748f63686042cbcbb", null ],
     [ "RemoveEdge", "dc/d15/classchi__graph_1_1_directed_graph.html#a1e2427f67632a420e7849ee3004efe46", null ],
     [ "RemoveVertex", "dc/d15/classchi__graph_1_1_directed_graph.html#ad7c7822449f5266affd5da7bb5413e45", null ],
-    [ "SCCAlgorithm", "dc/d15/classchi__graph_1_1_directed_graph.html#a5e0dab5cdb0ea745746e16952f2a7a26", null ],
+    [ "SCCAlgorithm", "dc/d15/classchi__graph_1_1_directed_graph.html#acb9bd7fb2c33a288b151789b68d44fcd", null ],
     [ "vertices", "dc/d15/classchi__graph_1_1_directed_graph.html#ab0e0398e047ee06f485bb89247ee6802", null ]
 ];

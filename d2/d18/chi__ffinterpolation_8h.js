@@ -1,6 +1,6 @@
 var chi__ffinterpolation_8h =
 [
-    [ "FieldFunctionInterpolation", "d5/dd4/classchi__mesh_1_1_field_function_interpolation.html", "d5/dd4/classchi__mesh_1_1_field_function_interpolation" ],
+    [ "chi_mesh::FieldFunctionInterpolation", "d5/dd4/classchi__mesh_1_1_field_function_interpolation.html", "d5/dd4/classchi__mesh_1_1_field_function_interpolation" ],
     [ "FFI_LINE", "d2/d18/chi__ffinterpolation_8h.html#a16281af39b757be2dd5ceb581da9d613", null ],
     [ "FFI_SDM_CFEM", "d2/d18/chi__ffinterpolation_8h.html#ae89d988e1a93fa8a58b192e7931d90fc", null ],
     [ "FFI_SDM_PWLD_GM", "d2/d18/chi__ffinterpolation_8h.html#a8d2bcb01d07db7707057d50decdcdb68", null ],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['geometrytype_5022',['GeometryType',['../d7/d19/namespace_linear_boltzmann.html#a07ba9ca41bad7c606567d323204c82e3',1,'LinearBoltzmann']]]
+  ['geometrytype_0',['GeometryType',['../d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83',1,'lbs']]]
 ];

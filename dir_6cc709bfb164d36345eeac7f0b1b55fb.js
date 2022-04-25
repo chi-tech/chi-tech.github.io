@@ -1,9 +1,9 @@
 var dir_6cc709bfb164d36345eeac7f0b1b55fb =
 [
     [ "delaunay_mesher.h", "d9/d17/delaunay__mesher_8h.html", [
-      [ "SurfaceMesherDelaunay", "d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html", "d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay" ],
-      [ "DelaunayMeshContext", "d0/d54/structchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_mesh_context.html", "d0/d54/structchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_mesh_context" ],
-      [ "DelaunayPatch", "d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html", "d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch" ]
+      [ "chi_mesh::SurfaceMesherDelaunay", "d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html", "d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay" ],
+      [ "chi_mesh::SurfaceMesherDelaunay::DelaunayMeshContext", "d0/d54/structchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_mesh_context.html", "d0/d54/structchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_mesh_context" ],
+      [ "chi_mesh::SurfaceMesherDelaunay::DelaunayPatch", "d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch.html", "d0/d55/classchi__mesh_1_1_surface_mesher_delaunay_1_1_delaunay_patch" ]
     ] ],
     [ "delaunay_mesher_00_constrdestr.cc", "dc/d00/delaunay__mesher__00__constrdestr_8cc.html", null ],
     [ "delaunay_mesher_02_execute.cc", "dd/d53/delaunay__mesher__02__execute_8cc.html", "dd/d53/delaunay__mesher__02__execute_8cc" ],

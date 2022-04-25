@@ -1,6 +1,5 @@
 var dir_4829ae06e2741f2fb51a2f0c151eaae1 =
 [
-    [ "lua", "dir_2d205f1d23de8ebc3b5656676dd3e247.html", "dir_2d205f1d23de8ebc3b5656676dd3e247" ],
     [ "material_property_transportxsections.h", "db/dda/material__property__transportxsections_8h.html", "db/dda/material__property__transportxsections_8h" ],
     [ "prop_transportxs_00_general.cc", "de/da0/prop__transportxs__00__general_8cc.html", "de/da0/prop__transportxs__00__general_8cc" ],
     [ "prop_transportxs_01_readfrompdt.cc", "d3/d41/prop__transportxs__01__readfrompdt_8cc.html", "d3/d41/prop__transportxs__01__readfrompdt_8cc" ],

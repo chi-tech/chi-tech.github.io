@@ -1,7 +1,7 @@
 var petsc__utils_8h =
 [
-    [ "PETScSolverSetup", "d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html", "d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup" ],
-    [ "GhostVecLocalRaw", "d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html", "d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw" ],
+    [ "chi_math::PETScUtils::PETScSolverSetup", "d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html", "d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup" ],
+    [ "chi_math::PETScUtils::GhostVecLocalRaw", "d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html", "d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw" ],
     [ "CommunicateGhostEntries", "da/d0e/petsc__utils_8h.html#ac31111351b2bffd45dc550de08c1355a", null ],
     [ "CopyGlobalVecToSTLvector", "da/d0e/petsc__utils_8h.html#a6018f791e6dd6b11cff9c1b7cce0c277", null ],
     [ "CopyVecToSTLvector", "da/d0e/petsc__utils_8h.html#a422a92d2ae77b5a740a874c24ed48dc9", null ],

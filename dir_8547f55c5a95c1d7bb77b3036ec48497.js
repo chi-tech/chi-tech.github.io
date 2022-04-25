@@ -20,18 +20,18 @@ var dir_8547f55c5a95c1d7bb77b3036ec48497 =
     [ "chi_mesh.h", "d3/dcb/chi__mesh_8h.html", "d3/dcb/chi__mesh_8h" ],
     [ "chi_mesh_assignsurface.cc", "d1/d2a/chi__mesh__assignsurface_8cc.html", null ],
     [ "chi_mesh_edgeloops.h", "d7/d09/chi__mesh__edgeloops_8h.html", [
-      [ "Edge", "d9/d36/structchi__mesh_1_1_edge.html", "d9/d36/structchi__mesh_1_1_edge" ],
-      [ "EdgeLoop", "d5/d30/structchi__mesh_1_1_edge_loop.html", "d5/d30/structchi__mesh_1_1_edge_loop" ]
+      [ "chi_mesh::Edge", "d9/d36/structchi__mesh_1_1_edge.html", "d9/d36/structchi__mesh_1_1_edge" ],
+      [ "chi_mesh::EdgeLoop", "d5/d30/structchi__mesh_1_1_edge_loop.html", "d5/d30/structchi__mesh_1_1_edge_loop" ]
     ] ],
     [ "chi_mesh_interface.h", "d9/dfa/chi__mesh__interface_8h.html", [
-      [ "Interface", "d9/d39/structchi__mesh_1_1_interface.html", "d9/d39/structchi__mesh_1_1_interface" ]
+      [ "chi_mesh::Interface", "d9/d39/structchi__mesh_1_1_interface.html", "d9/d39/structchi__mesh_1_1_interface" ]
     ] ],
     [ "chi_mesh_meshhandler_utils.cc", "de/d4b/chi__mesh__meshhandler__utils_8cc.html", null ],
     [ "chi_mesh_splitedgeloopbyangle.cc", "d8/d81/chi__mesh__splitedgeloopbyangle_8cc.html", null ],
     [ "chi_mesh_utilities.cc", "d1/d2b/chi__mesh__utilities_8cc.html", "d1/d2b/chi__mesh__utilities_8cc" ],
     [ "chi_meshface.h", "db/d70/chi__meshface_8h.html", "db/d70/chi__meshface_8h" ],
     [ "chi_meshmatrix3x3.h", "d8/df9/chi__meshmatrix3x3_8h.html", [
-      [ "Matrix3x3", "d0/dec/structchi__mesh_1_1_matrix3x3.html", "d0/dec/structchi__mesh_1_1_matrix3x3" ]
+      [ "chi_mesh::Matrix3x3", "d0/dec/structchi__mesh_1_1_matrix3x3.html", "d0/dec/structchi__mesh_1_1_matrix3x3" ]
     ] ],
     [ "chi_meshtensor_rank2_dim3.h", "d5/dfd/chi__meshtensor__rank2__dim3_8h.html", "d5/dfd/chi__meshtensor__rank2__dim3_8h" ],
     [ "chi_meshvector.h", "d1/d7f/chi__meshvector_8h.html", "d1/d7f/chi__meshvector_8h" ]

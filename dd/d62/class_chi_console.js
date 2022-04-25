@@ -3,7 +3,7 @@ var class_chi_console =
     [ "ChiConsole", "dd/d62/class_chi_console.html#a33e15f5f5e9b57f896343737df58d50e", null ],
     [ "ExecuteFile", "dd/d62/class_chi_console.html#af217daa4f0febe643d4b5947be073302", null ],
     [ "FlushConsole", "dd/d62/class_chi_console.html#ae7e793d07b3983b9874befabc449c600", null ],
-    [ "GetInstance", "dd/d62/class_chi_console.html#af3ab1f9710d7bb44d1ff42afdeb44897", null ],
+    [ "GetInstance", "dd/d62/class_chi_console.html#a4d31f0ad9b2e5e15e629aee4fce50d01", null ],
     [ "GetMemoryUsage", "dd/d62/class_chi_console.html#adf5248cb2f5fbe1a5e0a8672f340061d", null ],
     [ "GetMemoryUsageInMB", "dd/d62/class_chi_console.html#ad002c1736acab86ccafc85f7e029fb1d", null ],
     [ "PostMPIInfo", "dd/d62/class_chi_console.html#ac93cefbde1dcfd9fe83fa17b6f4ab4a8", null ],

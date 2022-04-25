@@ -1,11 +1,11 @@
 var classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s =
 [
     [ "~FLUDS", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ab6eeabb9c42cb0d613451bb1c5d45f0b", null ],
-    [ "NLOutgoingPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#afb8bb712db14c05f311b8d09ae730395", null ],
-    [ "NLUpwindPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#add5a0bf7198993835074227672ce67f4", null ],
-    [ "OutgoingPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a4e18749bda82e1bb113a11cfd2a91114", null ],
-    [ "SetReferencePsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a5252b9192e6ed46c9f543a1851d1e854", null ],
-    [ "UpwindPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a95d354814a4d01cc6f9f6a85fe37f7d9", null ],
+    [ "NLOutgoingPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a626a37b82783ef954efe747276ce7308", null ],
+    [ "NLUpwindPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a2836c75d43a21bd8b2cd54cf43e2e6d9", null ],
+    [ "OutgoingPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ac4e8bca2e7b6d3f1582ddcfe631745d4", null ],
+    [ "SetReferencePsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a13959c72a505b6141751c0abe2128779", null ],
+    [ "UpwindPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a110e6e1a423065a07fbf6589d62e13fc", null ],
     [ "boundary_dependencies", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#aaaf8ad9e4c3b071da2c864e38977735d", null ],
     [ "delayed_local_psi_max_elements", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a5343524e9d1477863302d01324436ea3", null ],
     [ "delayed_local_psi_stride", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ab207982f7703faabc1b1e5768c77a135", null ],

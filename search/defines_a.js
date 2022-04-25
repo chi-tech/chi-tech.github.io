@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['partition_5fmethod_5ffrom_5fsurface_5271',['PARTITION_METHOD_FROM_SURFACE',['../d9/dc3/lbs__structs_8h.html#a0d3145f04a54a8660e1f3ee713965af6',1,'lbs_structs.h']]],
-  ['partition_5fmethod_5fserial_5272',['PARTITION_METHOD_SERIAL',['../d9/dc3/lbs__structs_8h.html#aac7e524c72cd8d4c9627613bf013b959',1,'lbs_structs.h']]]
+  ['sphere_0',['SPHERE',['../d9/df5/chi__mesh__logicalvolume_8h.html#ad6372e14875f107f90642c7da8e10d12',1,'chi_mesh_logicalvolume.h']]],
+  ['sphere_5forigin_1',['SPHERE_ORIGIN',['../d9/df5/chi__mesh__logicalvolume_8h.html#a8fa293695ca84c47fbcd8bf99f6357f7',1,'chi_mesh_logicalvolume.h']]],
+  ['surface_2',['SURFACE',['../d9/df5/chi__mesh__logicalvolume_8h.html#a5ec2e414545e7c2a2f3ebe4c93600b76',1,'chi_mesh_logicalvolume.h']]]
 ];

@@ -1,7 +1,7 @@
 var classchi__math_1_1_quadrature =
 [
     [ "Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html#ab3a8253b2fe9ac41606512fa918523c8", null ],
-    [ "GetRange", "d3/dbf/classchi__math_1_1_quadrature.html#aece175b869acfaaf2f6ad29c9907c11c", null ],
+    [ "GetRange", "d3/dbf/classchi__math_1_1_quadrature.html#a1256a8fd5a4555e8a6b9082445f40c14", null ],
     [ "SetRange", "d3/dbf/classchi__math_1_1_quadrature.html#a3adce26c37f3464b2768ef0df4621e34", null ],
     [ "order", "d3/dbf/classchi__math_1_1_quadrature.html#ae18f8a74353b71f6370f4c9a1e555eec", null ],
     [ "qpoints", "d3/dbf/classchi__math_1_1_quadrature.html#a7480896007597a2d0287705e293c8c1e", null ],

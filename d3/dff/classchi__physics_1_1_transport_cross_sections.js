@@ -8,7 +8,7 @@ var classchi__physics_1_1_transport_cross_sections =
     [ "EnergyCollapse", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a2d0217d5570ba619ccdf46ff6b86337f", null ],
     [ "ExportToChiFormat", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a68789638aedb16da6f41a9e8220d045d", null ],
     [ "FinalizeCrossSections", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a69a340762e37a9350e082faa4bbe53e9", null ],
-    [ "MakeCombined", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#ab870498b4c9fa9923d0d2b0bf763f61c", null ],
+    [ "MakeCombined", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#adc8e8f3277b47ed41a3b7524909e8172", null ],
     [ "MakeFromCHIxsFile", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a88869768a842a3ce2766f282c53808e1", null ],
     [ "MakeFromPDTxsFile", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a865c946ba3ca4cefe946779319d05b87", null ],
     [ "MakeSimple0", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#ae2fd6a8d144ab11f93425b1b927a9e98", null ],

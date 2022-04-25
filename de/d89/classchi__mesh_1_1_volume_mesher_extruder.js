@@ -12,7 +12,7 @@ var classchi__mesh_1_1_volume_mesher_extruder =
     [ "ExtrudeCells", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a7257ca6c5dbe9647b4949a6d73267eab", null ],
     [ "GetCellKBAPartitionIDFromCentroid", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a4b09662ad0f1eb29fd24b246e727b486", null ],
     [ "HasLocalScope", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a399f7b253f8b23e048fb8a88f40299d2", null ],
-    [ "MakeExtrudedCell", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a31073c858811c6fe46d47b3ef76ec30f", null ],
+    [ "MakeExtrudedCell", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#aa1c6b927ac6b34e92f57e467cd51bf53", null ],
     [ "ProjectCentroidToLevel", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a2eeb58f4f0725790b813585d4beb4dd0", null ],
     [ "SetupLayers", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#ada38deea6cce3b8a14425779b461216c", null ],
     [ "input_layers", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#aedec7e322d9d83f5d69de422f8427d02", null ],

@@ -1,7 +1,7 @@
 var dir_41634c8c73b3a1d0a38824e1d2abe570 =
 [
     [ "volmesher_predefunpart.h", "d5/d20/volmesher__predefunpart_8h.html", [
-      [ "VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned" ]
+      [ "chi_mesh::VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned" ]
     ] ],
     [ "volmesher_predefunpart_addcells.cc", "df/d1f/volmesher__predefunpart__addcells_8cc.html", null ],
     [ "volmesher_predefunpart_execute.cc", "df/d99/volmesher__predefunpart__execute_8cc.html", "df/d99/volmesher__predefunpart__execute_8cc" ],

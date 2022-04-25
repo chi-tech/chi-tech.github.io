@@ -1,6 +1,6 @@
 var quadrature_8h =
 [
-    [ "Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html", "d3/dbf/classchi__math_1_1_quadrature" ],
+    [ "chi_math::Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html", "d3/dbf/classchi__math_1_1_quadrature" ],
     [ "QuadraturePointXYZ", "d5/d4c/quadrature_8h.html#aad0a5ec86fc2a3bdb8bb158c05935e5c", null ],
     [ "QuadratureOrder", "d5/d4c/quadrature_8h.html#a3b6d980557c0a6bc00064598786b4fb9", [
       [ "CONSTANT", "d5/d4c/quadrature_8h.html#a3b6d980557c0a6bc00064598786b4fb9a8d6b5cada83510220f59e00ce86d4d92", null ],

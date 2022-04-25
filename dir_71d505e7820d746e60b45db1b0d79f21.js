@@ -2,7 +2,7 @@ var dir_71d505e7820d746e60b45db1b0d79f21 =
 [
     [ "AUX_FLUDS.cc", "d2/d42/_a_u_x___f_l_u_d_s_8cc.html", "d2/d42/_a_u_x___f_l_u_d_s_8cc" ],
     [ "AUX_FLUDS.h", "dc/d52/_a_u_x___f_l_u_d_s_8h.html", [
-      [ "AUX_FLUDS", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s" ]
+      [ "chi_mesh::sweep_management::AUX_FLUDS", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s" ]
     ] ],
     [ "FLUDS.cc", "d2/d36/_f_l_u_d_s_8cc.html", "d2/d36/_f_l_u_d_s_8cc" ],
     [ "FLUDS.h", "d8/d81/_f_l_u_d_s_8h.html", "d8/d81/_f_l_u_d_s_8h" ],

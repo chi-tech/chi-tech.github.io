@@ -1,6 +1,6 @@
 var group___lua_field_func =
 [
-    [ "chiExportFieldFunctionToVTK", "db/d1e/group___lua_field_func.html#ga90fbbe861dc52ff693603d0983edeb5c", null ],
-    [ "chiExportFieldFunctionToVTKG", "db/d1e/group___lua_field_func.html#gaddfd8941956d0822567bf965bd764270", null ],
-    [ "chiExportMultiFieldFunctionToVTK", "db/d1e/group___lua_field_func.html#gaff7f926aca5e7ecc805cb55d06027da6", null ]
+    [ "chi_lua::chiExportFieldFunctionToVTK", "db/d1e/group___lua_field_func.html#gac7a71f71da70bbba70d0270322eef322", null ],
+    [ "chi_lua::chiExportFieldFunctionToVTKG", "db/d1e/group___lua_field_func.html#gabfedbb5b8f4915f00936e0fdbcbe28ba", null ],
+    [ "chi_lua::chiExportMultiFieldFunctionToVTK", "db/d1e/group___lua_field_func.html#gae1147cc75498624261e9bb742bfac9d8", null ]
 ];

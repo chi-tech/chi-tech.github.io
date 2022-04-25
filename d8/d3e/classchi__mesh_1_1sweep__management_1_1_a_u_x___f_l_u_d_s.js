@@ -4,7 +4,7 @@ var classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s =
     [ "NLOutgoingPsi", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a97b5b89322dad9bf9afa9577025c6018", null ],
     [ "NLUpwindPsi", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#ad666a23685d0fa2d56fc1131b6c45791", null ],
     [ "OutgoingPsi", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a2d41bd9e1531f5e6384d03d5ece26d0d", null ],
-    [ "SetReferencePsi", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a9c810517d78473a5a126c1677bef4d21", null ],
+    [ "SetReferencePsi", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#adb28e799af046b7303cf59f29dc44350", null ],
     [ "UpwindPsi", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#ad7fe3a6b76788d99668b6e265232c073", null ],
     [ "AUX_FLUDS", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#aa5546709a84306921124b929f0669d8e", null ],
     [ "delayed_local_psi_Gn_block_stride", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#ac32fe5bcdb8e1f3066e34bd19f6a1559", null ],

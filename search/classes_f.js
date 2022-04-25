@@ -1,11 +1,14 @@
 var searchData=
 [
-  ['randomnumbergenerator_2702',['RandomNumberGenerator',['../d9/d55/classchi__math_1_1_random_number_generator.html',1,'chi_math']]],
-  ['raydestinationinfo_2703',['RayDestinationInfo',['../d8/daa/structchi__mesh_1_1_ray_destination_info.html',1,'chi_mesh']]],
-  ['rcclogicalvolume_2704',['RCCLogicalVolume',['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html',1,'chi_mesh']]],
-  ['recursiveaccessor_2705',['RecursiveAccessor',['../d3/daa/structchi__math_1_1_tensor_r_n_x_1_1_recursive_accessor.html',1,'chi_math::TensorRNX']]],
-  ['region_2706',['Region',['../d1/d9a/classchi__mesh_1_1_region.html',1,'chi_mesh']]],
-  ['repeatingevent_2707',['RepeatingEvent',['../dc/dff/class_chi_log_1_1_repeating_event.html',1,'ChiLog']]],
-  ['rpplogicalvolume_2708',['RPPLogicalVolume',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html',1,'chi_mesh']]],
-  ['rule_5fvalues_2709',['RULE_VALUES',['../d2/d06/structchi__mesh_1_1sweep__management_1_1_sweep_scheduler_1_1_r_u_l_e___v_a_l_u_e_s.html',1,'chi_mesh::sweep_management::SweepScheduler']]]
+  ['quadrature_0',['Quadrature',['../d3/dbf/classchi__math_1_1_quadrature.html',1,'chi_math::Quadrature'],['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],
+  ['quadratureconical_1',['QuadratureConical',['../da/d37/classchi__math_1_1_quadrature_conical.html',1,'chi_math']]],
+  ['quadraturegausschebyshev_2',['QuadratureGaussChebyshev',['../d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev.html',1,'chi_math']]],
+  ['quadraturegausslegendre_3',['QuadratureGaussLegendre',['../d3/d07/classchi__math_1_1_quadrature_gauss_legendre.html',1,'chi_math']]],
+  ['quadraturehexahedron_4',['QuadratureHexahedron',['../d2/d67/classchi__math_1_1_quadrature_hexahedron.html',1,'chi_math']]],
+  ['quadraturejacobi_5',['QuadratureJacobi',['../d4/d17/classchi__math_1_1_quadrature_jacobi.html',1,'chi_math']]],
+  ['quadratureline_6',['QuadratureLine',['../d8/d8d/classchi__math_1_1_quadrature_line.html',1,'chi_math']]],
+  ['quadraturepointphitheta_7',['QuadraturePointPhiTheta',['../dc/d9c/structchi__math_1_1_quadrature_point_phi_theta.html',1,'chi_math']]],
+  ['quadraturequadrilateral_8',['QuadratureQuadrilateral',['../da/d04/classchi__math_1_1_quadrature_quadrilateral.html',1,'chi_math']]],
+  ['quadraturetetrahedron_9',['QuadratureTetrahedron',['../d8/d57/classchi__math_1_1_quadrature_tetrahedron.html',1,'chi_math']]],
+  ['quadraturetriangle_10',['QuadratureTriangle',['../d0/d61/classchi__math_1_1_quadrature_triangle.html',1,'chi_math']]]
 ];

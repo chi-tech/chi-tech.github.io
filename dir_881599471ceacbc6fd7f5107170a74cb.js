@@ -6,6 +6,7 @@ var dir_881599471ceacbc6fd7f5107170a74cb =
     [ "ChiLog", "dir_3d6d93b03273d88ea349554336069b1f.html", "dir_3d6d93b03273d88ea349554336069b1f" ],
     [ "ChiMath", "dir_b38d3186440610780b535c2057083989.html", "dir_b38d3186440610780b535c2057083989" ],
     [ "ChiMesh", "dir_8547f55c5a95c1d7bb77b3036ec48497.html", "dir_8547f55c5a95c1d7bb77b3036ec48497" ],
+    [ "ChiMiscUtils", "dir_726889480cb69c72ed56314366a1fe7b.html", "dir_726889480cb69c72ed56314366a1fe7b" ],
     [ "ChiMPI", "dir_d8524041ea88db056d2f30d8c71cc2f6.html", "dir_d8524041ea88db056d2f30d8c71cc2f6" ],
     [ "ChiPhysics", "dir_258e84e146fcb53e5484c5ffe0f5b2ba.html", "dir_258e84e146fcb53e5484c5ffe0f5b2ba" ],
     [ "ChiTimer", "dir_3fdf7fcd9120926de390e7e87fb83683.html", "dir_3fdf7fcd9120926de390e7e87fb83683" ],

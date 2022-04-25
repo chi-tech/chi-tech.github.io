@@ -15,12 +15,12 @@ var hierarchy =
     [ "chi_math::SimplifiedLDFESQ::BaseFunctor", "de/dc6/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_base_functor.html", null ],
     [ "chi_physics::BasicOption", "d2/dd8/classchi__physics_1_1_basic_option.html", null ],
     [ "chi_physics::BasicOptions", "d1/d7c/classchi__physics_1_1_basic_options.html", null ],
-    [ "chi_mesh::Boundary", "db/dc8/classchi__mesh_1_1_boundary.html", null ],
     [ "chi_diffusion::Boundary", "d7/dae/classchi__diffusion_1_1_boundary.html", [
       [ "chi_diffusion::BoundaryDirichlet", "de/d2e/classchi__diffusion_1_1_boundary_dirichlet.html", null ],
       [ "chi_diffusion::BoundaryReflecting", "d1/d0c/classchi__diffusion_1_1_boundary_reflecting.html", null ],
       [ "chi_diffusion::BoundaryRobin", "d6/d58/classchi__diffusion_1_1_boundary_robin.html", null ]
     ] ],
+    [ "chi_mesh::Boundary", "db/dc8/classchi__mesh_1_1_boundary.html", null ],
     [ "chi_mesh::sweep_management::BoundaryBase", "dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html", [
       [ "chi_mesh::sweep_management::BoundaryIncidentHeterogenous", "dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html", null ],
       [ "chi_mesh::sweep_management::BoundaryIncidentHomogenous", "d2/dbc/classchi__mesh_1_1sweep__management_1_1_boundary_incident_homogenous.html", null ],
@@ -37,7 +37,7 @@ var hierarchy =
       [ "PolyhedronFVValues", "d9/ddd/class_polyhedron_f_v_values.html", null ],
       [ "SlabFVValues", "d9/dbf/class_slab_f_v_values.html", null ]
     ] ],
-    [ "LinearBoltzmann::CellLBSView", "d6/da1/class_linear_boltzmann_1_1_cell_l_b_s_view.html", null ],
+    [ "lbs::CellLBSView", "d4/d32/classlbs_1_1_cell_l_b_s_view.html", null ],
     [ "CellMappingFE_PWL", "db/d41/class_cell_mapping_f_e___p_w_l.html", [
       [ "PolygonMappingFE_PWL", "d1/d2d/class_polygon_mapping_f_e___p_w_l.html", [
         [ "PolygonMappingFE_PWL_Cylindrical", "d5/d8f/class_polygon_mapping_f_e___p_w_l___cylindrical.html", null ]
@@ -108,7 +108,7 @@ var hierarchy =
     ] ],
     [ "chi_graph::DirectedGraph::VertexAccessor::iterator", "dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html", null ],
     [ "chi_mesh::LocalCellHandler::iterator", "d2/dd3/classchi__mesh_1_1_local_cell_handler_1_1iterator.html", null ],
-    [ "LinearBoltzmann::KSPDataContext", "d0/db3/struct_linear_boltzmann_1_1_k_s_p_data_context.html", null ],
+    [ "lbs::KSPDataContext", "d4/d4c/structlbs_1_1_k_s_p_data_context.html", null ],
     [ "LBSGroup", "de/d7b/class_l_b_s_group.html", null ],
     [ "LBSGroupset", "d7/d7d/class_l_b_s_groupset.html", null ],
     [ "chi_mesh::UnpartitionedMesh::LightWeightCell", "da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html", null ],
@@ -132,12 +132,14 @@ var hierarchy =
     [ "chi_mesh::MeshContinuum", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html", null ],
     [ "chi_mesh::MeshHandler", "d2/d10/classchi__mesh_1_1_mesh_handler.html", null ],
     [ "chi_mesh::VolumeMesherExtruder::MeshLayer", "d8/d95/structchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer.html", null ],
+    [ "chi_math::NonLinearFunction", "d6/dc4/classchi__math_1_1_non_linear_function.html", null ],
     [ "chi_mesh::UnpartitionedMesh::Options", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html", null ],
-    [ "LinearBoltzmann::Options", "dd/d96/struct_linear_boltzmann_1_1_options.html", null ],
-    [ "ostream", null, [
+    [ "lbs::Options", "dc/dcd/structlbs_1_1_options.html", null ],
+    [ "std::ostream", null, [
       [ "DummyStream", "d9/d4e/struct_dummy_stream.html", null ]
     ] ],
     [ "chi_math::PETScUtils::PETScSolverSetup", "d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html", null ],
+    [ "lbs::PointSource", "dc/d4f/classlbs_1_1_point_source.html", null ],
     [ "chi_mesh::PolyFace", "d4/ddb/structchi__mesh_1_1_poly_face.html", null ],
     [ "chi_math::Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html", [
       [ "chi_math::QuadratureConical", "da/d37/classchi__math_1_1_quadrature_conical.html", null ],
@@ -157,12 +159,14 @@ var hierarchy =
     [ "chi_math::TensorRNX< R, N, NumberFormat >::RecursiveAccessor< R2 >", "d3/daa/structchi__math_1_1_tensor_r_n_x_1_1_recursive_accessor.html", null ],
     [ "chi_mesh::Region", "d1/d9a/classchi__mesh_1_1_region.html", null ],
     [ "ChiLog::RepeatingEvent", "dc/dff/class_chi_log_1_1_repeating_event.html", null ],
+    [ "lbs_adjoint::ResponseFunctionDesignation", "d2/d7f/structlbs__adjoint_1_1_response_function_designation.html", null ],
     [ "chi_mesh::sweep_management::SweepScheduler::RULE_VALUES", "d2/d06/structchi__mesh_1_1sweep__management_1_1_sweep_scheduler_1_1_r_u_l_e___v_a_l_u_e_s.html", null ],
     [ "chi_physics::Solver", "d9/d3a/classchi__physics_1_1_solver.html", [
       [ "chi_diffusion::Solver", "d6/d32/classchi__diffusion_1_1_solver.html", null ],
-      [ "LinearBoltzmann::Solver", "d2/dc1/class_linear_boltzmann_1_1_solver.html", [
+      [ "lbs::SteadySolver", "d9/d05/classlbs_1_1_steady_solver.html", [
         [ "LBSCurvilinear::Solver", "d9/d34/class_l_b_s_curvilinear_1_1_solver.html", null ],
-        [ "LinearBoltzmann::KEigenvalueSolver", "db/d6f/class_linear_boltzmann_1_1_k_eigenvalue_solver.html", null ]
+        [ "lbs::KEigenvalueSolver", "d7/d41/classlbs_1_1_k_eigenvalue_solver.html", null ],
+        [ "lbs_adjoint::AdjointSolver", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html", null ]
       ] ]
     ] ],
     [ "chi_math::SparseMatrix", "de/d51/classchi__math_1_1_sparse_matrix.html", null ],
@@ -177,10 +181,10 @@ var hierarchy =
     [ "chi_math::SimplifiedLDFESQ::SphericalQuadrilateral", "d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html", null ],
     [ "chi_mesh::sweep_management::SPLS", "d5/d51/structchi__mesh_1_1sweep__management_1_1_s_p_l_s.html", null ],
     [ "chi_mesh::sweep_management::STDG", "df/dda/structchi__mesh_1_1sweep__management_1_1_s_t_d_g.html", null ],
-    [ "streambuf", null, [
+    [ "std::streambuf", null, [
       [ "DummyStream::DummyStreamBuffer", "d2/d86/struct_dummy_stream_1_1_dummy_stream_buffer.html", null ]
     ] ],
-    [ "stringstream", null, [
+    [ "std::stringstream", null, [
       [ "LogStream", "de/ddf/class_log_stream.html", null ]
     ] ],
     [ "chi_math::CDFSampler::SubIntvl", "d8/db6/structchi__math_1_1_c_d_f_sampler_1_1_sub_intvl.html", null ],
@@ -195,7 +199,7 @@ var hierarchy =
     ] ],
     [ "chi_mesh::sweep_management::SweepBuffer", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html", null ],
     [ "chi_mesh::sweep_management::SweepChunk", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html", [
-      [ "LinearBoltzmann::SweepChunkPWL", "db/da1/class_linear_boltzmann_1_1_sweep_chunk_p_w_l.html", [
+      [ "lbs::SweepChunkPWL", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html", [
         [ "LBSCurvilinear::SweepChunkPWL", "db/de3/class_l_b_s_curvilinear_1_1_sweep_chunk_p_w_l.html", null ]
       ] ]
     ] ],
