@@ -86,7 +86,7 @@ $(document).ready(function(){initNavTree('dc/d4c/_dev_man_adding_code.html','../
   <div class="headertitle"><div class="title">Adding code to the system </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >The underlying build system used by <a class="el" href="../../d5/d49/class_chi_tech.html">ChiTech</a> is cmake and its entry point is the <em>CMakeLists.txt</em> file located in the root directory.</p>
+<div class="textblock"><p >The underlying build system used by ChiTech is cmake and its entry point is the <em>CMakeLists.txt</em> file located in the root directory.</p>
 <h1><a class="anchor" id="devman0_sec0"></a>
 So you want to add your own code</h1>
 <h2><a class="anchor" id="devman0_sec0_1"></a>
@@ -99,10 +99,9 @@ Creating a new directory</div></div>
 <h2><a class="anchor" id="devman0_sec0_2"></a>
 Step 2 - If there is no CMakeLists.txt, create one</h2>
 <p >In the folder you just created, make a file called "CMakeLists.txt" and add the following code to it</p>
-<div class="fragment"><div class="line"><a class="code hl_variable" href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">file</a> (GLOB_RECURSE MORE_SOURCES <span class="stringliteral">&quot;${CMAKE_CURRENT_SOURCE_DIR}/*.cc&quot;</span>)</div>
+<div class="fragment"><div class="line">file (GLOB_RECURSE MORE_SOURCES <span class="stringliteral">&quot;${CMAKE_CURRENT_SOURCE_DIR}/*.cc&quot;</span>)</div>
 <div class="line"> </div>
 <div class="line">set(SOURCES ${SOURCES} ${MORE_SOURCES} PARENT_SCOPE)</div>
-<div class="ttc" id="anamespace_z_compile_and_run_html_a3f5f620160c2772d4cf69ca3cbb34eb4"><div class="ttname"><a href="../../d8/d65/namespace_z_compile_and_run.html#a3f5f620160c2772d4cf69ca3cbb34eb4">ZCompileAndRun.file</a></div><div class="ttdeci">file</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4d/_z_compile_and_run_8py_source.html#l00034">ZCompileAndRun.py:34</a></div></div>
 </div><!-- fragment --><p >This code will get executed by cmake and will recursively find all files with a .cc extension and compile it.</p>
 <h2><a class="anchor" id="devman0_sec0_3"></a>
 Step 3 - Create your source code</h2>
@@ -124,13 +123,14 @@ Step 4 - Add the folder to the master CMakeLists.txt</h2>
 <div class="line"><span class="stringliteral">add_subdirectory(&quot;</span>${CHI_TECH_DIR}/CHI_TOOLS<span class="stringliteral">&quot;)</span></div>
 <div class="line"><span class="stringliteral">add_subdirectory(&quot;</span>${CHI_TECH_DIR}/CHI_MESH<span class="stringliteral">&quot;)</span></div>
 <div class="line"><span class="stringliteral">add_subdirectory(&quot;</span>${CHI_TECH_DIR}/CHI_MPI<span class="stringliteral">&quot;)</span></div>
-<div class="line"><span class="stringliteral">add_subdirectory(&quot;</span>${CHI_TECH_DIR}/CHI_LOG<span class="stringliteral">&quot;)</span></div>
+<div class="line"><span class="stringliteral">add_subdirectory(&quot;</span>${CHI_TECH_DIR}/<a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a><span class="stringliteral">&quot;)</span></div>
 <div class="line"><span class="stringliteral"></span> </div>
 <div class="line"><span class="stringliteral">add_subdirectory(&quot;</span>${CHI_TECH_MOD}/CHI_MONTECARLON<span class="stringliteral">&quot;)</span></div>
 <div class="line"><span class="stringliteral">add_subdirectory(&quot;</span>${CHI_TECH_MOD}/CHI_DIFFUSION<span class="stringliteral">&quot;)</span></div>
 <div class="line"><span class="stringliteral">add_subdirectory(&quot;</span>${CHI_TECH_MOD}/CHI_NPTRANSPORT<span class="stringliteral">&quot;)</span></div>
 <div class="line"><span class="stringliteral"></span> </div>
 <div class="line"><span class="stringliteral">add_subdirectory(&quot;</span>${CHI_TECH_MOD}/MyTestModule<span class="stringliteral">&quot;)</span></div>
+<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="devman0_sec0_5"></a>
 Step 5 - Include headers and use the code</h2>
 <p >That's it! The cmake system needs to be run again by executing the configure script.</p>

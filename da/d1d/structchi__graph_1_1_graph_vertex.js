@@ -1,16 +1,16 @@
 var structchi__graph_1_1_graph_vertex =
 [
-    [ "GraphVertex", "da/d1d/structchi__graph_1_1_graph_vertex.html#ab673928123999d96a5d3e7c5adb45a35", null ],
-    [ "GraphVertex", "da/d1d/structchi__graph_1_1_graph_vertex.html#aa3b8a3219397af56374a6298bc1433c6", null ],
+    [ "GraphVertex", "da/d1d/structchi__graph_1_1_graph_vertex.html#a186629c04527958751ed456f6087ff15", null ],
+    [ "GraphVertex", "da/d1d/structchi__graph_1_1_graph_vertex.html#a8249035096293b89025a8e9cf23de854", null ],
     [ "GraphVertex", "da/d1d/structchi__graph_1_1_graph_vertex.html#aa67e7928d68086e2c70e72293d865b96", null ],
-    [ "GraphVertex", "da/d1d/structchi__graph_1_1_graph_vertex.html#aa43fc4b47a36c8ab958135396b2a8c08", null ],
+    [ "GraphVertex", "da/d1d/structchi__graph_1_1_graph_vertex.html#ac471f9f72f15518220141e663518a094", null ],
     [ "operator=", "da/d1d/structchi__graph_1_1_graph_vertex.html#a2da558c5b098d15d3532f9df5d81a0ef", null ],
-    [ "operator=", "da/d1d/structchi__graph_1_1_graph_vertex.html#a878e2f9e14b5937d63752c7c48345147", null ],
-    [ "operator==", "da/d1d/structchi__graph_1_1_graph_vertex.html#aa74912e923da7b64f2406ec7201c1ce8", null ],
+    [ "operator=", "da/d1d/structchi__graph_1_1_graph_vertex.html#aff730cd8fe7b4df9d0679a5c1738bfde", null ],
+    [ "operator==", "da/d1d/structchi__graph_1_1_graph_vertex.html#a6f5acd44f138c13bd2dc40dc7f1766f9", null ],
     [ "context", "da/d1d/structchi__graph_1_1_graph_vertex.html#aa3454dcecdd877fb8f57b5b6c2a18b34", null ],
-    [ "ds_edge", "da/d1d/structchi__graph_1_1_graph_vertex.html#a8d53d3c8e15977b728eb5d26200f1a1c", null ],
-    [ "ds_weights", "da/d1d/structchi__graph_1_1_graph_vertex.html#ab9892c8bc72c41cb691c38592f6a1a7b", null ],
-    [ "id", "da/d1d/structchi__graph_1_1_graph_vertex.html#a5de56c1991799d648bef7a06a4972c11", null ],
-    [ "us_edge", "da/d1d/structchi__graph_1_1_graph_vertex.html#a8929f14fc517b794bb4640f1ec03f650", null ],
-    [ "us_weights", "da/d1d/structchi__graph_1_1_graph_vertex.html#a5f88cfde99156d07f39c32220ca39661", null ]
+    [ "ds_edge", "da/d1d/structchi__graph_1_1_graph_vertex.html#a1149da1b9a92474e8e23536186b6b62d", null ],
+    [ "ds_weights", "da/d1d/structchi__graph_1_1_graph_vertex.html#aaca46f0cab10efd80fea636e6af10fd2", null ],
+    [ "id", "da/d1d/structchi__graph_1_1_graph_vertex.html#a6e32155fed8ceb05d7797aaae29d31ca", null ],
+    [ "us_edge", "da/d1d/structchi__graph_1_1_graph_vertex.html#a507fc24d43a4acf07edd1c5426c0fd08", null ],
+    [ "us_weights", "da/d1d/structchi__graph_1_1_graph_vertex.html#a4986d0414eab737490fff5692e46273e", null ]
 ];

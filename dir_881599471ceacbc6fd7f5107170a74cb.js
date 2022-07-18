@@ -11,9 +11,7 @@ var dir_881599471ceacbc6fd7f5107170a74cb =
     [ "ChiPhysics", "dir_258e84e146fcb53e5484c5ffe0f5b2ba.html", "dir_258e84e146fcb53e5484c5ffe0f5b2ba" ],
     [ "ChiTimer", "dir_3fdf7fcd9120926de390e7e87fb83683.html", "dir_3fdf7fcd9120926de390e7e87fb83683" ],
     [ "UnitTests", "dir_76237e3de5992319d5deab49560882f0.html", "dir_76237e3de5992319d5deab49560882f0" ],
-    [ "chi_runtime.cc", "d3/dd3/chi__runtime_8cc.html", "d3/dd3/chi__runtime_8cc" ],
-    [ "chi_runtime.h", "d3/db2/chi__runtime_8h.html", [
-      [ "ChiTech", "d5/d49/class_chi_tech.html", "d5/d49/class_chi_tech" ]
-    ] ],
+    [ "chi_runtime.cc", "d3/dd3/chi__runtime_8cc.html", null ],
+    [ "chi_runtime.h", "d3/db2/chi__runtime_8h.html", "d3/db2/chi__runtime_8h" ],
     [ "chi_tech_main.cc", "d4/dca/chi__tech__main_8cc.html", "d4/dca/chi__tech__main_8cc" ]
 ];

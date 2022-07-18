@@ -49,7 +49,7 @@ var _programmer_manual =
     ] ],
     [ "Global variables", "d6/dfd/_dev_man_global_vars.html", [
       [ "Global variables available", "d6/dfd/_dev_man_global_vars.html#devman2_sec0", [
-        [ "Connecting to the physics handler", "d6/dfd/_dev_man_global_vars.html#devman2_sec0_3", null ],
+        [ "Connecting to the global data block", "d6/dfd/_dev_man_global_vars.html#devman2_sec0_3", null ],
         [ "Connecting to MPI", "d6/dfd/_dev_man_global_vars.html#devman2_sec0_4", null ],
         [ "Connecting to the parallel logging utility", "d6/dfd/_dev_man_global_vars.html#devman2_sec0_5", null ]
       ] ]

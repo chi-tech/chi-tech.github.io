@@ -9,6 +9,10 @@ var namespacechi__physics =
     [ "ScalarValue", "db/d6e/classchi__physics_1_1_scalar_value.html", "db/d6e/classchi__physics_1_1_scalar_value" ],
     [ "Solver", "d9/d3a/classchi__physics_1_1_solver.html", "d9/d3a/classchi__physics_1_1_solver" ],
     [ "TransportCrossSections", "d3/dff/classchi__physics_1_1_transport_cross_sections.html", "d3/dff/classchi__physics_1_1_transport_cross_sections" ],
+    [ "FieldFunctionPtr", "d6/d5f/namespacechi__physics.html#a3877c47a24c665e3b562a978ecbbb3fb", null ],
+    [ "MaterialPtr", "d6/d5f/namespacechi__physics.html#ab6460275cc07ff17d5c0ccfab1c08a60", null ],
+    [ "SolverPtr", "d6/d5f/namespacechi__physics.html#a32b7a961a070e810475068b46eadcab3", null ],
+    [ "TransportCrossSectionsPtr", "d6/d5f/namespacechi__physics.html#afe4db76ccf1ef83c491575c4e30043ef", null ],
     [ "OperationType", "d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95", [
       [ "SINGLE_VALUE", "d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95ac8946fa6a83e99cc3e25a9c564b13c8e", null ],
       [ "FROM_ARRAY", "d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95a38c8dc2dd474c3ba3bdc1a35b7debff6", null ],

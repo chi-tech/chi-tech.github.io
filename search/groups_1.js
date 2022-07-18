@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['c_20physics_0',['C Physics',['../d3/d5a/group___lua_physics.html',1,'']]],
-  ['chi_2dtech_20cross_2dsection_20format_201_1',['Chi-Tech Cross-section format 1',['../d3/d14/group___chi_x_s_file.html',1,'']]]
+  ['b_20math_0',['B Math',['../d0/d4d/group___lua_math.html',1,'']]],
+  ['basic_20options_1',['Basic Options',['../d4/da7/group___lua_diffusion_basic_options.html',1,'']]],
+  ['basic_20simulation_20setup_2',['Basic Simulation Setup',['../d7/dec/group___lua_l_b_s__01.html',1,'']]]
 ];

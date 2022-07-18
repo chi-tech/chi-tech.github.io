@@ -42,7 +42,7 @@ var namespacechi__mesh_1_1sweep__management =
       [ "DEPTH_OF_GRAPH", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ab89d643f43f578f07f21038106d6817fa51d47b2c9be19652409783fd56b64423", null ]
     ] ],
     [ "CommunicateLocationDependencies", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a2a06289a8db4ef4f00fc69b451536205", null ],
-    [ "CreateSweepOrder", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a36afcd614dce993def8e6a624255a155", null ],
+    [ "CreateSweepOrder", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ad90dbc921056b0a05f15ac9cef7c068f", null ],
     [ "PopulateCellRelationships", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ae67306c77bdd9b263a0beac297b4e04d", null ],
     [ "PrintSweepOrdering", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a14056bd4d6583fc03ff5400466e173bd", null ],
     [ "RemoveGlobalCyclicDependencies", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ad9afacb8ef7ad0b18ef39c13db1dcc81", null ],

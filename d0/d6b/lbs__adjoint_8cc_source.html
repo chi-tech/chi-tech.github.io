@@ -91,147 +91,148 @@ $(document).ready(function(){initNavTree('d0/d6b/lbs__adjoint_8cc_source.html','
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d08/chi__math_8h.html">ChiMath/chi_math.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../ChiMath/SerialNewtonIteration/serial_newton_iteration.h&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">extern</span> <a class="code hl_class" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code hl_variable" href="../../d0/d6b/lbs__adjoint_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../de/ded/namespacelbs__adjoint.html#acfbc7980b38615ae67f2ccda87432022">    9</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../de/ded/namespacelbs__adjoint.html#acfbc7980b38615ae67f2ccda87432022">lbs_adjoint::TestFunction</a>()</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  std::cout &lt;&lt; <span class="stringliteral">&quot;Test Function!\n&quot;</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../de/ded/namespacelbs__adjoint.html#a73c69ef5b6a6004239b12da056a9e69f">   14</a></span>std::array&lt;double,2&gt; <a class="code hl_function" href="../../de/ded/namespacelbs__adjoint.html#a73c69ef5b6a6004239b12da056a9e69f">lbs_adjoint::</a></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><a class="code hl_function" href="../../de/ded/namespacelbs__adjoint.html#a73c69ef5b6a6004239b12da056a9e69f">  MakeExpRepFromP1</a>(<span class="keyword">const</span> std::array&lt;double, 4&gt; &amp;P1_moments,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                   <span class="keywordtype">bool</span> verbose<span class="comment">/*=false*/</span>)</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="comment">//=============================================</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="comment">// Custom function to implement the non-linear equations</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="comment">// that make up the system to solve the a and b coefficients</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">// of an exponential representation of the form exp(a + b*mu).</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="comment">// The coefficients must be such that the following equations</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="comment">// hold:</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="comment">// 2\pi \int_{-1}^{+1} e^{a + b\mu} d\mu = \phi</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="comment">// 2\pi \int_{-1}^{+1} e^{a + b\mu} \mu d\mu = ||J||_2</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="comment">//</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="comment">// These integrals are analytical in \mu and therefore results</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">// in the equations for the F-method. The Jacobian matrix is returned</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="comment">// with the J-method.</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="comment">//</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="comment">// Note that the function only accept the current normalized with</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="comment">// 1/phi. So phi is always 1.0.</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keyword">class </span>CustomF : <span class="keyword">public</span> <a class="code hl_class" href="../../d6/dc4/classchi__math_1_1_non_linear_function.html">chi_math::NonLinearFunction</a></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">double</span> J_x, J_y, J_z;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">public</span>:<span class="comment"></span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    /**Constructor. Parameters are the 3 components of the currents</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">     * normalized with 1/phi.*/</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">explicit</span> CustomF(<span class="keyword">const</span> std::array&lt;double,3&gt;&amp; input) :</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    J_x(input[0]), J_y(input[1]), J_z(input[2]) {}</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"></span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">    /**Function evaluation at vector-x.*/</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a> <a class="code hl_function" href="../../d6/dc4/classchi__math_1_1_non_linear_function.html#a27ce52063512657e7b9c5b0a157feabe">F</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>&amp; x)<span class="keyword"> const override</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      assert(x.size() == 2);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> a = x[0];</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> b = x[1];</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> FOUR_PI = 4.0*M_PI;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="keywordtype">double</span> size_J = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aea54f6718b4dbd7f81d33111d432adfd">chi_math::Vec2Norm</a>({J_x, J_y, J_z});</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="keywordflow">return</span> {(FOUR_PI/b)   * exp(a) * sinh(b) - 1.0,</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>              (FOUR_PI/b/b) * exp(a) * (b * cosh(b) - sinh(b)) - size_J};</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }<span class="comment"></span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">    /**Jacobian evaluation at vector-x.*/</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a> <a class="code hl_function" href="../../d6/dc4/classchi__math_1_1_non_linear_function.html#a05e2fd80495975dc05caa971650292d9">J</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>&amp; x)<span class="keyword"> const override</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      assert(x.size() == 2);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> a = x[0];</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> b = x[1];</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> FOUR_PI = 4.0*M_PI;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keywordflow">return</span> {{(FOUR_PI/b)     * exp(a) * sinh(b),</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>               (FOUR_PI/b/b)   * exp(a) * (b * cosh(b) - sinh(b))},</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>              {(FOUR_PI/b/b)   * exp(a) * (b * cosh(b) - sinh(b)),</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>               (FOUR_PI/b/b/b) * exp(a) * ((b*b + 2) * sinh(b) - 2 * b * cosh(b))}};</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  };</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="comment">//======================================== Convert P1 moments to phi and J</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordtype">double</span> phi      = P1_moments[0];</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordtype">double</span> J_x      = P1_moments[1];</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordtype">double</span> J_y      = P1_moments[2];</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordtype">double</span> J_z      = P1_moments[3];</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="comment">//======================================== Compute initial ratio size_J/phi</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordtype">double</span> size_J_i = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aea54f6718b4dbd7f81d33111d432adfd">chi_math::Vec2Norm</a>({J_x, J_y, J_z});</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">double</span> ratio_i  = size_J_i/phi;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordflow">if</span> (phi &lt; 1.0e-10 or ratio_i &gt; 0.9)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  { J_x *= 0.9 / size_J_i; J_y *= 0.9 / size_J_i; J_z *= 0.9 / size_J_i; }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  { J_x /= phi; J_y /= phi; J_z /= phi; }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">double</span> size_J_f = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aea54f6718b4dbd7f81d33111d432adfd">chi_math::Vec2Norm</a>({J_x, J_y, J_z});</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">double</span> ratio_f  = size_J_f;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keywordflow">if</span> (verbose)</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    std::stringstream outstr;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    outstr &lt;&lt; <span class="stringliteral">&quot;P1 moments initial: &quot;</span> &lt;&lt;P1_moments[0]&lt;&lt;<span class="stringliteral">&quot; &quot;</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                                     &lt;&lt;P1_moments[1]&lt;&lt;<span class="stringliteral">&quot; &quot;</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                     &lt;&lt;P1_moments[2]&lt;&lt;<span class="stringliteral">&quot; &quot;</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                     &lt;&lt;P1_moments[3]&lt;&lt;<span class="stringliteral">&quot; |J|=&quot;</span>;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    outstr &lt;&lt; size_J_i &lt;&lt; <span class="stringliteral">&quot; ratio=&quot;</span> &lt;&lt; ratio_i &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    outstr &lt;&lt; <span class="stringliteral">&quot;P1 moments initial: &quot;</span> &lt;&lt;1.0&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;J_x&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;J_y&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;J_z&lt;&lt;<span class="stringliteral">&quot; |J|=&quot;</span>;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    outstr &lt;&lt; size_J_f &lt;&lt; <span class="stringliteral">&quot; ratio=&quot;</span> &lt;&lt; ratio_f &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_variable" href="../../d0/d6b/lbs__adjoint_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code hl_function" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>() &lt;&lt; outstr.str();</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  }</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordflow">if</span> (size_J_f &lt; 1.0e-10)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">double</span> a = log(phi/4.0/M_PI);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">double</span> b = 0.0;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (verbose) { <a class="code hl_variable" href="../../d0/d6b/lbs__adjoint_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code hl_function" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Solution: &quot;</span> &lt;&lt; a &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; b; }</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">return</span> {a, b};</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  }</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    CustomF custom_function({J_x, J_y, J_z});</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">auto</span> solution = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aa3184555bf41dd7fe3fd747a4d0f94ed">chi_math::NewtonIteration</a>(</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      custom_function, <span class="comment">//Non-linear function</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      {1.0,0.1},       <span class="comment">//Initial guess</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      100,             <span class="comment">//Max iterations</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      1.0e-8,          <span class="comment">//Tolerance</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      verbose);        <span class="comment">//Verbose output?</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">double</span> a = solution[0];</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">double</span> b = solution[1];</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">if</span> (verbose) { <a class="code hl_variable" href="../../d0/d6b/lbs__adjoint_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code hl_function" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Solution: &quot;</span> &lt;&lt; a &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; b; }</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">return</span> {a, b};</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  }</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../de/ded/namespacelbs__adjoint.html#acfbc7980b38615ae67f2ccda87432022">   10</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../de/ded/namespacelbs__adjoint.html#acfbc7980b38615ae67f2ccda87432022">lbs_adjoint::TestFunction</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  std::cout &lt;&lt; <span class="stringliteral">&quot;Test Function!\n&quot;</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../de/ded/namespacelbs__adjoint.html#a73c69ef5b6a6004239b12da056a9e69f">   15</a></span>std::array&lt;double,2&gt; <a class="code hl_function" href="../../de/ded/namespacelbs__adjoint.html#a73c69ef5b6a6004239b12da056a9e69f">lbs_adjoint::</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_function" href="../../de/ded/namespacelbs__adjoint.html#a73c69ef5b6a6004239b12da056a9e69f">  MakeExpRepFromP1</a>(<span class="keyword">const</span> std::array&lt;double, 4&gt; &amp;P1_moments,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                   <span class="keywordtype">bool</span> verbose<span class="comment">/*=false*/</span>)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="comment">//=============================================</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="comment">// Custom function to implement the non-linear equations</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">// that make up the system to solve the a and b coefficients</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="comment">// of an exponential representation of the form exp(a + b*mu).</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="comment">// The coefficients must be such that the following equations</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="comment">// hold:</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="comment">// 2\pi \int_{-1}^{+1} e^{a + b\mu} d\mu = \phi</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="comment">// 2\pi \int_{-1}^{+1} e^{a + b\mu} \mu d\mu = ||J||_2</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">// These integrals are analytical in \mu and therefore results</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="comment">// in the equations for the F-method. The Jacobian matrix is returned</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="comment">// with the J-method.</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="comment">// Note that the function only accept the current normalized with</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="comment">// 1/phi. So phi is always 1.0.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keyword">class </span>CustomF : <span class="keyword">public</span> <a class="code hl_class" href="../../d6/dc4/classchi__math_1_1_non_linear_function.html">chi_math::NonLinearFunction</a></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">double</span> J_x, J_y, J_z;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    /**Constructor. Parameters are the 3 components of the currents</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">     * normalized with 1/phi.*/</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">explicit</span> CustomF(<span class="keyword">const</span> std::array&lt;double,3&gt;&amp; input) :</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    J_x(input[0]), J_y(input[1]), J_z(input[2]) {}</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"></span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">    /**Function evaluation at vector-x.*/</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a> <a class="code hl_function" href="../../d6/dc4/classchi__math_1_1_non_linear_function.html#a27ce52063512657e7b9c5b0a157feabe">F</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>&amp; x)<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      assert(x.size() == 2);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> a = x[0];</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> b = x[1];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> FOUR_PI = 4.0*M_PI;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keywordtype">double</span> size_J = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aea54f6718b4dbd7f81d33111d432adfd">chi_math::Vec2Norm</a>({J_x, J_y, J_z});</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordflow">return</span> {(FOUR_PI/b)   * exp(a) * sinh(b) - 1.0,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>              (FOUR_PI/b/b) * exp(a) * (b * cosh(b) - sinh(b)) - size_J};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }<span class="comment"></span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">    /**Jacobian evaluation at vector-x.*/</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a> <a class="code hl_function" href="../../d6/dc4/classchi__math_1_1_non_linear_function.html#a05e2fd80495975dc05caa971650292d9">J</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>&amp; x)<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      assert(x.size() == 2);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> a = x[0];</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> b = x[1];</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> FOUR_PI = 4.0*M_PI;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <span class="keywordflow">return</span> {{(FOUR_PI/b)     * exp(a) * sinh(b),</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>               (FOUR_PI/b/b)   * exp(a) * (b * cosh(b) - sinh(b))},</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>              {(FOUR_PI/b/b)   * exp(a) * (b * cosh(b) - sinh(b)),</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>               (FOUR_PI/b/b/b) * exp(a) * ((b*b + 2) * sinh(b) - 2 * b * cosh(b))}};</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  };</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">//======================================== Convert P1 moments to phi and J</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordtype">double</span> phi      = P1_moments[0];</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordtype">double</span> J_x      = P1_moments[1];</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordtype">double</span> J_y      = P1_moments[2];</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">double</span> J_z      = P1_moments[3];</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="comment">//======================================== Compute initial ratio size_J/phi</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">double</span> size_J_i = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aea54f6718b4dbd7f81d33111d432adfd">chi_math::Vec2Norm</a>({J_x, J_y, J_z});</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordtype">double</span> ratio_i  = size_J_i/phi;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">if</span> (phi &lt; 1.0e-10 or ratio_i &gt; 0.9)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  { J_x *= 0.9 / size_J_i; J_y *= 0.9 / size_J_i; J_z *= 0.9 / size_J_i; }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  { J_x /= phi; J_y /= phi; J_z /= phi; }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">double</span> size_J_f = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aea54f6718b4dbd7f81d33111d432adfd">chi_math::Vec2Norm</a>({J_x, J_y, J_z});</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keywordtype">double</span> ratio_f  = size_J_f;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keywordflow">if</span> (verbose)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    std::stringstream outstr;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    outstr &lt;&lt; <span class="stringliteral">&quot;P1 moments initial: &quot;</span> &lt;&lt;P1_moments[0]&lt;&lt;<span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                     &lt;&lt;P1_moments[1]&lt;&lt;<span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                     &lt;&lt;P1_moments[2]&lt;&lt;<span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                                     &lt;&lt;P1_moments[3]&lt;&lt;<span class="stringliteral">&quot; |J|=&quot;</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    outstr &lt;&lt; size_J_i &lt;&lt; <span class="stringliteral">&quot; ratio=&quot;</span> &lt;&lt; ratio_i &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    outstr &lt;&lt; <span class="stringliteral">&quot;P1 moments initial: &quot;</span> &lt;&lt;1.0&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;J_x&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;J_y&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;J_z&lt;&lt;<span class="stringliteral">&quot; |J|=&quot;</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    outstr &lt;&lt; size_J_f &lt;&lt; <span class="stringliteral">&quot; ratio=&quot;</span> &lt;&lt; ratio_f &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; outstr.str();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordflow">if</span> (size_J_f &lt; 1.0e-10)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">double</span> a = log(phi/4.0/M_PI);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">double</span> b = 0.0;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">if</span> (verbose) { <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Solution: &quot;</span> &lt;&lt; a &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; b; }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> {a, b};</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    CustomF custom_function({J_x, J_y, J_z});</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">auto</span> solution = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aa3184555bf41dd7fe3fd747a4d0f94ed">chi_math::NewtonIteration</a>(</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      custom_function, <span class="comment">//Non-linear function</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      {1.0,0.1},       <span class="comment">//Initial guess</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      100,             <span class="comment">//Max iterations</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      1.0e-8,          <span class="comment">//Tolerance</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      verbose);        <span class="comment">//Verbose output?</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">double</span> a = solution[0];</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">double</span> b = solution[1];</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">if</span> (verbose) { <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Solution: &quot;</span> &lt;&lt; a &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; b; }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">return</span> {a, b};</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__math_8h_html"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html">chi_math.h</a></div></div>
 <div class="ttc" id="achi__math_8h_html_a80801c4491f8f4ff54ed012d63d0d48b"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a></div><div class="ttdeci">std::vector&lt; VecDbl &gt; MatDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00016">chi_math.h:16</a></div></div>
 <div class="ttc" id="achi__math_8h_html_acbe69520b2db91355c5ed8d97a218b94"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a></div><div class="ttdeci">std::vector&lt; double &gt; VecDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00015">chi_math.h:15</a></div></div>
-<div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_ac2d1869abb6b7dd125a89ea20b977dbc"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00028">chi_log.cc:28</a></div></div>
+<div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_non_linear_function_html"><div class="ttname"><a href="../../d6/dc4/classchi__math_1_1_non_linear_function.html">chi_math::NonLinearFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d97/serial__newton__iteration_8h_source.html#l00014">serial_newton_iteration.h:15</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_non_linear_function_html_a05e2fd80495975dc05caa971650292d9"><div class="ttname"><a href="../../d6/dc4/classchi__math_1_1_non_linear_function.html#a05e2fd80495975dc05caa971650292d9">chi_math::NonLinearFunction::J</a></div><div class="ttdeci">virtual MatDbl J(const VecDbl &amp;x) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d97/serial__newton__iteration_8h_source.html#l00024">serial_newton_iteration.h:24</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_non_linear_function_html_a27ce52063512657e7b9c5b0a157feabe"><div class="ttname"><a href="../../d6/dc4/classchi__math_1_1_non_linear_function.html#a27ce52063512657e7b9c5b0a157feabe">chi_math::NonLinearFunction::F</a></div><div class="ttdeci">virtual VecDbl F(const VecDbl &amp;x) const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d97/serial__newton__iteration_8h_source.html#l00018">serial_newton_iteration.h:18</a></div></div>
-<div class="ttc" id="albs__adjoint_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d0/d6b/lbs__adjoint_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00025">chi_log.cc:25</a></div></div>
+<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
 <div class="ttc" id="albs__adjoint_8h_html"><div class="ttname"><a href="../../d6/d83/lbs__adjoint_8h.html">lbs_adjoint.h</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_aa3184555bf41dd7fe3fd747a4d0f94ed"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#aa3184555bf41dd7fe3fd747a4d0f94ed">chi_math::NewtonIteration</a></div><div class="ttdeci">VecDbl NewtonIteration(const NonLinearFunction &amp;non_linear_function, const VecDbl &amp;x_0, unsigned int max_iters, double epsilon, bool verbose=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d22/serial__newton__iteration_8cc_source.html#l00009">serial_newton_iteration.cc:10</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_aea54f6718b4dbd7f81d33111d432adfd"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#aea54f6718b4dbd7f81d33111d432adfd">chi_math::Vec2Norm</a></div><div class="ttdeci">double Vec2Norm(const VecDbl &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00085">chi_math_03_vector_operations.cc:85</a></div></div>
-<div class="ttc" id="anamespacelbs__adjoint_html_a73c69ef5b6a6004239b12da056a9e69f"><div class="ttname"><a href="../../de/ded/namespacelbs__adjoint.html#a73c69ef5b6a6004239b12da056a9e69f">lbs_adjoint::MakeExpRepFromP1</a></div><div class="ttdeci">std::array&lt; double, 2 &gt; MakeExpRepFromP1(const std::array&lt; double, 4 &gt; &amp;P1_moments, bool verbose=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d6b/lbs__adjoint_8cc_source.html#l00014">lbs_adjoint.cc:15</a></div></div>
-<div class="ttc" id="anamespacelbs__adjoint_html_acfbc7980b38615ae67f2ccda87432022"><div class="ttname"><a href="../../de/ded/namespacelbs__adjoint.html#acfbc7980b38615ae67f2ccda87432022">lbs_adjoint::TestFunction</a></div><div class="ttdeci">void TestFunction()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d6b/lbs__adjoint_8cc_source.html#l00009">lbs_adjoint.cc:9</a></div></div>
+<div class="ttc" id="anamespacelbs__adjoint_html_a73c69ef5b6a6004239b12da056a9e69f"><div class="ttname"><a href="../../de/ded/namespacelbs__adjoint.html#a73c69ef5b6a6004239b12da056a9e69f">lbs_adjoint::MakeExpRepFromP1</a></div><div class="ttdeci">std::array&lt; double, 2 &gt; MakeExpRepFromP1(const std::array&lt; double, 4 &gt; &amp;P1_moments, bool verbose=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d6b/lbs__adjoint_8cc_source.html#l00015">lbs_adjoint.cc:16</a></div></div>
+<div class="ttc" id="anamespacelbs__adjoint_html_acfbc7980b38615ae67f2ccda87432022"><div class="ttname"><a href="../../de/ded/namespacelbs__adjoint.html#acfbc7980b38615ae67f2ccda87432022">lbs_adjoint::TestFunction</a></div><div class="ttdeci">void TestFunction()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d6b/lbs__adjoint_8cc_source.html#l00010">lbs_adjoint.cc:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

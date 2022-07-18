@@ -1,6 +1,5 @@
 var chi__math_8h =
 [
-    [ "ChiMath", "d9/d9f/class_chi_math.html", "d9/d9f/class_chi_math" ],
     [ "MatDbl", "d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b", null ],
     [ "VecDbl", "d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94", null ],
     [ "CoordinateSystemType", "d2/d08/chi__math_8h.html#afe9e3188029ef8b07daf8af16eabc6b1", [

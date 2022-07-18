@@ -8,7 +8,6 @@ var class_chi_physics =
     [ "fieldfunc_stack", "d8/d9a/class_chi_physics.html#a15d29242edc577ddbc26fea2958cabdb", null ],
     [ "instance", "d8/d9a/class_chi_physics.html#a680937713dd16efd4ae74deff2f23ab5", null ],
     [ "material_stack", "d8/d9a/class_chi_physics.html#a8366f87189c2145d12c6787b4d3e6a61", null ],
-    [ "physicsTimeCost", "d8/d9a/class_chi_physics.html#a4a8c2214961737245dcbbb8f3edfd41d", null ],
     [ "physicsTimestep", "d8/d9a/class_chi_physics.html#a0cdd152bc9bd4886d08dc6de880be990", null ],
     [ "solver_stack", "d8/d9a/class_chi_physics.html#a5eea4ecebd52f4289ed9edaab8936d37", null ],
     [ "trnsprt_xs_stack", "d8/d9a/class_chi_physics.html#a10f6257f1744e51d4a26f85dd3a56431", null ]

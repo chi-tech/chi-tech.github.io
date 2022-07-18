@@ -4,7 +4,7 @@ var searchData=
   ['basicoption_1',['BasicOption',['../d2/dd8/classchi__physics_1_1_basic_option.html',1,'chi_physics']]],
   ['basicoptions_2',['BasicOptions',['../d1/d7c/classchi__physics_1_1_basic_options.html',1,'chi_physics']]],
   ['booleanlogicalvolume_3',['BooleanLogicalVolume',['../da/dca/classchi__mesh_1_1_boolean_logical_volume.html',1,'chi_mesh']]],
-  ['boundary_4',['Boundary',['../d7/dae/classchi__diffusion_1_1_boundary.html',1,'chi_diffusion::Boundary'],['../db/dc8/classchi__mesh_1_1_boundary.html',1,'chi_mesh::Boundary']]],
+  ['boundary_4',['Boundary',['../d7/dae/classchi__diffusion_1_1_boundary.html',1,'chi_diffusion']]],
   ['boundarybase_5',['BoundaryBase',['../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html',1,'chi_mesh::sweep_management']]],
   ['boundarydirichlet_6',['BoundaryDirichlet',['../de/d2e/classchi__diffusion_1_1_boundary_dirichlet.html',1,'chi_diffusion']]],
   ['boundaryincidentheterogenous_7',['BoundaryIncidentHeterogenous',['../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html',1,'chi_mesh::sweep_management']]],

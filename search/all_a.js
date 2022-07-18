@@ -1,8 +1,15 @@
 var searchData=
 [
-  ['j_0',['J',['../d1/dfa/struct_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d.html#a0f89d6b7a3bfc1496bc502a90eb384f1',1,'PolygonMappingFE_PWL::FEside_data2d::J()'],['../de/d70/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html#a8c1fcb85d1d5ea35f5ece306a2641922',1,'PolyhedronMappingFE_PWL::FEside_data3d::J()'],['../d6/dc4/classchi__math_1_1_non_linear_function.html#a05e2fd80495975dc05caa971650292d9',1,'chi_math::NonLinearFunction::J()']]],
-  ['jinv_1',['Jinv',['../d1/dfa/struct_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d.html#a1ce1f8ec2c85a4e4de4df5f24327ffa9',1,'PolygonMappingFE_PWL::FEside_data2d::Jinv()'],['../de/d70/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html#a3b8d5b5c3ac01b0e9b707a0435b4ee82',1,'PolyhedronMappingFE_PWL::FEside_data3d::Jinv()']]],
-  ['jtinv_2',['JTinv',['../d1/dfa/struct_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d.html#a682e3487ad811de168739fa41a9b117d',1,'PolygonMappingFE_PWL::FEside_data2d::JTinv()'],['../de/d70/struct_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html#ac1fe33a9016ce7f20ebdb6eda8fd9601',1,'PolyhedronMappingFE_PWL::FEside_data3d::JTinv()']]],
-  ['junctionindex_3',['junctionIndex',['../d2/d11/class_h_y_d_r_o___b_o_u_n_d_a_r_y.html#a1ba3cf0a9ddaebc2b39cb711fcbbfc00',1,'HYDRO_BOUNDARY']]],
-  ['jxw_4',['JxW',['../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a221610e84da37474cf16dadb07d6d27a',1,'chi_math::finite_element::InternalQuadraturePointData']]]
+  ['k_5feff_0',['k_eff',['../d7/d41/classlbs_1_1_k_eigenvalue_solver.html#ace21d0e198fc3a5f2ed089c3319fbac3',1,'lbs::KEigenvalueSolver']]],
+  ['kba_1',['KBA',['../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html#ae95f6b45d44a59e292d853094b01b59e',1,'chi_mesh::VolumeMesherPredefinedUnpartitioned']]],
+  ['kba_5fstyle_5fxyz_2',['KBA_STYLE_XYZ',['../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3ac04afcc24c159516c1b664dbef84d936',1,'chi_mesh::VolumeMesher']]],
+  ['keastrule_3',['KeastRule',['../d8/d57/classchi__math_1_1_quadrature_tetrahedron.html#a9d1c6dfa424e1351799764a7b040a50b',1,'chi_math::QuadratureTetrahedron']]],
+  ['keigenvaluesolver_4',['KEigenvalueSolver',['../d7/d41/classlbs_1_1_k_eigenvalue_solver.html#aa5434a242d474f52946fe5065878142c',1,'lbs::KEigenvalueSolver::KEigenvalueSolver(const KEigenvalueSolver &amp;)=delete'],['../d7/d41/classlbs_1_1_k_eigenvalue_solver.html#aa8e1afd04708692d7a3bc8aa1bac6797',1,'lbs::KEigenvalueSolver::KEigenvalueSolver(const std::string &amp;in_text_name)'],['../d7/d41/classlbs_1_1_k_eigenvalue_solver.html',1,'lbs::KEigenvalueSolver']]],
+  ['ksp_5',['ksp',['../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88',1,'chi_math::PETScUtils::PETScSolverSetup::ksp()'],['../d6/d32/classchi__diffusion_1_1_solver.html#af641af815549ee181e932a903d9cd420',1,'chi_diffusion::Solver::ksp()']]],
+  ['ksp_5fdata_5fcontext_2eh_6',['ksp_data_context.h',['../d8/d96/ksp__data__context_8h.html',1,'']]],
+  ['kspconvergencetestnpt_7',['KSPConvergenceTestNPT',['../d9/d42/namespacelbs.html#a6ad72e261b3e4b5ca9d2dc290c7f9917',1,'lbs']]],
+  ['kspdatacontext_8',['KSPDataContext',['../d4/d4c/structlbs_1_1_k_s_p_data_context.html#a2024bf624d616565a8d8095b916bab33',1,'lbs::KSPDataContext::KSPDataContext()'],['../d4/d4c/structlbs_1_1_k_s_p_data_context.html',1,'lbs::KSPDataContext']]],
+  ['kspmonitor_5fnpt_2ecc_9',['kspmonitor_npt.cc',['../d3/d99/kspmonitor__npt_8cc.html',1,'']]],
+  ['kspmonitor_5fnpt_2eh_10',['kspmonitor_npt.h',['../d1/d5d/kspmonitor__npt_8h.html',1,'']]],
+  ['kspmonitorachitech_11',['KSPMonitorAChiTech',['../de/d73/namespacechi__diffusion.html#a635822a5015ed1d1d9adf91dc95fcc4d',1,'chi_diffusion']]]
 ];

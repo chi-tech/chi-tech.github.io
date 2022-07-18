@@ -176,8 +176,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad9afacb8ef7ad0b18ef39c13db1dcc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08330bb9af1d916d059a549af0982ee8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a08330bb9af1d916d059a549af0982ee8">RemoveLocalCyclicDependencies</a> (std::shared_ptr&lt; <a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> &gt; sweep_order, <a class="el" href="../../dc/d15/classchi__graph_1_1_directed_graph.html">chi_graph::DirectedGraph</a> &amp;local_DG)</td></tr>
 <tr class="separator:a08330bb9af1d916d059a549af0982ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36afcd614dce993def8e6a624255a155"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a36afcd614dce993def8e6a624255a155">CreateSweepOrder</a> (const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;omega, <a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> grid, bool cycle_allowance_flag=false)</td></tr>
-<tr class="separator:a36afcd614dce993def8e6a624255a155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad90dbc921056b0a05f15ac9cef7c068f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#ad90dbc921056b0a05f15ac9cef7c068f">CreateSweepOrder</a> (const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;omega, const <a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> &amp;grid, bool cycle_allowance_flag=false)</td></tr>
+<tr class="separator:ad90dbc921056b0a05f15ac9cef7c068f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14056bd4d6583fc03ff5400466e173bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a14056bd4d6583fc03ff5400466e173bd">PrintSweepOrdering</a> (<a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> *sweep_order, <a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">MeshContinuumPtr</a> vol_continuum)</td></tr>
 <tr class="separator:a14056bd4d6583fc03ff5400466e173bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -339,8 +339,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a36afcd614dce993def8e6a624255a155" name="a36afcd614dce993def8e6a624255a155"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36afcd614dce993def8e6a624255a155">&#9670;&nbsp;</a></span>CreateSweepOrder()</h2>
+<a id="ad90dbc921056b0a05f15ac9cef7c068f" name="ad90dbc921056b0a05f15ac9cef7c068f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad90dbc921056b0a05f15ac9cef7c068f">&#9670;&nbsp;</a></span>CreateSweepOrder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,7 +354,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>grid</em>, </td>
         </tr>
         <tr>
@@ -372,7 +372,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Develops a sweep ordering for a given angle for locally owned cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/de0/create__sweep__ordering_8cc_source.html#l00024">24</a> of file <a class="el" href="../../d5/de0/create__sweep__ordering_8cc_source.html">create_sweep_ordering.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/de0/create__sweep__ordering_8cc_source.html#l00025">25</a> of file <a class="el" href="../../d5/de0/create__sweep__ordering_8cc_source.html">create_sweep_ordering.cc</a>.</p>
 
 </div>
 </div>
@@ -514,7 +514,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Removes local cyclic dependencies. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d45/remove__local__cyclicdep_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d7/d45/remove__local__cyclicdep_8cc_source.html">remove_local_cyclicdep.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d45/remove__local__cyclicdep_8cc_source.html#l00016">16</a> of file <a class="el" href="../../d7/d45/remove__local__cyclicdep_8cc_source.html">remove_local_cyclicdep.cc</a>.</p>
 
 </div>
 </div>

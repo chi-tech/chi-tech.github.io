@@ -1,6 +1,7 @@
 var classlbs_1_1_steady_solver =
 [
     [ "CellFaceNodalMapping", "d9/d05/classlbs_1_1_steady_solver.html#a381f0f439a28d88ba90becfe4b78daa7", null ],
+    [ "SteadySolver", "d9/d05/classlbs_1_1_steady_solver.html#a1706990765de19e644ef94022ee3563f", null ],
     [ "SteadySolver", "d9/d05/classlbs_1_1_steady_solver.html#ac17b4ad9fbbc6ab7424327ca31ece571", null ],
     [ "~SteadySolver", "d9/d05/classlbs_1_1_steady_solver.html#a8407c45229e15bc0b62fd701cf3102c6", null ],
     [ "AssembleTGDSADeltaPhiVector", "d9/d05/classlbs_1_1_steady_solver.html#aa8b11462e80321ae255a4dfc8354cb52", null ],
@@ -34,6 +35,7 @@ var classlbs_1_1_steady_solver =
     [ "InitTGDSA", "d9/d05/classlbs_1_1_steady_solver.html#a491d5a207f5d41a0a4bb8db106c6edcd", null ],
     [ "InitWGDSA", "d9/d05/classlbs_1_1_steady_solver.html#acbc43b98d6d2d1a250e4d2520638cf60", null ],
     [ "MakeSourceMomentsFromPhi", "d9/d05/classlbs_1_1_steady_solver.html#a4e34cd5fa8d40fea88182ace8aafe2bf", null ],
+    [ "operator=", "d9/d05/classlbs_1_1_steady_solver.html#a4419099707517f7dec9132326f96bdbb", null ],
     [ "PerformInputChecks", "d9/d05/classlbs_1_1_steady_solver.html#a85c38fc71967b330a2d2df8e16caea5b", null ],
     [ "PrintSimHeader", "d9/d05/classlbs_1_1_steady_solver.html#a6bd188c70de556ff754d48481486aa04", null ],
     [ "ReadFluxMoments", "d9/d05/classlbs_1_1_steady_solver.html#a5943589e8bbb9f9d51365db38a0798b0", null ],
@@ -53,7 +55,7 @@ var classlbs_1_1_steady_solver =
     [ "boundary_types", "d9/d05/classlbs_1_1_steady_solver.html#af908b84b19970ca5bfbc4e1107b808a8", null ],
     [ "cell_transport_views", "d9/d05/classlbs_1_1_steady_solver.html#ab00d893515614fe30e662143f001f469", null ],
     [ "delta_phi_local", "d9/d05/classlbs_1_1_steady_solver.html#a2f3775700a9e74933a703ab41cc7df89", null ],
-    [ "discretization", "d9/d05/classlbs_1_1_steady_solver.html#aecbec42b4187899d0a1fc3f7a00ead4f", null ],
+    [ "discretization", "d9/d05/classlbs_1_1_steady_solver.html#a100a59bf7e13fd43508b23a127e349cd", null ],
     [ "ext_src_moments_local", "d9/d05/classlbs_1_1_steady_solver.html#a31621740cbd889c1362f77e113e948e5", null ],
     [ "flux_moments_uk_man", "d9/d05/classlbs_1_1_steady_solver.html#a0c3fd70c885c2d0a4e3e631372cf8133", null ],
     [ "glob_node_count", "d9/d05/classlbs_1_1_steady_solver.html#a3ea3230c26493852c84437a613dc4934", null ],

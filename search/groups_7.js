@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unpartitioned_20mesh_2dreader_0',['Unpartitioned Mesh-Reader',['../d2/dde/group___lua_unpartitioned_mesh.html',1,'']]]
+  ['linear_20boltzmann_20solver_0',['Linear Boltzmann Solver',['../d0/daf/group___lua_l_b_s.html',1,'']]],
+  ['logical_20volumes_1',['Logical Volumes',['../d9/d32/group___lua_logic_volumes.html',1,'']]]
 ];

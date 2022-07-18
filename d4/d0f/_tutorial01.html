@@ -90,12 +90,12 @@ $(document).ready(function(){initNavTree('d4/d0f/_tutorial01.html','../../'); in
  </p><p class="formulaDsp">
 <img class="formulaDsp" alt="\[ -\nabla \cdot k \nabla T = q \]" src="../../form_113.png" width="93" height="15"/>
 </p>
-<p >The purpose of this tutorial is to understand the basics of the input paradigm which is completely different from the traditional input-card based method. <a class="el" href="../../d5/d49/class_chi_tech.html">ChiTech</a> uses an imbedded Lua console. For a history of Lua please see its wikipedia page <a href="https://en.wikipedia.org/wiki/Lua_(programming_language)">here</a>. This paradigm allows the user to control many aspects of the program flow as well to be more versatile when creating inputs, i.e. reading files, for loops to create multiple entities etc. So let us get started.</p>
+<p >The purpose of this tutorial is to understand the basics of the input paradigm which is completely different from the traditional input-card based method. ChiTech uses an imbedded Lua console. For a history of Lua please see its wikipedia page <a href="https://en.wikipedia.org/wiki/Lua_(programming_language)">here</a>. This paradigm allows the user to control many aspects of the program flow as well to be more versatile when creating inputs, i.e. reading files, for loops to create multiple entities etc. So let us get started.</p>
 <h2>Step 1 - Create your input file, open it in a text editor</h2>
 <p >Go to the directory of your choosing and make an input file of your choosing. The input file does not require a specific .lua or .inp extension although if you use .lua then there are many text editors that will be able to provide syntax highlighting.</p>
 <h2>Step 2 - Create a mesh handler</h2>
-<div class="fragment"><div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div>
-<div class="ttc" id="anamespacechi__lua_html_a57ff5c2bfc92cd5cf102d26a3611bd3e"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a57ff5c2bfc92cd5cf102d26a3611bd3e">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">int chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00336">lua_functions.c:336</a></div></div>
+<div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div>
+<div class="ttc" id="agroup___lua_mesh_handler_html_ga57ff5c2bfc92cd5cf102d26a3611bd3e"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">int chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00350">lua_functions.c:350</a></div></div>
 </div><!-- fragment --><p >This function call creates a new mesh handler and pushes it to a global stack. It also make the newly created handler the "current" meaning all mesh operations will operate on this handler. The concept of creating, reading or manipulating computational meshes is centered on operating on a specific <a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a> object. Physics/math objects can then freely operate on meshes by simply specifying which handler to use.</p>
 <h2>Step 3 - Create a 3D mesh</h2>
 <p >For this we will create a simple orthogonal grid of 32x32x32 cells (32,768 total) as shown in Figure 1.</p>
@@ -106,121 +106,119 @@ Figure 1 - Mesh spanning from [-1,-1,-1] to [1,1,1]</div></div>
 <p >The first step of this process is to define an array of nodes starting from -1.0 with a distance <img class="formulaInl" alt="$ ds $" src="../../form_114.png" width="15" height="12"/> between each of them. In lua we can create this array programatically: </p><div class="fragment"><div class="line">nodes={}</div>
 <div class="line">N=32</div>
 <div class="line">ds=2.0/N</div>
-<div class="line"><span class="keywordflow">for</span> <a class="code hl_variable" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0,N <span class="keywordflow">do</span></div>
-<div class="line">    nodes[<a class="code hl_variable" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>+1] = <a class="code hl_variable" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>*ds</div>
-<div class="line"><a class="code hl_variable" href="../../d8/d65/namespace_z_compile_and_run.html#a77363b7e6cc91ab46a7379a6be8a31d0">end</a></div>
-<div class="ttc" id="anamespace_z_compile_and_run_html_a1963b0f3bba220d2ecfb343694cab7c8"><div class="ttname"><a href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">ZCompileAndRun.i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4d/_z_compile_and_run_8py_source.html#l00038">ZCompileAndRun.py:38</a></div></div>
-<div class="ttc" id="anamespace_z_compile_and_run_html_a77363b7e6cc91ab46a7379a6be8a31d0"><div class="ttname"><a href="../../d8/d65/namespace_z_compile_and_run.html#a77363b7e6cc91ab46a7379a6be8a31d0">ZCompileAndRun.end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d4d/_z_compile_and_run_8py_source.html#l00047">ZCompileAndRun.py:47</a></div></div>
+<div class="line"><span class="keywordflow">for</span> i=0,N <span class="keywordflow">do</span></div>
+<div class="line">    nodes[i+1] = i*ds</div>
+<div class="line">end</div>
 </div><!-- fragment --><p >Note here that lua arrays cannot use <code>nodes[0]</code> since arrays in lua are not zero based. The next step is call chiMeshCreateUnpartitioned3DOrthoMesh with the node arrangement along the X-direction, Y-direction and Z-direction, which in our case is the same,</p>
-<div class="fragment"><div class="line">surf_mesh, region1 = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ac14a6525f45469604de4c23af08ca6fc">chiMeshCreateUnpartitioned3DOrthoMesh</a>(nodes,nodes,nodes)</div>
-<div class="ttc" id="anamespacechi__lua_html_ac14a6525f45469604de4c23af08ca6fc"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#ac14a6525f45469604de4c23af08ca6fc">chi_lua::chiMeshCreateUnpartitioned3DOrthoMesh</a></div><div class="ttdeci">int chiMeshCreateUnpartitioned3DOrthoMesh(array_float x_nodes, array_float y_nodes, array_float z_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00416">lua_functions.c:416</a></div></div>
+<div class="fragment"><div class="line">surf_mesh, region1 = <a class="code hl_function" href="../../d9/db8/group___lua_mesh_macros.html#gac14a6525f45469604de4c23af08ca6fc">chiMeshCreateUnpartitioned3DOrthoMesh</a>(nodes,nodes,nodes)</div>
+<div class="ttc" id="agroup___lua_mesh_macros_html_gac14a6525f45469604de4c23af08ca6fc"><div class="ttname"><a href="../../d9/db8/group___lua_mesh_macros.html#gac14a6525f45469604de4c23af08ca6fc">chi_lua::chiMeshCreateUnpartitioned3DOrthoMesh</a></div><div class="ttdeci">int chiMeshCreateUnpartitioned3DOrthoMesh(array_float x_nodes, array_float y_nodes, array_float z_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00421">lua_functions.c:421</a></div></div>
 </div><!-- fragment --><p >Some work has been encapsulated behind the scenes here. Firstly, a 2D surface mesh was created and assigned to a region. Secondly a surface-mesher (<a class="el" href="../../df/d7e/classchi__mesh_1_1_surface_mesher.html">chi_mesh::SurfaceMesher</a>) and a volume mesher (<a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html">chi_mesh::VolumeMesher</a>) has been assigned to the mesh handler. The volume mesher is not executed because the macro allows the user to first assign parallel partitioning.</p>
 <h2>Step 4 - Executing the mesher</h2>
 <p >The underlying mesher for a 3D mesh is an extruded mesh from 2D. This mesh has some partitioning properties that can be set to allow parallel simulations, however, we will just focus on serial simulations for now. The next step to complete meshing is to execute the volume mesher. Since we are not going to set any partitioning parameters we will just execute it now.</p>
-<div class="fragment"><div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a2cbae637b293223c824105bf422c0ab8">chiVolumeMesherExecute</a>();</div>
-<div class="ttc" id="anamespacechi__lua_html_a2cbae637b293223c824105bf422c0ab8"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a2cbae637b293223c824105bf422c0ab8">chi_lua::chiVolumeMesherExecute</a></div><div class="ttdeci">int chiVolumeMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00959">lua_functions.c:959</a></div></div>
-</div><!-- fragment --><h2>Step 5 - Assign material ID's</h2>
+<div class="fragment"><div class="line"><a class="code hl_function" href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chiVolumeMesherExecute</a>();</div>
+<div class="ttc" id="agroup___lua_volume_mesher_html_ga2cbae637b293223c824105bf422c0ab8"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chi_lua::chiVolumeMesherExecute</a></div><div class="ttdeci">int chiVolumeMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00828">lua_functions.c:828</a></div></div>
+</div><!-- fragment --><h2>Step 5 - Assign material- and boundary IDs and</h2>
 <p >Materials ID's can conveniently be specified using logical volumes. There are many options for logical volumes ranging from primitive parametric surfaces to non-convex user generated surfaces using surface meshes (see chiLogicalVolumeCreate). For this tutorial we will use a rectangular paralellipiped (RPP or brick) as follows.</p>
-<div class="fragment"><div class="line">material = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a8c9e57e5b4e662f31710a8039455a50e">chiPhysicsAddMaterial</a>(<span class="stringliteral">&quot;Test Material&quot;</span>);</div>
+<div class="fragment"><div class="line">material = <a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#ga8c9e57e5b4e662f31710a8039455a50e">chiPhysicsAddMaterial</a>(<span class="stringliteral">&quot;Test Material&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">vol0 = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a5ecdd09775b38d1aa8cbfa4322a6ae0c">chiLogicalVolumeCreate</a>(<a class="code hl_define" href="../../d9/df5/chi__mesh__logicalvolume_8h.html#ab27b91d4128c63b2fa1ff9d4c7f179a5">RPP</a>,-1000,1000,-1000,1000,-1000,1000)</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a52aada794be1a72c2c5efb8a442e9e1f">chiVolumeMesherSetProperty</a>(<a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803">MATID_FROMLOGICAL</a>,vol0,material)</div>
-<div class="ttc" id="achi__mesh__logicalvolume_8h_html_ab27b91d4128c63b2fa1ff9d4c7f179a5"><div class="ttname"><a href="../../d9/df5/chi__mesh__logicalvolume_8h.html#ab27b91d4128c63b2fa1ff9d4c7f179a5">RPP</a></div><div class="ttdeci">#define RPP</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00009">chi_mesh_logicalvolume.h:9</a></div></div>
-<div class="ttc" id="anamespacechi__lua_html_a52aada794be1a72c2c5efb8a442e9e1f"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a52aada794be1a72c2c5efb8a442e9e1f">chi_lua::chiVolumeMesherSetProperty</a></div><div class="ttdeci">int chiVolumeMesherSetProperty(int PropertyIndex, varying PropertyValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01013">lua_functions.c:1013</a></div></div>
-<div class="ttc" id="anamespacechi__lua_html_a5ecdd09775b38d1aa8cbfa4322a6ae0c"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a5ecdd09775b38d1aa8cbfa4322a6ae0c">chi_lua::chiLogicalVolumeCreate</a></div><div class="ttdeci">int chiLogicalVolumeCreate(int TypeIndex, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00483">lua_functions.c:483</a></div></div>
-<div class="ttc" id="anamespacechi__lua_html_a8c9e57e5b4e662f31710a8039455a50e"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a8c9e57e5b4e662f31710a8039455a50e">chi_lua::chiPhysicsAddMaterial</a></div><div class="ttdeci">int chiPhysicsAddMaterial(char Name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01124">lua_functions.c:1124</a></div></div>
+<div class="line">vol0 = <a class="code hl_function" href="../../d9/d32/group___lua_logic_volumes.html#ga5ecdd09775b38d1aa8cbfa4322a6ae0c">chiLogicalVolumeCreate</a>(<a class="code hl_define" href="../../d9/df5/chi__mesh__logicalvolume_8h.html#ab27b91d4128c63b2fa1ff9d4c7f179a5">RPP</a>,-1000,1000,-1000,1000,-1000,1000)</div>
+<div class="line"><a class="code hl_function" href="../../d4/d3a/group___lua_volume_mesher.html#ga52aada794be1a72c2c5efb8a442e9e1f">chiVolumeMesherSetProperty</a>(<a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803">MATID_FROMLOGICAL</a>,vol0,material)</div>
+<div class="ttc" id="achi__mesh__logicalvolume_8h_html_ab27b91d4128c63b2fa1ff9d4c7f179a5"><div class="ttname"><a href="../../d9/df5/chi__mesh__logicalvolume_8h.html#ab27b91d4128c63b2fa1ff9d4c7f179a5">RPP</a></div><div class="ttdeci">#define RPP</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00010">chi_mesh_logicalvolume.h:10</a></div></div>
+<div class="ttc" id="agroup___lua_logic_volumes_html_ga5ecdd09775b38d1aa8cbfa4322a6ae0c"><div class="ttname"><a href="../../d9/d32/group___lua_logic_volumes.html#ga5ecdd09775b38d1aa8cbfa4322a6ae0c">chi_lua::chiLogicalVolumeCreate</a></div><div class="ttdeci">int chiLogicalVolumeCreate(int TypeIndex, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00457">lua_functions.c:457</a></div></div>
+<div class="ttc" id="agroup___lua_physics_materials_html_ga8c9e57e5b4e662f31710a8039455a50e"><div class="ttname"><a href="../../d7/d11/group___lua_physics_materials.html#ga8c9e57e5b4e662f31710a8039455a50e">chi_lua::chiPhysicsAddMaterial</a></div><div class="ttdeci">int chiPhysicsAddMaterial(char Name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01004">lua_functions.c:1004</a></div></div>
+<div class="ttc" id="agroup___lua_volume_mesher_html_ga52aada794be1a72c2c5efb8a442e9e1f"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#ga52aada794be1a72c2c5efb8a442e9e1f">chi_lua::chiVolumeMesherSetProperty</a></div><div class="ttdeci">int chiVolumeMesherSetProperty(int PropertyIndex, varying PropertyValue)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00885">lua_functions.c:885</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803">chi_mesh::MATID_FROMLOGICAL</a></div><div class="ttdeci">@ MATID_FROMLOGICAL</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dcb/chi__volumemesher_8h_source.html#l00026">chi_volumemesher.h:26</a></div></div>
-</div><!-- fragment --><p >We first create a material using the <a class="el" href="../../d8/dd9/namespacechi__lua.html#a8c9e57e5b4e662f31710a8039455a50e">chiPhysicsAddMaterial()</a> function. The handle of this material will essentially be zero but it is not technically required by the <a class="el" href="../../d8/dd9/namespacechi__lua.html#a52aada794be1a72c2c5efb8a442e9e1f">chiVolumeMesherSetProperty()</a> function since this function operates on the integer supplied. This material is added to the physics environment and therefore has scope over all mesh handlers and all physics entities. We then create a logical volume using the function <a class="el" href="../../d8/dd9/namespacechi__lua.html#a5ecdd09775b38d1aa8cbfa4322a6ae0c">chiLogicalVolumeCreate()</a> with arguments RPP, specifying that we will be using a Rectangular Parallelipiped and then a series of dimensions specifying xmin-xmax-ymin-ymax-zmin-zmax. Every cell centroid within these dimensions will be flagged as being "within" the logical volume.</p>
-<p >Actually setting the mesh's material id's is a utility facilitated by a volume mesher property and hence we call <a class="el" href="../../d8/dd9/namespacechi__lua.html#a52aada794be1a72c2c5efb8a442e9e1f">chiVolumeMesherSetProperty()</a> with a property index MATID_FROMLOGICAL. Next we provided a handle to the logical volume (vol0) and the desired material id. Logical volumes are very diverse and their uses are discussed elsewhere.</p>
-<p >The culmination of this step is all done within a physics agnostic framework. The user can even export the mesh for visualization using the function <a class="el" href="../../d8/dd9/namespacechi__lua.html#a3d61784a8e14101485ffaa59297c5a8c">chiRegionExportMeshToObj()</a>. The extruded mesh is shown below:</p>
+</div><!-- fragment --><p >We first create a material using the <a class="el" href="../../d7/d11/group___lua_physics_materials.html#ga8c9e57e5b4e662f31710a8039455a50e">chiPhysicsAddMaterial()</a> function. The handle of this material will essentially be zero but it is not technically required by the <a class="el" href="../../d4/d3a/group___lua_volume_mesher.html#ga52aada794be1a72c2c5efb8a442e9e1f">chiVolumeMesherSetProperty()</a> function since this function operates on the integer supplied. This material is added to the physics environment and therefore has scope over all mesh handlers and all physics entities. We then create a logical volume using the function <a class="el" href="../../d9/d32/group___lua_logic_volumes.html#ga5ecdd09775b38d1aa8cbfa4322a6ae0c">chiLogicalVolumeCreate()</a> with arguments RPP, specifying that we will be using a Rectangular Parallelipiped and then a series of dimensions specifying xmin-xmax-ymin-ymax-zmin-zmax. Every cell centroid within these dimensions will be flagged as being "within" the logical volume.</p>
+<p >Actually setting the mesh's material id's is a utility facilitated by a volume mesher property and hence we call <a class="el" href="../../d4/d3a/group___lua_volume_mesher.html#ga52aada794be1a72c2c5efb8a442e9e1f">chiVolumeMesherSetProperty()</a> with a property index MATID_FROMLOGICAL. Next we provided a handle to the logical volume (vol0) and the desired material id. Logical volumes are very diverse and their uses are discussed elsewhere. There is an additional utility, <a class="el" href="../../d4/d3a/group___lua_volume_mesher.html#ga090d59f6220b9ccf3f910571856b612e">chiVolumeMesherSetMatIDToAll()</a>, which will set all cell-material-ids without requiring a logical volume, however, in this tutorial we opted to show the logical volume route.</p>
+<h3>Boundary IDs</h3>
+<p >By default all boundaries are unassigned (i.e., -1). There are two utilities that set the boundary id's the first of which is essentially identical to how material ids are set, <a class="el" href="../../d4/d3a/group___lua_volume_mesher.html#ga52aada794be1a72c2c5efb8a442e9e1f">chiVolumeMesherSetProperty()</a>, but this time the property index is BNDRYID_FROMLOGICAL. The second way is to use <a class="el" href="../../d4/d3a/group___lua_volume_mesher.html#gab53dfd750a364bfe19eeafd18bd60873">chiVolumeMesherSetupOrthogonalBoundaries()</a> which requires no arguments and will asssign standard indices to a boundary if it is aligned with the orthogonal cartesian directions.</p>
+<p >The culmination of this step is all done within a physics agnostic framework. The user can even export the mesh for visualization using the function <a class="el" href="../../da/d92/group___lua_mesh_handler.html#gaecd3def3ad5d8f1838f2064e9ecfdbbc">chiMeshHandlerExportMeshToObj()</a>.</p>
+<h3>Boundary IDs</h3>
 <h2>Step 5 - Adding material properties</h2>
 <p >Now that the cells have been assigned a material id we need to add properties to the material conducive to a diffusion simulation. For a heat transfer diffusion simulation we will need to know the thermal conductivity "k" and the volumetric source strength "q". Both of these can be simple scalar values.</p>
-<div class="fragment"><div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ab090ff17a8c3788f88574c481edd15f8">chiPhysicsMaterialAddProperty</a>(material,SCALAR_VALUE,<span class="stringliteral">&quot;k&quot;</span>)</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a18f1ed6d994830d877ef3051fd540e57">chiPhysicsMaterialSetProperty</a>(material,&quot;k&quot;,SINGLE_VALUE,1.0)</div>
+<div class="fragment"><div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gab090ff17a8c3788f88574c481edd15f8">chiPhysicsMaterialAddProperty</a>(material,SCALAR_VALUE,<span class="stringliteral">&quot;k&quot;</span>)</div>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#ga18f1ed6d994830d877ef3051fd540e57">chiPhysicsMaterialSetProperty</a>(material,&quot;k&quot;,SINGLE_VALUE,1.0)</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ab090ff17a8c3788f88574c481edd15f8">chiPhysicsMaterialAddProperty</a>(material,SCALAR_VALUE,&quot;q&quot;)</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a18f1ed6d994830d877ef3051fd540e57">chiPhysicsMaterialSetProperty</a>(material,&quot;q&quot;,SINGLE_VALUE,1.0)</div>
-<div class="ttc" id="anamespacechi__lua_html_a18f1ed6d994830d877ef3051fd540e57"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a18f1ed6d994830d877ef3051fd540e57">chi_lua::chiPhysicsMaterialSetProperty</a></div><div class="ttdeci">int chiPhysicsMaterialSetProperty(int MaterialHandle, int PropertyIndex, int OperationIndex, varying Information)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01285">lua_functions.c:1285</a></div></div>
-<div class="ttc" id="anamespacechi__lua_html_ab090ff17a8c3788f88574c481edd15f8"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#ab090ff17a8c3788f88574c481edd15f8">chi_lua::chiPhysicsMaterialAddProperty</a></div><div class="ttdeci">int chiPhysicsMaterialAddProperty(int MaterialHandle, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01191">lua_functions.c:1191</a></div></div>
-</div><!-- fragment --><p >In this code we created the material properties using the function <a class="el" href="../../d8/dd9/namespacechi__lua.html#ab090ff17a8c3788f88574c481edd15f8">chiPhysicsMaterialAddProperty()</a> which requires a handle to the reference material, the property type (SCALAR_VALUE), and a name for the property. Unlike extrusion layers the property name can be used in further calls to refer to the specific property.</p>
-<p >Material property values are set using the function <a class="el" href="../../d8/dd9/namespacechi__lua.html#a18f1ed6d994830d877ef3051fd540e57">chiPhysicsMaterialSetProperty()</a> which again expects a handle to the reference material, then either a material property id or name (in this case name), then an operation index and value(s). For this case we used an operation index SINGLE_VALUE which is the only operation supported by SCALAR_VALUE. In future the user can specify, as an example, temperature dependent values which will support the operation FROM_TABLE, but that is a topic for a different time.</p>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gab090ff17a8c3788f88574c481edd15f8">chiPhysicsMaterialAddProperty</a>(material,SCALAR_VALUE,&quot;q&quot;)</div>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#ga18f1ed6d994830d877ef3051fd540e57">chiPhysicsMaterialSetProperty</a>(material,&quot;q&quot;,SINGLE_VALUE,1.0)</div>
+<div class="ttc" id="agroup___lua_physics_materials_html_ga18f1ed6d994830d877ef3051fd540e57"><div class="ttname"><a href="../../d7/d11/group___lua_physics_materials.html#ga18f1ed6d994830d877ef3051fd540e57">chi_lua::chiPhysicsMaterialSetProperty</a></div><div class="ttdeci">int chiPhysicsMaterialSetProperty(int MaterialHandle, int PropertyIndex, int OperationIndex, varying Information)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01157">lua_functions.c:1157</a></div></div>
+<div class="ttc" id="agroup___lua_physics_materials_html_gab090ff17a8c3788f88574c481edd15f8"><div class="ttname"><a href="../../d7/d11/group___lua_physics_materials.html#gab090ff17a8c3788f88574c481edd15f8">chi_lua::chiPhysicsMaterialAddProperty</a></div><div class="ttdeci">int chiPhysicsMaterialAddProperty(int MaterialHandle, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01063">lua_functions.c:1063</a></div></div>
+</div><!-- fragment --><p >In this code we created the material properties using the function <a class="el" href="../../d7/d11/group___lua_physics_materials.html#gab090ff17a8c3788f88574c481edd15f8">chiPhysicsMaterialAddProperty()</a> which requires a handle to the reference material, the property type (SCALAR_VALUE), and a name for the property. Unlike extrusion layers the property name can be used in further calls to refer to the specific property.</p>
+<p >Material property values are set using the function <a class="el" href="../../d7/d11/group___lua_physics_materials.html#ga18f1ed6d994830d877ef3051fd540e57">chiPhysicsMaterialSetProperty()</a> which again expects a handle to the reference material, then either a material property id or name (in this case name), then an operation index and value(s). For this case we used an operation index SINGLE_VALUE which is the only operation supported by SCALAR_VALUE. In future the user can specify, as an example, temperature dependent values which will support the operation FROM_TABLE, but that is a topic for a different time.</p>
 <h2>Step 6 - Setup the diffusion physics</h2>
 <p >The following sequence of function calls completely define the diffusion solver.</p>
-<div class="fragment"><div class="line">phys1 = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ab1d05b1f49195f0dff6fdf547687d3a3">chiDiffusionCreateSolver</a>();</div>
-<div class="line"><a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#ga2470af5f6becc5dea0121c565dfbbb26">chiSolverAddRegion</a>(phys1,region1)</div>
-<div class="line"><a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#ga4dac22bb244e99b51882ab8d1640efac">chiSolverSetBasicOption</a>(phys1,<span class="stringliteral">&quot;discretization_method&quot;</span>,<span class="stringliteral">&quot;PWLC&quot;</span>)</div>
+<div class="fragment"><div class="line">phys1 = <a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#gab1d05b1f49195f0dff6fdf547687d3a3">chiDiffusionCreateSolver</a>()</div>
+<div class="line"><a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#ga4dac22bb244e99b51882ab8d1640efac">chiSolverSetBasicOption</a>(phys1,&quot;discretization_method&quot;,&quot;PWLC&quot;)</div>
 <div class="line"><a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#ga4dac22bb244e99b51882ab8d1640efac">chiSolverSetBasicOption</a>(phys1,&quot;residual_tolerance&quot;,1.0e-6)</div>
-<div class="ttc" id="agroup___lua_solver_html_ga2470af5f6becc5dea0121c565dfbbb26"><div class="ttname"><a href="../../dc/d4e/group___lua_solver.html#ga2470af5f6becc5dea0121c565dfbbb26">chi_lua::chiSolverAddRegion</a></div><div class="ttdeci">int chiSolverAddRegion(int solver_handle, int region_handle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01134">lua_functions.c:1134</a></div></div>
-<div class="ttc" id="agroup___lua_solver_html_ga4dac22bb244e99b51882ab8d1640efac"><div class="ttname"><a href="../../dc/d4e/group___lua_solver.html#ga4dac22bb244e99b51882ab8d1640efac">chi_lua::chiSolverSetBasicOption</a></div><div class="ttdeci">int chiSolverSetBasicOption(int solver_handle, string option_name, varying option_value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01154">lua_functions.c:1154</a></div></div>
-<div class="ttc" id="anamespacechi__lua_html_ab1d05b1f49195f0dff6fdf547687d3a3"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#ab1d05b1f49195f0dff6fdf547687d3a3">chi_lua::chiDiffusionCreateSolver</a></div><div class="ttdeci">int chiDiffusionCreateSolver()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01525">lua_functions.c:1525</a></div></div>
-</div><!-- fragment --><p >We first create the diffusion solver with a call to <a class="el" href="../../d8/dd9/namespacechi__lua.html#ab1d05b1f49195f0dff6fdf547687d3a3">chiDiffusionCreateSolver()</a>. This creates the solver and pushes it onto the physics handler. The function returns the handle. We then add our mesh region to this solver using the function <a class="el" href="../../dc/d4e/group___lua_solver.html#ga2470af5f6becc5dea0121c565dfbbb26">chiSolverAddRegion()</a> which expects a handle to the reference solver followed by the handle to the relevant region.</p>
-<p >Next we can set numerous diffusion solver properties which can comprehensively viewed in its specific documentation (<a class="el" href="../../d8/dd9/namespacechi__lua.html#a8f7070ffcf4de1f2c4f74e1291c26e4c">chiDiffusionSetProperty()</a>).</p>
+<div class="ttc" id="agroup___lua_diffusion_html_gab1d05b1f49195f0dff6fdf547687d3a3"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#gab1d05b1f49195f0dff6fdf547687d3a3">chi_lua::chiDiffusionCreateSolver</a></div><div class="ttdeci">int chiDiffusionCreateSolver()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01401">lua_functions.c:1401</a></div></div>
+<div class="ttc" id="agroup___lua_solver_html_ga4dac22bb244e99b51882ab8d1640efac"><div class="ttname"><a href="../../dc/d4e/group___lua_solver.html#ga4dac22bb244e99b51882ab8d1640efac">chi_lua::chiSolverSetBasicOption</a></div><div class="ttdeci">int chiSolverSetBasicOption(int solver_handle, string option_name, varying option_value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01026">lua_functions.c:1026</a></div></div>
+</div><!-- fragment --><p >We first create the diffusion solver with a call to <a class="el" href="../../de/d15/group___lua_diffusion.html#gab1d05b1f49195f0dff6fdf547687d3a3">chiDiffusionCreateSolver()</a>. This creates the solver and pushes it onto the physics handler. The function returns the handle.</p>
+<p >Next we can set numerous diffusion solver properties which can comprehensively be viewed in its specific documentation (<a class="el" href="../../de/d15/group___lua_diffusion.html#ga8f7070ffcf4de1f2c4f74e1291c26e4c">chiDiffusionSetProperty()</a>).</p>
 <h2>Step 7 - Initialize and Solve</h2>
 <p >The final step of this process is to initialize and execute the diffusion solver.</p>
-<div class="fragment"><div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ac15363c48408c09e0cd6e86e228b2d4c">chiDiffusionInitialize</a>(phys1)</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ac1664475091499ba78ac2dea8f1ec81f">chiDiffusionExecute</a>(phys1)</div>
-<div class="ttc" id="anamespacechi__lua_html_ac15363c48408c09e0cd6e86e228b2d4c"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#ac15363c48408c09e0cd6e86e228b2d4c">chi_lua::chiDiffusionInitialize</a></div><div class="ttdeci">int chiDiffusionInitialize(int SolverHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01533">lua_functions.c:1533</a></div></div>
-<div class="ttc" id="anamespacechi__lua_html_ac1664475091499ba78ac2dea8f1ec81f"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#ac1664475091499ba78ac2dea8f1ec81f">chi_lua::chiDiffusionExecute</a></div><div class="ttdeci">int chiDiffusionExecute(int SolverHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01541">lua_functions.c:1541</a></div></div>
+<div class="fragment"><div class="line"><a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#gac15363c48408c09e0cd6e86e228b2d4c">chiDiffusionInitialize</a>(phys1)</div>
+<div class="line"><a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#gac1664475091499ba78ac2dea8f1ec81f">chiDiffusionExecute</a>(phys1)</div>
+<div class="ttc" id="agroup___lua_diffusion_html_gac15363c48408c09e0cd6e86e228b2d4c"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#gac15363c48408c09e0cd6e86e228b2d4c">chi_lua::chiDiffusionInitialize</a></div><div class="ttdeci">int chiDiffusionInitialize(int SolverHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01409">lua_functions.c:1409</a></div></div>
+<div class="ttc" id="agroup___lua_diffusion_html_gac1664475091499ba78ac2dea8f1ec81f"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#gac1664475091499ba78ac2dea8f1ec81f">chi_lua::chiDiffusionExecute</a></div><div class="ttdeci">int chiDiffusionExecute(int SolverHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01417">lua_functions.c:1417</a></div></div>
 </div><!-- fragment --><h2>Step 8 - Post-processing</h2>
 <p >The execution of a Chi-Tech physics module culminates in the creation of one or more field functions. These field functions should all be populated for use during the initialization phase of the solver. Users can get handles to all the field functions by using the chiGetFieldFunctionList call. Thereafter, the field function can be exported to VTK-format which can be read by Paraview.</p>
 <div class="fragment"><div class="line">fflist,count = <a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#gaf3fbc3547e1829103d1f4d13ee759657">chiGetFieldFunctionList</a>(phys1)</div>
 <div class="line"><a class="code hl_function" href="../../db/d1e/group___lua_field_func.html#gac7a71f71da70bbba70d0270322eef322">chiExportFieldFunctionToVTK</a>(fflist[1],<span class="stringliteral">&quot;Tutorial1Output&quot;</span>,<span class="stringliteral">&quot;Temperature&quot;</span>)</div>
-<div class="ttc" id="agroup___lua_field_func_html_gac7a71f71da70bbba70d0270322eef322"><div class="ttname"><a href="../../db/d1e/group___lua_field_func.html#gac7a71f71da70bbba70d0270322eef322">chi_lua::chiExportFieldFunctionToVTK</a></div><div class="ttdeci">int chiExportFieldFunctionToVTK(int FFHandle, char BaseName)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01305">lua_functions.c:1305</a></div></div>
-<div class="ttc" id="agroup___lua_solver_html_gaf3fbc3547e1829103d1f4d13ee759657"><div class="ttname"><a href="../../dc/d4e/group___lua_solver.html#gaf3fbc3547e1829103d1f4d13ee759657">chi_lua::chiGetFieldFunctionList</a></div><div class="ttdeci">int chiGetFieldFunctionList(int SolverHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01326">lua_functions.c:1326</a></div></div>
+<div class="ttc" id="agroup___lua_field_func_html_gac7a71f71da70bbba70d0270322eef322"><div class="ttname"><a href="../../db/d1e/group___lua_field_func.html#gac7a71f71da70bbba70d0270322eef322">chi_lua::chiExportFieldFunctionToVTK</a></div><div class="ttdeci">int chiExportFieldFunctionToVTK(int FFHandle, char BaseName)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01179">lua_functions.c:1179</a></div></div>
+<div class="ttc" id="agroup___lua_solver_html_gaf3fbc3547e1829103d1f4d13ee759657"><div class="ttname"><a href="../../dc/d4e/group___lua_solver.html#gaf3fbc3547e1829103d1f4d13ee759657">chi_lua::chiGetFieldFunctionList</a></div><div class="ttdeci">int chiGetFieldFunctionList(int SolverHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01200">lua_functions.c:1200</a></div></div>
 </div><!-- fragment --><h2>Complete input file</h2>
 <p >Here is the complete input file with comments</p>
 <div class="fragment"><div class="line">--############################################### Setup mesh</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div>
+<div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div>
 <div class="line"> </div>
 <div class="line">nodes={}</div>
 <div class="line">N=32</div>
 <div class="line">ds=2.0/N</div>
-<div class="line"><span class="keywordflow">for</span> <a class="code hl_variable" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>=0,N <span class="keywordflow">do</span></div>
-<div class="line">    nodes[<a class="code hl_variable" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>+1] = -1.0 + <a class="code hl_variable" href="../../d8/d65/namespace_z_compile_and_run.html#a1963b0f3bba220d2ecfb343694cab7c8">i</a>*ds</div>
-<div class="line"><a class="code hl_variable" href="../../d8/d65/namespace_z_compile_and_run.html#a77363b7e6cc91ab46a7379a6be8a31d0">end</a></div>
-<div class="line">surf_mesh,region1 = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ac14a6525f45469604de4c23af08ca6fc">chiMeshCreateUnpartitioned3DOrthoMesh</a>(nodes,nodes,nodes)</div>
+<div class="line"><span class="keywordflow">for</span> i=0,N <span class="keywordflow">do</span></div>
+<div class="line">    nodes[i+1] = -1.0 + i*ds</div>
+<div class="line">end</div>
+<div class="line">surf_mesh,region1 = <a class="code hl_function" href="../../d9/db8/group___lua_mesh_macros.html#gac14a6525f45469604de4c23af08ca6fc">chiMeshCreateUnpartitioned3DOrthoMesh</a>(nodes,nodes,nodes)</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a2cbae637b293223c824105bf422c0ab8">chiVolumeMesherExecute</a>();</div>
+<div class="line"><a class="code hl_function" href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chiVolumeMesherExecute</a>();</div>
 <div class="line"> </div>
-<div class="line">material = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a8c9e57e5b4e662f31710a8039455a50e">chiPhysicsAddMaterial</a>(<span class="stringliteral">&quot;Test Material&quot;</span>);</div>
+<div class="line">material = <a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#ga8c9e57e5b4e662f31710a8039455a50e">chiPhysicsAddMaterial</a>(<span class="stringliteral">&quot;Test Material&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">-- Set Material IDs</div>
-<div class="line">vol0 = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a5ecdd09775b38d1aa8cbfa4322a6ae0c">chiLogicalVolumeCreate</a>(<a class="code hl_define" href="../../d9/df5/chi__mesh__logicalvolume_8h.html#ab27b91d4128c63b2fa1ff9d4c7f179a5">RPP</a>,-1000,1000,-1000,1000,-1000,1000)</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a52aada794be1a72c2c5efb8a442e9e1f">chiVolumeMesherSetProperty</a>(<a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803">MATID_FROMLOGICAL</a>,vol0,material)</div>
+<div class="line">vol0 = <a class="code hl_function" href="../../d9/d32/group___lua_logic_volumes.html#ga5ecdd09775b38d1aa8cbfa4322a6ae0c">chiLogicalVolumeCreate</a>(<a class="code hl_define" href="../../d9/df5/chi__mesh__logicalvolume_8h.html#ab27b91d4128c63b2fa1ff9d4c7f179a5">RPP</a>,-1000,1000,-1000,1000,-1000,1000)</div>
+<div class="line"><a class="code hl_function" href="../../d4/d3a/group___lua_volume_mesher.html#ga52aada794be1a72c2c5efb8a442e9e1f">chiVolumeMesherSetProperty</a>(<a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803">MATID_FROMLOGICAL</a>,vol0,material)</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a82a0a331649e3a6083a9c3e0436cfbe5">chiRegionExportMeshToVTK</a>(region1,&quot;Mesh&quot;)</div>
+<div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga12f7ef34f0474a9f2d579decd8e5af41">chiMeshHandlerExportMeshToVTK</a>(&quot;Mesh&quot;)</div>
 <div class="line">--<span class="preprocessor">############################################### Add material properties</span></div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">-- Set material properties</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ab090ff17a8c3788f88574c481edd15f8">chiPhysicsMaterialAddProperty</a>(material,SCALAR_VALUE,<span class="stringliteral">&quot;k&quot;</span>)</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a18f1ed6d994830d877ef3051fd540e57">chiPhysicsMaterialSetProperty</a>(material,&quot;k&quot;,SINGLE_VALUE,1.0)</div>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gab090ff17a8c3788f88574c481edd15f8">chiPhysicsMaterialAddProperty</a>(material,SCALAR_VALUE,<span class="stringliteral">&quot;k&quot;</span>)</div>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#ga18f1ed6d994830d877ef3051fd540e57">chiPhysicsMaterialSetProperty</a>(material,&quot;k&quot;,SINGLE_VALUE,1.0)</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ab090ff17a8c3788f88574c481edd15f8">chiPhysicsMaterialAddProperty</a>(material,SCALAR_VALUE,&quot;q&quot;)</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a18f1ed6d994830d877ef3051fd540e57">chiPhysicsMaterialSetProperty</a>(material,&quot;q&quot;,SINGLE_VALUE,1.0)</div>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gab090ff17a8c3788f88574c481edd15f8">chiPhysicsMaterialAddProperty</a>(material,SCALAR_VALUE,&quot;q&quot;)</div>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#ga18f1ed6d994830d877ef3051fd540e57">chiPhysicsMaterialSetProperty</a>(material,&quot;q&quot;,SINGLE_VALUE,1.0)</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">--<span class="preprocessor">############################################### Setup Physics</span></div>
-<div class="line">phys1 = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ab1d05b1f49195f0dff6fdf547687d3a3">chiDiffusionCreateSolver</a>();</div>
-<div class="line"><a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#ga2470af5f6becc5dea0121c565dfbbb26">chiSolverAddRegion</a>(phys1,region1)</div>
-<div class="line"><a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#ga4dac22bb244e99b51882ab8d1640efac">chiSolverSetBasicOption</a>(phys1,<span class="stringliteral">&quot;discretization_method&quot;</span>,<span class="stringliteral">&quot;PWLC&quot;</span>);</div>
-<div class="line"><a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#ga4dac22bb244e99b51882ab8d1640efac">chiSolverSetBasicOption</a>(phys1,<span class="stringliteral">&quot;residual_tolerance&quot;</span>,1.0e-6)</div>
+<div class="line">phys1 = <a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#gab1d05b1f49195f0dff6fdf547687d3a3">chiDiffusionCreateSolver</a>()</div>
+<div class="line"><a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#ga4dac22bb244e99b51882ab8d1640efac">chiSolverSetBasicOption</a>(phys1,&quot;discretization_method&quot;,&quot;PWLC&quot;);</div>
+<div class="line"><a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#ga4dac22bb244e99b51882ab8d1640efac">chiSolverSetBasicOption</a>(phys1,&quot;residual_tolerance&quot;,1.0e-6)</div>
 <div class="line"> </div>
-<div class="line">--############################################### Initialize and</div>
+<div class="line">--<span class="preprocessor">############################################### Initialize and</span></div>
 <div class="line">--                                                Execute Solver</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ac15363c48408c09e0cd6e86e228b2d4c">chiDiffusionInitialize</a>(phys1)</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#ac1664475091499ba78ac2dea8f1ec81f">chiDiffusionExecute</a>(phys1)</div>
+<div class="line"><a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#gac15363c48408c09e0cd6e86e228b2d4c">chiDiffusionInitialize</a>(phys1)</div>
+<div class="line"><a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#gac1664475091499ba78ac2dea8f1ec81f">chiDiffusionExecute</a>(phys1)</div>
 <div class="line"> </div>
 <div class="line">----############################################### Visualize the field function</div>
 <div class="line">fflist,count = <a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#gaf3fbc3547e1829103d1f4d13ee759657">chiGetFieldFunctionList</a>(phys1)</div>
 <div class="line"><a class="code hl_function" href="../../db/d1e/group___lua_field_func.html#gac7a71f71da70bbba70d0270322eef322">chiExportFieldFunctionToVTK</a>(fflist[1],<span class="stringliteral">&quot;Tutorial1Output&quot;</span>,<span class="stringliteral">&quot;Temperature&quot;</span>)</div>
-<div class="ttc" id="anamespacechi__lua_html_a82a0a331649e3a6083a9c3e0436cfbe5"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a82a0a331649e3a6083a9c3e0436cfbe5">chi_lua::chiRegionExportMeshToVTK</a></div><div class="ttdeci">int chiRegionExportMeshToVTK(int RegionHandle, char FileName)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00524">lua_functions.c:524</a></div></div>
+<div class="ttc" id="agroup___lua_mesh_handler_html_ga12f7ef34f0474a9f2d579decd8e5af41"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga12f7ef34f0474a9f2d579decd8e5af41">chi_lua::chiMeshHandlerExportMeshToVTK</a></div><div class="ttdeci">int chiMeshHandlerExportMeshToVTK(char FileName)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00344">lua_functions.c:344</a></div></div>
 </div><!-- fragment --><h2>Step 9 - Execute the code</h2>
 <p >Assuming you added the executable to your PATH environment variable, the code can be executed by typing the executable name followed by the input file path (relative or absolute).</p>
 <pre class="fragment">ChiTech Tutorial01.lua
 </pre><p >The output produced will look as follows:</p>
 <pre class="fragment">[0]  Parsing argument 1 Tutorials/Tutorial01.lua
-[0]  2022-01-26 16:35:03 Running ChiTech in batch-mode with 1 processes.
+[0]  2022-05-09 14:01:21 Running ChiTech in batch-mode with 1 processes.
 [0]  ChiTech number of arguments supplied: 1
 [0]  Computing cell-centroids.
 [0]  Done computing cell-centroids.
@@ -235,78 +233,78 @@ Figure 1 - Mesh spanning from [-1,-1,-1] to [1,1,1]</div></div>
 [0]  00:00:00 Surpassing cell 16384 of 32768 (50%)
 [0]  00:00:00 Surpassing cell 19661 of 32768 (60%)
 [0]  00:00:00 Surpassing cell 22938 of 32768 (70%)
-[0]  00:00:01 Surpassing cell 26215 of 32768 (80%)
-[0]  00:00:01 Surpassing cell 29492 of 32768 (90%)
-[0]  00:00:01 Surpassing cell 32768 of 32768 (100%)
-[0]  00:00:01 Establishing cell boundary connectivity.
-[0]  00:00:01 Done establishing cell connectivity.
-[0]  00:00:01 VolumeMesherPredefinedUnpartitioned executing. Memory in use = 58.4766 MB
+[0]  00:00:00 Surpassing cell 26215 of 32768 (80%)
+[0]  00:00:00 Surpassing cell 29492 of 32768 (90%)
+[0]  00:00:00 Surpassing cell 32768 of 32768 (100%)
+[0]  00:00:00 Establishing cell boundary connectivity.
+[0]  00:00:00 Done establishing cell connectivity.
+[0]  00:00:00 VolumeMesherPredefinedUnpartitioned executing. Memory in use = 61 MB
 [0]  Computed centroids
 [0]  Partitioning mesh with ParMETIS.
 [0]  Done partitioning mesh.
 [0]  Cells loaded.
 [0]  VolumeMesherPredefinedUnpartitioned: Cells created = 32768
-[0]  00:00:01 chiVolumeMesherExecute: Volume meshing completed. Memory used = 42.9 MB
-[0]  Total process memory used after meshing 101 MB
-[0]  00:00:01 Setting material id from logical volume.
-[0]  00:00:01 Done setting material id from logical volume. Number of cells modified = 32768.
+[0]  00:00:00 chiVolumeMesherExecute: Volume meshing completed. Memory used = 43.5 MB
+[0]  Total process memory used after meshing 104 MB
+[0]  00:00:00 Setting material id from logical volume.
+[0]  00:00:00 Done setting material id from logical volume. Number of cells modified = 32768.
 [0]  Exporting mesh to VTK. 32768
 [0]  Done exporting mesh to VTK.
 [0]  Solver:DiffusionSolver option:discretization_method set to PWLC.
 [0]  Solver:DiffusionSolver option:residual_tolerance set to 1e-06.
 [0]
-[0]  00:00:01 DiffusionSolver: Initializing Diffusion solver
+[0]  00:00:00 DiffusionSolver: Initializing Diffusion solver
 [0]  Identifying unique boundary-ids.
 [0]  Max boundary id identified: 0
-[0]  00:00:01 Creating Piecewise Linear Continuous Finite Element spatial discretizaiton.
-[0]  00:00:18 Developing nodal ordering.
-[0]  00:00:18 Done creating Piecewise Linear Continuous Finite Element spatial discretizaiton.
+[0]  00:00:00 Creating Piecewise Linear Continuous Finite Element spatial discretizaiton.
+[0]  00:00:08 Developing nodal ordering.
+[0]  00:00:08 Done creating Piecewise Linear Continuous Finite Element spatial discretizaiton.
 [0]  DiffusionSolver: Global number of DOFs=35937
 [0]  Building sparsity pattern.
-[0]  00:00:21 DiffusionSolver: Diffusion Solver initialization time 19.1648
+[0]  00:00:09 DiffusionSolver: Diffusion Solver initialization time 8.76791
 [0]  Setting matrix preallocation.
-[0]  00:00:21 DiffusionSolver: Assembling A locally
-[0]  00:00:21 DiffusionSolver: Done Assembling A locally
-[0]  00:00:21 DiffusionSolver: Communicating matrix assembly
-[0]  00:00:21 DiffusionSolver: Assembling A globally
-[0]  00:00:21 DiffusionSolver: Diagonal check
+[0]  00:00:09 DiffusionSolver: Assembling A locally
+[0]  00:00:09 DiffusionSolver: Done Assembling A locally
+[0]  00:00:09 DiffusionSolver: Communicating matrix assembly
+[0]  00:00:09 DiffusionSolver: Assembling A globally
+[0]  00:00:09 DiffusionSolver: Diagonal check
 [0]  Number of mallocs used = 0
 [0]  Number of non-zeros allocated = 912673
 [0]  Number of non-zeros used = 759717
 [0]  Number of unneeded non-zeros = 152956
-[0]  00:00:21 DiffusionSolver: Assembling x and b
-[0]  00:00:21 DiffusionSolver: Solving system
-[0]  Diffusion iteration    0 - Residual 2.6521943e+02
-[0]  Iteration 0 Residual 265.219
-[0]  Diffusion iteration    1 - Residual 3.1006358e+01
-[0]  Iteration 1 Residual 31.0064
-[0]  Diffusion iteration    2 - Residual 4.0467778e+00
-[0]  Iteration 2 Residual 4.04678
-[0]  Diffusion iteration    3 - Residual 4.9168053e-01
-[0]  Iteration 3 Residual 0.491681
-[0]  Diffusion iteration    4 - Residual 5.5399515e-02
+[0]  00:00:09 DiffusionSolver: Assembling x and b
+[0]  00:00:09 DiffusionSolver: Solving system
+[0]  Diffusion iteration    0 - Residual 2.6521952e+02
+[0]  Iteration 0 Residual 265.22
+[0]  Diffusion iteration    1 - Residual 3.1006314e+01
+[0]  Iteration 1 Residual 31.0063
+[0]  Diffusion iteration    2 - Residual 4.0467718e+00
+[0]  Iteration 2 Residual 4.04677
+[0]  Diffusion iteration    3 - Residual 4.9168004e-01
+[0]  Iteration 3 Residual 0.49168
+[0]  Diffusion iteration    4 - Residual 5.5399485e-02
 [0]  Iteration 4 Residual 0.0553995
-[0]  Diffusion iteration    5 - Residual 7.3127782e-03
-[0]  Iteration 5 Residual 0.00731278
-[0]  Diffusion iteration    6 - Residual 1.3609942e-03
-[0]  Iteration 6 Residual 0.00136099
-[0]  Diffusion iteration    7 - Residual 1.7105417e-04
+[0]  Diffusion iteration    5 - Residual 7.3128018e-03
+[0]  Iteration 5 Residual 0.0073128
+[0]  Diffusion iteration    6 - Residual 1.3610040e-03
+[0]  Iteration 6 Residual 0.001361
+[0]  Diffusion iteration    7 - Residual 1.7105415e-04
 [0]  Iteration 7 Residual 0.000171054
-[0]  Diffusion iteration    8 - Residual 2.2641466e-05
-[0]  Iteration 8 Residual 2.26415e-05
-[0]  Diffusion iteration    9 - Residual 3.3728384e-06
-[0]  Iteration 9 Residual 3.37284e-06
-[0]  Diffusion iteration   10 - Residual 3.1009691e-07
-[0]  Iteration 10 Residual 3.10097e-07
+[0]  Diffusion iteration    8 - Residual 2.2641339e-05
+[0]  Iteration 8 Residual 2.26413e-05
+[0]  Diffusion iteration    9 - Residual 3.3728166e-06
+[0]  Iteration 9 Residual 3.37282e-06
+[0]  Diffusion iteration   10 - Residual 3.1009104e-07
+[0]  Iteration 10 Residual 3.10091e-07
 [0]  Convergence reason: KSP_CONVERGED_RTOL
-[0]  00:00:21 DiffusionSolver[g=0-0]: Number of iterations =10
+[0]  00:00:09 DiffusionSolver[g=0-0]: Number of iterations =10
 [0]  Timing:
-[0]  Assembling the matrix: 0.231278
-[0]  Solving the system   : 0.221738
+[0]  Assembling the matrix: 0.085187
+[0]  Solving the system   : 0.075084
 [0]  Diffusion Solver execution completed!
 [0]  Exporting field function phi to files with base name Tutorial1Output
-[0]  Final program time 00:00:23
-[0]  2022-01-26 16:35:27 ChiTech finished execution of Tutorials/Tutorial01.lua
+[0]  Final program time 00:00:10
+[0]  2022-05-09 14:01:32 ChiTech finished execution of Tutorials/Tutorial01.lua
 </pre><div class="image">
 <img src="../../CubeSolutionTut1.png" alt="" width="700px"/>
 <div class="caption">

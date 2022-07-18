@@ -10,7 +10,7 @@ var searchData=
   ['xi_5fjpart_7',['xi_Jpart',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#aa3da299e7c6e80a6b87a7d12735fdc5d',1,'chi_physics::TransportCrossSections']]],
   ['xmax_8',['xmax',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#a80662af2bb204647a1656cdca727eb78',1,'chi_mesh::RPPLogicalVolume::xmax()'],['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#ad6e82a41929aa8b13c21ea88f9ad8c8e',1,'chi_mesh::UnpartitionedMesh::BoundBox::xmax()']]],
   ['xmin_9',['xmin',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#af0e11f3acf780a7290ce6be1f8e5fafa',1,'chi_mesh::RPPLogicalVolume::xmin()'],['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#a5c016b281fc6d0377409c96624f12d8a',1,'chi_mesh::UnpartitionedMesh::BoundBox::xmin()']]],
-  ['xn_5fwn_10',['xn_wn',['../d5/d5e/class_golub_fischer.html#a4f4e9eede67964c8cd810aa3c5ba92a4',1,'GolubFischer']]],
+  ['xn_5fwn_10',['xn_wn',['../d7/d89/classchi__math_1_1_golub_fischer.html#a40d3b77367656402db1c389a3a933e36',1,'chi_math::GolubFischer']]],
   ['xs_11',['xs',['../d4/d32/classlbs_1_1_cell_l_b_s_view.html#a81266b375909effed5034dd44160f8b2',1,'lbs::CellLBSView']]],
   ['xsections_12',['xsections',['../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a2e86046b633ba55b36d36e10d08ca9ab',1,'lbs::SweepChunkPWL']]]
 ];

@@ -1,6 +1,6 @@
 var classchi__mesh_1_1sweep__management_1_1_sweep_buffer =
 [
-    [ "SweepBuffer", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#a6d4c3d6a94c4a7551fca8db018652dc8", null ],
+    [ "SweepBuffer", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#afcef25024a1b61c27c5f5bb64a72d2de", null ],
     [ "BuildMessageStructure", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#aef1a05ad5170f195fda268d0edbc2bdf", null ],
     [ "ClearDownstreamBuffers", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#aa65a1594e4e24090ca7760b6c6994098", null ],
     [ "ClearLocalAndReceiveBuffers", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#adf21f67f1ca12797a85554b12970422d", null ],
@@ -12,7 +12,7 @@ var classchi__mesh_1_1sweep__management_1_1_sweep_buffer =
     [ "Reset", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#a1ad968f813f749476796b3c12d38ed1f", null ],
     [ "SendDownstreamPsi", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#a46a22d14867ee9645c362724d8634fd7", null ],
     [ "angleset", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#a8ab754690ddf776c808a8047cb90adf2", null ],
-    [ "comm_set", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#afc0e55ae683c8adffcc285f1f8852db6", null ],
+    [ "comm_set", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#a4ddc1302eb3cedebf9da84dbcd52883d", null ],
     [ "data_initialized", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#aac0beced1feaa9b557cb40610d5d740b", null ],
     [ "delayed_prelocI_message_available", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#aee57e6122f76be53d07cfd1654754293", null ],
     [ "delayed_prelocI_message_blockpos", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#abeee8c7f9fe67ae798d7434ab363447e", null ],

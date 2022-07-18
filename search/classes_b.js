@@ -5,5 +5,6 @@ var searchData=
   ['matrix3x3_2',['Matrix3x3',['../d0/dec/structchi__mesh_1_1_matrix3x3.html',1,'chi_mesh']]],
   ['meshcontinuum_3',['MeshContinuum',['../d3/d1c/classchi__mesh_1_1_mesh_continuum.html',1,'chi_mesh']]],
   ['meshhandler_4',['MeshHandler',['../d2/d10/classchi__mesh_1_1_mesh_handler.html',1,'chi_mesh']]],
-  ['meshlayer_5',['MeshLayer',['../d8/d95/structchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer.html',1,'chi_mesh::VolumeMesherExtruder']]]
+  ['meshlayer_5',['MeshLayer',['../d8/d95/structchi__mesh_1_1_volume_mesher_extruder_1_1_mesh_layer.html',1,'chi_mesh::VolumeMesherExtruder']]],
+  ['mpi_5finfo_6',['MPI_Info',['../d2/d8e/classchi__objects_1_1_m_p_i___info.html',1,'chi_objects']]]
 ];

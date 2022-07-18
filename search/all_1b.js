@@ -18,7 +18,7 @@ var searchData=
   ['_7eprimary_5ffluds_15',['~PRIMARY_FLUDS',['../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a9d6ee1edc4f7cb0877ae7cfbc696efe7',1,'chi_mesh::sweep_management::PRIMARY_FLUDS']]],
   ['_7eproductquadrature_16',['~ProductQuadrature',['../d5/df7/classchi__math_1_1_product_quadrature.html#a56d9745d959279adced6cb5fb61e51d6',1,'chi_math::ProductQuadrature']]],
   ['_7equadrature_17',['~Quadrature',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#af1ce444c8f95a1651155db6e1dcd5173',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],
-  ['_7esolver_18',['~Solver',['../d9/d3a/classchi__physics_1_1_solver.html#a6ad4b37d7da845300fb6c80d11fa1b3b',1,'chi_physics::Solver::~Solver()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a2de514bc22f33a4f896f9e2a94a6602c',1,'chi_diffusion::Solver::~Solver()']]],
+  ['_7esolver_18',['~Solver',['../d9/d3a/classchi__physics_1_1_solver.html#a854f173a318a412fccc6cc09414c615b',1,'chi_physics::Solver::~Solver()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a2de514bc22f33a4f896f9e2a94a6602c',1,'chi_diffusion::Solver::~Solver()']]],
   ['_7espatialdiscretization_5ffe_19',['~SpatialDiscretization_FE',['../d2/d19/class_spatial_discretization___f_e.html#a2313de9f68fc74713421fc33b75b3dd8',1,'SpatialDiscretization_FE']]],
   ['_7espatialdiscretization_5ffv_20',['~SpatialDiscretization_FV',['../d1/d09/class_spatial_discretization___f_v.html#a9405f21f0257655800beb6422703597a',1,'SpatialDiscretization_FV']]],
   ['_7esphericalangularquadrature_21',['~SphericalAngularQuadrature',['../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#a4c55f84b26d77fb2a1668866fee5d8e4',1,'chi_math::SphericalAngularQuadrature']]],

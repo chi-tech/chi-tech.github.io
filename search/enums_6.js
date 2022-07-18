@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['log_5flvl_0',['LOG_LVL',['../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405',1,'chi_log.h']]]
+  ['log_5flvl_0',['LOG_LVL',['../d8/d42/classchi__objects_1_1_chi_log.html#ab2a54ede9e1dd90cf0ff2d415bf6bf86',1,'chi_objects::ChiLog']]]
 ];

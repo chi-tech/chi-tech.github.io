@@ -85,24 +85,67 @@ $(document).ready(function(){initNavTree('d3/db2/chi__runtime_8h.html','../../')
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle"><div class="title">chi_runtime.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 </div>
 <p><a href="../../d3/db2/chi__runtime_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d49/class_chi_tech.html">ChiTech</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html">chi</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classchi_1_1run__time.html">chi::run_time</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d39/classchi_1_1_recoverable_exception.html">chi::RecoverableException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:d0/d81/namespacechi__mesh"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d5f/namespacechi__physics"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html">chi_physics</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dc/d58/namespacechi__math"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html">chi_math</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d1/d96/namespacechi__objects"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d96/namespacechi__objects.html">chi_objects</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a23d926104939fae47ba5663103c28f2c"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; MeshHandler &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a23d926104939fae47ba5663103c28f2c">chi_mesh::MeshHandlerPtr</a></td></tr>
+<tr class="separator:a23d926104939fae47ba5663103c28f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89629945f407e6db4517fd160b5e08ad"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; SurfaceMesh &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a89629945f407e6db4517fd160b5e08ad">chi_mesh::SurfaceMeshPtr</a></td></tr>
+<tr class="separator:a89629945f407e6db4517fd160b5e08ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6aa3407e6f6990dacf9c53200c1aace"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; LogicalVolume &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#ad6aa3407e6f6990dacf9c53200c1aace">chi_mesh::LogicalVolumePtr</a></td></tr>
+<tr class="separator:ad6aa3407e6f6990dacf9c53200c1aace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a70ac114540ccc7733e4763ff1e919e"><td class="memItemLeft" align="right" valign="top">typedef FieldFunctionInterpolation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a2a70ac114540ccc7733e4763ff1e919e">chi_mesh::FFInterp</a></td></tr>
+<tr class="separator:a2a70ac114540ccc7733e4763ff1e919e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc6fd8aec715501e71d3968a0bd8511"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; FFInterp &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a6dc6fd8aec715501e71d3968a0bd8511">chi_mesh::FFInterpPtr</a></td></tr>
+<tr class="separator:a6dc6fd8aec715501e71d3968a0bd8511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c1d91b69650c8df55b84d492b31184d"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; UnpartitionedMesh &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a5c1d91b69650c8df55b84d492b31184d">chi_mesh::UnpartitionedMeshPtr</a></td></tr>
+<tr class="separator:a5c1d91b69650c8df55b84d492b31184d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b44afe46a5296e3e1fe075e850bc49"><td class="memItemLeft" align="right" valign="top">typedef UnpartitionedMeshPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#ad1b44afe46a5296e3e1fe075e850bc49">chi_mesh::UnpartMeshPtr</a></td></tr>
+<tr class="separator:ad1b44afe46a5296e3e1fe075e850bc49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b7a961a070e810475068b46eadcab3"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; Solver &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html#a32b7a961a070e810475068b46eadcab3">chi_physics::SolverPtr</a></td></tr>
+<tr class="separator:a32b7a961a070e810475068b46eadcab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6460275cc07ff17d5c0ccfab1c08a60"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; Material &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html#ab6460275cc07ff17d5c0ccfab1c08a60">chi_physics::MaterialPtr</a></td></tr>
+<tr class="separator:ab6460275cc07ff17d5c0ccfab1c08a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4db76ccf1ef83c491575c4e30043ef"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; TransportCrossSections &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html#afe4db76ccf1ef83c491575c4e30043ef">chi_physics::TransportCrossSectionsPtr</a></td></tr>
+<tr class="separator:afe4db76ccf1ef83c491575c4e30043ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3877c47a24c665e3b562a978ecbbb3fb"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; FieldFunction &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html#a3877c47a24c665e3b562a978ecbbb3fb">chi_physics::FieldFunctionPtr</a></td></tr>
+<tr class="separator:a3877c47a24c665e3b562a978ecbbb3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da7bd3ae9da4ef1a6d6a62d4f78c346"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; Quadrature &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a5da7bd3ae9da4ef1a6d6a62d4f78c346">chi_math::QuadraturePtr</a></td></tr>
+<tr class="separator:a5da7bd3ae9da4ef1a6d6a62d4f78c346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a637714681be11402efe6c55193c7af1f"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; AngularQuadrature &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a637714681be11402efe6c55193c7af1f">chi_math::AngularQuadraturePtr</a></td></tr>
+<tr class="separator:a637714681be11402efe6c55193c7af1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -42,7 +42,6 @@ var NAVTREE =
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", "namespacemembers_func" ],
-        [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ],
         [ "Enumerator", "namespacemembers_eval.html", null ]
@@ -65,12 +64,10 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
+        [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", "globals_vars" ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -80,33 +77,33 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d0/d81/namespacechi__mesh.html#ae37f3910d48ed058c907b8b3a92bb2b8",
-"d1/d59/classchi__mesh_1_1_vertex_handler.html",
-"d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a72a4f799b7a19f65a8873054f5a4270c",
-"d2/daf/unpartmesh__00b__connectivity_8cc.html#adc1b2db4f75dab650895a0e0ec8e748e",
-"d3/d82/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_f_u_n_c_t_i_o_n___w_e_i_g_h_t___f_r_o_m___r_h_o.html#a6b88be99a36aa8c6be2a0ac0d4199c74",
-"d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#a5bbe42971942d7c8ba2ec967f6164a9e",
-"d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html",
-"d5/d27/angular__quadrature__base_8h.html",
-"d5/d8e/structchi__math_1_1_vector_n_x.html",
-"d6/d0f/classchi__mesh_1_1_surface_mesher_delaunay.html#a4a1802c8dbc49b2fb2ba7638c2d95ece",
-"d6/ddd/volmesher__extruder__extrudecells_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869",
-"d7/d7d/class_l_b_s_groupset.html#ad9866e983f9dc72c5b2fa26942997e85",
-"d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a7022fab7daa11b4a908def7f824bc48c",
-"d8/db6/structchi__math_1_1_c_d_f_sampler_1_1_sub_intvl.html#a1422b3641a9f9eec1bfcf41c0258be58",
-"d9/d05/classlbs_1_1_steady_solver.html#a23a06ad826b20af91240726c38a37126",
-"d9/d2b/initcommon_8cc.html",
-"d9/dc3/lbs__structs_8h.html#af80cef3c8aeb4f3e39ef1e18cb27fd83a3cf25083f927aea9baf2e7129bfb694d",
-"da/d1e/lua__namespace_8hpp.html#ad1c15a3979a4c43dacdc6abcf7563680",
-"db/d08/classchi__math_1_1_dynamic_vector.html#a6b675fcfa71921c787aa74b1b9f37647",
-"db/dd5/classchi__mesh_1_1_field_function_interpolation_volume.html#a87070a8f7d0375f18803d1d5b4efa3ee",
-"dc/d4c/_dev_man_adding_code.html#devman0_sec0",
-"dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a7750261d365abb9a377700a84191f8fa",
-"dd/d43/classchi__mesh_1_1_surface_mesh.html#aa95d3703c8670b078bd04360e2809779",
-"de/d0d/classchi__math_1_1finite__element_1_1_unit_integral_data.html#a74f68dc53347e41ee31755d06eb1e69b",
-"de/dca/unpartmesh__00a__general_8cc_source.html",
-"df/d7e/classchi__mesh_1_1_surface_mesher.html#a472607a99fccb222ab4df25e535e9854",
-"dir_f29294c8fe1fca6da72707e3b4bd3aee.html"
+"d0/dc4/classchi__objects_1_1_chi_console.html#a23011bcdddf5bb5a1dbac8833320a695",
+"d1/d85/lbs__04a__restartdata_8cc_source.html",
+"d2/d10/classchi__mesh_1_1_mesh_handler.html#a9e9e128ed2305364dfb94ccc40b0e86f",
+"d2/db6/classlbs_1_1_l_b_s_groupset.html#ad57ae4628ad60372d0caddb94b10b8e7",
+"d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#ad6e82a41929aa8b13c21ea88f9ad8c8e",
+"d3/dd3/chi__runtime_8cc_source.html",
+"d4/d17/classchi__math_1_1_quadrature_jacobi.html#aeba48f0a3c6a7937b514e85050e6cfc0",
+"d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#a4d4a7a4a9e7926a3064b89039afdc290",
+"d5/d3e/classchi__math_1_1_spatial_discretization___f_e.html#a64a555fdb9678a0d18de556fe6941294",
+"d5/d8e/structchi__math_1_1_vector_n_x.html#aaec3653705327f7a74bed3f9fccb2c99",
+"d6/d32/classchi__diffusion_1_1_solver.html#a39b20d6160b3deabd69d10b64b18e21b",
+"d7/d1f/structchi__mesh_1_1sweep__management_1_1_face_nodal_mapping.html#a258c68b94a253f21b3b9ca0c114c4380",
+"d7/dec/group___lua_l_b_s__01.html",
+"d8/d42/classchi__objects_1_1_chi_log.html#a57cf1c0addaa9fd596ffa9d32ed86c15",
+"d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html",
+"d9/d05/classlbs_1_1_steady_solver.html#ab69ecf1119df3d9907514661805c85b1",
+"d9/d89/chi__math__03__vector__operations_8cc_source.html",
+"da/d21/structchi__math_1_1_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html#a477cb73659342df974001bb58d52ce49",
+"db/d08/classchi__math_1_1_dynamic_vector.html#ab240816cdd3120e58452750bd18ebb94",
+"dc/d15/classchi__graph_1_1_directed_graph.html#a8d05138b0cecf346e0e2756028b0c0c2",
+"dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9aa95046a5a7ec8e68c4e7bd9599150cac",
+"dc/dcd/structlbs_1_1_options.html#ae0846a733bafccd36b7f6c1f6c654c2a",
+"dd/d54/structchi__mesh_1_1_vector3.html#a935d1ac42afb2c461ead356db17f2139",
+"de/d15/group___lua_diffusion.html",
+"de/df0/classchi__mesh_1_1_volume_mesher.html#a2ee7c927497b8dd09805ef18893026fe",
+"df/d98/chi__meshhandler_8h.html",
+"functions_func_u.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

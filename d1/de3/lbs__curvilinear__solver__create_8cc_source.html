@@ -86,71 +86,67 @@ $(document).ready(function(){initNavTree('d1/de3/lbs__curvilinear__solver__creat
   <div class="headertitle"><div class="title">lbs_curvilinear_solver_create.cc</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;ChiLua/chi_lua.h&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/d54/chi__physics_8h.html">ChiPhysics/chi_physics.h</a>&quot;</span></div>
+<a href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;ChiLua/chi_lua.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/db1/lbs__curvilinear__solver_8h.html">LBSCurvilinear/lbs_curvilinear_solver.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/db1/lbs__curvilinear__solver_8h.html">LBSCurvilinear/lbs_curvilinear_solver.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">extern</span> <a class="code hl_class" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; <a class="code hl_variable" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">extern</span> <a class="code hl_class" href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a>&amp; <a class="code hl_variable" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"></span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/**Creates a Curvilinear Neutral Particle Transport solver.</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * \return SolverHandle int Handle to the solver created.</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * \code</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * //  cylindrical</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * phys1 = chiLBSCurvilinearCreateSolver(LBSCurvilinear.CYLINDRICAL)</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * //  spherical</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * phys1 = chiLBSCurvilinearCreateSolver(LBSCurvilinear.SPHERICAL)</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * \endcode</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a60cc14e51ef79d994e5b584f6f71337a">   22</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a60cc14e51ef79d994e5b584f6f71337a">chiLBSCurvilinearCreateSolver</a>(lua_State *L)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">const</span> std::string fname = __FUNCTION__;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordflow">if</span> ((num_args != 1) and (num_args != 2))</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    LuaPostArgAmountError(fname, 1, num_args);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  LuaCheckNilValue(fname, L, 1);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> coord_system = lua_tonumber(L, 1);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keyword">const</span> <span class="keyword">auto</span> coord_system_type =</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a><span class="keyword">&gt;</span>(coord_system);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <a class="code hl_variable" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a>.<a class="code hl_function" href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">Log</a>(<a class="code hl_enumvalue" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda">LOG_ALLVERBOSE_1</a>)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    &lt;&lt; <span class="stringliteral">&quot;Creating Curvilinear Linear Boltzman solver&quot;</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  std::string solver_name = <span class="stringliteral">&quot;LBCurvilinearSolver&quot;</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordflow">if</span> (num_args == 2)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    LuaCheckStringValue(fname, L, 2);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    solver_name = lua_tostring(L, 2);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keyword">const</span> <span class="keyword">auto</span> new_solver =</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d34/class_l_b_s_curvilinear_1_1_solver.html">LBSCurvilinear::Solver</a>(coord_system_type, solver_name);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_variable" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a>.<a class="code hl_variable" href="../../d8/d9a/class_chi_physics.html#a5eea4ecebd52f4289ed9edaab8936d37">solver_stack</a>.push_back(new_solver);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">const</span> <span class="keyword">auto</span> index = <a class="code hl_variable" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a>.<a class="code hl_variable" href="../../d8/d9a/class_chi_physics.html#a5eea4ecebd52f4289ed9edaab8936d37">solver_stack</a>.size() - 1;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  lua_pushinteger(L,<span class="keyword">static_cast&lt;</span>lua_Integer<span class="keyword">&gt;</span>(index));</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"></span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/**Creates a Curvilinear Neutral Particle Transport solver.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * \return SolverHandle int Handle to the solver created.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * \code</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * //  cylindrical</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * phys1 = chiLBSCurvilinearCreateSolver(LBSCurvilinear.CYLINDRICAL)</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * //  spherical</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * phys1 = chiLBSCurvilinearCreateSolver(LBSCurvilinear.SPHERICAL)</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * \endcode</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a60cc14e51ef79d994e5b584f6f71337a">   23</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a60cc14e51ef79d994e5b584f6f71337a">chiLBSCurvilinearCreateSolver</a>(lua_State *L)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">const</span> std::string fname = __FUNCTION__;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_args = lua_gettop(L);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordflow">if</span> ((num_args != 1) and (num_args != 2))</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    LuaPostArgAmountError(fname, 1, num_args);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  LuaCheckNilValue(fname, L, 1);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> coord_system = lua_tonumber(L, 1);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">const</span> <span class="keyword">auto</span> coord_system_type =</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a><span class="keyword">&gt;</span>(coord_system);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a2348d77cdba74d43bf1c9ed29389ef7e">LogAllVerbose1</a>()</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    &lt;&lt; <span class="stringliteral">&quot;Creating Curvilinear Linear Boltzman solver&quot;</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  std::string solver_name = <span class="stringliteral">&quot;LBCurvilinearSolver&quot;</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">if</span> (num_args == 2)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    LuaCheckStringValue(fname, L, 2);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    solver_name = lua_tostring(L, 2);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">auto</span> new_solver =</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    std::make_shared&lt;lbs_curvilinear::Solver&gt;(coord_system_type, solver_name);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#ac61de38bf878913b59c570995346052e">chi::solver_stack</a>.push_back(new_solver);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">const</span> <span class="keyword">auto</span> index = <a class="code hl_variable" href="../../d4/d35/classchi.html#ac61de38bf878913b59c570995346052e">chi::solver_stack</a>.size() - 1;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  lua_pushinteger(L,<span class="keyword">static_cast&lt;</span>lua_Integer<span class="keyword">&gt;</span>(index));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
-<div class="ttc" id="achi__log_8h_html_a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda">LOG_ALLVERBOSE_1</a></div><div class="ttdeci">@ LOG_ALLVERBOSE_1</div><div class="ttdoc">Used only if verbosity level equals 1.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00019">chi_log.h:19</a></div></div>
-<div class="ttc" id="achi__physics_8h_html"><div class="ttname"><a href="../../d8/d54/chi__physics_8h.html">chi_physics.h</a></div></div>
-<div class="ttc" id="aclass_chi_log_html"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html">ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00197">chi_log.h:198</a></div></div>
-<div class="ttc" id="aclass_chi_log_html_ac2d1869abb6b7dd125a89ea20b977dbc"><div class="ttname"><a href="../../d8/d1a/class_chi_log.html#ac2d1869abb6b7dd125a89ea20b977dbc">ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00028">chi_log.cc:28</a></div></div>
-<div class="ttc" id="aclass_chi_physics_html"><div class="ttname"><a href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d54/chi__physics_8h_source.html#l00014">chi_physics.h:15</a></div></div>
-<div class="ttc" id="aclass_chi_physics_html_a5eea4ecebd52f4289ed9edaab8936d37"><div class="ttname"><a href="../../d8/d9a/class_chi_physics.html#a5eea4ecebd52f4289ed9edaab8936d37">ChiPhysics::solver_stack</a></div><div class="ttdeci">std::vector&lt; chi_physics::Solver * &gt; solver_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d54/chi__physics_8h_source.html#l00020">chi_physics.h:20</a></div></div>
-<div class="ttc" id="aclass_l_b_s_curvilinear_1_1_solver_html"><div class="ttname"><a href="../../d9/d34/class_l_b_s_curvilinear_1_1_solver.html">LBSCurvilinear::Solver</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/db1/lbs__curvilinear__solver_8h_source.html#l00015">lbs_curvilinear_solver.h:16</a></div></div>
+<div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a2348d77cdba74d43bf1c9ed29389ef7e"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a2348d77cdba74d43bf1c9ed29389ef7e">chi_objects::ChiLog::LogAllVerbose1</a></div><div class="ttdeci">LogStream LogAllVerbose1()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00233">chi_log.h:233</a></div></div>
+<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
+<div class="ttc" id="aclasschi_html_ac61de38bf878913b59c570995346052e"><div class="ttname"><a href="../../d4/d35/classchi.html#ac61de38bf878913b59c570995346052e">chi::solver_stack</a></div><div class="ttdeci">static std::vector&lt; chi_physics::SolverPtr &gt; solver_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00080">chi_runtime.h:80</a></div></div>
 <div class="ttc" id="albs__curvilinear__solver_8h_html"><div class="ttname"><a href="../../da/db1/lbs__curvilinear__solver_8h.html">lbs_curvilinear_solver.h</a></div></div>
-<div class="ttc" id="albs__curvilinear__solver__create_8cc_html_a5307d1d2e96bfccf9876352dfa7d0869"><div class="ttname"><a href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></div><div class="ttdeci">ChiLog &amp; chi_log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">chi_runtime.cc:29</a></div></div>
-<div class="ttc" id="albs__curvilinear__solver__create_8cc_html_a60cc14e51ef79d994e5b584f6f71337a"><div class="ttname"><a href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a60cc14e51ef79d994e5b584f6f71337a">chiLBSCurvilinearCreateSolver</a></div><div class="ttdeci">int chiLBSCurvilinearCreateSolver(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de3/lbs__curvilinear__solver__create_8cc_source.html#l00022">lbs_curvilinear_solver_create.cc:22</a></div></div>
-<div class="ttc" id="albs__curvilinear__solver__create_8cc_html_a87694d946c53737d94052d065be89b53"><div class="ttname"><a href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a></div><div class="ttdeci">ChiPhysics &amp; chi_physics_handler</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00030">chi_runtime.cc:30</a></div></div>
-<div class="ttc" id="anamespacechi__math_html_afe9e3188029ef8b07daf8af16eabc6b1"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a></div><div class="ttdeci">CoordinateSystemType</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00050">chi_math.h:51</a></div></div>
+<div class="ttc" id="albs__curvilinear__solver__create_8cc_html_a60cc14e51ef79d994e5b584f6f71337a"><div class="ttname"><a href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a60cc14e51ef79d994e5b584f6f71337a">chiLBSCurvilinearCreateSolver</a></div><div class="ttdeci">int chiLBSCurvilinearCreateSolver(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de3/lbs__curvilinear__solver__create_8cc_source.html#l00023">lbs_curvilinear_solver_create.cc:23</a></div></div>
+<div class="ttc" id="anamespacechi__math_html_afe9e3188029ef8b07daf8af16eabc6b1"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a></div><div class="ttdeci">CoordinateSystemType</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00031">chi_math.h:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

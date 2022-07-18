@@ -3,6 +3,8 @@ var namespacelbs =
     [ "CellLBSView", "d4/d32/classlbs_1_1_cell_l_b_s_view.html", "d4/d32/classlbs_1_1_cell_l_b_s_view" ],
     [ "KEigenvalueSolver", "d7/d41/classlbs_1_1_k_eigenvalue_solver.html", "d7/d41/classlbs_1_1_k_eigenvalue_solver" ],
     [ "KSPDataContext", "d4/d4c/structlbs_1_1_k_s_p_data_context.html", "d4/d4c/structlbs_1_1_k_s_p_data_context" ],
+    [ "LBSGroup", "d5/d86/classlbs_1_1_l_b_s_group.html", "d5/d86/classlbs_1_1_l_b_s_group" ],
+    [ "LBSGroupset", "d2/db6/classlbs_1_1_l_b_s_groupset.html", "d2/db6/classlbs_1_1_l_b_s_groupset" ],
     [ "Options", "dc/dcd/structlbs_1_1_options.html", "dc/dcd/structlbs_1_1_options" ],
     [ "PointSource", "dc/d4f/classlbs_1_1_point_source.html", "dc/d4f/classlbs_1_1_point_source" ],
     [ "SteadySolver", "d9/d05/classlbs_1_1_steady_solver.html", "d9/d05/classlbs_1_1_steady_solver" ],

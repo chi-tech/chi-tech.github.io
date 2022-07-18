@@ -93,29 +93,30 @@ $(document).ready(function(){initNavTree('d4/d82/chi__physicsmaterial_8h_source.
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/dbd/material__property__base_8h.html">material_property_base.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/d5f/namespacechi__physics.html">chi_physics</a></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/** Base class for materials used in physics simulations.*/</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d8/da4/classchi__physics_1_1_material.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d8/da4/classchi__physics_1_1_material.html">Material</a></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d8/da4/classchi__physics_1_1_material.html#a17ebd1e48d0053230ec41897c26b2ba2">   17</a></span>  std::vector&lt;std::shared_ptr&lt;MaterialProperty&gt;&gt; <a class="code hl_variable" href="../../d8/da4/classchi__physics_1_1_material.html#a17ebd1e48d0053230ec41897c26b2ba2">properties</a>{};</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d8/da4/classchi__physics_1_1_material.html#a3ac7434990000927f4e1c881cde6be21">   18</a></span>  std::string <a class="code hl_variable" href="../../d8/da4/classchi__physics_1_1_material.html#a3ac7434990000927f4e1c881cde6be21">name</a>=<span class="stringliteral">&quot;Unnamed Material&quot;</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}<span class="comment">//namespace chi_physics</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/d5f/namespacechi__physics.html">chi_physics</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/** Base class for materials used in physics simulations.*/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d8/da4/classchi__physics_1_1_material.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d8/da4/classchi__physics_1_1_material.html">Material</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d8/da4/classchi__physics_1_1_material.html#a17ebd1e48d0053230ec41897c26b2ba2">   18</a></span>  std::vector&lt;std::shared_ptr&lt;MaterialProperty&gt;&gt; <a class="code hl_variable" href="../../d8/da4/classchi__physics_1_1_material.html#a17ebd1e48d0053230ec41897c26b2ba2">properties</a>{};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d8/da4/classchi__physics_1_1_material.html#a3ac7434990000927f4e1c881cde6be21">   19</a></span>  std::string <a class="code hl_variable" href="../../d8/da4/classchi__physics_1_1_material.html#a3ac7434990000927f4e1c881cde6be21">name</a>=<span class="stringliteral">&quot;Unnamed Material&quot;</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}<span class="comment">//namespace chi_physics</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="achi__physics__namespace_8h_html"><div class="ttname"><a href="../../d8/d40/chi__physics__namespace_8h.html">chi_physics_namespace.h</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_material_html"><div class="ttname"><a href="../../d8/da4/classchi__physics_1_1_material.html">chi_physics::Material</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d82/chi__physicsmaterial_8h_source.html#l00014">chi_physicsmaterial.h:15</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_material_html_a17ebd1e48d0053230ec41897c26b2ba2"><div class="ttname"><a href="../../d8/da4/classchi__physics_1_1_material.html#a17ebd1e48d0053230ec41897c26b2ba2">chi_physics::Material::properties</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; MaterialProperty &gt; &gt; properties</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d82/chi__physicsmaterial_8h_source.html#l00017">chi_physicsmaterial.h:17</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_material_html_a3ac7434990000927f4e1c881cde6be21"><div class="ttname"><a href="../../d8/da4/classchi__physics_1_1_material.html#a3ac7434990000927f4e1c881cde6be21">chi_physics::Material::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d82/chi__physicsmaterial_8h_source.html#l00018">chi_physicsmaterial.h:18</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_material_html"><div class="ttname"><a href="../../d8/da4/classchi__physics_1_1_material.html">chi_physics::Material</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d82/chi__physicsmaterial_8h_source.html#l00015">chi_physicsmaterial.h:16</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_material_html_a17ebd1e48d0053230ec41897c26b2ba2"><div class="ttname"><a href="../../d8/da4/classchi__physics_1_1_material.html#a17ebd1e48d0053230ec41897c26b2ba2">chi_physics::Material::properties</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; MaterialProperty &gt; &gt; properties</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d82/chi__physicsmaterial_8h_source.html#l00018">chi_physicsmaterial.h:18</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_material_html_a3ac7434990000927f4e1c881cde6be21"><div class="ttname"><a href="../../d8/da4/classchi__physics_1_1_material.html#a3ac7434990000927f4e1c881cde6be21">chi_physics::Material::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d82/chi__physicsmaterial_8h_source.html#l00019">chi_physicsmaterial.h:19</a></div></div>
 <div class="ttc" id="amaterial__property__base_8h_html"><div class="ttname"><a href="../../d8/dbd/material__property__base_8h.html">material_property_base.h</a></div></div>
-<div class="ttc" id="anamespacechi__physics_html"><div class="ttname"><a href="../../d6/d5f/namespacechi__physics.html">chi_physics</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d11/basic__options_8h_source.html#l00006">basic_options.h:7</a></div></div>
+<div class="ttc" id="anamespacechi__physics_html"><div class="ttname"><a href="../../d6/d5f/namespacechi__physics.html">chi_physics</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00030">chi_runtime.h:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

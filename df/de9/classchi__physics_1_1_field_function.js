@@ -1,7 +1,7 @@
 var classchi__physics_1_1_field_function =
 [
-    [ "FieldFunction", "df/de9/classchi__physics_1_1_field_function.html#afcd01504bb626f7dfebbfa657f1dd1cf", null ],
-    [ "FieldFunction", "df/de9/classchi__physics_1_1_field_function.html#a246ca6b784c1cc2cd3584bac5b5d0263", null ],
+    [ "FieldFunction", "df/de9/classchi__physics_1_1_field_function.html#a5062d5ec4ed68f1de7248e206c207b6e", null ],
+    [ "FieldFunction", "df/de9/classchi__physics_1_1_field_function.html#a2d85d55bfea716cdbd3fddc857db5de0", null ],
     [ "CreateCFEMMappingLocal", "df/de9/classchi__physics_1_1_field_function.html#a2a1cedd5eb6317477d5fa49eeaa6d3e0", null ],
     [ "CreateFVMappingLocal", "df/de9/classchi__physics_1_1_field_function.html#a7edab331752bd4902757b7c081851939", null ],
     [ "CreatePWLDMappingLocal", "df/de9/classchi__physics_1_1_field_function.html#ab578867f2d8953ad127821df7d06da51", null ],
@@ -18,7 +18,7 @@ var classchi__physics_1_1_field_function =
     [ "grid", "df/de9/classchi__physics_1_1_field_function.html#ac01efa055c239381c32d6aa8ac5b0768", null ],
     [ "ref_component", "df/de9/classchi__physics_1_1_field_function.html#a3c414b1229129415690c193e3abed856", null ],
     [ "ref_variable", "df/de9/classchi__physics_1_1_field_function.html#ad1967ba7fb71bdcbdfaa39e23ab4fd32", null ],
-    [ "spatial_discretization", "df/de9/classchi__physics_1_1_field_function.html#a41a85444905665638fdadbd66b824cb6", null ],
+    [ "spatial_discretization", "df/de9/classchi__physics_1_1_field_function.html#adbb4dafba09a7ba5a88568c579fb58bb", null ],
     [ "text_name", "df/de9/classchi__physics_1_1_field_function.html#aebf52347d456a63704b688734a69e67b", null ],
     [ "unknown_manager", "df/de9/classchi__physics_1_1_field_function.html#a9a5c1e5580af3e7a1a1a533166d657d2", null ],
     [ "using_petsc_field_vector", "df/de9/classchi__physics_1_1_field_function.html#a9ba71f5a7fab91de359d3f357fe30c98", null ]

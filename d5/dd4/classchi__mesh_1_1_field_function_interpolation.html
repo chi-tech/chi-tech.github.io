@@ -86,7 +86,7 @@ $(document).ready(function(){initNavTree('d5/dd4/classchi__mesh_1_1_field_functi
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Data Fields</a>  </div>
-  <div class="headertitle"><div class="title">chi_mesh::FieldFunctionInterpolation Class Reference</div></div>
+  <div class="headertitle"><div class="title">chi_mesh::FieldFunctionInterpolation Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -111,6 +111,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adcb6723c030c11f55a7e27369616efe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19fedf15744c48c0171a4429bf3f0ede"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/classchi__mesh_1_1_field_function_interpolation.html#a19fedf15744c48c0171a4429bf3f0ede">Execute</a> ()</td></tr>
 <tr class="separator:a19fedf15744c48c0171a4429bf3f0ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54088b29f17a78e0f7e5c45059792b03"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/classchi__mesh_1_1_field_function_interpolation.html#a54088b29f17a78e0f7e5c45059792b03">GetDefaultFileBaseName</a> () const =0</td></tr>
+<tr class="separator:a54088b29f17a78e0f7e5c45059792b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652185ba246b54e65323226c36fb0c4b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/classchi__mesh_1_1_field_function_interpolation.html#a652185ba246b54e65323226c36fb0c4b">ExportPython</a> (std::string base_name)=0</td></tr>
+<tr class="separator:a652185ba246b54e65323226c36fb0c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -178,6 +182,61 @@ Data Fields</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d5/d14/classchi__mesh_1_1_field_function_interpolation_line.html#a472cb958b462949052e71103010a83cf">chi_mesh::FieldFunctionInterpolationLine</a>, <a class="el" href="../../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html#a883c6575df82aa7f13dcf01f1c304a32">chi_mesh::FieldFunctionInterpolationSlice</a>, and <a class="el" href="../../db/dd5/classchi__mesh_1_1_field_function_interpolation_volume.html#a3602aa3c8de4a7bacb46b4407cd4a31c">chi_mesh::FieldFunctionInterpolationVolume</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00036">36</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
+
+</div>
+</div>
+<a id="a652185ba246b54e65323226c36fb0c4b" name="a652185ba246b54e65323226c36fb0c4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a652185ba246b54e65323226c36fb0c4b">&#9670;&nbsp;</a></span>ExportPython()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_mesh::FieldFunctionInterpolation::ExportPython </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>base_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d5/d14/classchi__mesh_1_1_field_function_interpolation_line.html#a2243c5bec21f4824736a804004bc0749">chi_mesh::FieldFunctionInterpolationLine</a>, <a class="el" href="../../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html#aac316e37cb67201ba1971e42f8869ad5">chi_mesh::FieldFunctionInterpolationSlice</a>, and <a class="el" href="../../db/dd5/classchi__mesh_1_1_field_function_interpolation_volume.html#a0ba4a67a8178e85c0a3beaa922306ffe">chi_mesh::FieldFunctionInterpolationVolume</a>.</p>
+
+</div>
+</div>
+<a id="a54088b29f17a78e0f7e5c45059792b03" name="a54088b29f17a78e0f7e5c45059792b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54088b29f17a78e0f7e5c45059792b03">&#9670;&nbsp;</a></span>GetDefaultFileBaseName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string chi_mesh::FieldFunctionInterpolation::GetDefaultFileBaseName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d5/d14/classchi__mesh_1_1_field_function_interpolation_line.html#a40d14a57ba7c3173457cbe48a0054880">chi_mesh::FieldFunctionInterpolationLine</a>, <a class="el" href="../../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html#ac71c9ea5ae63fd3221f7ebbaa88b9ab1">chi_mesh::FieldFunctionInterpolationSlice</a>, and <a class="el" href="../../db/dd5/classchi__mesh_1_1_field_function_interpolation_volume.html#a8a8197f2dc2aba9db6b13342525f3034">chi_mesh::FieldFunctionInterpolationVolume</a>.</p>
 
 </div>
 </div>

@@ -8,7 +8,7 @@ var searchData=
   ['simplexs0_5',['SIMPLEXS0',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95a8d1ca64e4addbe17ad0607c54837c567',1,'chi_physics']]],
   ['simplexs1_6',['SIMPLEXS1',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95a0356d40f5f6d097214535307c1bbc29c',1,'chi_physics']]],
   ['single_7',['SINGLE',['../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ada0679273e201afd0bf57af3961f8a23b8',1,'lbs']]],
-  ['single_5foccurrence_8',['SINGLE_OCCURRENCE',['../d8/d1a/class_chi_log.html#ab2c301e8b92e9a0b24c86656cd8ff6cea0e6076b032363fb0c97fe0324d3f50bd',1,'ChiLog']]],
+  ['single_5foccurrence_8',['SINGLE_OCCURRENCE',['../d8/d42/classchi__objects_1_1_chi_log.html#a095bd445e91d775e42bbffee8d8560e7a0e6076b032363fb0c97fe0324d3f50bd',1,'chi_objects::ChiLog']]],
   ['single_5fvalue_9',['SINGLE_VALUE',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95ac8946fa6a83e99cc3e25a9c564b13c8e',1,'chi_physics']]],
   ['sixteenth_10',['SIXTEENTH',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9a4490ba0de617cba6aa30437dfd283f69',1,'chi_math']]],
   ['sixth_11',['SIXTH',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9a0f819056cc38101e8e1b89a035a58438',1,'chi_math']]],

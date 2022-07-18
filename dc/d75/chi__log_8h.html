@@ -85,11 +85,13 @@ $(document).ready(function(){initNavTree('dc/d75/chi__log_8h.html','../../'); in
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle"><div class="title">chi_log.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d3/dbf/chi__logstream_8h_source.html">chi_logstream.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>&quot;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 </div>
@@ -97,79 +99,20 @@ $(document).ready(function(){initNavTree('dc/d75/chi__log_8h.html','../../'); in
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d1a/class_chi_log.html">ChiLog</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">chi_objects::ChiLog</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4a/struct_chi_log_1_1_event_info.html">ChiLog::EventInfo</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd6/structchi__objects_1_1_chi_log_1_1_event_info.html">chi_objects::ChiLog::EventInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2b/struct_chi_log_1_1_event.html">ChiLog::Event</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de5/structchi__objects_1_1_chi_log_1_1_event.html">chi_objects::ChiLog::Event</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dff/class_chi_log_1_1_repeating_event.html">ChiLog::RepeatingEvent</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d50/classchi__objects_1_1_chi_log_1_1_repeating_event.html">chi_objects::ChiLog::RepeatingEvent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a69d6fb9ad6b29cf2ce8503e92e240405"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405">LOG_LVL</a> { <br />
-&#160;&#160;<a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8">LOG_0</a> =1
-, <a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a2eeeaef39b7d7267030f18c9359726d7">LOG_0WARNING</a> =2
-, <a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405aef3c4e23d7c6b54ceac13604de983ed5">LOG_0ERROR</a> =3
-, <a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a23efa3df025bb2d5a5b36a86cd84b3d9">LOG_0VERBOSE_0</a> =4
-, <br />
-&#160;&#160;<a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a19207d16b0356472b7102efe3caf12c1">LOG_0VERBOSE_1</a> =5
-, <a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e">LOG_0VERBOSE_2</a> =6
-, <a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc">LOG_ALL</a> =7
-, <a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405ae173a29acc36e26ca9fa5a3b1b264d5c">LOG_ALLWARNING</a> =8
-, <br />
-&#160;&#160;<a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03">LOG_ALLERROR</a> =9
-, <a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405adad69b4e4299bc032af4bff74f53c13c">LOG_ALLVERBOSE_0</a> =10
-, <a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda">LOG_ALLVERBOSE_1</a> =11
-, <a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405a165d9f8cd7a877eff195c8b93c4996d0">LOG_ALLVERBOSE_2</a> =12
-<br />
- }</td></tr>
-<tr class="separator:a69d6fb9ad6b29cf2ce8503e92e240405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:d1/d96/namespacechi__objects"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d96/namespacechi__objects.html">chi_objects</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a69d6fb9ad6b29cf2ce8503e92e240405" name="a69d6fb9ad6b29cf2ce8503e92e240405"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69d6fb9ad6b29cf2ce8503e92e240405">&#9670;&nbsp;</a></span>LOG_LVL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="../../dc/d75/chi__log_8h.html#a69d6fb9ad6b29cf2ce8503e92e240405">LOG_LVL</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Logging level </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8" name="a69d6fb9ad6b29cf2ce8503e92e240405a46105a8c5c382e71fc6b3bdcf19a2ad8"></a>LOG_0&#160;</td><td class="fielddoc"><p >Used only for location 0. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405a2eeeaef39b7d7267030f18c9359726d7" name="a69d6fb9ad6b29cf2ce8503e92e240405a2eeeaef39b7d7267030f18c9359726d7"></a>LOG_0WARNING&#160;</td><td class="fielddoc"><p >Warning only for location 0. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405aef3c4e23d7c6b54ceac13604de983ed5" name="a69d6fb9ad6b29cf2ce8503e92e240405aef3c4e23d7c6b54ceac13604de983ed5"></a>LOG_0ERROR&#160;</td><td class="fielddoc"><p >Error only for location 0. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405a23efa3df025bb2d5a5b36a86cd84b3d9" name="a69d6fb9ad6b29cf2ce8503e92e240405a23efa3df025bb2d5a5b36a86cd84b3d9"></a>LOG_0VERBOSE_0&#160;</td><td class="fielddoc"><p >Default verbosity level. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405a19207d16b0356472b7102efe3caf12c1" name="a69d6fb9ad6b29cf2ce8503e92e240405a19207d16b0356472b7102efe3caf12c1"></a>LOG_0VERBOSE_1&#160;</td><td class="fielddoc"><p >Used only if verbosity level equals 1. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e" name="a69d6fb9ad6b29cf2ce8503e92e240405a56941a68f03bcdcf5aed3f5913f0877e"></a>LOG_0VERBOSE_2&#160;</td><td class="fielddoc"><p >Used only if verbosity level equals 2. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc" name="a69d6fb9ad6b29cf2ce8503e92e240405a87cff070224b283d7aace436723245fc"></a>LOG_ALL&#160;</td><td class="fielddoc"><p >Verbose level 0 all locations. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405ae173a29acc36e26ca9fa5a3b1b264d5c" name="a69d6fb9ad6b29cf2ce8503e92e240405ae173a29acc36e26ca9fa5a3b1b264d5c"></a>LOG_ALLWARNING&#160;</td><td class="fielddoc"><p >Warning for any location. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03" name="a69d6fb9ad6b29cf2ce8503e92e240405a1edd74ac31d98e3d2f3860ad429bec03"></a>LOG_ALLERROR&#160;</td><td class="fielddoc"><p >Error for any location. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405adad69b4e4299bc032af4bff74f53c13c" name="a69d6fb9ad6b29cf2ce8503e92e240405adad69b4e4299bc032af4bff74f53c13c"></a>LOG_ALLVERBOSE_0&#160;</td><td class="fielddoc"><p >Default verbosity level. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda" name="a69d6fb9ad6b29cf2ce8503e92e240405a7672ad9e4126ea9351db84f2a68a8dda"></a>LOG_ALLVERBOSE_1&#160;</td><td class="fielddoc"><p >Used only if verbosity level equals 1. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a69d6fb9ad6b29cf2ce8503e92e240405a165d9f8cd7a877eff195c8b93c4996d0" name="a69d6fb9ad6b29cf2ce8503e92e240405a165d9f8cd7a877eff195c8b93c4996d0"></a>LOG_ALLVERBOSE_2&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00009">9</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

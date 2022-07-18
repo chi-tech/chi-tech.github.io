@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('dc/de3/_tutorial__01___diffusion_sim_8
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">chiVolumeMesherExecute();</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">\endcode</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment"></span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">## Step 5 - Assign material ID&#39;s</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">## Step 5 - Assign material- and boundary IDs and</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment"></span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">Materials ID&#39;s can conveniently be specified using logical volumes. There are</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">many options for logical volumes ranging from primitive parametric surfaces</span></div>
@@ -204,246 +204,255 @@ $(document).ready(function(){initNavTree('dc/de3/_tutorial__01___diffusion_sim_8
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment"> volume mesher property and hence we call chiVolumeMesherSetProperty()</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment"> with a property index MATID_FROMLOGICAL. Next we provided a handle to the</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment"> logical volume (vol0) and the desired material id. Logical volumes are very</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment"> diverse and their uses are discussed elsewhere.</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment"></span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">The culmination of this step is all done within a physics agnostic framework.</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">The user can even export the mesh for visualization using the function</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment"> chiRegionExportMeshToObj(). The extruded mesh is shown below:</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment"></span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment"></span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">## Step 5 - Adding material properties</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment"></span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">Now that the cells have been assigned a material id we need to add</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment"> properties to the material conducive to a diffusion simulation. For a heat</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment"> transfer diffusion simulation we will need to know the thermal conductivity</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment"> &quot;k&quot; and the volumetric source strength &quot;q&quot;. Both of these can be simple</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment"> scalar values.</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment"></span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">\code</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">chiPhysicsMaterialAddProperty(material,SCALAR_VALUE,&quot;k&quot;)</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">chiPhysicsMaterialSetProperty(material,&quot;k&quot;,SINGLE_VALUE,1.0)</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment"></span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">chiPhysicsMaterialAddProperty(material,SCALAR_VALUE,&quot;q&quot;)</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">chiPhysicsMaterialSetProperty(material,&quot;q&quot;,SINGLE_VALUE,1.0)</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">\endcode</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment"> diverse and their uses are discussed elsewhere. There is an additional utility,</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment"> chiVolumeMesherSetMatIDToAll(), which will set all cell-material-ids without</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment"> requiring a logical volume, however, in this tutorial we opted to show the</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment"> logical volume route.</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment"></span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">### Boundary IDs</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">By default all boundaries are unassigned (i.e., -1). There are two utilities</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment"> that set the boundary id&#39;s the first of which is essentially identical to how</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment"> material ids are set, chiVolumeMesherSetProperty(), but this time the property</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment"> index is BNDRYID_FROMLOGICAL. The second way is to use</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment"> chiVolumeMesherSetupOrthogonalBoundaries() which requires no arguments and will</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment"> asssign standard indices to a boundary if it is aligned with the orthogonal</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment"> cartesian directions.</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment"></span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">The culmination of this step is all done within a physics agnostic framework.</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">The user can even export the mesh for visualization using the function</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment"> chiMeshHandlerExportMeshToObj().</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment"></span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">### Boundary IDs</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment"></span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment"></span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">## Step 5 - Adding material properties</span></div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment"></span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">In this code we created the material properties using the function</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment"> chiPhysicsMaterialAddProperty() which requires a handle to the reference</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment"> material, the property type (SCALAR_VALUE), and a name for the property.</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment"> Unlike extrusion layers the property name can be used in further calls to refer</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment"> to the specific property.</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">Now that the cells have been assigned a material id we need to add</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment"> properties to the material conducive to a diffusion simulation. For a heat</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment"> transfer diffusion simulation we will need to know the thermal conductivity</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment"> &quot;k&quot; and the volumetric source strength &quot;q&quot;. Both of these can be simple</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment"> scalar values.</span></div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment"></span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">Material property values are set using the function</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment"> chiPhysicsMaterialSetProperty() which again expects a handle to the</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment"> reference material, then either a material property id or name (in this case</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment"> name), then an operation index and value(s). For this case we used an operation</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment"> index SINGLE_VALUE which is the only operation supported by SCALAR_VALUE. In</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment"> future the user can specify, as an example, temperature dependent values which</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment"> will support the operation FROM_TABLE, but that is a topic for a different time.</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">\code</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">chiPhysicsMaterialAddProperty(material,SCALAR_VALUE,&quot;k&quot;)</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">chiPhysicsMaterialSetProperty(material,&quot;k&quot;,SINGLE_VALUE,1.0)</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment"></span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">chiPhysicsMaterialAddProperty(material,SCALAR_VALUE,&quot;q&quot;)</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment">chiPhysicsMaterialSetProperty(material,&quot;q&quot;,SINGLE_VALUE,1.0)</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">\endcode</span></div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment"></span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">## Step 6 - Setup the diffusion physics</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment"></span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment">The following sequence of function calls completely define the diffusion solver.</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment"></span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">\code</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">phys1 = chiDiffusionCreateSolver();</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">chiSolverAddRegion(phys1,region1)</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">chiSolverSetBasicOption(phys1,&quot;discretization_method&quot;,&quot;PWLC&quot;)</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">chiSolverSetBasicOption(phys1,&quot;residual_tolerance&quot;,1.0e-6)</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">\endcode</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment"></span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">We first create the diffusion solver with a call to</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment"> chiDiffusionCreateSolver(). This creates the solver and pushes it onto</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment"> the physics handler. The function returns the handle.</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment"> We then add our mesh region to this solver using the function</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment"> chiSolverAddRegion() which expects a handle to the reference solver</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment"> followed by the handle to the relevant region.</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">In this code we created the material properties using the function</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment"> chiPhysicsMaterialAddProperty() which requires a handle to the reference</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment"> material, the property type (SCALAR_VALUE), and a name for the property.</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment"> Unlike extrusion layers the property name can be used in further calls to refer</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment"> to the specific property.</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment"></span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">Material property values are set using the function</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment"> chiPhysicsMaterialSetProperty() which again expects a handle to the</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment"> reference material, then either a material property id or name (in this case</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment"> name), then an operation index and value(s). For this case we used an operation</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment"> index SINGLE_VALUE which is the only operation supported by SCALAR_VALUE. In</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment"> future the user can specify, as an example, temperature dependent values which</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment"> will support the operation FROM_TABLE, but that is a topic for a different time.</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment"></span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">## Step 6 - Setup the diffusion physics</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment"></span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">The following sequence of function calls completely define the diffusion solver.</span></div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment"></span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">Next we can set numerous diffusion solver properties which can comprehensively</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment"> viewed in its specific documentation (chiDiffusionSetProperty()).</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment"></span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">## Step 7 - Initialize and Solve</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment"></span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment">The final step of this process is to initialize and execute the diffusion solver.</span></div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment"></span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment">\code</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="comment">chiDiffusionInitialize(phys1)</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment">chiDiffusionExecute(phys1)</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="comment">\endcode</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment"></span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">## Step 8 - Post-processing</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">The execution of a Chi-Tech physics module culminates in the creation of one or</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment"> more field functions. These field functions should all be populated for use</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment"> during the initialization phase of the solver. Users can get handles to all</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment"> the field functions by using the chiGetFieldFunctionList call. Thereafter, the</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment"> field function can be exported to VTK-format which can be read by Paraview.</span></div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment"></span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">\code</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment">fflist,count = chiGetFieldFunctionList(phys1)</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="comment">chiExportFieldFunctionToVTK(fflist[1],&quot;Tutorial1Output&quot;,&quot;Temperature&quot;)</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">\endcode</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment"></span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment"></span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment"></span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">## Complete input file</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment"></span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment">Here is the complete input file with comments</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="comment"></span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="comment">\code</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="comment">--############################################### Setup mesh</span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="comment">chiMeshHandlerCreate()</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">\code</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">phys1 = chiDiffusionCreateSolver()</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">chiSolverSetBasicOption(phys1,&quot;discretization_method&quot;,&quot;PWLC&quot;)</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">chiSolverSetBasicOption(phys1,&quot;residual_tolerance&quot;,1.0e-6)</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">\endcode</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment"></span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment">We first create the diffusion solver with a call to</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment"> chiDiffusionCreateSolver(). This creates the solver and pushes it onto</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="comment"> the physics handler. The function returns the handle.</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment"></span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="comment">Next we can set numerous diffusion solver properties which can comprehensively</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment"> be viewed in its specific documentation (chiDiffusionSetProperty()).</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment"></span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">## Step 7 - Initialize and Solve</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment"></span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">The final step of this process is to initialize and execute the diffusion solver.</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment"></span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">\code</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">chiDiffusionInitialize(phys1)</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">chiDiffusionExecute(phys1)</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment">\endcode</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="comment"></span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">## Step 8 - Post-processing</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">The execution of a Chi-Tech physics module culminates in the creation of one or</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment"> more field functions. These field functions should all be populated for use</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment"> during the initialization phase of the solver. Users can get handles to all</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment"> the field functions by using the chiGetFieldFunctionList call. Thereafter, the</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment"> field function can be exported to VTK-format which can be read by Paraview.</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment"></span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="comment">\code</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="comment">fflist,count = chiGetFieldFunctionList(phys1)</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="comment">chiExportFieldFunctionToVTK(fflist[1],&quot;Tutorial1Output&quot;,&quot;Temperature&quot;)</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="comment">\endcode</span></div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment"></span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="comment">nodes={}</span></div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">N=32</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment">ds=2.0/N</span></div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="comment">for i=0,N do</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment">    nodes[i+1] = -1.0 + i*ds</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment">end</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment">surf_mesh,region1 = chiMeshCreateUnpartitioned3DOrthoMesh(nodes,nodes,nodes)</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment"></span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment">chiVolumeMesherExecute();</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="comment"></span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment"></span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment">## Complete input file</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="comment"></span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment">Here is the complete input file with comments</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment"></span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment">\code</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment">--############################################### Setup mesh</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment">chiMeshHandlerCreate()</span></div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="comment"></span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment">material = chiPhysicsAddMaterial(&quot;Test Material&quot;);</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="comment"></span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="comment">-- Set Material IDs</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="comment">vol0 = chiLogicalVolumeCreate(RPP,-1000,1000,-1000,1000,-1000,1000)</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment">chiVolumeMesherSetProperty(MATID_FROMLOGICAL,vol0,material)</span></div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment"></span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment">chiRegionExportMeshToVTK(region1,&quot;Mesh&quot;)</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">--############################################### Add material properties</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment"></span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment">nodes={}</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="comment">N=32</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="comment">ds=2.0/N</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="comment">for i=0,N do</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment">    nodes[i+1] = -1.0 + i*ds</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment">end</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment">surf_mesh,region1 = chiMeshCreateUnpartitioned3DOrthoMesh(nodes,nodes,nodes)</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment"></span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment">chiVolumeMesherExecute();</span></div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment"></span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment">-- Set material properties</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="comment">chiPhysicsMaterialAddProperty(material,SCALAR_VALUE,&quot;k&quot;)</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment">chiPhysicsMaterialSetProperty(material,&quot;k&quot;,SINGLE_VALUE,1.0)</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment"></span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="comment">chiPhysicsMaterialAddProperty(material,SCALAR_VALUE,&quot;q&quot;)</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment">chiPhysicsMaterialSetProperty(material,&quot;q&quot;,SINGLE_VALUE,1.0)</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="comment"></span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment"></span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment">--############################################### Setup Physics</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="comment">phys1 = chiDiffusionCreateSolver();</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="comment">chiSolverAddRegion(phys1,region1)</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="comment">chiSolverSetBasicOption(phys1,&quot;discretization_method&quot;,&quot;PWLC&quot;);</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="comment">chiSolverSetBasicOption(phys1,&quot;residual_tolerance&quot;,1.0e-6)</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment">material = chiPhysicsAddMaterial(&quot;Test Material&quot;);</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="comment"></span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment">-- Set Material IDs</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment">vol0 = chiLogicalVolumeCreate(RPP,-1000,1000,-1000,1000,-1000,1000)</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="comment">chiVolumeMesherSetProperty(MATID_FROMLOGICAL,vol0,material)</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment"></span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="comment">chiMeshHandlerExportMeshToVTK(&quot;Mesh&quot;)</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment">--############################################### Add material properties</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment"></span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="comment"></span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="comment">-- Set material properties</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="comment">chiPhysicsMaterialAddProperty(material,SCALAR_VALUE,&quot;k&quot;)</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="comment">chiPhysicsMaterialSetProperty(material,&quot;k&quot;,SINGLE_VALUE,1.0)</span></div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="comment"></span> </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="comment">--############################################### Initialize and</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="comment">--                                                Execute Solver</span></div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment">chiDiffusionInitialize(phys1)</span></div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment">chiDiffusionExecute(phys1)</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="comment"></span> </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="comment">----############################################### Visualize the field function</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="comment">fflist,count = chiGetFieldFunctionList(phys1)</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment">chiExportFieldFunctionToVTK(fflist[1],&quot;Tutorial1Output&quot;,&quot;Temperature&quot;)</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="comment">\endcode</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment"></span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="comment"></span> </div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="comment">## Step 9 - Execute the code</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="comment">Assuming you added the executable to your PATH environment variable, the code</span></div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment">can be executed by typing the executable name followed by the input file path</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="comment"> (relative or absolute).</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="comment"></span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="comment">\verbatim</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="comment">ChiTech Tutorial01.lua</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment">\endverbatim</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="comment">chiPhysicsMaterialAddProperty(material,SCALAR_VALUE,&quot;q&quot;)</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="comment">chiPhysicsMaterialSetProperty(material,&quot;q&quot;,SINGLE_VALUE,1.0)</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment"></span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment"></span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="comment">--############################################### Setup Physics</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="comment">phys1 = chiDiffusionCreateSolver()</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="comment">chiSolverSetBasicOption(phys1,&quot;discretization_method&quot;,&quot;PWLC&quot;);</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment">chiSolverSetBasicOption(phys1,&quot;residual_tolerance&quot;,1.0e-6)</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="comment"></span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment">--############################################### Initialize and</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="comment">--                                                Execute Solver</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="comment">chiDiffusionInitialize(phys1)</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="comment">chiDiffusionExecute(phys1)</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment"></span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="comment">----############################################### Visualize the field function</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="comment">fflist,count = chiGetFieldFunctionList(phys1)</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="comment">chiExportFieldFunctionToVTK(fflist[1],&quot;Tutorial1Output&quot;,&quot;Temperature&quot;)</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="comment">\endcode</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment"></span> </div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="comment"></span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="comment">The output produced will look as follows:</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="comment"></span> </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="comment">\verbatim</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="comment">[0]  Parsing argument 1 Tutorials/Tutorial01.lua</span></div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="comment">[0]  2022-01-26 16:35:03 Running ChiTech in batch-mode with 1 processes.</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="comment">[0]  ChiTech number of arguments supplied: 1</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="comment">[0]  Computing cell-centroids.</span></div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="comment">[0]  Done computing cell-centroids.</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment">[0]  Checking cell-center-to-face orientations</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="comment">[0]  Done checking cell-center-to-face orientations</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="comment">[0]  00:00:00 Establishing cell connectivity.</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="comment">[0]  00:00:00 Vertex cell subscriptions complete.</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment">[0]  00:00:00 Surpassing cell 3277 of 32768 (10%)</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="comment">[0]  00:00:00 Surpassing cell 6554 of 32768 (20%)</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="comment">[0]  00:00:00 Surpassing cell 9831 of 32768 (30%)</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="comment">[0]  00:00:00 Surpassing cell 13108 of 32768 (40%)</span></div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment">[0]  00:00:00 Surpassing cell 16384 of 32768 (50%)</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="comment">[0]  00:00:00 Surpassing cell 19661 of 32768 (60%)</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="comment">[0]  00:00:00 Surpassing cell 22938 of 32768 (70%)</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="comment">[0]  00:00:01 Surpassing cell 26215 of 32768 (80%)</span></div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="comment">[0]  00:00:01 Surpassing cell 29492 of 32768 (90%)</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="comment">[0]  00:00:01 Surpassing cell 32768 of 32768 (100%)</span></div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="comment">[0]  00:00:01 Establishing cell boundary connectivity.</span></div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="comment">[0]  00:00:01 Done establishing cell connectivity.</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="comment">[0]  00:00:01 VolumeMesherPredefinedUnpartitioned executing. Memory in use = 58.4766 MB</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="comment">[0]  Computed centroids</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="comment">[0]  Partitioning mesh with ParMETIS.</span></div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="comment">[0]  Done partitioning mesh.</span></div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="comment">[0]  Cells loaded.</span></div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="comment">[0]  VolumeMesherPredefinedUnpartitioned: Cells created = 32768</span></div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="comment">[0]  00:00:01 chiVolumeMesherExecute: Volume meshing completed. Memory used = 42.9 MB</span></div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="comment">[0]  Total process memory used after meshing 101 MB</span></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="comment">[0]  00:00:01 Setting material id from logical volume.</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="comment">[0]  00:00:01 Done setting material id from logical volume. Number of cells modified = 32768.</span></div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="comment">[0]  Exporting mesh to VTK. 32768</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">[0]  Done exporting mesh to VTK.</span></div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="comment">[0]  Solver:DiffusionSolver option:discretization_method set to PWLC.</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="comment">[0]  Solver:DiffusionSolver option:residual_tolerance set to 1e-06.</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="comment">[0]</span></div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="comment">[0]  00:00:01 DiffusionSolver: Initializing Diffusion solver</span></div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="comment">[0]  Identifying unique boundary-ids.</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="comment">[0]  Max boundary id identified: 0</span></div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="comment">[0]  00:00:01 Creating Piecewise Linear Continuous Finite Element spatial discretizaiton.</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="comment">[0]  00:00:18 Developing nodal ordering.</span></div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="comment">[0]  00:00:18 Done creating Piecewise Linear Continuous Finite Element spatial discretizaiton.</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="comment">[0]  DiffusionSolver: Global number of DOFs=35937</span></div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="comment">[0]  Building sparsity pattern.</span></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="comment">[0]  00:00:21 DiffusionSolver: Diffusion Solver initialization time 19.1648</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="comment">[0]  Setting matrix preallocation.</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="comment">[0]  00:00:21 DiffusionSolver: Assembling A locally</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="comment">[0]  00:00:21 DiffusionSolver: Done Assembling A locally</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="comment">[0]  00:00:21 DiffusionSolver: Communicating matrix assembly</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="comment">[0]  00:00:21 DiffusionSolver: Assembling A globally</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="comment">[0]  00:00:21 DiffusionSolver: Diagonal check</span></div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="comment">[0]  Number of mallocs used = 0</span></div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="comment">[0]  Number of non-zeros allocated = 912673</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="comment">[0]  Number of non-zeros used = 759717</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="comment">[0]  Number of unneeded non-zeros = 152956</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="comment">[0]  00:00:21 DiffusionSolver: Assembling x and b</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="comment">[0]  00:00:21 DiffusionSolver: Solving system</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="comment">[0]  Diffusion iteration    0 - Residual 2.6521943e+02</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="comment">[0]  Iteration 0 Residual 265.219</span></div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="comment">[0]  Diffusion iteration    1 - Residual 3.1006358e+01</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="comment">[0]  Iteration 1 Residual 31.0064</span></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="comment">[0]  Diffusion iteration    2 - Residual 4.0467778e+00</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="comment">[0]  Iteration 2 Residual 4.04678</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="comment">[0]  Diffusion iteration    3 - Residual 4.9168053e-01</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="comment">[0]  Iteration 3 Residual 0.491681</span></div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="comment">[0]  Diffusion iteration    4 - Residual 5.5399515e-02</span></div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="comment">[0]  Iteration 4 Residual 0.0553995</span></div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="comment">[0]  Diffusion iteration    5 - Residual 7.3127782e-03</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="comment">[0]  Iteration 5 Residual 0.00731278</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="comment">[0]  Diffusion iteration    6 - Residual 1.3609942e-03</span></div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="comment">[0]  Iteration 6 Residual 0.00136099</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="comment">[0]  Diffusion iteration    7 - Residual 1.7105417e-04</span></div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="comment">[0]  Iteration 7 Residual 0.000171054</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="comment">[0]  Diffusion iteration    8 - Residual 2.2641466e-05</span></div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="comment">[0]  Iteration 8 Residual 2.26415e-05</span></div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="comment">[0]  Diffusion iteration    9 - Residual 3.3728384e-06</span></div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="comment">[0]  Iteration 9 Residual 3.37284e-06</span></div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="comment">[0]  Diffusion iteration   10 - Residual 3.1009691e-07</span></div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="comment">[0]  Iteration 10 Residual 3.10097e-07</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="comment">[0]  Convergence reason: KSP_CONVERGED_RTOL</span></div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="comment">[0]  00:00:21 DiffusionSolver[g=0-0]: Number of iterations =10</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="comment">[0]  Timing:</span></div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="comment">[0]  Assembling the matrix: 0.231278</span></div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="comment">[0]  Solving the system   : 0.221738</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">[0]  Diffusion Solver execution completed!</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="comment">[0]  Exporting field function phi to files with base name Tutorial1Output</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="comment">[0]  Final program time 00:00:23</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="comment">[0]  2022-01-26 16:35:27 ChiTech finished execution of Tutorials/Tutorial01.lua</span></div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="comment">\endverbatim</span></div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="comment"></span> </div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="comment">\image html &quot;Meshing/CubeSolutionTut1.png&quot;  &quot;Figure 2 - Solution viewed in Paraview&quot; width=700px</span></div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="comment"></span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="comment"></span> </div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="comment">## Step 9 - Execute the code</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="comment">Assuming you added the executable to your PATH environment variable, the code</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="comment">can be executed by typing the executable name followed by the input file path</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="comment"> (relative or absolute).</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="comment"></span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="comment">\verbatim</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="comment">ChiTech Tutorial01.lua</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="comment">\endverbatim</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment"></span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="comment">The output produced will look as follows:</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="comment"></span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="comment">\verbatim</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment">[0]  Parsing argument 1 Tutorials/Tutorial01.lua</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="comment">[0]  2022-05-09 14:01:21 Running ChiTech in batch-mode with 1 processes.</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="comment">[0]  ChiTech number of arguments supplied: 1</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="comment">[0]  Computing cell-centroids.</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment">[0]  Done computing cell-centroids.</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="comment">[0]  Checking cell-center-to-face orientations</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="comment">[0]  Done checking cell-center-to-face orientations</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="comment">[0]  00:00:00 Establishing cell connectivity.</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="comment">[0]  00:00:00 Vertex cell subscriptions complete.</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="comment">[0]  00:00:00 Surpassing cell 3277 of 32768 (10%)</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="comment">[0]  00:00:00 Surpassing cell 6554 of 32768 (20%)</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="comment">[0]  00:00:00 Surpassing cell 9831 of 32768 (30%)</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="comment">[0]  00:00:00 Surpassing cell 13108 of 32768 (40%)</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="comment">[0]  00:00:00 Surpassing cell 16384 of 32768 (50%)</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="comment">[0]  00:00:00 Surpassing cell 19661 of 32768 (60%)</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="comment">[0]  00:00:00 Surpassing cell 22938 of 32768 (70%)</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="comment">[0]  00:00:00 Surpassing cell 26215 of 32768 (80%)</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="comment">[0]  00:00:00 Surpassing cell 29492 of 32768 (90%)</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="comment">[0]  00:00:00 Surpassing cell 32768 of 32768 (100%)</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="comment">[0]  00:00:00 Establishing cell boundary connectivity.</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="comment">[0]  00:00:00 Done establishing cell connectivity.</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="comment">[0]  00:00:00 VolumeMesherPredefinedUnpartitioned executing. Memory in use = 61 MB</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="comment">[0]  Computed centroids</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">[0]  Partitioning mesh with ParMETIS.</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="comment">[0]  Done partitioning mesh.</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="comment">[0]  Cells loaded.</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="comment">[0]  VolumeMesherPredefinedUnpartitioned: Cells created = 32768</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="comment">[0]  00:00:00 chiVolumeMesherExecute: Volume meshing completed. Memory used = 43.5 MB</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="comment">[0]  Total process memory used after meshing 104 MB</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="comment">[0]  00:00:00 Setting material id from logical volume.</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="comment">[0]  00:00:00 Done setting material id from logical volume. Number of cells modified = 32768.</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="comment">[0]  Exporting mesh to VTK. 32768</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="comment">[0]  Done exporting mesh to VTK.</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="comment">[0]  Solver:DiffusionSolver option:discretization_method set to PWLC.</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="comment">[0]  Solver:DiffusionSolver option:residual_tolerance set to 1e-06.</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="comment">[0]</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="comment">[0]  00:00:00 DiffusionSolver: Initializing Diffusion solver</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="comment">[0]  Identifying unique boundary-ids.</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="comment">[0]  Max boundary id identified: 0</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="comment">[0]  00:00:00 Creating Piecewise Linear Continuous Finite Element spatial discretizaiton.</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="comment">[0]  00:00:08 Developing nodal ordering.</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="comment">[0]  00:00:08 Done creating Piecewise Linear Continuous Finite Element spatial discretizaiton.</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="comment">[0]  DiffusionSolver: Global number of DOFs=35937</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="comment">[0]  Building sparsity pattern.</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="comment">[0]  00:00:09 DiffusionSolver: Diffusion Solver initialization time 8.76791</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="comment">[0]  Setting matrix preallocation.</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="comment">[0]  00:00:09 DiffusionSolver: Assembling A locally</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="comment">[0]  00:00:09 DiffusionSolver: Done Assembling A locally</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="comment">[0]  00:00:09 DiffusionSolver: Communicating matrix assembly</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="comment">[0]  00:00:09 DiffusionSolver: Assembling A globally</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="comment">[0]  00:00:09 DiffusionSolver: Diagonal check</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="comment">[0]  Number of mallocs used = 0</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="comment">[0]  Number of non-zeros allocated = 912673</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="comment">[0]  Number of non-zeros used = 759717</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="comment">[0]  Number of unneeded non-zeros = 152956</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="comment">[0]  00:00:09 DiffusionSolver: Assembling x and b</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="comment">[0]  00:00:09 DiffusionSolver: Solving system</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="comment">[0]  Diffusion iteration    0 - Residual 2.6521952e+02</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="comment">[0]  Iteration 0 Residual 265.22</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="comment">[0]  Diffusion iteration    1 - Residual 3.1006314e+01</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="comment">[0]  Iteration 1 Residual 31.0063</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="comment">[0]  Diffusion iteration    2 - Residual 4.0467718e+00</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="comment">[0]  Iteration 2 Residual 4.04677</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="comment">[0]  Diffusion iteration    3 - Residual 4.9168004e-01</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="comment">[0]  Iteration 3 Residual 0.49168</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="comment">[0]  Diffusion iteration    4 - Residual 5.5399485e-02</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="comment">[0]  Iteration 4 Residual 0.0553995</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="comment">[0]  Diffusion iteration    5 - Residual 7.3128018e-03</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="comment">[0]  Iteration 5 Residual 0.0073128</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="comment">[0]  Diffusion iteration    6 - Residual 1.3610040e-03</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="comment">[0]  Iteration 6 Residual 0.001361</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="comment">[0]  Diffusion iteration    7 - Residual 1.7105415e-04</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="comment">[0]  Iteration 7 Residual 0.000171054</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="comment">[0]  Diffusion iteration    8 - Residual 2.2641339e-05</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="comment">[0]  Iteration 8 Residual 2.26413e-05</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">[0]  Diffusion iteration    9 - Residual 3.3728166e-06</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="comment">[0]  Iteration 9 Residual 3.37282e-06</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="comment">[0]  Diffusion iteration   10 - Residual 3.1009104e-07</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="comment">[0]  Iteration 10 Residual 3.10091e-07</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="comment">[0]  Convergence reason: KSP_CONVERGED_RTOL</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="comment">[0]  00:00:09 DiffusionSolver[g=0-0]: Number of iterations =10</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="comment">[0]  Timing:</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="comment">[0]  Assembling the matrix: 0.085187</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="comment">[0]  Solving the system   : 0.075084</span></div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="comment">[0]  Diffusion Solver execution completed!</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="comment">[0]  Exporting field function phi to files with base name Tutorial1Output</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="comment">[0]  Final program time 00:00:10</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="comment">[0]  2022-05-09 14:01:32 ChiTech finished execution of Tutorials/Tutorial01.lua</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="comment">\endverbatim</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="comment"></span> </div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="comment">\image html &quot;Meshing/CubeSolutionTut1.png&quot;  &quot;Figure 2 - Solution viewed in Paraview&quot; width=700px</span></div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="comment"></span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="comment"></span> </div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="comment"> */</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

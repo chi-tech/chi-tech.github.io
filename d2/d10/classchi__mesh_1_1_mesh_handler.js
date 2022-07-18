@@ -1,15 +1,9 @@
 var classchi__mesh_1_1_mesh_handler =
 [
-    [ "SurfaceMeshCollection", "d2/d10/classchi__mesh_1_1_mesh_handler.html#ab5f23e0685a0a6de76458380a279968f", null ],
-    [ "GetGrid", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a62dce4c9f60901d3cf0625d7913113db", null ],
-    [ "edge_loop_collections", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a585676f08ddee2f97426c473477fe609", null ],
-    [ "ffinterpolation_stack", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a68fd85c47d698f735f8de68924179a85", null ],
-    [ "linemesh_stack", "d2/d10/classchi__mesh_1_1_mesh_handler.html#aac84edaabbdc188079c095ba3a57c7a5", null ],
-    [ "logicvolume_stack", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a6b5298b245ef5d8e16c7b5d4274b76c4", null ],
-    [ "region_stack", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a1e6fca7c25c8dcfddb13bf49f8651740", null ],
-    [ "surface_mesh_collections", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a6addb216863c6901e0b6e3902ba6dc84", null ],
-    [ "surface_mesh_stack", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a475f8284a657eb829c717e28ca5ca009", null ],
-    [ "surface_mesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a6c20d5a7fa8f88824376319d141f535e", null ],
-    [ "unpartitionedmesh_stack", "d2/d10/classchi__mesh_1_1_mesh_handler.html#acb4af5be511166e9d85c3d18c5712272", null ],
-    [ "volume_mesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a071cdfeda8d79ad0369e9712262f6a18", null ]
+    [ "MeshHandler", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a8b1ade797477fd8abebf11d3e9caafce", null ],
+    [ "MeshHandler", "d2/d10/classchi__mesh_1_1_mesh_handler.html#ab827ca424a05a6361fef8a5ccffca3f3", null ],
+    [ "GetGrid", "d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587", null ],
+    [ "operator=", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a35b0427a99db00a2777fe5b91e3674d9", null ],
+    [ "surface_mesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a38b21fc38b7c880f1b0f0d86fb71877e", null ],
+    [ "volume_mesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a9e9e128ed2305364dfb94ccc40b0e86f", null ]
 ];

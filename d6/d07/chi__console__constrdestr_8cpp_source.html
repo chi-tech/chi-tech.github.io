@@ -86,46 +86,47 @@ $(document).ready(function(){initNavTree('d6/d07/chi__console__constrdestr_8cpp_
   <div class="headertitle"><div class="title">chi_console_constrdestr.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d6/d07/chi__console__constrdestr_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">chi_console.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d4a/chi__math__lua_8h.html">ChiMath/lua/chi_math_lua.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;ChiMesh/lua/chi_mesh_lua.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;ChiMPI/lua/chi_mpi_lua.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;ChiLog/lua/chi_log_lua.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;ChiPhysics/lua/physics_lua_utils.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;LuaTest/lua_test.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d1c/chi__modules__lua_8h.html">lua/chi_modules_lua.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//############################################################################# Default constructor</span><span class="comment"></span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/** Default constructor for the console*/</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../dd/d62/class_chi_console.html#a33e15f5f5e9b57f896343737df58d50e">   14</a></span><a class="code hl_function" href="../../dd/d62/class_chi_console.html#a33e15f5f5e9b57f896343737df58d50e">ChiConsole::ChiConsole</a>() noexcept</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="comment">//========================================== Initializing console</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_variable" href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">consoleState</a> = luaL_newstate();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">auto</span>&amp; L = this-&gt;<a class="code hl_variable" href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">consoleState</a>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  luaL_openlibs(L);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="comment">//========================================== Registering functions</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  #include&quot;../ChiLua/chi_lua_register.h&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_math::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_mesh::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_mpi_utils::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_log_utils::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_physics::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_lua_test::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_function" href="../../d3/daa/namespacechi__modules_1_1lua__utils.html#adb891325c4839c8241782a8dbf9e6a80">chi_modules::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<a href="../../d6/d07/chi__console__constrdestr_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">ChiConsole/chi_console.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d4a/chi__math__lua_8h.html">ChiMath/lua/chi_math_lua.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;ChiMesh/lua/chi_mesh_lua.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;ChiMPI/lua/chi_mpi_lua.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;ChiLog/lua/chi_log_lua.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;ChiPhysics/lua/physics_lua_utils.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;LuaTest/lua_test.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d1c/chi__modules__lua_8h.html">lua/chi_modules_lua.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//############################################################################# Default constructor</span><span class="comment"></span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/** Default constructor for the console*/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ad29abec4b79acf50ce6c0d9d10d9058d">   15</a></span><a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ad29abec4b79acf50ce6c0d9d10d9058d">chi_objects::ChiConsole::ChiConsole</a>() noexcept</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="comment">//========================================== Initializing console</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_variable" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a23011bcdddf5bb5a1dbac8833320a695">consoleState</a> = luaL_newstate();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">auto</span>&amp; L = this-&gt;<a class="code hl_variable" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a23011bcdddf5bb5a1dbac8833320a695">consoleState</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  luaL_openlibs(L);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="comment">//========================================== Registering functions</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  #include&quot;../ChiLua/chi_lua_register.h&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_math::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_mesh::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_mpi_utils::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_log_utils::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_physics::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_lua_test::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_function" href="../../d3/daa/namespacechi__modules_1_1lua__utils.html#adb891325c4839c8241782a8dbf9e6a80">chi_modules::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="ttc" id="achi__console_8h_html"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html">chi_console.h</a></div></div>
 <div class="ttc" id="achi__math__lua_8h_html"><div class="ttname"><a href="../../d6/d4a/chi__math__lua_8h.html">chi_math_lua.h</a></div></div>
 <div class="ttc" id="achi__modules__lua_8h_html"><div class="ttname"><a href="../../d4/d1c/chi__modules__lua_8h.html">chi_modules_lua.h</a></div></div>
-<div class="ttc" id="aclass_chi_console_html_a33e15f5f5e9b57f896343737df58d50e"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#a33e15f5f5e9b57f896343737df58d50e">ChiConsole::ChiConsole</a></div><div class="ttdeci">ChiConsole() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d07/chi__console__constrdestr_8cpp_source.html#l00014">chi_console_constrdestr.cpp:14</a></div></div>
-<div class="ttc" id="aclass_chi_console_html_a6b03e4088cb1d5840f05c34382e72dbc"><div class="ttname"><a href="../../dd/d62/class_chi_console.html#a6b03e4088cb1d5840f05c34382e72dbc">ChiConsole::consoleState</a></div><div class="ttdeci">lua_State * consoleState</div><div class="ttdoc">Pointer to lua console state.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00020">chi_console.h:20</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_console_html_a23011bcdddf5bb5a1dbac8833320a695"><div class="ttname"><a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a23011bcdddf5bb5a1dbac8833320a695">chi_objects::ChiConsole::consoleState</a></div><div class="ttdeci">lua_State * consoleState</div><div class="ttdoc">Pointer to lua console state.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00022">chi_console.h:22</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_console_html_ad29abec4b79acf50ce6c0d9d10d9058d"><div class="ttname"><a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ad29abec4b79acf50ce6c0d9d10d9058d">chi_objects::ChiConsole::ChiConsole</a></div><div class="ttdeci">ChiConsole() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d07/chi__console__constrdestr_8cpp_source.html#l00015">chi_console_constrdestr.cpp:15</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1lua__utils_html_a76842e0291fdf3a226003daf22292cc9"><div class="ttname"><a href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_math::lua_utils::RegisterLuaEntities</a></div><div class="ttdeci">void RegisterLuaEntities(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d66/chi__math__lua_8cc_source.html#l00012">chi_math_lua.cc:12</a></div></div>
 <div class="ttc" id="anamespacechi__modules_1_1lua__utils_html_adb891325c4839c8241782a8dbf9e6a80"><div class="ttname"><a href="../../d3/daa/namespacechi__modules_1_1lua__utils.html#adb891325c4839c8241782a8dbf9e6a80">chi_modules::lua_utils::RegisterLuaEntities</a></div><div class="ttdeci">void RegisterLuaEntities(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d76/chi__modules__lua_8cc_source.html#l00009">chi_modules_lua.cc:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

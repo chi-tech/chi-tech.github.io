@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('d3/dcb/chi__mesh_8h.html','../../'); i
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">chi_mesh.h File Reference</div></div>
 </div><!--header-->
@@ -98,7 +99,6 @@ $(document).ready(function(){initNavTree('d3/dcb/chi__mesh_8h.html','../../'); i
 <code>#include &quot;<a class="el" href="../../d5/dfd/chi__meshtensor__rank2__dim3_8h_source.html">chi_meshtensor_rank2_dim3.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/d70/chi__meshface_8h_source.html">chi_meshface.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d7/d09/chi__mesh__edgeloops_8h_source.html">chi_mesh_edgeloops.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d9/dfa/chi__mesh__interface_8h_source.html">chi_mesh_interface.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d1/d37/sweep__namespace_8h_source.html">ChiMesh/SweepUtilities/sweep_namespace.h</a>&quot;</code><br />
 </div>
 <p><a href="../../d3/dcb/chi__mesh_8h_source.html">Go to the source code of this file.</a></p>
@@ -114,43 +114,42 @@ Typedefs</h2></td></tr>
 <tr class="separator:a7e8ffeada9f9616fe9eef023a8533a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae80ecc182d386ac8201fb3330f6ae52c"><td class="memItemLeft" align="right" valign="top">typedef Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#ae80ecc182d386ac8201fb3330f6ae52c">chi_mesh::Vertex</a></td></tr>
 <tr class="separator:ae80ecc182d386ac8201fb3330f6ae52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c3635049b6a7727edc9a8a0b8b45f24"><td class="memItemLeft" align="right" valign="top">typedef Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a0c3635049b6a7727edc9a8a0b8b45f24">chi_mesh::Node</a></td></tr>
-<tr class="separator:a0c3635049b6a7727edc9a8a0b8b45f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33323541d2f8c5b0038b03f654fef29c"><td class="memItemLeft" align="right" valign="top">typedef Edge&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a33323541d2f8c5b0038b03f654fef29c">chi_mesh::Line</a></td></tr>
-<tr class="separator:a33323541d2f8c5b0038b03f654fef29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92edf6c4546a123997d7ef476f777281"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; Edge &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a92edf6c4546a123997d7ef476f777281">chi_mesh::EdgeList</a></td></tr>
-<tr class="separator:a92edf6c4546a123997d7ef476f777281"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a506916afe5f66719a771ebba664bb9a8"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; EdgeLoop * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a506916afe5f66719a771ebba664bb9a8">chi_mesh::EdgeLoopCollection</a></td></tr>
-<tr class="separator:a506916afe5f66719a771ebba664bb9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6f9155d2de7416e37dc0dc507ebb93e"><td class="memItemLeft" align="right" valign="top">typedef CellIndexMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#ad6f9155d2de7416e37dc0dc507ebb93e">chi_mesh::NodeIndexMap</a></td></tr>
-<tr class="separator:ad6f9155d2de7416e37dc0dc507ebb93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbc36b9579a1192ef6c48ae0646d7cd9"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; MeshContinuum &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a></td></tr>
 <tr class="separator:afbc36b9579a1192ef6c48ae0646d7cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ad98d4e91589e7fa4e04bd70274068362"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362">chi_mesh::MeshAttributes</a> : int { <br />
+&#160;&#160;<a class="el" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ade90288b1550646ffb617507835f50fd">chi_mesh::NONE</a> = 0
+, <a class="el" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975">chi_mesh::DIMENSION_1</a> = (1 &lt;&lt; 0)
+, <a class="el" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246">chi_mesh::DIMENSION_2</a> = (1 &lt;&lt; 1)
+, <a class="el" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">chi_mesh::DIMENSION_3</a> = (1 &lt;&lt; 2)
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ad70e9f702fc25558616c238440c8429b">chi_mesh::ORTHOGONAL</a> = (1 &lt;&lt; 3)
+, <a class="el" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362aa7f7e30403730af6eefafe7d19bcc8be">chi_mesh::EXTRUDED</a> = (1 &lt;&lt; 4)
+, <a class="el" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a082ef1cc1fab715ac789614067c1e82e">chi_mesh::UNSTRUCTURED</a> = (1 &lt;&lt; 5)
+<br />
+ }</td></tr>
+<tr class="separator:ad98d4e91589e7fa4e04bd70274068362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a10ba6abaf542d717584e31199a158958"><td class="memItemLeft" align="right" valign="top">Boundary *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a10ba6abaf542d717584e31199a158958">chi_mesh::AssignSurfaceToBoundary</a> (<a class="el" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html">chi_mesh::SurfaceMesh</a> *surface)</td></tr>
-<tr class="separator:a10ba6abaf542d717584e31199a158958"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55aa0de42096c5df928a53928143aa55"><td class="memItemLeft" align="right" valign="top">MeshHandler *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a55aa0de42096c5df928a53928143aa55">chi_mesh::GetCurrentHandler</a> ()</td></tr>
-<tr class="separator:a55aa0de42096c5df928a53928143aa55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e58c3da01b539dc6264dda196e8e6b"><td class="memItemLeft" align="right" valign="top">MeshAttributes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a43e58c3da01b539dc6264dda196e8e6b">chi_mesh::operator|</a> (const MeshAttributes f1, const MeshAttributes f2)</td></tr>
+<tr class="separator:a43e58c3da01b539dc6264dda196e8e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addcd6899961d4c527b02c33708a7941f"><td class="memItemLeft" align="right" valign="top">MeshHandler &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a> ()</td></tr>
+<tr class="separator:addcd6899961d4c527b02c33708a7941f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05ce2e71e2c83c67d2c2d94c850e716f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a05ce2e71e2c83c67d2c2d94c850e716f">chi_mesh::PushNewHandlerAndGetIndex</a> ()</td></tr>
 <tr class="separator:a05ce2e71e2c83c67d2c2d94c850e716f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e3667f7cdafb4d78ea12525863d151c"><td class="memItemLeft" align="right" valign="top">MeshHandler *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a8e3667f7cdafb4d78ea12525863d151c">chi_mesh::GetNewHandler</a> ()</td></tr>
-<tr class="separator:a8e3667f7cdafb4d78ea12525863d151c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a272d936d8dd7762d7ee33c78c6a470b2"><td class="memItemLeft" align="right" valign="top">EdgeLoopCollection *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a272d936d8dd7762d7ee33c78c6a470b2">chi_mesh::SplitEdgeLoopByAngle</a> (EdgeLoop *input, double angle=1)</td></tr>
-<tr class="separator:a272d936d8dd7762d7ee33c78c6a470b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16e8861ac0049ea5b30b57462f307491"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a16e8861ac0049ea5b30b57462f307491">chi_mesh::ComputeLBF</a> (std::vector&lt; Vector3 &gt; &amp;points, std::vector&lt; double &gt; &amp;x_cuts, std::vector&lt; double &gt; &amp;y_cuts)</td></tr>
 <tr class="separator:a16e8861ac0049ea5b30b57462f307491"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2476700f984e701b1cdb6de573748b84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a2476700f984e701b1cdb6de573748b84">chi_mesh::DecomposeSurfaceMeshPxPy</a> (SurfaceMesh *smesh, int Px, int Py)</td></tr>
-<tr class="separator:a2476700f984e701b1cdb6de573748b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae37f3910d48ed058c907b8b3a92bb2b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#ae37f3910d48ed058c907b8b3a92bb2b8">chi_mesh::SurfaceMeshImprintLine</a> (SurfaceMesh *smesh, Vertex *line_point_0, Vertex *line_point_1, double tolerance)</td></tr>
-<tr class="separator:ae37f3910d48ed058c907b8b3a92bb2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c6a1932379b25937c05847c78b6fde9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a8c6a1932379b25937c05847c78b6fde9">chi_mesh::CreateUnpartitioned1DOrthoMesh</a> (std::vector&lt; double &gt; &amp;vertices_1d)</td></tr>
-<tr class="separator:a8c6a1932379b25937c05847c78b6fde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad609b9318dfee01ac2bee2a2f6c12aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#aad609b9318dfee01ac2bee2a2f6c12aa">chi_mesh::CreateUnpartitioned2DOrthoMesh</a> (std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y)</td></tr>
-<tr class="separator:aad609b9318dfee01ac2bee2a2f6c12aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab24730aa67f71685f227ace50ddb1dce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#ab24730aa67f71685f227ace50ddb1dce">chi_mesh::CreateUnpartitioned3DOrthoMesh</a> (std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y, std::vector&lt; double &gt; &amp;vertices_1d_z)</td></tr>
-<tr class="separator:ab24730aa67f71685f227ace50ddb1dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40bf98e7abb636332e1cb549f087b84c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a40bf98e7abb636332e1cb549f087b84c">chi_mesh::DecomposeSurfaceMeshPxPy</a> (const SurfaceMesh &amp;smesh, int Px, int Py)</td></tr>
+<tr class="separator:a40bf98e7abb636332e1cb549f087b84c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff393e9ecd7af4f8b34a330aad15f77"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#aaff393e9ecd7af4f8b34a330aad15f77">chi_mesh::CreateUnpartitioned1DOrthoMesh</a> (std::vector&lt; double &gt; &amp;vertices_1d)</td></tr>
+<tr class="separator:aaff393e9ecd7af4f8b34a330aad15f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2a8c29a2bf6594288f308cc6e68b443"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#af2a8c29a2bf6594288f308cc6e68b443">chi_mesh::CreateUnpartitioned2DOrthoMesh</a> (std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y)</td></tr>
+<tr class="separator:af2a8c29a2bf6594288f308cc6e68b443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8be2fe2792a86ed2e10d14229beedb5d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a8be2fe2792a86ed2e10d14229beedb5d">chi_mesh::CreateUnpartitioned3DOrthoMesh</a> (std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y, std::vector&lt; double &gt; &amp;vertices_1d_z)</td></tr>
+<tr class="separator:a8be2fe2792a86ed2e10d14229beedb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

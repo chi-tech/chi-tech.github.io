@@ -1,6 +1,6 @@
 var classchi__mesh_1_1sweep__management_1_1_angle_set =
 [
-    [ "AngleSet", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a2a677428943684debe5601faf34d35d9", null ],
+    [ "AngleSet", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a6a299fbd6409511b4032740f6ecdf3e1", null ],
     [ "AngleSetAdvance", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a295dd5ee7bb4c3b699a25bba32453595", null ],
     [ "FlushSendBuffers", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a3b8b58c0fb731c4f424117999797ff97", null ],
     [ "GetMaxBufferMessages", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a3080001fa4bb9d625f9940d4894302f4", null ],

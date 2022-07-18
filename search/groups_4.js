@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_20boltzmann_20solver_0',['Linear Boltzmann Solver',['../d0/daf/group___lua_l_b_s.html',1,'']]]
+  ['e_20mpi_20utilities_0',['E MPI Utilities',['../dd/d5c/group__chi_m_p_i.html',1,'']]]
 ];

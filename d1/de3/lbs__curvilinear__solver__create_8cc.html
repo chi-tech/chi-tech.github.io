@@ -84,15 +84,14 @@ $(document).ready(function(){initNavTree('d1/de3/lbs__curvilinear__solver__creat
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">lbs_curvilinear_solver_create.cc File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>&quot;</code><br />
-<code>#include &quot;ChiLua/chi_lua.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d8/d54/chi__physics_8h_source.html">ChiPhysics/chi_physics.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;ChiLua/chi_lua.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/db1/lbs__curvilinear__solver_8h_source.html">LBSCurvilinear/lbs_curvilinear_solver.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>&quot;</code><br />
 </div>
 <p><a href="../../d1/de3/lbs__curvilinear__solver__create_8cc_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -100,13 +99,6 @@ $(document).ready(function(){initNavTree('d1/de3/lbs__curvilinear__solver__creat
 Functions</h2></td></tr>
 <tr class="memitem:a60cc14e51ef79d994e5b584f6f71337a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a60cc14e51ef79d994e5b584f6f71337a">chiLBSCurvilinearCreateSolver</a> (lua_State *L)</td></tr>
 <tr class="separator:a60cc14e51ef79d994e5b584f6f71337a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a5307d1d2e96bfccf9876352dfa7d0869"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d1a/class_chi_log.html">ChiLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869">chi_log</a></td></tr>
-<tr class="separator:a5307d1d2e96bfccf9876352dfa7d0869"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87694d946c53737d94052d065be89b53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de3/lbs__curvilinear__solver__create_8cc.html#a87694d946c53737d94052d065be89b53">chi_physics_handler</a></td></tr>
-<tr class="separator:a87694d946c53737d94052d065be89b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a60cc14e51ef79d994e5b584f6f71337a" name="a60cc14e51ef79d994e5b584f6f71337a"></a>
@@ -127,62 +119,12 @@ Variables</h2></td></tr>
 <p >Creates a Curvilinear Neutral Particle Transport solver.</p>
 <dl class="section return"><dt>Returns</dt><dd>SolverHandle int Handle to the solver created.</dd></dl>
 <div class="fragment"><div class="line"><span class="comment">//  cylindrical</span></div>
-<div class="line">phys1 = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#aafa6ef0d3d196de7b00bbeb3804c83e2">chiLBSCurvilinearCreateSolver</a>(<a class="code hl_namespace" href="../../df/dac/namespace_l_b_s_curvilinear.html">LBSCurvilinear</a>.CYLINDRICAL)</div>
+<div class="line">phys1 = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#aafa6ef0d3d196de7b00bbeb3804c83e2">chiLBSCurvilinearCreateSolver</a>(LBSCurvilinear.CYLINDRICAL)</div>
 <div class="line"><span class="comment">//  spherical</span></div>
-<div class="line">phys1 = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#aafa6ef0d3d196de7b00bbeb3804c83e2">chiLBSCurvilinearCreateSolver</a>(<a class="code hl_namespace" href="../../df/dac/namespace_l_b_s_curvilinear.html">LBSCurvilinear</a>.SPHERICAL)</div>
-<div class="ttc" id="anamespace_l_b_s_curvilinear_html"><div class="ttname"><a href="../../df/dac/namespace_l_b_s_curvilinear.html">LBSCurvilinear</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/db1/lbs__curvilinear__solver_8h_source.html#l00007">lbs_curvilinear_solver.h:8</a></div></div>
-<div class="ttc" id="anamespacechi__lua_html_aafa6ef0d3d196de7b00bbeb3804c83e2"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#aafa6ef0d3d196de7b00bbeb3804c83e2">chi_lua::chiLBSCurvilinearCreateSolver</a></div><div class="ttdeci">int chiLBSCurvilinearCreateSolver()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02068">lua_functions.c:2068</a></div></div>
+<div class="line">phys1 = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#aafa6ef0d3d196de7b00bbeb3804c83e2">chiLBSCurvilinearCreateSolver</a>(LBSCurvilinear.SPHERICAL)</div>
+<div class="ttc" id="anamespacechi__lua_html_aafa6ef0d3d196de7b00bbeb3804c83e2"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#aafa6ef0d3d196de7b00bbeb3804c83e2">chi_lua::chiLBSCurvilinearCreateSolver</a></div><div class="ttdeci">int chiLBSCurvilinearCreateSolver()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01944">lua_functions.c:1944</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="../../d1/de3/lbs__curvilinear__solver__create_8cc_source.html#l00022">22</a> of file <a class="el" href="../../d1/de3/lbs__curvilinear__solver__create_8cc_source.html">lbs_curvilinear_solver_create.cc</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a5307d1d2e96bfccf9876352dfa7d0869" name="a5307d1d2e96bfccf9876352dfa7d0869"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5307d1d2e96bfccf9876352dfa7d0869">&#9670;&nbsp;</a></span>chi_log</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d8/d1a/class_chi_log.html">ChiLog</a>&amp; chi_log</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00029">29</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
-
-</div>
-</div>
-<a id="a87694d946c53737d94052d065be89b53" name="a87694d946c53737d94052d065be89b53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87694d946c53737d94052d065be89b53">&#9670;&nbsp;</a></span>chi_physics_handler</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d8/d9a/class_chi_physics.html">ChiPhysics</a>&amp; chi_physics_handler</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00030">30</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/de3/lbs__curvilinear__solver__create_8cc_source.html#l00023">23</a> of file <a class="el" href="../../d1/de3/lbs__curvilinear__solver__create_8cc_source.html">lbs_curvilinear_solver_create.cc</a>.</p>
 
 </div>
 </div>
