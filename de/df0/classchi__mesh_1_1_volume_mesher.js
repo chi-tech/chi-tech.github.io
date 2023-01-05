@@ -12,7 +12,7 @@ var classchi__mesh_1_1_volume_mesher =
     [ "GetContinuum", "de/df0/classchi__mesh_1_1_volume_mesher.html#a156abc6e22ce27bdca9856319e7ae6d8", null ],
     [ "SetBndryIDFromLogical", "de/df0/classchi__mesh_1_1_volume_mesher.html#a460d66054739713c4c62449c5019bd5c", null ],
     [ "SetContinuum", "de/df0/classchi__mesh_1_1_volume_mesher.html#a3a29e0519292f73b1e02f583e5b49c50", null ],
-    [ "SetGridAttributes", "de/df0/classchi__mesh_1_1_volume_mesher.html#a3039fb54f88831b6d43661d2dfd8c22b", null ],
+    [ "SetGridAttributes", "de/df0/classchi__mesh_1_1_volume_mesher.html#a66a159c00d89c4bab73d6b8178a6297a", null ],
     [ "SetMatIDFromLogical", "de/df0/classchi__mesh_1_1_volume_mesher.html#a2ee7c927497b8dd09805ef18893026fe", null ],
     [ "SetMatIDToAll", "de/df0/classchi__mesh_1_1_volume_mesher.html#ae643a5d9cae4a895b6715a8b7d63cb86", null ],
     [ "SetupOrthogonalBoundaries", "de/df0/classchi__mesh_1_1_volume_mesher.html#a764e47804631a46e9b1236260fbcd980", null ],

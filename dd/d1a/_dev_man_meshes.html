@@ -107,9 +107,9 @@ Easily access an existing grid</h2>
 <p >We will explain the different elements of a mesh in more detail in sections below but as a quick primer we can say that mesh entities are loaded into <a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a>.</p>
 <p >You can get the current mesh-handler using:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> cur_handler = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>();</div>
-<div class="ttc" id="anamespacechi__mesh_html_addcd6899961d4c527b02c33708a7941f"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler &amp; GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00011">chi_mesh_meshhandler_utils.cc:11</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_addcd6899961d4c527b02c33708a7941f"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler &amp; GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00013">chi_mesh_meshhandler_utils.cc:13</a></div></div>
 </div><!-- fragment --><p >The computational grid is contained in a <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> object which you can obtain with:</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> grid = cur_handler-&gt;GetGrid();</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> grid_ptr = cur_handler-&gt;GetGrid();</div>
 </div><!-- fragment --><p >If there is no existing grid then one can be created as detailed in</p>
 <h2>_</h2>
 <h1><a class="anchor" id="devman_meshes_sec_1"></a>
@@ -123,13 +123,6 @@ chi_mesh::MeshHandler</h2>
 Figure 1: Overview of the mesh hierarchy.</div></div>
 <p >Even though we already showed how to obtain the handler, the "current" handler can always be obtained with:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> cur_handler = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>();</div>
-</div><!-- fragment --><h2>_</h2>
-<h2><a class="anchor" id="devman_meshes_sec1_1"></a>
-chi_mesh::Region</h2>
-<p >When loading mesh related entities, all mesh operations are pushed onto stacks contained in the current handler. This is used free-form and the user can upload as many mesh-related items as he/she desires. When specific mesh items are specific to a computational grid another grouping element is applied called a region (chi_mesh::Region). Boundaries are normally attached to regions to assist in meshing operations, although an empty boundary can also be added.</p>
-<p >To create and access grids at least one region must be present on a mesh-handler.</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> cur_region = <span class="keyword">new</span> chi_mesh::Region();</div>
-<div class="line">cur_handler-&gt;region_stack.push_back(cur_region);</div>
 </div><!-- fragment --><h2>_</h2>
 <h2><a class="anchor" id="devman_meshes_sec1_2"></a>
 chi_mesh::SurfaceMesher and chi_mesh::VolumeMesher</h2>

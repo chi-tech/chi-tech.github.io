@@ -4,10 +4,6 @@ var classchi__mesh_1_1_unpartitioned_mesh =
     [ "LightWeightCell", "da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html", "da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell" ],
     [ "LightWeightFace", "da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html", "da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face" ],
     [ "Options", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options" ],
-    [ "ParallelMethod", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a25c1e74a9ce635751a7961b67c7f9179", [
-      [ "ALL_FROM_HOME", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a25c1e74a9ce635751a7961b67c7f9179a3ec10a5142a4eb8302ba550e0097cfbc", null ],
-      [ "DIVIDE_WORK", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a25c1e74a9ce635751a7961b67c7f9179ac72e0e0a41cc98aa8ccf47d9bb843a51", null ]
-    ] ],
     [ "~UnpartitionedMesh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#aea0b47c170a9e5d498907fca19abb8a2", null ],
     [ "BuildMeshConnectivity", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a636d85ee971e6b9a1bda3bf5c5f5d76b", null ],
     [ "CleanUp", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a6f4827ce476ca6d237f4a3d68c521035", null ],

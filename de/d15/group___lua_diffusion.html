@@ -97,6 +97,14 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga5f3cac3274008b8eb938b13a0c699b1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d15/group___lua_diffusion.html#ga5f3cac3274008b8eb938b13a0c699b1c">cfem_diffusion::cfem_diffusion_lua_utils::chiCFEMDiffusionSolverCreate</a> (lua_State *L)</td></tr>
+<tr class="separator:ga5f3cac3274008b8eb938b13a0c699b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9746f1714b75f052179a500e5c5f881"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d15/group___lua_diffusion.html#gab9746f1714b75f052179a500e5c5f881">cfem_diffusion::cfem_diffusion_lua_utils::chiCFEMDiffusionSetBCProperty</a> (lua_State *L)</td></tr>
+<tr class="separator:gab9746f1714b75f052179a500e5c5f881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50832e4cb7f4ab3e961150502bae609a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d15/group___lua_diffusion.html#ga50832e4cb7f4ab3e961150502bae609a">chiDFEMDiffusionSolverCreate</a> (lua_State *L)</td></tr>
+<tr class="separator:ga50832e4cb7f4ab3e961150502bae609a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga59867f9751348247af959db11e8e4b84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d15/group___lua_diffusion.html#ga59867f9751348247af959db11e8e4b84">chiDFEMDiffusionSetBCProperty</a> (lua_State *L)</td></tr>
+<tr class="separator:ga59867f9751348247af959db11e8e4b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f7070ffcf4de1f2c4f74e1291c26e4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d15/group___lua_diffusion.html#ga8f7070ffcf4de1f2c4f74e1291c26e4c">chi_lua::chiDiffusionSetProperty</a> (int SolverHandle, string PropertyName, varying Values)</td></tr>
 <tr class="separator:ga8f7070ffcf4de1f2c4f74e1291c26e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab1d05b1f49195f0dff6fdf547687d3a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d15/group___lua_diffusion.html#gab1d05b1f49195f0dff6fdf547687d3a3">chi_lua::chiDiffusionCreateSolver</a> ()</td></tr>
@@ -108,6 +116,194 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gab9746f1714b75f052179a500e5c5f881" name="gab9746f1714b75f052179a500e5c5f881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab9746f1714b75f052179a500e5c5f881">&#9670;&nbsp;</a></span>chiCFEMDiffusionSetBCProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cfem_diffusion::cfem_diffusion_lua_utils::chiCFEMDiffusionSetBCProperty </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets a property of a Diffusion solver. Please also consult the whitepaper for the Diffusion solver (<a href="../../../../whitepages/DiffusionSolver/DiffusionSolver.pdf">Diffusion Whitepaper</a>)</p>
+<p ><br  />
+<br  />
+ Additional basic options can be set as indicated in <a class="el" href="../../d4/da7/group___lua_diffusion_basic_options.html">Basic Options</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SolverHandle</td><td>int Handle to an existing diffusion solver. </td></tr>
+    <tr><td class="paramname">PropertyName</td><td>string Name for a specific property. </td></tr>
+    <tr><td class="paramname">Values</td><td>varying Number of inputs associated with the index.<br  />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>_</h2>
+<h3>PropertyName\n</h3>
+<p >"boundary_type"<br  />
+ <a class="el" href="../../d6/dc1/classcfem__diffusion_1_1_boundary.html">Boundary</a> type. Expects boundary index then <b>BoundaryTypeName</b> then type value.<br  />
+<br  />
+ </p><div class="fragment"><div class="line">chiDiffusionsetBCproperty(solver,<span class="stringliteral">&quot;boundary_type&quot;</span>,2,<span class="stringliteral">&quot;dirichlet&quot;</span>,1.0)</div>
+</div><!-- fragment --><h3>BoundaryTypeName</h3>
+<p >reflecting<br  />
+ Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
+</p>
+<p><br  />
+<br  />
+ dirichlet<br  />
+ Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/>. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_20.png" width="38" height="15"/>
+</p>
+<p><br  />
+<br  />
+ neumann<br  />
+ Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="93" height="15"/>
+</p>
+<p><br  />
+<br  />
+ vacuum<br  />
+ Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_22.png" width="129" height="32"/>
+</p>
+<p><br  />
+<br  />
+ robin<br  />
+ Robin boundary condition of the form </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_23.png" width="125" height="15"/>
+</p>
+<p><br  />
+<br  />
+</p>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d53/_c_f_e_m_diffusion_2lua_2set_b_cproperty_8cc_source.html#l00060">60</a> of file <a class="el" href="../../d4/d53/_c_f_e_m_diffusion_2lua_2set_b_cproperty_8cc_source.html">setBCproperty.cc</a>.</p>
+
+</div>
+</div>
+<a id="ga5f3cac3274008b8eb938b13a0c699b1c" name="ga5f3cac3274008b8eb938b13a0c699b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f3cac3274008b8eb938b13a0c699b1c">&#9670;&nbsp;</a></span>chiCFEMDiffusionSolverCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cfem_diffusion::cfem_diffusion_lua_utils::chiCFEMDiffusionSolverCreate </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Creates a CFEM Diffusion solver.</p>
+<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d48/_c_f_e_m_diffusion_2lua_2create__solver_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d1/d48/_c_f_e_m_diffusion_2lua_2create__solver_8cc_source.html">create_solver.cc</a>.</p>
+
+</div>
+</div>
+<a id="ga59867f9751348247af959db11e8e4b84" name="ga59867f9751348247af959db11e8e4b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga59867f9751348247af959db11e8e4b84">&#9670;&nbsp;</a></span>chiDFEMDiffusionSetBCProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chiDFEMDiffusionSetBCProperty </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets a property of a Diffusion solver. Please also consult the whitepaper for the Diffusion solver (<a href="../../../../whitepages/DiffusionSolver/DiffusionSolver.pdf">Diffusion Whitepaper</a>)</p>
+<p ><br  />
+<br  />
+ Additional basic options can be set as indicated in <a class="el" href="../../d4/da7/group___lua_diffusion_basic_options.html">Basic Options</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SolverHandle</td><td>int Handle to an existing diffusion solver. </td></tr>
+    <tr><td class="paramname">PropertyName</td><td>string Name for a specific property. </td></tr>
+    <tr><td class="paramname">Values</td><td>varying Number of inputs associated with the index.<br  />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>_</h2>
+<h3>PropertyName\n</h3>
+<p >"boundary_type"<br  />
+ Boundary type. Expects boundary index then <b>BoundaryTypeName</b> then type value.<br  />
+<br  />
+ </p><div class="fragment"><div class="line">chiDiffusionsetBCproperty(solver,<span class="stringliteral">&quot;boundary_type&quot;</span>,2,<span class="stringliteral">&quot;dirichlet&quot;</span>,1.0)</div>
+</div><!-- fragment --><h3>BoundaryTypeName</h3>
+<p >reflecting<br  />
+ Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
+</p>
+<p><br  />
+<br  />
+ dirichlet<br  />
+ Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/>. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_20.png" width="38" height="15"/>
+</p>
+<p><br  />
+<br  />
+ neumann<br  />
+ Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="93" height="15"/>
+</p>
+<p><br  />
+<br  />
+ vacuum<br  />
+ Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_22.png" width="129" height="32"/>
+</p>
+<p><br  />
+<br  />
+ robin<br  />
+ Robin boundary condition of the form </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_23.png" width="125" height="15"/>
+</p>
+<p><br  />
+<br  />
+</p>
+<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d0e/_d_f_e_m_diffusion_2lua_2set_b_cproperty_8cc_source.html#l00058">58</a> of file <a class="el" href="../../da/d0e/_d_f_e_m_diffusion_2lua_2set_b_cproperty_8cc_source.html">setBCproperty.cc</a>.</p>
+
+</div>
+</div>
+<a id="ga50832e4cb7f4ab3e961150502bae609a" name="ga50832e4cb7f4ab3e961150502bae609a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50832e4cb7f4ab3e961150502bae609a">&#9670;&nbsp;</a></span>chiDFEMDiffusionSolverCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chiDFEMDiffusionSolverCreate </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Creates a DFEM Diffusion solver based on the interior penalty method.</p>
+<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d46/_d_f_e_m_diffusion_2lua_2create__solver_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d3/d46/_d_f_e_m_diffusion_2lua_2create__solver_8cc_source.html">create_solver.cc</a>.</p>
+
+</div>
+</div>
 <a id="gab1d05b1f49195f0dff6fdf547687d3a3" name="gab1d05b1f49195f0dff6fdf547687d3a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab1d05b1f49195f0dff6fdf547687d3a3">&#9670;&nbsp;</a></span>chiDiffusionCreateSolver()</h2>
 
@@ -125,7 +321,7 @@ Functions</h2></td></tr>
 <p >Creates a Diffusion solver. </p><dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01401">1401</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01432">1432</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -154,7 +350,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Success bool Returns if initialization failed.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01417">1417</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01448">1448</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -183,7 +379,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Success bool Returns if initialization failed.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01409">1409</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01440">1440</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -235,7 +431,7 @@ Functions</h2></td></tr>
  Boundary type. Expects boundary index then <b>BoundaryTypeName</b> then type value.<br  />
 <br  />
 </p><div class="fragment"><div class="line"><a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#ga8f7070ffcf4de1f2c4f74e1291c26e4c">chiDiffusionSetProperty</a>(solver,<span class="stringliteral">&quot;boundary_type&quot;</span>,2,<span class="stringliteral">&quot;dirichlet&quot;</span>,1.0)</div>
-<div class="ttc" id="agroup___lua_diffusion_html_ga8f7070ffcf4de1f2c4f74e1291c26e4c"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#ga8f7070ffcf4de1f2c4f74e1291c26e4c">chi_lua::chiDiffusionSetProperty</a></div><div class="ttdeci">int chiDiffusionSetProperty(int SolverHandle, string PropertyName, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01395">lua_functions.c:1395</a></div></div>
+<div class="ttc" id="agroup___lua_diffusion_html_ga8f7070ffcf4de1f2c4f74e1291c26e4c"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#ga8f7070ffcf4de1f2c4f74e1291c26e4c">chi_lua::chiDiffusionSetProperty</a></div><div class="ttdeci">int chiDiffusionSetProperty(int SolverHandle, string PropertyName, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01426">lua_functions.c:1426</a></div></div>
 </div><!-- fragment --> <h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
@@ -269,7 +465,7 @@ robin<br  />
 <br  />
  </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01395">1395</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01426">1426</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

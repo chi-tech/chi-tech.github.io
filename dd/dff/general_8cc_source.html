@@ -348,197 +348,15 @@ $(document).ready(function(){initNavTree('dd/dff/general_8cc_source.html','../..
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    }</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  }<span class="comment">//transport xs TTF</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <span class="comment">//####################################################### TRANSPORT XS D</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <span class="comment">//                                                        TRANSPORT XS SIGA</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  <span class="comment">//                                                        FIELDFUNC    Q</span></div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#adc973e4389974b8615f267372721ac2a">material_mode</a> == <a class="code hl_define" href="../../d9/d4b/diffusion__solver_8h.html#a167ed4b0d26f9e9b64aeea3527da70ec">DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF_JFULL</a>)</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  {</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="comment">//====================================== Setting D and Sigma_a</span></div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordtype">bool</span> transportxs_found = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;material-&gt;properties.size(); p++)</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    {</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      <span class="keywordflow">if</span> (std::dynamic_pointer_cast&lt;chi_physics::TransportCrossSections&gt;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>          (material-&gt;properties[p]))</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      {</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="keyword">auto</span> xs = std::static_pointer_cast&lt;chi_physics::TransportCrossSections&gt;(</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>          material-&gt;properties[p]);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="keywordflow">if</span> (!xs-&gt;diffusion_initialized)</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>          xs-&gt;ComputeDiffusionParameters();</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        diffCoeff.assign(cell_dofs,xs-&gt;D_jfull);</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        sigmaa.assign(cell_dofs,xs-&gt;sigma_a_jfull);</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        transportxs_found = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>      }</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    }<span class="comment">//for properties</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordflow">if</span> (!transportxs_found)</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    {</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">LogAllError</a>()</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        &lt;&lt; <span class="stringliteral">&quot;Diffusion Solver: Material encountered with no tranport xs&quot;</span></div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>           <span class="stringliteral">&quot; yet material mode is DIFFUSION_MATERIALS_FROM_TRANSPORTXS.&quot;</span>;</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    }</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="comment">//====================================== Setting Q</span></div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a> != <span class="keyword">nullptr</span>) and (cell_is_local))</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    {</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      std::vector&lt;uint64_t&gt; mapping;</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="comment">//      std::vector&lt;int&gt; pwld_nodes;</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="comment">//      std::vector&lt;int&gt; pwld_cells;</span></div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="comment">//</span></div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="comment">//      for (int i=0; i&lt;cell_dofs; i++)</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="comment">//      {</span></div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="comment">//        pwld_nodes.push_back(i);</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="comment">//        pwld_cells.push_back(cell_local_id);</span></div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="comment">//      }</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="comment">//</span></div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="comment">//      chi_mesh::FieldFunctionInterpolation ffinterp;</span></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="comment">//      ffinterp.grid_view = grid;</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="comment">//      ffinterp.CreatePWLDMapping(q_field-&gt;num_components,</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="comment">//                                 q_field-&gt;num_sets,</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="comment">//                                 0,0,</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="comment">//                                 pwld_nodes,pwld_cells,</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="comment">//                                 pwl_sdm-&gt;cell_dfem_block_address,</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="comment">//                                 mapping);</span></div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>      std::vector&lt;std::tuple&lt;uint64_t,uint,uint&gt;&gt; cell_node_component_tuples;</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;cell_dofs; i++)</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        cell_node_component_tuples.emplace_back(cell_local_id,i,0);</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>      <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a>-&gt;CreatePWLDMappingLocal(cell_node_component_tuples, mapping);</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;cell_dofs; i++)</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>      {</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="comment">//        sourceQ[i] = q_field-&gt;field_vector_local-&gt;operator[](mapping[i]);</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>          sourceQ[i] = <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a>-&gt;field_vector_local-&gt;at(mapping[i]);</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        }</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp; o)</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        {</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>          <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">LogAllError</a>()</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            &lt;&lt; <span class="stringliteral">&quot;Mapping error i=&quot;</span> &lt;&lt; i</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            &lt;&lt; <span class="stringliteral">&quot; mapping[i]=&quot;</span> &lt;&lt; mapping[i]</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            &lt;&lt; <span class="stringliteral">&quot; g=&quot;</span> &lt;&lt; group &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a7eff171413dc9daafd7c052e88ada518">G</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            &lt;&lt; <span class="stringliteral">&quot; ffsize=&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a>-&gt;field_vector_local-&gt;size()</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            &lt;&lt; <span class="stringliteral">&quot; dof_count=&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a9e98b0f801857ae0a2a317e1936f7be3">local_dof_count</a></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            &lt;&lt; <span class="stringliteral">&quot; cell_loc=&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a12287ec73e134ae8fdd138d2aff542aa">grid</a>-&gt;cells[cell_glob_index].partition_id;</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>          <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        }</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      }</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    }</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a> == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    {</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">LogAllError</a>()</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        &lt;&lt; <span class="stringliteral">&quot;Diffusion Solver: Material source set to field function however&quot;</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>           <span class="stringliteral">&quot; the field is empty or not set.&quot;</span>;</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>      <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    }</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  }<span class="comment">//transport xs TTF</span></div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  <span class="comment">//####################################################### TRANSPORT XS D</span></div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>  <span class="comment">//                                                        TRANSPORT XS SIGA</span></div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>  <span class="comment">//                                                        FIELDFUNC    Q</span></div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#adc973e4389974b8615f267372721ac2a">material_mode</a> == <a class="code hl_define" href="../../d9/d4b/diffusion__solver_8h.html#a7b19f2cd37c7e623ad7ee2d22d499a31">DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF_JPART</a>)</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  {</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="comment">//====================================== Setting D and Sigma_a</span></div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    <span class="keywordtype">bool</span> transportxs_found = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> p=0; p&lt;material-&gt;properties.size(); p++)</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    {</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>      <span class="keywordflow">if</span> (std::dynamic_pointer_cast&lt;chi_physics::TransportCrossSections&gt;</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>          (material-&gt;properties[p]))</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>      {</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        <span class="keyword">auto</span> xs = std::static_pointer_cast&lt;chi_physics::TransportCrossSections&gt;(</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>          material-&gt;properties[p]);</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>        <span class="keywordflow">if</span> (!xs-&gt;diffusion_initialized)</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>          xs-&gt;ComputeDiffusionParameters();</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        diffCoeff.assign(cell_dofs,xs-&gt;D_jpart);</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        sigmaa.assign(cell_dofs,xs-&gt;sigma_a_jpart);</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        transportxs_found = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>      }</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    }<span class="comment">//for properties</span></div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <span class="keywordflow">if</span> (!transportxs_found)</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    {</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>      <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">LogAllError</a>()</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        &lt;&lt; <span class="stringliteral">&quot;Diffusion Solver: Material encountered with no tranport xs&quot;</span></div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>           <span class="stringliteral">&quot; yet material mode is DIFFUSION_MATERIALS_FROM_TRANSPORTXS.&quot;</span>;</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>      <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    }</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <span class="comment">//====================================== Setting Q</span></div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a> != <span class="keyword">nullptr</span>) and (cell_is_local))</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    {</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      std::vector&lt;uint64_t&gt; mapping;</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="comment">//      std::vector&lt;int&gt; pwld_nodes;</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="comment">//      std::vector&lt;int&gt; pwld_cells;</span></div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span><span class="comment">//</span></div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><span class="comment">//      for (int i=0; i&lt;cell_dofs; i++)</span></div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span><span class="comment">//      {</span></div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="comment">//        pwld_nodes.push_back(i);</span></div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="comment">//        pwld_cells.push_back(cell_local_id);</span></div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="comment">//      }</span></div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="comment">//</span></div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="comment">//      chi_mesh::FieldFunctionInterpolation ffinterp;</span></div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="comment">//      ffinterp.grid_view = grid;</span></div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="comment">//      ffinterp.CreatePWLDMapping(q_field-&gt;num_components,</span></div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span><span class="comment">//                                 q_field-&gt;num_sets,</span></div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span><span class="comment">//                                 0,0,</span></div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span><span class="comment">//                                 pwld_nodes,pwld_cells,</span></div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span><span class="comment">//                                 pwl_sdm-&gt;cell_dfem_block_address,</span></div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="comment">//                                 mapping);</span></div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>      std::vector&lt;std::tuple&lt;uint64_t,uint,uint&gt;&gt; cell_node_component_tuples;</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;cell_dofs; i++)</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>        cell_node_component_tuples.emplace_back(cell_local_id,i,0);</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>      <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a>-&gt;CreatePWLDMappingLocal(cell_node_component_tuples, mapping);</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span> </div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;cell_dofs; i++)</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>      {</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span><span class="comment">//        sourceQ[i] = q_field-&gt;field_vector_local-&gt;operator[](mapping[i]);</span></div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>          sourceQ[i] = <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a>-&gt;field_vector_local-&gt;at(mapping[i]);</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        }</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp; o)</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        {</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>          <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">LogAllError</a>()</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>            &lt;&lt; <span class="stringliteral">&quot;Mapping error i=&quot;</span> &lt;&lt; i</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>            &lt;&lt; <span class="stringliteral">&quot; mapping[i]=&quot;</span> &lt;&lt; mapping[i]</div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>            &lt;&lt; <span class="stringliteral">&quot; g=&quot;</span> &lt;&lt; group &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a7eff171413dc9daafd7c052e88ada518">G</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>            &lt;&lt; <span class="stringliteral">&quot; ffsize=&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a>-&gt;field_vector_local-&gt;size()</div>
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>            &lt;&lt; <span class="stringliteral">&quot; dof_count=&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a9e98b0f801857ae0a2a317e1936f7be3">local_dof_count</a></div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>            &lt;&lt; <span class="stringliteral">&quot; cell_loc=&quot;</span> &lt;&lt; <a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a12287ec73e134ae8fdd138d2aff542aa">grid</a>-&gt;cells[cell_glob_index].partition_id;</div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>          <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
-<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>        }</div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>      }</div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span> </div>
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span> </div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    }</div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d6/d32/classchi__diffusion_1_1_solver.html#a5ec203db97cc30ee77aa17bd71be2d4d">q_field</a> == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>    {</div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>      <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">LogAllError</a>()</div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>        &lt;&lt; <span class="stringliteral">&quot;Diffusion Solver: Material source set to field function however&quot;</span></div>
-<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>           <span class="stringliteral">&quot; the field is empty or not set.&quot;</span>;</div>
-<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>      <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
-<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>    }</div>
-<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>  }<span class="comment">//transport xs TTF</span></div>
-<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>  {</div>
-<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a5b78f521dcc7b9fb0ab49754f91d3b93">Log0Error</a>()</div>
-<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>      &lt;&lt; <span class="stringliteral">&quot;Diffusion Solver: Invalid material mode.&quot;</span>;</div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>    <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
-<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>  }</div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span> </div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span> </div>
-<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>}</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a5b78f521dcc7b9fb0ab49754f91d3b93">Log0Error</a>()</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      &lt;&lt; <span class="stringliteral">&quot;Diffusion Solver: Invalid material mode.&quot;</span>;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  }</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>}</div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
 <div class="ttc" id="achi__physicsmaterial_8h_html"><div class="ttname"><a href="../../d4/d82/chi__physicsmaterial_8h.html">chi_physicsmaterial.h</a></div></div>
@@ -561,14 +379,12 @@ $(document).ready(function(){initNavTree('dd/dff/general_8cc_source.html','../..
 <div class="ttc" id="aclasschi__physics_1_1_solver_html_a66605765e5c38fb04a5d8bf4d5906122"><div class="ttname"><a href="../../d9/d3a/classchi__physics_1_1_solver.html#a66605765e5c38fb04a5d8bf4d5906122">chi_physics::Solver::basic_options</a></div><div class="ttdeci">BasicOptions basic_options</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/chi__solver_8h_source.html#l00021">chi_solver.h:21</a></div></div>
 <div class="ttc" id="aclasschi_html_a2457fed74471fae43ed8d6c5e91378fd"><div class="ttname"><a href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a></div><div class="ttdeci">static chi_objects::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00067">chi_runtime.h:67</a></div></div>
 <div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
-<div class="ttc" id="aclasschi_html_a4a31400d861c0fb3b6e8c809a83b53af"><div class="ttname"><a href="../../d4/d35/classchi.html#a4a31400d861c0fb3b6e8c809a83b53af">chi::GetStackItemPtr</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; &amp; GetStackItemPtr(std::vector&lt; std::shared_ptr&lt; T &gt; &gt; &amp;stack, const size_t handle, const std::string &amp;calling_function_name=&quot;Unknown&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00187">chi_runtime.h:187</a></div></div>
+<div class="ttc" id="aclasschi_html_a4a31400d861c0fb3b6e8c809a83b53af"><div class="ttname"><a href="../../d4/d35/classchi.html#a4a31400d861c0fb3b6e8c809a83b53af">chi::GetStackItemPtr</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; &amp; GetStackItemPtr(std::vector&lt; std::shared_ptr&lt; T &gt; &gt; &amp;stack, const size_t handle, const std::string &amp;calling_function_name=&quot;Unknown&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00189">chi_runtime.h:189</a></div></div>
 <div class="ttc" id="aclasschi_html_aa99611570d864cef55872bc180e0862d"><div class="ttname"><a href="../../d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d">chi::material_stack</a></div><div class="ttdeci">static std::vector&lt; chi_physics::MaterialPtr &gt; material_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00081">chi_runtime.h:81</a></div></div>
-<div class="ttc" id="aclasschi_html_adad66ec610ab1dab2bffc67c7b4fab5e"><div class="ttname"><a href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a></div><div class="ttdeci">static void Exit(int error_code)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00301">chi_runtime.cc:301</a></div></div>
+<div class="ttc" id="aclasschi_html_adad66ec610ab1dab2bffc67c7b4fab5e"><div class="ttname"><a href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a></div><div class="ttdeci">static void Exit(int error_code)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00307">chi_runtime.cc:307</a></div></div>
 <div class="ttc" id="adiffusion__solver_8h_html"><div class="ttname"><a href="../../d9/d4b/diffusion__solver_8h.html">diffusion_solver.h</a></div></div>
-<div class="ttc" id="adiffusion__solver_8h_html_a167ed4b0d26f9e9b64aeea3527da70ec"><div class="ttname"><a href="../../d9/d4b/diffusion__solver_8h.html#a167ed4b0d26f9e9b64aeea3527da70ec">DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF_JFULL</a></div><div class="ttdeci">#define DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF_JFULL</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4b/diffusion__solver_8h_source.html#l00026">diffusion_solver.h:26</a></div></div>
 <div class="ttc" id="adiffusion__solver_8h_html_a2022acdd9afb9f9b3f96515bd9d10952"><div class="ttname"><a href="../../d9/d4b/diffusion__solver_8h.html#a2022acdd9afb9f9b3f96515bd9d10952">DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF</a></div><div class="ttdeci">#define DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4b/diffusion__solver_8h_source.html#l00024">diffusion_solver.h:24</a></div></div>
 <div class="ttc" id="adiffusion__solver_8h_html_a667f8b51ac0eb00f096d920da9e91832"><div class="ttname"><a href="../../d9/d4b/diffusion__solver_8h.html#a667f8b51ac0eb00f096d920da9e91832">DIFFUSION_MATERIALS_REGULAR</a></div><div class="ttdeci">#define DIFFUSION_MATERIALS_REGULAR</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4b/diffusion__solver_8h_source.html#l00022">diffusion_solver.h:22</a></div></div>
-<div class="ttc" id="adiffusion__solver_8h_html_a7b19f2cd37c7e623ad7ee2d22d499a31"><div class="ttname"><a href="../../d9/d4b/diffusion__solver_8h.html#a7b19f2cd37c7e623ad7ee2d22d499a31">DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF_JPART</a></div><div class="ttdeci">#define DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF_JPART</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4b/diffusion__solver_8h_source.html#l00025">diffusion_solver.h:25</a></div></div>
 <div class="ttc" id="adiffusion__solver_8h_html_a9637f4af06818f11f37c376c5c96013f"><div class="ttname"><a href="../../d9/d4b/diffusion__solver_8h.html#a9637f4af06818f11f37c376c5c96013f">DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTR</a></div><div class="ttdeci">#define DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTR</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4b/diffusion__solver_8h_source.html#l00023">diffusion_solver.h:23</a></div></div>
 <div class="ttc" id="amaterial__property__scalarvalue_8h_html"><div class="ttname"><a href="../../d3/dae/material__property__scalarvalue_8h.html">material_property_scalarvalue.h</a></div></div>
 <div class="ttc" id="amaterial__property__transportxsections_8h_html"><div class="ttname"><a href="../../db/dda/material__property__transportxsections_8h.html">material_property_transportxsections.h</a></div></div>

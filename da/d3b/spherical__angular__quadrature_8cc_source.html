@@ -232,78 +232,73 @@ $(document).ready(function(){initNavTree('da/d3b/spherical__angular__quadrature_
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        &lt;&lt; <span class="stringliteral">&quot;, (phi, theta) = (&quot;</span> &lt;&lt; abscissae[k].phi &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; abscissae[k].theta &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        &lt;&lt; <span class="stringliteral">&quot;, omega = &quot;</span> &lt;&lt; omegas[k].PrintStr()</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        &lt;&lt; <span class="stringliteral">&quot;, fac_diamond_difference = &quot;</span> &lt;&lt; fac_diamond_difference[k]</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        &lt;&lt; <span class="stringliteral">&quot;, fac_streaming_operator = &quot;</span> &lt;&lt; fac_streaming_operator[k] &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">const</span> <span class="keyword">auto</span> sum_weights =</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      std::accumulate(weights.begin(), weights.end(), 0.0);</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;sum(weights) = &quot;</span> &lt;&lt; sum_weights &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  }</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        &lt;&lt; <span class="stringliteral">&quot;, fac_streaming_operator = &quot;</span> &lt;&lt; fac_streaming_operator[k]</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">const</span> <span class="keyword">auto</span> sum_weights =</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      std::accumulate(weights.begin(), weights.end(), 0.0);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;sum(weights) = &quot;</span> &lt;&lt; sum_weights &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>}</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#a165db80b96befd231944a19f8ca38f2c">  156</a></span><a class="code hl_function" href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#a165db80b96befd231944a19f8ca38f2c">chi_math::SphericalAngularQuadrature::InitializeParameters</a>()</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>{</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keyword">const</span> <span class="keyword">auto</span> pi_sum_p_weights = M_PI_2;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  fac_diamond_difference.resize(weights.size(), 1);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  fac_streaming_operator.resize(weights.size(), 0);</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="comment">//  interface quantities initialised to starting direction values</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="keywordtype">double</span> alpha_interface = 0;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordtype">double</span> theta_interface = abscissae[map_directions[0].front()].theta;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  std::vector&lt;double&gt; mu_interface(2, std::cos(theta_interface));</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="comment">//  initialisation permits to forego start direction and final direction</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> p = 1; p &lt; map_directions.size()-1; ++p)</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  {</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keyword">const</span> <span class="keyword">auto</span> k = map_directions[p][0];</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">const</span> <span class="keyword">auto</span> w_p = weights[k];</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keyword">const</span> <span class="keyword">auto</span> mu_p = omegas[k].z;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keyword">const</span> <span class="keyword">auto</span> theta_p = abscissae[k].theta;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    alpha_interface -= w_p * mu_p;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#a165db80b96befd231944a19f8ca38f2c">  157</a></span><a class="code hl_function" href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#a165db80b96befd231944a19f8ca38f2c">chi_math::SphericalAngularQuadrature::InitializeParameters</a>()</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>{</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  fac_diamond_difference.resize(weights.size(), 1);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  fac_streaming_operator.resize(weights.size(), 0);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="comment">//  interface quantities initialised to starting direction values</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keywordtype">double</span> alpha_interface = 0;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  std::vector&lt;double&gt; mu_interface(2, omegas[map_directions[0].front()].z);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="comment">//  initialisation permits to forego start direction and final direction</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> p = 1; p &lt; map_directions.size()-1; ++p)</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keyword">const</span> <span class="keyword">auto</span> k = map_directions[p][0];</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keyword">const</span> <span class="keyword">auto</span> w_p = weights[k];</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keyword">const</span> <span class="keyword">auto</span> mu_p = omegas[k].z;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    alpha_interface -= w_p * mu_p;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    mu_interface[0] = mu_interface[1];</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    mu_interface[1] += w_p;</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    theta_interface -= w_p * pi_sum_p_weights;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    mu_interface[0] = mu_interface[1];</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    mu_interface[1] = std::cos(theta_interface);</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keyword">const</span> <span class="keyword">auto</span> mu = std::cos(theta_p);</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keyword">const</span> <span class="keyword">auto</span> tau = (mu - mu_interface[0]) / (mu_interface[1] - mu_interface[0]);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    fac_diamond_difference[k] = tau;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    fac_streaming_operator[k] = alpha_interface / (w_p * tau) + mu_p;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    fac_streaming_operator[k] *= 2;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  }</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>}</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#af3a471f7bf5e9530c9d38a877d1db178">  193</a></span><a class="code hl_function" href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#af3a471f7bf5e9530c9d38a877d1db178">chi_math::SphericalAngularQuadrature::MakeHarmonicIndices</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> scattering_order, <span class="keywordtype">int</span> dimension)</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>{</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="keywordflow">if</span> (m_to_ell_em_map.empty())</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  {</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">if</span> (dimension == 1)</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 0; l &lt;= scattering_order; ++l)</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        m_to_ell_em_map.emplace_back(l, 0);</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;chi_math::SphericalAngularQuadrature::MakeHarmonicIndices : &quot;</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                                  <span class="stringliteral">&quot;invalid dimension.&quot;</span>);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  }</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>}</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keyword">const</span> <span class="keyword">auto</span> tau = (mu_p - mu_interface[0]) / (mu_interface[1] - mu_interface[0]);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    fac_diamond_difference[k] = tau;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    fac_streaming_operator[k] = alpha_interface / (w_p * tau) + mu_p;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    fac_streaming_operator[k] *= 2;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#af3a471f7bf5e9530c9d38a877d1db178">  188</a></span><a class="code hl_function" href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#af3a471f7bf5e9530c9d38a877d1db178">chi_math::SphericalAngularQuadrature::MakeHarmonicIndices</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> scattering_order, <span class="keywordtype">int</span> dimension)</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>{</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <span class="keywordflow">if</span> (m_to_ell_em_map.empty())</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordflow">if</span> (dimension == 1)</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 0; l &lt;= scattering_order; ++l)</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        m_to_ell_em_map.emplace_back(l, 0);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;chi_math::SphericalAngularQuadrature::MakeHarmonicIndices : &quot;</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                                  <span class="stringliteral">&quot;invalid dimension.&quot;</span>);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>}</div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_curvilinear_angular_quadrature_html"><div class="ttname"><a href="../../d9/dc1/classchi__math_1_1_curvilinear_angular_quadrature.html">chi_math::CurvilinearAngularQuadrature</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dec/curvilinear__angular__quadrature_8h_source.html#l00014">curvilinear_angular_quadrature.h:15</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_quadrature_html"><div class="ttname"><a href="../../d3/dbf/classchi__math_1_1_quadrature.html">chi_math::Quadrature</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d4c/quadrature_8h_source.html#l00033">quadrature.h:34</a></div></div>
-<div class="ttc" id="aclasschi__math_1_1_spherical_angular_quadrature_html_a165db80b96befd231944a19f8ca38f2c"><div class="ttname"><a href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#a165db80b96befd231944a19f8ca38f2c">chi_math::SphericalAngularQuadrature::InitializeParameters</a></div><div class="ttdeci">void InitializeParameters()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3b/spherical__angular__quadrature_8cc_source.html#l00156">spherical_angular_quadrature.cc:156</a></div></div>
+<div class="ttc" id="aclasschi__math_1_1_spherical_angular_quadrature_html_a165db80b96befd231944a19f8ca38f2c"><div class="ttname"><a href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#a165db80b96befd231944a19f8ca38f2c">chi_math::SphericalAngularQuadrature::InitializeParameters</a></div><div class="ttdeci">void InitializeParameters()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3b/spherical__angular__quadrature_8cc_source.html#l00157">spherical_angular_quadrature.cc:157</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_spherical_angular_quadrature_html_a7f896799b15cf35363bf6fc1c2b16223"><div class="ttname"><a href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#a7f896799b15cf35363bf6fc1c2b16223">chi_math::SphericalAngularQuadrature::Initialize</a></div><div class="ttdeci">void Initialize(const chi_math::Quadrature &amp;quad_polar, const bool verbose=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3b/spherical__angular__quadrature_8cc_source.html#l00022">spherical_angular_quadrature.cc:23</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_spherical_angular_quadrature_html_aa2fb1a9c4fab7f0bd000e6c3738e8544"><div class="ttname"><a href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#aa2fb1a9c4fab7f0bd000e6c3738e8544">chi_math::SphericalAngularQuadrature::SphericalAngularQuadrature</a></div><div class="ttdeci">SphericalAngularQuadrature(const chi_math::Quadrature &amp;quad_polar, const bool verbose=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3b/spherical__angular__quadrature_8cc_source.html#l00011">spherical_angular_quadrature.cc:12</a></div></div>
-<div class="ttc" id="aclasschi__math_1_1_spherical_angular_quadrature_html_af3a471f7bf5e9530c9d38a877d1db178"><div class="ttname"><a href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#af3a471f7bf5e9530c9d38a877d1db178">chi_math::SphericalAngularQuadrature::MakeHarmonicIndices</a></div><div class="ttdeci">void MakeHarmonicIndices(unsigned int scattering_order, int dimension) override</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3b/spherical__angular__quadrature_8cc_source.html#l00193">spherical_angular_quadrature.cc:193</a></div></div>
+<div class="ttc" id="aclasschi__math_1_1_spherical_angular_quadrature_html_af3a471f7bf5e9530c9d38a877d1db178"><div class="ttname"><a href="../../de/de3/classchi__math_1_1_spherical_angular_quadrature.html#af3a471f7bf5e9530c9d38a877d1db178">chi_math::SphericalAngularQuadrature::MakeHarmonicIndices</a></div><div class="ttdeci">void MakeHarmonicIndices(unsigned int scattering_order, int dimension) override</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3b/spherical__angular__quadrature_8cc_source.html#l00188">spherical_angular_quadrature.cc:188</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00025">chi_log.cc:25</a></div></div>
 <div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ae9d5df571cd219e6731bcd6d74c85af4"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ae9d5df571cd219e6731bcd6d74c85af4">chi_math::Vector3</a></div><div class="ttdeci">VectorN&lt; 3 &gt; Vector3</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d77/chi__math__vector_n_x_8h_source.html#l00474">chi_math_vectorNX.h:474</a></div></div>
 <div class="ttc" id="aspherical__angular__quadrature_8h_html"><div class="ttname"><a href="../../de/d43/spherical__angular__quadrature_8h.html">spherical_angular_quadrature.h</a></div></div>
-<div class="ttc" id="astructchi__math_1_1_quadrature_point_phi_theta_html"><div class="ttname"><a href="../../dc/d9c/structchi__math_1_1_quadrature_point_phi_theta.html">chi_math::QuadraturePointPhiTheta</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d27/angular__quadrature__base_8h_source.html#l00022">angular_quadrature_base.h:23</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00011">chi_meshvector.h:12</a></div></div>
+<div class="ttc" id="astructchi__math_1_1_quadrature_point_phi_theta_html"><div class="ttname"><a href="../../dc/d9c/structchi__math_1_1_quadrature_point_phi_theta.html">chi_math::QuadraturePointPhiTheta</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d27/angular__quadrature__base_8h_source.html#l00023">angular_quadrature_base.h:24</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00018">chi_meshvector.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

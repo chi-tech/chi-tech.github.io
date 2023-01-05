@@ -102,12 +102,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a793701b7ff285bc48c35ab94543aaae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a32b424cc61067cfa80cbb8a5d3b6ce"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a0a32b424cc61067cfa80cbb8a5d3b6ce">operator[]</a> (uint64_t cell_global_index) const</td></tr>
 <tr class="separator:a0a32b424cc61067cfa80cbb8a5d3b6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5ceb48f6db68f3e64006963dadb074d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#af5ceb48f6db68f3e64006963dadb074d">GetNumGhosts</a> ()</td></tr>
-<tr class="separator:af5ceb48f6db68f3e64006963dadb074d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a313a02cb9a237097cb32570693da5276"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a313a02cb9a237097cb32570693da5276">GetGhostGlobalIDs</a> ()</td></tr>
-<tr class="separator:a313a02cb9a237097cb32570693da5276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51b692082c795a705422ee40bb929f46"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a51b692082c795a705422ee40bb929f46">GetGhostLocalID</a> (int cell_global_index)</td></tr>
-<tr class="separator:a51b692082c795a705422ee40bb929f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e2591ebb32fc493bb91f1b6727398fc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a3e2591ebb32fc493bb91f1b6727398fc">GetNumGhosts</a> () const</td></tr>
+<tr class="separator:a3e2591ebb32fc493bb91f1b6727398fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cfb4c76fffddd1ebf4519e707cf4ff6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a5cfb4c76fffddd1ebf4519e707cf4ff6">GetGhostGlobalIDs</a> () const</td></tr>
+<tr class="separator:a5cfb4c76fffddd1ebf4519e707cf4ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b52c4b088a581ed4aa6ca226ec01b84"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a6b52c4b088a581ed4aa6ca226ec01b84">GetGhostLocalID</a> (uint64_t cell_global_index) const</td></tr>
+<tr class="separator:a6b52c4b088a581ed4aa6ca226ec01b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -194,8 +194,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a313a02cb9a237097cb32570693da5276" name="a313a02cb9a237097cb32570693da5276"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a313a02cb9a237097cb32570693da5276">&#9670;&nbsp;</a></span>GetGhostGlobalIDs()</h2>
+<a id="a5cfb4c76fffddd1ebf4519e707cf4ff6" name="a5cfb4c76fffddd1ebf4519e707cf4ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cfb4c76fffddd1ebf4519e707cf4ff6">&#9670;&nbsp;</a></span>GetGhostGlobalIDs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,18 +204,18 @@ Friends</h2></td></tr>
           <td class="memname">std::vector&lt; uint64_t &gt; chi_mesh::GlobalCellHandler::GetGhostGlobalIDs </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p >Returns the cell global ids of all ghost cells. These are cells that neighbors to this partition's cells but are on a different partition. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00108">108</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00105">105</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
 
 </div>
 </div>
-<a id="a51b692082c795a705422ee40bb929f46" name="a51b692082c795a705422ee40bb929f46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51b692082c795a705422ee40bb929f46">&#9670;&nbsp;</a></span>GetGhostLocalID()</h2>
+<a id="a6b52c4b088a581ed4aa6ca226ec01b84" name="a6b52c4b088a581ed4aa6ca226ec01b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b52c4b088a581ed4aa6ca226ec01b84">&#9670;&nbsp;</a></span>GetGhostLocalID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,20 +223,20 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">uint64_t chi_mesh::GlobalCellHandler::GetGhostLocalID </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>cell_global_index</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p >Returns the local storage address of a ghost cell. If the ghost is not truly a ghost then -1 is returned, but is wasteful and therefore the user of this function should implement code to prevent it. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00125">125</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00122">122</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
 
 </div>
 </div>
-<a id="af5ceb48f6db68f3e64006963dadb074d" name="af5ceb48f6db68f3e64006963dadb074d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5ceb48f6db68f3e64006963dadb074d">&#9670;&nbsp;</a></span>GetNumGhosts()</h2>
+<a id="a3e2591ebb32fc493bb91f1b6727398fc" name="a3e2591ebb32fc493bb91f1b6727398fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e2591ebb32fc493bb91f1b6727398fc">&#9670;&nbsp;</a></span>GetNumGhosts()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +248,7 @@ Friends</h2></td></tr>
           <td class="memname">size_t chi_mesh::GlobalCellHandler::GetNumGhosts </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -279,7 +279,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a reference to a cell given its global cell index. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00041">41</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00038">38</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
 
 </div>
 </div>
@@ -300,7 +300,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a const reference to a cell given its global cell index. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00065">65</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00062">62</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
 
 </div>
 </div>
@@ -321,7 +321,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Adds a new cell to grid registry. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00008">8</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
 
 </div>
 </div>

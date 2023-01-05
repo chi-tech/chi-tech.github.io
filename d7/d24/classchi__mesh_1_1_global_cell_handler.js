@@ -1,9 +1,9 @@
 var classchi__mesh_1_1_global_cell_handler =
 [
     [ "GlobalCellHandler", "d7/d24/classchi__mesh_1_1_global_cell_handler.html#a20a66397c9f30ae359c96b7a039532c1", null ],
-    [ "GetGhostGlobalIDs", "d7/d24/classchi__mesh_1_1_global_cell_handler.html#a313a02cb9a237097cb32570693da5276", null ],
-    [ "GetGhostLocalID", "d7/d24/classchi__mesh_1_1_global_cell_handler.html#a51b692082c795a705422ee40bb929f46", null ],
-    [ "GetNumGhosts", "d7/d24/classchi__mesh_1_1_global_cell_handler.html#af5ceb48f6db68f3e64006963dadb074d", null ],
+    [ "GetGhostGlobalIDs", "d7/d24/classchi__mesh_1_1_global_cell_handler.html#a5cfb4c76fffddd1ebf4519e707cf4ff6", null ],
+    [ "GetGhostLocalID", "d7/d24/classchi__mesh_1_1_global_cell_handler.html#a6b52c4b088a581ed4aa6ca226ec01b84", null ],
+    [ "GetNumGhosts", "d7/d24/classchi__mesh_1_1_global_cell_handler.html#a3e2591ebb32fc493bb91f1b6727398fc", null ],
     [ "operator[]", "d7/d24/classchi__mesh_1_1_global_cell_handler.html#a793701b7ff285bc48c35ab94543aaae2", null ],
     [ "operator[]", "d7/d24/classchi__mesh_1_1_global_cell_handler.html#a0a32b424cc61067cfa80cbb8a5d3b6ce", null ],
     [ "push_back", "d7/d24/classchi__mesh_1_1_global_cell_handler.html#ab4e2a60c6b451417a9dc3e4cfc75efb4", null ],

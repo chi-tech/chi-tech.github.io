@@ -5,7 +5,6 @@ var classchi__physics_1_1_transport_cross_sections =
     [ "TransportCrossSections", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#aa7e9f54c2750ef5d1f6e780ab9bb4c11", null ],
     [ "ComputeAbsorptionXSFromTransfer", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a5be726a2acfbee5dd72ee76cfff0deda", null ],
     [ "ComputeDiffusionParameters", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a63ad022618b97d9fbe8a11501710ca8c", null ],
-    [ "EnergyCollapse", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a2d0217d5570ba619ccdf46ff6b86337f", null ],
     [ "ExportToChiFormat", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a68789638aedb16da6f41a9e8220d045d", null ],
     [ "FinalizeCrossSections", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a69a340762e37a9350e082faa4bbe53e9", null ],
     [ "MakeCombined", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#adc8e8f3277b47ed41a3b7524909e8172", null ],
@@ -19,8 +18,6 @@ var classchi__physics_1_1_transport_cross_sections =
     [ "chi", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#ab3305f0647a9a3572b272ea276592b12", null ],
     [ "chi_delayed", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#aa41ea4a8ab0a52d94903ce8f00ffc824", null ],
     [ "chi_prompt", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a8e2bf5e1d228af65e396beeab662ea99", null ],
-    [ "D_jfull", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a83afab391936f9670fb642086d6071ee", null ],
-    [ "D_jpart", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a451cadeb4d7210d0c8b1e2e28cc8a951", null ],
     [ "diffusion_coeff", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a2e6891f3ed377e333e439ef69e83ce8d", null ],
     [ "diffusion_initialized", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a84997a065caeb8e90e9572f55561782d", null ],
     [ "inv_velocity", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#ab67a89b924b3b5b65f1c7e46b391f1dc", null ],
@@ -39,13 +36,9 @@ var classchi__physics_1_1_transport_cross_sections =
     [ "scattering_initialized", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#aab95bf6dcae6ca40e7ba6c4c551352c1", null ],
     [ "scattering_order", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#add32f4973542ac9db6ea4c3aba25aaa3", null ],
     [ "sigma_a", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a95374be4030fdd97856f6b5e4ecf206c", null ],
-    [ "sigma_a_jfull", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a06be32155bc01db364bd6acb288a4fa8", null ],
-    [ "sigma_a_jpart", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a67cc7cfac8e57c91f82cb5448a98bb21", null ],
     [ "sigma_f", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a9c2f5249f07ef8d308bdd3c6dcca2c77", null ],
     [ "sigma_removal", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#ad36f76ca2bb343c35fafef4833f33fe0", null ],
     [ "sigma_s_gtog", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a23134d83916363f44ba4e52885778deb", null ],
     [ "sigma_t", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a62966ccc648b679e2f9bfb0681d392dd", null ],
-    [ "transfer_matrices", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a2962e74b2d283fb637ec2a450d616b9d", null ],
-    [ "xi_Jfull", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#ad4587d322cb470183c23f0631d67d833", null ],
-    [ "xi_Jpart", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#aa3da299e7c6e80a6b87a7d12735fdc5d", null ]
+    [ "transfer_matrices", "d3/dff/classchi__physics_1_1_transport_cross_sections.html#a2962e74b2d283fb637ec2a450d616b9d", null ]
 ];

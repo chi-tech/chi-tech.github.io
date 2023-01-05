@@ -6,7 +6,6 @@ var dir_4829ae06e2741f2fb51a2f0c151eaae1 =
     [ "prop_transportxs_01b_readfromchi.cc", "df/d95/prop__transportxs__01b__readfromchi_8cc.html", null ],
     [ "prop_transportxs_01c_finalize.cc", "de/dd6/prop__transportxs__01c__finalize_8cc.html", null ],
     [ "prop_transportxs_02_diffparams.cc", "db/df0/prop__transportxs__02__diffparams_8cc.html", null ],
-    [ "prop_transportxs_03_ecollapse.cc", "d1/db7/prop__transportxs__03__ecollapse_8cc.html", null ],
     [ "prop_transportxs_05_pushlua.cc", "da/dd1/prop__transportxs__05__pushlua_8cc.html", null ],
     [ "prop_transportxs_06_export.cc", "d1/d7b/prop__transportxs__06__export_8cc.html", null ]
 ];

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['lbs_0',['lbs',['../d9/d42/namespacelbs.html',1,'']]],
-  ['lbs_5fadjoint_1',['lbs_adjoint',['../de/ded/namespacelbs__adjoint.html',1,'']]],
-  ['lbs_5fcurvilinear_2',['lbs_curvilinear',['../dc/dad/namespacelbs__curvilinear.html',1,'']]],
-  ['lua_5futils_3',['lua_utils',['../d0/d3d/namespacelbs__curvilinear_1_1lua__utils.html',1,'lbs_curvilinear']]]
+  ['dfem_5fdiffusion_0',['dfem_diffusion',['../dc/dbe/namespacedfem__diffusion.html',1,'']]],
+  ['dfem_5fdiffusion_5flua_5futils_1',['dfem_diffusion_lua_utils',['../da/dda/namespacedfem__diffusion_1_1dfem__diffusion__lua__utils.html',1,'dfem_diffusion']]]
 ];

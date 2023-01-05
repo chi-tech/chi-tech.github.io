@@ -1,6 +1,4 @@
 var lbs__classicrichardson_8cc =
 [
-    [ "chi_log", "d9/d45/lbs__classicrichardson_8cc.html#a5307d1d2e96bfccf9876352dfa7d0869", null ],
-    [ "chi_mpi", "d9/d45/lbs__classicrichardson_8cc.html#aff18523449a2997a122381af7ab97f4d", null ],
-    [ "chi_program_timer", "d9/d45/lbs__classicrichardson_8cc.html#adc1b2db4f75dab650895a0e0ec8e748e", null ]
+    [ "sc_double", "d9/d45/lbs__classicrichardson_8cc.html#a844cd31b92c178d55e117cb0471a1d85", null ]
 ];

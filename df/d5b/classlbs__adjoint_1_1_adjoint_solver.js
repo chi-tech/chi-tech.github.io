@@ -10,7 +10,8 @@ var classlbs__adjoint_1_1_adjoint_solver =
     [ "ExportImportanceMap", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#a0af25800020c72d122b7e22f39f0d346", null ],
     [ "Initialize", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#aac54f0e19fbacac0b6771812f23570a3", null ],
     [ "operator=", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#a0f10baafb8d38147f0deed49069fa035", null ],
-    [ "SetSource", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#a803f3a1422a2ded25a10dd326ba0777e", null ],
+    [ "SetAdjointSource", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#a468a946bb70bc487bb1b58a0073ba0a2", null ],
+    [ "m_moment_buffers", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#afb69bda352ca569d22a7d2e18f1947e6", null ],
     [ "matid_to_S_transpose", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#a124f13b438363bea14213608d4a739d2", null ],
     [ "response_functions", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#a904b653b7fddf3f4a1a1cb603bfba65e", null ]
 ];

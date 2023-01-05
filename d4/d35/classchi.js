@@ -8,6 +8,7 @@ var classchi =
     [ "Finalize", "d4/d35/classchi.html#a88720f743f80818b08e68716233d9051", null ],
     [ "GetStackItem", "d4/d35/classchi.html#af43ceb1c400e48570becf01d97e6deb3", null ],
     [ "GetStackItemPtr", "d4/d35/classchi.html#a4a31400d861c0fb3b6e8c809a83b53af", null ],
+    [ "GetVersionStr", "d4/d35/classchi.html#a9ec1229b6f859cf9cf59c28ee97facaa", null ],
     [ "Initialize", "d4/d35/classchi.html#a4e6b239c3512a82a18bb114f84bf22e8", null ],
     [ "operator=", "d4/d35/classchi.html#aa2ce58747c37ab12ff944051c9911131", null ],
     [ "RunBatch", "d4/d35/classchi.html#ad2e614f7b9733c863908ce0eeb4480f1", null ],

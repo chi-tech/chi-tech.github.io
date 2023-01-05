@@ -1,6 +1,7 @@
 var namespacechi__data__types =
 [
     [ "ByteArray", "d5/d5b/classchi__data__types_1_1_byte_array.html", "d5/d5b/classchi__data__types_1_1_byte_array" ],
+    [ "NDArray", "d2/d5d/classchi__data__types_1_1_n_d_array.html", "d2/d5d/classchi__data__types_1_1_n_d_array" ],
     [ "Varying", "d8/d30/classchi__data__types_1_1_varying.html", "d8/d30/classchi__data__types_1_1_varying" ],
     [ "VaryingDataType", "d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542", [
       [ "VOID", "d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542a6d0c9fc747131795e6e5d0c5119f12cb", null ],

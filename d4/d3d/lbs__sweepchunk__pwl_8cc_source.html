@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('d4/d3d/lbs__sweepchunk__pwl_8cc_source
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                std::vector&lt;double&gt;&amp; destination_psi,</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                <span class="keyword">const</span> std::vector&lt;double&gt;&amp; source_moments,</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <a class="code hl_class" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a>&amp; in_groupset,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keyword">const</span> <a class="code hl_typedef" href="../../df/d60/lbs__sweepchunk__pwl_8h.html#a8e289307b2398fdd227cc37f08018ddd">TCrossSections</a>&amp; in_xsections,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keyword">const</span> <a class="code hl_typedef" href="../../db/ddb/lbts__sweepchunk__pwl_8h.html#a8e289307b2398fdd227cc37f08018ddd">TCrossSections</a>&amp; in_xsections,</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> in_num_moms,</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> in_max_num_cell_dofs)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                    : <a class="code hl_class" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">SweepChunk</a>(destination_phi, destination_psi,</div>
@@ -121,307 +121,303 @@ $(document).ready(function(){initNavTree('d4/d3d/lbs__sweepchunk__pwl_8cc_source
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                      a_and_b_initialized(false)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{}</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#ifdef WITH_READABLE_CHUNK</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">/**Actual sweep function*/</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a4ccebe0ece6c63f6b3ccab404269e5fa">lbs::SweepChunkPWL::</a></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><a class="code hl_function" href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a4ccebe0ece6c63f6b3ccab404269e5fa">  Sweep</a>(<a class="code hl_class" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html">chi_mesh::sweep_management::AngleSet</a> *angle_set)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordflow">if</span> (!a_and_b_initialized)</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    Amat.resize(max_num_cell_dofs, std::vector&lt;double&gt;(max_num_cell_dofs));</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    Atemp.resize(max_num_cell_dofs, std::vector&lt;double&gt;(max_num_cell_dofs));</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    b.resize(num_grps, std::vector&lt;double&gt;(max_num_cell_dofs, 0.0));</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    source.resize(max_num_cell_dofs, 0.0);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    a_and_b_initialized = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keyword">const</span> <span class="keyword">auto</span> spds = angle_set-&gt;<a class="code hl_function" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a9fff223add17714355547a965f6396d9">GetSPDS</a>();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">const</span> <span class="keyword">auto</span> fluds = angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a7d3f3b813cc09205e23fd98c38b5d931">fluds</a>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> surface_source_active = IsSurfaceSourceActive();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  std::vector&lt;double&gt;&amp; output_phi = GetDestinationPhi();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  std::vector&lt;double&gt;&amp; output_psi = GetDestinationPsi();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="../../d9/dc3/lbs__groupset_8h.html#a0d44fd13ecd4e245aff54517db32b61d">GsSubSet</a>&amp; subset = groupset.grp_subsets[angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#ab7b6f31036eb673f40ff9221ffa9226e">ref_subset</a>];</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> gs_ss_size  = groupset.grp_subset_sizes[angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#ab7b6f31036eb673f40ff9221ffa9226e">ref_subset</a>];</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> gs_ss_begin = subset.first;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> gs_gi = groupset.groups[gs_ss_begin].id; <span class="comment">// Groupset subset first group number</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordtype">int</span> deploc_face_counter = -1;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">int</span> preloc_face_counter = -1;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keyword">auto</span> <span class="keyword">const</span>&amp; d2m_op = groupset.quadrature-&gt;GetDiscreteToMomentOperator();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keyword">auto</span> <span class="keyword">const</span>&amp; m2d_op = groupset.quadrature-&gt;GetMomentToDiscreteOperator();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="comment">// ========================================================== Loop over each cell</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keywordtype">size_t</span> num_loc_cells = spds-&gt;spls.item_id.size();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> spls_index = 0; spls_index &lt; num_loc_cells; ++spls_index)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> cell_local_id = spds-&gt;spls.item_id[spls_index];</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell = grid_view-&gt;local_cells[cell_local_id];</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; fe_intgrl_values = grid_fe_view.GetUnitIntegrals(cell);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_faces = cell.faces.size();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(fe_intgrl_values.NumNodes());</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">auto</span>&amp; transport_view = grid_transport_view[cell.local_id];</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sigma_tg = transport_view.XS().sigma_t;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    std::vector&lt;bool&gt; face_incident_flags(num_faces, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::vector&lt;double&gt; face_mu_values(num_faces, 0.0);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// =================================================== Get Cell matrices</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; G           = fe_intgrl_values.GetIntV_shapeI_gradshapeJ();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; M           = fe_intgrl_values.GetIntV_shapeI_shapeJ();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; M_surf      = fe_intgrl_values.GetIntS_shapeI_shapeJ();</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; IntS_shapeI = fe_intgrl_values.GetIntS_shapeI();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a859d713a7641154c99f4f341695577a4">   36</a></span><span class="keywordtype">double</span>* <a class="code hl_function" href="../../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a859d713a7641154c99f4f341695577a4">lbs::SweepChunkPWL::Upwinder::</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><a class="code hl_function" href="../../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a859d713a7641154c99f4f341695577a4">GetUpwindPsi</a>(<span class="keywordtype">int</span> fj, <span class="keywordtype">bool</span> local, <span class="keywordtype">bool</span> boundary)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordtype">double</span>* psi;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordflow">if</span> (local)             psi = fluds-&gt;UpwindPsi(spls_index,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                                in_face_counter,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                                                fj,0,angle_set_index);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not boundary) psi = fluds-&gt;NLUpwindPsi(preloc_face_counter,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                                                  fj,0,angle_set_index);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">else</span>                   psi = angle_set-&gt;PsiBndry(bndry_id,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                                                   angle_num,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                                                   cell_local_id,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                                   f, fj, gs_gi, gs_ss_begin,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                                                   surface_source_active);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordflow">return</span> psi;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#aa4cc33efa4fd1afce35e26ad27109c5e">   53</a></span><span class="keywordtype">double</span>* <a class="code hl_function" href="../../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#aa4cc33efa4fd1afce35e26ad27109c5e">lbs::SweepChunkPWL::Upwinder::</a></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><a class="code hl_function" href="../../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#aa4cc33efa4fd1afce35e26ad27109c5e">GetDownwindPsi</a>(<span class="keywordtype">int</span> fi, <span class="keywordtype">bool</span> local, <span class="keywordtype">bool</span> boundary, <span class="keywordtype">bool</span> reflecting_bndry)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">double</span>* psi;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordflow">if</span> (local)                 psi = fluds-&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      OutgoingPsi(spls_index,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                  out_face_counter,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                  fi, angle_set_index);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not boundary)     psi = fluds-&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      NLOutgoingPsi(deploc_face_counter,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    fi, angle_set_index);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (reflecting_bndry) psi = angle_set-&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      ReflectingPsiOutBoundBndry(bndry_id, angle_num,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                 cell_local_id, f,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                                 fi, gs_ss_begin);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    psi = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordflow">return</span> psi;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">/**Actual sweep function*/</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a4ccebe0ece6c63f6b3ccab404269e5fa">   76</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a4ccebe0ece6c63f6b3ccab404269e5fa">lbs::SweepChunkPWL::</a></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><a class="code hl_function" href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a4ccebe0ece6c63f6b3ccab404269e5fa">Sweep</a>(<a class="code hl_class" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html">chi_mesh::sweep_management::AngleSet</a> *angle_set)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordflow">if</span> (!a_and_b_initialized)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    Amat.resize(max_num_cell_dofs, std::vector&lt;double&gt;(max_num_cell_dofs));</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    Atemp.resize(max_num_cell_dofs, std::vector&lt;double&gt;(max_num_cell_dofs));</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    b.resize(num_grps, std::vector&lt;double&gt;(max_num_cell_dofs, 0.0));</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    source.resize(max_num_cell_dofs, 0.0);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    a_and_b_initialized = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// =================================================== Loop over angles in set</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> ni_deploc_face_counter = deploc_face_counter;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> ni_preloc_face_counter = preloc_face_counter;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> as_num_angles = angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a6e46d934193597294b66a759b28a93fb">angles</a>.size();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> angle_set_index = 0; angle_set_index&lt;as_num_angles; ++angle_set_index)</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      deploc_face_counter = ni_deploc_face_counter;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      preloc_face_counter = ni_preloc_face_counter;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> angle_num = angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a6e46d934193597294b66a759b28a93fb">angles</a>[angle_set_index];</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      <span class="keyword">const</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>&amp; omega = groupset.quadrature-&gt;omegas[angle_num];</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> wt = groupset.quadrature-&gt;weights[angle_num];</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <span class="comment">// ============================================ Gradient matrix</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_nodes; ++j)</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>          Amat[i][j] = omega.<a class="code hl_function" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a810a528610394fd3344fb996af7dfc07">Dot</a>(G[i][j]);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keyword">const</span> <span class="keyword">auto</span> spds = angle_set-&gt;<a class="code hl_function" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a9fff223add17714355547a965f6396d9">GetSPDS</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keyword">const</span> <span class="keyword">auto</span> fluds = angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a7d3f3b813cc09205e23fd98c38b5d931">fluds</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> surface_source_active = IsSurfaceSourceActive();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  std::vector&lt;double&gt;&amp; output_phi = GetDestinationPhi();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  std::vector&lt;double&gt;&amp; output_psi = GetDestinationPsi();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keyword">const</span> <a class="code hl_struct" href="../../da/d31/structlbs_1_1_sub_set_info.html">SubSetInfo</a>&amp; grp_ss_info = groupset.grp_subset_infos[angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a051f6e2248b2a009853d8d6daa7ec06a">ref_subset</a>];</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> gs_ss_size  = grp_ss_info.<a class="code hl_variable" href="../../da/d31/structlbs_1_1_sub_set_info.html#a09b431e1a0d78eda44bd77e1638fd05d">ss_size</a>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> gs_ss_begin = grp_ss_info.<a class="code hl_variable" href="../../da/d31/structlbs_1_1_sub_set_info.html#ad43bdedd1d6f94982f693c1aecf02ae7">ss_begin</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keyword">const</span> <span class="keywordtype">int</span>    gs_gi = groupset.groups[gs_ss_begin].id; <span class="comment">// Groupset subset first group number</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordtype">int</span> deploc_face_counter = -1;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordtype">int</span> preloc_face_counter = -1;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keyword">auto</span> <span class="keyword">const</span>&amp; d2m_op = groupset.quadrature-&gt;GetDiscreteToMomentOperator();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keyword">auto</span> <span class="keyword">const</span>&amp; m2d_op = groupset.quadrature-&gt;GetMomentToDiscreteOperator();</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        b[gsg].assign(num_nodes, 0.0);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; psi_uk_man = groupset.psi_uk_man;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keyword">typedef</span> <span class="keyword">const</span> int64_t cint64_t;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <span class="comment">// ============================================ Surface integrals</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keywordtype">int</span> in_face_counter = -1;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; num_faces; ++f)</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; face = cell.faces[f];</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> mu = omega.<a class="code hl_function" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a810a528610394fd3344fb996af7dfc07">Dot</a>(face.normal);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        face_mu_values[f] = mu;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">if</span> (mu &lt; 0.0) <span class="comment">// Upwind</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>          face_incident_flags[f] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> local = transport_view.IsFaceLocal(f);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> boundary = not face.has_neighbor;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>          <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_face_indices = face.vertex_ids.size();</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>          <span class="keywordflow">if</span> (local)</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>          {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            in_face_counter++;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fi = 0; fi &lt; num_face_indices; ++fi)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>              <span class="keyword">const</span> <span class="keywordtype">int</span> i = fe_intgrl_values.FaceDofMapping(f,fi);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fj = 0; fj &lt; num_face_indices; ++fj)</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>              {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> j = fe_intgrl_values.FaceDofMapping(f,fj);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                <span class="keyword">const</span> <span class="keywordtype">double</span> *psi = fluds-&gt;UpwindPsi(spls_index,in_face_counter,fj,0,angle_set_index);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                <span class="keyword">const</span> <span class="keywordtype">double</span> mu_Nij = -mu * M_surf[f][i][j];</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                Amat[i][j] += mu_Nij;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                  b[gsg][i] += psi[gsg]*mu_Nij;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>              }</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>          }</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not boundary)</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>          {</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            preloc_face_counter++;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fi = 0; fi &lt; num_face_indices; ++fi)</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            {</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>              <span class="keyword">const</span> <span class="keywordtype">int</span> i = fe_intgrl_values.FaceDofMapping(f,fi);</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fj = 0; fj &lt; num_face_indices; ++fj)</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>              {</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> j = fe_intgrl_values.FaceDofMapping(f,fj);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                <span class="keyword">const</span> <span class="keywordtype">double</span> *psi = fluds-&gt;NLUpwindPsi(preloc_face_counter,fj,0,angle_set_index);</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                <span class="keyword">const</span> <span class="keywordtype">double</span> mu_Nij = -mu * M_surf[f][i][j];</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                Amat[i][j] += mu_Nij;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                  b[gsg][i] += psi[gsg]*mu_Nij;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>              }</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            }</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>          }</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>          <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>          {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="comment">// This counter update-logic is for mapping an incident boundary</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="comment">// condition. Because it is cheap, the cell faces was mapped to a</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="comment">// corresponding boundary during initialization and is</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="comment">// independent of angle. Accessing things like reflective boundary</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="comment">// angular fluxes (and complex boundary conditions), requires the</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <span class="comment">// more general bndry_face_counter.</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            <span class="keyword">const</span> uint64_t bndry_index = face.neighbor_id;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fi = 0; fi &lt; num_face_indices; ++fi)</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>              <span class="keyword">const</span> <span class="keywordtype">int</span> i = fe_intgrl_values.FaceDofMapping(f,fi);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fj = 0; fj &lt; num_face_indices; ++fj)</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>              {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> j = fe_intgrl_values.FaceDofMapping(f,fj);</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <span class="keyword">const</span> <span class="keywordtype">double</span> *psi = angle_set-&gt;<a class="code hl_function" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#ae00ae6f0f2fcb850b8a90ddc9a61dd78">PsiBndry</a>(bndry_index,</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                                                        angle_num,</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                                                        cell.local_id,</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                                                        f, fj, gs_gi, gs_ss_begin,</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                                                        surface_source_active);</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <span class="keyword">const</span> <span class="keywordtype">double</span> mu_Nij = -mu * M_surf[f][i][j];</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                Amat[i][j] += mu_Nij;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                  b[gsg][i] += psi[gsg]*mu_Nij;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>              }</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            }</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>          }</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        } <span class="comment">// if upwind</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      } <span class="comment">// for f</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>      <span class="comment">// ========================================== Looping over groups</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>      {</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> g = gs_gi+gsg;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="comment">// ========================================================== Loop over each cell</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordtype">size_t</span> num_loc_cells = spds-&gt;spls.item_id.size();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> spls_index = 0; spls_index &lt; num_loc_cells; ++spls_index)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> cell_local_id = spds-&gt;spls.item_id[spls_index];</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell = grid_view-&gt;local_cells[cell_local_id];</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; fe_intgrl_values = grid_fe_view.GetUnitIntegrals(cell);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_faces = cell.faces.size();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(fe_intgrl_values.NumNodes());</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">auto</span>&amp; transport_view = grid_transport_view[cell.local_id];</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sigma_tg = transport_view.XS().sigma_t;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    std::vector&lt;bool&gt; face_incident_flags(num_faces, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    std::vector&lt;double&gt; face_mu_values(num_faces, 0.0);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">// =================================================== Get Cell matrices</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; G           = fe_intgrl_values.GetIntV_shapeI_gradshapeJ();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; M           = fe_intgrl_values.GetIntV_shapeI_shapeJ();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; M_surf      = fe_intgrl_values.GetIntS_shapeI_shapeJ();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; IntS_shapeI = fe_intgrl_values.GetIntS_shapeI();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">// =================================================== Loop over angles in set</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> ni_deploc_face_counter = deploc_face_counter;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> ni_preloc_face_counter = preloc_face_counter;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> as_num_angles = angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#ac909d9e97ded12834e34549f6fb69686">angles</a>.size();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> angle_set_index = 0; angle_set_index&lt;as_num_angles; ++angle_set_index)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      deploc_face_counter = ni_deploc_face_counter;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      preloc_face_counter = ni_preloc_face_counter;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> angle_num = angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#ac909d9e97ded12834e34549f6fb69686">angles</a>[angle_set_index];</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      <span class="keyword">const</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>&amp; omega = groupset.quadrature-&gt;omegas[angle_num];</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> wt = groupset.quadrature-&gt;weights[angle_num];</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>      <span class="comment">// ============================================ Gradient matrix</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_nodes; ++j)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>          Amat[i][j] = omega.<a class="code hl_function" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a810a528610394fd3344fb996af7dfc07">Dot</a>(G[i][j]);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        b[gsg].assign(num_nodes, 0.0);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <span class="comment">// ============================================ Upwinding structure</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      <a class="code hl_struct" href="../../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html">Upwinder</a> upwind{fluds, angle_set, spls_index, angle_set_index,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="comment">/*in_face_counter*/</span>0,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="comment">/*preloc_face_counter*/</span>0,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="comment">/*out_face_counter*/</span>0,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="comment">/*deploc_face_counter*/</span>0,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="comment">/*bndry_id*/</span>0, angle_num, cell.local_id,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="comment">/*f*/</span>0,gs_gi, gs_ss_begin,</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                      surface_source_active};</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <span class="comment">// ============================================ Surface integrals</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      <span class="keywordtype">int</span> in_face_counter = -1;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; num_faces; ++f)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; face = cell.faces[f];</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> mu = omega.<a class="code hl_function" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a810a528610394fd3344fb996af7dfc07">Dot</a>(face.normal);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        face_mu_values[f] = mu;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">if</span> (mu &gt;= 0.0) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        face_incident_flags[f] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> local = transport_view.IsFaceLocal(f);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> boundary = not face.has_neighbor;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keyword">const</span> uint64_t bndry_id = face.neighbor_id;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">if</span> (local)             ++in_face_counter;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not boundary) ++preloc_face_counter;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        upwind.in_face_counter = in_face_counter;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        upwind.preloc_face_counter = preloc_face_counter;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        upwind.bndry_id = bndry_id;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        upwind.f = f;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_face_indices = face.vertex_ids.size();</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fi = 0; fi &lt; num_face_indices; ++fi)</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>          <span class="keyword">const</span> <span class="keywordtype">int</span> i = fe_intgrl_values.FaceDofMapping(f,fi);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fj = 0; fj &lt; num_face_indices; ++fj)</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>          {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> j = fe_intgrl_values.FaceDofMapping(f,fj);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <span class="keyword">const</span> <span class="keywordtype">double</span>* psi = upwind.GetUpwindPsi(fj, local, boundary);</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="comment">// ============================= Contribute source moments</span></div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        {</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>          <span class="keywordtype">double</span> temp_src = 0.0;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; num_moms; ++m)</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>          {</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> ir = transport_view.MapDOF(i, m, g);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            temp_src += m2d_op[m][angle_num]*q_moments[ir];</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>          }</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>          source[i] = temp_src;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        }</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="comment">// ============================= Mass Matrix and Source</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> sigma_tgr = sigma_tg[g];</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        {</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>          <span class="keywordtype">double</span> temp = 0.0;</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_nodes; ++j)</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>          {</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <span class="keyword">const</span> <span class="keywordtype">double</span> Mij = M[i][j];</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            Atemp[i][j] = Amat[i][j] + Mij*sigma_tgr;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            temp += Mij*source[j];</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>          }</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>          b[gsg][i] += temp;</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        }</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="comment">// ============================= Solve system</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#ac5008abb8163f2ed4c36a231352d42a8">chi_math::GaussElimination</a>(Atemp, b[gsg], num_nodes);</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      }</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      <span class="comment">// ============================= Accumulate flux</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; num_moms; ++m)</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      {</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> wn_d2m = d2m_op[m][angle_num];</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        {</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>          <span class="keyword">const</span> <span class="keywordtype">size_t</span> ir = transport_view.MapDOF(i, m, gs_gi);</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            output_phi[ir + gsg] += wn_d2m * b[gsg][i];</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        }</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>      }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; callback : moment_callbacks)</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        callback(<span class="keyword">this</span>, angle_set);</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      <span class="comment">// ============================= Save angular fluxes if needed</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>      <span class="keywordflow">if</span> (save_angular_flux)</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      {</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; psi_uk_man = groupset.psi_uk_man;</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>          int64_t ir = grid_fe_view.MapDOFLocal(cell,i,psi_uk_man,angle_num,0);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            output_psi[ir + gsg] = b[gsg][i];</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        }<span class="comment">//for i</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      }<span class="comment">//if save psi</span></div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="keywordtype">int</span> out_face_counter = -1;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; num_faces; ++f)</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      {</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keywordflow">if</span> (face_incident_flags[f]) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <span class="keywordtype">double</span> mu = face_mu_values[f];</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="comment">// ============================= Set flags and counters</span></div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        out_face_counter++;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; face = cell.faces[f];</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> local = transport_view.IsFaceLocal(f);</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> boundary = not face.has_neighbor;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_face_indices = face.vertex_ids.size();</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keyword">const</span> std::vector&lt;double&gt;&amp; IntF_shapeI = IntS_shapeI[f];</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordflow">if</span> (local)</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        {</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fi = 0; fi &lt; num_face_indices; ++fi)</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>          {</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> i = fe_intgrl_values.FaceDofMapping(f,fi);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            <span class="keywordtype">double</span> *psi = fluds-&gt;OutgoingPsi(spls_index, out_face_counter, fi, angle_set_index);</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>              psi[gsg] = b[gsg][i];</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>          }</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not boundary)</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        {</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>          deploc_face_counter++;</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fi = 0; fi &lt; num_face_indices; ++fi)</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>          {</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> i = fe_intgrl_values.FaceDofMapping(f,fi);</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            <span class="keywordtype">double</span> *psi = fluds-&gt;NLOutgoingPsi(deploc_face_counter, fi, angle_set_index);</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>              psi[gsg] = b[gsg][i];</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>          }</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        }</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordflow">else</span> <span class="comment">// Store outgoing reflecting Psi</span></div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>          <span class="keyword">const</span> uint64_t bndry_index = face.neighbor_id;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>          <span class="keywordflow">if</span> (angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a9cf0607c8ebdbcf110c6effbb31f6e79">ref_boundaries</a>[bndry_index]-&gt;IsReflecting())</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>          {</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fi = 0; fi &lt; num_face_indices; ++fi)</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            {</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>              <span class="keyword">const</span> <span class="keywordtype">int</span> i = fe_intgrl_values.FaceDofMapping(f,fi);</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>              <span class="keywordtype">double</span> *psi = angle_set-&gt;<a class="code hl_function" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#af2f4de0d7bd5579ae78e6bfc4b462b10">ReflectingPsiOutBoundBndry</a>(bndry_index, angle_num,</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                                                                  cell.local_id, f,</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                                                                  fi, gs_ss_begin);</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                psi[gsg] = b[gsg][i];</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            }</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>          }</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>          <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>          {</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fi = 0; fi &lt; num_face_indices; ++fi)</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            {</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>              <span class="keyword">const</span> <span class="keywordtype">int</span> i = fe_intgrl_values.FaceDofMapping(f,fi);</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                transport_view.AddOutflow(gs_gi + gsg,</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                                          wt*mu*b[gsg][i]*IntF_shapeI[i]);</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            }</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>          }</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        }<span class="comment">//bndry</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>      }<span class="comment">//for face</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    } <span class="comment">// for n</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  } <span class="comment">// for cell</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>}<span class="comment">//Sweep</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="preprocessor">#endif </span><span class="comment">//WITH_READABLE_CHUNK</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <span class="keyword">const</span> <span class="keywordtype">double</span> mu_Nij = -mu * M_surf[f][i][j];</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            Amat[i][j] += mu_Nij;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>              b[gsg][i] += psi[gsg]*mu_Nij;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>          }<span class="comment">//for face j</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        }<span class="comment">//for face i</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      } <span class="comment">// for f</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      <span class="comment">// ========================================== Looping over groups</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> g = gs_gi+gsg;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="comment">// ============================= Contribute source moments</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="comment">// q = M_n^T * q_moms</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>          <span class="keywordtype">double</span> temp_src = 0.0;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; num_moms; ++m)</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>          {</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> ir = transport_view.MapDOF(i, m, g);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            temp_src += m2d_op[m][angle_num]*q_moments[ir];</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>          }<span class="comment">//for m</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>          source[i] = temp_src;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        }<span class="comment">//for i</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="comment">// ============================= Mass Matrix and Source</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <span class="comment">// Atemp  = Amat + sigma_tgr * M</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="comment">// b     += M * q</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> sigma_tgr = sigma_tg[g];</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>          <span class="keywordtype">double</span> temp = 0.0;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_nodes; ++j)</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>          {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keyword">const</span> <span class="keywordtype">double</span> Mij = M[i][j];</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            Atemp[i][j] = Amat[i][j] + Mij*sigma_tgr;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            temp += Mij*source[j];</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>          }<span class="comment">//for j</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>          b[gsg][i] += temp;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        }<span class="comment">//for i</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="comment">// ============================= Solve system</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#ac5008abb8163f2ed4c36a231352d42a8">chi_math::GaussElimination</a>(Atemp, b[gsg], num_nodes);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      <span class="comment">// ============================= Accumulate flux</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; num_moms; ++m)</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> wn_d2m = d2m_op[m][angle_num];</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>          <span class="keyword">const</span> <span class="keywordtype">size_t</span> ir = transport_view.MapDOF(i, m, gs_gi);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            output_phi[ir + gsg] += wn_d2m * b[gsg][i];</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        }</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; callback : moment_callbacks)</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        callback(<span class="keyword">this</span>, angle_set);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <span class="comment">// ============================= Save angular fluxes if needed</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <span class="keywordflow">if</span> (save_angular_flux)</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>          cint64_t imap = grid_fe_view.MapDOFLocal(cell,i,psi_uk_man,angle_num,0);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            output_psi[imap + gsg] = b[gsg][i];</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        }<span class="comment">//for i</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      }<span class="comment">//if save psi</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      <span class="keywordtype">int</span> out_face_counter = -1;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; num_faces; ++f)</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <span class="keywordflow">if</span> (face_incident_flags[f]) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordtype">double</span> mu = face_mu_values[f];</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="comment">// ============================= Set flags and counters</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        out_face_counter++;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; face = cell.faces[f];</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> local = transport_view.IsFaceLocal(f);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> boundary = not face.has_neighbor;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_face_indices = face.vertex_ids.size();</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keyword">const</span> std::vector&lt;double&gt;&amp; IntF_shapeI = IntS_shapeI[f];</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keyword">const</span> uint64_t bndry_id = face.neighbor_id;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordtype">bool</span> reflecting_bndry = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="keywordflow">if</span> (boundary)</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>          <span class="keywordflow">if</span> (angle_set-&gt;<a class="code hl_variable" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a9cf0607c8ebdbcf110c6effbb31f6e79">ref_boundaries</a>[bndry_id]-&gt;IsReflecting())</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            reflecting_bndry = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keywordflow">if</span> (not boundary and not local) ++deploc_face_counter;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        upwind.out_face_counter = out_face_counter;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        upwind.deploc_face_counter = deploc_face_counter;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        upwind.bndry_id = bndry_id;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        upwind.f = f;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> fi = 0; fi &lt; num_face_indices; ++fi)</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>          <span class="keyword">const</span> <span class="keywordtype">int</span> i = fe_intgrl_values.FaceDofMapping(f,fi);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>          <span class="keywordtype">double</span>* psi = upwind.GetDownwindPsi(fi, local, boundary, reflecting_bndry);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>          <span class="keywordflow">if</span> (not boundary or reflecting_bndry)</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>              psi[gsg] = b[gsg][i];</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>          <span class="keywordflow">if</span> (boundary and not reflecting_bndry)</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gsg = 0; gsg &lt; gs_ss_size; ++gsg)</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>              transport_view.AddOutflow(gs_gi + gsg,</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                                        wt*mu*b[gsg][i]*IntF_shapeI[i]);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        }<span class="comment">//for fi</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      }<span class="comment">//for face</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    } <span class="comment">// for n</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  } <span class="comment">// for cell</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>}<span class="comment">//Sweep</span></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclasschi__math_1_1_spatial_discretization___p_w_l_d_html"><div class="ttname"><a href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html">chi_math::SpatialDiscretization_PWLD</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/pwl_8h_source.html#l00023">pwl.h:24</a></div></div>
+<div class="ttc" id="aclasschi__math_1_1_spatial_discretization___p_w_l_d_html"><div class="ttname"><a href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html">chi_math::SpatialDiscretization_PWLD</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/pwl_8h_source.html#l00014">pwl.h:15</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html">chi_mesh::sweep_management::AngleSet</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df2/angleset_8h_source.html#l00017">angleset.h:18</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html_a6e46d934193597294b66a759b28a93fb"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a6e46d934193597294b66a759b28a93fb">chi_mesh::sweep_management::AngleSet::angles</a></div><div class="ttdeci">std::vector&lt; int &gt; angles</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df2/angleset_8h_source.html#l00028">angleset.h:28</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html_a051f6e2248b2a009853d8d6daa7ec06a"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a051f6e2248b2a009853d8d6daa7ec06a">chi_mesh::sweep_management::AngleSet::ref_subset</a></div><div class="ttdeci">size_t ref_subset</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df2/angleset_8h_source.html#l00030">angleset.h:30</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html_a7d3f3b813cc09205e23fd98c38b5d931"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a7d3f3b813cc09205e23fd98c38b5d931">chi_mesh::sweep_management::AngleSet::fluds</a></div><div class="ttdeci">FLUDS * fluds</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df2/angleset_8h_source.html#l00027">angleset.h:27</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html_a9cf0607c8ebdbcf110c6effbb31f6e79"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a9cf0607c8ebdbcf110c6effbb31f6e79">chi_mesh::sweep_management::AngleSet::ref_boundaries</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; SweepBndry &gt; &gt; &amp; ref_boundaries</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df2/angleset_8h_source.html#l00029">angleset.h:29</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html_a9fff223add17714355547a965f6396d9"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a9fff223add17714355547a965f6396d9">chi_mesh::sweep_management::AngleSet::GetSPDS</a></div><div class="ttdeci">std::shared_ptr&lt; chi_mesh::sweep_management::SPDS &gt; GetSPDS()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d47/angleset_8cc_source.html#l00119">angleset.cc:119</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html_ab7b6f31036eb673f40ff9221ffa9226e"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#ab7b6f31036eb673f40ff9221ffa9226e">chi_mesh::sweep_management::AngleSet::ref_subset</a></div><div class="ttdeci">int ref_subset</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df2/angleset_8h_source.html#l00030">angleset.h:30</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html_ae00ae6f0f2fcb850b8a90ddc9a61dd78"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#ae00ae6f0f2fcb850b8a90ddc9a61dd78">chi_mesh::sweep_management::AngleSet::PsiBndry</a></div><div class="ttdeci">double * PsiBndry(uint64_t bndry_map, int angle_num, uint64_t cell_local_id, int face_num, int fi, int g, int gs_ss_begin, bool surface_source_active)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d47/angleset_8cc_source.html#l00162">angleset.cc:163</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html_af2f4de0d7bd5579ae78e6bfc4b462b10"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#af2f4de0d7bd5579ae78e6bfc4b462b10">chi_mesh::sweep_management::AngleSet::ReflectingPsiOutBoundBndry</a></div><div class="ttdeci">double * ReflectingPsiOutBoundBndry(uint64_t bndry_map, int angle_num, uint64_t cell_local_id, int face_num, int fi, int gs_ss_begin)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d47/angleset_8cc_source.html#l00184">angleset.cc:185</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html_a9fff223add17714355547a965f6396d9"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a9fff223add17714355547a965f6396d9">chi_mesh::sweep_management::AngleSet::GetSPDS</a></div><div class="ttdeci">std::shared_ptr&lt; chi_mesh::sweep_management::SPDS &gt; GetSPDS()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d47/angleset_8cc_source.html#l00109">angleset.cc:109</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_angle_set_html_ac909d9e97ded12834e34549f6fb69686"><div class="ttname"><a href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#ac909d9e97ded12834e34549f6fb69686">chi_mesh::sweep_management::AngleSet::angles</a></div><div class="ttdeci">std::vector&lt; size_t &gt; angles</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df2/angleset_8h_source.html#l00028">angleset.h:28</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_sweep_chunk_html"><div class="ttname"><a href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc1/sweepchunk__base_8h_source.html#l00010">sweepchunk_base.h:11</a></div></div>
-<div class="ttc" id="aclasslbs_1_1_l_b_s_groupset_html"><div class="ttname"><a href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">lbs::LBSGroupset</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00028">lbs_groupset.h:29</a></div></div>
+<div class="ttc" id="aclasslbs_1_1_l_b_s_groupset_html"><div class="ttname"><a href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">lbs::LBSGroupset</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00030">lbs_groupset.h:31</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_sweep_chunk_p_w_l_html_a1494988d8988299bf82343e78c7cbc6c"><div class="ttname"><a href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a1494988d8988299bf82343e78c7cbc6c">lbs::SweepChunkPWL::SweepChunkPWL</a></div><div class="ttdeci">SweepChunkPWL(std::shared_ptr&lt; chi_mesh::MeshContinuum &gt; grid_ptr, chi_math::SpatialDiscretization_PWLD &amp;discretization, std::vector&lt; lbs::CellLBSView &gt; &amp;cell_transport_views, std::vector&lt; double &gt; &amp;destination_phi, std::vector&lt; double &gt; &amp;destination_psi, const std::vector&lt; double &gt; &amp;source_moments, LBSGroupset &amp;in_groupset, const TCrossSections &amp;in_xsections, int in_num_moms, int in_max_num_cell_dofs)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d3d/lbs__sweepchunk__pwl_8cc_source.html#l00010">lbs_sweepchunk_pwl.cc:11</a></div></div>
-<div class="ttc" id="aclasslbs_1_1_sweep_chunk_p_w_l_html_a4ccebe0ece6c63f6b3ccab404269e5fa"><div class="ttname"><a href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a4ccebe0ece6c63f6b3ccab404269e5fa">lbs::SweepChunkPWL::Sweep</a></div><div class="ttdeci">void Sweep(chi_mesh::sweep_management::AngleSet *angle_set) override</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0c/lbs__sweepchunk__pwl2_8cc_source.html#l00052">lbs_sweepchunk_pwl2.cc:53</a></div></div>
+<div class="ttc" id="aclasslbs_1_1_sweep_chunk_p_w_l_html_a4ccebe0ece6c63f6b3ccab404269e5fa"><div class="ttname"><a href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a4ccebe0ece6c63f6b3ccab404269e5fa">lbs::SweepChunkPWL::Sweep</a></div><div class="ttdeci">void Sweep(chi_mesh::sweep_management::AngleSet *angle_set) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d3d/lbs__sweepchunk__pwl_8cc_source.html#l00076">lbs_sweepchunk_pwl.cc:77</a></div></div>
 <div class="ttc" id="albs__groupset_8h_html"><div class="ttname"><a href="../../d9/dc3/lbs__groupset_8h.html">lbs_groupset.h</a></div></div>
-<div class="ttc" id="albs__groupset_8h_html_a0d44fd13ecd4e245aff54517db32b61d"><div class="ttname"><a href="../../d9/dc3/lbs__groupset_8h.html#a0d44fd13ecd4e245aff54517db32b61d">GsSubSet</a></div><div class="ttdeci">std::pair&lt; int, int &gt; GsSubSet</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00085">lbs_groupset.h:85</a></div></div>
 <div class="ttc" id="albs__sweepchunk__pwl_8h_html"><div class="ttname"><a href="../../df/d60/lbs__sweepchunk__pwl_8h.html">lbs_sweepchunk_pwl.h</a></div></div>
-<div class="ttc" id="albs__sweepchunk__pwl_8h_html_a8e289307b2398fdd227cc37f08018ddd"><div class="ttname"><a href="../../df/d60/lbs__sweepchunk__pwl_8h.html#a8e289307b2398fdd227cc37f08018ddd">TCrossSections</a></div><div class="ttdeci">std::map&lt; int, std::shared_ptr&lt; chi_physics::TransportCrossSections &gt; &gt; TCrossSections</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00013">lbs_sweepchunk_pwl.h:13</a></div></div>
+<div class="ttc" id="albts__sweepchunk__pwl_8h_html_a8e289307b2398fdd227cc37f08018ddd"><div class="ttname"><a href="../../db/ddb/lbts__sweepchunk__pwl_8h.html#a8e289307b2398fdd227cc37f08018ddd">TCrossSections</a></div><div class="ttdeci">std::map&lt; int, std::shared_ptr&lt; chi_physics::TransportCrossSections &gt; &gt; TCrossSections</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddb/lbts__sweepchunk__pwl_8h_source.html#l00011">lbts_sweepchunk_pwl.h:11</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ac5008abb8163f2ed4c36a231352d42a8"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ac5008abb8163f2ed4c36a231352d42a8">chi_math::GaussElimination</a></div><div class="ttdeci">void GaussElimination(MatDbl &amp;A, VecDbl &amp;b, int n)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d6a/chi__math__02__matrix__operations_8cc_source.html#l00277">chi_math_02_matrix_operations.cc:277</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00011">chi_meshvector.h:12</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_vector3_html_a810a528610394fd3344fb996af7dfc07"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a810a528610394fd3344fb996af7dfc07">chi_mesh::Vector3::Dot</a></div><div class="ttdeci">Vector3 Dot(const chi_mesh::TensorRank2Dim3 &amp;that) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d2b/chi__mesh__utilities_8cc_source.html#l00022">chi_mesh_utilities.cc:22</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00018">chi_meshvector.h:19</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_vector3_html_a810a528610394fd3344fb996af7dfc07"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a810a528610394fd3344fb996af7dfc07">chi_mesh::Vector3::Dot</a></div><div class="ttdeci">Vector3 Dot(const chi_mesh::TensorRank2Dim3 &amp;that) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d2b/chi__mesh__utilities_8cc_source.html#l00019">chi_mesh_utilities.cc:19</a></div></div>
+<div class="ttc" id="astructlbs_1_1_sub_set_info_html"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html">lbs::SubSetInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00010">lbs_make_subset.h:11</a></div></div>
+<div class="ttc" id="astructlbs_1_1_sub_set_info_html_a09b431e1a0d78eda44bd77e1638fd05d"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html#a09b431e1a0d78eda44bd77e1638fd05d">lbs::SubSetInfo::ss_size</a></div><div class="ttdeci">size_t ss_size</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00014">lbs_make_subset.h:14</a></div></div>
+<div class="ttc" id="astructlbs_1_1_sub_set_info_html_ad43bdedd1d6f94982f693c1aecf02ae7"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html#ad43bdedd1d6f94982f693c1aecf02ae7">lbs::SubSetInfo::ss_begin</a></div><div class="ttdeci">size_t ss_begin</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00012">lbs_make_subset.h:12</a></div></div>
+<div class="ttc" id="astructlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder_html"><div class="ttname"><a href="../../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html">lbs::SweepChunkPWL::Upwinder</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00054">lbs_sweepchunk_pwl.h:55</a></div></div>
+<div class="ttc" id="astructlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder_html_a859d713a7641154c99f4f341695577a4"><div class="ttname"><a href="../../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a859d713a7641154c99f4f341695577a4">lbs::SweepChunkPWL::Upwinder::GetUpwindPsi</a></div><div class="ttdeci">double * GetUpwindPsi(int fj, bool local, bool boundary) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d3d/lbs__sweepchunk__pwl_8cc_source.html#l00036">lbs_sweepchunk_pwl.cc:37</a></div></div>
+<div class="ttc" id="astructlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder_html_aa4cc33efa4fd1afce35e26ad27109c5e"><div class="ttname"><a href="../../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#aa4cc33efa4fd1afce35e26ad27109c5e">lbs::SweepChunkPWL::Upwinder::GetDownwindPsi</a></div><div class="ttdeci">double * GetDownwindPsi(int fi, bool local, bool boundary, bool reflecting_bndry) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d3d/lbs__sweepchunk__pwl_8cc_source.html#l00053">lbs_sweepchunk_pwl.cc:54</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

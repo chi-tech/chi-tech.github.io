@@ -1,5 +1,6 @@
 var classlbs_1_1_sweep_chunk_p_w_l =
 [
+    [ "Upwinder", "da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html", "da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder" ],
     [ "SweepChunkPWL", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a1494988d8988299bf82343e78c7cbc6c", null ],
     [ "Sweep", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a4ccebe0ece6c63f6b3ccab404269e5fa", null ],
     [ "a_and_b_initialized", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a8d0c37a0dedf348c22d4a6d53511a05d", null ],

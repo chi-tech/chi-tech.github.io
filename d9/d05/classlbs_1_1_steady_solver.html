@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('d9/d05/classlbs_1_1_steady_solver.html
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-types">Private Types</a>  </div>
@@ -103,6 +104,7 @@ Inheritance diagram for lbs::SteadySolver:</div>
 <area href="../../d7/d41/classlbs_1_1_k_eigenvalue_solver.html" alt="lbs::KEigenvalueSolver" shape="rect" coords="0,112,154,136"/>
 <area href="../../df/d5b/classlbs__adjoint_1_1_adjoint_solver.html" alt="lbs_adjoint::AdjointSolver" shape="rect" coords="164,112,318,136"/>
 <area href="../../d9/df7/classlbs__curvilinear_1_1_solver.html" alt="lbs_curvilinear::Solver" shape="rect" coords="328,112,482,136"/>
+<area href="../../da/dc0/classlbs_1_1_transient_solver.html" alt="lbs::TransientSolver" shape="rect" coords="0,168,154,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -122,10 +124,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85c38fc71967b330a2d2df8e16caea5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bd188c70de556ff754d48481486aa04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a6bd188c70de556ff754d48481486aa04">PrintSimHeader</a> ()</td></tr>
 <tr class="separator:a6bd188c70de556ff754d48481486aa04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e2438f7dd95f18db69577e8cf9cedd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a6e2438f7dd95f18db69577e8cf9cedd1">InitMaterials</a> (std::set&lt; int &gt; &amp;material_ids)</td></tr>
-<tr class="separator:a6e2438f7dd95f18db69577e8cf9cedd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462b5f30af132866819f5b9628c8570f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a462b5f30af132866819f5b9628c8570f">InitMaterials</a> ()</td></tr>
+<tr class="separator:a462b5f30af132866819f5b9628c8570f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f31d2d6c9209a3230b1623fe3ac711"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a60f31d2d6c9209a3230b1623fe3ac711">InitializeSpatialDiscretization</a> ()</td></tr>
 <tr class="separator:a60f31d2d6c9209a3230b1623fe3ac711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10a53583fa857af51d4391ad8c425b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#aa10a53583fa857af51d4391ad8c425b8">ComputeUnitIntegrals</a> ()</td></tr>
+<tr class="separator:aa10a53583fa857af51d4391ad8c425b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f659f047af1379bb9d0fd0cfcbee689"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a4f659f047af1379bb9d0fd0cfcbee689">InitializeGroupsets</a> ()</td></tr>
 <tr class="separator:a4f659f047af1379bb9d0fd0cfcbee689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0208c0d053c817fd2948168939480ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#af0208c0d053c817fd2948168939480ca">ComputeNumberOfMoments</a> ()</td></tr>
@@ -142,36 +146,28 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3533681f973d7499d8138e7dcaae419b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aca7477b31e1cd6766641d032326e01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a8aca7477b31e1cd6766641d032326e01">ComputeSweepOrderings</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset) const</td></tr>
 <tr class="separator:a8aca7477b31e1cd6766641d032326e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc70e5887519857e809bcda4acded107"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#afc70e5887519857e809bcda4acded107">ComputeSweepOrderingsAngleAggSingle</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset) const</td></tr>
-<tr class="separator:afc70e5887519857e809bcda4acded107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44b57d044f9d88679bab3572ed083b6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a44b57d044f9d88679bab3572ed083b6e">ComputeSweepOrderingsAngleAggPolar</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset) const</td></tr>
-<tr class="separator:a44b57d044f9d88679bab3572ed083b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a366af4ba22760aab82aff8daef737a89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a366af4ba22760aab82aff8daef737a89">ComputeSweepOrderingsAngleAggAzimuthal</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset) const</td></tr>
-<tr class="separator:a366af4ba22760aab82aff8daef737a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad60f4bf902178a96c253ba23f4388bdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ad60f4bf902178a96c253ba23f4388bdc">InitFluxDataStructures</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
 <tr class="separator:ad60f4bf902178a96c253ba23f4388bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ef4dbc33e5e56b225c5b37e4cd9801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a65ef4dbc33e5e56b225c5b37e4cd9801">InitAngleAggPolar</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
-<tr class="separator:a65ef4dbc33e5e56b225c5b37e4cd9801"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4a6bce3385ba84e42c6d9da1e6845d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#af4a6bce3385ba84e42c6d9da1e6845d2">InitAngleAggSingle</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
-<tr class="separator:af4a6bce3385ba84e42c6d9da1e6845d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a178fa9508e4c488a4254c0220fddca74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a178fa9508e4c488a4254c0220fddca74">InitAngleAggAzimuthal</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
-<tr class="separator:a178fa9508e4c488a4254c0220fddca74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbc43b98d6d2d1a250e4d2520638cf60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#acbc43b98d6d2d1a250e4d2520638cf60">InitWGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
 <tr class="separator:acbc43b98d6d2d1a250e4d2520638cf60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a566b8c62b715e06226a13b05414177fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a566b8c62b715e06226a13b05414177fb">AssembleWGDSADeltaPhiVector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, double *ref_phi_old, double *ref_phi_new)</td></tr>
-<tr class="separator:a566b8c62b715e06226a13b05414177fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64cff71fc14f20038e2c23c2df8e21c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a64cff71fc14f20038e2c23c2df8e21c5">DisAssembleWGDSADeltaPhiVector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, double *ref_phi_new)</td></tr>
-<tr class="separator:a64cff71fc14f20038e2c23c2df8e21c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32a087fbc2b8adec6a9bc98f3ede7768"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a32a087fbc2b8adec6a9bc98f3ede7768">CleanUpWGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
-<tr class="separator:a32a087fbc2b8adec6a9bc98f3ede7768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9ec858567aef4505913ebb7fb0fb83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a5b9ec858567aef4505913ebb7fb0fb83">ExecuteWGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, const std::vector&lt; double &gt; &amp;ref_phi_old, std::vector&lt; double &gt; &amp;ref_phi_new)</td></tr>
+<tr class="separator:a5b9ec858567aef4505913ebb7fb0fb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fda895376d29da6bf387d2fd7a02ed2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a8fda895376d29da6bf387d2fd7a02ed2">AssembleWGDSADeltaPhiVector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, const std::vector&lt; double &gt; &amp;ref_phi_old, const std::vector&lt; double &gt; &amp;ref_phi_new)</td></tr>
+<tr class="separator:a8fda895376d29da6bf387d2fd7a02ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fd3fd5e0f40680f43840be7ca659c05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a4fd3fd5e0f40680f43840be7ca659c05">AssembleWGDSADeltaPhiVector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, const std::vector&lt; double &gt; &amp;phi_in)</td></tr>
+<tr class="separator:a4fd3fd5e0f40680f43840be7ca659c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3651e06af64dfe11a0cd1d8b2d8847f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ad3651e06af64dfe11a0cd1d8b2d8847f">DisAssembleWGDSADeltaPhiVector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, std::vector&lt; double &gt; &amp;ref_phi_new)</td></tr>
+<tr class="separator:ad3651e06af64dfe11a0cd1d8b2d8847f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a491d5a207f5d41a0a4bb8db106c6edcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a491d5a207f5d41a0a4bb8db106c6edcd">InitTGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
 <tr class="separator:a491d5a207f5d41a0a4bb8db106c6edcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8b11462e80321ae255a4dfc8354cb52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#aa8b11462e80321ae255a4dfc8354cb52">AssembleTGDSADeltaPhiVector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, double *ref_phi_old, double *ref_phi_new)</td></tr>
-<tr class="separator:aa8b11462e80321ae255a4dfc8354cb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada9bd34a93fd604982bf12aa387b4279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ada9bd34a93fd604982bf12aa387b4279">DisAssembleTGDSADeltaPhiVector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, double *ref_phi_new)</td></tr>
-<tr class="separator:ada9bd34a93fd604982bf12aa387b4279"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b6b6458bcde5891d69788196fc9dc79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a9b6b6458bcde5891d69788196fc9dc79">CleanUpTGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
-<tr class="separator:a9b6b6458bcde5891d69788196fc9dc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b967165c0d64fbd7c6600df8a6314a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ac3b967165c0d64fbd7c6600df8a6314a">ExecuteTGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, const std::vector&lt; double &gt; &amp;ref_phi_old, std::vector&lt; double &gt; &amp;ref_phi_new)</td></tr>
+<tr class="separator:ac3b967165c0d64fbd7c6600df8a6314a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c1d9ba60d4114dce153c25a67dd4d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a90c1d9ba60d4114dce153c25a67dd4d7">AssembleTGDSADeltaPhiVector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, const std::vector&lt; double &gt; &amp;ref_phi_old, const std::vector&lt; double &gt; &amp;ref_phi_new)</td></tr>
+<tr class="separator:a90c1d9ba60d4114dce153c25a67dd4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3451220d5d8e972fe71459fad9c466d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ae3451220d5d8e972fe71459fad9c466d">AssembleTGDSADeltaPhiVector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, const std::vector&lt; double &gt; &amp;phi_in)</td></tr>
+<tr class="separator:ae3451220d5d8e972fe71459fad9c466d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f3c9ee3bf2e0b2a688002a8e65932d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a93f3c9ee3bf2e0b2a688002a8e65932d">DisAssembleTGDSADeltaPhiVector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, std::vector&lt; double &gt; &amp;ref_phi_new)</td></tr>
+<tr class="separator:a93f3c9ee3bf2e0b2a688002a8e65932d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c548e8124ffac5b3752b64358a93b9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a6c548e8124ffac5b3752b64358a93b9c">ResetSweepOrderings</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
 <tr class="separator:a6c548e8124ffac5b3752b64358a93b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5214913c8f93301651f1e8ed9043cf65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a5214913c8f93301651f1e8ed9043cf65">WriteRestartData</a> (std::string folder_name, std::string file_base)</td></tr>
@@ -188,22 +184,28 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b6aa17a3ffd784a5784493dc54de7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5943589e8bbb9f9d51365db38a0798b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a5943589e8bbb9f9d51365db38a0798b0">ReadFluxMoments</a> (const std::string &amp;file_base, std::vector&lt; double &gt; &amp;flux_moments, bool single_file=false)</td></tr>
 <tr class="separator:a5943589e8bbb9f9d51365db38a0798b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b16c74fc42b2186a737b5adb0709fbc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a7b16c74fc42b2186a737b5adb0709fbc">SetSource</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, std::vector&lt; double &gt; &amp;destination_q, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> source_flags)</td></tr>
+<tr class="memitem:a7b16c74fc42b2186a737b5adb0709fbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a7b16c74fc42b2186a737b5adb0709fbc">SetSource</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, std::vector&lt; double &gt; &amp;destination_q, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> source_flags)</td></tr>
 <tr class="separator:a7b16c74fc42b2186a737b5adb0709fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc1b793b7b2c9a0dbdb057643a0a7ecc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#acc1b793b7b2c9a0dbdb057643a0a7ecc">ComputePiecewiseChange</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
 <tr class="separator:acc1b793b7b2c9a0dbdb057643a0a7ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82ca413c1422aa95dfd47f68b61499ac"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="../../d0/d46/lbs__curvilinear__solver_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a82ca413c1422aa95dfd47f68b61499ac">SetSweepChunk</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
 <tr class="separator:a82ca413c1422aa95dfd47f68b61499ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a993cd38ebe2c9365b5a6e67ca6ccbea5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a993cd38ebe2c9365b5a6e67ca6ccbea5">ClassicRichardson</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, <a class="el" href="../../dd/d40/lbkes__power__iteration_8cc.html#aa15d99055c5ea3c1d434295a4ce141e4">MainSweepScheduler</a> &amp;sweep_scheduler, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> source_flags, bool log_info=true)</td></tr>
-<tr class="separator:a993cd38ebe2c9365b5a6e67ca6ccbea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03ffe4e5a06cf34091902d70afa3bf09"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a03ffe4e5a06cf34091902d70afa3bf09">GMRES</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, <a class="el" href="../../dd/d40/lbkes__power__iteration_8cc.html#aa15d99055c5ea3c1d434295a4ce141e4">MainSweepScheduler</a> &amp;sweep_scheduler, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> lhs_src_scope, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> rhs_src_scope, bool log_info=true)</td></tr>
-<tr class="separator:a03ffe4e5a06cf34091902d70afa3bf09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c7a7d1151ef38995e78e74bdaf8976"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a58c7a7d1151ef38995e78e74bdaf8976">ComputeFissionProduction</a> (const std::vector&lt; double &gt; &amp;phi)</td></tr>
+<tr class="separator:a58c7a7d1151ef38995e78e74bdaf8976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8642585cd4eb004268ea6feada141f2e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a8642585cd4eb004268ea6feada141f2e">ComputeFissionRate</a> (bool previous)</td></tr>
+<tr class="separator:a8642585cd4eb004268ea6feada141f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf8b0173279e65d8d3b2b793e03100a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#abf8b0173279e65d8d3b2b793e03100a6">ClassicRichardson</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, <a class="el" href="../../dd/d40/lbkes__power__iteration_8cc.html#aa15d99055c5ea3c1d434295a4ce141e4">MainSweepScheduler</a> &amp;sweep_scheduler, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> source_flags, const <a class="el" href="../../d9/d42/namespacelbs.html#a1b55e5c0f561f9ebe02e31a59d0213b0">SetSourceFunction</a> &amp;set_source_function, bool log_info=true)</td></tr>
+<tr class="separator:abf8b0173279e65d8d3b2b793e03100a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a471de7a3d15a3ec64f0768342ed8dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a5a471de7a3d15a3ec64f0768342ed8dc">GMRES</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, <a class="el" href="../../dd/d40/lbkes__power__iteration_8cc.html#aa15d99055c5ea3c1d434295a4ce141e4">MainSweepScheduler</a> &amp;sweep_scheduler, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> lhs_src_scope, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> rhs_src_scope, const <a class="el" href="../../d9/d42/namespacelbs.html#a1b55e5c0f561f9ebe02e31a59d0213b0">SetSourceFunction</a> &amp;set_source_function, bool log_info=true)</td></tr>
+<tr class="separator:a5a471de7a3d15a3ec64f0768342ed8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcd29c8102164120d323b264ffff4b8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#afcd29c8102164120d323b264ffff4b8d">Krylov</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, <a class="el" href="../../dd/d40/lbkes__power__iteration_8cc.html#aa15d99055c5ea3c1d434295a4ce141e4">MainSweepScheduler</a> &amp;sweep_scheduler, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> lhs_src_scope, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> rhs_src_scope, const <a class="el" href="../../d9/d42/namespacelbs.html#a1b55e5c0f561f9ebe02e31a59d0213b0">SetSourceFunction</a> &amp;set_source_function, bool log_info=true)</td></tr>
+<tr class="separator:afcd29c8102164120d323b264ffff4b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a333bc42dff375fe5c1aad1b581e58f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a2a333bc42dff375fe5c1aad1b581e58f">SetPETScVecFromSTLvector</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, Vec x, const std::vector&lt; double &gt; &amp;y, bool with_delayed_psi=false)</td></tr>
 <tr class="separator:a2a333bc42dff375fe5c1aad1b581e58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56e0a2943d2b818dc5e48be705f05afb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a56e0a2943d2b818dc5e48be705f05afb">SetSTLvectorFromPETScVec</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, Vec x_src, std::vector&lt; double &gt; &amp;y, bool with_delayed_psi=false)</td></tr>
 <tr class="separator:a56e0a2943d2b818dc5e48be705f05afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc05e8f0fb001b7e7c9743a722581f5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#acc05e8f0fb001b7e7c9743a722581f5a">ScopedCopySTLvectors</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, const std::vector&lt; double &gt; &amp;x_src, std::vector&lt; double &gt; &amp;y)</td></tr>
-<tr class="separator:acc05e8f0fb001b7e7c9743a722581f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded8e03582f814ef858ce1709dd91463"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#aded8e03582f814ef858ce1709dd91463">ScopedCopySTLvectors</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, const std::vector&lt; double &gt; &amp;x_src, std::vector&lt; double &gt; &amp;y, bool with_delayed_psi=false)</td></tr>
+<tr class="separator:aded8e03582f814ef858ce1709dd91463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2399603abd5b98bf5a9fe37e55f8a911"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a2399603abd5b98bf5a9fe37e55f8a911">ZeroOutflowBalanceVars</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
 <tr class="separator:a2399603abd5b98bf5a9fe37e55f8a911"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8ce0cb3097cbeda2ce798bfd4901dd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ac8ce0cb3097cbeda2ce798bfd4901dd0">ComputeBalance</a> ()</td></tr>
@@ -219,10 +221,23 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a854f173a318a412fccc6cc09414c615b inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b087a92fd17788519515b5bd331d87b inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a0b087a92fd17788519515b5bd331d87b">TextName</a> () const</td></tr>
 <tr class="separator:a0b087a92fd17788519515b5bd331d87b inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32d0ce0ff45ec205b72ed871bc2b63ce inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a32d0ce0ff45ec205b72ed871bc2b63ce">Initialize</a> ()=0</td></tr>
-<tr class="separator:a32d0ce0ff45ec205b72ed871bc2b63ce inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8c87ca4fe5e004c13ea5555df1cd672 inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ac8c87ca4fe5e004c13ea5555df1cd672">Execute</a> ()=0</td></tr>
-<tr class="separator:ac8c87ca4fe5e004c13ea5555df1cd672 inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e95fbc905d9c3b3ebdc89f06e53b29 inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a14e95fbc905d9c3b3ebdc89f06e53b29">Initialize</a> ()</td></tr>
+<tr class="separator:a14e95fbc905d9c3b3ebdc89f06e53b29 inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa416dcd9ba22712272ebd0ec4414046d inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#aa416dcd9ba22712272ebd0ec4414046d">Execute</a> ()</td></tr>
+<tr class="separator:aa416dcd9ba22712272ebd0ec4414046d inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa53f6d47f1a2d8badbfa8c12e1f2ca inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a9fa53f6d47f1a2d8badbfa8c12e1f2ca">Step</a> ()</td></tr>
+<tr class="separator:a9fa53f6d47f1a2d8badbfa8c12e1f2ca inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a6e51804cad05dc742bba15c0957b6ba9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a6e51804cad05dc742bba15c0957b6ba9">CheckPointInsideCell</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid_ref, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;point)</td></tr>
+<tr class="separator:a6e51804cad05dc742bba15c0957b6ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fbd2307b558544c0bb399ef03c6a093"><td class="memItemLeft" align="right" valign="top">static std::pair&lt; <a class="el" href="../../d9/d42/namespacelbs.html#aee2e09cc47baec60805b625cc87351d5">UniqueSOGroupings</a>, <a class="el" href="../../d9/d42/namespacelbs.html#a9db37f34e0e653f8feada39ab7b8d394">DirIDToSOMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a2fbd2307b558544c0bb399ef03c6a093">AssociateSOsAndDirections</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;<a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ad88fe47c7b27dfd9b9b148f634e41c96">grid</a>, const <a class="el" href="../../d8/dd9/classchi__math_1_1_angular_quadrature.html">chi_math::AngularQuadrature</a> &amp;quadrature, <a class="el" href="../../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ad">AngleAggregationType</a> agg_type, <a class="el" href="../../d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83">lbs::GeometryType</a> lbs_geo_type)</td></tr>
+<tr class="separator:a2fbd2307b558544c0bb399ef03c6a093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a087fbc2b8adec6a9bc98f3ede7768"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a32a087fbc2b8adec6a9bc98f3ede7768">CleanUpWGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
+<tr class="separator:a32a087fbc2b8adec6a9bc98f3ede7768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6b6458bcde5891d69788196fc9dc79"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a9b6b6458bcde5891d69788196fc9dc79">CleanUpTGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
+<tr class="separator:a9b6b6458bcde5891d69788196fc9dc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -250,10 +265,12 @@ Data Fields</h2></td></tr>
 <tr class="separator:ab9837053e7d58b2e4cb8466059420c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a100a59bf7e13fd43508b23a127e349cd"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a100a59bf7e13fd43508b23a127e349cd">discretization</a> = nullptr</td></tr>
 <tr class="separator:a100a59bf7e13fd43508b23a127e349cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad88fe47c7b27dfd9b9b148f634e41c96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ad88fe47c7b27dfd9b9b148f634e41c96">grid</a></td></tr>
+<tr class="memitem:ad88fe47c7b27dfd9b9b148f634e41c96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a60cc7e5348a115cf4edcfd4ade799a51">chi_mesh::MeshContinuumPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ad88fe47c7b27dfd9b9b148f634e41c96">grid</a></td></tr>
 <tr class="separator:ad88fe47c7b27dfd9b9b148f634e41c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5732b0d0b4bb11a1858438c71321e9c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a381f0f439a28d88ba90becfe4b78daa7">CellFaceNodalMapping</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ab5732b0d0b4bb11a1858438c71321e9c">grid_nodal_mappings</a></td></tr>
 <tr class="separator:ab5732b0d0b4bb11a1858438c71321e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69f49c4670a570d3730f984b92ed7a3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d37/structlbs_1_1_unit_cell_matrices.html">UnitCellMatrices</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ae69f49c4670a570d3730f984b92ed7a3">unit_cell_matrices</a></td></tr>
+<tr class="separator:ae69f49c4670a570d3730f984b92ed7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab00d893515614fe30e662143f001f469"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d4/d32/classlbs_1_1_cell_l_b_s_view.html">lbs::CellLBSView</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ab00d893515614fe30e662143f001f469">cell_transport_views</a></td></tr>
 <tr class="separator:ab00d893515614fe30e662143f001f469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af908b84b19970ca5bfbc4e1107b808a8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; <a class="el" href="../../d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91d">BoundaryType</a>, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#af908b84b19970ca5bfbc4e1107b808a8">boundary_types</a></td></tr>
@@ -302,6 +319,8 @@ Data Fields</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ab69ecf1119df3d9907514661805c85b1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ab69ecf1119df3d9907514661805c85b1">source_event_tag</a> =0</td></tr>
 <tr class="separator:ab69ecf1119df3d9907514661805c85b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7059496c85a97c2d75209e5c5849c157"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d42/namespacelbs.html#a1b55e5c0f561f9ebe02e31a59d0213b0">SetSourceFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a7059496c85a97c2d75209e5c5849c157">active_set_source_function</a></td></tr>
+<tr class="separator:a7059496c85a97c2d75209e5c5849c157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -311,7 +330,7 @@ Private Types</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A neutral particle transport solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00058">58</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00061">61</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a381f0f439a28d88ba90becfe4b78daa7" name="a381f0f439a28d88ba90becfe4b78daa7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a381f0f439a28d88ba90becfe4b78daa7">&#9670;&nbsp;</a></span>CellFaceNodalMapping</h2>
@@ -333,7 +352,7 @@ Private Types</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00060">60</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00063">63</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -419,8 +438,8 @@ Private Types</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa8b11462e80321ae255a4dfc8354cb52" name="aa8b11462e80321ae255a4dfc8354cb52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8b11462e80321ae255a4dfc8354cb52">&#9670;&nbsp;</a></span>AssembleTGDSADeltaPhiVector()</h2>
+<a id="ae3451220d5d8e972fe71459fad9c466d" name="ae3451220d5d8e972fe71459fad9c466d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3451220d5d8e972fe71459fad9c466d">&#9670;&nbsp;</a></span>AssembleTGDSADeltaPhiVector() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -434,13 +453,44 @@ Private Types</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>phi_in</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Assembles a delta-phi vector on the first moment. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00145">145</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
+
+</div>
+</div>
+<a id="a90c1d9ba60d4114dce153c25a67dd4d7" name="a90c1d9ba60d4114dce153c25a67dd4d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c1d9ba60d4114dce153c25a67dd4d7">&#9670;&nbsp;</a></span>AssembleTGDSADeltaPhiVector() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lbs::SteadySolver::AssembleTGDSADeltaPhiVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
+          <td class="paramname"><em>groupset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>ref_phi_old</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>ref_phi_new</em>&#160;</td>
         </tr>
         <tr>
@@ -452,12 +502,12 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles a delta-phi vector on the first moment. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00103">103</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00102">102</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
 
 </div>
 </div>
-<a id="a566b8c62b715e06226a13b05414177fb" name="a566b8c62b715e06226a13b05414177fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a566b8c62b715e06226a13b05414177fb">&#9670;&nbsp;</a></span>AssembleWGDSADeltaPhiVector()</h2>
+<a id="a4fd3fd5e0f40680f43840be7ca659c05" name="a4fd3fd5e0f40680f43840be7ca659c05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fd3fd5e0f40680f43840be7ca659c05">&#9670;&nbsp;</a></span>AssembleWGDSADeltaPhiVector() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -471,13 +521,44 @@ Private Types</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>phi_in</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Assembles a delta-phi vector on the first moment. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00139">139</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+
+</div>
+</div>
+<a id="a8fda895376d29da6bf387d2fd7a02ed2" name="a8fda895376d29da6bf387d2fd7a02ed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fda895376d29da6bf387d2fd7a02ed2">&#9670;&nbsp;</a></span>AssembleWGDSADeltaPhiVector() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lbs::SteadySolver::AssembleWGDSADeltaPhiVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
+          <td class="paramname"><em>groupset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>ref_phi_old</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>ref_phi_new</em>&#160;</td>
         </tr>
         <tr>
@@ -489,12 +570,107 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles a delta-phi vector on the first moment. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00108">108</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00098">98</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
 
 </div>
 </div>
-<a id="a993cd38ebe2c9365b5a6e67ca6ccbea5" name="a993cd38ebe2c9365b5a6e67ca6ccbea5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a993cd38ebe2c9365b5a6e67ca6ccbea5">&#9670;&nbsp;</a></span>ClassicRichardson()</h2>
+<a id="a2fbd2307b558544c0bb399ef03c6a093" name="a2fbd2307b558544c0bb399ef03c6a093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fbd2307b558544c0bb399ef03c6a093">&#9670;&nbsp;</a></span>AssociateSOsAndDirections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; <a class="el" href="../../d9/d42/namespacelbs.html#aee2e09cc47baec60805b625cc87351d5">UniqueSOGroupings</a>, <a class="el" href="../../d9/d42/namespacelbs.html#a9db37f34e0e653f8feada39ab7b8d394">DirIDToSOMap</a> &gt; lbs::SteadySolver::AssociateSOsAndDirections </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td>
+          <td class="paramname"><em>grid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d8/dd9/classchi__math_1_1_angular_quadrature.html">chi_math::AngularQuadrature</a> &amp;&#160;</td>
+          <td class="paramname"><em>quadrature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ad">AngleAggregationType</a>&#160;</td>
+          <td class="paramname"><em>agg_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83">lbs::GeometryType</a>&#160;</td>
+          <td class="paramname"><em>lbs_geo_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Lambda to convert indices and push it onto unq_so_grps.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d17/lbs__03aa__iduniqso_8cc_source.html#l00038">38</a> of file <a class="el" href="../../dd/d17/lbs__03aa__iduniqso_8cc_source.html">lbs_03aa_iduniqso.cc</a>.</p>
+
+</div>
+</div>
+<a id="a6e51804cad05dc742bba15c0957b6ba9" name="a6e51804cad05dc742bba15c0957b6ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e51804cad05dc742bba15c0957b6ba9">&#9670;&nbsp;</a></span>CheckPointInsideCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lbs::SteadySolver::CheckPointInsideCell </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td>
+          <td class="paramname"><em>grid_ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>point</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html#l00008">8</a> of file <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html">lbs_01i_init_point_sources.cc</a>.</p>
+
+</div>
+</div>
+<a id="abf8b0173279e65d8d3b2b793e03100a6" name="abf8b0173279e65d8d3b2b793e03100a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf8b0173279e65d8d3b2b793e03100a6">&#9670;&nbsp;</a></span>ClassicRichardson()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -520,6 +696,12 @@ Private Types</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d42/namespacelbs.html#a1b55e5c0f561f9ebe02e31a59d0213b0">SetSourceFunction</a> &amp;&#160;</td>
+          <td class="paramname"><em>set_source_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>log_info</em> = <code>true</code>&#160;</td>
         </tr>
@@ -532,7 +714,7 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Solves a groupset using classic richardson. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d45/lbs__classicrichardson_8cc_source.html#l00016">16</a> of file <a class="el" href="../../d9/d45/lbs__classicrichardson_8cc_source.html">lbs_classicrichardson.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d45/lbs__classicrichardson_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d9/d45/lbs__classicrichardson_8cc_source.html">lbs_classicrichardson.cc</a>.</p>
 
 </div>
 </div>
@@ -541,6 +723,9 @@ Private Types</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void lbs::SteadySolver::CleanUpTGDSA </td>
@@ -550,6 +735,11 @@ Private Types</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p >Cleans up memory consuming items. </p>
 
@@ -562,6 +752,9 @@ Private Types</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void lbs::SteadySolver::CleanUpWGDSA </td>
@@ -571,10 +764,15 @@ Private Types</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p >Cleans up memory consuming items. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00100">100</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00091">91</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
 
 </div>
 </div>
@@ -595,6 +793,66 @@ Private Types</h2></td></tr>
 <p >Compute balance. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dfd/lbs__compute__balance_8cc_source.html#l00025">25</a> of file <a class="el" href="../../d9/dfd/lbs__compute__balance_8cc_source.html">lbs_compute_balance.cc</a>.</p>
+
+</div>
+</div>
+<a id="a58c7a7d1151ef38995e78e74bdaf8976" name="a58c7a7d1151ef38995e78e74bdaf8976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c7a7d1151ef38995e78e74bdaf8976">&#9670;&nbsp;</a></span>ComputeFissionProduction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SteadySolver::ComputeFissionProduction </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>phi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Compute the total fission production in the problem. </p><dl class="section author"><dt>Author</dt><dd>Zachary Hardy. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/db4/lbs__compute__fission__production_8cc_source.html#l00010">10</a> of file <a class="el" href="../../dd/db4/lbs__compute__fission__production_8cc_source.html">lbs_compute_fission_production.cc</a>.</p>
+
+</div>
+</div>
+<a id="a8642585cd4eb004268ea6feada141f2e" name="a8642585cd4eb004268ea6feada141f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8642585cd4eb004268ea6feada141f2e">&#9670;&nbsp;</a></span>ComputeFissionRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SteadySolver::ComputeFissionRate </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>previous</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Computes the total fission rate in the problem.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">previous</td><td>bool Optional. If true and the solver is a transient solver then the rate will be based on the previous timestep's fluxes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the_rate The fission rate as a double.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Zachary Hardy. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../da/dc0/classlbs_1_1_transient_solver.html#a577d1538d437c15118ad94ece31a2515">lbs::TransientSolver</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/db4/lbs__compute__fission__production_8cc_source.html#l00058">58</a> of file <a class="el" href="../../dd/db4/lbs__compute__fission__production_8cc_source.html">lbs_compute_fission_production.cc</a>.</p>
 
 </div>
 </div>
@@ -676,72 +934,31 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Initializes the sweep ordering for the given groupset. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html#l00028">28</a> of file <a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html">lbs_03a_compsweeporder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html#l00020">20</a> of file <a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html">lbs_03a_compsweeporder.cc</a>.</p>
 
 </div>
 </div>
-<a id="a366af4ba22760aab82aff8daef737a89" name="a366af4ba22760aab82aff8daef737a89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a366af4ba22760aab82aff8daef737a89">&#9670;&nbsp;</a></span>ComputeSweepOrderingsAngleAggAzimuthal()</h2>
+<a id="aa10a53583fa857af51d4391ad8c425b8" name="aa10a53583fa857af51d4391ad8c425b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa10a53583fa857af51d4391ad8c425b8">&#9670;&nbsp;</a></span>ComputeUnitIntegrals()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void lbs::SteadySolver::ComputeSweepOrderingsAngleAggAzimuthal </td>
+          <td class="memname">void lbs::SteadySolver::ComputeUnitIntegrals </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
-          <td class="paramname"><em>groupset</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html#l00200">200</a> of file <a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html">lbs_03a_compsweeporder.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d4c/lbs__01d__init__spat__discr_8cc_source.html#l00025">25</a> of file <a class="el" href="../../d8/d4c/lbs__01d__init__spat__discr_8cc_source.html">lbs_01d_init_spat_discr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a44b57d044f9d88679bab3572ed083b6e" name="a44b57d044f9d88679bab3572ed083b6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44b57d044f9d88679bab3572ed083b6e">&#9670;&nbsp;</a></span>ComputeSweepOrderingsAngleAggPolar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lbs::SteadySolver::ComputeSweepOrderingsAngleAggPolar </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
-          <td class="paramname"><em>groupset</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html#l00101">101</a> of file <a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html">lbs_03a_compsweeporder.cc</a>.</p>
-
-</div>
-</div>
-<a id="afc70e5887519857e809bcda4acded107" name="afc70e5887519857e809bcda4acded107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc70e5887519857e809bcda4acded107">&#9670;&nbsp;</a></span>ComputeSweepOrderingsAngleAggSingle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lbs::SteadySolver::ComputeSweepOrderingsAngleAggSingle </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
-          <td class="paramname"><em>groupset</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html#l00082">82</a> of file <a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html">lbs_03a_compsweeporder.cc</a>.</p>
-
-</div>
-</div>
-<a id="ada9bd34a93fd604982bf12aa387b4279" name="ada9bd34a93fd604982bf12aa387b4279"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada9bd34a93fd604982bf12aa387b4279">&#9670;&nbsp;</a></span>DisAssembleTGDSADeltaPhiVector()</h2>
+<a id="a93f3c9ee3bf2e0b2a688002a8e65932d" name="a93f3c9ee3bf2e0b2a688002a8e65932d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f3c9ee3bf2e0b2a688002a8e65932d">&#9670;&nbsp;</a></span>DisAssembleTGDSADeltaPhiVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -755,7 +972,7 @@ Private Types</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>ref_phi_new</em>&#160;</td>
         </tr>
         <tr>
@@ -767,12 +984,12 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >DAssembles a delta-phi vector on the first moment. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00155">155</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00186">186</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
 
 </div>
 </div>
-<a id="a64cff71fc14f20038e2c23c2df8e21c5" name="a64cff71fc14f20038e2c23c2df8e21c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64cff71fc14f20038e2c23c2df8e21c5">&#9670;&nbsp;</a></span>DisAssembleWGDSADeltaPhiVector()</h2>
+<a id="ad3651e06af64dfe11a0cd1d8b2d8847f" name="ad3651e06af64dfe11a0cd1d8b2d8847f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3651e06af64dfe11a0cd1d8b2d8847f">&#9670;&nbsp;</a></span>DisAssembleWGDSADeltaPhiVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -786,7 +1003,7 @@ Private Types</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>ref_phi_new</em>&#160;</td>
         </tr>
         <tr>
@@ -798,7 +1015,7 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >DAssembles a delta-phi vector on the first moment. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00147">147</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00177">177</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
 
 </div>
 </div>
@@ -826,14 +1043,88 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Execute the solver. </p>
 
-<p>Implements <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ac8c87ca4fe5e004c13ea5555df1cd672">chi_physics::Solver</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#aa416dcd9ba22712272ebd0ec4414046d">chi_physics::Solver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html#l00019">19</a> of file <a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html">lbs_02_main_execute.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html#l00018">18</a> of file <a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html">lbs_02_main_execute.cc</a>.</p>
 
 </div>
 </div>
-<a id="a03ffe4e5a06cf34091902d70afa3bf09" name="a03ffe4e5a06cf34091902d70afa3bf09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03ffe4e5a06cf34091902d70afa3bf09">&#9670;&nbsp;</a></span>GMRES()</h2>
+<a id="ac3b967165c0d64fbd7c6600df8a6314a" name="ac3b967165c0d64fbd7c6600df8a6314a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b967165c0d64fbd7c6600df8a6314a">&#9670;&nbsp;</a></span>ExecuteTGDSA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lbs::SteadySolver::ExecuteTGDSA </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
+          <td class="paramname"><em>groupset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ref_phi_old</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ref_phi_new</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Executes Two-Grid Acceleration. This involves assembling the system RHS, solving the system and finally adding the solution to the scalar flux. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00226">226</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
+
+</div>
+</div>
+<a id="a5b9ec858567aef4505913ebb7fb0fb83" name="a5b9ec858567aef4505913ebb7fb0fb83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9ec858567aef4505913ebb7fb0fb83">&#9670;&nbsp;</a></span>ExecuteWGDSA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lbs::SteadySolver::ExecuteWGDSA </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
+          <td class="paramname"><em>groupset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ref_phi_old</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ref_phi_new</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Executes Within Group DSA. This involves assembling the system RHS, solving the system and finally adding the solution to the scalar flux. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00213">213</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+
+</div>
+</div>
+<a id="a5a471de7a3d15a3ec64f0768342ed8dc" name="a5a471de7a3d15a3ec64f0768342ed8dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a471de7a3d15a3ec64f0768342ed8dc">&#9670;&nbsp;</a></span>GMRES()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -865,6 +1156,12 @@ Private Types</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d42/namespacelbs.html#a1b55e5c0f561f9ebe02e31a59d0213b0">SetSourceFunction</a> &amp;&#160;</td>
+          <td class="paramname"><em>set_source_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>log_info</em> = <code>true</code>&#160;</td>
         </tr>
@@ -877,70 +1174,7 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Solves a groupset using GMRES. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d6b/lbs___g_m_r_e_s_8cc_source.html#l00022">22</a> of file <a class="el" href="../../d7/d6b/lbs___g_m_r_e_s_8cc_source.html">lbs_GMRES.cc</a>.</p>
-
-</div>
-</div>
-<a id="a178fa9508e4c488a4254c0220fddca74" name="a178fa9508e4c488a4254c0220fddca74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a178fa9508e4c488a4254c0220fddca74">&#9670;&nbsp;</a></span>InitAngleAggAzimuthal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lbs::SteadySolver::InitAngleAggAzimuthal </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
-          <td class="paramname"><em>groupset</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Initializes angle aggregation for a groupset. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/de7/lbs__03cc__angleagg__azimuthal_8cc_source.html#l00026">26</a> of file <a class="el" href="../../d1/de7/lbs__03cc__angleagg__azimuthal_8cc_source.html">lbs_03cc_angleagg_azimuthal.cc</a>.</p>
-
-</div>
-</div>
-<a id="a65ef4dbc33e5e56b225c5b37e4cd9801" name="a65ef4dbc33e5e56b225c5b37e4cd9801"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65ef4dbc33e5e56b225c5b37e4cd9801">&#9670;&nbsp;</a></span>InitAngleAggPolar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lbs::SteadySolver::InitAngleAggPolar </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
-          <td class="paramname"><em>groupset</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Initializes angle aggregation for a groupset. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d56/lbs__03cb__angleagg__polar_8cc_source.html#l00026">26</a> of file <a class="el" href="../../d7/d56/lbs__03cb__angleagg__polar_8cc_source.html">lbs_03cb_angleagg_polar.cc</a>.</p>
-
-</div>
-</div>
-<a id="af4a6bce3385ba84e42c6d9da1e6845d2" name="af4a6bce3385ba84e42c6d9da1e6845d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4a6bce3385ba84e42c6d9da1e6845d2">&#9670;&nbsp;</a></span>InitAngleAggSingle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lbs::SteadySolver::InitAngleAggSingle </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
-          <td class="paramname"><em>groupset</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Initializes angle aggregation for a groupset. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d42/lbs__03ca__angleagg__single_8cc_source.html#l00029">29</a> of file <a class="el" href="../../d8/d42/lbs__03ca__angleagg__single_8cc_source.html">lbs_03ca_angleagg_single.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d6b/lbs___g_m_r_e_s_8cc_source.html#l00019">19</a> of file <a class="el" href="../../d7/d6b/lbs___g_m_r_e_s_8cc_source.html">lbs_GMRES.cc</a>.</p>
 
 </div>
 </div>
@@ -961,7 +1195,7 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Initializes fluds data structures. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/dc6/lbs__03b__initfluds_8cc_source.html#l00022">22</a> of file <a class="el" href="../../d4/dc6/lbs__03b__initfluds_8cc_source.html">lbs_03b_initfluds.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/dc6/lbs__03b__initfluds_8cc_source.html#l00024">24</a> of file <a class="el" href="../../d4/dc6/lbs__03b__initfluds_8cc_source.html">lbs_03b_initfluds.cc</a>.</p>
 
 </div>
 </div>
@@ -989,9 +1223,9 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Initialize the solver. </p>
 
-<p>Implements <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a32d0ce0ff45ec205b72ed871bc2b63ce">chi_physics::Solver</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a14e95fbc905d9c3b3ebdc89f06e53b29">chi_physics::Solver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d04/lbs__01__main__initialize_8cc_source.html#l00018">18</a> of file <a class="el" href="../../d6/d04/lbs__01__main__initialize_8cc_source.html">lbs_01_main_initialize.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d04/lbs__01__main__initialize_8cc_source.html#l00007">7</a> of file <a class="el" href="../../d6/d04/lbs__01__main__initialize_8cc_source.html">lbs_01_main_initialize.cc</a>.</p>
 
 </div>
 </div>
@@ -1059,7 +1293,7 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Initializes parallel arrays. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d37/lbs__01g__initparrays_8cc_source.html#l00012">12</a> of file <a class="el" href="../../d3/d37/lbs__01g__initparrays_8cc_source.html">lbs_01g_initparrays.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d37/lbs__01g__initparrays_8cc_source.html#l00013">13</a> of file <a class="el" href="../../d3/d37/lbs__01g__initparrays_8cc_source.html">lbs_01g_initparrays.cc</a>.</p>
 
 </div>
 </div>
@@ -1079,7 +1313,7 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >ByRef</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html#l00010">10</a> of file <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html">lbs_01i_init_point_sources.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html#l00112">112</a> of file <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html">lbs_01i_init_point_sources.cc</a>.</p>
 
 </div>
 </div>
@@ -1108,12 +1342,12 @@ Private Types</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d9/df7/classlbs__curvilinear_1_1_solver.html#af5d6ef4cee3b8d0a00e40d714e2d35d0">lbs_curvilinear::Solver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d4c/lbs__01d__init__spat__discr_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d8/d4c/lbs__01d__init__spat__discr_8cc_source.html">lbs_01d_init_spat_discr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d4c/lbs__01d__init__spat__discr_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d8/d4c/lbs__01d__init__spat__discr_8cc_source.html">lbs_01d_init_spat_discr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a6e2438f7dd95f18db69577e8cf9cedd1" name="a6e2438f7dd95f18db69577e8cf9cedd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e2438f7dd95f18db69577e8cf9cedd1">&#9670;&nbsp;</a></span>InitMaterials()</h2>
+<a id="a462b5f30af132866819f5b9628c8570f" name="a462b5f30af132866819f5b9628c8570f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a462b5f30af132866819f5b9628c8570f">&#9670;&nbsp;</a></span>InitMaterials()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1121,15 +1355,14 @@ Private Types</h2></td></tr>
         <tr>
           <td class="memname">void lbs::SteadySolver::InitMaterials </td>
           <td>(</td>
-          <td class="paramtype">std::set&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>material_ids</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p >Initializes default materials and physics materials. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dd9/lbs__01c__initmaterials_8cc_source.html#l00018">18</a> of file <a class="el" href="../../d0/dd9/lbs__01c__initmaterials_8cc_source.html">lbs_01c_initmaterials.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/dd9/lbs__01c__initmaterials_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d0/dd9/lbs__01c__initmaterials_8cc_source.html">lbs_01c_initmaterials.cc</a>.</p>
 
 </div>
 </div>
@@ -1150,7 +1383,7 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Initializes the Within-Group DSA solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00010">10</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
 
 </div>
 </div>
@@ -1171,7 +1404,62 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Initializes the Within-Group DSA solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00015">15</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00009">9</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+
+</div>
+</div>
+<a id="afcd29c8102164120d323b264ffff4b8d" name="afcd29c8102164120d323b264ffff4b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcd29c8102164120d323b264ffff4b8d">&#9670;&nbsp;</a></span>Krylov()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lbs::SteadySolver::Krylov </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;&#160;</td>
+          <td class="paramname"><em>groupset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d40/lbkes__power__iteration_8cc.html#aa15d99055c5ea3c1d434295a4ce141e4">MainSweepScheduler</a> &amp;&#160;</td>
+          <td class="paramname"><em>sweep_scheduler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a>&#160;</td>
+          <td class="paramname"><em>lhs_src_scope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a>&#160;</td>
+          <td class="paramname"><em>rhs_src_scope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d42/namespacelbs.html#a1b55e5c0f561f9ebe02e31a59d0213b0">SetSourceFunction</a> &amp;&#160;</td>
+          <td class="paramname"><em>set_source_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>log_info</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Solves a groupset using a general Krylov method. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d1d/lbs__krylov_8cc_source.html#l00020">20</a> of file <a class="el" href="../../d3/d1d/lbs__krylov_8cc_source.html">lbs_krylov.cc</a>.</p>
 
 </div>
 </div>
@@ -1247,7 +1535,7 @@ Private Types</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d9/df7/classlbs__curvilinear_1_1_solver.html#af866925f1569c80e1d4c4642228a06fe">lbs_curvilinear::Solver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html">lbs_01a_inputchecks.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html#l00009">9</a> of file <a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html">lbs_01a_inputchecks.cc</a>.</p>
 
 </div>
 </div>
@@ -1391,8 +1679,8 @@ Private Types</h2></td></tr>
 
 </div>
 </div>
-<a id="acc05e8f0fb001b7e7c9743a722581f5a" name="acc05e8f0fb001b7e7c9743a722581f5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc05e8f0fb001b7e7c9743a722581f5a">&#9670;&nbsp;</a></span>ScopedCopySTLvectors()</h2>
+<a id="aded8e03582f814ef858ce1709dd91463" name="aded8e03582f814ef858ce1709dd91463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded8e03582f814ef858ce1709dd91463">&#9670;&nbsp;</a></span>ScopedCopySTLvectors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1413,7 +1701,13 @@ Private Types</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>with_delayed_psi</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1476,9 +1770,6 @@ Private Types</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void lbs::SteadySolver::SetSource </td>
@@ -1504,11 +1795,6 @@ Private Types</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p >Sets the source moments for the groups in the current group set.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1520,9 +1806,7 @@ Private Types</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="../../df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#a803f3a1422a2ded25a10dd326ba0777e">lbs_adjoint::AdjointSolver</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="../../da/dd8/lbs__setsource_8cc_source.html#l00020">20</a> of file <a class="el" href="../../da/dd8/lbs__setsource_8cc_source.html">lbs_setsource.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dd8/lbs__setsource_8cc_source.html#l00019">19</a> of file <a class="el" href="../../da/dd8/lbs__setsource_8cc_source.html">lbs_setsource.cc</a>.</p>
 
 </div>
 </div>
@@ -1617,7 +1901,7 @@ Private Types</h2></td></tr>
 </div><div class="memdoc">
 <p >Solves a single groupset. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html#l00053">53</a> of file <a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html">lbs_02_main_execute.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html#l00052">52</a> of file <a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html">lbs_02_main_execute.cc</a>.</p>
 
 </div>
 </div>
@@ -1736,6 +2020,30 @@ Private Types</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="a7059496c85a97c2d75209e5c5849c157" name="a7059496c85a97c2d75209e5c5849c157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7059496c85a97c2d75209e5c5849c157">&#9670;&nbsp;</a></span>active_set_source_function</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d42/namespacelbs.html#a1b55e5c0f561f9ebe02e31a59d0213b0">SetSourceFunction</a> lbs::SteadySolver::active_set_source_function</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00112">112</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+
+</div>
+</div>
 <a id="af908b84b19970ca5bfbc4e1107b808a8" name="af908b84b19970ca5bfbc4e1107b808a8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af908b84b19970ca5bfbc4e1107b808a8">&#9670;&nbsp;</a></span>boundary_types</h2>
 
@@ -1748,7 +2056,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00090">90</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00093">93</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1764,7 +2072,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00085">85</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00088">88</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1780,7 +2088,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00104">104</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00107">107</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1796,7 +2104,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00082">82</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00084">84</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1812,7 +2120,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00102">102</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00105">105</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1828,7 +2136,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00095">95</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00098">98</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1844,7 +2152,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00099">99</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00102">102</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1855,12 +2163,12 @@ Private Types</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afbc36b9579a1192ef6c48ae0646d7cd9">chi_mesh::MeshContinuumPtr</a> lbs::SteadySolver::grid</td>
+          <td class="memname"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a60cc7e5348a115cf4edcfd4ade799a51">chi_mesh::MeshContinuumPtr</a> lbs::SteadySolver::grid</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00083">83</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00085">85</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1876,7 +2184,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00084">84</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00086">86</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1892,7 +2200,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00073">73</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00076">76</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1908,7 +2216,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00074">74</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00077">77</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1924,7 +2232,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00091">91</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00094">94</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1940,7 +2248,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00065">65</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00068">68</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1956,7 +2264,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00098">98</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00101">101</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1972,7 +2280,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00080">80</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00082">82</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1988,7 +2296,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00079">79</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00081">81</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2004,7 +2312,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00097">97</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00100">100</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2020,7 +2328,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00071">71</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00074">74</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2036,7 +2344,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00069">69</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00072">72</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2052,7 +2360,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00068">68</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00071">71</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2068,7 +2376,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00070">70</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00073">73</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2084,7 +2392,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00066">66</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00069">69</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2100,7 +2408,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00101">101</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00104">104</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2116,7 +2424,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00103">103</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00106">106</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2132,7 +2440,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00101">101</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00104">104</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2148,7 +2456,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00103">103</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00106">106</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2164,7 +2472,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00076">76</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00079">79</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2180,7 +2488,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00106">106</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00109">109</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2196,7 +2504,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00105">105</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00108">108</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2212,7 +2520,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00101">101</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00104">104</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2228,7 +2536,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00102">102</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00105">105</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2252,7 +2560,7 @@ Private Types</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00062">62</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00065">65</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2268,7 +2576,23 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00093">93</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00096">96</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+
+</div>
+</div>
+<a id="ae69f49c4670a570d3730f984b92ed7a3" name="ae69f49c4670a570d3730f984b92ed7a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae69f49c4670a570d3730f984b92ed7a3">&#9670;&nbsp;</a></span>unit_cell_matrices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../dc/d37/structlbs_1_1_unit_cell_matrices.html">UnitCellMatrices</a>&gt; lbs::SteadySolver::unit_cell_matrices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00087">87</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2284,7 +2608,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00092">92</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html#l00095">95</a> of file <a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2292,6 +2616,8 @@ Private Types</h2></td></tr>
 <li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a></li>
 <li>ChiModules/LinearBoltzmannSolver/IterativeMethods/<a class="el" href="../../d9/d45/lbs__classicrichardson_8cc_source.html">lbs_classicrichardson.cc</a></li>
 <li>ChiModules/LinearBoltzmannSolver/IterativeMethods/<a class="el" href="../../d7/d6b/lbs___g_m_r_e_s_8cc_source.html">lbs_GMRES.cc</a></li>
+<li>ChiModules/LinearBoltzmannSolver/IterativeMethods/<a class="el" href="../../d3/d1d/lbs__krylov_8cc_source.html">lbs_krylov.cc</a></li>
+<li>ChiModules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../dd/db4/lbs__compute__fission__production_8cc_source.html">lbs_compute_fission_production.cc</a></li>
 <li>ChiModules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../d4/d49/lbs__compute__pwchange_8cc_source.html">lbs_compute_pwchange.cc</a></li>
 <li>ChiModules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../da/dd8/lbs__setsource_8cc_source.html">lbs_setsource.cc</a></li>
 <li>ChiModules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../dc/dd0/lbs__setsweepchunk_8cc_source.html">lbs_setsweepchunk.cc</a></li>
@@ -2308,10 +2634,8 @@ Private Types</h2></td></tr>
 <li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html">lbs_01i_init_point_sources.cc</a></li>
 <li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html">lbs_02_main_execute.cc</a></li>
 <li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html">lbs_03a_compsweeporder.cc</a></li>
+<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../dd/d17/lbs__03aa__iduniqso_8cc_source.html">lbs_03aa_iduniqso.cc</a></li>
 <li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d4/dc6/lbs__03b__initfluds_8cc_source.html">lbs_03b_initfluds.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d8/d42/lbs__03ca__angleagg__single_8cc_source.html">lbs_03ca_angleagg_single.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d7/d56/lbs__03cb__angleagg__polar_8cc_source.html">lbs_03cb_angleagg_polar.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d1/de7/lbs__03cc__angleagg__azimuthal_8cc_source.html">lbs_03cc_angleagg_azimuthal.cc</a></li>
 <li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a></li>
 <li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a></li>
 <li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d2/d48/lbs__03f__resetswporderings_8cc_source.html">lbs_03f_resetswporderings.cc</a></li>

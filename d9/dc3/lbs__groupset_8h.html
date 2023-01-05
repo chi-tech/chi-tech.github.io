@@ -85,9 +85,7 @@ $(document).ready(function(){initNavTree('d9/dc3/lbs__groupset_8h.html','../../'
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle"><div class="title">lbs_groupset.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -98,8 +96,9 @@ $(document).ready(function(){initNavTree('d9/dc3/lbs__groupset_8h.html','../../'
 <code>#include &quot;<a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">ChiMath/UnknownManager/unknown_manager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d1/d7a/angleaggregation_8h_source.html">ChiMesh/SweepUtilities/AngleAggregation/angleaggregation.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">../lbs_structs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/db8/lbs__make__subset_8h_source.html">../lbs_make_subset.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d8/d40/chi__physics__namespace_8h_source.html">ChiPhysics/chi_physics_namespace.h</a>&quot;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/de8/acceleration_8h_source.html">LinearBoltzmannSolver/Acceleration/acceleration.h</a>&quot;</code><br />
 </div>
 <p><a href="../../d9/dc3/lbs__groupset_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -107,61 +106,16 @@ $(document).ready(function(){initNavTree('d9/dc3/lbs__groupset_8h.html','../../'
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">lbs::LBSGroupset</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d52/structlbs_1_1_l_b_s_groupset_1_1_two_grid_acceleration_info.html">lbs::LBSGroupset::TwoGridAccelerationInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:d9/d42/namespacelbs"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html">lbs</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a0d44fd13ecd4e245aff54517db32b61d"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc3/lbs__groupset_8h.html#a0d44fd13ecd4e245aff54517db32b61d">GsSubSet</a></td></tr>
-<tr class="separator:a0d44fd13ecd4e245aff54517db32b61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60f61566154c7daf05bd404014fce04d"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc3/lbs__groupset_8h.html#a60f61566154c7daf05bd404014fce04d">AngSubSet</a></td></tr>
-<tr class="separator:a60f61566154c7daf05bd404014fce04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a55f81615a7de26e1109b293aecb6f8ad"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ad">lbs::AngleAggregationType</a> { <a class="el" href="../../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ada0db45d2a4141101bdfe48e3314cfbca3">lbs::UNDEFINED</a> = 0
-, <a class="el" href="../../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ada0679273e201afd0bf57af3961f8a23b8">lbs::SINGLE</a> = 1
-, <a class="el" href="../../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8adac7cde0b1adf0598acd2b9ee165c02472">lbs::POLAR</a> = 2
-, <a class="el" href="../../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ada739d285acdfd9e6477d46434f86a5a00">lbs::AZIMUTHAL</a> = 3
- }</td></tr>
-<tr class="separator:a55f81615a7de26e1109b293aecb6f8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/d43/namespacelbs_1_1acceleration"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html">lbs::acceleration</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a60f61566154c7daf05bd404014fce04d" name="a60f61566154c7daf05bd404014fce04d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60f61566154c7daf05bd404014fce04d">&#9670;&nbsp;</a></span>AngSubSet</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::pair&lt;int,int&gt; <a class="el" href="../../d9/dc3/lbs__groupset_8h.html#a60f61566154c7daf05bd404014fce04d">AngSubSet</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__groupset_8h_source.html#l00086">86</a> of file <a class="el" href="../../d9/dc3/lbs__groupset_8h_source.html">lbs_groupset.h</a>.</p>
-
-</div>
-</div>
-<a id="a0d44fd13ecd4e245aff54517db32b61d" name="a0d44fd13ecd4e245aff54517db32b61d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d44fd13ecd4e245aff54517db32b61d">&#9670;&nbsp;</a></span>GsSubSet</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::pair&lt;int,int&gt; <a class="el" href="../../d9/dc3/lbs__groupset_8h.html#a0d44fd13ecd4e245aff54517db32b61d">GsSubSet</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__groupset_8h_source.html#l00085">85</a> of file <a class="el" href="../../d9/dc3/lbs__groupset_8h_source.html">lbs_groupset.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

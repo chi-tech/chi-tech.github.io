@@ -1,7 +1,12 @@
 var annotated_dup =
 [
+    [ "cfem_diffusion", "d3/d65/namespacecfem__diffusion.html", [
+      [ "Boundary", "d6/dc1/classcfem__diffusion_1_1_boundary.html", "d6/dc1/classcfem__diffusion_1_1_boundary" ],
+      [ "Solver", "de/dba/classcfem__diffusion_1_1_solver.html", "de/dba/classcfem__diffusion_1_1_solver" ]
+    ] ],
     [ "chi_data_types", "d5/d1b/namespacechi__data__types.html", [
       [ "ByteArray", "d5/d5b/classchi__data__types_1_1_byte_array.html", "d5/d5b/classchi__data__types_1_1_byte_array" ],
+      [ "NDArray", "d2/d5d/classchi__data__types_1_1_n_d_array.html", "d2/d5d/classchi__data__types_1_1_n_d_array" ],
       [ "Varying", "d8/d30/classchi__data__types_1_1_varying.html", "d8/d30/classchi__data__types_1_1_varying" ]
     ] ],
     [ "chi_diffusion", "de/d73/namespacechi__diffusion.html", [
@@ -32,8 +37,14 @@ var annotated_dup =
         [ "SphericalQuadrilateral", "d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html", "d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral" ]
       ] ],
       [ "AngularQuadrature", "d8/dd9/classchi__math_1_1_angular_quadrature.html", "d8/dd9/classchi__math_1_1_angular_quadrature" ],
+      [ "AngularQuadratureCustom", "d8/dd8/classchi__math_1_1_angular_quadrature_custom.html", "d8/dd8/classchi__math_1_1_angular_quadrature_custom" ],
+      [ "AngularQuadratureProdCustom", "db/d47/classchi__math_1_1_angular_quadrature_prod_custom.html", "db/d47/classchi__math_1_1_angular_quadrature_prod_custom" ],
+      [ "AngularQuadratureProdGL", "d5/d32/classchi__math_1_1_angular_quadrature_prod_g_l.html", "d5/d32/classchi__math_1_1_angular_quadrature_prod_g_l" ],
+      [ "AngularQuadratureProdGLC", "d6/d28/classchi__math_1_1_angular_quadrature_prod_g_l_c.html", "d6/d28/classchi__math_1_1_angular_quadrature_prod_g_l_c" ],
+      [ "AngularQuadratureProdGLL", "d9/d87/classchi__math_1_1_angular_quadrature_prod_g_l_l.html", "d9/d87/classchi__math_1_1_angular_quadrature_prod_g_l_l" ],
       [ "CDFSampler", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html", "d5/ddf/classchi__math_1_1_c_d_f_sampler" ],
       [ "CellFVValues", "d9/d9a/classchi__math_1_1_cell_f_v_values.html", "d9/d9a/classchi__math_1_1_cell_f_v_values" ],
+      [ "CellMapping", "d8/d08/classchi__math_1_1_cell_mapping.html", "d8/d08/classchi__math_1_1_cell_mapping" ],
       [ "CellMappingFE_PWL", "d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l.html", "d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l" ],
       [ "CurvilinearAngularQuadrature", "d9/dc1/classchi__math_1_1_curvilinear_angular_quadrature.html", "d9/dc1/classchi__math_1_1_curvilinear_angular_quadrature" ],
       [ "CylindricalAngularQuadrature", "d8/d60/classchi__math_1_1_cylindrical_angular_quadrature.html", "d8/d60/classchi__math_1_1_cylindrical_angular_quadrature" ],
@@ -41,10 +52,8 @@ var annotated_dup =
       [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html", "db/d08/classchi__math_1_1_dynamic_vector" ],
       [ "GolubFischer", "d7/d89/classchi__math_1_1_golub_fischer.html", "d7/d89/classchi__math_1_1_golub_fischer" ],
       [ "NonLinearFunction", "d6/dc4/classchi__math_1_1_non_linear_function.html", "d6/dc4/classchi__math_1_1_non_linear_function" ],
-      [ "PolygonFVValues", "d0/d5e/classchi__math_1_1_polygon_f_v_values.html", "d0/d5e/classchi__math_1_1_polygon_f_v_values" ],
       [ "PolygonMappingFE_PWL", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l" ],
       [ "PolygonMappingFE_PWL_Cylindrical", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical.html", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical" ],
-      [ "PolyhedronFVValues", "d4/d9d/classchi__math_1_1_polyhedron_f_v_values.html", "d4/d9d/classchi__math_1_1_polyhedron_f_v_values" ],
       [ "PolyhedronMappingFE_PWL", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l" ],
       [ "ProductQuadrature", "d5/df7/classchi__math_1_1_product_quadrature.html", "d5/df7/classchi__math_1_1_product_quadrature" ],
       [ "Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html", "d3/dbf/classchi__math_1_1_quadrature" ],
@@ -59,7 +68,6 @@ var annotated_dup =
       [ "QuadratureTetrahedron", "d8/d57/classchi__math_1_1_quadrature_tetrahedron.html", "d8/d57/classchi__math_1_1_quadrature_tetrahedron" ],
       [ "QuadratureTriangle", "d0/d61/classchi__math_1_1_quadrature_triangle.html", "d0/d61/classchi__math_1_1_quadrature_triangle" ],
       [ "RandomNumberGenerator", "d9/d55/classchi__math_1_1_random_number_generator.html", "d9/d55/classchi__math_1_1_random_number_generator" ],
-      [ "SlabFVValues", "d2/d10/classchi__math_1_1_slab_f_v_values.html", "d2/d10/classchi__math_1_1_slab_f_v_values" ],
       [ "SlabMappingFE_PWL", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l" ],
       [ "SlabMappingFE_PWL_Cylindrical", "d2/d9d/classchi__math_1_1_slab_mapping_f_e___p_w_l___cylindrical.html", "d2/d9d/classchi__math_1_1_slab_mapping_f_e___p_w_l___cylindrical" ],
       [ "SlabMappingFE_PWL_Spherical", "d4/dcb/classchi__math_1_1_slab_mapping_f_e___p_w_l___spherical.html", "d4/dcb/classchi__math_1_1_slab_mapping_f_e___p_w_l___spherical" ],
@@ -67,12 +75,15 @@ var annotated_dup =
       [ "SpatialDiscretization", "dd/d1d/classchi__math_1_1_spatial_discretization.html", "dd/d1d/classchi__math_1_1_spatial_discretization" ],
       [ "SpatialDiscretization_FE", "d5/d3e/classchi__math_1_1_spatial_discretization___f_e.html", "d5/d3e/classchi__math_1_1_spatial_discretization___f_e" ],
       [ "SpatialDiscretization_FV", "d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html", "d0/d9a/classchi__math_1_1_spatial_discretization___f_v" ],
+      [ "SpatialDiscretization_PWLBase", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base" ],
       [ "SpatialDiscretization_PWLC", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c" ],
       [ "SpatialDiscretization_PWLD", "d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html", "d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d" ],
       [ "SphericalAngularQuadrature", "de/de3/classchi__math_1_1_spherical_angular_quadrature.html", "de/de3/classchi__math_1_1_spherical_angular_quadrature" ],
       [ "TensorRNX", "d1/dbe/structchi__math_1_1_tensor_r_n_x.html", "d1/dbe/structchi__math_1_1_tensor_r_n_x" ],
       [ "TensorRNX< 2, N, NumberFormat >", "d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4.html", "d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4" ],
+      [ "Unknown", "d8/df3/classchi__math_1_1_unknown.html", "d8/df3/classchi__math_1_1_unknown" ],
       [ "UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html", "d9/da7/classchi__math_1_1_unknown_manager" ],
+      [ "VectorGhostCommunicator", "d1/db0/classchi__math_1_1_vector_ghost_communicator.html", "d1/db0/classchi__math_1_1_vector_ghost_communicator" ],
       [ "VectorNX", "d5/d8e/structchi__math_1_1_vector_n_x.html", "d5/d8e/structchi__math_1_1_vector_n_x" ]
     ] ],
     [ "chi_mesh", "d0/d81/namespacechi__mesh.html", [
@@ -150,6 +161,7 @@ var annotated_dup =
       [ "BasicOption", "d2/dd8/classchi__physics_1_1_basic_option.html", "d2/dd8/classchi__physics_1_1_basic_option" ],
       [ "BasicOptions", "d1/d7c/classchi__physics_1_1_basic_options.html", "d1/d7c/classchi__physics_1_1_basic_options" ],
       [ "FieldFunction", "df/de9/classchi__physics_1_1_field_function.html", "df/de9/classchi__physics_1_1_field_function" ],
+      [ "FieldFunction2", "dd/d5e/classchi__physics_1_1_field_function2.html", "dd/d5e/classchi__physics_1_1_field_function2" ],
       [ "IsotropicMultiGrpSource", "dc/d04/classchi__physics_1_1_isotropic_multi_grp_source.html", "dc/d04/classchi__physics_1_1_isotropic_multi_grp_source" ],
       [ "Material", "d8/da4/classchi__physics_1_1_material.html", "d8/da4/classchi__physics_1_1_material" ],
       [ "MaterialProperty", "df/d52/classchi__physics_1_1_material_property.html", "df/d52/classchi__physics_1_1_material_property" ],
@@ -157,7 +169,17 @@ var annotated_dup =
       [ "Solver", "d9/d3a/classchi__physics_1_1_solver.html", "d9/d3a/classchi__physics_1_1_solver" ],
       [ "TransportCrossSections", "d3/dff/classchi__physics_1_1_transport_cross_sections.html", "d3/dff/classchi__physics_1_1_transport_cross_sections" ]
     ] ],
+    [ "dfem_diffusion", "dc/dbe/namespacedfem__diffusion.html", [
+      [ "Boundary", "dd/d4b/classdfem__diffusion_1_1_boundary.html", "dd/d4b/classdfem__diffusion_1_1_boundary" ],
+      [ "Solver", "df/ddc/classdfem__diffusion_1_1_solver.html", "df/ddc/classdfem__diffusion_1_1_solver" ]
+    ] ],
     [ "lbs", "d9/d42/namespacelbs.html", [
+      [ "acceleration", "d8/d43/namespacelbs_1_1acceleration.html", [
+        [ "BoundaryCondition", "d5/df7/structlbs_1_1acceleration_1_1_boundary_condition.html", "d5/df7/structlbs_1_1acceleration_1_1_boundary_condition" ],
+        [ "DiffusionMIPSolver", "d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html", "d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver" ],
+        [ "Multigroup_D_and_sigR", "d6/d81/structlbs_1_1acceleration_1_1_multigroup___d__and__sig_r.html", "d6/d81/structlbs_1_1acceleration_1_1_multigroup___d__and__sig_r" ],
+        [ "TwoGridCollapsedInfo", "db/d99/structlbs_1_1acceleration_1_1_two_grid_collapsed_info.html", "db/d99/structlbs_1_1acceleration_1_1_two_grid_collapsed_info" ]
+      ] ],
       [ "CellLBSView", "d4/d32/classlbs_1_1_cell_l_b_s_view.html", "d4/d32/classlbs_1_1_cell_l_b_s_view" ],
       [ "KEigenvalueSolver", "d7/d41/classlbs_1_1_k_eigenvalue_solver.html", "d7/d41/classlbs_1_1_k_eigenvalue_solver" ],
       [ "KSPDataContext", "d4/d4c/structlbs_1_1_k_s_p_data_context.html", "d4/d4c/structlbs_1_1_k_s_p_data_context" ],
@@ -166,7 +188,11 @@ var annotated_dup =
       [ "Options", "dc/dcd/structlbs_1_1_options.html", "dc/dcd/structlbs_1_1_options" ],
       [ "PointSource", "dc/d4f/classlbs_1_1_point_source.html", "dc/d4f/classlbs_1_1_point_source" ],
       [ "SteadySolver", "d9/d05/classlbs_1_1_steady_solver.html", "d9/d05/classlbs_1_1_steady_solver" ],
-      [ "SweepChunkPWL", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l" ]
+      [ "SubSetInfo", "da/d31/structlbs_1_1_sub_set_info.html", "da/d31/structlbs_1_1_sub_set_info" ],
+      [ "SweepChunkPWL", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l" ],
+      [ "SweepChunkPWLTransientTheta", "d8/da5/classlbs_1_1_sweep_chunk_p_w_l_transient_theta.html", "d8/da5/classlbs_1_1_sweep_chunk_p_w_l_transient_theta" ],
+      [ "TransientSolver", "da/dc0/classlbs_1_1_transient_solver.html", "da/dc0/classlbs_1_1_transient_solver" ],
+      [ "UnitCellMatrices", "dc/d37/structlbs_1_1_unit_cell_matrices.html", "dc/d37/structlbs_1_1_unit_cell_matrices" ]
     ] ],
     [ "lbs_adjoint", "de/ded/namespacelbs__adjoint.html", [
       [ "AdjointSolver", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html", "df/d5b/classlbs__adjoint_1_1_adjoint_solver" ],
@@ -176,6 +202,5 @@ var annotated_dup =
       [ "Solver", "d9/df7/classlbs__curvilinear_1_1_solver.html", "d9/df7/classlbs__curvilinear_1_1_solver" ],
       [ "SweepChunkPWL", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l" ]
     ] ],
-    [ "chi", "d4/d35/classchi.html", "d4/d35/classchi" ],
-    [ "Upwinder", "d6/dbf/struct_upwinder.html", "d6/dbf/struct_upwinder" ]
+    [ "chi", "d4/d35/classchi.html", "d4/d35/classchi" ]
 ];

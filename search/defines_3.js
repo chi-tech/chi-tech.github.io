@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['e_5fcollapse_5fgauss_0',['E_COLLAPSE_GAUSS',['../db/dda/material__property__transportxsections_8h.html#afd93ed6a703fadeae138fb0d1a10f779',1,'material_property_transportxsections.h']]],
-  ['e_5fcollapse_5fjacobi_1',['E_COLLAPSE_JACOBI',['../db/dda/material__property__transportxsections_8h.html#a8dec9a07146f396f424fded66f2b1a15',1,'material_property_transportxsections.h']]],
-  ['e_5fcollapse_5fpartial_5fgauss_2',['E_COLLAPSE_PARTIAL_GAUSS',['../db/dda/material__property__transportxsections_8h.html#afb15beb22e3931e2f40f1244df87ce2c',1,'material_property_transportxsections.h']]],
-  ['e_5fcollapse_5fpartial_5fjacobi_3',['E_COLLAPSE_PARTIAL_JACOBI',['../db/dda/material__property__transportxsections_8h.html#ace40dfe70563c75444cd1f61bd8beaf6',1,'material_property_transportxsections.h']]]
+  ['defaultbcdirichlet_0',['DefaultBCDirichlet',['../d0/d12/dfem__diffusion__solver_8cc.html#a7868af8642364951ba50617beb2a34bb',1,'DefaultBCDirichlet():&#160;dfem_diffusion_solver.cc'],['../d3/d25/diffusion__mip__02a__assemble_aand__b_8cc.html#a7868af8642364951ba50617beb2a34bb',1,'DefaultBCDirichlet():&#160;diffusion_mip_02a_assembleAand_b.cc'],['../de/d27/diffusion__mip__02b__assemble__b_8cc.html#a7868af8642364951ba50617beb2a34bb',1,'DefaultBCDirichlet():&#160;diffusion_mip_02b_assemble_b.cc'],['../d3/d5a/diffusion__mip__02c__assemble_aand__b_8cc.html#a7868af8642364951ba50617beb2a34bb',1,'DefaultBCDirichlet():&#160;diffusion_mip_02c_assembleAand_b.cc'],['../de/d36/diffusion__mip__02d__assemble__b_8cc.html#a7868af8642364951ba50617beb2a34bb',1,'DefaultBCDirichlet():&#160;diffusion_mip_02d_assemble_b.cc']]],
+  ['diffusion_5fmaterials_5ffrom_5ftransportxs_5fttf_1',['DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF',['../d9/d4b/diffusion__solver_8h.html#a2022acdd9afb9f9b3f96515bd9d10952',1,'diffusion_solver.h']]],
+  ['diffusion_5fmaterials_5ffrom_5ftransportxs_5fttf_5fjfull_2',['DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF_JFULL',['../d9/d4b/diffusion__solver_8h.html#a167ed4b0d26f9e9b64aeea3527da70ec',1,'diffusion_solver.h']]],
+  ['diffusion_5fmaterials_5ffrom_5ftransportxs_5fttf_5fjpart_3',['DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTF_JPART',['../d9/d4b/diffusion__solver_8h.html#a7b19f2cd37c7e623ad7ee2d22d499a31',1,'diffusion_solver.h']]],
+  ['diffusion_5fmaterials_5ffrom_5ftransportxs_5fttr_4',['DIFFUSION_MATERIALS_FROM_TRANSPORTXS_TTR',['../d9/d4b/diffusion__solver_8h.html#a9637f4af06818f11f37c376c5c96013f',1,'diffusion_solver.h']]],
+  ['diffusion_5fmaterials_5fregular_5',['DIFFUSION_MATERIALS_REGULAR',['../d9/d4b/diffusion__solver_8h.html#a667f8b51ac0eb00f096d920da9e91832',1,'diffusion_solver.h']]]
 ];

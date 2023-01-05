@@ -37,6 +37,7 @@ var structchi__mesh_1_1_vector3 =
     [ "PrintStr", "dd/d54/structchi__mesh_1_1_vector3.html#a33d8bca1bdf32a3936e96862f238de34", null ],
     [ "Shift", "dd/d54/structchi__mesh_1_1_vector3.html#a721eb0f4ec3b95ac514e85739fed7a3f", null ],
     [ "Shifted", "dd/d54/structchi__mesh_1_1_vector3.html#a431659ee96201ed9c47cef447037ec20", null ],
+    [ "Size", "dd/d54/structchi__mesh_1_1_vector3.html#a2f13492c38e49bf6ccb5315a3e9da6be", null ],
     [ "operator<<", "dd/d54/structchi__mesh_1_1_vector3.html#a8f0f73a53f43db4df3b5036f8cec9c5e", null ],
     [ "x", "dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472", null ],
     [ "y", "dd/d54/structchi__mesh_1_1_vector3.html#a8b89a79cfebafd04dbda021f626a9694", null ],

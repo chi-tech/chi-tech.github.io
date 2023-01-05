@@ -1,20 +1,9 @@
 var searchData=
 [
-  ['scalar_0',['SCALAR',['../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1da8f3d9a4b6a7b7f2c7afa61ca113d0db9',1,'chi_math']]],
-  ['scalar_5fvalue_1',['SCALAR_VALUE',['../d6/d5f/namespacechi__physics.html#ad03b34f5fd167ff7afde2dfa96ac6312a1ccb48fb7dcce2e885a901eaa934871f',1,'chi_physics']]],
-  ['second_2',['SECOND',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9a2200becb80f0019c4a2ccecec350d0db',1,'chi_math']]],
-  ['seventeenth_3',['SEVENTEENTH',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9a915e252e01337a88d55d501ff5b1c766',1,'chi_math']]],
-  ['seventh_4',['SEVENTH',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9a99ff5e1b62588ba0155714fa1582785f',1,'chi_math']]],
-  ['simplexs0_5',['SIMPLEXS0',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95a8d1ca64e4addbe17ad0607c54837c567',1,'chi_physics']]],
-  ['simplexs1_6',['SIMPLEXS1',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95a0356d40f5f6d097214535307c1bbc29c',1,'chi_physics']]],
-  ['single_7',['SINGLE',['../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ada0679273e201afd0bf57af3961f8a23b8',1,'lbs']]],
-  ['single_5foccurrence_8',['SINGLE_OCCURRENCE',['../d8/d42/classchi__objects_1_1_chi_log.html#a095bd445e91d775e42bbffee8d8560e7a0e6076b032363fb0c97fe0324d3f50bd',1,'chi_objects::ChiLog']]],
-  ['single_5fvalue_9',['SINGLE_VALUE',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95ac8946fa6a83e99cc3e25a9c564b13c8e',1,'chi_physics']]],
-  ['sixteenth_10',['SIXTEENTH',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9a4490ba0de617cba6aa30437dfd283f69',1,'chi_math']]],
-  ['sixth_11',['SIXTH',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9a0f819056cc38101e8e1b89a035a58438',1,'chi_math']]],
-  ['slab_12',['SLAB',['../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9ad1360da3ac37ed5c02244bbe2ef9a34e',1,'chi_mesh']]],
-  ['sldfesq_13',['SLDFESQ',['../dc/d58/namespacechi__math.html#a1549f07a2de9e2c7f01c728a5f0dbe37af58bd562b3cfc0781e4620679715deb7',1,'chi_math']]],
-  ['spherical_14',['SPHERICAL',['../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1a7f7d7e3a21bf7decf99d6fd26848772d',1,'chi_math']]],
-  ['string_15',['STRING',['../d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542a63b588d5559f64f89a416e656880b949',1,'chi_data_types']]],
-  ['surface_5fmesh_16',['SURFACE_MESH',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a0397c6d3b836f2132697065ef26bb4d5a83be7086ab9c8e5079e54fa93f46c115',1,'chi_mesh::VolumeMesherExtruder']]]
+  ['ready_5fto_5fexecute_0',['READY_TO_EXECUTE',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6f35c94844603249789b4e4ae4ece8c1a36250289c9c8a172135ba8502166d295',1,'chi_mesh::sweep_management']]],
+  ['receiving_1',['RECEIVING',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6f35c94844603249789b4e4ae4ece8c1a0c96084902e8f21bf3bf678fdce4f2a0',1,'chi_mesh::sweep_management']]],
+  ['reflecting_2',['Reflecting',['../d3/d65/namespacecfem__diffusion.html#a231772ce90e37a7ba9331c9194a99200a9ee62873f779acffc647988768156e29',1,'cfem_diffusion::Reflecting()'],['../dc/dbe/namespacedfem__diffusion.html#a060557e391e4d5c55b11bafdeb4ceb73a9ee62873f779acffc647988768156e29',1,'dfem_diffusion::Reflecting()'],['../de/d73/namespacechi__diffusion.html#ac4e189795be6769fcad88cf3ebf1d79fa9ee62873f779acffc647988768156e29',1,'chi_diffusion::Reflecting()']]],
+  ['reflecting_3',['REFLECTING',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da6890fc3005a75adb9e5a84b693e8741c',1,'chi_mesh::sweep_management::REFLECTING()'],['../d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91da6890fc3005a75adb9e5a84b693e8741c',1,'lbs::REFLECTING()']]],
+  ['robin_4',['ROBIN',['../d8/d43/namespacelbs_1_1acceleration.html#abe7c1c9c9be0a643101c524be65528b4abcd811f0b658b589b503a44dcde68c46',1,'lbs::acceleration']]],
+  ['robin_5',['Robin',['../d3/d65/namespacecfem__diffusion.html#a231772ce90e37a7ba9331c9194a99200a22d5d814d801d8b3e1a1c3fc36796de9',1,'cfem_diffusion::Robin()'],['../dc/dbe/namespacedfem__diffusion.html#a060557e391e4d5c55b11bafdeb4ceb73a22d5d814d801d8b3e1a1c3fc36796de9',1,'dfem_diffusion::Robin()'],['../de/d73/namespacechi__diffusion.html#ac4e189795be6769fcad88cf3ebf1d79fa22d5d814d801d8b3e1a1c3fc36796de9',1,'chi_diffusion::Robin()']]]
 ];

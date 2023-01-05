@@ -108,12 +108,12 @@ Modules</h2></td></tr>
 <h2>Mesh Handling</h2>
 <p >Meshing in ChiTech is made available via the <a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a> namespace. All instances of entities are stored within a handler (<a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a>). A mesh handler is created with a call to <a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate()</a>.</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div>
-<div class="ttc" id="agroup___lua_mesh_handler_html_ga57ff5c2bfc92cd5cf102d26a3611bd3e"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">int chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00350">lua_functions.c:350</a></div></div>
+<div class="ttc" id="agroup___lua_mesh_handler_html_ga57ff5c2bfc92cd5cf102d26a3611bd3e"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">int chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00367">lua_functions.c:367</a></div></div>
 </div><!-- fragment --><h2>Predefined 2D Mesh Setup Example</h2>
 <div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div>
 <div class="line">--</div>
 <div class="line">newSurfMesh = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a5b4ae0e72dd9dd3a8bef427883aea5a1">chiSurfaceMeshCreate</a>();</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a60251857e39dcfe2867a6fb5c2cade15">chiSurfaceMeshImportFromOBJFile</a>(newSurfMesh,<span class="stringliteral">&quot;CHI_RESOURCES/TestObjects/SquareMesh2x2.obj&quot;</span>)</div>
+<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a01321849c9875e8aa15d4ce7bc5b9185">chiSurfaceMeshImportFromOBJFile</a>(newSurfMesh,<span class="stringliteral">&quot;CHI_RESOURCES/TestObjects/SquareMesh2x2.obj&quot;</span>)</div>
 <div class="line">loops,loop_count = chiSurfaceMeshGetEdgeLoops(newSurfMesh)</div>
 <div class="line">--</div>
 <div class="line">--</div>
@@ -128,8 +128,8 @@ Modules</h2></td></tr>
 <div class="line">  end</div>
 <div class="line">--</div>
 <div class="line">end</div>
-<div class="ttc" id="anamespacechi__lua_html_a5b4ae0e72dd9dd3a8bef427883aea5a1"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a5b4ae0e72dd9dd3a8bef427883aea5a1">chi_lua::chiSurfaceMeshCreate</a></div><div class="ttdeci">int chiSurfaceMeshCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00479">lua_functions.c:479</a></div></div>
-<div class="ttc" id="anamespacechi__lua_html_a60251857e39dcfe2867a6fb5c2cade15"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a60251857e39dcfe2867a6fb5c2cade15">chi_lua::chiSurfaceMeshImportFromOBJFile</a></div><div class="ttdeci">int chiSurfaceMeshImportFromOBJFile(int SurfaceHandle, char *FileName, bool polyflag)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00506">lua_functions.c:506</a></div></div>
+<div class="ttc" id="anamespacechi__lua_html_a01321849c9875e8aa15d4ce7bc5b9185"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a01321849c9875e8aa15d4ce7bc5b9185">chi_lua::chiSurfaceMeshImportFromOBJFile</a></div><div class="ttdeci">int chiSurfaceMeshImportFromOBJFile(int SurfaceHandle, char *FileName, bool polyflag, table3 transform)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00525">lua_functions.c:525</a></div></div>
+<div class="ttc" id="anamespacechi__lua_html_a5b4ae0e72dd9dd3a8bef427883aea5a1"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a5b4ae0e72dd9dd3a8bef427883aea5a1">chi_lua::chiSurfaceMeshCreate</a></div><div class="ttdeci">int chiSurfaceMeshCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00496">lua_functions.c:496</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

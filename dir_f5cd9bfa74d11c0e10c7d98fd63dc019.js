@@ -1,5 +1,6 @@
 var dir_f5cd9bfa74d11c0e10c7d98fd63dc019 =
 [
+    [ "Acceleration", "dir_220cb3368d11a585c2c153afbf555066.html", "dir_220cb3368d11a585c2c153afbf555066" ],
     [ "Documentation", "dir_adea5e7198a4d3d0dbc0fd47361ff5cc.html", "dir_adea5e7198a4d3d0dbc0fd47361ff5cc" ],
     [ "Groupset", "dir_8b2ae7cd9705b5e1d5a1608041dbb894.html", "dir_8b2ae7cd9705b5e1d5a1608041dbb894" ],
     [ "IterativeMethods", "dir_853c4fa1a02110509e89e8abad2eca34.html", "dir_853c4fa1a02110509e89e8abad2eca34" ],
@@ -20,10 +21,8 @@ var dir_f5cd9bfa74d11c0e10c7d98fd63dc019 =
     [ "lbs_01i_init_point_sources.cc", "d4/d8f/lbs__01i__init__point__sources_8cc.html", null ],
     [ "lbs_02_main_execute.cc", "d3/d7d/lbs__02__main__execute_8cc.html", null ],
     [ "lbs_03a_compsweeporder.cc", "d2/dcf/lbs__03a__compsweeporder_8cc.html", "d2/dcf/lbs__03a__compsweeporder_8cc" ],
+    [ "lbs_03aa_iduniqso.cc", "dd/d17/lbs__03aa__iduniqso_8cc.html", "dd/d17/lbs__03aa__iduniqso_8cc" ],
     [ "lbs_03b_initfluds.cc", "d4/dc6/lbs__03b__initfluds_8cc.html", null ],
-    [ "lbs_03ca_angleagg_single.cc", "d8/d42/lbs__03ca__angleagg__single_8cc.html", "d8/d42/lbs__03ca__angleagg__single_8cc" ],
-    [ "lbs_03cb_angleagg_polar.cc", "d7/d56/lbs__03cb__angleagg__polar_8cc.html", "d7/d56/lbs__03cb__angleagg__polar_8cc" ],
-    [ "lbs_03cc_angleagg_azimuthal.cc", "d1/de7/lbs__03cc__angleagg__azimuthal_8cc.html", "d1/de7/lbs__03cc__angleagg__azimuthal_8cc" ],
     [ "lbs_03d_wgdsa.cc", "dc/ddb/lbs__03d__wgdsa_8cc.html", null ],
     [ "lbs_03e_tgdsa.cc", "d8/d54/lbs__03e__tgdsa_8cc.html", null ],
     [ "lbs_03f_resetswporderings.cc", "d2/d48/lbs__03f__resetswporderings_8cc.html", null ],
@@ -33,6 +32,8 @@ var dir_f5cd9bfa74d11c0e10c7d98fd63dc019 =
     [ "lbs_compute_balance.cc", "d9/dfd/lbs__compute__balance_8cc.html", null ],
     [ "lbs_compute_precursors.cc", "d9/d37/lbs__compute__precursors_8cc.html", null ],
     [ "lbs_linear_boltzmann_solver.h", "df/d26/lbs__linear__boltzmann__solver_8h.html", "df/d26/lbs__linear__boltzmann__solver_8h" ],
+    [ "lbs_make_subset.cc", "df/d1c/lbs__make__subset_8cc.html", "df/d1c/lbs__make__subset_8cc" ],
+    [ "lbs_make_subset.h", "de/db8/lbs__make__subset_8h.html", "de/db8/lbs__make__subset_8h" ],
     [ "lbs_structs.h", "d9/dc3/lbs__structs_8h.html", "d9/dc3/lbs__structs_8h" ],
     [ "lbs_vectorassembly.cc", "d1/dbd/lbs__vectorassembly_8cc.html", null ]
 ];

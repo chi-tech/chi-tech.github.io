@@ -1,9 +1,10 @@
 var classchi__math_1_1_unknown_manager =
 [
-    [ "Unknown", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown.html", "d1/d58/classchi__math_1_1_unknown_manager_1_1_unknown" ],
     [ "UnknownInfo", "d9/da7/classchi__math_1_1_unknown_manager.html#a6d50fa800e23465f7fb6aa351a995c1c", null ],
     [ "UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html#a56c977df0cf17e931f8cb1b1604e0b36", null ],
     [ "UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html#afd4a44b752863f4960d7729dea9090f9", null ],
+    [ "UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html#a782059b3d3086edb809f15851aa70eb3", null ],
+    [ "UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html#ae06f178254ac8ff339f598be5b43f86a", null ],
     [ "UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html#a98c74be15fd6ebc0c0bdb20e37862f78", null ],
     [ "~UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html#ac10c2146c56c47d5ca63871c25d017f0", null ],
     [ "AddUnknown", "d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78", null ],

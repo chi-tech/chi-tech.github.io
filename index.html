@@ -100,6 +100,19 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 </p>
 <p ><br  />
 </p>
+<h2>Variables defined in lua</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Variable Name   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Variable Name   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>chi_version</code>   </td><td class="markdownTableBodyNone">Version string, e.g., "1.2.3"   </td><td class="markdownTableBodyNone"><code>chi_minor_version</code>   </td><td class="markdownTableBodyNone">Minor version, e.g., 2, as an integer    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>chi_major_version</code>   </td><td class="markdownTableBodyNone">Major version, e.g., 1, as an integer   </td><td class="markdownTableBodyNone"><code>chi_patch_version</code>   </td><td class="markdownTableBodyNone">Patch version, e.g., 3, as an integer    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>chi_location_id</code>   </td><td class="markdownTableBodyNone">Current process rank in MPI-context   </td><td class="markdownTableBodyNone"><code>chi_number_of_processes</code>   </td><td class="markdownTableBodyNone">Number of MPI processes   </td></tr>
+</table>
+<p ><br  />
+</p>
 <h2>Input Functions</h2>
 <h3>MPI Utilities</h3>
 <table class="doxtable">
@@ -115,12 +128,17 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d0/d4d/group___lua_math.html#ga4106dfb07e7c351ca0d4b113f9c4fcbb">chiLegendre()</a></td><td width="33%"><a class="el" href="d0/d4d/group___lua_math.html#ga067c5640a991493f710fb9afe4422704">chiLegendreDerivative()</a></td><td width="33%"><a class="el" href="d0/d4d/group___lua_math.html#ga8cb0fae654b617fde41e8bdc849a1f9f">chiYlm()</a> </td></tr>
+</table>
+<h3>Quadratures</h3>
+<table class="doxtable">
 <tr>
-<td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#gac86eefa7c0cf1f1210c072be2a733280">chiCreateQuadrature()</a></td><td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#ga9600f3a9c8ef7a0f97a27d7317ebb3b3">chiCreateProductQuadrature()</a></td><td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#gaeed88fa61b259a1fa2b48b5cdd096f15">chiCreateCylindricalProductQuadrature()</a> </td></tr>
+<td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#ga73256f367077167176e568f02818f06d">chiCreateLineQuadrature()</a></td><td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#ga9600f3a9c8ef7a0f97a27d7317ebb3b3">chiCreateProductQuadrature()</a></td><td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#gaeed88fa61b259a1fa2b48b5cdd096f15">chiCreateCylindricalProductQuadrature()</a> </td></tr>
 <tr>
 <td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#ga30672dd3f0b33fa1a5214e44c3be743e">chiCreateSphericalProductQuadrature()</a></td><td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#gab7d8a43b56ecd0142d00231de4e0c526">chiCreateCustomAngularQuadrature()</a></td><td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#gab8fde37d24b96f988753a7f18827d11f">chiGetProductQuadrature()</a> </td></tr>
 <tr>
 <td width="33%"><a class="el" href="de/d7d/group___lua_s_l_d_f_e_s_q.html#ga4f91d2526cd87ad9a84c0156d240c4c2">chiCreateSLDFESQAngularQuadrature()</a></td><td width="33%"><a class="el" href="de/d7d/group___lua_s_l_d_f_e_s_q.html#gad1f83a9056d88806c04b8f9805737c22">chiLocallyRefineSLDFESQAngularQuadrature()</a></td><td width="33%"><a class="el" href="de/d7d/group___lua_s_l_d_f_e_s_q.html#gabf50f9de245fbfc391507ce25b2ab11c">chiPrintToPythonSLDFESQAngularQuadrature()</a> </td></tr>
+<tr>
+<td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#gafdf88c6179ca7b716ee994ad353ffced">chiOptimizeAngularQuadratureForPolarSymmetry()</a> </td></tr>
 </table>
 <h3>Orthogonal Meshes</h3>
 <table class="doxtable">
@@ -156,7 +174,7 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <h3>Surface Meshes</h3>
 <table class="doxtable">
 <tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a5b4ae0e72dd9dd3a8bef427883aea5a1">chiSurfaceMeshCreate()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a60251857e39dcfe2867a6fb5c2cade15">chiSurfaceMeshImportFromOBJFile()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a1904c337bf04e2b61196a3267b9eb505">chiSurfaceMeshImportFromTriangleFiles()</a> </td></tr>
+<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a5b4ae0e72dd9dd3a8bef427883aea5a1">chiSurfaceMeshCreate()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a01321849c9875e8aa15d4ce7bc5b9185">chiSurfaceMeshImportFromOBJFile()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a1904c337bf04e2b61196a3267b9eb505">chiSurfaceMeshImportFromTriangleFiles()</a> </td></tr>
 <tr>
 <td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a2b40148a4d916cb516bac1c6568a8486">chiSurfaceMeshExportToObj()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a81f7f5b78c4dd7a72a18d47d88c699c1">chiSurfaceMeshExportPolyFile()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a4dfc91de433141f2d3f9b865e03eed0c">chiSurfaceMeshCheckCycles()</a> </td></tr>
 <tr>
@@ -218,15 +236,17 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <h3>Linear Boltzmann Solver</h3>
 <p ><a class="el" href="d0/daf/group___lua_l_b_s.html">Linear Boltzmann Solver</a> Documentation page </p><table class="doxtable">
 <tr>
-<td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga00b5d961d5dc8eeff3abe8297a577584">chiLBSCreateSolver()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga0ff2334b7745f760ecdfbf378b668841">chiLBSSetProperty()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga64539ea4595365ed48c1e8458028c443">chiLBSInitialize()</a> </td></tr>
+<td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga00b5d961d5dc8eeff3abe8297a577584">chiLBSCreateSolver()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga0ff2334b7745f760ecdfbf378b668841">chiLBSSetProperty()</a></td><td width="33%">chiLBSInitialize() </td></tr>
 <tr>
-<td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga4325f93255469d8c33115055a0a41964">chiLBSExecute()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga3a0cf843a86a0d768f9831e4c96129a3">chiLBSGetFieldFunctionList()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga5d938e5ed990f5c34953f0d6928cbbf4">chiLBSGetScalarFieldFunctionList()</a> </td></tr>
+<td width="33%">chiLBSExecute()</td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga3a0cf843a86a0d768f9831e4c96129a3">chiLBSGetFieldFunctionList()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga5d938e5ed990f5c34953f0d6928cbbf4">chiLBSGetScalarFieldFunctionList()</a> </td></tr>
 <tr>
 <td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#ad1c15a3979a4c43dacdc6abcf7563680">chiLBSWriteGroupsetAngularFlux()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a0af98b874c627c555ebefc9d620891be">chiLBSReadGroupsetAngularFlux()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#ae3af52cb0eb1d3c5ef79b1c76198b8d9">chiLBSWriteFluxMoments()</a> </td></tr>
 <tr>
 <td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a9191091a5b23dfe86db544d63ef57aa9">chiLBSCreateAndWriteSourceMoments()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a3e21046e871b1cee21b100649ce01e21">chiLBSReadFluxMomentsAndMakeSourceMoments()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#af8f711c3f744eccac7530ca2bd68ba15">chiLBSReadSourceMoments()</a> </td></tr>
 <tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#abcc9b3cad895eef31a46654bbf6abf1c">chiLBSReadFluxMoments()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga5b5241ab56617c614f1983654a858fcf">chiLBSComputeBalance()</a> </td></tr>
+<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#abcc9b3cad895eef31a46654bbf6abf1c">chiLBSReadFluxMoments()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga5b5241ab56617c614f1983654a858fcf">chiLBSComputeBalance()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga87307658002edee0e0a5939996d2c7c4">chiLBSAddPointSource()</a> </td></tr>
+<tr>
+<td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#gace11acc0ac669b536039ca8d6d478d54">chiLBSClearPointSources()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga1776a0a5b9210513a4f9ef77b75c4bef">chiLBSInitializePointSources()</a> </td></tr>
 </table>
 <h3>Linear Boltzmann Solver - Groupset manipulation</h3>
 <p >LuaLBSGroupsets Main page </p><table class="doxtable">
@@ -249,9 +269,9 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <h3>LinearBoltzmann - KEigenvalueSolver</h3>
 <table class="doxtable">
 <tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#af452cc43bc97fc1dc5d40d2121c47e1b">chiLBKESCreateSolver()</a></td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a28f78cc9f5c3831e8c54941bfed0ebdf">chiLBKESInitialize()</a></td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga6f11eec9f9cead00f907ad5c6e6f825a">chiLBKESExecute()</a> </td></tr>
+<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a3fd158bf8427881386efe845f8222947">chiLBKESCreateSolver()</a></td><td width="33%">chiLBKESInitialize()</td><td width="33%">chiLBKESExecute() </td></tr>
 <tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a02f0b6b601617e42409f485774f37a28">chiLBKESSetProperty()</a> </td></tr>
+<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#aedc92284303daeb26ab234db26b3f796">chiLBKESSetProperty()</a> </td></tr>
 </table>
 <h3>Test scripts</h3>
 <table class="doxtable">
