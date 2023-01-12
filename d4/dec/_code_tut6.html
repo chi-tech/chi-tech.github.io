@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -105,29 +112,29 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 </ul>
 <h1><a class="anchor" id="CodeTut6Sec1"></a>
 1 The multigroup Discrete Ordinates Equations</h1>
-<p >In this tutorial we look at the multigroup discrete ordinates (DO) equations, otherwise known as the <img class="formulaInl" alt="$ S_N $" src="../../form_282.png" width="20" height="15"/> equations. For a complete tutorial, on how these equations are derived, please consult <a href="https://github.com/doctor-janv/whitepapers/blob/main/ChiTech-LBS-TheoryManual/ChiTech-LBS-TheoryManual_v_1_13.pdf">this whitepaper</a>.</p>
+<p >In this tutorial we look at the multigroup discrete ordinates (DO) equations, otherwise known as the \( S_N \) equations. For a complete tutorial, on how these equations are derived, please consult <a href="https://github.com/doctor-janv/whitepapers/blob/main/ChiTech-LBS-TheoryManual/ChiTech-LBS-TheoryManual_v_1_13.pdf">this whitepaper</a>.</p>
 <p >We start with the equations themselves </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \biggr(\boldsymbol{\Omega}_n \boldsymbol{\cdot} \boldsymbol{\nabla} +\sigma_{tg} (\mathbf{x})\biggr) \psi_{gn} (\mathbf{x})= \sum_{m=0}^{N_m - 1} \frac{2\ell+1}{4\pi}Y_{\ell m^*}(\boldsymbol{\Omega}_n) \sum_{g'=0}^{N_G-1} \biggr[ \sigma_{s\ell,g'{\to}g} (\mathbf{x}) \ \phi_{mg'}(\mathbf{x}) \biggr] + q_{g,n} (\mathbf{x}) \quad \quad \quad \mathbf{x}\in\mathcal{D} \]" src="../../form_324.png" width="641" height="48"/>
+\[ \biggr(\boldsymbol{\Omega}_n \boldsymbol{\cdot} \boldsymbol{\nabla} +\sigma_{tg} (\mathbf{x})\biggr) \psi_{gn} (\mathbf{x})= \sum_{m=0}^{N_m - 1} \frac{2\ell+1}{4\pi}Y_{\ell m^*}(\boldsymbol{\Omega}_n) \sum_{g&#39;=0}^{N_G-1} \biggr[ \sigma_{s\ell,g&#39;{\to}g} (\mathbf{x}) \ \phi_{mg&#39;}(\mathbf{x}) \biggr] + q_{g,n} (\mathbf{x}) \quad \quad \quad \mathbf{x}\in\mathcal{D} \]
 </p>
  <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \psi_{gn}(\mathbf{x}) =0 \quad \quad \quad \mathbf{x}\in\partial\mathcal{D} \]" src="../../form_285.png" width="167" height="17"/>
+\[ \psi_{gn}(\mathbf{x}) =0 \quad \quad \quad \mathbf{x}\in\partial\mathcal{D} \]
 </p>
 <p> where the variables have the following meaning</p><ul>
-<li><img class="formulaInl" alt="$ \boldsymbol{\Omega}_n $" src="../../form_286.png" width="20" height="15"/> is the <img class="formulaInl" alt="$ n $" src="../../form_287.png" width="11" height="8"/>-th direction vector</li>
-<li><img class="formulaInl" alt="$ \sigma_{tg} $" src="../../form_91.png" width="20" height="12"/> is the total interaction cross section for group <img class="formulaInl" alt="$ g $" src="../../form_288.png" width="9" height="11"/></li>
-<li><img class="formulaInl" alt="$ \psi_{gn} $" src="../../form_289.png" width="24" height="17"/> is the angular flux for group <img class="formulaInl" alt="$ g $" src="../../form_288.png" width="9" height="11"/> and direction <img class="formulaInl" alt="$ n $" src="../../form_287.png" width="11" height="8"/></li>
-<li><img class="formulaInl" alt="$ Y_{\ell m^*} $" src="../../form_290.png" width="30" height="15"/> is the tesseral Spherical Harmonic function where <img class="formulaInl" alt="$ (\ell, m^*) $" src="../../form_291.png" width="44" height="17"/> is mapped from <img class="formulaInl" alt="$ m $" src="../../form_1.png" width="15" height="8"/></li>
-<li><img class="formulaInl" alt="$ \sigma_{sm,g'{\to}g} $" src="../../form_292.png" width="57" height="12"/> is the scattering cross section for moment <img class="formulaInl" alt="$ m $" src="../../form_1.png" width="15" height="8"/> scattering from group <img class="formulaInl" alt="$ g' $" src="../../form_293.png" width="12" height="15"/> to <img class="formulaInl" alt="$ g $" src="../../form_288.png" width="9" height="11"/></li>
-<li><img class="formulaInl" alt="$ \phi_{mg} $" src="../../form_294.png" width="26" height="17"/> is the flux-moment for moment <img class="formulaInl" alt="$ m $" src="../../form_1.png" width="15" height="8"/> group <img class="formulaInl" alt="$ g $" src="../../form_288.png" width="9" height="11"/>, computed from the angular quadrature <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{align*} \phi_{gm}(\mathbf{x}) &amp;= \int_{4\pi} \psi_g(\mathbf{x},\boldsymbol{\Omega}) Y_{\ell m}(\boldsymbol{\Omega}) d\boldsymbol{\Omega}\\ &amp;=\sum_{n=0}^{N_D-1} w_n \ \psi_{gn}(\mathbf{x}) Y_{\ell m^*}(\boldsymbol{\Omega}_n) \end{align*}" src="../../form_299.png" width="236" height="87"/>
+<li>\( \boldsymbol{\Omega}_n \) is the \( n \)-th direction vector</li>
+<li>\( \sigma_{tg} \) is the total interaction cross section for group \( g \)</li>
+<li>\( \psi_{gn} \) is the angular flux for group \( g \) and direction \( n \)</li>
+<li>\( Y_{\ell m^*} \) is the tesseral Spherical Harmonic function where \( (\ell, m^*) \) is mapped from \( m \)</li>
+<li>\( \sigma_{sm,g&#39;{\to}g} \) is the scattering cross section for moment \( m \) scattering from group \( g&#39; \) to \( g \)</li>
+<li>\( \phi_{mg} \) is the flux-moment for moment \( m \) group \( g \), computed from the angular quadrature <p class="formulaDsp">
+\begin{align*} \phi_{gm}(\mathbf{x}) &amp;= \int_{4\pi} \psi_g(\mathbf{x},\boldsymbol{\Omega}) Y_{\ell m}(\boldsymbol{\Omega}) d\boldsymbol{\Omega}\\ &amp;=\sum_{n=0}^{N_D-1} w_n \ \psi_{gn}(\mathbf{x}) Y_{\ell m^*}(\boldsymbol{\Omega}_n) \end{align*}
 </p>
 </li>
-<li><img class="formulaInl" alt="$ q_{g,n} $" src="../../form_301.png" width="24" height="12"/> is the angular material source for group <img class="formulaInl" alt="$ g $" src="../../form_288.png" width="9" height="11"/> direction <img class="formulaInl" alt="$ n $" src="../../form_287.png" width="11" height="8"/>, normally defined as an isotropic source <img class="formulaInl" alt="$ \frac{1}{4\pi} q_{g} $" src="../../form_307.png" width="30" height="20"/></li>
+<li>\( q_{g,n} \) is the angular material source for group \( g \) direction \( n \), normally defined as an isotropic source \( \frac{1}{4\pi} q_{g} \)</li>
 </ul>
-<p >The "angular quadrature" mentioned here contains considerable history. When the DO-method was still in it's infancy, most simulations were still one dimensional. In such cases the angular flux has no azimuthal dependence and the angular integrals reduce to <code>Gauss-Legendre</code> quadratures. Because the DO-method generally avoids the placement of a quadrature point on the <img class="formulaInl" alt="$ \mu=0 $" src="../../form_302.png" width="38" height="14"/> plane, it was generally preferred to use quadratures with even-amounts of quadrature points. Because of this, people in the transport community typically referred to the DO-method as the <img class="formulaInl" alt="$ S_N $" src="../../form_282.png" width="20" height="15"/> method with <img class="formulaInl" alt="$ S_2 $" src="../../form_303.png" width="15" height="15"/> being the first even quadrature used, followed by <img class="formulaInl" alt="$ S_4,\ S_8,\ $" src="../../form_304.png" width="47" height="15"/> etc.</p>
-<p >In two and three dimensions, where one generally have dependence on both the azimuthal and polar directions (although 2D is symmetric in the polar angle), the nomenclature could be extended with the use of the "so-called" triangular quadratures. These type of quadratures placed ever decreasing amount of polar angles starting from the equator of the unit sphere towards the poles. Incidentally, if the number of polar angles per octant is <img class="formulaInl" alt="$ N/2 $" src="../../form_305.png" width="27" height="17"/> then the azimuthal "level" closest to the equator will start with <img class="formulaInl" alt="$ N/2 $" src="../../form_305.png" width="27" height="17"/> number of azimuthal angles. For example, an <img class="formulaInl" alt="$ S_8 $" src="../../form_306.png" width="15" height="15"/> angular quadrature in 3D has 4 polar levels per octant, therefore the azimuthal angles would start at 4, then 3, then 2, then 1 at the polar-lelel closest to the pole.</p>
+<p >The "angular quadrature" mentioned here contains considerable history. When the DO-method was still in it's infancy, most simulations were still one dimensional. In such cases the angular flux has no azimuthal dependence and the angular integrals reduce to <code>Gauss-Legendre</code> quadratures. Because the DO-method generally avoids the placement of a quadrature point on the \( \mu=0 \) plane, it was generally preferred to use quadratures with even-amounts of quadrature points. Because of this, people in the transport community typically referred to the DO-method as the \( S_N \) method with \( S_2 \) being the first even quadrature used, followed by \( S_4,\ S_8,\ \) etc.</p>
+<p >In two and three dimensions, where one generally have dependence on both the azimuthal and polar directions (although 2D is symmetric in the polar angle), the nomenclature could be extended with the use of the "so-called" triangular quadratures. These type of quadratures placed ever decreasing amount of polar angles starting from the equator of the unit sphere towards the poles. Incidentally, if the number of polar angles per octant is \( N/2 \) then the azimuthal "level" closest to the equator will start with \( N/2 \) number of azimuthal angles. For example, an \( S_8 \) angular quadrature in 3D has 4 polar levels per octant, therefore the azimuthal angles would start at 4, then 3, then 2, then 1 at the polar-lelel closest to the pole.</p>
 <p >The use of the triangular quadratures are considered to be quite antiquated. Some of the reasons for this includes the following:</p><ul>
-<li>When more resolution in the azimuthal domain is required then a higher <img class="formulaInl" alt="$ S_N $" src="../../form_282.png" width="20" height="15"/> order will unfortunately be accompanied by more polar angles.</li>
+<li>When more resolution in the azimuthal domain is required then a higher \( S_N \) order will unfortunately be accompanied by more polar angles.</li>
 <li>In 2D, the polar dependence can accurately be captured with just a few polar angles, however, the azimuthal dependence may still be unresolved. Product quadratures are then best suited to place more azimuthal directions in the quadrature.</li>
 <li>Generally, 3D simulations (e.g. reactor simulations) depend more strongly on the azimuthal directions than on the polar directions.</li>
 </ul>
@@ -142,16 +149,16 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <h2><a class="anchor" id="CodeTut6Sec2_1"></a>
 2.1 The right hand side</h2>
 <p >Since we are dealing with a FV discretization the values of cross sections, fluxes and sources are cell constant. Therefore, the RHS of the multigroup DO equations becomes </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ q_c^{rhs} = \sum_{m=0}^{N_m - 1} \frac{2\ell+1}{4\pi}Y_{\ell m^*}(\boldsymbol{\Omega}_n) \sum_{g'=0}^{N_G-1} \biggr[ \sigma_{s\ell,g'{\to}g,c} \ \phi_{mg',c} \biggr] + \frac{1}{4\pi} q_{g,c}. \]" src="../../form_325.png" width="413" height="48"/>
+\[ q_c^{rhs} = \sum_{m=0}^{N_m - 1} \frac{2\ell+1}{4\pi}Y_{\ell m^*}(\boldsymbol{\Omega}_n) \sum_{g&#39;=0}^{N_G-1} \biggr[ \sigma_{s\ell,g&#39;{\to}g,c} \ \phi_{mg&#39;,c} \biggr] + \frac{1}{4\pi} q_{g,c}. \]
 </p>
 <p> This representation is, however, not very practical and instead we choose to write it as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ q_{c,g}^{rhs} = \sum_{m=0}^{N_m-1} M_{mn} q_{c,g}^{moms,m} \]" src="../../form_320.png" width="173" height="45"/>
+\[ q_{c,g}^{rhs} = \sum_{m=0}^{N_m-1} M_{mn} q_{c,g}^{moms,m} \]
 </p>
-<p> where <img class="formulaInl" alt="$ M_{mn} $" src="../../form_314.png" width="33" height="15"/> is called the Moment-To-Discrete operator (on a nodal level) and defined as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ M_{mn} = \frac{2\ell+1}{4\pi}Y_{\ell m^*}(\boldsymbol{\Omega}_n) \]" src="../../form_315.png" width="159" height="33"/>
+<p> where \( M_{mn} \) is called the Moment-To-Discrete operator (on a nodal level) and defined as </p><p class="formulaDsp">
+\[ M_{mn} = \frac{2\ell+1}{4\pi}Y_{\ell m^*}(\boldsymbol{\Omega}_n) \]
 </p>
-<p> noting that <img class="formulaInl" alt="$ (\ell,m^*) $" src="../../form_316.png" width="44" height="17"/> is mapped from <img class="formulaInl" alt="$ m $" src="../../form_1.png" width="15" height="8"/>. This operator can be precomputed once the angular quadrature is known. The other quantity introduced here, <img class="formulaInl" alt="$ q_{c,g}^{moms} $" src="../../form_321.png" width="39" height="17"/>, is called the source moments for cell <img class="formulaInl" alt="$ c $" src="../../form_235.png" width="6" height="8"/> group <img class="formulaInl" alt="$ g $" src="../../form_288.png" width="9" height="11"/> and is defined by </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ q_{c,g}^{moms,m} = \begin{cases} \sum_{g'=0}^{N_G-1} \biggr[ \sigma_{s\ell,g'{\to}g,c} \ \phi_{mg',c} \biggr] + q_{c,g} \quad \quad &amp;m=0,\\ \sum_{g'=0}^{N_G-1} \biggr[ \sigma_{s\ell,g'{\to}g,c} \ \phi_{mg',c} \biggr] \quad \quad &amp;m\ne 0 \end{cases} \]" src="../../form_326.png" width="390" height="74"/>
+<p> noting that \( (\ell,m^*) \) is mapped from \( m \). This operator can be precomputed once the angular quadrature is known. The other quantity introduced here, \( q_{c,g}^{moms} \), is called the source moments for cell \( c \) group \( g \) and is defined by </p><p class="formulaDsp">
+\[ q_{c,g}^{moms,m} = \begin{cases} \sum_{g&#39;=0}^{N_G-1} \biggr[ \sigma_{s\ell,g&#39;{\to}g,c} \ \phi_{mg&#39;,c} \biggr] + q_{c,g} \quad \quad &amp;m=0,\\ \sum_{g&#39;=0}^{N_G-1} \biggr[ \sigma_{s\ell,g&#39;{\to}g,c} \ \phi_{mg&#39;,c} \biggr] \quad \quad &amp;m\ne 0 \end{cases} \]
 </p>
 <p >In the iterative schemes, that will be introduced later, we compute and store a vector of source moments for each iteration.</p>
 <h2><a class="anchor" id="CodeTut6Sec2_2"></a>
@@ -161,27 +168,27 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <img src="../../Tut6_orthoijk.png" alt="" width="700px"/>
 </div>
 <p >With this convention we've introduced nodes on the interstitial faces between cells. Suppressing, for the moment, direction and group indices, we can express the divergence term as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \boldsymbol{\Omega} \boldsymbol{\cdot} \boldsymbol{\nabla} \psi = \Omega_x \frac{\partial \psi}{\partial x} + \Omega_y \frac{\partial \psi}{\partial y} + \Omega_z \frac{\partial \psi}{\partial z}. \]" src="../../form_328.png" width="230" height="36"/>
+\[ \boldsymbol{\Omega} \boldsymbol{\cdot} \boldsymbol{\nabla} \psi = \Omega_x \frac{\partial \psi}{\partial x} + \Omega_y \frac{\partial \psi}{\partial y} + \Omega_z \frac{\partial \psi}{\partial z}. \]
 </p>
 <p> We then introduce the approximation, e.g., in the x-dimension </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \Omega_x \frac{\partial \psi}{\partial x} = \frac{\Omega_x}{\Delta x} (\psi_{i+\frac{1}{2}} - \psi_{i-\frac{1}{2}}) \]" src="../../form_329.png" width="180" height="33"/>
+\[ \Omega_x \frac{\partial \psi}{\partial x} = \frac{\Omega_x}{\Delta x} (\psi_{i+\frac{1}{2}} - \psi_{i-\frac{1}{2}}) \]
 </p>
 <p> which, if done for all the dimensions, introduces up to 6 new variables into the equation. Fortunately, since we can apply upwinding, we can eliminate half of these with the closure relation </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \psi_i = \frac{1}{2}(\psi_{i+\frac{1}{2}} + \psi_{i-\frac{1}{2}}), \]" src="../../form_330.png" width="146" height="32"/>
+\[ \psi_i = \frac{1}{2}(\psi_{i+\frac{1}{2}} + \psi_{i-\frac{1}{2}}), \]
 </p>
-<p> obviously extended to all dimensions. To comprehend this upwinding, consider the schematic below, showing the upwinding for different configurations of <img class="formulaInl" alt="$ \boldsymbol{\Omega}_n $" src="../../form_286.png" width="20" height="15"/>.</p>
+<p> obviously extended to all dimensions. To comprehend this upwinding, consider the schematic below, showing the upwinding for different configurations of \( \boldsymbol{\Omega}_n \).</p>
 <div class="image">
 <img src="../../Tut6_upwinding.png" alt="" width="500px"/>
 </div>
-<p >With upwinding defined we can re-express the upwinded angular flux as <img class="formulaInl" alt="$ \psi_{us,x} $" src="../../form_331.png" width="35" height="17"/> being either <img class="formulaInl" alt="$ \psi_{i+\frac{1}{2}} $" src="../../form_332.png" width="32" height="20"/> or <img class="formulaInl" alt="$ \psi_{i-\frac{1}{2}} $" src="../../form_333.png" width="32" height="20"/> depending on the sign of <img class="formulaInl" alt="$ \Omega_x $" src="../../form_334.png" width="17" height="15"/>. The <img class="formulaInl" alt="$ \psi_{us,x} $" src="../../form_331.png" width="35" height="17"/> of the current cell would then be the downstream flux, <img class="formulaInl" alt="$ \psi_{ds,x} $" src="../../form_335.png" width="33" height="17"/> of the adjacent cell at the interstitial face. With some manipulation we arrive at the following equations to solve the current cell's <img class="formulaInl" alt="$ \psi $" src="../../form_336.png" width="12" height="15"/>:</p>
+<p >With upwinding defined we can re-express the upwinded angular flux as \( \psi_{us,x} \) being either \( \psi_{i+\frac{1}{2}} \) or \( \psi_{i-\frac{1}{2}} \) depending on the sign of \( \Omega_x \). The \( \psi_{us,x} \) of the current cell would then be the downstream flux, \( \psi_{ds,x} \) of the adjacent cell at the interstitial face. With some manipulation we arrive at the following equations to solve the current cell's \( \psi \):</p>
 <div class="image">
 <img src="../../Tut6_123D.png" alt="" width="500px"/>
 </div>
 <p >as well as the following equations to obtain its downstream angular flux: </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{align*} \psi_{ds,x} &amp;= 2\psi - \psi_{us,x} \\ \psi_{ds,y} &amp;= 2\psi - \psi_{us,y} \\ \psi_{ds,z} &amp;= 2\psi - \psi_{us,z} \\ \end{align*}" src="../../form_337.png" width="122" height="62"/>
+\begin{align*} \psi_{ds,x} &amp;= 2\psi - \psi_{us,x} \\ \psi_{ds,y} &amp;= 2\psi - \psi_{us,y} \\ \psi_{ds,z} &amp;= 2\psi - \psi_{us,z} \\ \end{align*}
 </p>
-<p >The solution procedure, per cell, is therefore to first grab <img class="formulaInl" alt="$ \psi_{us} $" src="../../form_338.png" width="24" height="15"/> as either the upstream cell's <img class="formulaInl" alt="$ \psi_{ds} $" src="../../form_339.png" width="23" height="15"/> or from the upstream boundary condition. Then to solve for the cell <img class="formulaInl" alt="$ \psi $" src="../../form_336.png" width="12" height="15"/>. Then to compute <img class="formulaInl" alt="$ \psi_{ds} $" src="../../form_339.png" width="23" height="15"/>.</p>
-<p >The obvious difficulty now is to loop through the cells in such a way that the upstream relationships, with respect to a given <img class="formulaInl" alt="$ \boldsymbol{\Omega}_n $" src="../../form_286.png" width="20" height="15"/>, is maintained. This process is known as <b>sweeping</b>. And for orthogonal grids it looks like shown in the figure below</p>
+<p >The solution procedure, per cell, is therefore to first grab \( \psi_{us} \) as either the upstream cell's \( \psi_{ds} \) or from the upstream boundary condition. Then to solve for the cell \( \psi \). Then to compute \( \psi_{ds} \).</p>
+<p >The obvious difficulty now is to loop through the cells in such a way that the upstream relationships, with respect to a given \( \boldsymbol{\Omega}_n \), is maintained. This process is known as <b>sweeping</b>. And for orthogonal grids it looks like shown in the figure below</p>
 <div class="image">
 <img src="../../Tut6_sweeping.png" alt="" width="700px"/>
 </div>
@@ -208,7 +215,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975">chi_mesh::DIMENSION_1</a></div><div class="ttdeci">@ DIMENSION_1</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00072">chi_mesh.h:72</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246">chi_mesh::DIMENSION_2</a></div><div class="ttdeci">@ DIMENSION_2</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00073">chi_mesh.h:73</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">chi_mesh::DIMENSION_3</a></div><div class="ttdeci">@ DIMENSION_3</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00074">chi_mesh.h:74</a></div></div>
-</div><!-- fragment --><p> The structure <code>ijk_info</code> holds an array holding the number of cells in x,y and z. The structure <code>ijk_mapping</code> holds a mapping, given a cell's ijk index, to the linear global mapping. The structure <code>cell_ortho_size</code> contains a <code>std::vector</code> of cell <img class="formulaInl" alt="$ \Delta x $" src="../../form_340.png" width="21" height="12"/>, <img class="formulaInl" alt="$ \Delta y $" src="../../form_341.png" width="20" height="15"/> and <img class="formulaInl" alt="$ \Delta z $" src="../../form_342.png" width="20" height="12"/>. We finally also assign the dimensionality of the mesh to an integer <code>dimension</code>.</p>
+</div><!-- fragment --><p> The structure <code>ijk_info</code> holds an array holding the number of cells in x,y and z. The structure <code>ijk_mapping</code> holds a mapping, given a cell's ijk index, to the linear global mapping. The structure <code>cell_ortho_size</code> contains a <code>std::vector</code> of cell \( \Delta x \), \( \Delta y \) and \( \Delta z \). We finally also assign the dimensionality of the mesh to an integer <code>dimension</code>.</p>
 <h1><a class="anchor" id="CodeTut6Sec4"></a>
 4 Creating an angular quadrature</h1>
 <p >The base class for angular quadratures is <code><a class="el" href="../../d8/dd9/classchi__math_1_1_angular_quadrature.html">chi_math::AngularQuadrature</a></code>. </p><div class="fragment"><div class="line"><span class="comment">//============================================= Make an angular quadrature</span></div>
@@ -251,7 +258,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line"> </div>
 <div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;End Set/Get params.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num Moments: &quot;</span> &lt;&lt; num_moments &lt;&lt; std::endl;</div>
-</div><!-- fragment --><p> Notice we also obtained the mapping from <img class="formulaInl" alt="$ m $" src="../../form_1.png" width="15" height="8"/> to <img class="formulaInl" alt="$ (\ell,m^*) $" src="../../form_316.png" width="44" height="17"/> in the structure <code>m_ell_em_map</code> which contains a list of <code><a class="el" href="../../d7/d0d/structchi__math_1_1_angular_quadrature_1_1_harmonic_indices.html">chi_math::AngularQuadrature::HarmonicIndices</a></code>.</p>
+</div><!-- fragment --><p> Notice we also obtained the mapping from \( m \) to \( (\ell,m^*) \) in the structure <code>m_ell_em_map</code> which contains a list of <code><a class="el" href="../../d7/d0d/structchi__math_1_1_angular_quadrature_1_1_harmonic_indices.html">chi_math::AngularQuadrature::HarmonicIndices</a></code>.</p>
 <h1><a class="anchor" id="CodeTut6Sec5"></a>
 5 Auxialiary items</h1>
 <p >We define the auxiliary items as follows </p><div class="fragment"><div class="line"><span class="comment">//============================================= Make Unknown Managers</span></div>
@@ -271,7 +278,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line"> </div>
 <div class="line"><span class="comment">//============================================= Make XSs</span></div>
 <div class="line"><a class="code hl_class" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a> xs;</div>
-<div class="line">xs.<a class="code hl_function" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a88869768a842a3ce2766f282c53808e1">MakeFromCHIxsFile</a>(<span class="stringliteral">&quot;ChiTest/xs_graphite_pure.cxs&quot;</span>);</div>
+<div class="line">xs.MakeFromCHIxsFile(<span class="stringliteral">&quot;ChiTest/xs_graphite_pure.cxs&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//============================================= Initializes vectors</span></div>
 <div class="line">std::vector&lt;double&gt; phi_old(num_local_phi_dofs,0.0);</div>
@@ -303,9 +310,8 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="ttc" id="aclasschi__math_1_1_unknown_html"><div class="ttname"><a href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00031">unknown_manager.h:32</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_unknown_manager_html"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00107">unknown_manager.h:108</a></div></div>
 <div class="ttc" id="aclasschi__physics_1_1_transport_cross_sections_html"><div class="ttname"><a href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dda/material__property__transportxsections_8h_source.html#l00017">material_property_transportxsections.h:18</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_transport_cross_sections_html_a88869768a842a3ce2766f282c53808e1"><div class="ttname"><a href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a88869768a842a3ce2766f282c53808e1">chi_physics::TransportCrossSections::MakeFromCHIxsFile</a></div><div class="ttdeci">void MakeFromCHIxsFile(const std::string &amp;file_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d95/prop__transportxs__01b__readfromchi_8cc_source.html#l00245">prop_transportxs_01b_readfromchi.cc:246</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a></div><div class="ttdeci">@ VECTOR_N</div></div>
-</div><!-- fragment --><p >First is the unknown managers for <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/> and <img class="formulaInl" alt="$ \psi $" src="../../form_336.png" width="12" height="15"/>. Then transport cross sections via the class <code><a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a></code>.</p>
+</div><!-- fragment --><p >First is the unknown managers for \( \phi \) and \( \psi \). Then transport cross sections via the class <code><a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a></code>.</p>
 <p >We then define the unknown vectors. </p><div class="fragment"><div class="line"><span class="comment">//============================================= Initializes vectors</span></div>
 <div class="line">std::vector&lt;double&gt; phi_old(num_local_phi_dofs,0.0);</div>
 <div class="line">std::vector&lt;double&gt; psi(num_local_psi_dofs, 0.0);</div>
@@ -433,7 +439,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> i = ijk[0]; <span class="keyword">const</span> <span class="keyword">auto</span> Nx = ijk_info[0];</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> j = ijk[1]; <span class="keyword">const</span> <span class="keyword">auto</span> Ny = ijk_info[1];</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> k = ijk[2]; <span class="keyword">const</span> <span class="keyword">auto</span> Nz = ijk_info[2];</div>
-</div><!-- fragment --><p >Thereafter we determine the upstream fluxes from the general downstream <img class="formulaInl" alt="$ \psi $" src="../../form_336.png" width="12" height="15"/> structures. These data structures are multidimensional arrays <code><a class="el" href="../../d2/d5d/classchi__data__types_1_1_n_d_array.html">chi_data_types::NDArray</a></code> which are used to store each cell's downstream components. These arrays are indexed with ijk indices making them easy to use in our orthogonal mesh setting. </p><div class="fragment"><div class="line"><span class="keyword">const</span> std::vector&lt;double&gt; zero_vector(num_groups,0.0);</div>
+</div><!-- fragment --><p >Thereafter we determine the upstream fluxes from the general downstream \( \psi \) structures. These data structures are multidimensional arrays <code><a class="el" href="../../d2/d5d/classchi__data__types_1_1_n_d_array.html">chi_data_types::NDArray</a></code> which are used to store each cell's downstream components. These arrays are indexed with ijk indices making them easy to use in our orthogonal mesh setting. </p><div class="fragment"><div class="line"><span class="keyword">const</span> std::vector&lt;double&gt; zero_vector(num_groups,0.0);</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span>* psi_us_x = zero_vector.data();</div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span>* psi_us_y = zero_vector.data();</div>
@@ -447,7 +453,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line"><span class="keywordflow">if</span> (omega.z &lt; 0.0 and k &lt; (Nz-1)) psi_us_z = &amp;psi_ds_z(i  ,j  ,k+1,0);</div>
 </div><!-- fragment --><p >Finally, we loop over each group then construct and solve the relevant equations.</p>
 <p >First we develop the angular source from the source moments </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ q_{c,g}^{rhs} = \sum_{m=0}^{N_m-1} M_{mn} q_{c,g}^{moms,m} \]" src="../../form_320.png" width="173" height="45"/>
+\[ q_{c,g}^{rhs} = \sum_{m=0}^{N_m-1} M_{mn} q_{c,g}^{moms,m} \]
 </p>
  <div class="fragment"><div class="line"><span class="keywordtype">double</span> rhs = 0.0;</div>
 <div class="line"><span class="comment">//Source moments</span></div>
@@ -456,7 +462,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">  <span class="keyword">const</span> int64_t dof_map = sdm.MapDOFLocal(cell,0,phi_uk_man,m,g);</div>
 <div class="line">  rhs += source_moments[dof_map]*m2d[m][d];</div>
 <div class="line">}</div>
-</div><!-- fragment --><p >Thereafter we construct and solve the equation for <img class="formulaInl" alt="$ \psi $" src="../../form_336.png" width="12" height="15"/>, </p><div class="image">
+</div><!-- fragment --><p >Thereafter we construct and solve the equation for \( \psi \), </p><div class="image">
 <img src="../../Tut6_123D.png" alt="" width="500px"/>
 </div>
 <p> for which we have the code </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (Nx &gt; 1) rhs += 2.0*std::fabs(omega.x)*psi_us_x[g]/dx;</div>
@@ -470,12 +476,12 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">double</span> psi_ijk = rhs/lhs;</div>
 </div><!-- fragment --><p >Once we have psi we can contribute to the flux moments </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi_{\ell m^*} =\sum_n w_n Y_{\ell m^*}(\boldsymbol{\Omega}_n) \psi_n \]" src="../../form_345.png" width="176" height="33"/>
+\[ \phi_{\ell m^*} =\sum_n w_n Y_{\ell m^*}(\boldsymbol{\Omega}_n) \psi_n \]
 </p>
 <p> which maps to </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{align*} \phi_m &amp;= \sum_n w_n Y_m (\boldsymbol{\Omega}_n) \psi_n \\ &amp;= \sum_n D_{mn} \psi_n \end{align*}" src="../../form_346.png" width="153" height="74"/>
+\begin{align*} \phi_m &amp;= \sum_n w_n Y_m (\boldsymbol{\Omega}_n) \psi_n \\ &amp;= \sum_n D_{mn} \psi_n \end{align*}
 </p>
-<p> where <img class="formulaInl" alt="$ D_{mn} $" src="../../form_347.png" width="30" height="15"/> is the Discrete-To-Moment operator. We do the above with the following code </p><div class="fragment"><div class="line"><span class="comment">//Accumulate flux-moments</span></div>
+<p> where \( D_{mn} \) is the Discrete-To-Moment operator. We do the above with the following code </p><div class="fragment"><div class="line"><span class="comment">//Accumulate flux-moments</span></div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m&lt;num_moments; ++m)</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">const</span> int64_t dof_map = sdm.MapDOFLocal(cell,0,phi_uk_man,m,g);</div>
@@ -562,7 +568,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">  {</div>
 <div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_mapping = sdm.<a class="code hl_function" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#a417f70f19dc1ac883ed7410ab62cfc1e">GetCellMapping</a>(cell);</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes = cell_mapping.<a class="code hl_function" href="../../d8/d08/classchi__math_1_1_cell_mapping.html#a6809460aa9d92037fbf0bf18b76c9946">NumNodes</a>();</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; S = xs.<a class="code hl_variable" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a2962e74b2d283fb637ec2a450d616b9d">transfer_matrices</a>;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; S = xs.<a class="code hl_variable" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a0aef128912519e4fa48b86928dce9fdd">transfer_matrices</a>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
 <div class="line">    {</div>
@@ -600,7 +606,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="ttc" id="aclasschi__math_1_1_unknown_manager_html_a71cc82006a7ae7a4a788d9ae3a2e345c"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a71cc82006a7ae7a4a788d9ae3a2e345c">chi_math::UnknownManager::unknowns</a></div><div class="ttdeci">std::vector&lt; Unknown &gt; unknowns</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00113">unknown_manager.h:113</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00023">chi_meshcontinuum.h:24</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a227b26a2cc0e920fff45d31ed171e9cc"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">chi_mesh::MeshContinuum::local_cells</a></div><div class="ttdeci">LocalCellHandler local_cells</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00036">chi_meshcontinuum.h:36</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_transport_cross_sections_html_a2962e74b2d283fb637ec2a450d616b9d"><div class="ttname"><a href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a2962e74b2d283fb637ec2a450d616b9d">chi_physics::TransportCrossSections::transfer_matrices</a></div><div class="ttdeci">std::vector&lt; chi_math::SparseMatrix &gt; transfer_matrices</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dda/material__property__transportxsections_8h_source.html#l00041">material_property_transportxsections.h:41</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_transport_cross_sections_html_a0aef128912519e4fa48b86928dce9fdd"><div class="ttname"><a href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a0aef128912519e4fa48b86928dce9fdd">chi_physics::TransportCrossSections::transfer_matrices</a></div><div class="ttdeci">std::vector&lt; TransferMatrix &gt; transfer_matrices</div><div class="ttdef"><b>Definition:</b> <a href="../../db/dda/material__property__transportxsections_8h_source.html#l00052">material_property_transportxsections.h:52</a></div></div>
 </div><!-- fragment --><p> and </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> ComputeRelativePWChange(</div>
 <div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>&amp; grid,</div>
 <div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a>&amp; sdm,</div>
@@ -653,7 +659,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> pw_change;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p >The <code>SetSource</code> routine populates the <code>source_moments</code> vector, while the <code>ComputeRelativePWChange</code> routine computes a modified version of the <img class="formulaInl" alt="$ L_\infty $" src="../../form_348.png" width="21" height="15"/> norm by compute the maximum change relative to the scalar moment flux on each node-group pair.</p>
+</div><!-- fragment --><p >The <code>SetSource</code> routine populates the <code>source_moments</code> vector, while the <code>ComputeRelativePWChange</code> routine computes a modified version of the \( L_\infty \) norm by compute the maximum change relative to the scalar moment flux on each node-group pair.</p>
 <h1><a class="anchor" id="CodeTut6Sec9"></a>
 9 Exporting only the scalar flux</h1>
 <p >We finally want to export the scalar flux to VTK. We have a problem though. The scalar flux is mixed in within the other flux moments. Therefore we need to copy the scalar flux, with the <code>phi_old</code> vector, which has the unknown structure define by <code>phi_uk_man</code> to another vector <code>m0_phi</code> with a different unknown structure. We do this with the following code </p><div class="fragment"><div class="line"><span class="comment">//============================================= Localize zeroth moment</span></div>
@@ -801,7 +807,7 @@ The complete program</h1>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Make XSs</span></div>
 <div class="line">  <a class="code hl_class" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a> xs;</div>
-<div class="line">  xs.<a class="code hl_function" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a88869768a842a3ce2766f282c53808e1">MakeFromCHIxsFile</a>(<span class="stringliteral">&quot;ChiTest/xs_graphite_pure.cxs&quot;</span>);</div>
+<div class="line">  xs.MakeFromCHIxsFile(<span class="stringliteral">&quot;ChiTest/xs_graphite_pure.cxs&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Initializes vectors</span></div>
 <div class="line">  std::vector&lt;double&gt; phi_old(num_local_phi_dofs,0.0);</div>
@@ -1008,10 +1014,10 @@ The complete program</h1>
 <div class="ttc" id="aclasschi__math_1_1_spatial_discretization___f_v_html_a5bbe68d748cdc52e05dfcfe37f74d622"><div class="ttname"><a href="../../d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html#a5bbe68d748cdc52e05dfcfe37f74d622">chi_math::SpatialDiscretization_FV::New</a></div><div class="ttdeci">static std::shared_ptr&lt; SpatialDiscretization_FV &gt; New(chi_mesh::MeshContinuumPtr &amp;in_grid, CoordinateSystemType in_cs_type=CoordinateSystemType::CARTESIAN)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d50/fv_8h_source.html#l00030">fv.h:30</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_spatial_discretization_html_a04c0c7022de9c74ac6a807398afec030"><div class="ttname"><a href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#a04c0c7022de9c74ac6a807398afec030">chi_math::SpatialDiscretization::GetNumGlobalDOFs</a></div><div class="ttdeci">virtual size_t GetNumGlobalDOFs(const UnknownManager &amp;unknown_manager) const =0</div></div>
 <div class="ttc" id="aclasschi__math_1_1_spatial_discretization_html_ab44301c258e4b6921f7afad19e355746"><div class="ttname"><a href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#ab44301c258e4b6921f7afad19e355746">chi_math::SpatialDiscretization::UNITARY_UNKNOWN_MANAGER</a></div><div class="ttdeci">const UnknownManager UNITARY_UNKNOWN_MANAGER</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d28/spatial__discretization_8h_source.html#l00026">spatial_discretization.h:26</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a15eed36e4da5d55ac9ad26d6a37a7a72"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a15eed36e4da5d55ac9ad26d6a37a7a72">chi_mesh::MeshContinuum::Attributes</a></div><div class="ttdeci">MeshAttributes Attributes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00116">chi_meshcontinuum.h:116</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a5cb74fab0769b9fda964b5429623d04a"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a5cb74fab0769b9fda964b5429623d04a">chi_mesh::MeshContinuum::GetIJKInfo</a></div><div class="ttdeci">std::array&lt; size_t, 3 &gt; GetIJKInfo() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00330">chi_meshcontinuum_utilities.cc:330</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a66224c8024c8e1e395389dd8ccd547c1"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a66224c8024c8e1e395389dd8ccd547c1">chi_mesh::MeshContinuum::MakeCellOrthoSizes</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Vector3 &gt; MakeCellOrthoSizes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00367">chi_meshcontinuum_utilities.cc:368</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a6ff14aae03e8c78ca276c9f2884bcd98"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a6ff14aae03e8c78ca276c9f2884bcd98">chi_mesh::MeshContinuum::MakeIJKToGlobalIDMapping</a></div><div class="ttdeci">chi_data_types::NDArray&lt; uint64_t &gt; MakeIJKToGlobalIDMapping() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00343">chi_meshcontinuum_utilities.cc:344</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a15eed36e4da5d55ac9ad26d6a37a7a72"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a15eed36e4da5d55ac9ad26d6a37a7a72">chi_mesh::MeshContinuum::Attributes</a></div><div class="ttdeci">MeshAttributes Attributes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00118">chi_meshcontinuum.h:118</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a5cb74fab0769b9fda964b5429623d04a"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a5cb74fab0769b9fda964b5429623d04a">chi_mesh::MeshContinuum::GetIJKInfo</a></div><div class="ttdeci">std::array&lt; size_t, 3 &gt; GetIJKInfo() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00437">chi_meshcontinuum_utilities.cc:437</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a66224c8024c8e1e395389dd8ccd547c1"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a66224c8024c8e1e395389dd8ccd547c1">chi_mesh::MeshContinuum::MakeCellOrthoSizes</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Vector3 &gt; MakeCellOrthoSizes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00474">chi_meshcontinuum_utilities.cc:475</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a6ff14aae03e8c78ca276c9f2884bcd98"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a6ff14aae03e8c78ca276c9f2884bcd98">chi_mesh::MeshContinuum::MakeIJKToGlobalIDMapping</a></div><div class="ttdeci">chi_data_types::NDArray&lt; uint64_t &gt; MakeIJKToGlobalIDMapping() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00450">chi_meshcontinuum_utilities.cc:451</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_aeb466c76d1b4d532fe8bc5fc7765a338"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aeb466c76d1b4d532fe8bc5fc7765a338">chi_mesh::MeshContinuum::GetGlobalNumberOfCells</a></div><div class="ttdeci">size_t GetGlobalNumberOfCells() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00086">chi_meshcontinuum_globalcellhandler.cc:86</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_handler_html_aa87887c1a76634cb07134b5faa1e3587"><div class="ttname"><a href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">chi_mesh::MeshHandler::GetGrid</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr &amp; GetGrid() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/chi__meshhandler_8cc_source.html#l00012">chi_meshhandler.cc:12</a></div></div>
 <div class="ttc" id="aclasschi_html_a2457fed74471fae43ed8d6c5e91378fd"><div class="ttname"><a href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a></div><div class="ttdeci">static chi_objects::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00067">chi_runtime.h:67</a></div></div>

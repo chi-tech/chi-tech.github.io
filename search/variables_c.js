@@ -95,8 +95,8 @@ var searchData=
   ['material_5fmode_92',['material_mode',['../d6/d32/classchi__diffusion_1_1_solver.html#adc973e4389974b8615f267372721ac2a',1,'chi_diffusion::Solver']]],
   ['material_5fstack_93',['material_stack',['../d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d',1,'chi']]],
   ['matid_5fto_5fs_5ftranspose_94',['matid_to_S_transpose',['../df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#a124f13b438363bea14213608d4a739d2',1,'lbs_adjoint::AdjointSolver']]],
-  ['matid_5fto_5fsrc_5fmap_95',['matid_to_src_map',['../d9/d05/classlbs_1_1_steady_solver.html#ab9837053e7d58b2e4cb8466059420c1c',1,'lbs::SteadySolver']]],
-  ['matid_5fto_5fxs_5fmap_96',['matid_to_xs_map',['../d9/d05/classlbs_1_1_steady_solver.html#a9b1e4755212687c4b42b131d4ab1a9f9',1,'lbs::SteadySolver']]],
+  ['matid_5fto_5fsrc_5fmap_95',['matid_to_src_map',['../d9/d05/classlbs_1_1_steady_solver.html#ab9837053e7d58b2e4cb8466059420c1c',1,'lbs::SteadySolver::matid_to_src_map()'],['../d4/d4c/classmg__diffusion_1_1_solver.html#adff479a007f15b698a86a40d6cdf32b1',1,'mg_diffusion::Solver::matid_to_src_map()']]],
+  ['matid_5fto_5fxs_5fmap_96',['matid_to_xs_map',['../d9/d05/classlbs_1_1_steady_solver.html#a9b1e4755212687c4b42b131d4ab1a9f9',1,'lbs::SteadySolver::matid_to_xs_map()'],['../d4/d4c/classmg__diffusion_1_1_solver.html#a0a424e414e735b7ccd87d27c58d9fcf6',1,'mg_diffusion::Solver::matid_to_xs_map()']]],
   ['max_5fcell_5fdof_5fcount_97',['max_cell_dof_count',['../d9/d05/classlbs_1_1_steady_solver.html#ac782d90aeefc01edfa67ecc6cac700d8',1,'lbs::SteadySolver']]],
   ['max_5fiterations_98',['max_iterations',['../d7/d41/classlbs_1_1_k_eigenvalue_solver.html#a35d8a364bd623fffdd294f264c4b4676',1,'lbs::KEigenvalueSolver::max_iterations()'],['../d2/db6/classlbs_1_1_l_b_s_groupset.html#a66a2241e5a52fe907d17d520ba5d03f0',1,'lbs::LBSGroupset::max_iterations()']]],
   ['max_5fiters_99',['max_iters',['../d9/dd8/structlbs_1_1acceleration_1_1_diffusion_m_i_p_solver_1_1_options.html#afda07a863f8c78888cbeb69a4a38497e',1,'lbs::acceleration::DiffusionMIPSolver::Options']]],
@@ -113,7 +113,9 @@ var searchData=
   ['mesh_5foptions_110',['mesh_options',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#aede1055a5f2c7ab57de4fa1e9b8d2afb',1,'chi_mesh::UnpartitionedMesh']]],
   ['meshhandler_5fstack_111',['meshhandler_stack',['../d4/d35/classchi.html#a5bc87832f51e2196e2a230a5deb75838',1,'chi']]],
   ['method_112',['method',['../da/dc0/classlbs_1_1_transient_solver.html#a633ec335958c91867502ad2101c93b9d',1,'lbs::TransientSolver']]],
-  ['moment_5fcallbacks_113',['moment_callbacks',['../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ad9d08c6cc1500f7cb1fd30a117a4b181',1,'chi_mesh::sweep_management::SweepChunk']]],
-  ['mpi_114',['mpi',['../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd',1,'chi']]],
-  ['mt1993764_5fgenerator_115',['mt1993764_generator',['../d9/d55/classchi__math_1_1_random_number_generator.html#a46799e4f2d2e474b5eab53809d28ad30',1,'chi_math::RandomNumberGenerator']]]
+  ['mg_5fvalues_113',['mg_values',['../d6/dea/classmg__diffusion_1_1_boundary.html#a3bb5efa443ce08ed6cd7efa23468ded1',1,'mg_diffusion::Boundary']]],
+  ['moment_5fcallbacks_114',['moment_callbacks',['../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ad9d08c6cc1500f7cb1fd30a117a4b181',1,'chi_mesh::sweep_management::SweepChunk']]],
+  ['mpi_115',['mpi',['../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd',1,'chi']]],
+  ['mt1993764_5fgenerator_116',['mt1993764_generator',['../d9/d55/classchi__math_1_1_random_number_generator.html#a46799e4f2d2e474b5eab53809d28ad30',1,'chi_math::RandomNumberGenerator']]],
+  ['my_5fapp_5fcontext_117',['my_app_context',['../d4/d4c/classmg__diffusion_1_1_solver.html#abdfee46231cd3394b218203ef62641f4',1,'mg_diffusion::Solver']]]
 ];

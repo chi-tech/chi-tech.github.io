@@ -4,7 +4,7 @@ var searchData=
   ['slabmappingfe_5fpwl_1',['SlabMappingFE_PWL',['../df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html',1,'chi_math']]],
   ['slabmappingfe_5fpwl_5fcylindrical_2',['SlabMappingFE_PWL_Cylindrical',['../d2/d9d/classchi__math_1_1_slab_mapping_f_e___p_w_l___cylindrical.html',1,'chi_math']]],
   ['slabmappingfe_5fpwl_5fspherical_3',['SlabMappingFE_PWL_Spherical',['../d4/dcb/classchi__math_1_1_slab_mapping_f_e___p_w_l___spherical.html',1,'chi_math']]],
-  ['solver_4',['Solver',['../de/dba/classcfem__diffusion_1_1_solver.html',1,'cfem_diffusion::Solver'],['../d6/d32/classchi__diffusion_1_1_solver.html',1,'chi_diffusion::Solver'],['../d9/d3a/classchi__physics_1_1_solver.html',1,'chi_physics::Solver'],['../df/ddc/classdfem__diffusion_1_1_solver.html',1,'dfem_diffusion::Solver'],['../d9/df7/classlbs__curvilinear_1_1_solver.html',1,'lbs_curvilinear::Solver']]],
+  ['solver_4',['Solver',['../de/dba/classcfem__diffusion_1_1_solver.html',1,'cfem_diffusion::Solver'],['../d6/d32/classchi__diffusion_1_1_solver.html',1,'chi_diffusion::Solver'],['../d9/d3a/classchi__physics_1_1_solver.html',1,'chi_physics::Solver'],['../df/ddc/classdfem__diffusion_1_1_solver.html',1,'dfem_diffusion::Solver'],['../d9/df7/classlbs__curvilinear_1_1_solver.html',1,'lbs_curvilinear::Solver'],['../d4/d4c/classmg__diffusion_1_1_solver.html',1,'mg_diffusion::Solver']]],
   ['sparsematrix_5',['SparseMatrix',['../de/d51/classchi__math_1_1_sparse_matrix.html',1,'chi_math']]],
   ['spatialdiscretization_6',['SpatialDiscretization',['../dd/d1d/classchi__math_1_1_spatial_discretization.html',1,'chi_math']]],
   ['spatialdiscretization_5ffe_7',['SpatialDiscretization_FE',['../d5/d3e/classchi__math_1_1_spatial_discretization___f_e.html',1,'chi_math']]],

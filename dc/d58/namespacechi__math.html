@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -351,6 +358,8 @@ Functions</h2></td></tr>
 <tr class="separator:a46211d1897a690eb5828d7041b77d387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0048114207492941ac7d10e285eccaf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#ae0048114207492941ac7d10e285eccaf">Factorial</a> (int x)</td></tr>
 <tr class="separator:ae0048114207492941ac7d10e285eccaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612087e73bf9b2cd09c6fad00f8e0d4e"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a612087e73bf9b2cd09c6fad00f8e0d4e">OmegaToPhiThetaSafe</a> (const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;omega)</td></tr>
+<tr class="separator:a612087e73bf9b2cd09c6fad00f8e0d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1be3c28092bbe9761c735c7db2030309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a1be3c28092bbe9761c735c7db2030309">PrintVector</a> (const <a class="el" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a> &amp;x)</td></tr>
 <tr class="separator:a1be3c28092bbe9761c735c7db2030309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a408917c286c16e9fc82ed928c9db6b64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a408917c286c16e9fc82ed928c9db6b64">Scale</a> (<a class="el" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a> &amp;x, const double &amp;val)</td></tr>
@@ -1045,7 +1054,7 @@ template&lt;int N&gt; </div>
 </div><div class="memdoc">
 <p >Computes the dot product of two vectors.</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \mathrm{a} \cdot \mathrm{b}=\sum_{i=1}^{n} a_{i} b_{i} \]" src="../../form_24.png" width="95" height="42"/>
+\[ \mathrm{a} \cdot \mathrm{b}=\sum_{i=1}^{n} a_{i} b_{i} \]
 </p>
  
 <p class="definition">Definition at line <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00028">28</a> of file <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html">chi_math_03_vector_operations.cc</a>.</p>
@@ -1394,6 +1403,27 @@ template&lt;int N&gt; </div>
 
 </div>
 </div>
+<a id="a612087e73bf9b2cd09c6fad00f8e0d4e" name="a612087e73bf9b2cd09c6fad00f8e0d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612087e73bf9b2cd09c6fad00f8e0d4e">&#9670;&nbsp;</a></span>OmegaToPhiThetaSafe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; double, double &gt; chi_math::OmegaToPhiThetaSafe </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>omega</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Determines the azimuthal- and polar-angle associated with the given direction vector. Returns a pair = [azimuthal-angle,polar-angle]. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df0/chi__math__01__utility_8cpp_source.html#l00018">18</a> of file <a class="el" href="../../d7/df0/chi__math__01__utility_8cpp_source.html">chi_math_01_utility.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ac0f60ee03db29dec6023e1745fd44d0e" name="ac0f60ee03db29dec6023e1745fd44d0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0f60ee03db29dec6023e1745fd44d0e">&#9670;&nbsp;</a></span>operator+()</h2>
 
@@ -1633,7 +1663,7 @@ template&lt;typename T , typename D  = int&gt; </div>
 <li>bin 8 = 1.0</li>
 <li>bin 9 = 1.0</li>
 </ul>
-<p >Supplying a random number between 0 and 1 should indicate sampling one of the bins 0,1,5 or 8. The most inefficient way to do this is to linearly loop through the cdf and check <img class="formulaInl" alt="$ cdf_{i-1} \ge \theta &lt; cdf_i $" src="../../form_64.png" width="110" height="15"/>. An optimized version of this sampling would be to perform a recursive block search which starts with a course view of the cdf and then gradually refines the view until the final linear search can be performed. </p>
+<p >Supplying a random number between 0 and 1 should indicate sampling one of the bins 0,1,5 or 8. The most inefficient way to do this is to linearly loop through the cdf and check \( cdf_{i-1} \ge \theta &lt; cdf_i \). An optimized version of this sampling would be to perform a recursive block search which starts with a course view of the cdf and then gradually refines the view until the final linear search can be performed. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d3b/cdfsampler_8cc_source.html#l00272">272</a> of file <a class="el" href="../../d5/d3b/cdfsampler_8cc_source.html">cdfsampler.cc</a>.</p>
 
@@ -1850,7 +1880,7 @@ template&lt;typename T , typename D  = int&gt; </div>
 </div><div class="memdoc">
 <p >Returns the 1-norm. Also known as the Taxicab or Manhattan norm.</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \|\boldsymbol{x}\|_{1}=\sum_{i=1}^{n}\left|x_{i}\right| \]" src="../../form_25.png" width="95" height="42"/>
+\[ \|\boldsymbol{x}\|_{1}=\sum_{i=1}^{n}\left|x_{i}\right| \]
 </p>
  
 <p class="definition">Definition at line <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00065">65</a> of file <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html">chi_math_03_vector_operations.cc</a>.</p>
@@ -1874,7 +1904,7 @@ template&lt;typename T , typename D  = int&gt; </div>
 </div><div class="memdoc">
 <p >Returns the 2-norm. Also known as the Euclidian or Frobenius norm.</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \|\boldsymbol{x}\|_{2}=\sqrt{x_{1}^{2}+\cdots+x_{n}^{2}} \]" src="../../form_26.png" width="152" height="29"/>
+\[ \|\boldsymbol{x}\|_{2}=\sqrt{x_{1}^{2}+\cdots+x_{n}^{2}} \]
 </p>
  
 <p class="definition">Definition at line <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00085">85</a> of file <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html">chi_math_03_vector_operations.cc</a>.</p>
@@ -1898,7 +1928,7 @@ template&lt;typename T , typename D  = int&gt; </div>
 </div><div class="memdoc">
 <p >Returns the infinity-norm.</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \|\mathbf{x}\|_{\infty}=\max \left(\left|x_{1}\right|, \ldots,\left|x_{n}\right|\right) \]" src="../../form_27.png" width="182" height="17"/>
+\[ \|\mathbf{x}\|_{\infty}=\max \left(\left|x_{1}\right|, \ldots,\left|x_{n}\right|\right) \]
 </p>
  
 <p class="definition">Definition at line <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00104">104</a> of file <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html">chi_math_03_vector_operations.cc</a>.</p>
@@ -1963,7 +1993,7 @@ template&lt;typename T , typename D  = int&gt; </div>
 </div><div class="memdoc">
 <p >Returns the p-norm.</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \|\mathbf{x}\|_{p}=\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{1 / p} \]" src="../../form_28.png" width="144" height="51"/>
+\[ \|\mathbf{x}\|_{p}=\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{1 / p} \]
 </p>
  
 <p class="definition">Definition at line <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00123">123</a> of file <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html">chi_math_03_vector_operations.cc</a>.</p>

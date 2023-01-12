@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -91,23 +98,23 @@ $(document).ready(function(){initNavTree('d1/d9b/group___lua_surface_mesher.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gab26998cf2451a92324c2b06c97a1f5fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9b/group___lua_surface_mesher.html#gab26998cf2451a92324c2b06c97a1f5fb">chi_lua::chiSurfaceMesherSetProperty</a> (int PropertyNumber, varying PropertyValue)</td></tr>
-<tr class="separator:gab26998cf2451a92324c2b06c97a1f5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae977f4ef9c66248e03bbc9c2a5e9c24b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9b/group___lua_surface_mesher.html#gae977f4ef9c66248e03bbc9c2a5e9c24b">chi_lua::chiSurfaceMesherExecute</a> (bool ExportLoadBalance)</td></tr>
-<tr class="separator:gae977f4ef9c66248e03bbc9c2a5e9c24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa5312171c07e9f04b0e8daee186d2c73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9b/group___lua_surface_mesher.html#gaa5312171c07e9f04b0e8daee186d2c73">chi_lua::chiSurfaceMesherCreate</a> (int SurfaceMesherType)</td></tr>
-<tr class="separator:gaa5312171c07e9f04b0e8daee186d2c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa3820a29c97437936e0199433e1d742"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9b/group___lua_surface_mesher.html#gaaa3820a29c97437936e0199433e1d742">chi_lua::chiSurfaceMesherSetProperty</a> (int PropertyNumber, varying PropertyValue)</td></tr>
+<tr class="separator:gaaa3820a29c97437936e0199433e1d742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03e0889fd5b04306fb27bca7b0d38aa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9b/group___lua_surface_mesher.html#ga03e0889fd5b04306fb27bca7b0d38aa4">chi_lua::chiSurfaceMesherExecute</a> (bool ExportLoadBalance)</td></tr>
+<tr class="separator:ga03e0889fd5b04306fb27bca7b0d38aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga093aea22f7d29fe5ab8d6977dd22395c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9b/group___lua_surface_mesher.html#ga093aea22f7d29fe5ab8d6977dd22395c">chi_lua::chiSurfaceMesherCreate</a> (int SurfaceMesherType)</td></tr>
+<tr class="separator:ga093aea22f7d29fe5ab8d6977dd22395c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gaa5312171c07e9f04b0e8daee186d2c73" name="gaa5312171c07e9f04b0e8daee186d2c73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa5312171c07e9f04b0e8daee186d2c73">&#9670;&nbsp;</a></span>chiSurfaceMesherCreate()</h2>
+<a id="ga093aea22f7d29fe5ab8d6977dd22395c" name="ga093aea22f7d29fe5ab8d6977dd22395c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga093aea22f7d29fe5ab8d6977dd22395c">&#9670;&nbsp;</a></span>chiSurfaceMesherCreate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_lua::chiSurfaceMesherCreate </td>
+          <td class="memname">void chi_lua::chiSurfaceMesherCreate </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>SurfaceMesherType</em></td><td>)</td>
@@ -118,32 +125,32 @@ Functions</h2></td></tr>
 <p >Creates a surface preprocessor.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">SurfaceMesherType</td><td>int Surface Remesher type. See SurfaceMesherType. <h2>_</h2>
-</td></tr>
+    <tr><td class="paramname">SurfaceMesherType</td><td>int Surface Remesher type. See SurfaceMesherType.</td></tr>
   </table>
   </dd>
 </dl>
+<h2>_</h2>
 <h3>SurfaceMesherType:\n</h3>
 <p >SURFACEMESHER_PREDEFINED<br  />
  Makes no modification to the region surfaces.<br  />
 <br  />
-</p><div class="fragment"><div class="line"><a class="code hl_function" href="../../d1/d9b/group___lua_surface_mesher.html#gaa5312171c07e9f04b0e8daee186d2c73">chiSurfaceMesherCreate</a>(SURFACEMESHER_PREDEFINED)</div>
-<div class="ttc" id="agroup___lua_surface_mesher_html_gaa5312171c07e9f04b0e8daee186d2c73"><div class="ttname"><a href="../../d1/d9b/group___lua_surface_mesher.html#gaa5312171c07e9f04b0e8daee186d2c73">chi_lua::chiSurfaceMesherCreate</a></div><div class="ttdeci">int chiSurfaceMesherCreate(int SurfaceMesherType)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00608">lua_functions.c:608</a></div></div>
-</div><!-- fragment --> <h2>_</h2>
+ </p><div class="fragment"><div class="line"><a class="code hl_function" href="../../d1/d9b/group___lua_surface_mesher.html#ga093aea22f7d29fe5ab8d6977dd22395c">chiSurfaceMesherCreate</a>(SURFACEMESHER_PREDEFINED)</div>
+<div class="ttc" id="agroup___lua_surface_mesher_html_ga093aea22f7d29fe5ab8d6977dd22395c"><div class="ttname"><a href="../../d1/d9b/group___lua_surface_mesher.html#ga093aea22f7d29fe5ab8d6977dd22395c">chi_lua::chiSurfaceMesherCreate</a></div><div class="ttdeci">void chiSurfaceMesherCreate(int SurfaceMesherType)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01362">lua_functions.c:1362</a></div></div>
+</div><!-- fragment --><h2>_</h2>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00608">608</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01362">1362</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
-<a id="gae977f4ef9c66248e03bbc9c2a5e9c24b" name="gae977f4ef9c66248e03bbc9c2a5e9c24b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae977f4ef9c66248e03bbc9c2a5e9c24b">&#9670;&nbsp;</a></span>chiSurfaceMesherExecute()</h2>
+<a id="ga03e0889fd5b04306fb27bca7b0d38aa4" name="ga03e0889fd5b04306fb27bca7b0d38aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03e0889fd5b04306fb27bca7b0d38aa4">&#9670;&nbsp;</a></span>chiSurfaceMesherExecute()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_lua::chiSurfaceMesherExecute </td>
+          <td class="memname">void chi_lua::chiSurfaceMesherExecute </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>ExportLoadBalance</em></td><td>)</td>
@@ -151,7 +158,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Executes the surface meshing pipeline. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Executes the surface meshing pipeline.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ExportLoadBalance</td><td>bool Optional flag indicating whether to write xy-partition load factors to log. Default=false</td></tr>
   </table>
@@ -159,18 +167,18 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00593">593</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01342">1342</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
-<a id="gab26998cf2451a92324c2b06c97a1f5fb" name="gab26998cf2451a92324c2b06c97a1f5fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab26998cf2451a92324c2b06c97a1f5fb">&#9670;&nbsp;</a></span>chiSurfaceMesherSetProperty()</h2>
+<a id="gaaa3820a29c97437936e0199433e1d742" name="gaaa3820a29c97437936e0199433e1d742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa3820a29c97437936e0199433e1d742">&#9670;&nbsp;</a></span>chiSurfaceMesherSetProperty()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_lua::chiSurfaceMesherSetProperty </td>
+          <td class="memname">void chi_lua::chiSurfaceMesherSetProperty </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>PropertyNumber</em>, </td>
@@ -188,18 +196,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Sets a property of a surface mesher. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Sets a property of a surface mesher.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">PropertyNumber</td><td>int Handle of the property to be set. </td></tr>
-    <tr><td class="paramname">PropertyValue</td><td>varying Value of the property. Properties:<br  />
- MAX_AREA = Area constraint.<br  />
- </td></tr>
+    <tr><td class="paramname">PropertyValue</td><td>varying Value of the property.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Properties:<br  />
+ MAX_AREA = Area constraint.<br  />
+</p>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00586">586</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01333">1333</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

@@ -9,7 +9,6 @@ var classlbs_1_1_steady_solver =
     [ "AssembleWGDSADeltaPhiVector", "d9/d05/classlbs_1_1_steady_solver.html#a4fd3fd5e0f40680f43840be7ca659c05", null ],
     [ "AssembleWGDSADeltaPhiVector", "d9/d05/classlbs_1_1_steady_solver.html#a8fda895376d29da6bf387d2fd7a02ed2", null ],
     [ "AssociateSOsAndDirections", "d9/d05/classlbs_1_1_steady_solver.html#a2fbd2307b558544c0bb399ef03c6a093", null ],
-    [ "CheckPointInsideCell", "d9/d05/classlbs_1_1_steady_solver.html#a6e51804cad05dc742bba15c0957b6ba9", null ],
     [ "ClassicRichardson", "d9/d05/classlbs_1_1_steady_solver.html#abf8b0173279e65d8d3b2b793e03100a6", null ],
     [ "CleanUpTGDSA", "d9/d05/classlbs_1_1_steady_solver.html#a9b6b6458bcde5891d69788196fc9dc79", null ],
     [ "CleanUpWGDSA", "d9/d05/classlbs_1_1_steady_solver.html#a32a087fbc2b8adec6a9bc98f3ede7768", null ],

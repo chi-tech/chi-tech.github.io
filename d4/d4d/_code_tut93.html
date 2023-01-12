@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -88,102 +95,1035 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="contents">
 <div class="textblock"><h2>Table of Contents</h2>
 <ul>
-<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec1">1 Introduction</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec1">1 Introduction</a><ul>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec1_1">1.1 Weighting with a spherical harmonic</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec1_2">1.2 Weighting by average FE shape function values</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec1_3">1.3 Weighting with an exponential attenuation</a></li>
+</ul>
+</li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec2">2 Program setup</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec3">3 The particle/ray data structure</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec4">4 Utility lambdas</a><ul>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec4_1">4.1 Sampling a random direction</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec4_2">4.2 PWLD Tally contribution</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec4_3">4.3 Approximating cell size</a></li>
+</ul>
+</li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec5">5 The raytracer</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec6">6 Executing the algorithms</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec7">7 Post-processing the tallies</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec8">8 Exporting field functions</a></li>
+<li><a class="el" href="../../d4/d4d/_code_tut93.html#CodeTut93Sec9">The complete program</a></li>
 </ul>
 <h1><a class="anchor" id="CodeTut93Sec1"></a>
 1 Introduction</h1>
-<p >Monte Carlo based flux estimators traditionally use a number of tracks, traced within a volume, to estimate the scalar flux. For <img class="formulaInl" alt="$ N_t $" src="../../form_363.png" width="17" height="15"/> amount of tracks traced inside a volume, <img class="formulaInl" alt="$ V $" src="../../form_364.png" width="12" height="12"/>, originating from a sample of <img class="formulaInl" alt="$ N_p $" src="../../form_365.png" width="18" height="17"/> number of particles/rays, the scalar flux, <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/>, can be estimated with </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t, \]" src="../../form_369.png" width="107" height="45"/>
+<p >Monte Carlo based flux estimators traditionally use a number of tracks, traced within a volume, to estimate the scalar flux. For \( N_t \) amount of tracks traced inside a volume, \( V \), originating from a sample of \( N_p \) number of particles/rays, the scalar flux, \( \phi \), can be estimated with </p><p class="formulaDsp">
+\[ \phi \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t, \]
 </p>
-<p> where <img class="formulaInl" alt="$ \ell_t $" src="../../form_370.png" width="12" height="15"/> is the <img class="formulaInl" alt="$ t $" src="../../form_371.png" width="6" height="11"/>-th track length. This simply means that the scalar flux is the "average track length per unit volume".</p>
-<p >The individual tracks of these particles can be assigned a weight, <img class="formulaInl" alt="$ w_t $" src="../../form_372.png" width="17" height="11"/>, enabling a multitude of features. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t w_t, \]" src="../../form_373.png" width="122" height="45"/>
+<p> where \( \ell_t \) is the \( t \)-th track length. This simply means that the scalar flux is the "average track length per unit volume".</p>
+<p >The individual tracks of these particles can be assigned a weight, \( w_t \), enabling a multitude of features. </p><p class="formulaDsp">
+\[ \phi \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t w_t, \]
 </p>
 <p> For our purposes we are interested in three possible weightings, i) weighting by a spherical harmonic, which can be used to compute flux moments, ii) weighting by average FE shape function values, allowing the projection of flux onto a FE space, and finally iii) weighting with an exponential attenuation, allowing the computation of uncollided flux.</p>
 <h2><a class="anchor" id="CodeTut93Sec1_1"></a>
 1.1 Weighting with a spherical harmonic</h2>
-<p >Applying a weight with a spherical harmonic is conceptually simple. For the <img class="formulaInl" alt="$ t $" src="../../form_371.png" width="6" height="11"/>-th track we simply set the weight to the spherical harmonic evaluated with the direction, <img class="formulaInl" alt="$ \boldsymbol{\Omega}_t $" src="../../form_374.png" width="17" height="15"/>, of the track, </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi_{\ell m} \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t Y_{\ell m}( \boldsymbol{\Omega}_t), \]" src="../../form_376.png" width="176" height="45"/>
+<p >Applying a weight with a spherical harmonic is conceptually simple. For the \( t \)-th track we simply set the weight to the spherical harmonic evaluated with the direction, \( \boldsymbol{\Omega}_t \), of the track, </p><p class="formulaDsp">
+\[ \phi_{\ell m} \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t Y_{\ell m}( \boldsymbol{\Omega}_t), \]
 </p>
 <h2><a class="anchor" id="CodeTut93Sec1_2"></a>
 1.2 Weighting by average FE shape function values</h2>
-<p >For a DFEM projection of the fluxes we require nodal values, on each cell, for a given flux quantity, <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/>. Therefore we seek <img class="formulaInl" alt="$ \phi_h $" src="../../form_377.png" width="15" height="15"/> such that </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray*} \int_V b_i \phi_h dV = \int_V b_i \phi dV \end{eqnarray*}" src="../../form_378.png" width="150" height="36"/>
+<p >For a DFEM projection of the fluxes we require nodal values, on each cell, for a given flux quantity, \( \phi \). Therefore we seek \( \phi_h \) such that </p><p class="formulaDsp">
+\begin{eqnarray*} \int_V b_i \phi_h dV = \int_V b_i \phi dV \end{eqnarray*}
 </p>
-<p> and since <img class="formulaInl" alt="$ \phi_h = \sum_j b_j \phi_j $" src="../../form_379.png" width="87" height="20"/> we need to solve the cell-by-cell system defined by </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray*} \sum_j \phi_j \int_V b_i b_j dV = \int_V b_i \phi dV. \end{eqnarray*}" src="../../form_381.png" width="189" height="42"/>
+<p> and since \( \phi_h = \sum_j b_j \phi_j \) we need to solve the cell-by-cell system defined by </p><p class="formulaDsp">
+\begin{eqnarray*} \sum_j \phi_j \int_V b_i b_j dV = \int_V b_i \phi dV. \end{eqnarray*}
 </p>
-<p> In this system the entries <img class="formulaInl" alt="$ \int_V b_i b_j dV $" src="../../form_382.png" width="63" height="20"/> are simply the entries of the mass matrix, <img class="formulaInl" alt="$ M_{ij} = \int_V b_i b_j dV $" src="../../form_383.png" width="108" height="20"/>, and we still need to find the rhs-entries <img class="formulaInl" alt="$ \int_V b_i \phi dV $" src="../../form_384.png" width="60" height="20"/>. This is where we will use the track length estimators by weighting with the shape functions b_i.</p>
+<p> In this system the entries \( \int_V b_i b_j dV \) are simply the entries of the mass matrix, \( M_{ij} = \int_V b_i b_j dV \), and we still need to find the rhs-entries \( \int_V b_i \phi dV \). This is where we will use the track length based estimators by weighting with the shape functions b_i.</p>
 <p >In this formulation we have </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray*} \int_V b_i \phi dV \approx \frac{1}{N_p} \sum_t \ell_t w_t^{i,avg} \end{eqnarray*}" src="../../form_400.png" width="179" height="39"/>
+\begin{eqnarray*} \int_V b_i \phi dV \approx \frac{1}{N_p} \sum_t \ell_t w_t^{i,avg} \end{eqnarray*}
 </p>
 <p> where </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_t^{i,avg} = \frac{ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds } {\int_{s_a}^{s_b} ds} = \frac{ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds } {\ell_t}, \]" src="../../form_411.png" width="293" height="45"/>
+\[ w_t^{i,avg} = \frac{ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds } {\int_{s_a}^{s_b} ds} = \frac{ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds } {\ell_t}, \]
 </p>
 <p> the average basis function value along the track. For ordinary Lagrange FE shape functions, which are not defined piecewise, the integral in the numerator can be obtained exactly using a numerical quadrature. For our applications, where we use the PWLD FE shape functions we need to split this integral per segment of the basic cell crossed.</p>
-<p >For example, consider the polygon below, where a ray is traced from position <img class="formulaInl" alt="$ s_a $" src="../../form_419.png" width="14" height="11"/> to <img class="formulaInl" alt="$ s_b $" src="../../form_420.png" width="12" height="11"/>. </p><div class="image">
+<p >For example, consider the polygon below, where a ray is traced from position \( s_a \) to \( s_b \). </p><div class="image">
 <img src="../../Tut93_segments.png" alt="" width="350px"/>
 </div>
-<p >The track traced across the cell needs to split into the segments defined by the sub-triangles of the polygon it crossed. Therefore the track <img class="formulaInl" alt="$ s_a \to s_b $" src="../../form_412.png" width="50" height="12"/> needs to be split into tracks <img class="formulaInl" alt="$ s_0 \to s_1 $" src="../../form_391.png" width="50" height="12"/>, <img class="formulaInl" alt="$ s_1 \to s_2 $" src="../../form_392.png" width="50" height="12"/> and <img class="formulaInl" alt="$ s_2 \to s_3 $" src="../../form_393.png" width="50" height="12"/> as per the figure. Therefore the integral becomes</p>
+<p >The track traced across the cell needs to be split into the segments defined by the sub-triangles of the polygon it crossed (for polyhedrons this would be the sub-tetrahedrons). Therefore the track \( s_a \to s_b \) needs to be split into tracks \( s_0 \to s_1 \), \( s_1 \to s_2 \) and \( s_2 \to s_3 \) as per the figure. Therefore the integral becomes</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds = \int_{s_0}^{s_1} b_i(s\mapsto \mathbf{x}) ds + \int_{s_1}^{s_2} b_i(s\mapsto \mathbf{x}) ds + \int_{s_2}^{s_3} b_i(s\mapsto \mathbf{x}) ds \]" src="../../form_413.png" width="483" height="39"/>
+\[ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds = \int_{s_0}^{s_1} b_i(s\mapsto \mathbf{x}) ds + \int_{s_1}^{s_2} b_i(s\mapsto \mathbf{x}) ds + \int_{s_2}^{s_3} b_i(s\mapsto \mathbf{x}) ds \]
 </p>
 <p> which we can evaluate analytically since it is linear on each segment.</p>
-<p >Note:** The mapping of <img class="formulaInl" alt="$ s\mapsto \mathbf{x} $" src="../../form_395.png" width="39" height="9"/> can be quite expensive so in this particular case it would be better to evaluate the shape function at the half-way point of each segment, after which the integral becomes </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds = b_i(\frac{s_0 + s_1}{2}\mapsto \mathbf{x}) (s_1 - s_0) + b_i(\frac{s_1 + s_2}{2}\mapsto \mathbf{x}) (s_2 - s_1) + b_i(\frac{s_2 + s_3}{2}\mapsto \mathbf{x}) (s_3 - s_2) + \]" src="../../form_414.png" width="627" height="38"/>
+<p ><b>Note:</b> The mapping of \( s\mapsto \mathbf{x} \) can be quite expensive so in this particular case it would be better to evaluate the shape function at the half-way point of each segment, after which the integral becomes </p><p class="formulaDsp">
+\[ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds = b_i(\frac{s_0 + s_1}{2}\mapsto \mathbf{x}) (s_1 - s_0) + b_i(\frac{s_1 + s_2}{2}\mapsto \mathbf{x}) (s_2 - s_1) + b_i(\frac{s_2 + s_3}{2}\mapsto \mathbf{x}) (s_3 - s_2) + \]
 </p>
 <h2><a class="anchor" id="CodeTut93Sec1_3"></a>
 1.3 Weighting with an exponential attenuation</h2>
 <p >Weighting with an exponential attenuation adds the final piece of weighting necessary to efficiently compute the uncollided flux.</p>
-<p >The exponential attenuation of the uncollided flux, <img class="formulaInl" alt="$ \psi $" src="../../form_336.png" width="12" height="15"/>, along the path of a ray with direction <img class="formulaInl" alt="$ \boldsymbol{\Omega} $" src="../../form_359.png" width="12" height="12"/> is expressed as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{d\psi}{ds} = -\sigma_t(s) \psi(s) \]" src="../../form_367.png" width="113" height="33"/>
+<p >The exponential attenuation of the uncollided flux, \( \psi \), along the path of a ray with direction \( \boldsymbol{\Omega} \) is expressed as </p><p class="formulaDsp">
+\[ \frac{d\psi}{ds} = -\sigma_t(s) \psi(s) \]
 </p>
-<p> where <img class="formulaInl" alt="$ s $" src="../../form_357.png" width="6" height="8"/> is the distance traveled and <img class="formulaInl" alt="$ \sigma_t $" src="../../form_361.png" width="12" height="11"/> is the total cross section. From this model we can compute the attenuation across a cell, with constant <img class="formulaInl" alt="$ \sigma_t $" src="../../form_361.png" width="12" height="11"/>, as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \psi(s) = \psi(s=0) e^{-\sigma_t s} \]" src="../../form_415.png" width="140" height="17"/>
+<p> where \( s \) is the distance traveled and \( \sigma_t \) is the total cross section. From this model we can compute the attenuation across a cell, with constant \( \sigma_t \), as </p><p class="formulaDsp">
+\[ \psi(s) = \psi(s=0) e^{-\sigma_t s} \]
 </p>
-<p> where <img class="formulaInl" alt="$ \psi(s=0) $" src="../../form_416.png" width="57" height="17"/> is the value of <img class="formulaInl" alt="$ \psi $" src="../../form_336.png" width="12" height="15"/> when it entered the cell.</p>
-<p >To assimilate all of this into a raytracing algorithm we start a source particle with a weight, <img class="formulaInl" alt="$ w^p = 1 $" src="../../form_402.png" width="47" height="11"/>, which acts as the proxy for <img class="formulaInl" alt="$ \psi $" src="../../form_336.png" width="12" height="15"/> (i.e., <img class="formulaInl" alt="$ w^p \equiv \psi $" src="../../form_407.png" width="50" height="15"/>). From this we can determine the nodal uncollided flux, <img class="formulaInl" alt="$ \phi^{uc} $" src="../../form_403.png" width="21" height="15"/>, in a similar fashion as we would determine the regular flux, i.e., </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \sum_j \phi_j^{uc} \int_V b_i b_j dV = \int_V b_i \phi^{uc} dV, \]" src="../../form_425.png" width="209" height="42"/>
+<p> where \( \psi(s=0) \) is the value of \( \psi \) when it entered the cell.</p>
+<p >To assimilate all of this into a raytracing algorithm we start a source particle with a weight, \( w^p = 1 \), which acts as the proxy for \( \psi \) (i.e., \( w^p \equiv \psi \)). From this we can determine the nodal uncollided flux, \( \phi^{uc} \), in a similar fashion as we would determine the regular flux, i.e., </p><p class="formulaDsp">
+\[ \sum_j \phi_j^{uc} \int_V b_i b_j dV = \int_V b_i \phi^{uc} dV, \]
 </p>
-<p> however, now we need additional treatment for the integral containing <img class="formulaInl" alt="$ \phi^{uc} $" src="../../form_403.png" width="21" height="15"/>, for which we have </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \int_V b_i \phi^{uc} dV \approx \frac{1}{N_p} \sum_t \ell_t w_t^{i,avg}, \]" src="../../form_426.png" width="197" height="39"/>
+<p> however, now we need additional treatment for the integral containing \( \phi^{uc} \), for which we have </p><p class="formulaDsp">
+\[ \int_V b_i \phi^{uc} dV \approx \frac{1}{N_p} \sum_t \ell_t w_t^{i,avg}, \]
 </p>
 <p> where, this time, </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_t^{i,avg} = \frac{ \int_{s_a}^{s_b} w^p(s) b_i(s\mapsto \mathbf{x}) ds } {\ell_t}. \]" src="../../form_417.png" width="204" height="41"/>
+\[ w_t^{i,avg} = \frac{ \int_{s_a}^{s_b} w^p(s) b_i(s\mapsto \mathbf{x}) ds } {\ell_t}. \]
 </p>
-<p> Note here that <img class="formulaInl" alt="$ w^p $" src="../../form_409.png" width="18" height="11"/> is a function of position, specifically </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w^p(s) = w^p(s=s_a) e^{-\sigma_t s} \]" src="../../form_421.png" width="162" height="17"/>
+<p> Note here that \( w^p \) is a function of position, specifically </p><p class="formulaDsp">
+\[ w^p(s) = w^p(s=s_a) e^{-\sigma_t s} \]
 </p>
-<p> and so is the basis function <img class="formulaInl" alt="$ b_i $" src="../../form_427.png" width="11" height="15"/>.</p>
+<p> and so is the basis function \( b_i \).</p>
 <p >The form of this integral needs to split into segments in the same way we did in the previous subsection. Therefore, given K amount of segments, we now have </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \ell_t w_t^{i,avg} = \sum_{k=0}^{K-1} \ell_{tk} w_{tk}^{i,avg} \]" src="../../form_429.png" width="156" height="47"/>
+\[ \ell_t w_t^{i,avg} = \sum_{k=0}^{K-1} \ell_{tk} w_{tk}^{i,avg} \]
 </p>
-<p> where <img class="formulaInl" alt="$ \ell_{tk} $" src="../../form_431.png" width="18" height="15"/> is the track length of the <img class="formulaInl" alt="$ k $" src="../../form_432.png" width="8" height="12"/>-th segment and <img class="formulaInl" alt="$ w_{tk}^{i,avg} $" src="../../form_433.png" width="39" height="20"/> is the average weight of this segment. The weight is computed with </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_{tk}^{i,avg} = \frac{ \int_{s_k}^{s_{k+1}} w^p(s) b_i(s\mapsto \mathbf{x}) ds } {\ell_{tk}}. \]" src="../../form_442.png" width="218" height="41"/>
+<p> where \( \ell_{tk} \) is the track length of the \( k \)-th segment and \( w_{tk}^{i,avg} \) is the average weight of this segment. The weight is computed with </p><p class="formulaDsp">
+\[ w_{tk}^{i,avg} = \frac{ \int_{s_k}^{s_{k+1}} w^p(s) b_i(s\mapsto \mathbf{x}) ds } {\ell_{tk}}. \]
 </p>
-<p> where <img class="formulaInl" alt="$ s_k $" src="../../form_434.png" width="14" height="11"/> and <img class="formulaInl" alt="$ s_{k+1} $" src="../../form_435.png" width="29" height="12"/> are the beginning and ending positions of segment <img class="formulaInl" alt="$ k $" src="../../form_432.png" width="8" height="12"/> respectively.</p>
-<p >Note here that, since we have an expression for <img class="formulaInl" alt="$ w^p $" src="../../form_409.png" width="18" height="11"/>, we can compute <img class="formulaInl" alt="$ w^p $" src="../../form_409.png" width="18" height="11"/> at any point along track <img class="formulaInl" alt="$ t $" src="../../form_371.png" width="6" height="11"/> including at the start of any segment. Therefore we define <img class="formulaInl" alt="$ w_k^p = w^p(s=s_k) $" src="../../form_436.png" width="110" height="18"/> which allows us to express <img class="formulaInl" alt="$ w^p $" src="../../form_409.png" width="18" height="11"/> as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w^p(s) = w_k^p e^{-\sigma_t(s-s_k)}, \quad \quad \quad s\in[s_k,s_{k+1}] \]" src="../../form_440.png" width="276" height="20"/>
+<p> where \( s_k \) and \( s_{k+1} \) are the beginning and ending positions of segment \( k \) respectively.</p>
+<p >Note here that, since we have an expression for \( w^p \), we can compute \( w^p \) at any point along track \( t \) including at the start of any segment. Therefore we define \( w_k^p = w^p(s=s_k) \) which allows us to express \( w^p \) as </p><p class="formulaDsp">
+\[ w^p(s) = w_k^p e^{-\sigma_t(s-s_k)}, \quad \quad \quad s\in[s_k,s_{k+1}] \]
 </p>
 <p >Additionally we express the basis functions on a segment, since we know the shape function is linear on the segment, as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ b_i(s) = b_{i,k} \frac{s_{k+1}-s}{s_{k+1}-s_k} + b_{i,k+1} \frac{s-s_k}{s_{k+1}-s_k} \]" src="../../form_437.png" width="257" height="32"/>
+\[ b_i(s) = b_{i,k} \frac{s_{k+1}-s}{s_{k+1}-s_k} + b_{i,k+1} \frac{s-s_k}{s_{k+1}-s_k} \]
 </p>
-<p> where <img class="formulaInl" alt="$ b_{i,k} $" src="../../form_438.png" width="21" height="17"/> and <img class="formulaInl" alt="$ b_{i,k+1} $" src="../../form_439.png" width="35" height="17"/> are the basis function values at the beginning and end of the segment, respectively. These two expressions allow us to evaluate the segment average weight as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_{tk}^{i,avg} = \frac{1}{\ell_{tk}} \int_{s_k}^{s_{k+1}} w_k^p e^{-\sigma_t(s-s_k)} \biggr[ b_{i,k} \frac{s_{k+1}-s}{s_{k+1}-s_k} + b_{i,k+1} \frac{s-s_k}{s_{k+1}-s_k} \biggr] ds \]" src="../../form_443.png" width="449" height="39"/>
+<p> where \( b_{i,k} \) and \( b_{i,k+1} \) are the basis function values at the beginning and end of the segment, respectively. These two expressions allow us to evaluate the segment average weight as </p><p class="formulaDsp">
+\[ w_{tk}^{i,avg} = \frac{1}{\ell_{tk}} \int_{s_k}^{s_{k+1}} w_k^p e^{-\sigma_t(s-s_k)} \biggr[ b_{i,k} \frac{s_{k+1}-s}{s_{k+1}-s_k} + b_{i,k+1} \frac{s-s_k}{s_{k+1}-s_k} \biggr] ds \]
 </p>
-<p> and since <img class="formulaInl" alt="$ s_{k+1}-s_k = \ell_{tk} $" src="../../form_444.png" width="99" height="17"/> we can simplify this expression as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \int_{s_k}^{s_{k+1}} e^{-\sigma_t(s-s_k)} \biggr[ C_0 + C_1 s \biggr] ds \]" src="../../form_445.png" width="284" height="39"/>
+<p> and since \( s_{k+1}-s_k = \ell_{tk} \) we can simplify this expression as</p>
+<p class="formulaDsp">
+\begin{align*} w_{tk}^{i,avg} &amp;= \frac{1}{\ell_{tk}} \int_{0}^{\ell_{tk}} w_k^p e^{-\sigma_t s&#39; } \biggr[ b_{i,k} \frac{\ell_{tk}-s&#39;}{\ell_{tk}} + b_{i,k+1} \frac{s&#39;}{\ell_{tk}} \biggr] ds&#39; \\ &amp;= \frac{1}{\ell_{tk}^2} \int_{0}^{\ell_{tk}} w_k^p e^{-\sigma_t s&#39; } \biggr[ b_{i,k} \ell_{tk} + (b_{i,k+1} - b_{i,k} ) s&#39; \biggr] ds&#39; \end{align*}
+</p>
+<p> which is in the general form </p><p class="formulaDsp">
+\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \int_{0}^{\ell_{tk}} e^{-\sigma_t s&#39;} \biggr[ C_0 + C_1 s&#39; \biggr] ds&#39; \]
 </p>
 <p> where </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ C_0 = b_{i,k} s_{k+1} - b_{i,k+1} s_k \]" src="../../form_446.png" width="158" height="17"/>
+\[ C_0 = b_{i,k} \ell_{tk} \]
 </p>
  <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ C_1 = b_{i,k+1} - b_{i,k}. \]" src="../../form_448.png"/>
+\[ C_1 = b_{i,k+1} - b_{i,k}. \]
 </p>
-<p >With these constants defined the expression can be evaluated analytically </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \]" src="../../form_449.png"/>
+<p >With these constants defined the expression can be evaluated analytically</p>
+<p class="formulaDsp">
+\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \biggr[ \frac{C_0}{\sigma_t} (1-e^{-\sigma_t \ell_{tk}}) + \frac{C_1}{\sigma_t^2} \biggr( 1 - (1 + \sigma_t \ell_{tk} ) \biggr)e^{-\sigma_t \ell_{tk}} \biggr] \]
 </p>
- </div></div><!-- contents -->
+<h1><a class="anchor" id="CodeTut93Sec2"></a>
+2 Program setup</h1>
+<p >We start by getting the grid as usual: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> grid_ptr = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>().<a class="code hl_function" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">GetGrid</a>();</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = *grid_ptr;</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Global num cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> dimension = (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975">chi_mesh::DIMENSION_1</a>)? 1 :</div>
+<div class="line">                      (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246">chi_mesh::DIMENSION_2</a>)? 2 :</div>
+<div class="line">                      (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">chi_mesh::DIMENSION_3</a>)? 3 : 0;</div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_handler_html_aa87887c1a76634cb07134b5faa1e3587"><div class="ttname"><a href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">chi_mesh::MeshHandler::GetGrid</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr &amp; GetGrid() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/chi__meshhandler_8cc_source.html#l00012">chi_meshhandler.cc:12</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00025">chi_log.cc:25</a></div></div>
+<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975">chi_mesh::DIMENSION_1</a></div><div class="ttdeci">@ DIMENSION_1</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00072">chi_mesh.h:72</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246">chi_mesh::DIMENSION_2</a></div><div class="ttdeci">@ DIMENSION_2</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00073">chi_mesh.h:73</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">chi_mesh::DIMENSION_3</a></div><div class="ttdeci">@ DIMENSION_3</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00074">chi_mesh.h:74</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_addcd6899961d4c527b02c33708a7941f"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler &amp; GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00013">chi_mesh_meshhandler_utils.cc:13</a></div></div>
+</div><!-- fragment --><p> Note here that we grab the <code>dimension</code>.</p>
+<p >Next we set a number of parameters important to the simulation: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_groups = 1;</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> scattering_order = 1;</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; L = scattering_order;</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_moments =</div>
+<div class="line">  (dimension == 1)? L + 1 :</div>
+<div class="line">  (dimension == 2)? (L+1)*(L+2)/2 :</div>
+<div class="line">  (dimension == 3)? (L+1)*(L+1) : 0;</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> sigma_t = 0.27;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Build harmonic map</span></div>
+<div class="line">std::vector&lt;std::pair&lt;int,int&gt;&gt; m_to_ell_em_map;</div>
+<div class="line"><span class="keywordflow">if</span> (dimension == 1)</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ell=0; ell&lt;=scattering_order; ell++)</div>
+<div class="line">    m_to_ell_em_map.emplace_back(ell,0);</div>
+<div class="line"><span class="keywordflow">else</span> <span class="keywordflow">if</span> (dimension == 2)</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ell=0; ell&lt;=scattering_order; ell++)</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m=-ell; m&lt;=ell; m+=2)</div>
+<div class="line">      m_to_ell_em_map.emplace_back(ell,m);</div>
+<div class="line"><span class="keywordflow">else</span> <span class="keywordflow">if</span> (dimension == 3)</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ell=0; ell&lt;=scattering_order; ell++)</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m=-ell; m&lt;=ell; m++)</div>
+<div class="line">      m_to_ell_em_map.emplace_back(ell,m);</div>
+</div><!-- fragment --><p> The interesting items here includes the <code>scattering_order</code> and the map from linear moment index to harmonic indices, <code>m_to_ell_em_map</code>. See the <a href="https://github.com/doctor-janv/whitepapers/blob/main/ChiTech-LBS-TheoryManual/ChiTech-LBS-TheoryManual_v_1_13.pdf">LBS Whitepaper</a> for the detail of this but in a nutshell... Only some of the harmonics are relevant in certain dimensions.</p>
+<p >Next we build the spatial discretization, which in this case would be a PWLD discretization, and we do this as normal: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
+<div class="line"><a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#aabeea5135d3586a94db69f58efe08c33">chi_math::SpatialDiscretization_PWLD::New</a>(grid_ptr);</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = *sdm_ptr;</div>
+<div class="ttc" id="aclasschi__math_1_1_spatial_discretization___p_w_l_d_html_aabeea5135d3586a94db69f58efe08c33"><div class="ttname"><a href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#aabeea5135d3586a94db69f58efe08c33">chi_math::SpatialDiscretization_PWLD::New</a></div><div class="ttdeci">static std::shared_ptr&lt; SpatialDiscretization_PWLD &gt; New(chi_mesh::MeshContinuumPtr &amp;in_grid, finite_element::SetupFlags setup_flags=finite_element::NO_FLAGS_SET, QuadratureOrder qorder=QuadratureOrder::SECOND, CoordinateSystemType in_cs_type=CoordinateSystemType::CARTESIAN)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dad/pwl__00__constrdestr_8cc_source.html#l00085">pwl_00_constrdestr.cc:86</a></div></div>
+<div class="ttc" id="anamespacechi__math_html_ab6754b3179f7dbf965932210273fead7"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a></div><div class="ttdeci">std::shared_ptr&lt; SpatialDiscretization &gt; SDMPtr</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df1/cfem__diffusion__solver_8h_source.html#l00021">cfem_diffusion_solver.h:20</a></div></div>
+</div><!-- fragment --><p >For the unknown manager and DOF-counts we build an unknown manager as follows: </p><div class="fragment"><div class="line"><a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> phi_uk_man;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m&lt;num_moments; ++m)</div>
+<div class="line">  phi_uk_man.<a class="code hl_function" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78">AddUnknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a>, num_groups);</div>
+<div class="ttc" id="aclasschi__math_1_1_unknown_manager_html"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00107">unknown_manager.h:108</a></div></div>
+<div class="ttc" id="aclasschi__math_1_1_unknown_manager_html_a07fb29a7555ba61bd0e22a584b4abb78"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78">chi_math::UnknownManager::AddUnknown</a></div><div class="ttdeci">unsigned int AddUnknown(UnknownType unk_type, unsigned int dimension=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d4c/unknown__manager_8cc_source.html#l00009">unknown_manager.cc:10</a></div></div>
+<div class="ttc" id="anamespacechi__math_html_ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a></div><div class="ttdeci">@ VECTOR_N</div></div>
+</div><!-- fragment --><p >And then grab the dof-counts </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_fem_local_dofs = sdm.GetNumLocalDOFs(phi_uk_man);</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_fem_globl_dofs = sdm.GetNumGlobalDOFs(phi_uk_man);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num local FEM DOFs: &quot;</span> &lt;&lt; num_fem_local_dofs;</div>
+<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num globl FEM DOFs: &quot;</span> &lt;&lt; num_fem_globl_dofs;</div>
+</div><!-- fragment --><p >This allows us to define the business end, which is the flux tally vector: </p><div class="fragment"><div class="line">std::vector&lt;double&gt; phi_tally(num_fem_local_dofs, 0.0);</div>
+</div><!-- fragment --><h1><a class="anchor" id="CodeTut93Sec3"></a>
+3 The particle/ray data structure</h1>
+<p >The particle/ray data structure is the packet of data that we will be sending around in our ray tracing algorithm. First we need the basic structure: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> Vec3;</div>
+<div class="line"><span class="keyword">struct </span>Particle</div>
+<div class="line">{</div>
+<div class="line">  Vec3 position = {0.0,0.0,0.0};</div>
+<div class="line">  Vec3 direction = {0.0,0.0,0.0};</div>
+<div class="line">  <span class="keywordtype">int</span>  energy_group = 0;</div>
+<div class="line">  <span class="keywordtype">double</span> weight = 1.0;</div>
+<div class="line"> </div>
+<div class="line">  uint64_t cell_id = 0;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">bool</span> alive = <span class="keyword">true</span>;</div>
+<div class="line">};</div>
+<div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00018">chi_meshvector.h:19</a></div></div>
+</div><!-- fragment --><p> This is all basic stuff. Essentially the particle's state is tracked with the members <code>position</code>, <code>direction</code>, <code>energy_group</code> and <code>weight</code>. The other two members are simply auxiliary items to assist with the transport process.</p>
+<p >Next we define a source, along with the determining which cell contains the source: </p><div class="fragment"><div class="line"><span class="keyword">const</span> Vec3 source_pos = {0.0,0.0,0.0};</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> <span class="keyword">const</span>* source_cell_ptr = <span class="keyword">nullptr</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : grid.local_cells)</div>
+<div class="line">  <span class="keywordflow">if</span> (grid.CheckPointInsideCell(cell, source_pos))</div>
+<div class="line">  {</div>
+<div class="line">    source_cell_ptr = &amp;cell;</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line">  }</div>
+<div class="line"><span class="keywordflow">if</span> (source_cell_ptr == <span class="keyword">nullptr</span>)</div>
+<div class="line">  <span class="keywordflow">throw</span> std::logic_error(fname + <span class="stringliteral">&quot;: Source cell not found.&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> uint64_t source_cell_id = source_cell_ptr-&gt;<a class="code hl_variable" href="../../d8/d7c/classchi__mesh_1_1_cell.html#aea49dd23ca8f09e588eb87e9a9f186d5">global_id</a>;</div>
+<div class="ttc" id="aclasschi__mesh_1_1_cell_html"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00065">cell.h:66</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_cell_html_aea49dd23ca8f09e588eb87e9a9f186d5"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html#aea49dd23ca8f09e588eb87e9a9f186d5">chi_mesh::Cell::global_id</a></div><div class="ttdeci">uint64_t global_id</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00072">cell.h:72</a></div></div>
+</div><!-- fragment --><p> Notice here we used the grid utility <code>CheckPointInsideCell</code>.</p>
+<h1><a class="anchor" id="CodeTut93Sec4"></a>
+4 Utility lambdas</h1>
+<p >In this section we define 3 utility functions in the form of c++ lambdas. i) A routine to sample a random direction. This gets used when we sample the source. ii) A routine to contribute a track to a PWLD tally. This is very complicated and will be explained. iii) A routine to approximate a given cell's size. The approximate cell sizes are used by the raytracer (which we will discuss later) to set appropriate tolerances used during the sub-routines of the raytracer.</p>
+<h2><a class="anchor" id="CodeTut93Sec4_1"></a>
+4.1 Sampling a random direction</h2>
+<p >Given a random number generator we can use two random numbers to sample the azimuthal- and polar directions. The azimuthal angle is sampled uniformly, i.e., \( \varphi \in [0,2\pi] \) whilst the polar angle is determined by sampling the cosine of the polar angle uniformly, i.e., \( \cos \theta = \mu \in [-1,1] \).</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="../../d9/d55/classchi__math_1_1_random_number_generator.html">chi_math::RandomNumberGenerator</a> rng;</div>
+<div class="line"><span class="keyword">auto</span> SampleRandomDirection = [&amp;rng]()</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordtype">double</span> costheta = 2.0*rng.<a class="code hl_function" href="../../d9/d55/classchi__math_1_1_random_number_generator.html#a9fd4f967b8d4382a1a1e4e9b7ea969d8">Rand</a>() - 1.0;</div>
+<div class="line">  <span class="keywordtype">double</span> theta    = acos(costheta);</div>
+<div class="line">  <span class="keywordtype">double</span> varphi   = rng.<a class="code hl_function" href="../../d9/d55/classchi__math_1_1_random_number_generator.html#a9fd4f967b8d4382a1a1e4e9b7ea969d8">Rand</a>()*2.0*M_PI;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>{sin(theta) * cos(varphi),</div>
+<div class="line">                           sin(theta) * sin(varphi),</div>
+<div class="line">                           cos(theta)};</div>
+<div class="line">};</div>
+<div class="ttc" id="aclasschi__math_1_1_random_number_generator_html"><div class="ttname"><a href="../../d9/d55/classchi__math_1_1_random_number_generator.html">chi_math::RandomNumberGenerator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dbf/random__number__generator_8h_source.html#l00010">random_number_generator.h:11</a></div></div>
+<div class="ttc" id="aclasschi__math_1_1_random_number_generator_html_a9fd4f967b8d4382a1a1e4e9b7ea969d8"><div class="ttname"><a href="../../d9/d55/classchi__math_1_1_random_number_generator.html#a9fd4f967b8d4382a1a1e4e9b7ea969d8">chi_math::RandomNumberGenerator::Rand</a></div><div class="ttdeci">double Rand()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d67/random__number__generator_8cc_source.html#l00018">random_number_generator.cc:18</a></div></div>
+</div><!-- fragment --><p> It is important to note that one should only use a single random number, which, gets reused, and not define new ones since the random seed for new generators will be the same.</p>
+<h2><a class="anchor" id="CodeTut93Sec4_2"></a>
+4.2 PWLD Tally contribution</h2>
+<p >The tally contribution routine takes a track, defined by a starting and ending position, and contributes it to the specified cell's tally information. Of course additional information about the particle creating the track is also provided, i.e., the direction, energy group index and weight at the starting position.</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> ContributePWLDTally = [&amp;sdm,&amp;grid,&amp;phi_tally,&amp;phi_uk_man,&amp;sigma_t,</div>
+<div class="line">                              &amp;num_moments,&amp;m_to_ell_em_map](</div>
+<div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>&amp; cell,</div>
+<div class="line">  <span class="keyword">const</span> Vec3&amp; positionA,</div>
+<div class="line">  <span class="keyword">const</span> Vec3&amp; positionB,</div>
+<div class="line">  <span class="keyword">const</span> Vec3&amp; omega,</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> g,</div>
+<div class="line">  <span class="keywordtype">double</span> weight)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_mapping = sdm.GetCellMapping(cell);</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes = cell_mapping.NumNodes();</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> phi_theta = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a612087e73bf9b2cd09c6fad00f8e0d4e">chi_math::OmegaToPhiThetaSafe</a>(omega);</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span> phi = phi_theta.first;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span> theta = phi_theta.second;</div>
+<div class="line"> </div>
+<div class="line">  std::vector&lt;double&gt; segment_lengths;</div>
+<div class="line">  <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50">chi_mesh::PopulateRaySegmentLengths</a>(grid,             <span class="comment">//input</span></div>
+<div class="line">                                      cell,             <span class="comment">//input</span></div>
+<div class="line">                                      positionA,        <span class="comment">//input</span></div>
+<div class="line">                                      positionB,        <span class="comment">//input</span></div>
+<div class="line">                                      omega,            <span class="comment">//input</span></div>
+<div class="line">                                      segment_lengths); <span class="comment">//output</span></div>
+<div class="line"> </div>
+<div class="line">  std::vector&lt;double&gt; shape_values_k;   <span class="comment">//At s_k</span></div>
+<div class="line">  std::vector&lt;double&gt; shape_values_kp1; <span class="comment">//At s_{k+1}</span></div>
+<div class="line"> </div>
+<div class="line">  cell_mapping.ShapeValues(positionA,       <span class="comment">//input</span></div>
+<div class="line">                           shape_values_k); <span class="comment">//output</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">double</span> d_run_sum = 0.0;</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; segment_length_k : segment_lengths)</div>
+<div class="line">  {</div>
+<div class="line">    d_run_sum += segment_length_k;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; d = d_run_sum;</div>
+<div class="line"> </div>
+<div class="line">    cell_mapping.ShapeValues(positionA+omega*d, shape_values_kp1);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp;   b_ik   = shape_values_k;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp;   b_ikp1 = shape_values_kp1;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; ell_k  = segment_length_k;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> C0 = b_ik[i] * ell_k;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> C1 = b_ikp1[i] - b_ik[i];</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m &lt; num_moments; ++m)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keyword">const</span> int64_t dof_map = sdm.MapDOFLocal(cell, i, phi_uk_man, m, g);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//================= Apply harmonic weight</span></div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ell_em = m_to_ell_em_map.at(m);</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">int</span> ell = ell_em.first;</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">int</span> em = ell_em.second;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">double</span> w_harmonic = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a9c9dcd08b5ba5ae11f987a038494d6c5">chi_math::Ylm</a>(ell, em, phi, theta);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//================= Apply exponential attenuation weight</span></div>
+<div class="line">        <span class="keywordtype">double</span> w_exp  = (C0 / sigma_t) * (1.0 - exp(-sigma_t * ell_k)) +</div>
+<div class="line">                        (C1 / (sigma_t * sigma_t)) *</div>
+<div class="line">                        (1.0 - (1 + sigma_t * ell_k) * exp(-sigma_t * ell_k));</div>
+<div class="line">               w_exp *= weight / (ell_k * ell_k);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//================= Combine</span></div>
+<div class="line">        <span class="keywordtype">double</span> w_avg = w_harmonic * w_exp;</div>
+<div class="line"> </div>
+<div class="line">        phi_tally[dof_map] += ell_k * w_avg ;</div>
+<div class="line">      }<span class="comment">//for moment m</span></div>
+<div class="line">    }<span class="comment">//for node i</span></div>
+<div class="line"> </div>
+<div class="line">    shape_values_k = shape_values_kp1;</div>
+<div class="line">    weight *= exp(-sigma_t * segment_length_k);</div>
+<div class="line">  }<span class="comment">//for d</span></div>
+<div class="line">};</div>
+<div class="ttc" id="anamespacechi__math_html_a612087e73bf9b2cd09c6fad00f8e0d4e"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a612087e73bf9b2cd09c6fad00f8e0d4e">chi_math::OmegaToPhiThetaSafe</a></div><div class="ttdeci">std::pair&lt; double, double &gt; OmegaToPhiThetaSafe(const chi_mesh::Vector3 &amp;omega)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/df0/chi__math__01__utility_8cpp_source.html#l00018">chi_math_01_utility.cpp:19</a></div></div>
+<div class="ttc" id="anamespacechi__math_html_a9c9dcd08b5ba5ae11f987a038494d6c5"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a9c9dcd08b5ba5ae11f987a038494d6c5">chi_math::Ylm</a></div><div class="ttdeci">double Ylm(unsigned int ell, int m, double varphi, double theta)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d27/spherical__harmonics_8cpp_source.html#l00012">spherical_harmonics.cpp:12</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_a3caacec44d1cd2faa8c96cc0a1c96c50"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50">chi_mesh::PopulateRaySegmentLengths</a></div><div class="ttdeci">void PopulateRaySegmentLengths(const chi_mesh::MeshContinuum &amp;grid, const Cell &amp;cell, const chi_mesh::Vector3 &amp;line_point0, const chi_mesh::Vector3 &amp;line_point1, const chi_mesh::Vector3 &amp;omega, std::vector&lt; double &gt; &amp;segment_lengths)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d56/raytrace__utils_8cc_source.html#l00252">raytrace_utils.cc:252</a></div></div>
+</div><!-- fragment --><p >The first portion of this routine is just housekeeping, </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_mapping = sdm.GetCellMapping(cell);</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes = cell_mapping.NumNodes();</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> phi_theta = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a612087e73bf9b2cd09c6fad00f8e0d4e">chi_math::OmegaToPhiThetaSafe</a>(omega);</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> phi = phi_theta.first;</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> theta = phi_theta.second;</div>
+</div><!-- fragment --><p> We get the cell mapping, number of nodes, and we convert the direction vector to a \( (\varphi, \theta) \) pair. The latter will be used for the harmonic weighting.</p>
+<p >Next we determing the segments crossed by this track. This information is populated into a vector of segment lengths, sorted according to the direction traveled by the ray, by using the routine <code><a class="el" href="../../d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50">chi_mesh::PopulateRaySegmentLengths()</a></code>. </p><div class="fragment"><div class="line">std::vector&lt;double&gt; segment_lengths;</div>
+<div class="line"><a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50">chi_mesh::PopulateRaySegmentLengths</a>(grid,             <span class="comment">//input</span></div>
+<div class="line">                                    cell,             <span class="comment">//input</span></div>
+<div class="line">                                    positionA,        <span class="comment">//input</span></div>
+<div class="line">                                    positionB,        <span class="comment">//input</span></div>
+<div class="line">                                    omega,            <span class="comment">//input</span></div>
+<div class="line">                                    segment_lengths); <span class="comment">//output</span></div>
+</div><!-- fragment --><p >We then declare two vectors that will hold the shape function values at different places on the segments. We can immediately determine the shape values at \( s_0 \) since this will be at position A. </p><div class="fragment"><div class="line">std::vector&lt;double&gt; shape_values_k;   <span class="comment">//At s_k</span></div>
+<div class="line">std::vector&lt;double&gt; shape_values_kp1; <span class="comment">//At s_{k+1}</span></div>
+<div class="line"> </div>
+<div class="line">cell_mapping.ShapeValues(positionA,       <span class="comment">//input</span></div>
+<div class="line">                         shape_values_k); <span class="comment">//output</span></div>
+</div><!-- fragment --><p >Next we start looping over the segments. </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> d_run_sum = 0.0;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; segment_length_k : segment_lengths)</div>
+<div class="line">{</div>
+<div class="line">  d_run_sum += segment_length_k;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; d = d_run_sum;</div>
+<div class="line"> </div>
+<div class="line">  cell_mapping.ShapeValues(positionA+omega*d, shape_values_kp1);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp;   b_ik   = shape_values_k;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp;   b_ikp1 = shape_values_kp1;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; ell_k  = segment_length_k;</div>
+</div><!-- fragment --><p> We determine the end position of the segment using a running sum of the total segments traversed. We then populate the shape function values at \( s_{k+1} \) and rename both sets of shape function values and the segment length for convenience.</p>
+<p >Next we loop over the nodes and moments. </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span> C0 = b_ik[i] * ell_k;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span> C1 = b_ikp1[i] - b_ik[i];</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m &lt; num_moments; ++m)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keyword">const</span> int64_t dof_map = sdm.MapDOFLocal(cell, i, phi_uk_man, m, g);</div>
+</div><!-- fragment --><p> Once a node is identified we compute the constants C0 and C1. Also once in the moment loop we can obtain the DOF local index of the tally.</p>
+<p >Next we compute the harmonic weighting: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; ell_em = m_to_ell_em_map.at(m);</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> ell = ell_em.first;</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> em = ell_em.second;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">double</span> w_harmonic = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a9c9dcd08b5ba5ae11f987a038494d6c5">chi_math::Ylm</a>(ell, em, phi, theta);</div>
+</div><!-- fragment --><p >Then we compute the exponential weighting based on the formula </p><p class="formulaDsp">
+\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \biggr[ \frac{C_0}{\sigma_t} (1-e^{-\sigma_t \ell_{tk}}) + \frac{C_1}{\sigma_t^2} \biggr( 1 - (1 + \sigma_t \ell_{tk} ) \biggr)e^{-\sigma_t \ell_{tk}} \biggr] \]
+</p>
+<p> with the code </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> w_exp  = (C0 / sigma_t) * (1.0 - exp(-sigma_t * ell_k)) +</div>
+<div class="line">                (C1 / (sigma_t * sigma_t)) *</div>
+<div class="line">                (1.0 - (1 + sigma_t * ell_k) * exp(-sigma_t * ell_k));</div>
+<div class="line">       w_exp *= weight / (ell_k * ell_k);</div>
+</div><!-- fragment --><p >Finally, the average weight is computed and the tally contribution is made </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> w_avg = w_harmonic * w_exp;</div>
+<div class="line"> </div>
+<div class="line">phi_tally[dof_map] += ell_k * w_avg ;</div>
+</div><!-- fragment --><p >At the end of each segment being processed we copy the shape function values at \( s_{k+1} \) to \( s_k \), preventing us from having to compute the values at \( s_k \) again (which can be expensive). We also apply the exponential attenuation to the particle weight over the segment. </p><div class="fragment"><div class="line">shape_values_k = shape_values_kp1;</div>
+<div class="line">weight *= exp(-sigma_t * segment_length_k);</div>
+</div><!-- fragment --><h2><a class="anchor" id="CodeTut93Sec4_3"></a>
+4.3 Approximating cell size</h2>
+<p >To obtain a very rough estimate of a cell's size we simply determine its bounding box: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> GetCellApproximateSize = [&amp;grid](<span class="keyword">const</span> <a class="code hl_class" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>&amp; cell)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; v0 = grid.vertices[cell.vertex_ids[0]];</div>
+<div class="line">  <span class="keywordtype">double</span> xmin = v0.x, xmax = v0.x;</div>
+<div class="line">  <span class="keywordtype">double</span> ymin = v0.y, ymax = v0.y;</div>
+<div class="line">  <span class="keywordtype">double</span> zmin = v0.z, zmax = v0.z;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">for</span> (uint64_t vid : cell.vertex_ids)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; v = grid.vertices[vid];</div>
+<div class="line"> </div>
+<div class="line">    xmin = std::min(xmin, v.x); xmax = std::max(xmax, v.x);</div>
+<div class="line">    ymin = std::min(ymin, v.y); ymax = std::max(ymax, v.y);</div>
+<div class="line">    zmin = std::min(zmin, v.z); zmax = std::max(zmax, v.z);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> (<a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>(xmin, ymin, zmin) -</div>
+<div class="line">          <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>(xmax, ymax, zmax)).Norm();</div>
+<div class="line">};</div>
+</div><!-- fragment --><p> The code here should be self explanatory.</p>
+<h1><a class="anchor" id="CodeTut93Sec5"></a>
+5 The raytracer</h1>
+<p >Instantiating a <code><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html">chi_mesh::RayTracer</a></code> object is very simple. It just needs the grid and the approximate cell sizes. </p><div class="fragment"><div class="line">std::vector&lt;double&gt; cell_sizes(grid.local_cells.size(), 0.0);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid.local_cells)</div>
+<div class="line">  cell_sizes[cell.local_id] = GetCellApproximateSize(cell);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html">chi_mesh::RayTracer</a> ray_tracer(grid, cell_sizes);</div>
+<div class="ttc" id="aclasschi__mesh_1_1_ray_tracer_html"><div class="ttname"><a href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html">chi_mesh::RayTracer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dc8/raytracing_8h_source.html#l00021">raytracing.h:22</a></div></div>
+</div><!-- fragment --><h1><a class="anchor" id="CodeTut93Sec6"></a>
+6 Executing the algorithms</h1>
+<p >The basic process of simulating all the rays is fairly simple </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_particles = 10&#39;000&#39;000;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> n=0; n&lt;num_particles; ++n)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (n % <span class="keywordtype">size_t</span>(num_particles/10.0) == 0)</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;#particles = &quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">  <span class="comment">//====================================== Create the particle</span></div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> omega = SampleRandomDirection();</div>
+<div class="line">  Particle particle{source_pos,     <span class="comment">//position</span></div>
+<div class="line">                    omega,          <span class="comment">//direction</span></div>
+<div class="line">                    0,              <span class="comment">//e_group</span></div>
+<div class="line">                    1.0,            <span class="comment">//weight</span></div>
+<div class="line">                    source_cell_id, <span class="comment">//cell_id</span></div>
+<div class="line">                    <span class="keyword">true</span>};          <span class="comment">//alive</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">while</span> (particle.alive)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">//=============================== Get the current cell</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell = grid.cells[particle.cell_id];</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//=============================== Perform the trace</span></div>
+<div class="line">    <span class="comment">//                                to the next surface</span></div>
+<div class="line">    <span class="keyword">auto</span> destination_info = ray_tracer.TraceRay(cell,</div>
+<div class="line">                                                particle.position,</div>
+<div class="line">                                                particle.direction);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> Vec3&amp; end_of_track_position = destination_info.pos_f;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//=============================== Make tally contribution</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> g = particle.energy_group;</div>
+<div class="line">    <span class="keywordflow">if</span> (sdm.type == PWLD)</div>
+<div class="line">      ContributePWLDTally(cell,</div>
+<div class="line">                          particle.position,     <span class="comment">//positionA</span></div>
+<div class="line">                          end_of_track_position, <span class="comment">//positionB</span></div>
+<div class="line">                          particle.direction,    <span class="comment">//omega</span></div>
+<div class="line">                          g,                     <span class="comment">//</span></div>
+<div class="line">                          particle.weight);      <span class="comment">//weight at A</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//=============================== Process cell transfer</span></div>
+<div class="line">    <span class="comment">//                                or death</span></div>
+<div class="line">    <span class="keywordflow">if</span> (not destination_info.particle_lost)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; f = destination_info.destination_face_index;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; current_cell_face = cell.faces[f];</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">if</span> (current_cell_face.has_neighbor)</div>
+<div class="line">        particle.cell_id = current_cell_face.neighbor_id;</div>
+<div class="line">      <span class="keywordflow">else</span></div>
+<div class="line">        particle.alive = <span class="keyword">false</span>; <span class="comment">//Death at the boundary</span></div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">      std::cout &lt;&lt; <span class="stringliteral">&quot;particle&quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot; lost &quot;</span></div>
+<div class="line">                &lt;&lt; particle.position.PrintStr() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                &lt;&lt; particle.direction.PrintStr() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; pA = particle.position;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; pB = end_of_track_position;</div>
+<div class="line">    particle.weight *= exp(-sigma_t*(pB-pA).Norm()); <span class="comment">//Attenuation</span></div>
+<div class="line">    particle.position = end_of_track_position;</div>
+<div class="line">  }<span class="comment">//while ray alive</span></div>
+<div class="line"> </div>
+<div class="line">}<span class="comment">//for ray n</span></div>
+</div><!-- fragment --><p >We start the process with the loop </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_particles = 10&#39;000&#39;000;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> n=0; n&lt;num_particles; ++n)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (n % <span class="keywordtype">size_t</span>(num_particles/10.0) == 0)</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;#particles = &quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+</div><!-- fragment --><p> The information printing line simply prints at each 10% of completion.</p>
+<p >We then create a source particle/ray </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> omega = SampleRandomDirection();</div>
+<div class="line">Particle particle{source_pos,     <span class="comment">//position</span></div>
+<div class="line">                  omega,          <span class="comment">//direction</span></div>
+<div class="line">                  0,              <span class="comment">//e_group</span></div>
+<div class="line">                  1.0,            <span class="comment">//weight</span></div>
+<div class="line">                  source_cell_id, <span class="comment">//cell_id</span></div>
+<div class="line">                  <span class="keyword">true</span>};          <span class="comment">//alive</span></div>
+</div><!-- fragment --><p >Next we keep transporting the particle as long as it is alive. The beginning of this loop is </p><div class="fragment"><div class="line"><span class="keywordflow">while</span> (particle.alive)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">//=============================== Get the current cell</span></div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell = grid.cells[particle.cell_id];</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//=============================== Perform the trace</span></div>
+<div class="line">  <span class="comment">//                                to the next surface</span></div>
+<div class="line">  <span class="keyword">auto</span> destination_info = ray_tracer.TraceRay(cell,</div>
+<div class="line">                                              particle.position,</div>
+<div class="line">                                              particle.direction);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">const</span> Vec3&amp; end_of_track_position = destination_info.pos_f;</div>
+</div><!-- fragment --><p> After a trace we have one single track within a cell.</p>
+<p >We then contribute the PWLD tally </p><div class="fragment"><div class="line">ContributePWLDTally(cell,</div>
+<div class="line">                    particle.position,     <span class="comment">//positionA</span></div>
+<div class="line">                    end_of_track_position, <span class="comment">//positionB</span></div>
+<div class="line">                    particle.direction,    <span class="comment">//omega</span></div>
+<div class="line">                    particle.energy_group, <span class="comment">//g</span></div>
+<div class="line">                    particle.weight);      <span class="comment">//weight at A</span></div>
+</div><!-- fragment --><p >Next we process the transfer of the particle to the next cell. If the particle hit a cell face without a neighbor then the particle is killed (i.e., <code>alive</code> set to false. Under some circumstances the raytracer could also fail, resulting in a lost particle, for which we print a verbose message. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (not destination_info.particle_lost)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; f = destination_info.destination_face_index;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; current_cell_face = cell.faces[f];</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (current_cell_face.has_neighbor)</div>
+<div class="line">    particle.cell_id = current_cell_face.neighbor_id;</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">    particle.alive = <span class="keyword">false</span>; <span class="comment">//Death at the boundary</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;particle&quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot; lost &quot;</span></div>
+<div class="line">            &lt;&lt; particle.position.PrintStr() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">            &lt;&lt; particle.direction.PrintStr() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">            &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">  <span class="keywordflow">break</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p >Lastly we update the particle's attenuation and position </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; pA = particle.position;</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; pB = end_of_track_position;</div>
+<div class="line">particle.weight *= exp(-sigma_t*(pB-pA).Norm()); <span class="comment">//Attenuation</span></div>
+<div class="line">particle.position = end_of_track_position;</div>
+</div><!-- fragment --><h1><a class="anchor" id="CodeTut93Sec7"></a>
+7 Post-processing the tallies</h1>
+<p >The tallies up to this point are still in raw format. We need to convert them to the project fashion we want. </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid.local_cells)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">//====================================== Compute mass matrix</span></div>
+<div class="line">  <span class="comment">//                                       and its inverse</span></div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_mapping = sdm.GetCellMapping(cell);</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; qp_data = cell_mapping.MakeVolumeQuadraturePointData();</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes = cell_mapping.NumNodes();</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a> M(num_nodes, <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>(num_nodes, 0.0));</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> qp : qp_data.QuadraturePointIndices())</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0; j&lt;num_nodes; ++j)</div>
+<div class="line">        M[i][j] += qp_data.ShapeValue(i,qp) * qp_data.ShapeValue(j, qp) *</div>
+<div class="line">                   qp_data.JxW(qp);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> M_inv = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a7d48371b6d078244114ce3d3053774d8">chi_math::Inverse</a>(M);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//====================================== Apply projection</span></div>
+<div class="line">  <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a> b(num_nodes, 0.0);</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m&lt;num_moments; ++m)</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g=0; g&lt;num_groups; ++g)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keyword">const</span> int64_t imap = sdm.MapDOFLocal(cell, i, phi_uk_man, m, g);</div>
+<div class="line">        b[i] = phi_tally[imap] / num_particles;</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">      <span class="keyword">auto</span> c = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aca338ae5af880df37376a94a8276ebb8">chi_math::MatMul</a>(M_inv, b);</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keyword">const</span> int64_t imap = sdm.MapDOFLocal(cell, i, phi_uk_man, m, g);</div>
+<div class="line">        phi_tally[imap] = c[i];</div>
+<div class="line">      }</div>
+<div class="line">    }<span class="comment">//for group g</span></div>
+<div class="line"> </div>
+<div class="line">}<span class="comment">//for cell</span></div>
+<div class="ttc" id="achi__math_8h_html_a80801c4491f8f4ff54ed012d63d0d48b"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a></div><div class="ttdeci">std::vector&lt; VecDbl &gt; MatDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00016">chi_math.h:16</a></div></div>
+<div class="ttc" id="achi__math_8h_html_acbe69520b2db91355c5ed8d97a218b94"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a></div><div class="ttdeci">std::vector&lt; double &gt; VecDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00015">chi_math.h:15</a></div></div>
+<div class="ttc" id="anamespacechi__math_html_a7d48371b6d078244114ce3d3053774d8"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a7d48371b6d078244114ce3d3053774d8">chi_math::Inverse</a></div><div class="ttdeci">MatDbl Inverse(const MatDbl &amp;A)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d6a/chi__math__02__matrix__operations_8cc_source.html#l00370">chi_math_02_matrix_operations.cc:370</a></div></div>
+<div class="ttc" id="anamespacechi__math_html_aca338ae5af880df37376a94a8276ebb8"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#aca338ae5af880df37376a94a8276ebb8">chi_math::MatMul</a></div><div class="ttdeci">MatDbl MatMul(const MatDbl &amp;A, const double c)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d6a/chi__math__02__matrix__operations_8cc_source.html#l00087">chi_math_02_matrix_operations.cc:87</a></div></div>
+</div><!-- fragment --><p >The first portion of the loop is simply housekeeping again </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid.local_cells)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">//====================================== Compute mass matrix</span></div>
+<div class="line">  <span class="comment">//                                       and its inverse</span></div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_mapping = sdm.GetCellMapping(cell);</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; qp_data = cell_mapping.MakeVolumeQuadraturePointData();</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes = cell_mapping.NumNodes();</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a> M(num_nodes, <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>(num_nodes, 0.0));</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> qp : qp_data.QuadraturePointIndices())</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0; j&lt;num_nodes; ++j)</div>
+<div class="line">        M[i][j] += qp_data.ShapeValue(i,qp) * qp_data.ShapeValue(j, qp) *</div>
+<div class="line">                   qp_data.JxW(qp);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> M_inv = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a7d48371b6d078244114ce3d3053774d8">chi_math::Inverse</a>(M);</div>
+</div><!-- fragment --><p> We get the cell mapping, quadrature point data, and we build the mass matrix. Recall that we need \( \phi_j^{uc} \) such that </p><p class="formulaDsp">
+\[ \sum_j \phi_j^{uc} \int_V b_i b_j dV = \int_V b_i \phi^{uc} dV, \]
+</p>
+<p> which requires us to solve the small system </p><p class="formulaDsp">
+\[ M \boldsymbol{\phi}^{uc} = \mathbf{T} \]
+</p>
+<p> where \( M_{ij} = \int_V b_i b_j dV \) and \( T_i = \int_V b_i \phi^{uc} dV \). Since the mass matrix is such a small matrix we just directly invert it to be used for all groups and moments.</p>
+<p >Next we loop over all moments and groups. </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a> T(num_nodes, 0.0);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m&lt;num_moments; ++m)</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g=0; g&lt;num_groups; ++g)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keyword">const</span> int64_t imap = sdm.MapDOFLocal(cell, i, phi_uk_man, m, g);</div>
+<div class="line">      T[i] = phi_tally[imap] / num_particles;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> phi_uc = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aca338ae5af880df37376a94a8276ebb8">chi_math::MatMul</a>(M_inv, T);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keyword">const</span> int64_t imap = sdm.MapDOFLocal(cell, i, phi_uk_man, m, g);</div>
+<div class="line">      phi_tally[imap] = phi_uc[i];</div>
+<div class="line">    }</div>
+<div class="line">  }<span class="comment">//for group g</span></div>
+</div><!-- fragment --><p >Within the moment and group loop we first set the entries of \( T \) to the normalized tally values. Thereafter we multiply \( T \) from the left with \( M^{-1} \) to get \( \boldsymbol{\phi}^{uc} \). Finally we reuse the tally data and set the nodal values of the tally to the uncollided projected flux.</p>
+<h1><a class="anchor" id="CodeTut93Sec8"></a>
+8 Exporting field functions</h1>
+<p >Creating the field functions is similar to what we did in previous tutorials </p><div class="fragment"><div class="line"><span class="comment">//============================================= Create Field Functions</span></div>
+<div class="line">std::vector&lt;std::shared_ptr&lt;chi_physics::FieldFunction2&gt;&gt; ff_list;</div>
+<div class="line"> </div>
+<div class="line">ff_list.push_back(std::make_shared&lt;chi_physics::FieldFunction2&gt;(</div>
+<div class="line">  <span class="stringliteral">&quot;Phi&quot;</span>,                                           <span class="comment">//Text name</span></div>
+<div class="line">  sdm_ptr,                                         <span class="comment">//Spatial Discr.</span></div>
+<div class="line">  <a class="code hl_class" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a>,num_groups) <span class="comment">//Unknown</span></div>
+<div class="line">));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//============================================= Localize zeroth moment</span></div>
+<div class="line"><span class="comment">//This routine extracts a single moment vector</span></div>
+<div class="line"><span class="comment">//from the vector that contains multiple moments</span></div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> m0_uk_man(</div>
+<div class="line">  {<a class="code hl_class" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a>,num_groups)});</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_m0_dofs = sdm.GetNumLocalDOFs(m0_uk_man);</div>
+<div class="line"> </div>
+<div class="line">std::vector&lt;double&gt; m0_phi(num_m0_dofs, 0.0);</div>
+<div class="line"> </div>
+<div class="line">sdm.CopyVectorWithUnknownScope(phi_tally,     <span class="comment">//from vector</span></div>
+<div class="line">                               m0_phi,      <span class="comment">//to vector</span></div>
+<div class="line">                               phi_uk_man,  <span class="comment">//from dof-structure</span></div>
+<div class="line">                               0,           <span class="comment">//from unknown-id</span></div>
+<div class="line">                               m0_uk_man,   <span class="comment">//to dof-structure</span></div>
+<div class="line">                               0);          <span class="comment">//to unknown-id</span></div>
+<div class="line"> </div>
+<div class="line">ff_list[0]-&gt;UpdateFieldVector(m0_phi);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//============================================= Update field function</span></div>
+<div class="line"><a class="code hl_typedef" href="../../dd/d5e/classchi__physics_1_1_field_function2.html#abf0e1bf6c393973df6748e96c974c792">chi_physics::FieldFunction2::FFList</a> const_ff_list;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; ff_ptr : ff_list)</div>
+<div class="line">  const_ff_list.push_back(ff_ptr);</div>
+<div class="line"><a class="code hl_function" href="../../dd/d5e/classchi__physics_1_1_field_function2.html#a3b126394c9c54d12e32c5731840f35aa">chi_physics::FieldFunction2::ExportMultipleToVTK</a>(fname,</div>
+<div class="line">                                                 const_ff_list);</div>
+<div class="ttc" id="aclasschi__math_1_1_unknown_html"><div class="ttname"><a href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00031">unknown_manager.h:32</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_field_function2_html_a3b126394c9c54d12e32c5731840f35aa"><div class="ttname"><a href="../../dd/d5e/classchi__physics_1_1_field_function2.html#a3b126394c9c54d12e32c5731840f35aa">chi_physics::FieldFunction2::ExportMultipleToVTK</a></div><div class="ttdeci">static void ExportMultipleToVTK(const std::string &amp;file_base_name, const FFList &amp;ff_list)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dda/fieldfunction2__03b__exportvtkwithappend_8cc_source.html#l00025">fieldfunction2_03b_exportvtkwithappend.cc:26</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_field_function2_html_abf0e1bf6c393973df6748e96c974c792"><div class="ttname"><a href="../../dd/d5e/classchi__physics_1_1_field_function2.html#abf0e1bf6c393973df6748e96c974c792">chi_physics::FieldFunction2::FFList</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; const FieldFunction2 &gt; &gt; FFList</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d97/fieldfunction2_8h_source.html#l00072">fieldfunction2.h:72</a></div></div>
+</div><!-- fragment --><p >The visualization below shows a logarithmic scale warp of the flux values for both the uncollided algorithm and a LBS simulation using a product quadrature with 96 azimuthal angles and 48 polar angles per octant (18,432 directions total).</p>
+<p >The left of the figure is the uncollided algorithm and the right is LBS. Notice the stochastic "noise" from the uncollided algorithm.</p>
+<div class="image">
+<img src="../../SimTest93.png" alt="" width="800px"/>
+</div>
+<h1><a class="anchor" id="CodeTut93Sec9"></a>
+The complete program</h1>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;chi_lua.h&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d98/chi__meshhandler_8h.html">ChiMesh/MeshHandler/chi_meshhandler.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">ChiMesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d8/dc8/raytracing_8h.html">ChiMesh/Raytrace/raytracing.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d01/pwl_8h.html">ChiMath/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwl.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d7/dbf/random__number__generator_8h.html">ChiMath/RandomNumberGeneration/random_number_generator.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d81/legendrepoly_8h.html">ChiMath/Quadratures/LegendrePoly/legendrepoly.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d0/d97/fieldfunction2_8h.html">ChiPhysics/FieldFunction2/fieldfunction2.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span>chi_unit_sim_tests</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a90f1bf8db9dd03373ea54a140cd446fc">chiSimTest93_RayTracing</a>(lua_State* Lstate)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">const</span> std::string fname = <span class="stringliteral">&quot;chiSimTest93_RayTracing&quot;</span>;</div>
+<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;chiSimTest93_RayTracing&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Get grid</span></div>
+<div class="line">  <span class="keyword">auto</span> grid_ptr = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>().<a class="code hl_function" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">GetGrid</a>();</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = *grid_ptr;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Global num cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> dimension = (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975">chi_mesh::DIMENSION_1</a>)? 1 :</div>
+<div class="line">                        (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246">chi_mesh::DIMENSION_2</a>)? 2 :</div>
+<div class="line">                        (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">chi_mesh::DIMENSION_3</a>)? 3 : 0;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Set parameters</span></div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_groups = 1;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> scattering_order = 1;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; L = scattering_order;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_moments =</div>
+<div class="line">    (dimension == 1)? L + 1 :</div>
+<div class="line">    (dimension == 2)? (L+1)*(L+2)/2 :</div>
+<div class="line">    (dimension == 3)? (L+1)*(L+1) : 0;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span> sigma_t = 0.27;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Build harmonic map</span></div>
+<div class="line">  std::vector&lt;std::pair&lt;int,int&gt;&gt; m_to_ell_em_map;</div>
+<div class="line">  <span class="keywordflow">if</span> (dimension == 1)</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ell=0; ell&lt;=scattering_order; ell++)</div>
+<div class="line">      m_to_ell_em_map.emplace_back(ell,0);</div>
+<div class="line">  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dimension == 2)</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ell=0; ell&lt;=scattering_order; ell++)</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m=-ell; m&lt;=ell; m+=2)</div>
+<div class="line">        m_to_ell_em_map.emplace_back(ell,m);</div>
+<div class="line">  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dimension == 3)</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ell=0; ell&lt;=scattering_order; ell++)</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m=-ell; m&lt;=ell; m++)</div>
+<div class="line">        m_to_ell_em_map.emplace_back(ell,m);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Make SDM</span></div>
+<div class="line">  <span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
+<div class="line">  <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#aabeea5135d3586a94db69f58efe08c33">chi_math::SpatialDiscretization_PWLD::New</a>(grid_ptr);</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = *sdm_ptr;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> phi_uk_man;</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m&lt;num_moments; ++m)</div>
+<div class="line">    phi_uk_man.<a class="code hl_function" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78">AddUnknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a>, num_groups);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_fem_local_dofs = sdm.GetNumLocalDOFs(phi_uk_man);</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_fem_globl_dofs = sdm.GetNumGlobalDOFs(phi_uk_man);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num local FEM DOFs: &quot;</span> &lt;&lt; num_fem_local_dofs;</div>
+<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num globl FEM DOFs: &quot;</span> &lt;&lt; num_fem_globl_dofs;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Define tallies</span></div>
+<div class="line">  std::vector&lt;double&gt; phi_tally(num_fem_local_dofs, 0.0);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Define particle</span></div>
+<div class="line">  <span class="comment">//                                              data structure</span></div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> Vec3;</div>
+<div class="line">  <span class="keyword">struct </span>Particle</div>
+<div class="line">  {</div>
+<div class="line">    Vec3 position = {0.0,0.0,0.0};</div>
+<div class="line">    Vec3 direction = {0.0,0.0,0.0};</div>
+<div class="line">    <span class="keywordtype">int</span>  energy_group = 0;</div>
+<div class="line">    <span class="keywordtype">double</span> weight = 1.0;</div>
+<div class="line"> </div>
+<div class="line">    uint64_t cell_id = 0;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> alive = <span class="keyword">true</span>;</div>
+<div class="line">  };</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Define source position</span></div>
+<div class="line">  <span class="comment">//                                              and find cell containing it</span></div>
+<div class="line">  <span class="keyword">const</span> Vec3 source_pos = {0.0,0.0,0.0};</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_class" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> <span class="keyword">const</span>* source_cell_ptr = <span class="keyword">nullptr</span>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : grid.local_cells)</div>
+<div class="line">    <span class="keywordflow">if</span> (grid.CheckPointInsideCell(cell, source_pos))</div>
+<div class="line">    {</div>
+<div class="line">      source_cell_ptr = &amp;cell;</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">  <span class="keywordflow">if</span> (source_cell_ptr == <span class="keyword">nullptr</span>)</div>
+<div class="line">    <span class="keywordflow">throw</span> std::logic_error(fname + <span class="stringliteral">&quot;: Source cell not found.&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">const</span> uint64_t source_cell_id = source_cell_ptr-&gt;<a class="code hl_variable" href="../../d8/d7c/classchi__mesh_1_1_cell.html#aea49dd23ca8f09e588eb87e9a9f186d5">global_id</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Define lambdas</span></div>
+<div class="line">  <a class="code hl_class" href="../../d9/d55/classchi__math_1_1_random_number_generator.html">chi_math::RandomNumberGenerator</a> rng;</div>
+<div class="line">  <span class="keyword">auto</span> SampleRandomDirection = [&amp;rng]()</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordtype">double</span> costheta = 2.0*rng.<a class="code hl_function" href="../../d9/d55/classchi__math_1_1_random_number_generator.html#a9fd4f967b8d4382a1a1e4e9b7ea969d8">Rand</a>() - 1.0;</div>
+<div class="line">    <span class="keywordtype">double</span> theta    = acos(costheta);</div>
+<div class="line">    <span class="keywordtype">double</span> varphi   = rng.<a class="code hl_function" href="../../d9/d55/classchi__math_1_1_random_number_generator.html#a9fd4f967b8d4382a1a1e4e9b7ea969d8">Rand</a>()*2.0*M_PI;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>{sin(theta) * cos(varphi),</div>
+<div class="line">                             sin(theta) * sin(varphi),</div>
+<div class="line">                             cos(theta)};</div>
+<div class="line">  };</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> ContributePWLDTally = [&amp;sdm,&amp;grid,&amp;phi_tally,&amp;phi_uk_man,&amp;sigma_t,</div>
+<div class="line">                              &amp;num_moments,&amp;m_to_ell_em_map](</div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>&amp; cell,</div>
+<div class="line">    <span class="keyword">const</span> Vec3&amp; positionA,</div>
+<div class="line">    <span class="keyword">const</span> Vec3&amp; positionB,</div>
+<div class="line">    <span class="keyword">const</span> Vec3&amp; omega,</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> g,</div>
+<div class="line">    <span class="keywordtype">double</span> weight)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_mapping = sdm.GetCellMapping(cell);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes = cell_mapping.NumNodes();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> phi_theta = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a612087e73bf9b2cd09c6fad00f8e0d4e">chi_math::OmegaToPhiThetaSafe</a>(omega);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span> phi = phi_theta.first;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span> theta = phi_theta.second;</div>
+<div class="line"> </div>
+<div class="line">    std::vector&lt;double&gt; segment_lengths;</div>
+<div class="line">    <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50">chi_mesh::PopulateRaySegmentLengths</a>(grid,             <span class="comment">//input</span></div>
+<div class="line">                                        cell,             <span class="comment">//input</span></div>
+<div class="line">                                        positionA,        <span class="comment">//input</span></div>
+<div class="line">                                        positionB,        <span class="comment">//input</span></div>
+<div class="line">                                        omega,            <span class="comment">//input</span></div>
+<div class="line">                                        segment_lengths); <span class="comment">//output</span></div>
+<div class="line"> </div>
+<div class="line">    std::vector&lt;double&gt; shape_values_k;   <span class="comment">//At s_k</span></div>
+<div class="line">    std::vector&lt;double&gt; shape_values_kp1; <span class="comment">//At s_{k+1}</span></div>
+<div class="line"> </div>
+<div class="line">    cell_mapping.ShapeValues(positionA,       <span class="comment">//input</span></div>
+<div class="line">                             shape_values_k); <span class="comment">//output</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">double</span> d_run_sum = 0.0;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; segment_length_k : segment_lengths)</div>
+<div class="line">    {</div>
+<div class="line">      d_run_sum += segment_length_k;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; d = d_run_sum;</div>
+<div class="line"> </div>
+<div class="line">      cell_mapping.ShapeValues(positionA+omega*d, shape_values_kp1);</div>
+<div class="line"> </div>
+<div class="line">      <span class="keyword">const</span> <span class="keyword">auto</span>&amp;   b_ik   = shape_values_k;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keyword">auto</span>&amp;   b_ikp1 = shape_values_kp1;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; ell_k  = segment_length_k;</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">double</span> C0 = b_ik[i] * ell_k;</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">double</span> C1 = b_ikp1[i] - b_ik[i];</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m &lt; num_moments; ++m)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="keyword">const</span> int64_t dof_map = sdm.MapDOFLocal(cell, i, phi_uk_man, m, g);</div>
+<div class="line"> </div>
+<div class="line">          <span class="comment">//================= Apply harmonic weight</span></div>
+<div class="line">          <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ell_em = m_to_ell_em_map.at(m);</div>
+<div class="line">          <span class="keyword">const</span> <span class="keywordtype">int</span> ell = ell_em.first;</div>
+<div class="line">          <span class="keyword">const</span> <span class="keywordtype">int</span> em = ell_em.second;</div>
+<div class="line"> </div>
+<div class="line">          <span class="keywordtype">double</span> w_harmonic = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a9c9dcd08b5ba5ae11f987a038494d6c5">chi_math::Ylm</a>(ell, em, phi, theta);</div>
+<div class="line"> </div>
+<div class="line">          <span class="comment">//================= Apply exponential attenuation weight</span></div>
+<div class="line">          <span class="keywordtype">double</span> w_exp  = (C0 / sigma_t) * (1.0 - exp(-sigma_t * ell_k)) +</div>
+<div class="line">                          (C1 / (sigma_t * sigma_t)) *</div>
+<div class="line">                          (1.0 - (1 + sigma_t * ell_k) * exp(-sigma_t * ell_k));</div>
+<div class="line">                 w_exp *= weight / (ell_k * ell_k);</div>
+<div class="line"> </div>
+<div class="line">          <span class="comment">//================= Combine</span></div>
+<div class="line">          <span class="keywordtype">double</span> w_avg = w_harmonic * w_exp;</div>
+<div class="line"> </div>
+<div class="line">          phi_tally[dof_map] += ell_k * w_avg ;</div>
+<div class="line">        }<span class="comment">//for moment m</span></div>
+<div class="line">      }<span class="comment">//for node i</span></div>
+<div class="line"> </div>
+<div class="line">      shape_values_k = shape_values_kp1;</div>
+<div class="line">      weight *= exp(-sigma_t * segment_length_k);</div>
+<div class="line">    }<span class="comment">//for d</span></div>
+<div class="line">  };</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> GetCellApproximateSize = [&amp;grid](<span class="keyword">const</span> <a class="code hl_class" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>&amp; cell)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; v0 = grid.vertices[cell.vertex_ids[0]];</div>
+<div class="line">    <span class="keywordtype">double</span> xmin = v0.x, xmax = v0.x;</div>
+<div class="line">    <span class="keywordtype">double</span> ymin = v0.y, ymax = v0.y;</div>
+<div class="line">    <span class="keywordtype">double</span> zmin = v0.z, zmax = v0.z;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> (uint64_t vid : cell.vertex_ids)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; v = grid.vertices[vid];</div>
+<div class="line"> </div>
+<div class="line">      xmin = std::min(xmin, v.x); xmax = std::max(xmax, v.x);</div>
+<div class="line">      ymin = std::min(ymin, v.y); ymax = std::max(ymax, v.y);</div>
+<div class="line">      zmin = std::min(zmin, v.z); zmax = std::max(zmax, v.z);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> (<a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>(xmin, ymin, zmin) -</div>
+<div class="line">            <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>(xmax, ymax, zmax)).Norm();</div>
+<div class="line">  };</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Create raytracer</span></div>
+<div class="line">  std::vector&lt;double&gt; cell_sizes(grid.local_cells.size(), 0.0);</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid.local_cells)</div>
+<div class="line">    cell_sizes[cell.local_id] = GetCellApproximateSize(cell);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_class" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html">chi_mesh::RayTracer</a> ray_tracer(grid, cell_sizes);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Run rays</span></div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_particles = 1&#39;000&#39;000;</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> n=0; n&lt;num_particles; ++n)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">if</span> (n % <span class="keywordtype">size_t</span>(num_particles/10.0) == 0)</div>
+<div class="line">      std::cout &lt;&lt; <span class="stringliteral">&quot;#particles = &quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    <span class="comment">//====================================== Create the particle</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> omega = SampleRandomDirection();</div>
+<div class="line">    Particle particle{source_pos,     <span class="comment">//position</span></div>
+<div class="line">                      omega,          <span class="comment">//direction</span></div>
+<div class="line">                      0,              <span class="comment">//e_group</span></div>
+<div class="line">                      1.0,            <span class="comment">//weight</span></div>
+<div class="line">                      source_cell_id, <span class="comment">//cell_id</span></div>
+<div class="line">                      <span class="keyword">true</span>};          <span class="comment">//alive</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (particle.alive)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="comment">//=============================== Get the current cell</span></div>
+<div class="line">      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell = grid.cells[particle.cell_id];</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">//=============================== Perform the trace</span></div>
+<div class="line">      <span class="comment">//                                to the next surface</span></div>
+<div class="line">      <span class="keyword">auto</span> destination_info = ray_tracer.TraceRay(cell,</div>
+<div class="line">                                                  particle.position,</div>
+<div class="line">                                                  particle.direction);</div>
+<div class="line"> </div>
+<div class="line">      <span class="keyword">const</span> Vec3&amp; end_of_track_position = destination_info.pos_f;</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">//=============================== Make tally contribution</span></div>
+<div class="line">      ContributePWLDTally(cell,</div>
+<div class="line">                          particle.position,     <span class="comment">//positionA</span></div>
+<div class="line">                          end_of_track_position, <span class="comment">//positionB</span></div>
+<div class="line">                          particle.direction,    <span class="comment">//omega</span></div>
+<div class="line">                          particle.energy_group, <span class="comment">//g</span></div>
+<div class="line">                          particle.weight);      <span class="comment">//weight at A</span></div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">//=============================== Process cell transfer</span></div>
+<div class="line">      <span class="comment">//                                or death</span></div>
+<div class="line">      <span class="keywordflow">if</span> (not destination_info.particle_lost)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; f = destination_info.destination_face_index;</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; current_cell_face = cell.faces[f];</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (current_cell_face.has_neighbor)</div>
+<div class="line">          particle.cell_id = current_cell_face.neighbor_id;</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">          particle.alive = <span class="keyword">false</span>; <span class="comment">//Death at the boundary</span></div>
+<div class="line">      }</div>
+<div class="line">      <span class="keywordflow">else</span></div>
+<div class="line">      {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;particle&quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot; lost &quot;</span></div>
+<div class="line">                  &lt;&lt; particle.position.PrintStr() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; particle.direction.PrintStr() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; pA = particle.position;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; pB = end_of_track_position;</div>
+<div class="line">      particle.weight *= exp(-sigma_t*(pB-pA).Norm()); <span class="comment">//Attenuation</span></div>
+<div class="line">      particle.position = end_of_track_position;</div>
+<div class="line">    }<span class="comment">//while ray alive</span></div>
+<div class="line"> </div>
+<div class="line">  }<span class="comment">//for ray n</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Post process tallies</span></div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid.local_cells)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">//====================================== Compute mass matrix</span></div>
+<div class="line">    <span class="comment">//                                       and its inverse</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_mapping = sdm.GetCellMapping(cell);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; qp_data = cell_mapping.MakeVolumeQuadraturePointData();</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes = cell_mapping.NumNodes();</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a> M(num_nodes, <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>(num_nodes, 0.0));</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> qp : qp_data.QuadraturePointIndices())</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0; j&lt;num_nodes; ++j)</div>
+<div class="line">          M[i][j] += qp_data.ShapeValue(i,qp) * qp_data.ShapeValue(j, qp) *</div>
+<div class="line">                     qp_data.JxW(qp);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> M_inv = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a7d48371b6d078244114ce3d3053774d8">chi_math::Inverse</a>(M);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//====================================== Apply projection</span></div>
+<div class="line">    <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a> T(num_nodes, 0.0);</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m&lt;num_moments; ++m)</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g=0; g&lt;num_groups; ++g)</div>
+<div class="line">      {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="keyword">const</span> int64_t imap = sdm.MapDOFLocal(cell, i, phi_uk_man, m, g);</div>
+<div class="line">          T[i] = phi_tally[imap] / num_particles;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">auto</span> phi_uc = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aca338ae5af880df37376a94a8276ebb8">chi_math::MatMul</a>(M_inv, T);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="keyword">const</span> int64_t imap = sdm.MapDOFLocal(cell, i, phi_uk_man, m, g);</div>
+<div class="line">          phi_tally[imap] = phi_uc[i];</div>
+<div class="line">        }</div>
+<div class="line">      }<span class="comment">//for group g</span></div>
+<div class="line"> </div>
+<div class="line">  }<span class="comment">//for cell</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Create Field Functions</span></div>
+<div class="line">  std::vector&lt;std::shared_ptr&lt;chi_physics::FieldFunction2&gt;&gt; ff_list;</div>
+<div class="line"> </div>
+<div class="line">  ff_list.push_back(std::make_shared&lt;chi_physics::FieldFunction2&gt;(</div>
+<div class="line">    <span class="stringliteral">&quot;Phi&quot;</span>,                                           <span class="comment">//Text name</span></div>
+<div class="line">    sdm_ptr,                                         <span class="comment">//Spatial Discr.</span></div>
+<div class="line">    <a class="code hl_class" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a>,num_groups) <span class="comment">//Unknown</span></div>
+<div class="line">  ));</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Localize zeroth moment</span></div>
+<div class="line">  <span class="comment">//This routine extracts a single moment vector</span></div>
+<div class="line">  <span class="comment">//from the vector that contains multiple moments</span></div>
+<div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> m0_uk_man(</div>
+<div class="line">    {<a class="code hl_class" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a>,num_groups)});</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_m0_dofs = sdm.GetNumLocalDOFs(m0_uk_man);</div>
+<div class="line"> </div>
+<div class="line">  std::vector&lt;double&gt; m0_phi(num_m0_dofs, 0.0);</div>
+<div class="line"> </div>
+<div class="line">  sdm.CopyVectorWithUnknownScope(phi_tally,     <span class="comment">//from vector</span></div>
+<div class="line">                                 m0_phi,      <span class="comment">//to vector</span></div>
+<div class="line">                                 phi_uk_man,  <span class="comment">//from dof-structure</span></div>
+<div class="line">                                 0,           <span class="comment">//from unknown-id</span></div>
+<div class="line">                                 m0_uk_man,   <span class="comment">//to dof-structure</span></div>
+<div class="line">                                 0);          <span class="comment">//to unknown-id</span></div>
+<div class="line"> </div>
+<div class="line">  ff_list[0]-&gt;UpdateFieldVector(m0_phi);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//============================================= Update field function</span></div>
+<div class="line">  <a class="code hl_typedef" href="../../dd/d5e/classchi__physics_1_1_field_function2.html#abf0e1bf6c393973df6748e96c974c792">chi_physics::FieldFunction2::FFList</a> const_ff_list;</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; ff_ptr : ff_list)</div>
+<div class="line">    const_ff_list.push_back(ff_ptr);</div>
+<div class="line">  <a class="code hl_function" href="../../dd/d5e/classchi__physics_1_1_field_function2.html#a3b126394c9c54d12e32c5731840f35aa">chi_physics::FieldFunction2::ExportMultipleToVTK</a>(fname,</div>
+<div class="line">                                                   const_ff_list);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">}<span class="comment">//namespace chi_unit_sim_tests</span></div>
+<div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
+<div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
+<div class="ttc" id="achi__meshhandler_8h_html"><div class="ttname"><a href="../../df/d98/chi__meshhandler_8h.html">chi_meshhandler.h</a></div></div>
+<div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
+<div class="ttc" id="afieldfunction2_8h_html"><div class="ttname"><a href="../../d0/d97/fieldfunction2_8h.html">fieldfunction2.h</a></div></div>
+<div class="ttc" id="alegendrepoly_8h_html"><div class="ttname"><a href="../../d6/d81/legendrepoly_8h.html">legendrepoly.h</a></div></div>
+<div class="ttc" id="anamespacechi__lua_html_a90f1bf8db9dd03373ea54a140cd446fc"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a90f1bf8db9dd03373ea54a140cd446fc">chi_lua::chiSimTest93_RayTracing</a></div><div class="ttdeci">void chiSimTest93_RayTracing()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00025">lua_functions.c:25</a></div></div>
+<div class="ttc" id="apwl_8h_html"><div class="ttname"><a href="../../d4/d01/pwl_8h.html">pwl.h</a></div></div>
+<div class="ttc" id="arandom__number__generator_8h_html"><div class="ttname"><a href="../../d7/dbf/random__number__generator_8h.html">random_number_generator.h</a></div></div>
+<div class="ttc" id="araytracing_8h_html"><div class="ttname"><a href="../../d8/dc8/raytracing_8h.html">raytracing.h</a></div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

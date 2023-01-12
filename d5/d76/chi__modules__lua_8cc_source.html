@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: ChiModules/lua/chi_modules_lua.cc Source File</title>
+<title>Chi-Tech: modules/lua/chi_modules_lua.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -96,35 +103,39 @@ $(document).ready(function(){initNavTree('d5/d76/chi__modules__lua_8cc_source.ht
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/df4/ds__lua__utils_8h.html">CFEMDiffusion/lua/ds_lua_utils.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/dc6/ip__lua__utils_8h.html">DFEMDiffusion/lua/ip_lua_utils.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../d1/dd4/lbts__lua__utils_8h.html">LBSTransientSolver/lua/lbts_lua_utils.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d3/daa/namespacechi__modules_1_1lua__utils.html#adb891325c4839c8241782a8dbf9e6a80">   12</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/daa/namespacechi__modules_1_1lua__utils.html#adb891325c4839c8241782a8dbf9e6a80">chi_modules::lua_utils::RegisterLuaEntities</a>(lua_State *L)</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">lbs::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">diffusion_solver::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <a class="code hl_function" href="../../d0/d3d/namespacelbs__curvilinear_1_1lua__utils.html#add228c8536aeadc1197db8d2711e0181">lbs_curvilinear::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">lbs::k_eigenvalue_lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">lbs_adjoint::lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_function" href="../../dc/d79/namespacecfem__diffusion_1_1cfem__diffusion__lua__utils.html#a6958dc83897c7d2cd8fa9f32ad6f3734">cfem_diffusion::cfem_diffusion_lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_function" href="../../da/dda/namespacedfem__diffusion_1_1dfem__diffusion__lua__utils.html#abf7b1b030a459c716bca71a83a240ce1">dfem_diffusion::dfem_diffusion_lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_function" href="../../d6/d56/namespacelbs_1_1lbts__lua__utils.html#ac882780d3b5e437b75dfedc565c29536">lbs::lbts_lua_utils::RegisterLuaEntities</a>(L);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/d63/mgds__lua__utils_8h.html">MGDiffusion/lua/mgds_lua_utils.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d3/daa/namespacechi__modules_1_1lua__utils.html#adb891325c4839c8241782a8dbf9e6a80">   13</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/daa/namespacechi__modules_1_1lua__utils.html#adb891325c4839c8241782a8dbf9e6a80">chi_modules::lua_utils::RegisterLuaEntities</a>(lua_State *L)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">lbs::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">diffusion_solver::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_function" href="../../d0/d3d/namespacelbs__curvilinear_1_1lua__utils.html#add228c8536aeadc1197db8d2711e0181">lbs_curvilinear::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">lbs::k_eigenvalue_lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_function" href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">lbs_adjoint::lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_function" href="../../dc/d79/namespacecfem__diffusion_1_1cfem__diffusion__lua__utils.html#a6958dc83897c7d2cd8fa9f32ad6f3734">cfem_diffusion::cfem_diffusion_lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_function" href="../../da/dda/namespacedfem__diffusion_1_1dfem__diffusion__lua__utils.html#abf7b1b030a459c716bca71a83a240ce1">dfem_diffusion::dfem_diffusion_lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <a class="code hl_function" href="../../d6/d56/namespacelbs_1_1lbts__lua__utils.html#ac882780d3b5e437b75dfedc565c29536">lbs::lbts_lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <a class="code hl_function" href="../../d7/d50/namespacemg__diffusion_1_1mgd__lua__utils.html#a1ccb18198b6956c3dede615c9205c1bf">mg_diffusion::mgd_lua_utils::RegisterLuaEntities</a>(L);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
 <div class="ttc" id="achi__modules__lua_8h_html"><div class="ttname"><a href="../../d4/d1c/chi__modules__lua_8h.html">chi_modules_lua.h</a></div></div>
 <div class="ttc" id="ads__lua__utils_8h_html"><div class="ttname"><a href="../../d3/df4/ds__lua__utils_8h.html">ds_lua_utils.h</a></div></div>
 <div class="ttc" id="aip__lua__utils_8h_html"><div class="ttname"><a href="../../d6/dc6/ip__lua__utils_8h.html">ip_lua_utils.h</a></div></div>
 <div class="ttc" id="albs__curvilinear__solver__lua_8h_html"><div class="ttname"><a href="../../db/df7/lbs__curvilinear__solver__lua_8h.html">lbs_curvilinear_solver_lua.h</a></div></div>
 <div class="ttc" id="albts__lua__utils_8h_html"><div class="ttname"><a href="../../d1/dd4/lbts__lua__utils_8h.html">lbts_lua_utils.h</a></div></div>
+<div class="ttc" id="amgds__lua__utils_8h_html"><div class="ttname"><a href="../../d3/d63/mgds__lua__utils_8h.html">mgds_lua_utils.h</a></div></div>
 <div class="ttc" id="anamespacecfem__diffusion_1_1cfem__diffusion__lua__utils_html_a6958dc83897c7d2cd8fa9f32ad6f3734"><div class="ttname"><a href="../../dc/d79/namespacecfem__diffusion_1_1cfem__diffusion__lua__utils.html#a6958dc83897c7d2cd8fa9f32ad6f3734">cfem_diffusion::cfem_diffusion_lua_utils::RegisterLuaEntities</a></div><div class="ttdeci">void RegisterLuaEntities(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/ds__lua__utils_8cc_source.html#l00008">ds_lua_utils.cc:8</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1lua__utils_html_a76842e0291fdf3a226003daf22292cc9"><div class="ttname"><a href="../../d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9">chi_math::lua_utils::RegisterLuaEntities</a></div><div class="ttdeci">void RegisterLuaEntities(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d66/chi__math__lua_8cc_source.html#l00012">chi_math_lua.cc:12</a></div></div>
-<div class="ttc" id="anamespacechi__modules_1_1lua__utils_html_adb891325c4839c8241782a8dbf9e6a80"><div class="ttname"><a href="../../d3/daa/namespacechi__modules_1_1lua__utils.html#adb891325c4839c8241782a8dbf9e6a80">chi_modules::lua_utils::RegisterLuaEntities</a></div><div class="ttdeci">void RegisterLuaEntities(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d76/chi__modules__lua_8cc_source.html#l00012">chi_modules_lua.cc:12</a></div></div>
+<div class="ttc" id="anamespacechi__modules_1_1lua__utils_html_adb891325c4839c8241782a8dbf9e6a80"><div class="ttname"><a href="../../d3/daa/namespacechi__modules_1_1lua__utils.html#adb891325c4839c8241782a8dbf9e6a80">chi_modules::lua_utils::RegisterLuaEntities</a></div><div class="ttdeci">void RegisterLuaEntities(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d76/chi__modules__lua_8cc_source.html#l00013">chi_modules_lua.cc:13</a></div></div>
 <div class="ttc" id="anamespacedfem__diffusion_1_1dfem__diffusion__lua__utils_html_abf7b1b030a459c716bca71a83a240ce1"><div class="ttname"><a href="../../da/dda/namespacedfem__diffusion_1_1dfem__diffusion__lua__utils.html#abf7b1b030a459c716bca71a83a240ce1">dfem_diffusion::dfem_diffusion_lua_utils::RegisterLuaEntities</a></div><div class="ttdeci">void RegisterLuaEntities(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d55/ip__lua__utils_8cc_source.html#l00013">ip_lua_utils.cc:13</a></div></div>
 <div class="ttc" id="anamespacelbs_1_1lbts__lua__utils_html_ac882780d3b5e437b75dfedc565c29536"><div class="ttname"><a href="../../d6/d56/namespacelbs_1_1lbts__lua__utils.html#ac882780d3b5e437b75dfedc565c29536">lbs::lbts_lua_utils::RegisterLuaEntities</a></div><div class="ttdeci">void RegisterLuaEntities(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dce/lbts__lua__utils_8cc_source.html#l00019">lbts_lua_utils.cc:19</a></div></div>
 <div class="ttc" id="anamespacelbs__curvilinear_1_1lua__utils_html_add228c8536aeadc1197db8d2711e0181"><div class="ttname"><a href="../../d0/d3d/namespacelbs__curvilinear_1_1lua__utils.html#add228c8536aeadc1197db8d2711e0181">lbs_curvilinear::lua_utils::RegisterLuaEntities</a></div><div class="ttdeci">void RegisterLuaEntities(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/lbs__curvilinear__solver__lua_8cc_source.html#l00016">lbs_curvilinear_solver_lua.cc:16</a></div></div>
+<div class="ttc" id="anamespacemg__diffusion_1_1mgd__lua__utils_html_a1ccb18198b6956c3dede615c9205c1bf"><div class="ttname"><a href="../../d7/d50/namespacemg__diffusion_1_1mgd__lua__utils.html#a1ccb18198b6956c3dede615c9205c1bf">mg_diffusion::mgd_lua_utils::RegisterLuaEntities</a></div><div class="ttdeci">void RegisterLuaEntities(lua_State *L)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d6d/mgds__lua__utils_8cc_source.html#l00008">mgds_lua_utils.cc:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_6650a3b49e3ce036dc343a3bf3bf0561.html">ChiModules</a></li><li class="navelem"><a class="el" href="../../dir_7a59140fe197ac9fabad6f66bca0303a.html">lua</a></li><li class="navelem"><a class="el" href="../../d5/d76/chi__modules__lua_8cc.html">chi_modules_lua.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_e05d7e2b1ecd646af5bb94391405f3b5.html">modules</a></li><li class="navelem"><a class="el" href="../../dir_6d0e69a2425ff58d0e715b3d0c0d168d.html">lua</a></li><li class="navelem"><a class="el" href="../../d5/d76/chi__modules__lua_8cc.html">chi_modules_lua.cc</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

@@ -28,6 +28,7 @@ var hierarchy =
       [ "chi_diffusion::BoundaryRobin", "d6/d58/classchi__diffusion_1_1_boundary_robin.html", null ]
     ] ],
     [ "dfem_diffusion::Boundary", "dd/d4b/classdfem__diffusion_1_1_boundary.html", null ],
+    [ "mg_diffusion::Boundary", "d6/dea/classmg__diffusion_1_1_boundary.html", null ],
     [ "chi_mesh::sweep_management::BoundaryBase", "dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html", [
       [ "chi_mesh::sweep_management::BoundaryIncidentHeterogenous", "dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html", null ],
       [ "chi_mesh::sweep_management::BoundaryIncidentHomogenous", "d2/dbc/classchi__mesh_1_1sweep__management_1_1_boundary_incident_homogenous.html", null ],
@@ -110,6 +111,7 @@ var hierarchy =
     ] ],
     [ "chi_graph::DirectedGraph::VertexAccessor::iterator", "dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html", null ],
     [ "chi_mesh::LocalCellHandler::iterator", "d2/dd3/classchi__mesh_1_1_local_cell_handler_1_1iterator.html", null ],
+    [ "mg_diffusion::KSPAppContext", "dc/da1/structmg__diffusion_1_1_k_s_p_app_context.html", null ],
     [ "lbs::KSPDataContext", "d4/d4c/structlbs_1_1_k_s_p_data_context.html", null ],
     [ "lbs::LBSGroup", "d5/d86/classlbs_1_1_l_b_s_group.html", null ],
     [ "lbs::LBSGroupset", "d2/db6/classlbs_1_1_l_b_s_groupset.html", null ],
@@ -161,7 +163,8 @@ var hierarchy =
     ] ],
     [ "chi_math::QuadraturePointPhiTheta", "dc/d9c/structchi__math_1_1_quadrature_point_phi_theta.html", null ],
     [ "chi_math::RandomNumberGenerator", "d9/d55/classchi__math_1_1_random_number_generator.html", null ],
-    [ "chi_mesh::RayDestinationInfo", "d8/daa/structchi__mesh_1_1_ray_destination_info.html", null ],
+    [ "chi_mesh::RayTracer", "dd/d2a/classchi__mesh_1_1_ray_tracer.html", null ],
+    [ "chi_mesh::RayTracerOutputInformation", "da/d07/structchi__mesh_1_1_ray_tracer_output_information.html", null ],
     [ "chi_math::TensorRNX< R, N, NumberFormat >::RecursiveAccessor< R2 >", "d3/daa/structchi__math_1_1_tensor_r_n_x_1_1_recursive_accessor.html", null ],
     [ "chi_objects::ChiLog::RepeatingEvent", "da/d50/classchi__objects_1_1_chi_log_1_1_repeating_event.html", null ],
     [ "lbs_adjoint::ResponseFunctionDesignation", "d2/d7f/structlbs__adjoint_1_1_response_function_designation.html", null ],
@@ -182,7 +185,8 @@ var hierarchy =
         ] ],
         [ "lbs_adjoint::AdjointSolver", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html", null ],
         [ "lbs_curvilinear::Solver", "d9/df7/classlbs__curvilinear_1_1_solver.html", null ]
-      ] ]
+      ] ],
+      [ "mg_diffusion::Solver", "d4/d4c/classmg__diffusion_1_1_solver.html", null ]
     ] ],
     [ "chi_math::SparseMatrix", "de/d51/classchi__math_1_1_sparse_matrix.html", null ],
     [ "chi_math::SpatialDiscretization", "dd/d1d/classchi__math_1_1_spatial_discretization.html", [

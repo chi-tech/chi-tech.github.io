@@ -170,6 +170,7 @@ var namespacechi__math =
     [ "MatMul", "dc/d58/namespacechi__math.html#ad34c0e4295563d0781c2c2554efa32ba", null ],
     [ "MatSubtract", "dc/d58/namespacechi__math.html#ae761da46f19c127e896692be997edcad", null ],
     [ "NewtonIteration", "dc/d58/namespacechi__math.html#aa3184555bf41dd7fe3fd747a4d0f94ed", null ],
+    [ "OmegaToPhiThetaSafe", "dc/d58/namespacechi__math.html#a612087e73bf9b2cd09c6fad00f8e0d4e", null ],
     [ "operator+", "dc/d58/namespacechi__math.html#ac0f60ee03db29dec6023e1745fd44d0e", null ],
     [ "operator-", "dc/d58/namespacechi__math.html#a406bf1420d143fcb79ea57e1a3f8e1e5", null ],
     [ "PowerIteration", "dc/d58/namespacechi__math.html#a25e89fb89dad7be445fd6c0d746eef8f", null ],

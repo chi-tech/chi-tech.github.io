@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: ChiTech/ChiMesh/Raytrace/raytracing.h File Reference</title>
+<title>Chi-Tech: framework/ChiMesh/Raytrace/raytracing.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -96,7 +103,9 @@ $(document).ready(function(){initNavTree('d8/dc8/raytracing_8h.html','../../'); 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/daa/structchi__mesh_1_1_ray_destination_info.html">chi_mesh::RayDestinationInfo</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d07/structchi__mesh_1_1_ray_tracer_output_information.html">chi_mesh::RayTracerOutputInformation</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html">chi_mesh::RayTracer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -106,8 +115,6 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4e6ed100c5261474c337c9924aed7fcc"><td class="memItemLeft" align="right" valign="top">RayDestinationInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a4e6ed100c5261474c337c9924aed7fcc">chi_mesh::RayTrace</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const Cell &amp;cell, const Vector3 &amp;pos_i, const Vector3 &amp;omega_i, double &amp;d_to_surface, Vector3 &amp;pos_f, double epsilon_nudge=1.0e-8, double backward_tolerance=1.0e-10, double extension_distance=1.0e5, int func_depth=0)</td></tr>
-<tr class="separator:a4e6ed100c5261474c337c9924aed7fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a317ca996a6dc362595d62eb64a51f5a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a317ca996a6dc362595d62eb64a51f5a1">chi_mesh::CheckPlaneLineIntersect</a> (const <a class="el" href="../../d0/d81/namespacechi__mesh.html#a7e8ffeada9f9616fe9eef023a8533a7b">chi_mesh::Normal</a> &amp;plane_normal, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;plane_point, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point_0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point_1, <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;intersection_point, std::pair&lt; double, double &gt; *weights=nullptr)</td></tr>
 <tr class="separator:a317ca996a6dc362595d62eb64a51f5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61234ac926ea64ff8dbc55e30bf0c80c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a61234ac926ea64ff8dbc55e30bf0c80c">chi_mesh::CheckLineIntersectStrip</a> (const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;strip_point0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;strip_point1, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;strip_normal, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point1, <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;intersection_point, double *distance_to_intersection=nullptr)</td></tr>
@@ -118,15 +125,15 @@ Functions</h2></td></tr>
 <tr class="separator:a9014e7899a847b4e57ed756312896389"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ee0d007282f366dac49174e80b8a930"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a1ee0d007282f366dac49174e80b8a930">chi_mesh::CheckPlaneTetIntersect</a> (const <a class="el" href="../../d0/d81/namespacechi__mesh.html#a7e8ffeada9f9616fe9eef023a8533a7b">chi_mesh::Normal</a> &amp;plane_normal, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;plane_point, const std::vector&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt; &amp;tet_points)</td></tr>
 <tr class="separator:a1ee0d007282f366dac49174e80b8a930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd32dbf6362e6ac09c9a734a53b8ab25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#acd32dbf6362e6ac09c9a734a53b8ab25">chi_mesh::PopulateRaySegmentLengths</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const Cell &amp;cell, std::vector&lt; double &gt; &amp;segment_lengths, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point1, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;omega)</td></tr>
-<tr class="separator:acd32dbf6362e6ac09c9a734a53b8ab25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3caacec44d1cd2faa8c96cc0a1c96c50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50">chi_mesh::PopulateRaySegmentLengths</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const Cell &amp;cell, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point1, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;omega, std::vector&lt; double &gt; &amp;segment_lengths)</td></tr>
+<tr class="separator:a3caacec44d1cd2faa8c96cc0a1c96c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_881599471ceacbc6fd7f5107170a74cb.html">ChiTech</a></li><li class="navelem"><a class="el" href="../../dir_8547f55c5a95c1d7bb77b3036ec48497.html">ChiMesh</a></li><li class="navelem"><a class="el" href="../../dir_a05d78e6cb82e203511b6352b8b83639.html">Raytrace</a></li><li class="navelem"><a class="el" href="../../d8/dc8/raytracing_8h.html">raytracing.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_c96a5df0caba4cf0e1c155d2b2c84ff3.html">ChiMesh</a></li><li class="navelem"><a class="el" href="../../dir_8dd84c9d369d7f20eeb1367f0a8571c7.html">Raytrace</a></li><li class="navelem"><a class="el" href="../../d8/dc8/raytracing_8h.html">raytracing.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

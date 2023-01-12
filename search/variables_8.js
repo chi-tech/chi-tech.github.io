@@ -23,9 +23,9 @@ var searchData=
   ['intersection_5f2d_5fcentre_20',['intersection_2d_centre',['../dd/d9c/structchi__mesh_1_1_f_f_i_cell_intersection.html#a3581e002dda1ebc870b962fdd715d332',1,'chi_mesh::FFICellIntersection']]],
   ['intersection_5fcentre_21',['intersection_centre',['../dd/d9c/structchi__mesh_1_1_f_f_i_cell_intersection.html#ada067e623a8975cdefbec929e52d5af5',1,'chi_mesh::FFICellIntersection']]],
   ['intersections_22',['intersections',['../dd/d9c/structchi__mesh_1_1_f_f_i_cell_intersection.html#ae3a588026c37bb3cb5d4a5d14e07bb4c',1,'chi_mesh::FFICellIntersection']]],
-  ['inv_5fvelocity_23',['inv_velocity',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#ab67a89b924b3b5b65f1c7e46b391f1dc',1,'chi_physics::TransportCrossSections']]],
+  ['inv_5fvelocity_23',['inv_velocity',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a815b5e6b5abfd45729fd4ddbcfce14ff',1,'chi_physics::TransportCrossSections']]],
   ['invalidated_24',['invalidated',['../d4/dd2/structchi__mesh_1_1_face.html#a588e3ee10d692e7443d01781f1709190',1,'chi_mesh::Face::invalidated()'],['../d4/ddb/structchi__mesh_1_1_poly_face.html#adf7605298ff28ffc310ae008b078083b',1,'chi_mesh::PolyFace::invalidated()']]],
-  ['is_5ffissile_25',['is_fissile',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a8f15e8fbf655e5e66d3b85ef87a705ee',1,'chi_physics::TransportCrossSections']]],
+  ['is_5ffissionable_25',['is_fissionable',['../d3/dff/classchi__physics_1_1_transport_cross_sections.html#a478f2a9ecee63665b20608f44d08f05e',1,'chi_physics::TransportCrossSections']]],
   ['is_5fsetup_26',['is_setup',['../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#afdaf63f60ebeeec006dd6db98309358c',1,'chi_mesh::sweep_management::AngleAggregation']]],
   ['item_5fid_27',['item_id',['../d5/d51/structchi__mesh_1_1sweep__management_1_1_s_p_l_s.html#ab75e2c1f573bb103f822cfeb49521b4a',1,'chi_mesh::sweep_management::SPLS::item_id()'],['../df/dda/structchi__mesh_1_1sweep__management_1_1_s_t_d_g.html#a055bffff6169daf8823f52adc78e46d8',1,'chi_mesh::sweep_management::STDG::item_id()']]],
   ['iterative_5fmethod_28',['iterative_method',['../d2/db6/classlbs_1_1_l_b_s_groupset.html#af5bd3aaaad9a9d8c399f3605ad1f7ae7',1,'lbs::LBSGroupset']]]

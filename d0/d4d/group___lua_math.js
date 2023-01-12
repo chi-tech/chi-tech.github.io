@@ -1,7 +1,7 @@
 var group___lua_math =
 [
     [ "Quadrature rules", "de/d37/group___lua_quadrature.html", "de/d37/group___lua_quadrature" ],
-    [ "chi_lua::chiLegendre", "d0/d4d/group___lua_math.html#ga4106dfb07e7c351ca0d4b113f9c4fcbb", null ],
-    [ "chi_lua::chiLegendreDerivative", "d0/d4d/group___lua_math.html#ga067c5640a991493f710fb9afe4422704", null ],
-    [ "chi_lua::chiYlm", "d0/d4d/group___lua_math.html#ga8cb0fae654b617fde41e8bdc849a1f9f", null ]
+    [ "chi_lua::chiLegendre", "d0/d4d/group___lua_math.html#ga03c22b6e760970c8b5e054481355109e", null ],
+    [ "chi_lua::chiLegendreDerivative", "d0/d4d/group___lua_math.html#ga917237b9bb358474af7f938e3c7ed2ac", null ],
+    [ "chi_lua::chiYlm", "d0/d4d/group___lua_math.html#ga1266ad6fd8ac5ff3828c2dbc258d28bd", null ]
 ];

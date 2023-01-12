@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -320,8 +327,6 @@ Data Fields</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classlbs_1_1_steady_solver"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classlbs_1_1_steady_solver')"><img src="../../closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html">lbs::SteadySolver</a></td></tr>
-<tr class="memitem:a6e51804cad05dc742bba15c0957b6ba9 inherit pub_static_methods_classlbs_1_1_steady_solver"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a6e51804cad05dc742bba15c0957b6ba9">CheckPointInsideCell</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid_ref, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;point)</td></tr>
-<tr class="separator:a6e51804cad05dc742bba15c0957b6ba9 inherit pub_static_methods_classlbs_1_1_steady_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fbd2307b558544c0bb399ef03c6a093 inherit pub_static_methods_classlbs_1_1_steady_solver"><td class="memItemLeft" align="right" valign="top">static std::pair&lt; <a class="el" href="../../d9/d42/namespacelbs.html#aee2e09cc47baec60805b625cc87351d5">UniqueSOGroupings</a>, <a class="el" href="../../d9/d42/namespacelbs.html#a9db37f34e0e653f8feada39ab7b8d394">DirIDToSOMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a2fbd2307b558544c0bb399ef03c6a093">AssociateSOsAndDirections</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;<a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ad88fe47c7b27dfd9b9b148f634e41c96">grid</a>, const <a class="el" href="../../d8/dd9/classchi__math_1_1_angular_quadrature.html">chi_math::AngularQuadrature</a> &amp;quadrature, <a class="el" href="../../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ad">AngleAggregationType</a> agg_type, <a class="el" href="../../d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83">lbs::GeometryType</a> lbs_geo_type)</td></tr>
 <tr class="separator:a2fbd2307b558544c0bb399ef03c6a093 inherit pub_static_methods_classlbs_1_1_steady_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32a087fbc2b8adec6a9bc98f3ede7768 inherit pub_static_methods_classlbs_1_1_steady_solver"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a32a087fbc2b8adec6a9bc98f3ede7768">CleanUpWGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
@@ -524,9 +529,9 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>ChiModules/LBKEigenvalueSolver/<a class="el" href="../../d5/d64/lbkes__k__eigenvalue__solver_8h_source.html">lbkes_k_eigenvalue_solver.h</a></li>
-<li>ChiModules/LBKEigenvalueSolver/IterativeMethods/<a class="el" href="../../dd/d40/lbkes__power__iteration_8cc_source.html">lbkes_power_iteration.cc</a></li>
-<li>ChiModules/LBKEigenvalueSolver/<a class="el" href="../../d4/de7/lbkes__main__execute_8cc_source.html">lbkes_main_execute.cc</a></li>
+<li>modules/LBKEigenvalueSolver/<a class="el" href="../../d5/d64/lbkes__k__eigenvalue__solver_8h_source.html">lbkes_k_eigenvalue_solver.h</a></li>
+<li>modules/LBKEigenvalueSolver/IterativeMethods/<a class="el" href="../../dd/d40/lbkes__power__iteration_8cc_source.html">lbkes_power_iteration.cc</a></li>
+<li>modules/LBKEigenvalueSolver/<a class="el" href="../../d4/de7/lbkes__main__execute_8cc_source.html">lbkes_main_execute.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

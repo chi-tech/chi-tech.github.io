@@ -5,7 +5,7 @@ var searchData=
   ['basicoptions_2',['BasicOptions',['../d1/d7c/classchi__physics_1_1_basic_options.html',1,'chi_physics']]],
   ['bool_5fpack_3',['bool_pack',['../d3/d9e/structchi__data__types_1_1_n_d_array_1_1bool__pack.html',1,'chi_data_types::NDArray']]],
   ['booleanlogicalvolume_4',['BooleanLogicalVolume',['../da/dca/classchi__mesh_1_1_boolean_logical_volume.html',1,'chi_mesh']]],
-  ['boundary_5',['Boundary',['../d6/dc1/classcfem__diffusion_1_1_boundary.html',1,'cfem_diffusion::Boundary'],['../d7/dae/classchi__diffusion_1_1_boundary.html',1,'chi_diffusion::Boundary'],['../dd/d4b/classdfem__diffusion_1_1_boundary.html',1,'dfem_diffusion::Boundary']]],
+  ['boundary_5',['Boundary',['../d6/dc1/classcfem__diffusion_1_1_boundary.html',1,'cfem_diffusion::Boundary'],['../d7/dae/classchi__diffusion_1_1_boundary.html',1,'chi_diffusion::Boundary'],['../dd/d4b/classdfem__diffusion_1_1_boundary.html',1,'dfem_diffusion::Boundary'],['../d6/dea/classmg__diffusion_1_1_boundary.html',1,'mg_diffusion::Boundary']]],
   ['boundarybase_6',['BoundaryBase',['../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html',1,'chi_mesh::sweep_management']]],
   ['boundarycondition_7',['BoundaryCondition',['../d5/df7/structlbs_1_1acceleration_1_1_boundary_condition.html',1,'lbs::acceleration']]],
   ['boundarydirichlet_8',['BoundaryDirichlet',['../de/d2e/classchi__diffusion_1_1_boundary_dirichlet.html',1,'chi_diffusion']]],

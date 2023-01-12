@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -140,7 +147,9 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html">PolyFace</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/daa/structchi__mesh_1_1_ray_destination_info.html">RayDestinationInfo</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html">RayTracer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d07/structchi__mesh_1_1_ray_tracer_output_information.html">RayTracerOutputInformation</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html">RCCLogicalVolume</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -273,8 +282,6 @@ Functions</h2></td></tr>
 <tr class="separator:af2a8c29a2bf6594288f308cc6e68b443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8be2fe2792a86ed2e10d14229beedb5d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a8be2fe2792a86ed2e10d14229beedb5d">CreateUnpartitioned3DOrthoMesh</a> (std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y, std::vector&lt; double &gt; &amp;vertices_1d_z)</td></tr>
 <tr class="separator:a8be2fe2792a86ed2e10d14229beedb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e6ed100c5261474c337c9924aed7fcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/daa/structchi__mesh_1_1_ray_destination_info.html">RayDestinationInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a4e6ed100c5261474c337c9924aed7fcc">RayTrace</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">Cell</a> &amp;cell, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">Vector3</a> &amp;pos_i, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">Vector3</a> &amp;omega_i, double &amp;d_to_surface, <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">Vector3</a> &amp;pos_f, double epsilon_nudge=1.0e-8, double backward_tolerance=1.0e-10, double extension_distance=1.0e5, int func_depth=0)</td></tr>
-<tr class="separator:a4e6ed100c5261474c337c9924aed7fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a317ca996a6dc362595d62eb64a51f5a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a317ca996a6dc362595d62eb64a51f5a1">CheckPlaneLineIntersect</a> (const <a class="el" href="../../d0/d81/namespacechi__mesh.html#a7e8ffeada9f9616fe9eef023a8533a7b">chi_mesh::Normal</a> &amp;plane_normal, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;plane_point, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point_0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point_1, <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;intersection_point, std::pair&lt; double, double &gt; *weights=nullptr)</td></tr>
 <tr class="separator:a317ca996a6dc362595d62eb64a51f5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61234ac926ea64ff8dbc55e30bf0c80c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a61234ac926ea64ff8dbc55e30bf0c80c">CheckLineIntersectStrip</a> (const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;strip_point0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;strip_point1, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;strip_normal, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point1, <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;intersection_point, double *distance_to_intersection=nullptr)</td></tr>
@@ -285,8 +292,8 @@ Functions</h2></td></tr>
 <tr class="separator:a9014e7899a847b4e57ed756312896389"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ee0d007282f366dac49174e80b8a930"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a1ee0d007282f366dac49174e80b8a930">CheckPlaneTetIntersect</a> (const <a class="el" href="../../d0/d81/namespacechi__mesh.html#a7e8ffeada9f9616fe9eef023a8533a7b">chi_mesh::Normal</a> &amp;plane_normal, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;plane_point, const std::vector&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt; &amp;tet_points)</td></tr>
 <tr class="separator:a1ee0d007282f366dac49174e80b8a930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd32dbf6362e6ac09c9a734a53b8ab25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#acd32dbf6362e6ac09c9a734a53b8ab25">PopulateRaySegmentLengths</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">Cell</a> &amp;cell, std::vector&lt; double &gt; &amp;segment_lengths, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point1, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;omega)</td></tr>
-<tr class="separator:acd32dbf6362e6ac09c9a734a53b8ab25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3caacec44d1cd2faa8c96cc0a1c96c50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50">PopulateRaySegmentLengths</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">Cell</a> &amp;cell, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point1, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;omega, std::vector&lt; double &gt; &amp;segment_lengths)</td></tr>
+<tr class="separator:a3caacec44d1cd2faa8c96cc0a1c96c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h1>Namespace for all meshing features</h1>
@@ -994,7 +1001,7 @@ Functions</h2></td></tr>
 <div class="line">std::vector&lt;chi_mesh::Vertex&gt; vertices_y = {0.0,1.0,2.0};</div>
 <div class="line"><a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#af2a8c29a2bf6594288f308cc6e68b443">chi_mesh::CreateUnpartitioned2DOrthoMesh</a>(vertices_x,vertices_y);</div>
 <div class="ttc" id="anamespacechi__mesh_html_af2a8c29a2bf6594288f308cc6e68b443"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#af2a8c29a2bf6594288f308cc6e68b443">chi_mesh::CreateUnpartitioned2DOrthoMesh</a></div><div class="ttdeci">size_t CreateUnpartitioned2DOrthoMesh(std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/daa/mesh__orthomacros__02__unpartitioned_8cc_source.html#l00091">mesh_orthomacros_02_unpartitioned.cc:91</a></div></div>
-</div><!-- fragment --><p >This code will create a 2x2 mesh with <img class="formulaInl" alt="$ \vec{x} \in [0,2]^2 $" src="../../form_86.png" width="65" height="18"/>. </p>
+</div><!-- fragment --><p >This code will create a 2x2 mesh with \( \vec{x} \in [0,2]^2 \). </p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/daa/mesh__orthomacros__02__unpartitioned_8cc_source.html#l00091">91</a> of file <a class="el" href="../../dd/daa/mesh__orthomacros__02__unpartitioned_8cc_source.html">mesh_orthomacros_02_unpartitioned.cc</a>.</p>
 
@@ -1036,7 +1043,7 @@ Functions</h2></td></tr>
 <div class="line">std::vector&lt;chi_mesh::Vertex&gt; vertices_z = {0.0,1.0,2.0};</div>
 <div class="line"><a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a8be2fe2792a86ed2e10d14229beedb5d">chi_mesh::CreateUnpartitioned3DOrthoMesh</a>(vertices_x,vertices_y,vertices_z);</div>
 <div class="ttc" id="anamespacechi__mesh_html_a8be2fe2792a86ed2e10d14229beedb5d"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a8be2fe2792a86ed2e10d14229beedb5d">chi_mesh::CreateUnpartitioned3DOrthoMesh</a></div><div class="ttdeci">size_t CreateUnpartitioned3DOrthoMesh(std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y, std::vector&lt; double &gt; &amp;vertices_1d_z)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/daa/mesh__orthomacros__02__unpartitioned_8cc_source.html#l00188">mesh_orthomacros_02_unpartitioned.cc:188</a></div></div>
-</div><!-- fragment --><p >This code will create a 2x2 mesh with <img class="formulaInl" alt="$ \vec{x} \in [0,2]^2 $" src="../../form_86.png" width="65" height="18"/>. </p>
+</div><!-- fragment --><p >This code will create a 2x2 mesh with \( \vec{x} \in [0,2]^2 \). </p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/daa/mesh__orthomacros__02__unpartitioned_8cc_source.html#l00188">188</a> of file <a class="el" href="../../dd/daa/mesh__orthomacros__02__unpartitioned_8cc_source.html">mesh_orthomacros_02_unpartitioned.cc</a>.</p>
 
@@ -1138,8 +1145,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acd32dbf6362e6ac09c9a734a53b8ab25" name="acd32dbf6362e6ac09c9a734a53b8ab25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd32dbf6362e6ac09c9a734a53b8ab25">&#9670;&nbsp;</a></span>PopulateRaySegmentLengths()</h2>
+<a id="a3caacec44d1cd2faa8c96cc0a1c96c50" name="a3caacec44d1cd2faa8c96cc0a1c96c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3caacec44d1cd2faa8c96cc0a1c96c50">&#9670;&nbsp;</a></span>PopulateRaySegmentLengths()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1159,12 +1166,6 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>segment_lengths</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;&#160;</td>
           <td class="paramname"><em>line_point0</em>, </td>
         </tr>
@@ -1178,7 +1179,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>omega</em>&#160;</td>
+          <td class="paramname"><em>omega</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>segment_lengths</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1187,7 +1194,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Populates segment lengths along a ray. </p>
+<p >Populates segment lengths along a ray. Sorted along the direction. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d56/raytrace__utils_8cc_source.html#l00252">252</a> of file <a class="el" href="../../d6/d56/raytrace__utils_8cc_source.html">raytrace_utils.cc</a>.</p>
 
@@ -1210,100 +1217,6 @@ Functions</h2></td></tr>
 <p >Adds a new mesh handler to the stack, sets it as the current handler and returns a handle to it. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00025">25</a> of file <a class="el" href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html">chi_mesh_meshhandler_utils.cc</a>.</p>
-
-</div>
-</div>
-<a id="a4e6ed100c5261474c337c9924aed7fcc" name="a4e6ed100c5261474c337c9924aed7fcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e6ed100c5261474c337c9924aed7fcc">&#9670;&nbsp;</a></span>RayTrace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d8/daa/structchi__mesh_1_1_ray_destination_info.html">chi_mesh::RayDestinationInfo</a> chi_mesh::RayTrace </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td>
-          <td class="paramname"><em>grid</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">Cell</a> &amp;&#160;</td>
-          <td class="paramname"><em>cell</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos_i</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>omega_i</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>d_to_surface</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos_f</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>epsilon_nudge</em> = <code>1.0e-8</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>backward_tolerance</em> = <code>1.0e-10</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>extension_distance</em> = <code>1.0e5</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>func_depth</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Performs raytracing on <a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a> type cells. This algorithm essentially looks for intersections with planes, strips or triangles.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">grid</td><td>Reference to the grid on which the specific cell resides. </td></tr>
-    <tr><td class="paramname">cell</td><td>A pointer to the cell base. </td></tr>
-    <tr><td class="paramname">pos_i</td><td>The initial position of the ray. </td></tr>
-    <tr><td class="paramname">omega_i</td><td>The direction of the ray. </td></tr>
-    <tr><td class="paramname">d_to_surface</td><td>A reference to a variable that will receive the distance to the surface. </td></tr>
-    <tr><td class="paramname">pos_f</td><td>A reference to the vector to receive the final position. </td></tr>
-    <tr><td class="paramname">epsilon_nudge</td><td>Scale to use for nudging. </td></tr>
-    <tr><td class="paramname">backward_tolerance</td><td>Tolerance for assessing backward travelling particles. </td></tr>
-    <tr><td class="paramname">extension_distance</td><td>Distance to extend lines when using lines-based algorithms. </td></tr>
-    <tr><td class="paramname">func_depth</td><td>Depth of function. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d12/raytrace_8cc_source.html#l00027">27</a> of file <a class="el" href="../../d1/d12/raytrace_8cc_source.html">raytrace.cc</a>.</p>
 
 </div>
 </div>

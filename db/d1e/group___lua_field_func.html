@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -91,14 +98,14 @@ $(document).ready(function(){initNavTree('db/d1e/group___lua_field_func.html','.
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac7a71f71da70bbba70d0270322eef322"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#gac7a71f71da70bbba70d0270322eef322">chi_lua::chiExportFieldFunctionToVTK</a> (int FFHandle, char BaseName)</td></tr>
-<tr class="separator:gac7a71f71da70bbba70d0270322eef322"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabfedbb5b8f4915f00936e0fdbcbe28ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#gabfedbb5b8f4915f00936e0fdbcbe28ba">chi_lua::chiExportFieldFunctionToVTKG</a> (int FFHandle, char BaseName)</td></tr>
-<tr class="separator:gabfedbb5b8f4915f00936e0fdbcbe28ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae1147cc75498624261e9bb742bfac9d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#gae1147cc75498624261e9bb742bfac9d8">chi_lua::chiExportMultiFieldFunctionToVTK</a> (table listFFHandles, char BaseName)</td></tr>
-<tr class="separator:gae1147cc75498624261e9bb742bfac9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga99b2ec97796abf7106826da022aa0470"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#ga99b2ec97796abf7106826da022aa0470">chi_lua::chiGetFieldFunctionHandleByName</a> (string FFname)</td></tr>
-<tr class="separator:ga99b2ec97796abf7106826da022aa0470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade62e412808353858dbd1a655127ae2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#gade62e412808353858dbd1a655127ae2e">chi_lua::chiExportFieldFunctionToVTK</a> (int FFHandle, char BaseName)</td></tr>
+<tr class="separator:gade62e412808353858dbd1a655127ae2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2139f33f4da0a1b74a83ecca680f0c28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#ga2139f33f4da0a1b74a83ecca680f0c28">chi_lua::chiExportFieldFunctionToVTKG</a> (int FFHandle, char BaseName)</td></tr>
+<tr class="separator:ga2139f33f4da0a1b74a83ecca680f0c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab044ed9b1310ab95d5af2266a87869d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#gab044ed9b1310ab95d5af2266a87869d3">chi_lua::chiExportMultiFieldFunctionToVTK</a> (<a class="el" href="../../d8/dd9/namespacechi__lua.html#a89d1648649a9670c6e2dcc775111381f">table</a> listFFHandles, char BaseName)</td></tr>
+<tr class="separator:gab044ed9b1310ab95d5af2266a87869d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa98bc59e0c79ae51d0a3337da4311cf2"><td class="memItemLeft" align="right" valign="top">handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1e/group___lua_field_func.html#gaa98bc59e0c79ae51d0a3337da4311cf2">chi_lua::chiGetFieldFunctionHandleByName</a> (string FFname)</td></tr>
+<tr class="separator:gaa98bc59e0c79ae51d0a3337da4311cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >The concept of a field function is a mature concept in Hydrodynamic simulation codes such as StarCCM+ and OpenFOAM. So what is it?</p>
@@ -108,14 +115,14 @@ Functions</h2></td></tr>
 <p >In the most basic sense a field function is the values of a field as a function of space and time. This can be as simple as cell average values located at cell centroids. Such a simple case would be a field function that is defined by a set of delta functions, therefore the field is only defined at those specific values via its associated grid (mesh). In practice however the cell average values will have do be constant on an entire cell and any position within a given cell should give this value. Hence the association with a discretization method. Given a grid and a discretization method the value of a field function can be obtained without the need to know any information of where that value is stored or from which physics solver this value was populated.</p>
 <p >This concept will be developed further. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gac7a71f71da70bbba70d0270322eef322" name="gac7a71f71da70bbba70d0270322eef322"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac7a71f71da70bbba70d0270322eef322">&#9670;&nbsp;</a></span>chiExportFieldFunctionToVTK()</h2>
+<a id="gade62e412808353858dbd1a655127ae2e" name="gade62e412808353858dbd1a655127ae2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade62e412808353858dbd1a655127ae2e">&#9670;&nbsp;</a></span>chiExportFieldFunctionToVTK()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_lua::chiExportFieldFunctionToVTK </td>
+          <td class="memname">void chi_lua::chiExportFieldFunctionToVTK </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>FFHandle</em>, </td>
@@ -143,18 +150,18 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01210">1210</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00097">97</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
-<a id="gabfedbb5b8f4915f00936e0fdbcbe28ba" name="gabfedbb5b8f4915f00936e0fdbcbe28ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabfedbb5b8f4915f00936e0fdbcbe28ba">&#9670;&nbsp;</a></span>chiExportFieldFunctionToVTKG()</h2>
+<a id="ga2139f33f4da0a1b74a83ecca680f0c28" name="ga2139f33f4da0a1b74a83ecca680f0c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2139f33f4da0a1b74a83ecca680f0c28">&#9670;&nbsp;</a></span>chiExportFieldFunctionToVTKG()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_lua::chiExportFieldFunctionToVTKG </td>
+          <td class="memname">void chi_lua::chiExportFieldFunctionToVTKG </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>FFHandle</em>, </td>
@@ -182,20 +189,20 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01218">1218</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00105">105</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
-<a id="gae1147cc75498624261e9bb742bfac9d8" name="gae1147cc75498624261e9bb742bfac9d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae1147cc75498624261e9bb742bfac9d8">&#9670;&nbsp;</a></span>chiExportMultiFieldFunctionToVTK()</h2>
+<a id="gab044ed9b1310ab95d5af2266a87869d3" name="gab044ed9b1310ab95d5af2266a87869d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab044ed9b1310ab95d5af2266a87869d3">&#9670;&nbsp;</a></span>chiExportMultiFieldFunctionToVTK()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_lua::chiExportMultiFieldFunctionToVTK </td>
+          <td class="memname">void chi_lua::chiExportMultiFieldFunctionToVTK </td>
           <td>(</td>
-          <td class="paramtype">table&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d8/dd9/namespacechi__lua.html#a89d1648649a9670c6e2dcc775111381f">table</a>&#160;</td>
           <td class="paramname"><em>listFFHandles</em>, </td>
         </tr>
         <tr>
@@ -223,18 +230,18 @@ Functions</h2></td></tr>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01226">1226</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00113">113</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
-<a id="ga99b2ec97796abf7106826da022aa0470" name="ga99b2ec97796abf7106826da022aa0470"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga99b2ec97796abf7106826da022aa0470">&#9670;&nbsp;</a></span>chiGetFieldFunctionHandleByName()</h2>
+<a id="gaa98bc59e0c79ae51d0a3337da4311cf2" name="gaa98bc59e0c79ae51d0a3337da4311cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa98bc59e0c79ae51d0a3337da4311cf2">&#9670;&nbsp;</a></span>chiGetFieldFunctionHandleByName()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_lua::chiGetFieldFunctionHandleByName </td>
+          <td class="memname">handle chi_lua::chiGetFieldFunctionHandleByName </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>FFname</em></td><td>)</td>
@@ -244,13 +251,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets a field-function handle by name. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">FFname</td><td>string Name of the field function. </td></tr>
+    <tr><td class="paramname">FFname</td><td>string Name of the field function.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>handle If the field-function was found and a handle identified the valid handle will be returned (i.e., a natural number &gt;= 0). If the field-function by the given name was not found then the function will return null. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01241">1241</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00131">131</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

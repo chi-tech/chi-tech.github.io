@@ -15,10 +15,11 @@ var searchData=
   ['krylov_5frichardson_5fcycles_12',['KRYLOV_RICHARDSON_CYCLES',['../d9/d42/namespacelbs.html#a74e6ab7d8963411bcda1c642e3098508a2ee099096fc9c424211becd59624a133',1,'lbs']]],
   ['ksp_13',['ksp',['../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88',1,'chi_math::PETScUtils::PETScSolverSetup::ksp()'],['../d6/d32/classchi__diffusion_1_1_solver.html#af641af815549ee181e932a903d9cd420',1,'chi_diffusion::Solver::ksp()']]],
   ['ksp_5fdata_5fcontext_2eh_14',['ksp_data_context.h',['../d8/d96/ksp__data__context_8h.html',1,'']]],
-  ['kspconvergencetest_15',['KSPConvergenceTest',['../d9/d42/namespacelbs.html#adea6d40254c3f96dd65e273cda5fb5cd',1,'lbs']]],
-  ['kspconvergencetestnpt_16',['KSPConvergenceTestNPT',['../d9/d42/namespacelbs.html#a6ad72e261b3e4b5ca9d2dc290c7f9917',1,'lbs']]],
-  ['kspdatacontext_17',['KSPDataContext',['../d4/d4c/structlbs_1_1_k_s_p_data_context.html#acb6e1850dafa4390274bb99cfd225e5e',1,'lbs::KSPDataContext::KSPDataContext()'],['../d4/d4c/structlbs_1_1_k_s_p_data_context.html',1,'lbs::KSPDataContext']]],
-  ['kspmonitor_5fnpt_2ecc_18',['kspmonitor_npt.cc',['../d3/d99/kspmonitor__npt_8cc.html',1,'']]],
-  ['kspmonitor_5fnpt_2eh_19',['kspmonitor_npt.h',['../d1/d5d/kspmonitor__npt_8h.html',1,'']]],
-  ['kspmonitorachitech_20',['KSPMonitorAChiTech',['../de/d73/namespacechi__diffusion.html#a635822a5015ed1d1d9adf91dc95fcc4d',1,'chi_diffusion']]]
+  ['kspappcontext_15',['KSPAppContext',['../dc/da1/structmg__diffusion_1_1_k_s_p_app_context.html',1,'mg_diffusion']]],
+  ['kspconvergencetest_16',['KSPConvergenceTest',['../d9/d42/namespacelbs.html#adea6d40254c3f96dd65e273cda5fb5cd',1,'lbs']]],
+  ['kspconvergencetestnpt_17',['KSPConvergenceTestNPT',['../d9/d42/namespacelbs.html#a6ad72e261b3e4b5ca9d2dc290c7f9917',1,'lbs']]],
+  ['kspdatacontext_18',['KSPDataContext',['../d4/d4c/structlbs_1_1_k_s_p_data_context.html#acb6e1850dafa4390274bb99cfd225e5e',1,'lbs::KSPDataContext::KSPDataContext()'],['../d4/d4c/structlbs_1_1_k_s_p_data_context.html',1,'lbs::KSPDataContext']]],
+  ['kspmonitor_5fnpt_2ecc_19',['kspmonitor_npt.cc',['../d3/d99/kspmonitor__npt_8cc.html',1,'']]],
+  ['kspmonitor_5fnpt_2eh_20',['kspmonitor_npt.h',['../d1/d5d/kspmonitor__npt_8h.html',1,'']]],
+  ['kspmonitorachitech_21',['KSPMonitorAChiTech',['../de/d73/namespacechi__diffusion.html#a635822a5015ed1d1d9adf91dc95fcc4d',1,'chi_diffusion']]]
 ];

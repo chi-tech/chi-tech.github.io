@@ -1,0 +1,25 @@
+var structchi__physics_1_1_x_s_data =
+[
+    [ "GrpVal", "dc/d81/structchi__physics_1_1_x_s_data.html#a7000298ab6b8e7837f11ca95cde7739e", null ],
+    [ "PrecursorVal", "dc/d81/structchi__physics_1_1_x_s_data.html#abdad1c197e35fc1ae75f31caa7262c34", null ],
+    [ "chi", "dc/d81/structchi__physics_1_1_x_s_data.html#ad8de76d577290317f5a5b7f275b24884", null ],
+    [ "chi_delayed", "dc/d81/structchi__physics_1_1_x_s_data.html#a7e82ec2059c736e2fc7577e335ba40e9", null ],
+    [ "chi_prompt", "dc/d81/structchi__physics_1_1_x_s_data.html#a8897dd3333ccb7bfe960f7e0d1a2a047", null ],
+    [ "inv_velocity", "dc/d81/structchi__physics_1_1_x_s_data.html#a16cb528addd9d1384e7e302bfaccf61a", null ],
+    [ "is_fissile", "dc/d81/structchi__physics_1_1_x_s_data.html#ac5946990efbbbdb37c88185dc0f03973", null ],
+    [ "nu", "dc/d81/structchi__physics_1_1_x_s_data.html#ac3f88750950f809c0756e6b086c9df48", null ],
+    [ "nu_delayed", "dc/d81/structchi__physics_1_1_x_s_data.html#a478a4c54d7510f5460e710214123d702", null ],
+    [ "nu_delayed_sigma_f", "dc/d81/structchi__physics_1_1_x_s_data.html#a2b0699bf60e12db10a81cc7e8d994eb9", null ],
+    [ "nu_prompt", "dc/d81/structchi__physics_1_1_x_s_data.html#ac3c71361bd506f248b9b2b8322cd9042", null ],
+    [ "nu_prompt_sigma_f", "dc/d81/structchi__physics_1_1_x_s_data.html#a13f364abf9b342ffdf9b3764b9f3b5d5", null ],
+    [ "nu_sigma_f", "dc/d81/structchi__physics_1_1_x_s_data.html#a3255907f51ed75d578d0144a684d7dfd", null ],
+    [ "num_groups", "dc/d81/structchi__physics_1_1_x_s_data.html#aeea4c70881509ebddaef3e38d053df45", null ],
+    [ "num_precursors", "dc/d81/structchi__physics_1_1_x_s_data.html#a3eb0a062be9bb47fe18f49a4a9680ee9", null ],
+    [ "precursor_lambda", "dc/d81/structchi__physics_1_1_x_s_data.html#a140ae727375ed84d2f9e1f64d187d580", null ],
+    [ "precursor_yield", "dc/d81/structchi__physics_1_1_x_s_data.html#a5008485833db0dca1446915a925442da", null ],
+    [ "scattering_order", "dc/d81/structchi__physics_1_1_x_s_data.html#a1dd7519fe827036a81489e5461bc7e7a", null ],
+    [ "sigma_a", "dc/d81/structchi__physics_1_1_x_s_data.html#afd90875278691114558f600629279d35", null ],
+    [ "sigma_f", "dc/d81/structchi__physics_1_1_x_s_data.html#ad08ed1ba368efae8b1c53d1f2dfbb771", null ],
+    [ "sigma_t", "dc/d81/structchi__physics_1_1_x_s_data.html#a8091a8755e955528ceb13b13f2ac570c", null ],
+    [ "transfer_matrices", "dc/d81/structchi__physics_1_1_x_s_data.html#a9d0462be2dae96240de8f2128bdf4bb5", null ]
+];

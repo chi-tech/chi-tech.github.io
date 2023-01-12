@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -87,15 +94,15 @@ $(document).ready(function(){initNavTree('dd/d10/_mesh_tutorial_02.html','../../
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h3>Again ... it doesn't get simpler than this</h3>
-<p >Simply define the x- and y-nodes each in a lua table as shown below and call the function chiMeshCreate2DOrthoMesh(). As per usual, a mesh-handler needs to be created through <a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate()</a> and the whole process is concluded with a call to <a class="el" href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chiVolumeMesherExecute()</a>.</p>
-<div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div>
+<p >Simply define the x- and y-nodes each in a lua table as shown below and call the function chiMeshCreate2DOrthoMesh(). As per usual, a mesh-handler needs to be created through <a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chiMeshHandlerCreate()</a> and the whole process is concluded with a call to <a class="el" href="../../d4/d3a/group___lua_volume_mesher.html#gad031f7f22f9a1b4d7ea535f04c56ae1f">chiVolumeMesherExecute()</a>.</p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chiMeshHandlerCreate</a>()</div>
 <div class="line">nodesx={0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0}</div>
 <div class="line">nodesy={0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0}</div>
-<div class="line"><a class="code hl_function" href="../../d9/db8/group___lua_mesh_macros.html#ga8a8f9ae5242b5fee5dbb73a964be4d2d">chiMeshCreateUnpartitioned2DOrthoMesh</a>(nodesx,nodesy)</div>
-<div class="line"><a class="code hl_function" href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chiVolumeMesherExecute</a>();</div>
-<div class="ttc" id="agroup___lua_mesh_handler_html_ga57ff5c2bfc92cd5cf102d26a3611bd3e"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">int chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00367">lua_functions.c:367</a></div></div>
-<div class="ttc" id="agroup___lua_mesh_macros_html_ga8a8f9ae5242b5fee5dbb73a964be4d2d"><div class="ttname"><a href="../../d9/db8/group___lua_mesh_macros.html#ga8a8f9ae5242b5fee5dbb73a964be4d2d">chi_lua::chiMeshCreateUnpartitioned2DOrthoMesh</a></div><div class="ttdeci">int chiMeshCreateUnpartitioned2DOrthoMesh(array_float x_nodes, array_float y_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00413">lua_functions.c:413</a></div></div>
-<div class="ttc" id="agroup___lua_volume_mesher_html_ga2cbae637b293223c824105bf422c0ab8"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#ga2cbae637b293223c824105bf422c0ab8">chi_lua::chiVolumeMesherExecute</a></div><div class="ttdeci">int chiVolumeMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00847">lua_functions.c:847</a></div></div>
+<div class="line"><a class="code hl_function" href="../../d9/db8/group___lua_mesh_macros.html#ga83d9d3e4a7ae7060391faefe17c1076a">chiMeshCreateUnpartitioned2DOrthoMesh</a>(nodesx,nodesy)</div>
+<div class="line"><a class="code hl_function" href="../../d4/d3a/group___lua_volume_mesher.html#gad031f7f22f9a1b4d7ea535f04c56ae1f">chiVolumeMesherExecute</a>();</div>
+<div class="ttc" id="agroup___lua_mesh_handler_html_ga3be36a5ecf5469ad0980dd5aa4097a2a"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">Handle chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01162">lua_functions.c:1162</a></div></div>
+<div class="ttc" id="agroup___lua_mesh_macros_html_ga83d9d3e4a7ae7060391faefe17c1076a"><div class="ttname"><a href="../../d9/db8/group___lua_mesh_macros.html#ga83d9d3e4a7ae7060391faefe17c1076a">chi_lua::chiMeshCreateUnpartitioned2DOrthoMesh</a></div><div class="ttdeci">Two chiMeshCreateUnpartitioned2DOrthoMesh(array_float x_nodes, array_float y_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00863">lua_functions.c:863</a></div></div>
+<div class="ttc" id="agroup___lua_volume_mesher_html_gad031f7f22f9a1b4d7ea535f04c56ae1f"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#gad031f7f22f9a1b4d7ea535f04c56ae1f">chi_lua::chiVolumeMesherExecute</a></div><div class="ttdeci">void chiVolumeMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00930">lua_functions.c:930</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

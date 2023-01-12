@@ -14,7 +14,7 @@ var searchData=
   ['populatepolyhedronfromfaces_11',['PopulatePolyhedronFromFaces',['../da/d62/namespacechi__mesh_1_1mesh__cutting.html#a9e87b4f4c7f9aefd985fe1f570182180',1,'chi_mesh::mesh_cutting']]],
   ['populatequadratureabscissae_12',['PopulateQuadratureAbscissae',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a921e33188a6696a764535e33bfdf3724',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],
   ['populateraw_13',['PopulateRaw',['../d8/d30/classchi__data__types_1_1_varying.html#a4ea491f8417c279b73d18baf6739d960',1,'chi_data_types::Varying::PopulateRaw(const T &amp;value)'],['../d8/d30/classchi__data__types_1_1_varying.html#a2920ba6030d194009ed64a9e2e589f8f',1,'chi_data_types::Varying::PopulateRaw(const std::string &amp;value)']]],
-  ['populateraysegmentlengths_14',['PopulateRaySegmentLengths',['../d0/d81/namespacechi__mesh.html#acd32dbf6362e6ac09c9a734a53b8ab25',1,'chi_mesh']]],
+  ['populateraysegmentlengths_14',['PopulateRaySegmentLengths',['../d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50',1,'chi_mesh']]],
   ['postmpiinfo_15',['PostMPIInfo',['../d0/dc4/classchi__objects_1_1_chi_console.html#ae8de53cd69cbd2832b50d6ee75ce0d07',1,'chi_objects::ChiConsole']]],
   ['poststepcallbackfunction_16',['PostStepCallBackFunction',['../da/dc0/classlbs_1_1_transient_solver.html#ac4f4dacf60c8af6ee58c16435f9701bf',1,'lbs::TransientSolver']]],
   ['poweriteration_17',['PowerIteration',['../d7/d41/classlbs_1_1_k_eigenvalue_solver.html#a19bfd08ea84ef0909d2b3f56b0a0f79d',1,'lbs::KEigenvalueSolver::PowerIteration()'],['../dc/d58/namespacechi__math.html#a25e89fb89dad7be445fd6c0d746eef8f',1,'chi_math::PowerIteration()']]],

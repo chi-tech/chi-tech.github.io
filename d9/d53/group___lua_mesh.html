@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -91,11 +98,15 @@ $(document).ready(function(){initNavTree('d9/d53/group___lua_mesh.html','../../'
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="groups" name="groups"></a>
 Modules</h2></td></tr>
+<tr class="memitem:dd/d63/group___lua_domain_decomposition"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d63/group___lua_domain_decomposition.html">Domain decomposition</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d9/d32/group___lua_logic_volumes"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d32/group___lua_logic_volumes.html">Logical Volumes</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:da/d92/group___lua_mesh_handler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler.html">Mesh Handler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d9/db8/group___lua_mesh_macros"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db8/group___lua_mesh_macros.html">Mesh Macros</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:db/dc8/group___lua_surface_mesh"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html">Surface Meshes</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d1/d9b/group___lua_surface_mesher"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9b/group___lua_surface_mesher.html">Surface Re-meshers</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,14 +117,14 @@ Modules</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2>Mesh Handling</h2>
-<p >Meshing in ChiTech is made available via the <a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a> namespace. All instances of entities are stored within a handler (<a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a>). A mesh handler is created with a call to <a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate()</a>.</p>
-<div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div>
-<div class="ttc" id="agroup___lua_mesh_handler_html_ga57ff5c2bfc92cd5cf102d26a3611bd3e"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">int chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00367">lua_functions.c:367</a></div></div>
+<p >Meshing in ChiTech is made available via the <a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a> namespace. All instances of entities are stored within a handler (<a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a>). A mesh handler is created with a call to <a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chiMeshHandlerCreate()</a>.</p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chiMeshHandlerCreate</a>()</div>
+<div class="ttc" id="agroup___lua_mesh_handler_html_ga3be36a5ecf5469ad0980dd5aa4097a2a"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">Handle chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01162">lua_functions.c:1162</a></div></div>
 </div><!-- fragment --><h2>Predefined 2D Mesh Setup Example</h2>
-<div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga57ff5c2bfc92cd5cf102d26a3611bd3e">chiMeshHandlerCreate</a>()</div>
+<div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chiMeshHandlerCreate</a>()</div>
 <div class="line">--</div>
-<div class="line">newSurfMesh = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a5b4ae0e72dd9dd3a8bef427883aea5a1">chiSurfaceMeshCreate</a>();</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a01321849c9875e8aa15d4ce7bc5b9185">chiSurfaceMeshImportFromOBJFile</a>(newSurfMesh,<span class="stringliteral">&quot;CHI_RESOURCES/TestObjects/SquareMesh2x2.obj&quot;</span>)</div>
+<div class="line">newSurfMesh = <a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga22ead80a73c8ed10395140965d049291">chiSurfaceMeshCreate</a>();</div>
+<div class="line"><a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga3483f350d02420d8b901c79e1ae52706">chiSurfaceMeshImportFromOBJFile</a>(newSurfMesh,<span class="stringliteral">&quot;CHI_RESOURCES/TestObjects/SquareMesh2x2.obj&quot;</span>)</div>
 <div class="line">loops,loop_count = chiSurfaceMeshGetEdgeLoops(newSurfMesh)</div>
 <div class="line">--</div>
 <div class="line">--</div>
@@ -128,8 +139,8 @@ Modules</h2></td></tr>
 <div class="line">  end</div>
 <div class="line">--</div>
 <div class="line">end</div>
-<div class="ttc" id="anamespacechi__lua_html_a01321849c9875e8aa15d4ce7bc5b9185"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a01321849c9875e8aa15d4ce7bc5b9185">chi_lua::chiSurfaceMeshImportFromOBJFile</a></div><div class="ttdeci">int chiSurfaceMeshImportFromOBJFile(int SurfaceHandle, char *FileName, bool polyflag, table3 transform)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00525">lua_functions.c:525</a></div></div>
-<div class="ttc" id="anamespacechi__lua_html_a5b4ae0e72dd9dd3a8bef427883aea5a1"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a5b4ae0e72dd9dd3a8bef427883aea5a1">chi_lua::chiSurfaceMeshCreate</a></div><div class="ttdeci">int chiSurfaceMeshCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00496">lua_functions.c:496</a></div></div>
+<div class="ttc" id="agroup___lua_surface_mesh_html_ga22ead80a73c8ed10395140965d049291"><div class="ttname"><a href="../../db/dc8/group___lua_surface_mesh.html#ga22ead80a73c8ed10395140965d049291">chi_lua::chiSurfaceMeshCreate</a></div><div class="ttdeci">Handle chiSurfaceMeshCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01065">lua_functions.c:1065</a></div></div>
+<div class="ttc" id="agroup___lua_surface_mesh_html_ga3483f350d02420d8b901c79e1ae52706"><div class="ttname"><a href="../../db/dc8/group___lua_surface_mesh.html#ga3483f350d02420d8b901c79e1ae52706">chi_lua::chiSurfaceMeshImportFromOBJFile</a></div><div class="ttdeci">success chiSurfaceMeshImportFromOBJFile(int SurfaceHandle, char *FileName, bool polyflag, table3 transform)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01098">lua_functions.c:1098</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

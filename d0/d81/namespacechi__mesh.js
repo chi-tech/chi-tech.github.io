@@ -21,7 +21,8 @@ var namespacechi__mesh =
     [ "MeshContinuum", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html", "d3/d1c/classchi__mesh_1_1_mesh_continuum" ],
     [ "MeshHandler", "d2/d10/classchi__mesh_1_1_mesh_handler.html", "d2/d10/classchi__mesh_1_1_mesh_handler" ],
     [ "PolyFace", "d4/ddb/structchi__mesh_1_1_poly_face.html", "d4/ddb/structchi__mesh_1_1_poly_face" ],
-    [ "RayDestinationInfo", "d8/daa/structchi__mesh_1_1_ray_destination_info.html", "d8/daa/structchi__mesh_1_1_ray_destination_info" ],
+    [ "RayTracer", "dd/d2a/classchi__mesh_1_1_ray_tracer.html", "dd/d2a/classchi__mesh_1_1_ray_tracer" ],
+    [ "RayTracerOutputInformation", "da/d07/structchi__mesh_1_1_ray_tracer_output_information.html", "da/d07/structchi__mesh_1_1_ray_tracer_output_information" ],
     [ "RCCLogicalVolume", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume" ],
     [ "RPPLogicalVolume", "d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html", "d4/dea/classchi__mesh_1_1_r_p_p_logical_volume" ],
     [ "SphereLogicalVolume", "db/d06/classchi__mesh_1_1_sphere_logical_volume.html", "db/d06/classchi__mesh_1_1_sphere_logical_volume" ],
@@ -102,7 +103,6 @@ var namespacechi__mesh =
     [ "DecomposeSurfaceMeshPxPy", "d0/d81/namespacechi__mesh.html#a40bf98e7abb636332e1cb549f087b84c", null ],
     [ "GetCurrentHandler", "d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f", null ],
     [ "operator|", "d0/d81/namespacechi__mesh.html#a43e58c3da01b539dc6264dda196e8e6b", null ],
-    [ "PopulateRaySegmentLengths", "d0/d81/namespacechi__mesh.html#acd32dbf6362e6ac09c9a734a53b8ab25", null ],
-    [ "PushNewHandlerAndGetIndex", "d0/d81/namespacechi__mesh.html#a05ce2e71e2c83c67d2c2d94c850e716f", null ],
-    [ "RayTrace", "d0/d81/namespacechi__mesh.html#a4e6ed100c5261474c337c9924aed7fcc", null ]
+    [ "PopulateRaySegmentLengths", "d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50", null ],
+    [ "PushNewHandlerAndGetIndex", "d0/d81/namespacechi__mesh.html#a05ce2e71e2c83c67d2c2d94c850e716f", null ]
 ];

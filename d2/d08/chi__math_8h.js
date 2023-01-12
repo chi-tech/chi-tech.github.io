@@ -27,6 +27,7 @@ var chi__math_8h =
     [ "MatMul", "d2/d08/chi__math_8h.html#adbc7f02c94692a8b25b1d702ba07d49e", null ],
     [ "MatMul", "d2/d08/chi__math_8h.html#ad34c0e4295563d0781c2c2554efa32ba", null ],
     [ "MatSubtract", "d2/d08/chi__math_8h.html#ae761da46f19c127e896692be997edcad", null ],
+    [ "OmegaToPhiThetaSafe", "d2/d08/chi__math_8h.html#a612087e73bf9b2cd09c6fad00f8e0d4e", null ],
     [ "operator+", "d2/d08/chi__math_8h.html#ac0f60ee03db29dec6023e1745fd44d0e", null ],
     [ "operator-", "d2/d08/chi__math_8h.html#a406bf1420d143fcb79ea57e1a3f8e1e5", null ],
     [ "PowerIteration", "d2/d08/chi__math_8h.html#a25e89fb89dad7be445fd6c0d746eef8f", null ],

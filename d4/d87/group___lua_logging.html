@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -91,21 +98,21 @@ $(document).ready(function(){initNavTree('d4/d87/group___lua_logging.html','../.
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga1a20925b709feebaca0c6418f2042b7f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d87/group___lua_logging.html#ga1a20925b709feebaca0c6418f2042b7f">chi_lua::chiLogSetVerbosity</a> (int int_level)</td></tr>
-<tr class="separator:ga1a20925b709feebaca0c6418f2042b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae64e0b5aa4087bfd4e2fd85d57dc17ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d87/group___lua_logging.html#gae64e0b5aa4087bfd4e2fd85d57dc17ff">chi_lua::chiLog</a> (int LogType, char LogMsg)</td></tr>
-<tr class="separator:gae64e0b5aa4087bfd4e2fd85d57dc17ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4c23d141fddd0557829e6b5471262ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d87/group___lua_logging.html#gac4c23d141fddd0557829e6b5471262ce">chi_lua::chiLogSetVerbosity</a> (int int_level)</td></tr>
+<tr class="separator:gac4c23d141fddd0557829e6b5471262ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8139e633fb74f8d739bcfd6badd80376"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d87/group___lua_logging.html#ga8139e633fb74f8d739bcfd6badd80376">chi_lua::chiLog</a> (int LogType, char LogMsg)</td></tr>
+<tr class="separator:ga8139e633fb74f8d739bcfd6badd80376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gae64e0b5aa4087bfd4e2fd85d57dc17ff" name="gae64e0b5aa4087bfd4e2fd85d57dc17ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae64e0b5aa4087bfd4e2fd85d57dc17ff">&#9670;&nbsp;</a></span>chiLog()</h2>
+<a id="ga8139e633fb74f8d739bcfd6badd80376" name="ga8139e633fb74f8d739bcfd6badd80376"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8139e633fb74f8d739bcfd6badd80376">&#9670;&nbsp;</a></span>chiLog()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_lua::chiLog </td>
+          <td class="memname">void chi_lua::chiLog </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>LogType</em>, </td>
@@ -123,44 +130,45 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Logs a message depending on the log type specified. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Logs a message depending on the log type specified.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">LogType</td><td>int Can be any of the log types specified below. </td></tr>
-    <tr><td class="paramname">LogMsg</td><td>char Message or value to be output to the log. <h2>_</h2>
-</td></tr>
+    <tr><td class="paramname">LogMsg</td><td>char Message or value to be output to the log.</td></tr>
   </table>
   </dd>
 </dl>
+<h2>_</h2>
 <h3>LogType</h3>
 <p >LOG_0<br  />
 Write a log only if location 0.<br  />
-LOG_0WARNING<br  />
+ LOG_0WARNING<br  />
 Write a log only if location 0 and format it as a warning.<br  />
-LOG_0ERROR<br  />
+ LOG_0ERROR<br  />
 Write a log only if location 0 and format it as an error.<br  />
-LOG_0VERBOSE_0<br  />
+ LOG_0VERBOSE_0<br  />
 Same as LOG_0.<br  />
-LOG_0VERBOSE_1<br  />
+ LOG_0VERBOSE_1<br  />
 Write a log only if location 0 and the verbosity level is greater or equal to 1.<br  />
-LOG_0VERBOSE_2<br  />
+ LOG_0VERBOSE_2<br  />
 Write a log only if location 0 and the verbosity level is greater or equal to 1.<br  />
-LOG_ALL, LOG_ALLWARNING, LOG_ALLERROR,<br  />
+ LOG_ALL, LOG_ALLWARNING, LOG_ALLERROR,<br  />
 LOG_ALLVERBOSE_0, LOG_ALLVERBOSE_1, LOG_ALLVERBOSE_2<br  />
 Has the same meaning as their LOG_0 counterparts but instead applies to all locations in the parallel context.</p>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00979">979</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00088">88</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
-<a id="ga1a20925b709feebaca0c6418f2042b7f" name="ga1a20925b709feebaca0c6418f2042b7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1a20925b709feebaca0c6418f2042b7f">&#9670;&nbsp;</a></span>chiLogSetVerbosity()</h2>
+<a id="gac4c23d141fddd0557829e6b5471262ce" name="gac4c23d141fddd0557829e6b5471262ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4c23d141fddd0557829e6b5471262ce">&#9670;&nbsp;</a></span>chiLogSetVerbosity()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_lua::chiLogSetVerbosity </td>
+          <td class="memname">void chi_lua::chiLogSetVerbosity </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>int_level</em></td><td>)</td>
@@ -168,7 +176,8 @@ Has the same meaning as their LOG_0 counterparts but instead applies to all loca
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Sets the verbosity level of the Logger. This lua command will overwrite the currently set value. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Sets the verbosity level of the Logger. This lua command will overwrite the currently set value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">int_level</td><td>int Integer denoting verbosity level. Can be 0,1 or 2 [default:0]</td></tr>
   </table>
@@ -176,7 +185,7 @@ Has the same meaning as their LOG_0 counterparts but instead applies to all loca
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00951">951</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00051">51</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

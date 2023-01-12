@@ -93,6 +93,5 @@ var searchData=
   ['legendrepoly_2ecc_90',['legendrepoly.cc',['../df/dc6/legendrepoly_8cc.html',1,'']]],
   ['legendrepoly_2eh_91',['legendrepoly.h',['../d6/d81/legendrepoly_8h.html',1,'']]],
   ['lua_5ffunctions_2ec_92',['lua_functions.c',['../d7/d47/lua__functions_8c.html',1,'']]],
-  ['lua_5fnamespace_2ehpp_93',['lua_namespace.hpp',['../da/d1e/lua__namespace_8hpp.html',1,'']]],
-  ['lua_5fregister_2eh_94',['lua_register.h',['../d3/dbe/lua__register_8h.html',1,'']]]
+  ['lua_5fnamespace_2eh_93',['lua_namespace.h',['../d3/d8a/lua__namespace_8h.html',1,'']]]
 ];

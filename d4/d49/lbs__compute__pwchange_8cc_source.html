@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: ChiModules/LinearBoltzmannSolver/IterativeOperations/lbs_compute_pwchange.cc Source File</title>
+<title>Chi-Tech: modules/LinearBoltzmannSolver/IterativeOperations/lbs_compute_pwchange.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -131,20 +138,12 @@ $(document).ready(function(){initNavTree('d4/d49/lbs__compute__pwchange_8cc_sour
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }<span class="comment">//for i</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  }<span class="comment">//for c</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// Old PDT code:</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">//  const real8 abs_phi_0 = fabs(phi_0);</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">//  const real8 abs_old_phi_0 = fabs(old_phi_0);</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">//  const real8 maxv = std::max(abs_phi_0, abs_old_phi_0);</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">//  const real8 diff = fabs(phi - old_phi);</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">//  const real8 pw_change = (maxv &gt;= std::numeric_limits&lt;real8&gt;::min()) ?</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">//                          (diff / maxv) : diff;</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">double</span> global_pw_change = 0.0;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  MPI_Allreduce(&amp;pw_change,&amp;global_pw_change,1,MPI_DOUBLE,MPI_MAX,MPI_COMM_WORLD);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordflow">return</span> global_pw_change;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">double</span> global_pw_change = 0.0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  MPI_Allreduce(&amp;pw_change,&amp;global_pw_change,1,MPI_DOUBLE,MPI_MAX,MPI_COMM_WORLD);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordflow">return</span> global_pw_change;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
 <div class="ttc" id="acell_8h_html"><div class="ttname"><a href="../../d0/ddd/cell_8h.html">cell.h</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_groupset_html"><div class="ttname"><a href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">lbs::LBSGroupset</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00030">lbs_groupset.h:31</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_groupset_html_a05949e16fc3c4fe44b3131c05f2590f1"><div class="ttname"><a href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html#a05949e16fc3c4fe44b3131c05f2590f1">lbs::LBSGroupset::groups</a></div><div class="ttdeci">std::vector&lt; LBSGroup &gt; groups</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00036">lbs_groupset.h:36</a></div></div>
@@ -160,7 +159,7 @@ $(document).ready(function(){initNavTree('d4/d49/lbs__compute__pwchange_8cc_sour
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_6650a3b49e3ce036dc343a3bf3bf0561.html">ChiModules</a></li><li class="navelem"><a class="el" href="../../dir_f5cd9bfa74d11c0e10c7d98fd63dc019.html">LinearBoltzmannSolver</a></li><li class="navelem"><a class="el" href="../../dir_0ccf969baa900d1a11f545d7f5f48054.html">IterativeOperations</a></li><li class="navelem"><a class="el" href="../../d4/d49/lbs__compute__pwchange_8cc.html">lbs_compute_pwchange.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_e05d7e2b1ecd646af5bb94391405f3b5.html">modules</a></li><li class="navelem"><a class="el" href="../../dir_59cfc1f9cd8e172a3887c8cc9ab990d8.html">LinearBoltzmannSolver</a></li><li class="navelem"><a class="el" href="../../dir_b60e432ab233243f960c8dd078b20127.html">IterativeOperations</a></li><li class="navelem"><a class="el" href="../../d4/d49/lbs__compute__pwchange_8cc.html">lbs_compute_pwchange.cc</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

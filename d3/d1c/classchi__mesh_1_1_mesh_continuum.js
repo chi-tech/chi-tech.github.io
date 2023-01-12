@@ -3,6 +3,7 @@ var classchi__mesh_1_1_mesh_continuum =
     [ "MeshContinuum", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a9f0bc1e0fab76fb24debb27852300874", null ],
     [ "Attributes", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a15eed36e4da5d55ac9ad26d6a37a7a72", null ],
     [ "BuildFaceHistogramInfo", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#ab288a8b50dc0d3017f6dfafbd095812d", null ],
+    [ "CheckPointInsideCell", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a041a1b72b3b93c11de28307fc6af59e4", null ],
     [ "ClearCellReferences", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a9094fb9c39a89de86840a2e1c9d4c2e5", null ],
     [ "ComputeCentroidFromListOfNodes", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a09e204c5461025df42fa1c2659c2cf9c", null ],
     [ "CountCellsInLogicalVolume", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#ae5e7838974b9dcf52180290c308b1a1d", null ],

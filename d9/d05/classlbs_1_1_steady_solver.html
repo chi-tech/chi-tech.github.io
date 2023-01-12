@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -230,8 +237,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6e51804cad05dc742bba15c0957b6ba9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a6e51804cad05dc742bba15c0957b6ba9">CheckPointInsideCell</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid_ref, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;point)</td></tr>
-<tr class="separator:a6e51804cad05dc742bba15c0957b6ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fbd2307b558544c0bb399ef03c6a093"><td class="memItemLeft" align="right" valign="top">static std::pair&lt; <a class="el" href="../../d9/d42/namespacelbs.html#aee2e09cc47baec60805b625cc87351d5">UniqueSOGroupings</a>, <a class="el" href="../../d9/d42/namespacelbs.html#a9db37f34e0e653f8feada39ab7b8d394">DirIDToSOMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a2fbd2307b558544c0bb399ef03c6a093">AssociateSOsAndDirections</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;<a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#ad88fe47c7b27dfd9b9b148f634e41c96">grid</a>, const <a class="el" href="../../d8/dd9/classchi__math_1_1_angular_quadrature.html">chi_math::AngularQuadrature</a> &amp;quadrature, <a class="el" href="../../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ad">AngleAggregationType</a> agg_type, <a class="el" href="../../d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83">lbs::GeometryType</a> lbs_geo_type)</td></tr>
 <tr class="separator:a2fbd2307b558544c0bb399ef03c6a093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32a087fbc2b8adec6a9bc98f3ede7768"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d05/classlbs_1_1_steady_solver.html#a32a087fbc2b8adec6a9bc98f3ede7768">CleanUpWGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
@@ -622,50 +627,6 @@ Private Types</h2></td></tr>
 <p >Lambda to convert indices and push it onto unq_so_grps.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d17/lbs__03aa__iduniqso_8cc_source.html#l00038">38</a> of file <a class="el" href="../../dd/d17/lbs__03aa__iduniqso_8cc_source.html">lbs_03aa_iduniqso.cc</a>.</p>
-
-</div>
-</div>
-<a id="a6e51804cad05dc742bba15c0957b6ba9" name="a6e51804cad05dc742bba15c0957b6ba9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e51804cad05dc742bba15c0957b6ba9">&#9670;&nbsp;</a></span>CheckPointInsideCell()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool lbs::SteadySolver::CheckPointInsideCell </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td>
-          <td class="paramname"><em>cell</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td>
-          <td class="paramname"><em>grid_ref</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>point</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html#l00008">8</a> of file <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html">lbs_01i_init_point_sources.cc</a>.</p>
 
 </div>
 </div>
@@ -1311,9 +1272,10 @@ Private Types</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Intializes all point sources. </p>
 <p >ByRef</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html#l00112">112</a> of file <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html">lbs_01i_init_point_sources.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html#l00009">9</a> of file <a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html">lbs_01i_init_point_sources.cc</a>.</p>
 
 </div>
 </div>
@@ -2613,38 +2575,38 @@ Private Types</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a></li>
-<li>ChiModules/LinearBoltzmannSolver/IterativeMethods/<a class="el" href="../../d9/d45/lbs__classicrichardson_8cc_source.html">lbs_classicrichardson.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/IterativeMethods/<a class="el" href="../../d7/d6b/lbs___g_m_r_e_s_8cc_source.html">lbs_GMRES.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/IterativeMethods/<a class="el" href="../../d3/d1d/lbs__krylov_8cc_source.html">lbs_krylov.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../dd/db4/lbs__compute__fission__production_8cc_source.html">lbs_compute_fission_production.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../d4/d49/lbs__compute__pwchange_8cc_source.html">lbs_compute_pwchange.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../da/dd8/lbs__setsource_8cc_source.html">lbs_setsource.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../dc/dd0/lbs__setsweepchunk_8cc_source.html">lbs_setsweepchunk.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d6/d04/lbs__01__main__initialize_8cc_source.html">lbs_01_main_initialize.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html">lbs_01a_inputchecks.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../dc/da3/lbs__01b__print__simheader_8cc_source.html">lbs_01b_print_simheader.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d0/dd9/lbs__01c__initmaterials_8cc_source.html">lbs_01c_initmaterials.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d8/d4c/lbs__01d__init__spat__discr_8cc_source.html">lbs_01d_init_spat_discr.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../dd/d02/lbs__01e__initgroupsets_8cc_source.html">lbs_01e_initgroupsets.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../db/d8f/lbs__01f__compute__nummoments_8cc_source.html">lbs_01f_compute_nummoments.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d3/d37/lbs__01g__initparrays_8cc_source.html">lbs_01g_initparrays.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html">lbs_01i_init_point_sources.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html">lbs_02_main_execute.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html">lbs_03a_compsweeporder.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../dd/d17/lbs__03aa__iduniqso_8cc_source.html">lbs_03aa_iduniqso.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d4/dc6/lbs__03b__initfluds_8cc_source.html">lbs_03b_initfluds.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d2/d48/lbs__03f__resetswporderings_8cc_source.html">lbs_03f_resetswporderings.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d1/d85/lbs__04a__restartdata_8cc_source.html">lbs_04a_restartdata.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d7/dde/lbs__04b__angular__fluxes_8cc_source.html">lbs_04b_angular_fluxes.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d6/da4/lbs__04c__io__flux__moments_8cc_source.html">lbs_04c_io_flux_moments.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d9/dfd/lbs__compute__balance_8cc_source.html">lbs_compute_balance.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d9/d37/lbs__compute__precursors_8cc_source.html">lbs_compute_precursors.cc</a></li>
-<li>ChiModules/LinearBoltzmannSolver/<a class="el" href="../../d1/dbd/lbs__vectorassembly_8cc_source.html">lbs_vectorassembly.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../df/d26/lbs__linear__boltzmann__solver_8h_source.html">lbs_linear_boltzmann_solver.h</a></li>
+<li>modules/LinearBoltzmannSolver/IterativeMethods/<a class="el" href="../../d9/d45/lbs__classicrichardson_8cc_source.html">lbs_classicrichardson.cc</a></li>
+<li>modules/LinearBoltzmannSolver/IterativeMethods/<a class="el" href="../../d7/d6b/lbs___g_m_r_e_s_8cc_source.html">lbs_GMRES.cc</a></li>
+<li>modules/LinearBoltzmannSolver/IterativeMethods/<a class="el" href="../../d3/d1d/lbs__krylov_8cc_source.html">lbs_krylov.cc</a></li>
+<li>modules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../dd/db4/lbs__compute__fission__production_8cc_source.html">lbs_compute_fission_production.cc</a></li>
+<li>modules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../d4/d49/lbs__compute__pwchange_8cc_source.html">lbs_compute_pwchange.cc</a></li>
+<li>modules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../da/dd8/lbs__setsource_8cc_source.html">lbs_setsource.cc</a></li>
+<li>modules/LinearBoltzmannSolver/IterativeOperations/<a class="el" href="../../dc/dd0/lbs__setsweepchunk_8cc_source.html">lbs_setsweepchunk.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d6/d04/lbs__01__main__initialize_8cc_source.html">lbs_01_main_initialize.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html">lbs_01a_inputchecks.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../dc/da3/lbs__01b__print__simheader_8cc_source.html">lbs_01b_print_simheader.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d0/dd9/lbs__01c__initmaterials_8cc_source.html">lbs_01c_initmaterials.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d8/d4c/lbs__01d__init__spat__discr_8cc_source.html">lbs_01d_init_spat_discr.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../dd/d02/lbs__01e__initgroupsets_8cc_source.html">lbs_01e_initgroupsets.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../db/d8f/lbs__01f__compute__nummoments_8cc_source.html">lbs_01f_compute_nummoments.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d3/d37/lbs__01g__initparrays_8cc_source.html">lbs_01g_initparrays.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html">lbs_01i_init_point_sources.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d3/d7d/lbs__02__main__execute_8cc_source.html">lbs_02_main_execute.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d2/dcf/lbs__03a__compsweeporder_8cc_source.html">lbs_03a_compsweeporder.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../dd/d17/lbs__03aa__iduniqso_8cc_source.html">lbs_03aa_iduniqso.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d4/dc6/lbs__03b__initfluds_8cc_source.html">lbs_03b_initfluds.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d2/d48/lbs__03f__resetswporderings_8cc_source.html">lbs_03f_resetswporderings.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d1/d85/lbs__04a__restartdata_8cc_source.html">lbs_04a_restartdata.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d7/dde/lbs__04b__angular__fluxes_8cc_source.html">lbs_04b_angular_fluxes.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d6/da4/lbs__04c__io__flux__moments_8cc_source.html">lbs_04c_io_flux_moments.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d9/dfd/lbs__compute__balance_8cc_source.html">lbs_compute_balance.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d9/d37/lbs__compute__precursors_8cc_source.html">lbs_compute_precursors.cc</a></li>
+<li>modules/LinearBoltzmannSolver/<a class="el" href="../../d1/dbd/lbs__vectorassembly_8cc_source.html">lbs_vectorassembly.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

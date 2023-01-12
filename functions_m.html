@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -176,15 +183,14 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>MakeExtrudedCell()&#160;:&#160;<a class="el" href="de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#aa1c6b927ac6b34e92f57e467cd51bf53">chi_mesh::VolumeMesherExtruder</a></li>
 <li>MakeFaceNodeMapping()&#160;:&#160;<a class="el" href="d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l.html#a0e9d3c7b5781f4eb52d01368cc518d6a">chi_math::CellMappingFE_PWL</a></li>
 <li>MakeFaceQuadraturePointData()&#160;:&#160;<a class="el" href="d8/d08/classchi__math_1_1_cell_mapping.html#aa3da635366c851c8cf059e3df8668271">chi_math::CellMapping</a></li>
-<li>MakeFromCHIxsFile()&#160;:&#160;<a class="el" href="d3/dff/classchi__physics_1_1_transport_cross_sections.html#a88869768a842a3ce2766f282c53808e1">chi_physics::TransportCrossSections</a></li>
-<li>MakeFromPDTxsFile()&#160;:&#160;<a class="el" href="d3/dff/classchi__physics_1_1_transport_cross_sections.html#a865c946ba3ca4cefe946779319d05b87">chi_physics::TransportCrossSections</a></li>
+<li>MakeFromChiXSFile()&#160;:&#160;<a class="el" href="d3/dff/classchi__physics_1_1_transport_cross_sections.html#a44fb75df8e63c2d85b5579386cc747ea">chi_physics::TransportCrossSections</a></li>
 <li>MakeGhostedVector()&#160;:&#160;<a class="el" href="d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a3f86fa817a46f929551fa2ab40714676">chi_math::VectorGhostCommunicator</a></li>
 <li>MakeHarmonicIndices()&#160;:&#160;<a class="el" href="d8/dd9/classchi__math_1_1_angular_quadrature.html#a5d603ef8cc7ff11534d6949817e6f851">chi_math::AngularQuadrature</a>, <a class="el" href="d8/d60/classchi__math_1_1_cylindrical_angular_quadrature.html#aaf34d77a420e56c887ed44265097fe62">chi_math::CylindricalAngularQuadrature</a>, <a class="el" href="de/de3/classchi__math_1_1_spherical_angular_quadrature.html#af3a471f7bf5e9530c9d38a877d1db178">chi_math::SphericalAngularQuadrature</a></li>
 <li>MakeIJKToGlobalIDMapping()&#160;:&#160;<a class="el" href="d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a6ff14aae03e8c78ca276c9f2884bcd98">chi_mesh::MeshContinuum</a></li>
 <li>MakeInternalFaceNodeMappings()&#160;:&#160;<a class="el" href="dd/d1d/classchi__math_1_1_spatial_discretization.html#ad53ebd84ae7f8853b02afda543c8429a">chi_math::SpatialDiscretization</a></li>
 <li>MakeRotationMatrixFromVector()&#160;:&#160;<a class="el" href="d0/dec/structchi__mesh_1_1_matrix3x3.html#a755f9404bafef5ff50466c1367f9531e">chi_mesh::Matrix3x3</a></li>
-<li>MakeSimple0()&#160;:&#160;<a class="el" href="d3/dff/classchi__physics_1_1_transport_cross_sections.html#ae2fd6a8d144ab11f93425b1b927a9e98">chi_physics::TransportCrossSections</a></li>
-<li>MakeSimple1()&#160;:&#160;<a class="el" href="d3/dff/classchi__physics_1_1_transport_cross_sections.html#a1cb54c4349e47c5f5ce27bd0f3417bab">chi_physics::TransportCrossSections</a></li>
+<li>MakeSimple0()&#160;:&#160;<a class="el" href="d3/dff/classchi__physics_1_1_transport_cross_sections.html#a4928500b47ce7c464565004ad9d35c8f">chi_physics::TransportCrossSections</a></li>
+<li>MakeSimple1()&#160;:&#160;<a class="el" href="d3/dff/classchi__physics_1_1_transport_cross_sections.html#a350013821e25909da52c0bf5ca359e43">chi_physics::TransportCrossSections</a></li>
 <li>MakeSourceMomentsFromPhi()&#160;:&#160;<a class="el" href="d9/d05/classlbs_1_1_steady_solver.html#a4e34cd5fa8d40fea88182ace8aafe2bf">lbs::SteadySolver</a></li>
 <li>MakeVolumeQuadraturePointData()&#160;:&#160;<a class="el" href="d8/d08/classchi__math_1_1_cell_mapping.html#ad36e788390949825e9870a8eba20b3ce">chi_math::CellMapping</a></li>
 <li>map_begin&#160;:&#160;<a class="el" href="d8/df3/classchi__math_1_1_unknown.html#a0bf5a2a877ff0c952c5671e01c77fd39">chi_math::Unknown</a></li>
@@ -214,8 +220,8 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>material_stack&#160;:&#160;<a class="el" href="d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d">chi</a></li>
 <li>MaterialProperty()&#160;:&#160;<a class="el" href="df/d52/classchi__physics_1_1_material_property.html#a9563278534be8adaa98cfd782fa1cfbc">chi_physics::MaterialProperty</a></li>
 <li>matid_to_S_transpose&#160;:&#160;<a class="el" href="df/d5b/classlbs__adjoint_1_1_adjoint_solver.html#a124f13b438363bea14213608d4a739d2">lbs_adjoint::AdjointSolver</a></li>
-<li>matid_to_src_map&#160;:&#160;<a class="el" href="d9/d05/classlbs_1_1_steady_solver.html#ab9837053e7d58b2e4cb8466059420c1c">lbs::SteadySolver</a></li>
-<li>matid_to_xs_map&#160;:&#160;<a class="el" href="d9/d05/classlbs_1_1_steady_solver.html#a9b1e4755212687c4b42b131d4ab1a9f9">lbs::SteadySolver</a></li>
+<li>matid_to_src_map&#160;:&#160;<a class="el" href="d9/d05/classlbs_1_1_steady_solver.html#ab9837053e7d58b2e4cb8466059420c1c">lbs::SteadySolver</a>, <a class="el" href="d4/d4c/classmg__diffusion_1_1_solver.html#adff479a007f15b698a86a40d6cdf32b1">mg_diffusion::Solver</a></li>
+<li>matid_to_xs_map&#160;:&#160;<a class="el" href="d9/d05/classlbs_1_1_steady_solver.html#a9b1e4755212687c4b42b131d4ab1a9f9">lbs::SteadySolver</a>, <a class="el" href="d4/d4c/classmg__diffusion_1_1_solver.html#a0a424e414e735b7ccd87d27c58d9fcf6">mg_diffusion::Solver</a></li>
 <li>Matrix3x3()&#160;:&#160;<a class="el" href="d0/dec/structchi__mesh_1_1_matrix3x3.html#afd7ce0e2298301b61171a1fab70f459c">chi_mesh::Matrix3x3</a></li>
 <li>MatVec3&#160;:&#160;<a class="el" href="de/d0d/classchi__math_1_1finite__element_1_1_unit_integral_data.html#a465dea5c257d36696bae7789d6163734">chi_math::finite_element::UnitIntegralData</a></li>
 <li>max_cell_dof_count&#160;:&#160;<a class="el" href="d9/d05/classlbs_1_1_steady_solver.html#ac782d90aeefc01edfa67ecc6cac700d8">lbs::SteadySolver</a></li>
@@ -238,12 +244,14 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>MeshHandler()&#160;:&#160;<a class="el" href="d2/d10/classchi__mesh_1_1_mesh_handler.html#a8b1ade797477fd8abebf11d3e9caafce">chi_mesh::MeshHandler</a></li>
 <li>meshhandler_stack&#160;:&#160;<a class="el" href="d4/d35/classchi.html#a5bc87832f51e2196e2a230a5deb75838">chi</a></li>
 <li>method&#160;:&#160;<a class="el" href="da/dc0/classlbs_1_1_transient_solver.html#a633ec335958c91867502ad2101c93b9d">lbs::TransientSolver</a></li>
+<li>mg_values&#160;:&#160;<a class="el" href="d6/dea/classmg__diffusion_1_1_boundary.html#a3bb5efa443ce08ed6cd7efa23468ded1">mg_diffusion::Boundary</a></li>
 <li>MinorIJ()&#160;:&#160;<a class="el" href="d0/dec/structchi__mesh_1_1_matrix3x3.html#a50cd060bd68e04f30c557acdf60dbcba">chi_mesh::Matrix3x3</a></li>
 <li>moment_callbacks&#160;:&#160;<a class="el" href="d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ad9d08c6cc1500f7cb1fd30a117a4b181">chi_mesh::sweep_management::SweepChunk</a></li>
 <li>MomentCallbackF&#160;:&#160;<a class="el" href="d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ac1ada200a40517e38aaaa61377ad35e4">chi_mesh::sweep_management::SweepChunk</a></li>
 <li>mpi&#160;:&#160;<a class="el" href="d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi</a></li>
 <li>MPI_Info()&#160;:&#160;<a class="el" href="d2/d8e/classchi__objects_1_1_m_p_i___info.html#ad179fa597093ee48a4cb0de00df25a9d">chi_objects::MPI_Info</a></li>
 <li>mt1993764_generator&#160;:&#160;<a class="el" href="d9/d55/classchi__math_1_1_random_number_generator.html#a46799e4f2d2e474b5eab53809d28ad30">chi_math::RandomNumberGenerator</a></li>
+<li>my_app_context&#160;:&#160;<a class="el" href="d4/d4c/classmg__diffusion_1_1_solver.html#abdfee46231cd3394b218203ef62641f4">mg_diffusion::Solver</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

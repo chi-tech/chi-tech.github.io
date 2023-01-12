@@ -117,6 +117,25 @@ var _programmer_manual =
     [ "Coding Tutorial 91a - Discrete Ordinates with PWLD", "dc/dd8/_code_tut91a.html", [
       [ "The complete program", "dc/dd8/_code_tut91a.html#CodeTut91aSecX", null ]
     ] ],
+    [ "Coding Tutorial 93 - Ray-tracing for uncollided flux using random rays.", "d4/d4d/_code_tut93.html", [
+      [ "1 Introduction", "d4/d4d/_code_tut93.html#CodeTut93Sec1", [
+        [ "1.1 Weighting with a spherical harmonic", "d4/d4d/_code_tut93.html#CodeTut93Sec1_1", null ],
+        [ "1.2 Weighting by average FE shape function values", "d4/d4d/_code_tut93.html#CodeTut93Sec1_2", null ],
+        [ "1.3 Weighting with an exponential attenuation", "d4/d4d/_code_tut93.html#CodeTut93Sec1_3", null ]
+      ] ],
+      [ "2 Program setup", "d4/d4d/_code_tut93.html#CodeTut93Sec2", null ],
+      [ "3 The particle/ray data structure", "d4/d4d/_code_tut93.html#CodeTut93Sec3", null ],
+      [ "4 Utility lambdas", "d4/d4d/_code_tut93.html#CodeTut93Sec4", [
+        [ "4.1 Sampling a random direction", "d4/d4d/_code_tut93.html#CodeTut93Sec4_1", null ],
+        [ "4.2 PWLD Tally contribution", "d4/d4d/_code_tut93.html#CodeTut93Sec4_2", null ],
+        [ "4.3 Approximating cell size", "d4/d4d/_code_tut93.html#CodeTut93Sec4_3", null ]
+      ] ],
+      [ "5 The raytracer", "d4/d4d/_code_tut93.html#CodeTut93Sec5", null ],
+      [ "6 Executing the algorithms", "d4/d4d/_code_tut93.html#CodeTut93Sec6", null ],
+      [ "7 Post-processing the tallies", "d4/d4d/_code_tut93.html#CodeTut93Sec7", null ],
+      [ "8 Exporting field functions", "d4/d4d/_code_tut93.html#CodeTut93Sec8", null ],
+      [ "The complete program", "d4/d4d/_code_tut93.html#CodeTut93Sec9", null ]
+    ] ],
     [ "The structure of meshes", "dd/d1a/_dev_man_meshes.html", [
       [ "General structure of meshes", "dd/d1a/_dev_man_meshes.html#devman4_sec0", [
         [ "What is the grid?", "dd/d1a/_dev_man_meshes.html#devman_meshes_sec0_0", null ],

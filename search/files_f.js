@@ -2,7 +2,7 @@ var searchData=
 [
   ['serial_5fnewton_5fiteration_2ecc_0',['serial_newton_iteration.cc',['../db/d22/serial__newton__iteration_8cc.html',1,'']]],
   ['serial_5fnewton_5fiteration_2eh_1',['serial_newton_iteration.h',['../df/d97/serial__newton__iteration_8h.html',1,'']]],
-  ['setbcproperty_2ecc_2',['setBCproperty.cc',['../d4/d53/_c_f_e_m_diffusion_2lua_2set_b_cproperty_8cc.html',1,'(Global Namespace)'],['../da/d0e/_d_f_e_m_diffusion_2lua_2set_b_cproperty_8cc.html',1,'(Global Namespace)']]],
+  ['setbcproperty_2ecc_2',['setBCproperty.cc',['../d3/ddd/_m_g_diffusion_2lua_2set_b_cproperty_8cc.html',1,'(Global Namespace)'],['../da/d0e/_d_f_e_m_diffusion_2lua_2set_b_cproperty_8cc.html',1,'(Global Namespace)'],['../d4/d53/_c_f_e_m_diffusion_2lua_2set_b_cproperty_8cc.html',1,'(Global Namespace)']]],
   ['sldfe_5fsq_2eh_3',['sldfe_sq.h',['../d6/d18/sldfe__sq_8h.html',1,'']]],
   ['sldfe_5fsq_5f01_5fgen_5finitrefinement_2ecc_4',['sldfe_sq_01_gen_initrefinement.cc',['../db/d3d/sldfe__sq__01__gen__initrefinement_8cc.html',1,'']]],
   ['sldfe_5fsq_5f01a_5fdiagonal_5fspacing_2ecc_5',['sldfe_sq_01a_diagonal_spacing.cc',['../db/d69/sldfe__sq__01a__diagonal__spacing_8cc.html',1,'']]],

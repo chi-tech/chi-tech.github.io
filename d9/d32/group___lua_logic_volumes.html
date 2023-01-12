@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -91,19 +98,19 @@ $(document).ready(function(){initNavTree('d9/d32/group___lua_logic_volumes.html'
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga5ecdd09775b38d1aa8cbfa4322a6ae0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d32/group___lua_logic_volumes.html#ga5ecdd09775b38d1aa8cbfa4322a6ae0c">chi_lua::chiLogicalVolumeCreate</a> (int TypeIndex, varying Values)</td></tr>
-<tr class="separator:ga5ecdd09775b38d1aa8cbfa4322a6ae0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac362f65e2642b15efd6abf99d2224d54"><td class="memItemLeft" align="right" valign="top">Handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d32/group___lua_logic_volumes.html#gac362f65e2642b15efd6abf99d2224d54">chi_lua::chiLogicalVolumeCreate</a> (int TypeIndex, varying Values)</td></tr>
+<tr class="separator:gac362f65e2642b15efd6abf99d2224d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga5ecdd09775b38d1aa8cbfa4322a6ae0c" name="ga5ecdd09775b38d1aa8cbfa4322a6ae0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5ecdd09775b38d1aa8cbfa4322a6ae0c">&#9670;&nbsp;</a></span>chiLogicalVolumeCreate()</h2>
+<a id="gac362f65e2642b15efd6abf99d2224d54" name="gac362f65e2642b15efd6abf99d2224d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac362f65e2642b15efd6abf99d2224d54">&#9670;&nbsp;</a></span>chiLogicalVolumeCreate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_lua::chiLogicalVolumeCreate </td>
+          <td class="memname">Handle chi_lua::chiLogicalVolumeCreate </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>TypeIndex</em>, </td>
@@ -121,14 +128,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Creates a logical volume. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Creates a logical volume.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">TypeIndex</td><td>int Volume type. </td></tr>
-    <tr><td class="paramname">Values</td><td>varying Parameters. <h2>_</h2>
-</td></tr>
+    <tr><td class="paramname">Values</td><td>varying Parameters.</td></tr>
   </table>
   </dd>
 </dl>
+<h2>_</h2>
 <h3>TypeIndex\n</h3>
 <p >SPHERE_ORIGIN = Sphere at the origin. [Requires: R]<br  />
 SPHERE = Sphere at user supplied location. [Requires: x,y,z,R]<br  />
@@ -136,10 +144,11 @@ RPP= Rectangular ParalleliPiped. [Requires: xmin,xmax,ymin,ymax,zmin,zmax]<br  /
 RCC= Right Circular Cylinder. [Requires: x0,y0,z0, vx,vy,vz and R]<br  />
 SURFACE= Logical volume determined from a surface mesh. [Requires: a handle to a surface mesh]<br  />
 BOOLEAN= Boolean combination of other volumes. [Requires pairs of values: bool,volumeHandle]<br  />
-</p><dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created logical volume.</dd></dl>
+</p>
+<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created logical volume.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00474">474</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00550">550</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

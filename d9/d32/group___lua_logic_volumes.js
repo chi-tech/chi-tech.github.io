@@ -1,4 +1,4 @@
 var group___lua_logic_volumes =
 [
-    [ "chi_lua::chiLogicalVolumeCreate", "d9/d32/group___lua_logic_volumes.html#ga5ecdd09775b38d1aa8cbfa4322a6ae0c", null ]
+    [ "chi_lua::chiLogicalVolumeCreate", "d9/d32/group___lua_logic_volumes.html#gac362f65e2642b15efd6abf99d2224d54", null ]
 ];

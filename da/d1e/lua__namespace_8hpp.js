@@ -97,6 +97,7 @@ var lua__namespace_8hpp =
     [ "chiSimTest06_WDD", "da/d1e/lua__namespace_8hpp.html#ae8e1f580161141f97126c7850623bf90", null ],
     [ "chiSimTest91_PWLD", "da/d1e/lua__namespace_8hpp.html#a4e5bf99a40caa1596e702d714ff1bae9", null ],
     [ "chiSimTest92_DSA", "da/d1e/lua__namespace_8hpp.html#a9e976e2a589e4b6bb07731897e65d5c1", null ],
+    [ "chiSimTest93_RayTracing", "da/d1e/lua__namespace_8hpp.html#a057338c286599ba0017c23c88d5c28f5", null ],
     [ "chiSimTest_IP_MMS_L2error", "da/d1e/lua__namespace_8hpp.html#a01a1bdb540b24d85db13eab7d17848ee", null ],
     [ "chiSolverExecute", "da/d1e/lua__namespace_8hpp.html#ga8e117013f8cf267734dc7db4a8ee380a", null ],
     [ "chiSolverGetName", "da/d1e/lua__namespace_8hpp.html#gafa39c21eaa3e4ef3661512705b938cfc", null ],

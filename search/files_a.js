@@ -15,6 +15,16 @@ var searchData=
   ['meshtutorial_5f02_5f2dorthomesh_2eh_12',['MeshTutorial_02_2DOrthoMesh.h',['../d4/db5/_mesh_tutorial__02__2_d_ortho_mesh_8h.html',1,'']]],
   ['meshtutorial_5f03_5f3dorthomesh_2eh_13',['MeshTutorial_03_3DOrthoMesh.h',['../dd/df2/_mesh_tutorial__03__3_d_ortho_mesh_8h.html',1,'']]],
   ['meshtutorial_5f04_5fpredef2d_2eh_14',['MeshTutorial_04_Predef2d.h',['../d9/d2a/_mesh_tutorial__04___predef2d_8h.html',1,'']]],
-  ['module_5flua_5fregister_2eh_15',['module_lua_register.h',['../da/d96/module__lua__register_8h.html',1,'']]],
-  ['modules_5fmaindoc_5fpage_2eh_16',['modules_maindoc_page.h',['../dc/d1f/modules__maindoc__page_8h.html',1,'']]]
+  ['mg_5fdiffusion_5fbndry_2eh_15',['mg_diffusion_bndry.h',['../d6/d03/mg__diffusion__bndry_8h.html',1,'']]],
+  ['mg_5fdiffusion_5fsolver_2eh_16',['mg_diffusion_solver.h',['../db/d1d/mg__diffusion__solver_8h.html',1,'']]],
+  ['mgd_5f01_5fmain_5finit_2ecc_17',['mgd_01_main_init.cc',['../d1/d40/mgd__01__main__init_8cc.html',1,'']]],
+  ['mgd_5f01a_5finit_5fmaterials_2ecc_18',['mgd_01a_init_materials.cc',['../d1/d16/mgd__01a__init__materials_8cc.html',1,'']]],
+  ['mgd_5f01b_5fset_5fbc_2ecc_19',['mgd_01b_set_bc.cc',['../dd/d97/mgd__01b__set__bc_8cc.html',1,'']]],
+  ['mgd_5f01c_5fassemble_5fa_5fbext_2ecc_20',['mgd_01c_assemble_A_bext.cc',['../dd/dae/mgd__01c__assemble___a__bext_8cc.html',1,'']]],
+  ['mgd_5f03_5fmain_5fexec_2ecc_21',['mgd_03_main_exec.cc',['../df/d23/mgd__03__main__exec_8cc.html',1,'']]],
+  ['mgd_5f03c_5fasemble_5frhs_5fg_2ecc_22',['mgd_03c_asemble_rhs_g.cc',['../dd/df4/mgd__03c__asemble__rhs__g_8cc.html',1,'']]],
+  ['mgd_5f03e_5fsolve1g_2ecc_23',['mgd_03e_solve1g.cc',['../db/de6/mgd__03e__solve1g_8cc.html',1,'']]],
+  ['mgds_5flua_5futils_2ecc_24',['mgds_lua_utils.cc',['../d8/d6d/mgds__lua__utils_8cc.html',1,'']]],
+  ['mgds_5flua_5futils_2eh_25',['mgds_lua_utils.h',['../d3/d63/mgds__lua__utils_8h.html',1,'']]],
+  ['modules_5fmaindoc_5fpage_2eh_26',['modules_maindoc_page.h',['../dc/d1f/modules__maindoc__page_8h.html',1,'']]]
 ];
