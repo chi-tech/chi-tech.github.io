@@ -1,9 +1,9 @@
 var classchi__math_1_1_sparse_matrix =
 [
-    [ "ConstEntryReference", "dc/d4d/classchi__math_1_1_sparse_matrix_1_1_const_entry_reference.html", "dc/d4d/classchi__math_1_1_sparse_matrix_1_1_const_entry_reference" ],
+    [ "ConstEntryReference", "dd/dd3/structchi__math_1_1_sparse_matrix_1_1_const_entry_reference.html", "dd/dd3/structchi__math_1_1_sparse_matrix_1_1_const_entry_reference" ],
     [ "ConstRowIteratorContext", "dd/dda/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context.html", "dd/dda/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context" ],
     [ "EntriesIterator", "db/d06/classchi__math_1_1_sparse_matrix_1_1_entries_iterator.html", "db/d06/classchi__math_1_1_sparse_matrix_1_1_entries_iterator" ],
-    [ "EntryReference", "de/dd3/classchi__math_1_1_sparse_matrix_1_1_entry_reference.html", "de/dd3/classchi__math_1_1_sparse_matrix_1_1_entry_reference" ],
+    [ "EntryReference", "d9/dc6/structchi__math_1_1_sparse_matrix_1_1_entry_reference.html", "d9/dc6/structchi__math_1_1_sparse_matrix_1_1_entry_reference" ],
     [ "RowIteratorContext", "db/dd8/classchi__math_1_1_sparse_matrix_1_1_row_iterator_context.html", "db/dd8/classchi__math_1_1_sparse_matrix_1_1_row_iterator_context" ],
     [ "SparseMatrix", "de/d51/classchi__math_1_1_sparse_matrix.html#a1e9586e688fdbe00db5b133adab9d09e", null ],
     [ "SparseMatrix", "de/d51/classchi__math_1_1_sparse_matrix.html#a015165403ca21213e482ca1935494ea2", null ],
@@ -21,8 +21,8 @@ var classchi__math_1_1_sparse_matrix =
     [ "Row", "de/d51/classchi__math_1_1_sparse_matrix.html#a8de1d7f1c47a2ed130d79e83d40d9f1d", null ],
     [ "SetDiagonal", "de/d51/classchi__math_1_1_sparse_matrix.html#af69a51428ee9e7ffe16a2490849be58c", null ],
     [ "ValueIJ", "de/d51/classchi__math_1_1_sparse_matrix.html#aad7ccbd817b2ff08d51f7c6f652dcb29", null ],
-    [ "col_size", "de/d51/classchi__math_1_1_sparse_matrix.html#ac8c744b3f254d0e0985dd714a7cc4689", null ],
-    [ "row_size", "de/d51/classchi__math_1_1_sparse_matrix.html#a673a21d70376569430ac9e6bf9221f68", null ],
-    [ "rowI_indices", "de/d51/classchi__math_1_1_sparse_matrix.html#a2241c444e10aacf231ec80fafa16b728", null ],
-    [ "rowI_values", "de/d51/classchi__math_1_1_sparse_matrix.html#aa1ada343ae37f372bd3356a620f6226e", null ]
+    [ "col_size_", "de/d51/classchi__math_1_1_sparse_matrix.html#a0d065fa65470a3f216a98af68cf74664", null ],
+    [ "row_size_", "de/d51/classchi__math_1_1_sparse_matrix.html#ad9745bdaaa7a6e0b719cd6cd118d799d", null ],
+    [ "rowI_indices_", "de/d51/classchi__math_1_1_sparse_matrix.html#ab4765ddf6365446b20ef75bb89542402", null ],
+    [ "rowI_values_", "de/d51/classchi__math_1_1_sparse_matrix.html#a3f29d9a3a51fb0063f64238aa32818ec", null ]
 ];

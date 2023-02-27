@@ -1,6 +1,6 @@
 var group___lua_l_b_s_groupsets =
 [
-    [ "chi_lua::chiLBSCreateGroup", "d5/d03/group___lua_l_b_s_groupsets.html#ga81e7ad9a0fa3da8712c7da8ca6bd0a05", null ],
+    [ "chi_lua::chiLBSCreateGroup", "d5/d03/group___lua_l_b_s_groupsets.html#ga7d16e3fc369204834a671a6ecf34b564", null ],
     [ "chi_lua::chiLBSCreateGroupset", "d5/d03/group___lua_l_b_s_groupsets.html#gaf5d1e656f52f80b4615f022003d1b407", null ],
     [ "chi_lua::chiLBSGroupsetAddGroups", "d5/d03/group___lua_l_b_s_groupsets.html#ga01177a474f138bc1a8b2de984c5d19ae", null ],
     [ "chi_lua::chiLBSGroupsetSetAngleAggDiv", "d5/d03/group___lua_l_b_s_groupsets.html#ga80f2a61eab1d91be0b1a2fbb7eee248d", null ],

@@ -1,19 +1,20 @@
 var classcfem__diffusion_1_1_solver =
 [
     [ "BoundaryInfo", "de/dba/classcfem__diffusion_1_1_solver.html#ad6619d644a38357a386fc828e5ed715d", null ],
-    [ "BoundaryPreferences", "de/dba/classcfem__diffusion_1_1_solver.html#ad3dae699d6a94b93ba8c6e45a75a3b1f", null ],
+    [ "BoundaryPreferences", "de/dba/classcfem__diffusion_1_1_solver.html#a646d926299daf5e4697fece5cd60f160", null ],
     [ "Solver", "de/dba/classcfem__diffusion_1_1_solver.html#a1801bca8dac4b74e5b9d077ffc203fc7", null ],
-    [ "~Solver", "de/dba/classcfem__diffusion_1_1_solver.html#a05aab9052e7b916284b2068e3aaf13e6", null ],
-    [ "CallLua_iXYZFunction", "de/dba/classcfem__diffusion_1_1_solver.html#af5c2275d1a85d837dd22c670058b60fc", null ],
+    [ "~Solver", "de/dba/classcfem__diffusion_1_1_solver.html#aae2e5848097255706f976e8bfc142054", null ],
+    [ "CallLua_iXYZFunction", "de/dba/classcfem__diffusion_1_1_solver.html#aaa0c54182a78783589a3b69badd36b9e", null ],
     [ "Execute", "de/dba/classcfem__diffusion_1_1_solver.html#a589b8f163c1fc2f4b5cf05f7e7dc3517", null ],
     [ "Initialize", "de/dba/classcfem__diffusion_1_1_solver.html#a10935051ae7f5108f02f7188c45a196b", null ],
-    [ "A", "de/dba/classcfem__diffusion_1_1_solver.html#a18923724f29ccf5b9cc3388527e42b2f", null ],
-    [ "b", "de/dba/classcfem__diffusion_1_1_solver.html#aad8e70463f4832684c111c51ae89ac0a", null ],
-    [ "boundaries", "de/dba/classcfem__diffusion_1_1_solver.html#a6fee34f7b91af54dc340062eaac7f2d0", null ],
-    [ "boundary_preferences", "de/dba/classcfem__diffusion_1_1_solver.html#a9edcf27f1cf92f5dd876d84a0e71c636", null ],
-    [ "grid_ptr", "de/dba/classcfem__diffusion_1_1_solver.html#a8bb673860ca269d3dd9045a5d581ca30", null ],
-    [ "num_globl_dofs", "de/dba/classcfem__diffusion_1_1_solver.html#adc432648682ba0daf38d9f3da24312f4", null ],
-    [ "num_local_dofs", "de/dba/classcfem__diffusion_1_1_solver.html#a888359960687ea9d2438bbeadae71d25", null ],
-    [ "sdm_ptr", "de/dba/classcfem__diffusion_1_1_solver.html#a8e4fb75ba6304de08df3e56a95899b75", null ],
-    [ "x", "de/dba/classcfem__diffusion_1_1_solver.html#a66e14fed4f1a73bec1221b52bb2fddc5", null ]
+    [ "UpdateFieldFunctions", "de/dba/classcfem__diffusion_1_1_solver.html#afe7639a6dce1029188ca4d623bb6ae85", null ],
+    [ "A_", "de/dba/classcfem__diffusion_1_1_solver.html#a69a51b2993af2f56d01d5325763fe298", null ],
+    [ "b_", "de/dba/classcfem__diffusion_1_1_solver.html#a21fb9ef5e83faeb78ddf37b05897aae0", null ],
+    [ "boundaries_", "de/dba/classcfem__diffusion_1_1_solver.html#a31f612d09e3c9af45e89a5685efba41b", null ],
+    [ "boundary_preferences_", "de/dba/classcfem__diffusion_1_1_solver.html#a3273c0e81064862eaa9864e3355d5afc", null ],
+    [ "grid_ptr_", "de/dba/classcfem__diffusion_1_1_solver.html#a6bdbc82419d46b44a55c425c4b53e7ef", null ],
+    [ "num_globl_dofs_", "de/dba/classcfem__diffusion_1_1_solver.html#a289881f454a5c72203df894b8135891e", null ],
+    [ "num_local_dofs_", "de/dba/classcfem__diffusion_1_1_solver.html#aaaf63ed9c4305d13c52c4241d692edc4", null ],
+    [ "sdm_ptr_", "de/dba/classcfem__diffusion_1_1_solver.html#a5dd5051f80b198c1221aa82663771d57", null ],
+    [ "x_", "de/dba/classcfem__diffusion_1_1_solver.html#a502468121bc93600cc74b0f09f729563", null ]
 ];

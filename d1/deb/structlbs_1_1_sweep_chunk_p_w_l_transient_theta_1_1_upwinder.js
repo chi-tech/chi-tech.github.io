@@ -1,7 +1,7 @@
 var structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder =
 [
     [ "GetDownwindPsi", "d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html#a16d3facee9569e9c9fe95ee411f8ca3f", null ],
-    [ "GetUpwindPsi", "d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html#a13ca14ee8800ec494506a7fb556168b7", null ],
+    [ "GetUpwindPsi", "d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html#a67d49dd56ee9c74144d8b9ab52ef09ae", null ],
     [ "angle_num", "d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html#a4d871eaae46a6767d1a6cb4ad724f181", null ],
     [ "angle_set", "d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html#add9ca6bb056e01a83599146706049e3e", null ],
     [ "angle_set_index", "d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html#a66441d8316b0debe6f2dfc788bf9d6a7", null ],

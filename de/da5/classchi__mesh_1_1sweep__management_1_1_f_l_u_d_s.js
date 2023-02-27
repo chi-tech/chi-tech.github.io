@@ -1,7 +1,7 @@
 var classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s =
 [
     [ "~FLUDS", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ab6eeabb9c42cb0d613451bb1c5d45f0b", null ],
-    [ "NLOutgoingPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a626a37b82783ef954efe747276ce7308", null ],
+    [ "NLOutgoingPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a3d8978e88e90a3c3deae6f4ec4626f47", null ],
     [ "NLUpwindPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a2836c75d43a21bd8b2cd54cf43e2e6d9", null ],
     [ "OutgoingPsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ac4e8bca2e7b6d3f1582ddcfe631745d4", null ],
     [ "SetReferencePsi", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a13959c72a505b6141751c0abe2128779", null ],
@@ -14,5 +14,6 @@ var classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s =
     [ "local_psi_max_elements", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#abc65d437f12ade74d40869754dab77f7", null ],
     [ "local_psi_stride", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a489e71e25ac2d9ca0565b9ebdaa64b29", null ],
     [ "num_face_categories", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#afe3db25fe3f4a65984a1528810510704", null ],
-    [ "prelocI_face_dof_count", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#af68baacf4886b68cc6bb93c84f672297", null ]
+    [ "prelocI_face_dof_count", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#af68baacf4886b68cc6bb93c84f672297", null ],
+    [ "spds_", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a148d9450b00bc5ab2dadcfe6645684c4", null ]
 ];

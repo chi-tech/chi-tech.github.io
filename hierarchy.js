@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "lbs::AGSSchemeEntry", "d9/d24/classlbs_1_1_a_g_s_scheme_entry.html", null ],
     [ "chi_mesh::sweep_management::AngleAggregation", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html", null ],
     [ "chi_mesh::sweep_management::AngleSet", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html", null ],
     [ "chi_mesh::sweep_management::AngleSetGroup", "df/db6/classchi__mesh_1_1sweep__management_1_1_angle_set_group.html", null ],
@@ -28,6 +29,7 @@ var hierarchy =
       [ "chi_diffusion::BoundaryRobin", "d6/d58/classchi__diffusion_1_1_boundary_robin.html", null ]
     ] ],
     [ "dfem_diffusion::Boundary", "dd/d4b/classdfem__diffusion_1_1_boundary.html", null ],
+    [ "fv_diffusion::Boundary", "d2/df4/classfv__diffusion_1_1_boundary.html", null ],
     [ "mg_diffusion::Boundary", "d6/dea/classmg__diffusion_1_1_boundary.html", null ],
     [ "chi_mesh::sweep_management::BoundaryBase", "dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html", [
       [ "chi_mesh::sweep_management::BoundaryIncidentHeterogenous", "dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html", null ],
@@ -36,6 +38,7 @@ var hierarchy =
       [ "chi_mesh::sweep_management::BoundaryVacuum", "dc/d41/classchi__mesh_1_1sweep__management_1_1_boundary_vacuum.html", null ]
     ] ],
     [ "lbs::acceleration::BoundaryCondition", "d5/df7/structlbs_1_1acceleration_1_1_boundary_condition.html", null ],
+    [ "lbs::BoundaryPreference", "d4/d8e/structlbs_1_1_boundary_preference.html", null ],
     [ "chi_mesh::UnpartitionedMesh::BoundBox", "d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html", null ],
     [ "chi_data_types::ByteArray", "d5/d5b/classchi__data__types_1_1_byte_array.html", null ],
     [ "chi_math::CDFSampler", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html", null ],
@@ -61,7 +64,7 @@ var hierarchy =
     [ "chi_objects::ChiMPICommunicatorSet", "d8/da3/classchi__objects_1_1_chi_m_p_i_communicator_set.html", null ],
     [ "chi_objects::ChiTimer", "d1/d87/classchi__objects_1_1_chi_timer.html", null ],
     [ "chi_mesh::LocalCellHandler::const_iterator", "d3/dda/classchi__mesh_1_1_local_cell_handler_1_1const__iterator.html", null ],
-    [ "chi_math::SparseMatrix::ConstEntryReference", "dc/d4d/classchi__math_1_1_sparse_matrix_1_1_const_entry_reference.html", null ],
+    [ "chi_math::SparseMatrix::ConstEntryReference", "dd/dd3/structchi__math_1_1_sparse_matrix_1_1_const_entry_reference.html", null ],
     [ "chi_math::SparseMatrix::ConstRowIteratorContext::ConstRowIterator", "d8/d06/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_row_iterator.html", null ],
     [ "chi_math::SparseMatrix::ConstRowIteratorContext", "dd/dda/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context.html", null ],
     [ "lbs::PointSource::ContainingCellInfo", "da/da1/structlbs_1_1_point_source_1_1_containing_cell_info.html", null ],
@@ -74,7 +77,7 @@ var hierarchy =
     [ "chi_mesh::mesh_cutting::ECI", "d0/d45/structchi__mesh_1_1mesh__cutting_1_1_e_c_i.html", null ],
     [ "chi_mesh::Edge", "d9/d36/structchi__mesh_1_1_edge.html", null ],
     [ "chi_math::SparseMatrix::EntriesIterator", "db/d06/classchi__math_1_1_sparse_matrix_1_1_entries_iterator.html", null ],
-    [ "chi_math::SparseMatrix::EntryReference", "de/dd3/classchi__math_1_1_sparse_matrix_1_1_entry_reference.html", null ],
+    [ "chi_math::SparseMatrix::EntryReference", "d9/dc6/structchi__math_1_1_sparse_matrix_1_1_entry_reference.html", null ],
     [ "chi_objects::ChiLog::Event", "de/de5/structchi__objects_1_1_chi_log_1_1_event.html", null ],
     [ "chi_objects::ChiLog::EventInfo", "dd/dd6/structchi__objects_1_1_chi_log_1_1_event_info.html", null ],
     [ "chi_mesh::Face", "d4/dd2/structchi__mesh_1_1_face.html", null ],
@@ -88,10 +91,10 @@ var hierarchy =
     [ "chi_mesh::FFICellIntersection", "dd/d9c/structchi__mesh_1_1_f_f_i_cell_intersection.html", null ],
     [ "chi_mesh::FFIFaceEdgeIntersection", "d5/d06/structchi__mesh_1_1_f_f_i_face_edge_intersection.html", null ],
     [ "chi_physics::FieldFunction", "df/de9/classchi__physics_1_1_field_function.html", null ],
-    [ "chi_physics::FieldFunction2", "dd/d5e/classchi__physics_1_1_field_function2.html", null ],
     [ "chi_mesh::FieldFunctionContext", "d3/d97/structchi__mesh_1_1_field_function_context.html", null ],
     [ "chi_mesh::FieldFunctionInterpolation", "d5/dd4/classchi__mesh_1_1_field_function_interpolation.html", [
       [ "chi_mesh::FieldFunctionInterpolationLine", "d5/d14/classchi__mesh_1_1_field_function_interpolation_line.html", null ],
+      [ "chi_mesh::FieldFunctionInterpolationPoint", "d6/d29/classchi__mesh_1_1_field_function_interpolation_point.html", null ],
       [ "chi_mesh::FieldFunctionInterpolationSlice", "d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html", null ],
       [ "chi_mesh::FieldFunctionInterpolationVolume", "db/dd5/classchi__mesh_1_1_field_function_interpolation_volume.html", null ]
     ] ],
@@ -104,6 +107,7 @@ var hierarchy =
     [ "chi_mesh::GlobalCellHandler", "d7/d24/classchi__mesh_1_1_global_cell_handler.html", null ],
     [ "chi_math::GolubFischer", "d7/d89/classchi__math_1_1_golub_fischer.html", null ],
     [ "chi_graph::GraphVertex", "da/d1d/structchi__graph_1_1_graph_vertex.html", null ],
+    [ "chi_mesh::GridFaceHistogram", "d1/df6/classchi__mesh_1_1_grid_face_histogram.html", null ],
     [ "chi_math::AngularQuadrature::HarmonicIndices", "d7/d0d/structchi__math_1_1_angular_quadrature_1_1_harmonic_indices.html", null ],
     [ "chi_mesh::sweep_management::INCOMING_FACE_INFO", "d8/daf/structchi__mesh_1_1sweep__management_1_1_i_n_c_o_m_i_n_g___f_a_c_e___i_n_f_o.html", null ],
     [ "chi_math::finite_element::InternalQuadraturePointData", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html", [
@@ -112,11 +116,21 @@ var hierarchy =
     [ "chi_graph::DirectedGraph::VertexAccessor::iterator", "dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html", null ],
     [ "chi_mesh::LocalCellHandler::iterator", "d2/dd3/classchi__mesh_1_1_local_cell_handler_1_1iterator.html", null ],
     [ "mg_diffusion::KSPAppContext", "dc/da1/structmg__diffusion_1_1_k_s_p_app_context.html", null ],
-    [ "lbs::KSPDataContext", "d4/d4c/structlbs_1_1_k_s_p_data_context.html", null ],
     [ "lbs::LBSGroup", "d5/d86/classlbs_1_1_l_b_s_group.html", null ],
     [ "lbs::LBSGroupset", "d2/db6/classlbs_1_1_l_b_s_groupset.html", null ],
     [ "chi_mesh::UnpartitionedMesh::LightWeightCell", "da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html", null ],
     [ "chi_mesh::UnpartitionedMesh::LightWeightFace", "da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html", null ],
+    [ "chi_math::LinearSolver< MatType, VecType, SolverType >", "dd/d52/classchi__math_1_1_linear_solver.html", [
+      [ "lbs::AGSLinearSolver< MatType, VecType, SolverType >", "d9/df9/classlbs_1_1_a_g_s_linear_solver.html", null ],
+      [ "lbs::WGSLinearSolver< MatType, VecType, SolverType >", "d7/d8c/classlbs_1_1_w_g_s_linear_solver.html", null ]
+    ] ],
+    [ "chi_math::LinearSolverContext< MatType, VecType >", "d0/dfb/structchi__math_1_1_linear_solver_context.html", [
+      [ "lbs::AGSContext< MatType, VecType, SolverType >", "d4/d2a/structlbs_1_1_a_g_s_context.html", null ],
+      [ "lbs::WGSContext< MatType, VecType, SolverType >", "dd/ddd/structlbs_1_1_w_g_s_context.html", [
+        [ "lbs::MIPWGSContext< MatType, VecType, SolverType >", "d4/dd2/structlbs_1_1_m_i_p_w_g_s_context.html", null ],
+        [ "lbs::SweepWGSContext< MatType, VecType, SolverType >", "d9/df7/structlbs_1_1_sweep_w_g_s_context.html", null ]
+      ] ]
+    ] ],
     [ "chi_mesh::LocalCellHandler", "d7/d36/classchi__mesh_1_1_local_cell_handler.html", null ],
     [ "chi_mesh::LogicalVolume", "d0/d1e/classchi__mesh_1_1_logical_volume.html", [
       [ "chi_mesh::BooleanLogicalVolume", "da/dca/classchi__mesh_1_1_boolean_logical_volume.html", null ],
@@ -141,14 +155,16 @@ var hierarchy =
     [ "chi_math::NonLinearFunction", "d6/dc4/classchi__math_1_1_non_linear_function.html", null ],
     [ "chi_mesh::UnpartitionedMesh::Options", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html", null ],
     [ "lbs::acceleration::DiffusionMIPSolver::Options", "d9/dd8/structlbs_1_1acceleration_1_1_diffusion_m_i_p_solver_1_1_options.html", null ],
+    [ "lbs::DiscOrdTransientSolver::Options", "d4/d3b/structlbs_1_1_disc_ord_transient_solver_1_1_options.html", null ],
     [ "lbs::Options", "dc/dcd/structlbs_1_1_options.html", null ],
-    [ "lbs::TransientSolver::Options", "d5/d44/structlbs_1_1_transient_solver_1_1_options.html", null ],
     [ "std::ostream", null, [
       [ "chi_objects::DummyStream", "d7/d40/structchi__objects_1_1_dummy_stream.html", null ]
     ] ],
     [ "chi_math::PETScUtils::PETScSolverSetup", "d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html", null ],
     [ "lbs::PointSource", "dc/d4f/classlbs_1_1_point_source.html", null ],
     [ "chi_mesh::PolyFace", "d4/ddb/structchi__mesh_1_1_poly_face.html", null ],
+    [ "chi_math::PreconditionerContext< PCType, VecType >", "d6/db8/structchi__math_1_1_preconditioner_context.html", null ],
+    [ "chi_physics::TransportCrossSections::Precursor", "d1/da6/structchi__physics_1_1_transport_cross_sections_1_1_precursor.html", null ],
     [ "chi_math::Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html", [
       [ "chi_math::QuadratureConical", "da/d37/classchi__math_1_1_quadrature_conical.html", null ],
       [ "chi_math::QuadratureGaussChebyshev", "d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev.html", null ],
@@ -167,7 +183,7 @@ var hierarchy =
     [ "chi_mesh::RayTracerOutputInformation", "da/d07/structchi__mesh_1_1_ray_tracer_output_information.html", null ],
     [ "chi_math::TensorRNX< R, N, NumberFormat >::RecursiveAccessor< R2 >", "d3/daa/structchi__math_1_1_tensor_r_n_x_1_1_recursive_accessor.html", null ],
     [ "chi_objects::ChiLog::RepeatingEvent", "da/d50/classchi__objects_1_1_chi_log_1_1_repeating_event.html", null ],
-    [ "lbs_adjoint::ResponseFunctionDesignation", "d2/d7f/structlbs__adjoint_1_1_response_function_designation.html", null ],
+    [ "lbs::ResponseFunctionDesignation", "d6/d34/structlbs_1_1_response_function_designation.html", null ],
     [ "chi_math::SparseMatrix::RowIteratorContext::RowIterator", "d2/d97/classchi__math_1_1_sparse_matrix_1_1_row_iterator_context_1_1_row_iterator.html", null ],
     [ "chi_math::SparseMatrix::RowIteratorContext", "db/dd8/classchi__math_1_1_sparse_matrix_1_1_row_iterator_context.html", null ],
     [ "chi_mesh::sweep_management::SweepScheduler::RULE_VALUES", "d2/d06/structchi__mesh_1_1sweep__management_1_1_sweep_scheduler_1_1_r_u_l_e___v_a_l_u_e_s.html", null ],
@@ -179,12 +195,16 @@ var hierarchy =
       [ "cfem_diffusion::Solver", "de/dba/classcfem__diffusion_1_1_solver.html", null ],
       [ "chi_diffusion::Solver", "d6/d32/classchi__diffusion_1_1_solver.html", null ],
       [ "dfem_diffusion::Solver", "df/ddc/classdfem__diffusion_1_1_solver.html", null ],
-      [ "lbs::SteadySolver", "d9/d05/classlbs_1_1_steady_solver.html", [
-        [ "lbs::KEigenvalueSolver", "d7/d41/classlbs_1_1_k_eigenvalue_solver.html", [
-          [ "lbs::TransientSolver", "da/dc0/classlbs_1_1_transient_solver.html", null ]
+      [ "fv_diffusion::Solver", "d1/dd1/classfv__diffusion_1_1_solver.html", null ],
+      [ "lbs::LBSSolver", "dc/db7/classlbs_1_1_l_b_s_solver.html", [
+        [ "lbs::DiscOrdSteadyStateSolver", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html", [
+          [ "lbs::DiscOrdKEigenvalueSolver", "d4/dd0/classlbs_1_1_disc_ord_k_eigenvalue_solver.html", [
+            [ "lbs::DiscOrdTransientSolver", "d6/d7b/classlbs_1_1_disc_ord_transient_solver.html", null ]
+          ] ],
+          [ "lbs::DiscOrdSteadyStateAdjointSolver", "d6/d0f/classlbs_1_1_disc_ord_steady_state_adjoint_solver.html", null ],
+          [ "lbs_curvilinear::DiscOrdSteadyStateSolver", "df/de3/classlbs__curvilinear_1_1_disc_ord_steady_state_solver.html", null ]
         ] ],
-        [ "lbs_adjoint::AdjointSolver", "df/d5b/classlbs__adjoint_1_1_adjoint_solver.html", null ],
-        [ "lbs_curvilinear::Solver", "d9/df7/classlbs__curvilinear_1_1_solver.html", null ]
+        [ "lbs::MIPSteadyStateSolver", "d5/d5f/classlbs_1_1_m_i_p_steady_state_solver.html", null ]
       ] ],
       [ "mg_diffusion::Solver", "d4/d4c/classmg__diffusion_1_1_solver.html", null ]
     ] ],
@@ -226,8 +246,10 @@ var hierarchy =
     [ "chi_mesh::TensorRank2Dim3", "d8/d2c/structchi__mesh_1_1_tensor_rank2_dim3.html", null ],
     [ "chi_math::TensorRNX< R, N, NumberFormat >", "d1/dbe/structchi__math_1_1_tensor_r_n_x.html", null ],
     [ "chi_math::TensorRNX< 2, N, NumberFormat >", "d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4.html", null ],
+    [ "chi_math::LinearSolver< MatType, VecType, SolverType >::ToleranceOptions", "db/d8f/structchi__math_1_1_linear_solver_1_1_tolerance_options.html", null ],
     [ "lbs::LBSGroupset::TwoGridAccelerationInfo", "de/d52/structlbs_1_1_l_b_s_groupset_1_1_two_grid_acceleration_info.html", null ],
     [ "lbs::acceleration::TwoGridCollapsedInfo", "db/d99/structlbs_1_1acceleration_1_1_two_grid_collapsed_info.html", null ],
+    [ "mg_diffusion::TwoGridCollapsedInfo", "d6/d5b/structmg__diffusion_1_1_two_grid_collapsed_info.html", null ],
     [ "lbs::UnitCellMatrices", "dc/d37/structlbs_1_1_unit_cell_matrices.html", null ],
     [ "chi_math::finite_element::UnitIntegralData", "de/d0d/classchi__math_1_1finite__element_1_1_unit_integral_data.html", null ],
     [ "chi_math::Unknown", "d8/df3/classchi__math_1_1_unknown.html", null ],
@@ -245,5 +267,7 @@ var hierarchy =
     [ "chi_mesh::VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", [
       [ "chi_mesh::VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", null ],
       [ "chi_mesh::VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", null ]
-    ] ]
+    ] ],
+    [ "vtkNew< T >", "db/ddd/classvtk_new.html", null ],
+    [ "vtkSmartPointer< T >", "d5/d8c/classvtk_smart_pointer.html", null ]
 ];

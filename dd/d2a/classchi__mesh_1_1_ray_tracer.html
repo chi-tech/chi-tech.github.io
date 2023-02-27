@@ -92,7 +92,6 @@ $(document).ready(function(){initNavTree('dd/d2a/classchi__mesh_1_1_ray_tracer.h
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle"><div class="title">chi_mesh::RayTracer Class Reference</div></div>
@@ -110,11 +109,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a810e8f03b384b6a787beec32736d8628"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d07/structchi__mesh_1_1_ray_tracer_output_information.html">RayTracerOutputInformation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a810e8f03b384b6a787beec32736d8628">TraceIncidentRay</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">Cell</a> &amp;cell, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">Vector3</a> &amp;pos_i, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">Vector3</a> &amp;omega_i)</td></tr>
 <tr class="separator:a810e8f03b384b6a787beec32736d8628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr class="memitem:a6e72e19577062900837e7fb9552f42f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a6e72e19577062900837e7fb9552f42f9">perform_concavity_checks</a> = true</td></tr>
-<tr class="separator:a6e72e19577062900837e7fb9552f42f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ab479a6370bd5bd95d5843b0662f2dae5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#ab479a6370bd5bd95d5843b0662f2dae5">Grid</a> () const</td></tr>
@@ -130,16 +124,18 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a06427ac04b150edd460163924309cf8f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a06427ac04b150edd460163924309cf8f">reference_grid</a></td></tr>
-<tr class="separator:a06427ac04b150edd460163924309cf8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe44b57585e7695f217f255cbd8522c3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#abe44b57585e7695f217f255cbd8522c3">cell_sizes</a></td></tr>
-<tr class="separator:abe44b57585e7695f217f255cbd8522c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d3f2a3c58c16f37019858f88d17e5a9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a2d3f2a3c58c16f37019858f88d17e5a9">epsilon_nudge</a> = 1.0e-8</td></tr>
-<tr class="separator:a2d3f2a3c58c16f37019858f88d17e5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2c24867beb8730318d3480add28b464"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#ac2c24867beb8730318d3480add28b464">backward_tolerance</a> = 1.0e-10</td></tr>
-<tr class="separator:ac2c24867beb8730318d3480add28b464"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82fa680255bd23f8c512f8c13c71c20d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a82fa680255bd23f8c512f8c13c71c20d">extension_distance</a> = 1.0e5</td></tr>
-<tr class="separator:a82fa680255bd23f8c512f8c13c71c20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a111faf80edaa45f6404197b8ee5bceb0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a111faf80edaa45f6404197b8ee5bceb0">reference_grid_</a></td></tr>
+<tr class="separator:a111faf80edaa45f6404197b8ee5bceb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dacc348742fce589002f9fbc46b9381"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a4dacc348742fce589002f9fbc46b9381">cell_sizes_</a></td></tr>
+<tr class="separator:a4dacc348742fce589002f9fbc46b9381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a568b086dfb42154a593dc2d0b28c0dad"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a568b086dfb42154a593dc2d0b28c0dad">epsilon_nudge_</a> = 1.0e-8</td></tr>
+<tr class="separator:a568b086dfb42154a593dc2d0b28c0dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf6652e74911ed7909dfc7cc6c104d2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a9cf6652e74911ed7909dfc7cc6c104d2">backward_tolerance_</a> = 1.0e-10</td></tr>
+<tr class="separator:a9cf6652e74911ed7909dfc7cc6c104d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626222cd2f88212a5e154d36a6bfa4b9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a626222cd2f88212a5e154d36a6bfa4b9">extension_distance_</a> = 1.0e5</td></tr>
+<tr class="separator:a626222cd2f88212a5e154d36a6bfa4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407277193388eefe8597928723900236"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html#a407277193388eefe8597928723900236">perform_concavity_checks_</a> = true</td></tr>
+<tr class="separator:a407277193388eefe8597928723900236"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Raytracer object. </p>
@@ -516,8 +512,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
-<a id="ac2c24867beb8730318d3480add28b464" name="ac2c24867beb8730318d3480add28b464"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2c24867beb8730318d3480add28b464">&#9670;&nbsp;</a></span>backward_tolerance</h2>
+<a id="a9cf6652e74911ed7909dfc7cc6c104d2" name="a9cf6652e74911ed7909dfc7cc6c104d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf6652e74911ed7909dfc7cc6c104d2">&#9670;&nbsp;</a></span>backward_tolerance_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -526,7 +522,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double chi_mesh::RayTracer::backward_tolerance = 1.0e-10</td>
+          <td class="memname">double chi_mesh::RayTracer::backward_tolerance_ = 1.0e-10</td>
         </tr>
       </table>
   </td>
@@ -540,8 +536,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abe44b57585e7695f217f255cbd8522c3" name="abe44b57585e7695f217f255cbd8522c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe44b57585e7695f217f255cbd8522c3">&#9670;&nbsp;</a></span>cell_sizes</h2>
+<a id="a4dacc348742fce589002f9fbc46b9381" name="a4dacc348742fce589002f9fbc46b9381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dacc348742fce589002f9fbc46b9381">&#9670;&nbsp;</a></span>cell_sizes_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -550,7 +546,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;double&gt; chi_mesh::RayTracer::cell_sizes</td>
+          <td class="memname">std::vector&lt;double&gt; chi_mesh::RayTracer::cell_sizes_</td>
         </tr>
       </table>
   </td>
@@ -564,8 +560,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2d3f2a3c58c16f37019858f88d17e5a9" name="a2d3f2a3c58c16f37019858f88d17e5a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d3f2a3c58c16f37019858f88d17e5a9">&#9670;&nbsp;</a></span>epsilon_nudge</h2>
+<a id="a568b086dfb42154a593dc2d0b28c0dad" name="a568b086dfb42154a593dc2d0b28c0dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a568b086dfb42154a593dc2d0b28c0dad">&#9670;&nbsp;</a></span>epsilon_nudge_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -574,7 +570,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double chi_mesh::RayTracer::epsilon_nudge = 1.0e-8</td>
+          <td class="memname">double chi_mesh::RayTracer::epsilon_nudge_ = 1.0e-8</td>
         </tr>
       </table>
   </td>
@@ -588,8 +584,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a82fa680255bd23f8c512f8c13c71c20d" name="a82fa680255bd23f8c512f8c13c71c20d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82fa680255bd23f8c512f8c13c71c20d">&#9670;&nbsp;</a></span>extension_distance</h2>
+<a id="a626222cd2f88212a5e154d36a6bfa4b9" name="a626222cd2f88212a5e154d36a6bfa4b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a626222cd2f88212a5e154d36a6bfa4b9">&#9670;&nbsp;</a></span>extension_distance_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -598,7 +594,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double chi_mesh::RayTracer::extension_distance = 1.0e5</td>
+          <td class="memname">double chi_mesh::RayTracer::extension_distance_ = 1.0e5</td>
         </tr>
       </table>
   </td>
@@ -612,24 +608,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6e72e19577062900837e7fb9552f42f9" name="a6e72e19577062900837e7fb9552f42f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e72e19577062900837e7fb9552f42f9">&#9670;&nbsp;</a></span>perform_concavity_checks</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool chi_mesh::RayTracer::perform_concavity_checks = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d8/dc8/raytracing_8h_source.html#l00030">30</a> of file <a class="el" href="../../d8/dc8/raytracing_8h_source.html">raytracing.h</a>.</p>
-
-</div>
-</div>
-<a id="a06427ac04b150edd460163924309cf8f" name="a06427ac04b150edd460163924309cf8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06427ac04b150edd460163924309cf8f">&#9670;&nbsp;</a></span>reference_grid</h2>
+<a id="a407277193388eefe8597928723900236" name="a407277193388eefe8597928723900236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a407277193388eefe8597928723900236">&#9670;&nbsp;</a></span>perform_concavity_checks_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -638,7 +618,31 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>&amp; chi_mesh::RayTracer::reference_grid</td>
+          <td class="memname">bool chi_mesh::RayTracer::perform_concavity_checks_ = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/dc8/raytracing_8h_source.html#l00029">29</a> of file <a class="el" href="../../d8/dc8/raytracing_8h_source.html">raytracing.h</a>.</p>
+
+</div>
+</div>
+<a id="a111faf80edaa45f6404197b8ee5bceb0" name="a111faf80edaa45f6404197b8ee5bceb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111faf80edaa45f6404197b8ee5bceb0">&#9670;&nbsp;</a></span>reference_grid_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>&amp; chi_mesh::RayTracer::reference_grid_</td>
         </tr>
       </table>
   </td>

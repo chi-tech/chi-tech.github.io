@@ -20,10 +20,10 @@ var classchi__math_1_1_cell_mapping =
     [ "NumNodes", "d8/d08/classchi__math_1_1_cell_mapping.html#a6809460aa9d92037fbf0bf18b76c9946", null ],
     [ "ShapeValue", "d8/d08/classchi__math_1_1_cell_mapping.html#a7ff3323d6a12556d95dbaf6a48cac9b5", null ],
     [ "ShapeValues", "d8/d08/classchi__math_1_1_cell_mapping.html#a50116a099ed9021229818057a1d6e6ce", null ],
-    [ "face_node_mappings", "d8/d08/classchi__math_1_1_cell_mapping.html#a4a76bf84ed4e4ef1857abfce88ebe671", null ],
-    [ "m_areas", "d8/d08/classchi__math_1_1_cell_mapping.html#aaf12b307d2ef56414e5a2ffecd1abf4a", null ],
-    [ "m_cell", "d8/d08/classchi__math_1_1_cell_mapping.html#a092bb6cd81723b773e30ed9831c7296d", null ],
-    [ "m_grid_ptr", "d8/d08/classchi__math_1_1_cell_mapping.html#af0a62d4037a04a92d8e95c0771761dd0", null ],
-    [ "m_num_nodes", "d8/d08/classchi__math_1_1_cell_mapping.html#ae77e6cec8f05fe3cff77c5771fcad48d", null ],
-    [ "m_volume", "d8/d08/classchi__math_1_1_cell_mapping.html#a360506baf36d807ae5f5c4add860e780", null ]
+    [ "areas_", "d8/d08/classchi__math_1_1_cell_mapping.html#ade1a72dc964c9315c8c0958ed9a82391", null ],
+    [ "cell_", "d8/d08/classchi__math_1_1_cell_mapping.html#afe826aad18eb77ccb726f4f5a679a89a", null ],
+    [ "face_node_mappings_", "d8/d08/classchi__math_1_1_cell_mapping.html#a47ff5ece9a2cbd654eee1994140f1f5d", null ],
+    [ "grid_ptr_", "d8/d08/classchi__math_1_1_cell_mapping.html#af3857dbf3a43b1aae086f9cde44463e1", null ],
+    [ "num_nodes_", "d8/d08/classchi__math_1_1_cell_mapping.html#aa196c7b4859f4162210952083e2de3b1", null ],
+    [ "volume_", "d8/d08/classchi__math_1_1_cell_mapping.html#a89041f0966d416eadd1546cdf7743916", null ]
 ];

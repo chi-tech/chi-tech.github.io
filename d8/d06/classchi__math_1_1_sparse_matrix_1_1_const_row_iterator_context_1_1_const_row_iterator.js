@@ -7,6 +7,6 @@ var classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_ro
     [ "operator++", "d8/d06/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_row_iterator.html#a1bf2316651b5564713fa0010d80744be", null ],
     [ "operator++", "d8/d06/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_row_iterator.html#a78ed137f34bc1026b68695a2416d8dd9", null ],
     [ "operator==", "d8/d06/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_row_iterator.html#aec5e9e3aec2dd373a32680dd02434523", null ],
-    [ "m_context", "d8/d06/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_row_iterator.html#a8a853a8539551d5864099efb018de7d4", null ],
-    [ "m_ref_entry", "d8/d06/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_row_iterator.html#ac6478a22fc53727511b463707dbed7b5", null ]
+    [ "context_", "d8/d06/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_row_iterator.html#acac880adedbb848000168c752f29f8e6", null ],
+    [ "ref_entry_", "d8/d06/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_row_iterator.html#aaa2c34dee0fdd1fdf87b62b8b98230aa", null ]
 ];

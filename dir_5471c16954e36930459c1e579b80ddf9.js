@@ -1,5 +1,13 @@
 var dir_5471c16954e36930459c1e579b80ddf9 =
 [
+    [ "chi_grid_face_histogram.cc", "d6/d31/chi__grid__face__histogram_8cc.html", null ],
+    [ "chi_grid_face_histogram.h", "db/d40/chi__grid__face__histogram_8h.html", [
+      [ "chi_mesh::GridFaceHistogram", "d1/df6/classchi__mesh_1_1_grid_face_histogram.html", "d1/df6/classchi__mesh_1_1_grid_face_histogram" ]
+    ] ],
+    [ "chi_grid_vtk_utils.h", "dd/d9b/chi__grid__vtk__utils_8h.html", "dd/d9b/chi__grid__vtk__utils_8h" ],
+    [ "chi_grid_vtk_utils_00_celluploading.cc", "d3/d42/chi__grid__vtk__utils__00__celluploading_8cc.html", null ],
+    [ "chi_grid_vtk_utils_01_reading.cc", "d5/de8/chi__grid__vtk__utils__01__reading_8cc.html", null ],
+    [ "chi_grid_vtk_utils_04_writing.cc", "d8/d69/chi__grid__vtk__utils__04__writing_8cc.html", null ],
     [ "chi_meshcontinuum.h", "d0/db3/chi__meshcontinuum_8h.html", [
       [ "chi_mesh::MeshContinuum", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html", "d3/d1c/classchi__mesh_1_1_mesh_continuum" ]
     ] ],

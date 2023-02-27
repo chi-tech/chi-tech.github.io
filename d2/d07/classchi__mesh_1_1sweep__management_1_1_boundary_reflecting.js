@@ -4,7 +4,7 @@ var classchi__mesh_1_1sweep__management_1_1_boundary_reflecting =
     [ "CellVec", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a53ed02723eba88f6b059e64cb957d181", null ],
     [ "DOFVec", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a5dd8a459cbcaf55547c88d510055b5bf", null ],
     [ "FaceVec", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#ad5e8df2e983227a520f07e53d808ccf5", null ],
-    [ "BoundaryReflecting", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a68028e342573cfb9938cca59601a58a5", null ],
+    [ "BoundaryReflecting", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a7dee66891120b3acc1fb2a13e4bd9ad9", null ],
     [ "CheckAnglesReadyStatus", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a12e60d5562c37a2984c2ae0c5b50f4fb", null ],
     [ "HeterogenousPsiIncoming", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a8b8dddedef303cc9099cd80026a69223", null ],
     [ "HeterogenousPsiOutgoing", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a273b3907bc0c67833a3e2f90a6696fc3", null ],

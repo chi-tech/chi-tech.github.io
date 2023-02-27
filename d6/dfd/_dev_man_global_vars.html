@@ -103,10 +103,10 @@ Global variables available</h1>
 </ul>
 <p >A number of stacks are also declared. They are basically arrays of shared pointers (i.e., <code>std::shared_ptr</code>)</p>
 <p >There are also a number of secondary global variables that assist developers with coding. They are:</p><ul>
-<li><code><a class="el" href="../../d2/d6e/classchi_1_1run__time.html#a2dbc50c07de3454377be064156438bd9">chi::run_time::input_file_name</a></code> Holds the input file name if supplied.</li>
-<li><code><a class="el" href="../../d2/d6e/classchi_1_1run__time.html#a5d5ce4132f9863270d7fd85df8463a0d">chi::run_time::termination_posted</a></code> A flag used during interactive mode.</li>
-<li><code><a class="el" href="../../d2/d6e/classchi_1_1run__time.html#a9662a95b2695be3dd3412fc37319d7ae">chi::run_time::sim_option_interactive</a></code> A flag indicating whether the code is run in interactive mode.</li>
-<li><code><a class="el" href="../../d2/d6e/classchi_1_1run__time.html#a8c6ee6a42b670e90d0d99a85dbdeec1a">chi::run_time::allow_petsc_error_handler</a></code> A flag indicating whether the allow the native PETSC error handler.</li>
+<li><code>chi::run_time::input_file_name</code> Holds the input file name if supplied.</li>
+<li><code>chi::run_time::termination_posted</code> A flag used during interactive mode.</li>
+<li><code>chi::run_time::sim_option_interactive</code> A flag indicating whether the code is run in interactive mode.</li>
+<li><code>chi::run_time::allow_petsc_error_handler</code> A flag indicating whether the allow the native PETSC error handler.</li>
 </ul>
 <h2><a class="anchor" id="devman2_sec0_3"></a>
 Connecting to the global data block</h2>
@@ -134,14 +134,13 @@ Connecting to the global data block</h2>
 <div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#ac61de38bf878913b59c570995346052e">chi::solver_stack</a>;</div>
 <div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d">chi::material_stack</a>;</div>
 <div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#af2077efc5802d64a2ae52105384d7605">chi::trnsprt_xs_stack</a>;</div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a92e3268d2c40f778d7434f6ea9448b26">chi::fieldfunc_stack</a>;</div>
+<div class="line">chi::fieldfunc_stack;</div>
 <div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#af95e663696f1bb453de942ae30e765e7">chi::quadrature_stack</a>;</div>
 <div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a5b93d2f569533bb5354f4eb19b96e10c">chi::angular_quadrature_stack</a>;</div>
 <div class="ttc" id="aclasschi_html_a22aa55302a909b4e4d9d64fbfedd9b5e"><div class="ttname"><a href="../../d4/d35/classchi.html#a22aa55302a909b4e4d9d64fbfedd9b5e">chi::logicvolume_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::LogicalVolumePtr &gt; logicvolume_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00076">chi_runtime.h:76</a></div></div>
 <div class="ttc" id="aclasschi_html_a47b557d0bdd217181e6f5b7798cec13a"><div class="ttname"><a href="../../d4/d35/classchi.html#a47b557d0bdd217181e6f5b7798cec13a">chi::unpartitionedmesh_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::UnpartMeshPtr &gt; unpartitionedmesh_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00078">chi_runtime.h:78</a></div></div>
 <div class="ttc" id="aclasschi_html_a5b93d2f569533bb5354f4eb19b96e10c"><div class="ttname"><a href="../../d4/d35/classchi.html#a5b93d2f569533bb5354f4eb19b96e10c">chi::angular_quadrature_stack</a></div><div class="ttdeci">static std::vector&lt; chi_math::AngularQuadraturePtr &gt; angular_quadrature_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00086">chi_runtime.h:86</a></div></div>
 <div class="ttc" id="aclasschi_html_a5bc87832f51e2196e2a230a5deb75838"><div class="ttname"><a href="../../d4/d35/classchi.html#a5bc87832f51e2196e2a230a5deb75838">chi::meshhandler_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::MeshHandlerPtr &gt; meshhandler_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00072">chi_runtime.h:72</a></div></div>
-<div class="ttc" id="aclasschi_html_a92e3268d2c40f778d7434f6ea9448b26"><div class="ttname"><a href="../../d4/d35/classchi.html#a92e3268d2c40f778d7434f6ea9448b26">chi::fieldfunc_stack</a></div><div class="ttdeci">static std::vector&lt; chi_physics::FieldFunctionPtr &gt; fieldfunc_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00083">chi_runtime.h:83</a></div></div>
 <div class="ttc" id="aclasschi_html_aa99611570d864cef55872bc180e0862d"><div class="ttname"><a href="../../d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d">chi::material_stack</a></div><div class="ttdeci">static std::vector&lt; chi_physics::MaterialPtr &gt; material_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00081">chi_runtime.h:81</a></div></div>
 <div class="ttc" id="aclasschi_html_ac49e26b99e533dfe75f9818201de79d0"><div class="ttname"><a href="../../d4/d35/classchi.html#ac49e26b99e533dfe75f9818201de79d0">chi::field_func_interpolation_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::FFInterpPtr &gt; field_func_interpolation_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00077">chi_runtime.h:77</a></div></div>
 <div class="ttc" id="aclasschi_html_ac61de38bf878913b59c570995346052e"><div class="ttname"><a href="../../d4/d35/classchi.html#ac61de38bf878913b59c570995346052e">chi::solver_stack</a></div><div class="ttdeci">static std::vector&lt; chi_physics::SolverPtr &gt; solver_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00080">chi_runtime.h:80</a></div></div>

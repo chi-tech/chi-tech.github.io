@@ -10,6 +10,6 @@ var classchi__math_1_1_spatial_discretization___p_w_l_c =
     [ "MapDOFLocal", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#a3949a76b1ebd3b8d540421fcd3cec8e3", null ],
     [ "New", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#a7fdbf34597b6dd5f0160dd4479f9de3f", null ],
     [ "OrderNodes", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#a254ef5ed9e30b07b042954ac6a552db6", null ],
-    [ "m_ghost_node_mapping", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#af5baffd34f77a6310efd5cb0987d2fc1", null ],
-    [ "node_mapping", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#acc06dfe008ad075b8e9057ffb98207b9", null ]
+    [ "m_ghost_node_mapping_", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#a7793bd76ac0cb5944738ed0f681829cf", null ],
+    [ "node_mapping_", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#aa2578a5c3f51922ae766386ebc23f4a2", null ]
 ];

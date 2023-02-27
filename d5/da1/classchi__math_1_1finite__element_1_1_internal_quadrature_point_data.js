@@ -9,12 +9,12 @@ var classchi__math_1_1finite__element_1_1_internal_quadrature_point_data =
     [ "ShapeGrad", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a3859ffefba80f66c8a7434e73df567d8", null ],
     [ "ShapeValue", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#aa43263a86e309692accb26a5b8253740", null ],
     [ "THROW_QP_UNINIT", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a6b85f8074282382906dff256a6daac21", null ],
-    [ "m_face_dof_mappings", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a4fe8500b546937c29f0187b24430c77c", null ],
-    [ "m_initialized", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#ae1cb68ca364174ef01196d362aca10c4", null ],
-    [ "m_JxW", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a3c1444dde2597806cda57c54a5f669a6", null ],
-    [ "m_num_nodes", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a364d00a6df6ff058ebde77c790240c67", null ],
-    [ "m_qpoints_xyz", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a86b1287416c9d5c6c7677f478368d3c1", null ],
-    [ "m_quadrature_point_indices", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#aa74a467a1f6814815989635e198b7ede", null ],
-    [ "m_shape_grad", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#afd39eadcfb1f6b53c2e86305f7371113", null ],
-    [ "m_shape_value", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#af7db3c7c1f51544481a31f23f0a3568f", null ]
+    [ "face_dof_mappings_", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a0df8aee50aa0f33c38fd633c7dfa1231", null ],
+    [ "initialized_", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a0d8f030b009fdb81a4b89ec210875188", null ],
+    [ "JxW_", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a2816f0e9ac80a4a40bb69f59994ca07b", null ],
+    [ "num_nodes_", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a3930ac29fe7ae2603a964ab9842e8a7f", null ],
+    [ "qpoints_xyz_", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a7b8610002260275fddb07b45a7ead723", null ],
+    [ "quadrature_point_indices_", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#af7bd2b975590202236cde0e09f7b4c95", null ],
+    [ "shape_grad_", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#ab526823959bf350d8dca1f4848737240", null ],
+    [ "shape_value_", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a5fee7fc2cf3118bbd9d7d93c45695eb6", null ]
 ];

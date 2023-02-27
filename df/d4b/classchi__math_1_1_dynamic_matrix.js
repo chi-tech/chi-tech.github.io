@@ -43,5 +43,5 @@ var classchi__math_1_1_dynamic_matrix =
     [ "SetDiagonal", "df/d4b/classchi__math_1_1_dynamic_matrix.html#a4223167f78dc6de1b02eeb195a837286", null ],
     [ "SetDiagonal", "df/d4b/classchi__math_1_1_dynamic_matrix.html#aefcae3434267d8c1d3fb3a780d3eee11", null ],
     [ "size", "df/d4b/classchi__math_1_1_dynamic_matrix.html#a40bb81f8583a63294ba7c1b1073d2245", null ],
-    [ "elements", "df/d4b/classchi__math_1_1_dynamic_matrix.html#a08c94deacf707edcea4c2c52b775c73b", null ]
+    [ "elements_", "df/d4b/classchi__math_1_1_dynamic_matrix.html#a54208a6055fe3f32b99e5fe34edc7e7c", null ]
 ];

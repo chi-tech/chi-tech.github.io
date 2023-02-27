@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['templatetype_0',['TemplateType',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a0397c6d3b836f2132697065ef26bb4d5',1,'chi_mesh::VolumeMesherExtruder']]]
+  ['residualscaletype_0',['ResidualScaleType',['../dc/d58/namespacechi__math.html#a4e4b5f82f9498c0502818552508dcd8f',1,'chi_math']]]
 ];

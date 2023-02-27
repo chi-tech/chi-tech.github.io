@@ -137,13 +137,14 @@ Functions</h2></td></tr>
 </dl>
 <h2>_</h2>
 <h3>FFITypeIndex\n</h3>
-<p >SLICE = Two dimensional slice of the mesh. <br  />
+<p >POINT = A point probe. <br  />
+SLICE = Two dimensional slice of the mesh. <br  />
 LINE = Line defined by two points.<br  />
 VOLUME = Volume either referring to the entire volume or that of a logical volume assigned to the interpolator.<br  />
  </p><dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created interpolation.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01228">1228</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01332">1332</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -171,7 +172,7 @@ VOLUME = Volume either referring to the entire volume or that of a logical volum
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01199">1199</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01299">1299</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -210,7 +211,7 @@ VOLUME = Volume either referring to the entire volume or that of a logical volum
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01321">1321</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01429">1429</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -237,10 +238,10 @@ VOLUME = Volume either referring to the entire volume or that of a logical volum
   </dd>
 </dl>
 <h3>Note:</h3>
-<p >Currently only the Volume interpolation supports obtaining a value.</p>
+<p >Currently only the POINT, LINE and VOLUME interpolation supports obtaining a value. For the POINT and VOLUME types a single value is returned. For the LINE type a table of tables is returned with the first index being the field function (in the order it was assigned) and the second index being the point index.</p>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01211">1211</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01314">1314</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -268,7 +269,7 @@ VOLUME = Volume either referring to the entire volume or that of a logical volum
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01192">1192</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01292">1292</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -308,6 +309,8 @@ VOLUME = Volume either referring to the entire volume or that of a logical volum
 <h2>_</h2>
 <h3>PropertyIndex\n</h3>
 <p >ADD_FIELDFUNCTION = Add field function to interpolation.<br  />
+SET_FIELDFUNCTIONS = Sets the field functions to interpolate using a lua table.<br  />
+PROBEPOINT = Reference point for POINT type FFIs.<br  />
 SLICE_POINT = Reference point for SLICE type FFIs.<br  />
 SLICE_NORMAL = Normal of slice plane.<br  />
 SLICE_TANGENT = Tangent vector of slice plane.<br  />
@@ -347,24 +350,23 @@ A modified version of these operations are also available. Instead of OP_SUM, OP
 <div class="line">end</div>
 <div class="line">ffi2 = <a class="code hl_function" href="../../d9/dfa/group___lua_f_f_interpol.html#ga7305438e0a0dac15a779e1a340b12f7b">chiFFInterpolationCreate</a>(VOLUME)</div>
 <div class="line">curffi = ffi2</div>
-<div class="line"><a class="code hl_function" href="../../d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chiFFInterpolationSetProperty</a>(curffi,OPERATION,<a class="code hl_define" href="../../d2/d18/chi__ffinterpolation_8h.html#a4b429e3745cd6c3b549e9ce1db7a2ef4">OP_SUM_LUA</a>,<span class="stringliteral">&quot;IntegrateMaterialVolume&quot;</span>)</div>
+<div class="line"><a class="code hl_function" href="../../d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chiFFInterpolationSetProperty</a>(curffi,OPERATION,OP_SUM_LUA,<span class="stringliteral">&quot;IntegrateMaterialVolume&quot;</span>)</div>
 <div class="line"><a class="code hl_function" href="../../d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chiFFInterpolationSetProperty</a>(curffi,LOGICAL_VOLUME,vol0)</div>
 <div class="line"><a class="code hl_function" href="../../d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chiFFInterpolationSetProperty</a>(curffi,ADD_FIELDFUNCTION,fftemp)</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="../../d9/dfa/group___lua_f_f_interpol.html#gac6e3979ecc5e6a577eb268be00f4cfa0">chiFFInterpolationInitialize</a>(curffi)</div>
 <div class="line"><a class="code hl_function" href="../../d9/dfa/group___lua_f_f_interpol.html#ga94fdabdc1c1558288c8660b86806b7a6">chiFFInterpolationExecute</a>(curffi)</div>
 <div class="line">print(<a class="code hl_function" href="../../d9/dfa/group___lua_f_f_interpol.html#gabe37b9b7813af20ba8dc82a6b1eef3b8">chiFFInterpolationGetValue</a>(curffi))</div>
-<div class="ttc" id="achi__ffinterpolation_8h_html_a4b429e3745cd6c3b549e9ce1db7a2ef4"><div class="ttname"><a href="../../d2/d18/chi__ffinterpolation_8h.html#a4b429e3745cd6c3b549e9ce1db7a2ef4">OP_SUM_LUA</a></div><div class="ttdeci">#define OP_SUM_LUA</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00019">chi_ffinterpolation.h:19</a></div></div>
-<div class="ttc" id="agroup___lua_f_f_interpol_html_ga7305438e0a0dac15a779e1a340b12f7b"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#ga7305438e0a0dac15a779e1a340b12f7b">chi_lua::chiFFInterpolationCreate</a></div><div class="ttdeci">Handle chiFFInterpolationCreate(int FFITypeIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01228">lua_functions.c:1228</a></div></div>
-<div class="ttc" id="agroup___lua_f_f_interpol_html_ga94fdabdc1c1558288c8660b86806b7a6"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#ga94fdabdc1c1558288c8660b86806b7a6">chi_lua::chiFFInterpolationExecute</a></div><div class="ttdeci">void chiFFInterpolationExecute(int FFIHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01199">lua_functions.c:1199</a></div></div>
-<div class="ttc" id="agroup___lua_f_f_interpol_html_gabe37b9b7813af20ba8dc82a6b1eef3b8"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#gabe37b9b7813af20ba8dc82a6b1eef3b8">chi_lua::chiFFInterpolationGetValue</a></div><div class="ttdeci">void chiFFInterpolationGetValue(int FFIHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01211">lua_functions.c:1211</a></div></div>
-<div class="ttc" id="agroup___lua_f_f_interpol_html_gac6e3979ecc5e6a577eb268be00f4cfa0"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#gac6e3979ecc5e6a577eb268be00f4cfa0">chi_lua::chiFFInterpolationInitialize</a></div><div class="ttdeci">void chiFFInterpolationInitialize(int FFIHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01192">lua_functions.c:1192</a></div></div>
-<div class="ttc" id="agroup___lua_f_f_interpol_html_gaf870d79259973f193b0d485bfdc1fc8d"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chi_lua::chiFFInterpolationSetProperty</a></div><div class="ttdeci">Handle chiFFInterpolationSetProperty(int FFIHandle, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01311">lua_functions.c:1311</a></div></div>
+<div class="ttc" id="agroup___lua_f_f_interpol_html_ga7305438e0a0dac15a779e1a340b12f7b"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#ga7305438e0a0dac15a779e1a340b12f7b">chi_lua::chiFFInterpolationCreate</a></div><div class="ttdeci">Handle chiFFInterpolationCreate(int FFITypeIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01332">lua_functions.c:1332</a></div></div>
+<div class="ttc" id="agroup___lua_f_f_interpol_html_ga94fdabdc1c1558288c8660b86806b7a6"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#ga94fdabdc1c1558288c8660b86806b7a6">chi_lua::chiFFInterpolationExecute</a></div><div class="ttdeci">void chiFFInterpolationExecute(int FFIHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01299">lua_functions.c:1299</a></div></div>
+<div class="ttc" id="agroup___lua_f_f_interpol_html_gabe37b9b7813af20ba8dc82a6b1eef3b8"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#gabe37b9b7813af20ba8dc82a6b1eef3b8">chi_lua::chiFFInterpolationGetValue</a></div><div class="ttdeci">void chiFFInterpolationGetValue(int FFIHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01314">lua_functions.c:1314</a></div></div>
+<div class="ttc" id="agroup___lua_f_f_interpol_html_gac6e3979ecc5e6a577eb268be00f4cfa0"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#gac6e3979ecc5e6a577eb268be00f4cfa0">chi_lua::chiFFInterpolationInitialize</a></div><div class="ttdeci">void chiFFInterpolationInitialize(int FFIHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01292">lua_functions.c:1292</a></div></div>
+<div class="ttc" id="agroup___lua_f_f_interpol_html_gaf870d79259973f193b0d485bfdc1fc8d"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chi_lua::chiFFInterpolationSetProperty</a></div><div class="ttdeci">Handle chiFFInterpolationSetProperty(int FFIHandle, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01417">lua_functions.c:1417</a></div></div>
 </div><!-- fragment --><p >The code above will return 2.0 times the volume of cells included in the logical volume <code>vol0</code>.</p>
 <dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created interpolation.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01311">1311</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01417">1417</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

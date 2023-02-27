@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: modules/LinearBoltzmannSolver/lbs_structs.h File Reference</title>
+<title>Chi-Tech: modules/LinearBoltzmannSolvers/A_LBSSolver/lbs_structs.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -94,22 +94,29 @@ $(document).ready(function(){initNavTree('d9/dc3/lbs__structs_8h.html','../../')
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">lbs_structs.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="../../d2/d08/chi__math_8h_source.html">ChiMath/chi_math.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../db/dda/material__property__transportxsections_8h_source.html">ChiPhysics/PhysicsMaterial/transportxsections/material_property_transportxsections.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d2/d08/chi__math_8h_source.html">ChiMath/chi_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/dda/material__property__transportxsections_8h_source.html">ChiPhysics/PhysicsMaterial/transportxsections/material_property_transportxsections.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/daf/material__property__isotropic__mg__src_8h_source.html">ChiPhysics/PhysicsMaterial/material_property_isotropic_mg_src.h</a>&quot;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 </div>
 <p><a href="../../d9/dc3/lbs__structs_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d8e/structlbs_1_1_boundary_preference.html">lbs::BoundaryPreference</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html">lbs::Options</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d32/classlbs_1_1_cell_l_b_s_view.html">lbs::CellLBSView</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d37/structlbs_1_1_unit_cell_matrices.html">lbs::UnitCellMatrices</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d24/classlbs_1_1_a_g_s_scheme_entry.html">lbs::AGSSchemeEntry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -134,6 +141,12 @@ Typedefs</h2></td></tr>
 <tr class="separator:a5ecbc6599e893d039af91c058bd2b413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2fc6b23dce5246308badbf79c2703cd"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; VecVec3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#af2fc6b23dce5246308badbf79c2703cd">lbs::MatVec3</a></td></tr>
 <tr class="separator:af2fc6b23dce5246308badbf79c2703cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fe9dbdd19e017796db0da109e2b107"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#aa3fe9dbdd19e017796db0da109e2b107">lbs::XSPtr</a></td></tr>
+<tr class="separator:aa3fe9dbdd19e017796db0da109e2b107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad437ea2eba5df2caa739b42acbf1ca98"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../dc/d04/classchi__physics_1_1_isotropic_multi_grp_source.html">chi_physics::IsotropicMultiGrpSource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#ad437ea2eba5df2caa739b42acbf1ca98">lbs::IsotropicSrcPtr</a></td></tr>
+<tr class="separator:ad437ea2eba5df2caa739b42acbf1ca98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeebda41bfec934de30892227f2156397"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(LBSGroupset &amp;groupset, std::vector&lt; double &gt; &amp;destination_q, const std::vector&lt; double &gt; &amp;phi, SourceFlags source_flags)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#aeebda41bfec934de30892227f2156397">lbs::SetSourceFunction</a></td></tr>
+<tr class="separator:aeebda41bfec934de30892227f2156397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -155,13 +168,43 @@ Enumerations</h2></td></tr>
 , <a class="el" href="../../d9/d42/namespacelbs.html#a55f81615a7de26e1109b293aecb6f8ada739d285acdfd9e6477d46434f86a5a00">lbs::AZIMUTHAL</a> = 3
  }</td></tr>
 <tr class="separator:a55f81615a7de26e1109b293aecb6f8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40358655cfa572a772641f9f06d9e91d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91d">lbs::BoundaryType</a> { <a class="el" href="../../d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91da9a311ef6dad816cb7a15c0ab41920ad8">lbs::VACUUM</a> = 1
+, <a class="el" href="../../d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91da1cc3753228b759f2be4d82bafb63d45c">lbs::INCIDENT_ISOTROPIC</a> = 2
+, <a class="el" href="../../d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91da6890fc3005a75adb9e5a84b693e8741c">lbs::REFLECTING</a> = 3
+ }</td></tr>
+<tr class="separator:a40358655cfa572a772641f9f06d9e91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d24dab89dfe291850d6d18cf1338c6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">lbs::SourceFlags</a> : int { <br />
+&#160;&#160;<a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a3fb66029623131c9b0330ccc721fe34f">lbs::NO_FLAGS_SET</a> = 0
+, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a65857a6d05b03635d7c5bcfbe082962e">lbs::APPLY_FIXED_SOURCES</a> = (1 &lt;&lt; 0)
+, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a857871f3577df7c803926e1b050e4243">lbs::APPLY_WGS_SCATTER_SOURCES</a> = (1 &lt;&lt; 1)
+, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6afe083af20720153ae9553a01473586b9">lbs::APPLY_AGS_SCATTER_SOURCES</a> = (1 &lt;&lt; 2)
+, <br />
+&#160;&#160;<a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a5570f0f65ee2779f599a563a6ecba204">lbs::APPLY_WGS_FISSION_SOURCES</a> = (1 &lt;&lt; 3)
+, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a2b270786e3408c459026e45f5fe50f0b">lbs::APPLY_AGS_FISSION_SOURCES</a> = (1 &lt;&lt; 4)
+, <a class="el" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a747ae7094df6e242dc859a6aec9a203f">lbs::SUPPRESS_WG_SCATTER</a> = (1 &lt;&lt; 5)
+<br />
+ }</td></tr>
+<tr class="separator:a82d24dab89dfe291850d6d18cf1338c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add11e6bdb0475d616eaae76aef5dad8e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#add11e6bdb0475d616eaae76aef5dad8e">lbs::PhiSTLOption</a> { <a class="el" href="../../d9/d42/namespacelbs.html#add11e6bdb0475d616eaae76aef5dad8ea0e110f98d5740fc6704bef762626d641">lbs::PHI_OLD</a> = 1
+, <a class="el" href="../../d9/d42/namespacelbs.html#add11e6bdb0475d616eaae76aef5dad8ea1bfc566f435e96f3c87f45895bd59609">lbs::PHI_NEW</a> = 2
+ }</td></tr>
+<tr class="separator:add11e6bdb0475d616eaae76aef5dad8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3744b264392916fdf18f954ad8f32e28"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#a3744b264392916fdf18f954ad8f32e28">lbs::AGSSchemeEntryType</a> { <a class="el" href="../../d9/d42/namespacelbs.html#a3744b264392916fdf18f954ad8f32e28a769c50716f254a3ad87d0a601016e0e7">lbs::GROUPSET_ID</a> = 1
+, <a class="el" href="../../d9/d42/namespacelbs.html#a3744b264392916fdf18f954ad8f32e28a3a70b5d6e416eeccda948d3ccc246f25">lbs::SCHEME</a> = 2
+ }</td></tr>
+<tr class="separator:a3744b264392916fdf18f954ad8f32e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad7e658e9bc7ac9918bb87500278c9e7b"><td class="memItemLeft" align="right" valign="top">SourceFlags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#ad7e658e9bc7ac9918bb87500278c9e7b">lbs::operator|</a> (const SourceFlags f1, const SourceFlags f2)</td></tr>
+<tr class="separator:ad7e658e9bc7ac9918bb87500278c9e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_e05d7e2b1ecd646af5bb94391405f3b5.html">modules</a></li><li class="navelem"><a class="el" href="../../dir_59cfc1f9cd8e172a3887c8cc9ab990d8.html">LinearBoltzmannSolver</a></li><li class="navelem"><a class="el" href="../../d9/dc3/lbs__structs_8h.html">lbs_structs.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_e05d7e2b1ecd646af5bb94391405f3b5.html">modules</a></li><li class="navelem"><a class="el" href="../../dir_7670928a5854b858dbd40f78e1d25c60.html">LinearBoltzmannSolvers</a></li><li class="navelem"><a class="el" href="../../dir_b4a8d416c8fba39c010ca9aedd35ee28.html">A_LBSSolver</a></li><li class="navelem"><a class="el" href="../../d9/dc3/lbs__structs_8h.html">lbs_structs.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

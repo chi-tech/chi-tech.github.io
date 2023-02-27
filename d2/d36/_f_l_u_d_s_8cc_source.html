@@ -95,187 +95,219 @@ $(document).ready(function(){initNavTree('d2/d36/_f_l_u_d_s_8cc_source.html','..
 <div class="contents">
 <a href="../../d2/d36/_f_l_u_d_s_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/d81/_f_l_u_d_s_8h.html">FLUDS.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/**Given a sweep ordering index, the outgoing face counter,</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * the outgoing face dof, this function computes the location</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * of this position&#39;s upwind psi in the local upwind psi vector</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * and returns a reference to it.*/</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ab2fc51d89c685ca93b745bfc8dd04c35">   11</a></span><span class="keywordtype">double</span>*  <a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ab2fc51d89c685ca93b745bfc8dd04c35">chi_mesh::sweep_management::PRIMARY_FLUDS::</a></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ab2fc51d89c685ca93b745bfc8dd04c35">OutgoingPsi</a>(<span class="keywordtype">int</span> cell_so_index, <span class="keywordtype">int</span> outb_face_counter,</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordtype">int</span> face_dof, <span class="keywordtype">int</span> n)</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="comment">// Face category</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordtype">int</span> fc = <a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a986f8091b77aaa0387e060af5d9ad0b7">so_cell_outb_face_face_category</a>[cell_so_index][outb_face_counter];</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keywordflow">if</span> (fc &gt;= 0)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">size_t</span> index =</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      <a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a2d16db11ccde6db7960376ac9ba17294">local_psi_Gn_block_strideG</a>[fc]*n +</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a49a8be39e9a78dffe5efcd07c030a083">so_cell_outb_face_slot_indices</a>[cell_so_index][outb_face_counter] *</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_variable" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a489e71e25ac2d9ca0565b9ebdaa64b29">local_psi_stride</a>[fc] *<a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ac32fac5e9371ee918b719f9d7c74ecca">G</a> +</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      face_dof*<a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ac32fac5e9371ee918b719f9d7c74ecca">G</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">return</span> &amp;(<a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#aae843d5bc12d97c15fda403c9ab138f2">ref_local_psi</a>-&gt;operator[](fc))[index];</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">size_t</span> index =</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a668abfbda3deaab323c8633f60f63506">delayed_local_psi_Gn_block_strideG</a>*n +</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a49a8be39e9a78dffe5efcd07c030a083">so_cell_outb_face_slot_indices</a>[cell_so_index][outb_face_counter] *</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_variable" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ab207982f7703faabc1b1e5768c77a135">delayed_local_psi_stride</a> *<a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ac32fac5e9371ee918b719f9d7c74ecca">G</a> +</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      face_dof*<a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ac32fac5e9371ee918b719f9d7c74ecca">G</a>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#abf32bc4fd73a258cfdd3bd9a348c3957">ref_delayed_local_psi</a>-&gt;operator[](index);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">/**Given a */</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a19bcb789f6175dfd78d69f19cd99ca40">   43</a></span><span class="keywordtype">double</span>*  <a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a19bcb789f6175dfd78d69f19cd99ca40">chi_mesh::sweep_management::PRIMARY_FLUDS::</a></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a19bcb789f6175dfd78d69f19cd99ca40">NLOutgoingPsi</a>(<span class="keywordtype">int</span> outb_face_counter,</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>              <span class="keywordtype">int</span> face_dof, <span class="keywordtype">int</span> n)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">if</span> (outb_face_counter&gt;nonlocal_outb_face_deplocI_slot.size())</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d06/_s_p_d_s_8h.html">ChiMesh/SweepUtilities/SPDS/SPDS.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">ChiConsole/chi_console.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/**Constructor for the primary FLUDS data structure.*/</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a956149f63df123b8380e85aa6e00337b">   14</a></span><a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a956149f63df123b8380e85aa6e00337b">chi_mesh::sweep_management::PRIMARY_FLUDS::</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a956149f63df123b8380e85aa6e00337b">  PRIMARY_FLUDS</a>(<span class="keywordtype">size_t</span> in_G,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                std::vector&lt;CellFaceNodalMapping&gt;&amp; in_grid_nodal_mappings,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <span class="keyword">const</span> <a class="code hl_struct" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a>&amp; spds,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keyword">const</span> <a class="code hl_class" href="../../d1/df6/classchi__mesh_1_1_grid_face_histogram.html">chi_mesh::GridFaceHistogram</a>&amp; grid_face_histogram) :</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  spds_(spds),</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  grid_face_histogram_(grid_face_histogram),</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  G(in_G),</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  grid_nodal_mappings(in_grid_nodal_mappings)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">Log0Verbose1</a>()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    &lt;&lt; <span class="stringliteral">&quot;Initializing FLUDS for omega=&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    &lt;&lt; <a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a5b01cf7ca96cd8b081ec96c1c2197ff0">spds_</a>.<a class="code hl_variable" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a49a7583568fb8386a6ce8492d0d0d415">omega</a>.<a class="code hl_function" href="../../dd/d54/structchi__mesh_1_1_vector3.html#a175a4947ab528e98e49988c3bdb08cb6">PrintS</a>()</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    &lt;&lt; <span class="stringliteral">&quot;         Process memory = &quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    &lt;&lt; std::setprecision(3)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    &lt;&lt;<a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae03d74113dded872056a1dc7f81e7afb">chi_objects::ChiConsole::GetMemoryUsageInMB</a>() &lt;&lt; <span class="stringliteral">&quot; MB.&quot;</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  this-&gt;<a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#aac0296663711ff6c6d635f062eb477bc">InitializeAlphaElements</a>(<a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a5b01cf7ca96cd8b081ec96c1c2197ff0">spds_</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  this-&gt;<a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a39fa1e647f4cb86f4417fec42acd1b27">InitializeBetaElements</a>(<a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a5b01cf7ca96cd8b081ec96c1c2197ff0">spds_</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">/**Given a sweep ordering index, the outgoing face counter,</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> * the outgoing face dof, this function computes the location</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"> * of this position&#39;s upwind psi in the local upwind psi vector</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"> * and returns a reference to it.*/</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ab2fc51d89c685ca93b745bfc8dd04c35">   40</a></span><span class="keywordtype">double</span>*  <a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ab2fc51d89c685ca93b745bfc8dd04c35">chi_mesh::sweep_management::PRIMARY_FLUDS::</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ab2fc51d89c685ca93b745bfc8dd04c35">OutgoingPsi</a>(<span class="keywordtype">int</span> cell_so_index, <span class="keywordtype">int</span> outb_face_counter,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordtype">int</span> face_dof, <span class="keywordtype">int</span> n)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="comment">// Face category</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordtype">int</span> fc = so_cell_outb_face_face_category[cell_so_index][outb_face_counter];</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">if</span> (fc &gt;= 0)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">LogAllError</a>()</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      &lt;&lt; <span class="stringliteral">&quot;Invalid number of outb_face_counter &quot;</span> &lt;&lt; outb_face_counter</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      &lt;&lt; <span class="stringliteral">&quot; max allowed &quot;</span> &lt;&lt; nonlocal_outb_face_deplocI_slot.size();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">size_t</span> index =</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      local_psi_Gn_block_strideG[fc]*n +</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        so_cell_outb_face_slot_indices[cell_so_index][outb_face_counter] *</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        local_psi_stride[fc] *G +</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      face_dof*G;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">int</span> depLocI = nonlocal_outb_face_deplocI_slot[outb_face_counter].first;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">int</span> slot    = nonlocal_outb_face_deplocI_slot[outb_face_counter].second;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordtype">int</span> nonlocal_psi_Gn_blockstride = deplocI_face_dof_count[depLocI];</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordtype">int</span> index =</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    nonlocal_psi_Gn_blockstride*G*n +</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    slot*G + face_dof*G;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordflow">if</span> ((index&lt;0) ||</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      (index&gt;ref_deplocI_outgoing_psi-&gt;operator[](depLocI).size()))</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">LogAllError</a>()</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      &lt;&lt; <span class="stringliteral">&quot;Invalid index &quot;</span> &lt;&lt; index</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      &lt;&lt; <span class="stringliteral">&quot; encountered in non-local outgoing Psi&quot;</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      &lt;&lt; <span class="stringliteral">&quot; max allowed &quot;</span> &lt;&lt; ref_deplocI_outgoing_psi-&gt;operator[](depLocI).size();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">return</span> &amp;ref_deplocI_outgoing_psi-&gt;operator[](depLocI)[index];</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">/**Given a sweep ordering index, the incoming face counter,</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"> * the incoming face dof, this function computes the location</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"> * where to store this position&#39;s outgoing psi and returns a reference</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment"> * to it.*/</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0d3910679f35ca3e4b1fc29c844e07f3">   81</a></span><span class="keywordtype">double</span>*  <a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0d3910679f35ca3e4b1fc29c844e07f3">chi_mesh::sweep_management::PRIMARY_FLUDS::</a></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0d3910679f35ca3e4b1fc29c844e07f3">UpwindPsi</a>(<span class="keywordtype">int</span> cell_so_index, <span class="keywordtype">int</span> inc_face_counter,</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>          <span class="keywordtype">int</span> face_dof,<span class="keywordtype">int</span> g, <span class="keywordtype">int</span> n)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>{</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="comment">// Face category</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">int</span> fc = so_cell_inco_face_face_category[cell_so_index][inc_face_counter];</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> &amp;(ref_local_psi-&gt;operator[](fc))[index];</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">size_t</span> index =</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      delayed_local_psi_Gn_block_strideG*n +</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        so_cell_outb_face_slot_indices[cell_so_index][outb_face_counter] *</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        delayed_local_psi_stride *G +</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      face_dof*G;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> &amp;ref_delayed_local_psi-&gt;operator[](index);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">/**Given a */</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a19bcb789f6175dfd78d69f19cd99ca40">   72</a></span><span class="keywordtype">double</span>*  <a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a19bcb789f6175dfd78d69f19cd99ca40">chi_mesh::sweep_management::PRIMARY_FLUDS::</a></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a19bcb789f6175dfd78d69f19cd99ca40">NLOutgoingPsi</a>(<span class="keywordtype">int</span> outb_face_counter,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>              <span class="keywordtype">int</span> face_dof, <span class="keywordtype">int</span> n)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordflow">if</span> (outb_face_counter&gt;nonlocal_outb_face_deplocI_slot.size())</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">LogAllError</a>()</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      &lt;&lt; <span class="stringliteral">&quot;Invalid number of outb_face_counter &quot;</span> &lt;&lt; outb_face_counter</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      &lt;&lt; <span class="stringliteral">&quot; max allowed &quot;</span> &lt;&lt; nonlocal_outb_face_deplocI_slot.size();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordtype">int</span> depLocI = nonlocal_outb_face_deplocI_slot[outb_face_counter].first;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">int</span> slot    = nonlocal_outb_face_deplocI_slot[outb_face_counter].second;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">int</span> nonlocal_psi_Gn_blockstride = deplocI_face_dof_count[depLocI];</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordflow">if</span> (fc &gt;= 0)</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">size_t</span> index =</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      local_psi_Gn_block_strideG[fc]*n +</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        so_cell_inco_face_dof_indices[cell_so_index][inc_face_counter].slot_address *</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        local_psi_stride[fc] *G +</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        so_cell_inco_face_dof_indices[cell_so_index][inc_face_counter].</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        upwind_dof_mapping[face_dof] *G + g;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">return</span> &amp;(ref_local_psi-&gt;operator[](fc))[index];</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">size_t</span> index =</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      delayed_local_psi_Gn_block_strideG*n +</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        so_cell_inco_face_dof_indices[cell_so_index][inc_face_counter].slot_address *</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        delayed_local_psi_stride *G +</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        so_cell_inco_face_dof_indices[cell_so_index][inc_face_counter].</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        upwind_dof_mapping[face_dof] *G + g;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">return</span> &amp;ref_delayed_local_psi_old-&gt;operator[](index);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  }</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">/**Given a sweep ordering index, the incoming face counter,</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment"> * the incoming face dof, this function computes the location</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment"> * where to obtain the position&#39;s upwind psi.*/</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ad60980a417b1904d281e1d43a1a21e67">  117</a></span><span class="keywordtype">double</span>*  <a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ad60980a417b1904d281e1d43a1a21e67">chi_mesh::sweep_management::PRIMARY_FLUDS::</a></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ad60980a417b1904d281e1d43a1a21e67">NLUpwindPsi</a>(<span class="keywordtype">int</span> nonl_inc_face_counter,</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordtype">int</span> face_dof,<span class="keywordtype">int</span> g, <span class="keywordtype">int</span> n)</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>{</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keywordtype">int</span> prelocI =</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].first;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="keywordflow">if</span> (prelocI&gt;=0)</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">int</span> nonlocal_psi_Gn_blockstride = prelocI_face_dof_count[prelocI];</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">int</span> slot =</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].second.first;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">int</span> mapped_dof =</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        second.second[face_dof];</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">int</span> index =</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      nonlocal_psi_Gn_blockstride*G*n +</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      slot*G +</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      mapped_dof*G + g;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">return</span> &amp;ref_prelocI_outgoing_psi-&gt;operator[](prelocI)[index];</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    prelocI =</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      delayed_nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].first;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">int</span> nonlocal_psi_Gn_blockstride = delayed_prelocI_face_dof_count[prelocI];</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">int</span> slot =</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      delayed_nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].second.first;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordtype">int</span> mapped_dof =</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      delayed_nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        second.second[face_dof];</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordtype">int</span> index =</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      nonlocal_psi_Gn_blockstride*G*n +</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      slot*G +</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      mapped_dof*G + g;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">int</span> index =</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    nonlocal_psi_Gn_blockstride*G*n +</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    slot*G + face_dof*G;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keywordflow">if</span> ((index&lt;0) ||</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      (index&gt;ref_deplocI_outgoing_psi-&gt;operator[](depLocI).size()))</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">LogAllError</a>()</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      &lt;&lt; <span class="stringliteral">&quot;Invalid index &quot;</span> &lt;&lt; index</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      &lt;&lt; <span class="stringliteral">&quot; encountered in non-local outgoing Psi&quot;</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      &lt;&lt; <span class="stringliteral">&quot; max allowed &quot;</span> &lt;&lt; ref_deplocI_outgoing_psi-&gt;operator[](depLocI).size();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_function" href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a>(EXIT_FAILURE);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">return</span> &amp;ref_deplocI_outgoing_psi-&gt;operator[](depLocI)[index];</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">/**Given a sweep ordering index, the incoming face counter,</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment"> * the incoming face dof, this function computes the location</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment"> * where to store this position&#39;s outgoing psi and returns a reference</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment"> * to it.*/</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0d3910679f35ca3e4b1fc29c844e07f3">  110</a></span><span class="keywordtype">double</span>*  <a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0d3910679f35ca3e4b1fc29c844e07f3">chi_mesh::sweep_management::PRIMARY_FLUDS::</a></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0d3910679f35ca3e4b1fc29c844e07f3">UpwindPsi</a>(<span class="keywordtype">int</span> cell_so_index, <span class="keywordtype">int</span> inc_face_counter,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>          <span class="keywordtype">int</span> face_dof,<span class="keywordtype">int</span> g, <span class="keywordtype">int</span> n)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>{</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="comment">// Face category</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keywordtype">int</span> fc = so_cell_inco_face_face_category[cell_so_index][inc_face_counter];</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keywordflow">if</span> (fc &gt;= 0)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">size_t</span> index =</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      local_psi_Gn_block_strideG[fc]*n +</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        so_cell_inco_face_dof_indices[cell_so_index][inc_face_counter].slot_address *</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        local_psi_stride[fc] *G +</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        so_cell_inco_face_dof_indices[cell_so_index][inc_face_counter].</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        upwind_dof_mapping[face_dof] *G + g;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">return</span> &amp;(ref_local_psi-&gt;operator[](fc))[index];</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">size_t</span> index =</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      delayed_local_psi_Gn_block_strideG*n +</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        so_cell_inco_face_dof_indices[cell_so_index][inc_face_counter].slot_address *</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        delayed_local_psi_stride *G +</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        so_cell_inco_face_dof_indices[cell_so_index][inc_face_counter].</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        upwind_dof_mapping[face_dof] *G + g;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">return</span> &amp;ref_delayed_local_psi_old-&gt;operator[](index);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>}</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">/**Given a sweep ordering index, the incoming face counter,</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment"> * the incoming face dof, this function computes the location</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment"> * where to obtain the position&#39;s upwind psi.*/</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ad60980a417b1904d281e1d43a1a21e67">  146</a></span><span class="keywordtype">double</span>*  <a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ad60980a417b1904d281e1d43a1a21e67">chi_mesh::sweep_management::PRIMARY_FLUDS::</a></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ad60980a417b1904d281e1d43a1a21e67">NLUpwindPsi</a>(<span class="keywordtype">int</span> nonl_inc_face_counter,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="keywordtype">int</span> face_dof,<span class="keywordtype">int</span> g, <span class="keywordtype">int</span> n)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>{</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keywordtype">int</span> prelocI =</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].first;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keywordflow">if</span> (prelocI&gt;=0)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">int</span> nonlocal_psi_Gn_blockstride = prelocI_face_dof_count[prelocI];</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">int</span> slot =</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].second.first;</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordflow">return</span> &amp;ref_delayed_prelocI_outgoing_psi_old-&gt;operator[](prelocI)[index];</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  }</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">int</span> mapped_dof =</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        second.second[face_dof];</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>}</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordtype">int</span> index =</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      nonlocal_psi_Gn_blockstride*G*n +</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      slot*G +</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      mapped_dof*G + g;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">return</span> &amp;ref_prelocI_outgoing_psi-&gt;operator[](prelocI)[index];</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    prelocI =</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      delayed_nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].first;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">int</span> nonlocal_psi_Gn_blockstride = delayed_prelocI_face_dof_count[prelocI];</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordtype">int</span> slot =</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      delayed_nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].second.first;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">int</span> mapped_dof =</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      delayed_nonlocal_inc_face_prelocI_slot_dof[nonl_inc_face_counter].</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        second.second[face_dof];</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">int</span> index =</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      nonlocal_psi_Gn_blockstride*G*n +</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      slot*G +</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>      mapped_dof*G + g;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordflow">return</span> &amp;ref_delayed_prelocI_outgoing_psi_old-&gt;operator[](prelocI)[index];</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>}</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
 <div class="ttc" id="a_f_l_u_d_s_8h_html"><div class="ttname"><a href="../../d8/d81/_f_l_u_d_s_8h.html">FLUDS.h</a></div></div>
+<div class="ttc" id="a_s_p_d_s_8h_html"><div class="ttname"><a href="../../db/d06/_s_p_d_s_8h.html">SPDS.h</a></div></div>
+<div class="ttc" id="achi__console_8h_html"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html">chi_console.h</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_f_l_u_d_s_html_a489e71e25ac2d9ca0565b9ebdaa64b29"><div class="ttname"><a href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a489e71e25ac2d9ca0565b9ebdaa64b29">chi_mesh::sweep_management::FLUDS::local_psi_stride</a></div><div class="ttdeci">std::vector&lt; size_t &gt; local_psi_stride</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00033">FLUDS.h:33</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_f_l_u_d_s_html_ab207982f7703faabc1b1e5768c77a135"><div class="ttname"><a href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ab207982f7703faabc1b1e5768c77a135">chi_mesh::sweep_management::FLUDS::delayed_local_psi_stride</a></div><div class="ttdeci">size_t delayed_local_psi_stride</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00035">FLUDS.h:35</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a0d3910679f35ca3e4b1fc29c844e07f3"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0d3910679f35ca3e4b1fc29c844e07f3">chi_mesh::sweep_management::PRIMARY_FLUDS::UpwindPsi</a></div><div class="ttdeci">double * UpwindPsi(int cell_so_index, int inc_face_counter, int face_dof, int g, int n) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d36/_f_l_u_d_s_8cc_source.html#l00081">FLUDS.cc:82</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a19bcb789f6175dfd78d69f19cd99ca40"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a19bcb789f6175dfd78d69f19cd99ca40">chi_mesh::sweep_management::PRIMARY_FLUDS::NLOutgoingPsi</a></div><div class="ttdeci">double * NLOutgoingPsi(int outb_face_count, int face_dof, int n) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d36/_f_l_u_d_s_8cc_source.html#l00043">FLUDS.cc:44</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a2d16db11ccde6db7960376ac9ba17294"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a2d16db11ccde6db7960376ac9ba17294">chi_mesh::sweep_management::PRIMARY_FLUDS::local_psi_Gn_block_strideG</a></div><div class="ttdeci">std::vector&lt; size_t &gt; local_psi_Gn_block_strideG</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00141">FLUDS.h:141</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a49a8be39e9a78dffe5efcd07c030a083"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a49a8be39e9a78dffe5efcd07c030a083">chi_mesh::sweep_management::PRIMARY_FLUDS::so_cell_outb_face_slot_indices</a></div><div class="ttdeci">std::vector&lt; int * &gt; so_cell_outb_face_slot_indices</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00171">FLUDS.h:171</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a668abfbda3deaab323c8633f60f63506"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a668abfbda3deaab323c8633f60f63506">chi_mesh::sweep_management::PRIMARY_FLUDS::delayed_local_psi_Gn_block_strideG</a></div><div class="ttdeci">size_t delayed_local_psi_Gn_block_strideG</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00143">FLUDS.h:143</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a986f8091b77aaa0387e060af5d9ad0b7"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a986f8091b77aaa0387e060af5d9ad0b7">chi_mesh::sweep_management::PRIMARY_FLUDS::so_cell_outb_face_face_category</a></div><div class="ttdeci">std::vector&lt; short * &gt; so_cell_outb_face_face_category</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00177">FLUDS.h:177</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_aae843d5bc12d97c15fda403c9ab138f2"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#aae843d5bc12d97c15fda403c9ab138f2">chi_mesh::sweep_management::PRIMARY_FLUDS::ref_local_psi</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; double &gt; &gt; * ref_local_psi</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00155">FLUDS.h:155</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_ab2fc51d89c685ca93b745bfc8dd04c35"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ab2fc51d89c685ca93b745bfc8dd04c35">chi_mesh::sweep_management::PRIMARY_FLUDS::OutgoingPsi</a></div><div class="ttdeci">double * OutgoingPsi(int cell_so_index, int outb_face_counter, int face_dof, int n) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d36/_f_l_u_d_s_8cc_source.html#l00011">FLUDS.cc:12</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_abf32bc4fd73a258cfdd3bd9a348c3957"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#abf32bc4fd73a258cfdd3bd9a348c3957">chi_mesh::sweep_management::PRIMARY_FLUDS::ref_delayed_local_psi</a></div><div class="ttdeci">std::vector&lt; double &gt; * ref_delayed_local_psi</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00156">FLUDS.h:156</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_ac32fac5e9371ee918b719f9d7c74ecca"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ac32fac5e9371ee918b719f9d7c74ecca">chi_mesh::sweep_management::PRIMARY_FLUDS::G</a></div><div class="ttdeci">size_t G</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00135">FLUDS.h:135</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_ad60980a417b1904d281e1d43a1a21e67"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ad60980a417b1904d281e1d43a1a21e67">chi_mesh::sweep_management::PRIMARY_FLUDS::NLUpwindPsi</a></div><div class="ttdeci">double * NLUpwindPsi(int nonl_inc_face_counter, int face_dof, int g, int n) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d36/_f_l_u_d_s_8cc_source.html#l00117">FLUDS.cc:118</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_grid_face_histogram_html"><div class="ttname"><a href="../../d1/df6/classchi__mesh_1_1_grid_face_histogram.html">chi_mesh::GridFaceHistogram</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d40/chi__grid__face__histogram_8h_source.html#l00013">chi_grid_face_histogram.h:14</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a0d3910679f35ca3e4b1fc29c844e07f3"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0d3910679f35ca3e4b1fc29c844e07f3">chi_mesh::sweep_management::PRIMARY_FLUDS::UpwindPsi</a></div><div class="ttdeci">double * UpwindPsi(int cell_so_index, int inc_face_counter, int face_dof, int g, int n) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d36/_f_l_u_d_s_8cc_source.html#l00110">FLUDS.cc:111</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a19bcb789f6175dfd78d69f19cd99ca40"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a19bcb789f6175dfd78d69f19cd99ca40">chi_mesh::sweep_management::PRIMARY_FLUDS::NLOutgoingPsi</a></div><div class="ttdeci">double * NLOutgoingPsi(int outb_face_count, int face_dof, int n) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d36/_f_l_u_d_s_8cc_source.html#l00072">FLUDS.cc:73</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a39fa1e647f4cb86f4417fec42acd1b27"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a39fa1e647f4cb86f4417fec42acd1b27">chi_mesh::sweep_management::PRIMARY_FLUDS::InitializeBetaElements</a></div><div class="ttdeci">void InitializeBetaElements(const SPDS &amp;spds, int tag_index=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d73/_f_l_u_d_s__betapass_8cc_source.html#l00011">FLUDS_betapass.cc:12</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a5b01cf7ca96cd8b081ec96c1c2197ff0"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a5b01cf7ca96cd8b081ec96c1c2197ff0">chi_mesh::sweep_management::PRIMARY_FLUDS::spds_</a></div><div class="ttdeci">const SPDS &amp; spds_</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00139">FLUDS.h:139</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_a956149f63df123b8380e85aa6e00337b"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a956149f63df123b8380e85aa6e00337b">chi_mesh::sweep_management::PRIMARY_FLUDS::PRIMARY_FLUDS</a></div><div class="ttdeci">PRIMARY_FLUDS(size_t in_G, std::vector&lt; CellFaceNodalMapping &gt; &amp;in_grid_nodal_mappings, const SPDS &amp;spds, const chi_mesh::GridFaceHistogram &amp;grid_face_histogram)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d36/_f_l_u_d_s_8cc_source.html#l00014">FLUDS.cc:15</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_aac0296663711ff6c6d635f062eb477bc"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#aac0296663711ff6c6d635f062eb477bc">chi_mesh::sweep_management::PRIMARY_FLUDS::InitializeAlphaElements</a></div><div class="ttdeci">void InitializeAlphaElements(const SPDS &amp;spds)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d61/_f_l_u_d_s__alphapass_8cc_source.html#l00015">FLUDS_alphapass.cc:16</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_ab2fc51d89c685ca93b745bfc8dd04c35"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ab2fc51d89c685ca93b745bfc8dd04c35">chi_mesh::sweep_management::PRIMARY_FLUDS::OutgoingPsi</a></div><div class="ttdeci">double * OutgoingPsi(int cell_so_index, int outb_face_counter, int face_dof, int n) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d36/_f_l_u_d_s_8cc_source.html#l00040">FLUDS.cc:41</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s_html_ad60980a417b1904d281e1d43a1a21e67"><div class="ttname"><a href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ad60980a417b1904d281e1d43a1a21e67">chi_mesh::sweep_management::PRIMARY_FLUDS::NLUpwindPsi</a></div><div class="ttdeci">double * NLUpwindPsi(int nonl_inc_face_counter, int face_dof, int g, int n) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d36/_f_l_u_d_s_8cc_source.html#l00146">FLUDS.cc:147</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_console_html_ae03d74113dded872056a1dc7f81e7afb"><div class="ttname"><a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae03d74113dded872056a1dc7f81e7afb">chi_objects::ChiConsole::GetMemoryUsageInMB</a></div><div class="ttdeci">static double GetMemoryUsageInMB()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d9b/chi__console__memory_8cpp_source.html#l00060">chi_console_memory.cpp:60</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a473ab4a211782a780fdd267f864dc5f9"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">chi_objects::ChiLog::Log0Verbose1</a></div><div class="ttdeci">LogStream Log0Verbose1()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00226">chi_log.h:226</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_log_html_aa2ef960ad98b005e26e49f7030537c44"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">chi_objects::ChiLog::LogAllError</a></div><div class="ttdeci">LogStream LogAllError()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00231">chi_log.h:231</a></div></div>
 <div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
-<div class="ttc" id="aclasschi_html_adad66ec610ab1dab2bffc67c7b4fab5e"><div class="ttname"><a href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a></div><div class="ttdeci">static void Exit(int error_code)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00307">chi_runtime.cc:307</a></div></div>
+<div class="ttc" id="aclasschi_html_adad66ec610ab1dab2bffc67c7b4fab5e"><div class="ttname"><a href="../../d4/d35/classchi.html#adad66ec610ab1dab2bffc67c7b4fab5e">chi::Exit</a></div><div class="ttdeci">static void Exit(int error_code)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00306">chi_runtime.cc:306</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_vector3_html_a175a4947ab528e98e49988c3bdb08cb6"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a175a4947ab528e98e49988c3bdb08cb6">chi_mesh::Vector3::PrintS</a></div><div class="ttdeci">std::string PrintS() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00419">chi_meshvector.h:419</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1sweep__management_1_1_s_p_d_s_html"><div class="ttname"><a href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">chi_mesh::sweep_management::SPDS</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d06/_s_p_d_s_8h_source.html#l00015">SPDS.h:16</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1sweep__management_1_1_s_p_d_s_html_a49a7583568fb8386a6ce8492d0d0d415"><div class="ttname"><a href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#a49a7583568fb8386a6ce8492d0d0d415">chi_mesh::sweep_management::SPDS::omega</a></div><div class="ttdeci">chi_mesh::Vector3 omega</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d06/_s_p_d_s_8h_source.html#l00017">SPDS.h:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

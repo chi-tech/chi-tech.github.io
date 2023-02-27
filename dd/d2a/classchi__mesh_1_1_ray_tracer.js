@@ -8,10 +8,10 @@ var classchi__mesh_1_1_ray_tracer =
     [ "TracePolyhedron", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a6e27c59ecb28afc422f8e801db66d7a1", null ],
     [ "TraceRay", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a36f16cea3b5bd93754c7a03faef32afd", null ],
     [ "TraceSlab", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a6a30e18e72682462831d7095be69fa15", null ],
-    [ "backward_tolerance", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#ac2c24867beb8730318d3480add28b464", null ],
-    [ "cell_sizes", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#abe44b57585e7695f217f255cbd8522c3", null ],
-    [ "epsilon_nudge", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a2d3f2a3c58c16f37019858f88d17e5a9", null ],
-    [ "extension_distance", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a82fa680255bd23f8c512f8c13c71c20d", null ],
-    [ "perform_concavity_checks", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a6e72e19577062900837e7fb9552f42f9", null ],
-    [ "reference_grid", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a06427ac04b150edd460163924309cf8f", null ]
+    [ "backward_tolerance_", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a9cf6652e74911ed7909dfc7cc6c104d2", null ],
+    [ "cell_sizes_", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a4dacc348742fce589002f9fbc46b9381", null ],
+    [ "epsilon_nudge_", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a568b086dfb42154a593dc2d0b28c0dad", null ],
+    [ "extension_distance_", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a626222cd2f88212a5e154d36a6bfa4b9", null ],
+    [ "perform_concavity_checks_", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a407277193388eefe8597928723900236", null ],
+    [ "reference_grid_", "dd/d2a/classchi__mesh_1_1_ray_tracer.html#a111faf80edaa45f6404197b8ee5bceb0", null ]
 ];

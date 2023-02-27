@@ -6,7 +6,7 @@ var classchi__math_1_1_product_quadrature =
     [ "GetAngleNum", "d5/df7/classchi__math_1_1_product_quadrature.html#a80a84107321b8d794e1da47b5cffe36c", null ],
     [ "GetDirectionMap", "d5/df7/classchi__math_1_1_product_quadrature.html#a6c0814b95f098e541cd0bf4ac6e2b880", null ],
     [ "OptimizeForPolarSymmetry", "d5/df7/classchi__math_1_1_product_quadrature.html#a90c041e5fb4ae05ff5400ffcbcf898fe", null ],
-    [ "azimu_ang", "d5/df7/classchi__math_1_1_product_quadrature.html#a408e9ce3cf7bd90ace365d381b094046", null ],
-    [ "map_directions", "d5/df7/classchi__math_1_1_product_quadrature.html#a3994d9f2bab990157ff6ec41ccee4389", null ],
-    [ "polar_ang", "d5/df7/classchi__math_1_1_product_quadrature.html#a916c4e395ac4bad0aae8668fdee1d76a", null ]
+    [ "azimu_ang_", "d5/df7/classchi__math_1_1_product_quadrature.html#a118075f802c1d94fa9f98c2200f6f9e2", null ],
+    [ "map_directions_", "d5/df7/classchi__math_1_1_product_quadrature.html#ae6ed54f240da2099eb2c4d2bcbb093ab", null ],
+    [ "polar_ang_", "d5/df7/classchi__math_1_1_product_quadrature.html#a01a2fb86af478f721025e2bb559d6131", null ]
 ];

@@ -33,9 +33,9 @@ var classchi__data__types_1_1_n_d_array =
     [ "set", "d2/d5d/classchi__data__types_1_1_n_d_array.html#ab7575b1eea88cc47b9b28da7863f2830", null ],
     [ "size", "d2/d5d/classchi__data__types_1_1_n_d_array.html#aee6b754a3755081d8caccc45f81d6688", null ],
     [ "swap", "d2/d5d/classchi__data__types_1_1_n_d_array.html#a3d438494964f1fdbcaf322b73b62909d", null ],
-    [ "m_base", "d2/d5d/classchi__data__types_1_1_n_d_array.html#aa080142540d8f9f1f9651aeb5e7c1b57", null ],
-    [ "m_dimensions", "d2/d5d/classchi__data__types_1_1_n_d_array.html#a74f6c0a4f42636f715ed2a237c6a9176", null ],
-    [ "m_rank", "d2/d5d/classchi__data__types_1_1_n_d_array.html#ab67ce37cb98a439b9d1814436add133e", null ],
-    [ "m_size", "d2/d5d/classchi__data__types_1_1_n_d_array.html#a2327f469d7dd2a37a7e535f00398a2cb", null ],
-    [ "m_strides", "d2/d5d/classchi__data__types_1_1_n_d_array.html#a22258132512d4d4dea1c411338d12a44", null ]
+    [ "base_", "d2/d5d/classchi__data__types_1_1_n_d_array.html#a375bb64b173b498c7f832d56aed936b4", null ],
+    [ "dimensions_", "d2/d5d/classchi__data__types_1_1_n_d_array.html#a8cd426509df31dcc129af1ceed7c10e8", null ],
+    [ "rank_", "d2/d5d/classchi__data__types_1_1_n_d_array.html#a2241e471a86655a75b38a032ccae9569", null ],
+    [ "size_", "d2/d5d/classchi__data__types_1_1_n_d_array.html#a6d1286579543390233c908e25345e9f7", null ],
+    [ "strides_", "d2/d5d/classchi__data__types_1_1_n_d_array.html#a3ea400d8af6f76ab2c048aa3ddd8b71b", null ]
 ];

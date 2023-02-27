@@ -9,9 +9,9 @@ var classchi__mesh_1_1_cell_face =
     [ "RecomputeCentroid", "db/d1b/classchi__mesh_1_1_cell_face.html#aa23916ced49cdd081fbc0d5fa14183d4", null ],
     [ "Serialize", "db/d1b/classchi__mesh_1_1_cell_face.html#a74d66d9604bbfad9dc7b91b4caf7eccc", null ],
     [ "ToString", "db/d1b/classchi__mesh_1_1_cell_face.html#ae3e41a1af424f4dc70d4561edba8c4dd", null ],
-    [ "centroid", "db/d1b/classchi__mesh_1_1_cell_face.html#a81ec2cb4d1a9ea580846e863f2f83208", null ],
-    [ "has_neighbor", "db/d1b/classchi__mesh_1_1_cell_face.html#ae43193eaa7a5cd78c359e5106d8e6d32", null ],
-    [ "neighbor_id", "db/d1b/classchi__mesh_1_1_cell_face.html#a0aed91937611b870805e55716cc82e37", null ],
-    [ "normal", "db/d1b/classchi__mesh_1_1_cell_face.html#aa93a35dd92a58b4aa772912a8afa7da6", null ],
-    [ "vertex_ids", "db/d1b/classchi__mesh_1_1_cell_face.html#afcdb75c183e06476c5454ae702333359", null ]
+    [ "centroid_", "db/d1b/classchi__mesh_1_1_cell_face.html#acbb15a01982b53354236eaeb00608edb", null ],
+    [ "has_neighbor_", "db/d1b/classchi__mesh_1_1_cell_face.html#a55357559e209fcf698e152a8b488e07b", null ],
+    [ "neighbor_id_", "db/d1b/classchi__mesh_1_1_cell_face.html#a667bb9662a4c8807f3802680355d7f50", null ],
+    [ "normal_", "db/d1b/classchi__mesh_1_1_cell_face.html#a5290d156cd9f590c5dc9b7a2255588b3", null ],
+    [ "vertex_ids_", "db/d1b/classchi__mesh_1_1_cell_face.html#a75cb6d91b59024bd535776557af75440", null ]
 ];

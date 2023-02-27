@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
   <div class="headertitle"><div class="title">Chi-Tech Cross-section format 1<div class="ingroups"><a class="el" href="../../d3/d5a/group___lua_physics.html">C Physics</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p >An example Chi-Tech cross-section file is shown below. The bare-bones format is shown below with more examples below: </p><div class="fragment"><div class="line"><span class="preprocessor"># This header can be as large as you please. The actual processing</span></div>
+<p >An example Chi-Tech cross section file is shown below. The bare-bones format is shown below with more examples below: </p><div class="fragment"><div class="line"><span class="preprocessor"># This header can be as large as you please. The actual processing</span></div>
 <div class="line"><span class="preprocessor"># starts at NUM_GROUPS as the first word. After that, NUM_MOMENTS needs to</span></div>
 <div class="line"><span class="preprocessor"># be processed before any of the other keywords.</span></div>
 <div class="line">NUM_GROUPS 2</div>
@@ -136,8 +136,8 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <p >Codes may also choose to update precursor concentrations for which their decay constants, \( \lambda_j \) are required.</p>
 <h2>Keyword definitions</h2>
 <ul>
-<li>NUM_GROUPS num_groups Required. Specifies the number of groups for this cross-section. Symbol \( G \).</li>
-<li>NUM_MOMENTS num_moments Required. The number of transfer matrices to allocate for this cross-section (whether used or not). Typically this number is one greater than the scattering order (i.e., \( L+1 \))</li>
+<li>NUM_GROUPS num_groups Required. Specifies the number of groups for this cross section. Symbol \( G \).</li>
+<li>NUM_MOMENTS num_moments Required. The number of transfer matrices to allocate for this cross section (whether used or not). Typically this number is one greater than the scattering order (i.e., \( L+1 \))</li>
 <li>NUM_PRECURSORS num_precursors Optional. Indicates how many precursors are used in this cross section. Symbol \( J \)</li>
 <li>Optional key words per line:<ul>
 <li>SIGMA_T_BEGIN. Optional. Starts a block that is terminated by a line SIGMA_T_END. Each line in the block processes the first two words as [group, sigma_t]. Populates the sigma_tg field. Symbol \( \sigma_{tg} \).</li>
@@ -150,8 +150,8 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <li>CHI_PROMPT_BEGIN. Optional. Starts a block that is terminated by a line CHI_PROMPT_END. Each line in the block processes the first two words as [group, chi]. Populates the chi_prompt field. Symbol \( \chi_{prompt, g} \).</li>
 <li>VELOCITY_BEGIN. Optional. Starts a block that is terminated by a line VELOCITY_END. Each line in the block processes the first two words as [group, velocity]. Populates the inv_velocity field by inverting parsed values. Symbol \( \frac{1}{v_g} \).</li>
 <li>INV_VELOCITY_BEGIN. Optional. Starts a block that is terminated by a line INV_VELOCITY_END. Each line in the block processes the first two words as [group, inv_velocity]. Populates the inv_velocity field. If this field and VELOCITY are provided, this field will be used. Symbol \( \frac{1}{v_g} \).</li>
-<li>PRECURSOR_LAMBDA_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_LAMBDA_END. Each line in the block processes the first two words as [precursor, lambda]. Populates the lambda field (the precursor decay constant). Symbol \( \lambda_j \).</li>
-<li>PRECURSOR_YIELD_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_YIELD_END. Each line in the block processes the first two words as [precursor, gamma]. Populates the gamma field (the precursor production fraction per fission). Symbol \( \gamma_j \).</li>
+<li>PRECURSOR_DECAY_CONSTANTS_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_DECAY_CONSTANTS_END. Each line in the block processes the first two words as [precursor, lambda]. Populates the lambda field (the precursor decay constant). Symbol \( \lambda_j \).</li>
+<li>PRECURSOR_FRACTIONAL_YIELDS_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_FRACTIONAL_YIELDS_END. Each line in the block processes the first two words as [precursor, gamma]. Populates the gamma field (the precursor production fraction per fission). Symbol \( \gamma_j \).</li>
 <li>CHI_DELAYED_BEGIN. Optional. Starts a block that is terminated by a line CHI_DELAYED_END. Each line in the block processes the first word as the group index and the remaining NUM_PRECURSORS words as the the individual precursor's associated delayed spectrum (chi). Populates the chi_d field. Symbol \( \chi_{delayed,jg} \).</li>
 <li>TRANSFER_MOMENTS_BEGIN. Optional. Starts a block that is terminated by a line TRANSFER_MOMENTS_END. Each line in the block processes a line only if it starts with the keyword M_GPRIME_G_VAL which needs to be followed by four values [moment,gprime,g,value]. Populates transfer-matrix for moment m, row g, column gprime, with value. Symbol \( \sigma_{s\ell,g&#39;{\to}g} \).</li>
 </ul>
@@ -207,11 +207,11 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <div class="line">M_GPRIME_G_VAL 1 1 1 0.001</div>
 <div class="line">TRANSFER_MOMENTS_END</div>
 <div class="line"> </div>
-<div class="line">PRECURSOR_LAMBDA_BEGIN</div>
+<div class="line">PRECURSOR_DECAY_CONSTANTS_BEGIN</div>
 <div class="line">0   0.1</div>
 <div class="line">1   0.2</div>
 <div class="line">2   0.3</div>
-<div class="line">PRECURSOR_LAMBDA_END</div>
+<div class="line">PRECURSOR_DECAY_CONSTANTS_END</div>
 <div class="line"> </div>
 <div class="line">PRECURSOR_GAMMA_BEGIN</div>
 <div class="line">0   0.25</div>
@@ -226,13 +226,13 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 <div class="line">NU_DELAYED_END</div>
 <div class="line"> </div>
 <div class="line">CHI_DELAYED_BEGIN</div>
-<div class="line">G_PRECURSORJ_VAL 0  0 1.0</div>
-<div class="line">G_PRECURSORJ_VAL 0  1 1.0</div>
-<div class="line">G_PRECURSORJ_VAL 0  2 1.0</div>
+<div class="line">G_PRECURSOR_VAL 0  0  1.0</div>
+<div class="line">G_PRECURSOR_VAL 0  1  1.0</div>
+<div class="line">G_PRECURSOR_VAL 0  2  1.0</div>
 <div class="line"> </div>
-<div class="line">G_PRECURSORJ_VAL 1  0 0.0</div>
-<div class="line">G_PRECURSORJ_VAL 1  1 0.0</div>
-<div class="line">G_PRECURSORJ_VAL 1  2 0.0</div>
+<div class="line">G_PRECURSOR_VAL 1  0  0.0</div>
+<div class="line">G_PRECURSOR_VAL 1  1  0.0</div>
+<div class="line">G_PRECURSOR_VAL 1  2  0.0</div>
 <div class="line">CHI_DELAYED_END</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->

@@ -10,6 +10,8 @@ var cell_8h =
       [ "POLYGON", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9aecdc92bf56d960b73b02ee40125758bc", null ],
       [ "TETRAHEDRON", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a921725623efcb888f85a941eb29906a9", null ],
       [ "HEXAHEDRON", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a8efa397d080e415a2a4b45794abc1f76", null ],
+      [ "WEDGE", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a42bd365c1ecdb0302894b3ff434de056", null ],
+      [ "PYRAMID", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9acd996d3184761601a0e44e587a012d4f", null ],
       [ "POLYHEDRON", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74", null ],
       [ "POINT", "d0/ddd/cell_8h.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9aaebdbcb765394d25d6a604589a890f82", null ]
     ] ],

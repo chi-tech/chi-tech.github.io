@@ -1001,9 +1001,9 @@ $(document).ready(function(){initNavTree('d2/d99/_code_tut93_8h_source.html','..
 <div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span><span class="comment">Creating the field functions is similar to what we did in previous tutorials</span></div>
 <div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span><span class="comment">\code</span></div>
 <div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span><span class="comment">//============================================= Create Field Functions</span></div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span><span class="comment">std::vector&lt;std::shared_ptr&lt;chi_physics::FieldFunction2&gt;&gt; ff_list;</span></div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span><span class="comment">std::vector&lt;std::shared_ptr&lt;chi_physics::FieldFunction&gt;&gt; ff_list;</span></div>
 <div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span><span class="comment"></span> </div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span><span class="comment">ff_list.push_back(std::make_shared&lt;chi_physics::FieldFunction2&gt;(</span></div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span><span class="comment">ff_list.push_back(std::make_shared&lt;chi_physics::FieldFunction&gt;(</span></div>
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span><span class="comment">  &quot;Phi&quot;,                                           //Text name</span></div>
 <div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span><span class="comment">  sdm_ptr,                                         //Spatial Discr.</span></div>
 <div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span><span class="comment">  chi_math::Unknown(chi_math::UnknownType::VECTOR_N,num_groups) //Unknown</span></div>
@@ -1029,10 +1029,10 @@ $(document).ready(function(){initNavTree('d2/d99/_code_tut93_8h_source.html','..
 <div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span><span class="comment"></span> </div>
 <div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span><span class="comment"></span> </div>
 <div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span><span class="comment">//============================================= Update field function</span></div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span><span class="comment">chi_physics::FieldFunction2::FFList const_ff_list;</span></div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span><span class="comment">chi_physics::FieldFunction::FFList const_ff_list;</span></div>
 <div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span><span class="comment">for (const auto&amp; ff_ptr : ff_list)</span></div>
 <div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span><span class="comment">  const_ff_list.push_back(ff_ptr);</span></div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span><span class="comment">chi_physics::FieldFunction2::ExportMultipleToVTK(fname,</span></div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span><span class="comment">chi_physics::FieldFunction::ExportMultipleToVTK(fname,</span></div>
 <div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span><span class="comment">                                                 const_ff_list);</span></div>
 <div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span><span class="comment">\endcode</span></div>
 <div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span><span class="comment"></span> </div>
@@ -1057,7 +1057,7 @@ $(document).ready(function(){initNavTree('d2/d99/_code_tut93_8h_source.html','..
 <div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span><span class="comment">#include &quot;ChiMath/RandomNumberGeneration/random_number_generator.h&quot;</span></div>
 <div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span><span class="comment">#include &quot;ChiMath/Quadratures/LegendrePoly/legendrepoly.h&quot;</span></div>
 <div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span><span class="comment"></span> </div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span><span class="comment">#include &quot;ChiPhysics/FieldFunction2/fieldfunction2.h&quot;</span></div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span><span class="comment">#include &quot;ChiPhysics/FieldFunction/fieldfunction2.h&quot;</span></div>
 <div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span><span class="comment"></span> </div>
 <div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span><span class="comment">#include &quot;chi_runtime.h&quot;</span></div>
 <div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span><span class="comment">#include &quot;chi_log.h&quot;</span></div>
@@ -1377,9 +1377,9 @@ $(document).ready(function(){initNavTree('d2/d99/_code_tut93_8h_source.html','..
 <div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span><span class="comment">  }//for cell</span></div>
 <div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span><span class="comment"></span> </div>
 <div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span><span class="comment">  //============================================= Create Field Functions</span></div>
-<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span><span class="comment">  std::vector&lt;std::shared_ptr&lt;chi_physics::FieldFunction2&gt;&gt; ff_list;</span></div>
+<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span><span class="comment">  std::vector&lt;std::shared_ptr&lt;chi_physics::FieldFunction&gt;&gt; ff_list;</span></div>
 <div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span><span class="comment"></span> </div>
-<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span><span class="comment">  ff_list.push_back(std::make_shared&lt;chi_physics::FieldFunction2&gt;(</span></div>
+<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span><span class="comment">  ff_list.push_back(std::make_shared&lt;chi_physics::FieldFunction&gt;(</span></div>
 <div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span><span class="comment">    &quot;Phi&quot;,                                           //Text name</span></div>
 <div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span><span class="comment">    sdm_ptr,                                         //Spatial Discr.</span></div>
 <div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span><span class="comment">    chi_math::Unknown(chi_math::UnknownType::VECTOR_N,num_groups) //Unknown</span></div>
@@ -1405,10 +1405,10 @@ $(document).ready(function(){initNavTree('d2/d99/_code_tut93_8h_source.html','..
 <div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span><span class="comment"></span> </div>
 <div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span><span class="comment"></span> </div>
 <div class="line"><a id="l01312" name="l01312"></a><span class="lineno"> 1312</span><span class="comment">  //============================================= Update field function</span></div>
-<div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span><span class="comment">  chi_physics::FieldFunction2::FFList const_ff_list;</span></div>
+<div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span><span class="comment">  chi_physics::FieldFunction::FFList const_ff_list;</span></div>
 <div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span><span class="comment">  for (const auto&amp; ff_ptr : ff_list)</span></div>
 <div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span><span class="comment">    const_ff_list.push_back(ff_ptr);</span></div>
-<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span><span class="comment">  chi_physics::FieldFunction2::ExportMultipleToVTK(fname,</span></div>
+<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span><span class="comment">  chi_physics::FieldFunction::ExportMultipleToVTK(fname,</span></div>
 <div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span><span class="comment">                                                   const_ff_list);</span></div>
 <div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span><span class="comment"></span> </div>
 <div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span><span class="comment">  return 0;</span></div>

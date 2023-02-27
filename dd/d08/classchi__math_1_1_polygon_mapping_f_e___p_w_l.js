@@ -12,11 +12,11 @@ var classchi__math_1_1_polygon_mapping_f_e___p_w_l =
     [ "SideGradShape_y", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#abae4adc8bf09138fb8c4e5b57804e30e", null ],
     [ "SideShape", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#afe1567d8f68597a48f42fcdf6ffd8b1c", null ],
     [ "TriShape", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#ac8ab7384018ae8a136a6c990858e7475", null ],
-    [ "beta", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#a988d40c2ea3b844d316a2a04a4d86e8e", null ],
-    [ "node_to_side_map", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#a62df50d4bc1bfa5dc1da91f97a741c59", null ],
-    [ "num_of_subtris", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#ad9fe86ea750a3f34e5318d623d7bd911", null ],
-    [ "sides", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#a3e1a9868e12e27cb2f8103f1ea164608", null ],
-    [ "surface_quadrature", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#aa525773166d7246c24b5fb482ed25a7e", null ],
-    [ "vc", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#ae541b301932e8fedfee76ec035f8940f", null ],
-    [ "volume_quadrature", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#a8ea10fa815c8432b3265bc18066797b1", null ]
+    [ "beta_", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#aa019bc0b078d255ae7a68b03d8b8be60", null ],
+    [ "node_to_side_map_", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#ae42bd4e2e1dbf78fcab6965a2b4cedaf", null ],
+    [ "num_of_subtris_", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#a4752a9f2b8e190f518b5836235f44632", null ],
+    [ "sides_", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#a1a9adcdb95ed06405054f4b3b85ddde7", null ],
+    [ "surface_quadrature_", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#a087f8e9cc2e9358f089cd71a330f9ce2", null ],
+    [ "vc_", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#a49a582c2e4a1bb2ce8c44cdf4af9af58", null ],
+    [ "volume_quadrature_", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html#ae4f780c6aa0d3fb2376f595ab4fe4dea", null ]
 ];

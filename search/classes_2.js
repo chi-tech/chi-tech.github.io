@@ -13,7 +13,7 @@ var searchData=
   ['chimpicommunicatorset_10',['ChiMPICommunicatorSet',['../d8/da3/classchi__objects_1_1_chi_m_p_i_communicator_set.html',1,'chi_objects']]],
   ['chitimer_11',['ChiTimer',['../d1/d87/classchi__objects_1_1_chi_timer.html',1,'chi_objects']]],
   ['const_5fiterator_12',['const_iterator',['../d3/dda/classchi__mesh_1_1_local_cell_handler_1_1const__iterator.html',1,'chi_mesh::LocalCellHandler']]],
-  ['constentryreference_13',['ConstEntryReference',['../dc/d4d/classchi__math_1_1_sparse_matrix_1_1_const_entry_reference.html',1,'chi_math::SparseMatrix']]],
+  ['constentryreference_13',['ConstEntryReference',['../dd/dd3/structchi__math_1_1_sparse_matrix_1_1_const_entry_reference.html',1,'chi_math::SparseMatrix']]],
   ['constrowiterator_14',['ConstRowIterator',['../d8/d06/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_row_iterator.html',1,'chi_math::SparseMatrix::ConstRowIteratorContext']]],
   ['constrowiteratorcontext_15',['ConstRowIteratorContext',['../dd/dda/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context.html',1,'chi_math::SparseMatrix']]],
   ['containingcellinfo_16',['ContainingCellInfo',['../da/da1/structlbs_1_1_point_source_1_1_containing_cell_info.html',1,'lbs::PointSource']]],

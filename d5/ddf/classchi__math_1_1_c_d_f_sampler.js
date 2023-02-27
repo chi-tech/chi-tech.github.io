@@ -5,8 +5,8 @@ var classchi__math_1_1_c_d_f_sampler =
     [ "Sample", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a8cf05a7937de20f2e9304f93dcb30ca8", null ],
     [ "AUTO_FINERES", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a99c5045ce0c2b2618c80821284c6674e", null ],
     [ "AUTO_SUBDIV", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a53501c74423f6e7b73a5e4fa60811a32", null ],
-    [ "final_res", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a2d01a0bd60c74b46d59a44456e71c4ec", null ],
-    [ "ref_cdf", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a9f27b6b5e69024f09f5add1c368975d2", null ],
-    [ "sub_intvls", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#aa8d3aa36b580590968eb5c115a3bd8aa", null ],
-    [ "subdiv_factor", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a82588b3ce825a1bfbe8394cd6cb3a637", null ]
+    [ "final_res_", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a30b0784de0cad2001b917c8a2ef116c2", null ],
+    [ "ref_cdf_", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a5d8f25f126ed1233d6115b7102bdeea1", null ],
+    [ "sub_intvls_", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a3880b7b5d57850b8d0b3dced79674dd8", null ],
+    [ "subdiv_factor_", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a648a26c7b60efc9b2f413658f5c46ad2", null ]
 ];

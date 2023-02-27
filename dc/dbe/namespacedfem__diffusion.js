@@ -1,8 +1,5 @@
 var namespacedfem__diffusion =
 [
-    [ "dfem_diffusion_lua_utils", "da/dda/namespacedfem__diffusion_1_1dfem__diffusion__lua__utils.html", [
-      [ "RegisterLuaEntities", "da/dda/namespacedfem__diffusion_1_1dfem__diffusion__lua__utils.html#abf7b1b030a459c716bca71a83a240ce1", null ]
-    ] ],
     [ "Boundary", "dd/d4b/classdfem__diffusion_1_1_boundary.html", "dd/d4b/classdfem__diffusion_1_1_boundary" ],
     [ "Solver", "df/ddc/classdfem__diffusion_1_1_solver.html", "df/ddc/classdfem__diffusion_1_1_solver" ],
     [ "BoundaryType", "dc/dbe/namespacedfem__diffusion.html#a060557e391e4d5c55b11bafdeb4ceb73", [

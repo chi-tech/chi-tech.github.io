@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: modules/LinearBoltzmannSolver/lbs_make_subset.h Source File</title>
+<title>Chi-Tech: modules/LinearBoltzmannSolvers/A_LBSSolver/Tools/lbs_make_subset.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -101,33 +101,36 @@ $(document).ready(function(){initNavTree('de/db8/lbs__make__subset_8h_source.htm
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d9/d42/namespacelbs.html">lbs</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../da/d31/structlbs_1_1_sub_set_info.html">   10</a></span><span class="keyword">struct </span><a class="code hl_struct" href="../../da/d31/structlbs_1_1_sub_set_info.html">SubSetInfo</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../da/d31/structlbs_1_1_sub_set_info.html#ad43bdedd1d6f94982f693c1aecf02ae7">   12</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_variable" href="../../da/d31/structlbs_1_1_sub_set_info.html#ad43bdedd1d6f94982f693c1aecf02ae7">ss_begin</a>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../da/d31/structlbs_1_1_sub_set_info.html#a36453acb6a976f26f6070928c12aa74d">   13</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_variable" href="../../da/d31/structlbs_1_1_sub_set_info.html#a36453acb6a976f26f6070928c12aa74d">ss_end</a>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../da/d31/structlbs_1_1_sub_set_info.html#a09b431e1a0d78eda44bd77e1638fd05d">   14</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_variable" href="../../da/d31/structlbs_1_1_sub_set_info.html#a09b431e1a0d78eda44bd77e1638fd05d">ss_size</a>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>std::vector&lt;SubSetInfo&gt; <a class="code hl_function" href="../../d9/d42/namespacelbs.html#a9bae66dfc98c36f55ee6f3a484a1be66">MakeSubSets</a>(<span class="keywordtype">size_t</span> num_items,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                                    <span class="keywordtype">size_t</span> desired_num_subsets);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}<span class="comment">//namespace lbs</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"></span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/**Data structure for information related to a subset of items.*/</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../da/d31/structlbs_1_1_sub_set_info.html">   11</a></span><span class="keyword">struct </span><a class="code hl_struct" href="../../da/d31/structlbs_1_1_sub_set_info.html">SubSetInfo</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../da/d31/structlbs_1_1_sub_set_info.html#ad43bdedd1d6f94982f693c1aecf02ae7">   13</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_variable" href="../../da/d31/structlbs_1_1_sub_set_info.html#ad43bdedd1d6f94982f693c1aecf02ae7">ss_begin</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../da/d31/structlbs_1_1_sub_set_info.html#a36453acb6a976f26f6070928c12aa74d">   14</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_variable" href="../../da/d31/structlbs_1_1_sub_set_info.html#a36453acb6a976f26f6070928c12aa74d">ss_end</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../da/d31/structlbs_1_1_sub_set_info.html#a09b431e1a0d78eda44bd77e1638fd05d">   15</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_variable" href="../../da/d31/structlbs_1_1_sub_set_info.html#a09b431e1a0d78eda44bd77e1638fd05d">ss_size</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"></span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/**Routine that neatly contains the logic for creating a number of</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * subsets from a given set.*/</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>std::vector&lt;SubSetInfo&gt; <a class="code hl_function" href="../../d9/d42/namespacelbs.html#a9bae66dfc98c36f55ee6f3a484a1be66">MakeSubSets</a>(<span class="keywordtype">size_t</span> num_items,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                                    <span class="keywordtype">size_t</span> desired_num_subsets);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">//CHITECH_LBS_MAKE_SUBSET_H</span></div>
-<div class="ttc" id="anamespacelbs_html"><div class="ttname"><a href="../../d9/d42/namespacelbs.html">lbs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d64/lbkes__k__eigenvalue__solver_8h_source.html#l00009">lbkes_k_eigenvalue_solver.h:10</a></div></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}<span class="comment">//namespace lbs</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif </span><span class="comment">//CHITECH_LBS_MAKE_SUBSET_H</span></div>
+<div class="ttc" id="anamespacelbs_html"><div class="ttname"><a href="../../d9/d42/namespacelbs.html">lbs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de8/acceleration_8h_source.html#l00013">acceleration.h:14</a></div></div>
 <div class="ttc" id="anamespacelbs_html_a9bae66dfc98c36f55ee6f3a484a1be66"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a9bae66dfc98c36f55ee6f3a484a1be66">lbs::MakeSubSets</a></div><div class="ttdeci">std::vector&lt; SubSetInfo &gt; MakeSubSets(const size_t num_items, const size_t desired_num_subsets)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d1c/lbs__make__subset_8cc_source.html#l00010">lbs_make_subset.cc:10</a></div></div>
-<div class="ttc" id="astructlbs_1_1_sub_set_info_html"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html">lbs::SubSetInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00010">lbs_make_subset.h:11</a></div></div>
-<div class="ttc" id="astructlbs_1_1_sub_set_info_html_a09b431e1a0d78eda44bd77e1638fd05d"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html#a09b431e1a0d78eda44bd77e1638fd05d">lbs::SubSetInfo::ss_size</a></div><div class="ttdeci">size_t ss_size</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00014">lbs_make_subset.h:14</a></div></div>
-<div class="ttc" id="astructlbs_1_1_sub_set_info_html_a36453acb6a976f26f6070928c12aa74d"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html#a36453acb6a976f26f6070928c12aa74d">lbs::SubSetInfo::ss_end</a></div><div class="ttdeci">size_t ss_end</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00013">lbs_make_subset.h:13</a></div></div>
-<div class="ttc" id="astructlbs_1_1_sub_set_info_html_ad43bdedd1d6f94982f693c1aecf02ae7"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html#ad43bdedd1d6f94982f693c1aecf02ae7">lbs::SubSetInfo::ss_begin</a></div><div class="ttdeci">size_t ss_begin</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00012">lbs_make_subset.h:12</a></div></div>
+<div class="ttc" id="astructlbs_1_1_sub_set_info_html"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html">lbs::SubSetInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00011">lbs_make_subset.h:12</a></div></div>
+<div class="ttc" id="astructlbs_1_1_sub_set_info_html_a09b431e1a0d78eda44bd77e1638fd05d"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html#a09b431e1a0d78eda44bd77e1638fd05d">lbs::SubSetInfo::ss_size</a></div><div class="ttdeci">size_t ss_size</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00015">lbs_make_subset.h:15</a></div></div>
+<div class="ttc" id="astructlbs_1_1_sub_set_info_html_a36453acb6a976f26f6070928c12aa74d"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html#a36453acb6a976f26f6070928c12aa74d">lbs::SubSetInfo::ss_end</a></div><div class="ttdeci">size_t ss_end</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00014">lbs_make_subset.h:14</a></div></div>
+<div class="ttc" id="astructlbs_1_1_sub_set_info_html_ad43bdedd1d6f94982f693c1aecf02ae7"><div class="ttname"><a href="../../da/d31/structlbs_1_1_sub_set_info.html#ad43bdedd1d6f94982f693c1aecf02ae7">lbs::SubSetInfo::ss_begin</a></div><div class="ttdeci">size_t ss_begin</div><div class="ttdef"><b>Definition:</b> <a href="../../de/db8/lbs__make__subset_8h_source.html#l00013">lbs_make_subset.h:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_e05d7e2b1ecd646af5bb94391405f3b5.html">modules</a></li><li class="navelem"><a class="el" href="../../dir_59cfc1f9cd8e172a3887c8cc9ab990d8.html">LinearBoltzmannSolver</a></li><li class="navelem"><a class="el" href="../../de/db8/lbs__make__subset_8h.html">lbs_make_subset.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_e05d7e2b1ecd646af5bb94391405f3b5.html">modules</a></li><li class="navelem"><a class="el" href="../../dir_7670928a5854b858dbd40f78e1d25c60.html">LinearBoltzmannSolvers</a></li><li class="navelem"><a class="el" href="../../dir_b4a8d416c8fba39c010ca9aedd35ee28.html">A_LBSSolver</a></li><li class="navelem"><a class="el" href="../../dir_36f38d9d22cff7c2d83e5ec9080e77f5.html">Tools</a></li><li class="navelem"><a class="el" href="../../de/db8/lbs__make__subset_8h.html">lbs_make_subset.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

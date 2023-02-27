@@ -1,13 +1,8 @@
 var dir_41c80f95f12a0f49cc3699b3f520ba8c =
 [
-    [ "export_multiple_vtk.cc", "d2/d7c/export__multiple__vtk_8cc.html", null ],
-    [ "fieldfunction.h", "d1/db1/fieldfunction_8h.html", [
-      [ "chi_physics::FieldFunction", "df/de9/classchi__physics_1_1_field_function.html", "df/de9/classchi__physics_1_1_field_function" ]
-    ] ],
-    [ "fieldfunction_exportvtk.cc", "db/d0c/fieldfunction__exportvtk_8cc.html", null ],
-    [ "fieldfunction_maindoc.cc", "d4/ddb/fieldfunction__maindoc_8cc.html", null ],
-    [ "fieldfunction_mapping.cc", "d7/db3/fieldfunction__mapping_8cc.html", null ],
-    [ "fieldfunction_vtkfv.cc", "db/d82/fieldfunction__vtkfv_8cc.html", null ],
-    [ "fieldfunction_vtkpwlc.cc", "d5/da8/fieldfunction__vtkpwlc_8cc.html", null ],
-    [ "fieldfunction_vtkpwld.cc", "d8/dce/fieldfunction__vtkpwld_8cc.html", null ]
+    [ "fieldfunction.h", "d1/db1/fieldfunction_8h.html", "d1/db1/fieldfunction_8h" ],
+    [ "fieldfunction_00_constrdestr.cc", "d1/d4d/fieldfunction__00__constrdestr_8cc.html", null ],
+    [ "fieldfunction_01_updates.cc", "d3/d77/fieldfunction__01__updates_8cc.html", null ],
+    [ "fieldfunction_03b_exportvtkwithappend.cc", "d0/de5/fieldfunction__03b__exportvtkwithappend_8cc.html", null ],
+    [ "fieldfunction_04_utils.cc", "d5/d0c/fieldfunction__04__utils_8cc.html", null ]
 ];

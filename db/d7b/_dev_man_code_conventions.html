@@ -135,10 +135,12 @@ Example 2</div></div>
 <h2><a class="anchor" id="devman1_sec0_2"></a>
 General code</h2>
 <ul>
-<li><b>Variables</b> must use lower case and include "_" between words. i.e. num_faces. Variable must not start or end with an underscore.</li>
-<li><b>Namespaces</b> should be lower case and may include underscores</li>
-<li><b>FunctionNames</b> have no underscores and each word starts with a capital letter. Underscores can be allowed in some circumstances.</li>
-<li><b>Classes and structures</b> have each word start with a capital letter. For example chi_mesh::Vector is a structure called Vector and is defined in the namespace <a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a>.</li>
+<li><b>Variables</b> use snake_case, must use lower case and include "_" between words. i.e. num_faces. Variable must not start or end with an underscore.</li>
+<li><b>class Members</b> same as variables but with a trailing "_". <code>struct</code> members do not need trailing underscores. See more about this below.</li>
+<li><b>Namespaces</b> use snake_case, should be lower case and may include underscores</li>
+<li><b>FunctionNames</b> use PascalCase, have no underscores and each word starts with a capital letter. Underscores can be allowed in some circumstances.</li>
+<li><b>Classes, structures, and types</b> use PascalCase, have each word start with a capital letter. For example chi_mesh::Vector is a structure called Vector and is defined in the namespace <a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a>.</li>
+<li><b>enums and constants</b> use SCREAMING_SNAKE_CASE.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> good_variable_name;    <span class="comment">// Good variable name</span></div>
 <div class="line"><span class="keywordtype">int</span> bvm;                   <span class="comment">// Bad variable name</span></div>
@@ -171,7 +173,19 @@ General code</h2>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">  <span class="keywordtype">int</span> data;</div>
 <div class="line">};</div>
-</div><!-- fragment --><h2><a class="anchor" id="devman1_sec0_3"></a>
+</div><!-- fragment --><h2>More on Class member conventions</h2>
+<ul>
+<li>All class members should be named the same as regular variables, but with a trailing underscore ('_'), e.g., <code>cell.centroid_</code>.</li>
+<li><code>struct</code> members should NOT be followed by an underscore.</li>
+<li>Strongly consider making all class members <code>private/protected</code> unless<ul>
+<li>They are <code>const</code>.</li>
+<li>They cause a sensitivity to speed, e.g., <code>chi_mesh::cell</code> does not have accessor functions because <code>cell.vertex_ids_</code> is faster than <code>cell.GetVertexIDs()</code></li>
+</ul>
+</li>
+<li>References to <code>private/protected</code> members should be obtained with a method call. A recommended convention is starting the method call with <code>Get</code>, e.g., <code>object.member</code> should be referenced with <code>object.GetMember()</code>. This is only guidance. It is perfectly fine to have <code>object.Member()</code> or anything that makes sense for the given use case.</li>
+<li>Use <code>const</code> and non-<code>const</code> getters judicially. Favor using setters over non-const reference if possible, e.g., setting a single value can be done with <code>GetSingleValue</code>/<code>SetSingleValue</code>, however, vector manipulation might be better done with <code>GetVector</code> followed by manipulations.</li>
+</ul>
+<h2><a class="anchor" id="devman1_sec0_3"></a>
 Tabs, spaces and braces</h2>
 <p >In order to save horizontal space standard indents are to be 2 spaces instead of 4 space equivalent tabs. Other than this the convention is flexible.<br  />
 <br  />
@@ -218,7 +232,7 @@ Comments</h2>
 <div class="line">}</div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="aclasschi_html_ac61de38bf878913b59c570995346052e"><div class="ttname"><a href="../../d4/d35/classchi.html#ac61de38bf878913b59c570995346052e">chi::solver_stack</a></div><div class="ttdeci">static std::vector&lt; chi_physics::SolverPtr &gt; solver_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00080">chi_runtime.h:80</a></div></div>
-<div class="ttc" id="agroup___lua_diffusion_html_gaafc0819e34c8bdad070c5b3dcbf25e46"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#gaafc0819e34c8bdad070c5b3dcbf25e46">chi_lua::chiDiffusionExecute</a></div><div class="ttdeci">Success chiDiffusionExecute(int SolverHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01959">lua_functions.c:1959</a></div></div>
+<div class="ttc" id="agroup___lua_diffusion_html_gaafc0819e34c8bdad070c5b3dcbf25e46"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#gaafc0819e34c8bdad070c5b3dcbf25e46">chi_lua::chiDiffusionExecute</a></div><div class="ttdeci">Success chiDiffusionExecute(int SolverHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02882">lua_functions.c:2882</a></div></div>
 </div><!-- fragment --><h2>Annotating Class-declerations:</h2>
 <p ><b>MAXIMIZE SCOPE MINIMIZE SPACE</b>. Class declerations must always happen within header files and should aim to provide the maximum amount of scope <b>within the minimum amount of vertical space.</b> Member variables/structures should be on the top portion of the class decleration and methods should be on the bottom.</p>
 <div class="fragment"></div><!-- fragment --><h1><a class="anchor" id="devman1_sec1"></a>

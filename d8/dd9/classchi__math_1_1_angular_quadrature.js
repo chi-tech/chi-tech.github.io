@@ -11,13 +11,13 @@ var classchi__math_1_1_angular_quadrature =
     [ "GetMomentToHarmonicsIndexMap", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a0901459843cb766b44c517345ace3c46", null ],
     [ "MakeHarmonicIndices", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a5d603ef8cc7ff11534d6949817e6f851", null ],
     [ "OptimizeForPolarSymmetry", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a761b5fb1f3b1bac6828fc794b508cafd", null ],
-    [ "abscissae", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a4ce7c62325acf99f0910252a8f99a187", null ],
-    [ "d2m_op", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a873eb46b9201b496c455bba7d86da60f", null ],
-    [ "d2m_op_built", "d8/dd9/classchi__math_1_1_angular_quadrature.html#ad29d9e41259a689c0c48f33819eacbf9", null ],
-    [ "m2d_op", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a3d61c7178752e585d27c4862dd1d84fe", null ],
-    [ "m2d_op_built", "d8/dd9/classchi__math_1_1_angular_quadrature.html#ab6346b50be9f73e6f1472d096a84f947", null ],
-    [ "m_to_ell_em_map", "d8/dd9/classchi__math_1_1_angular_quadrature.html#ac1ca70931021267a7ac7f0a92ffb19ce", null ],
-    [ "omegas", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a428a1a46fbec14a468f4ec74c93c6467", null ],
-    [ "type", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a855b926b143c1c962d21b194db3f7209", null ],
-    [ "weights", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a7d524b2430d761093e2d9c55a061c11b", null ]
+    [ "abscissae_", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a71f7d1bc92ffd461a37dcef7d262e7d6", null ],
+    [ "d2m_op_", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a9565421e58fdc26ad0aae49d211e501d", null ],
+    [ "d2m_op_built_", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a091bdedb9ab5dcb4ae5a1f2726f01f77", null ],
+    [ "m2d_op_", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a67e590fed20aa5abea28287d936f1b36", null ],
+    [ "m2d_op_built_", "d8/dd9/classchi__math_1_1_angular_quadrature.html#ae074e4d0d865af4c2396ba4802315ee0", null ],
+    [ "m_to_ell_em_map_", "d8/dd9/classchi__math_1_1_angular_quadrature.html#aa98492a6e4a74f907c16d552b8616cb9", null ],
+    [ "omegas_", "d8/dd9/classchi__math_1_1_angular_quadrature.html#afb5565ee82375f0d0ac28e199037461a", null ],
+    [ "type_", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a2bb603d0631b964340415ff348177537", null ],
+    [ "weights_", "d8/dd9/classchi__math_1_1_angular_quadrature.html#a237e0c76508139ffabd0c920eb70c107", null ]
 ];

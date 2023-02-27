@@ -1,7 +1,7 @@
 var dir_cda5a77f58e8b1c15e40efd3db3ec6d2 =
 [
     [ "GolubFischer", "dir_c31c22279e3df4be443c2f57ef53a0bf.html", "dir_c31c22279e3df4be443c2f57ef53a0bf" ],
-    [ "lua", "dir_45cf0b533668755aad328b19718a683d.html", "dir_45cf0b533668755aad328b19718a683d" ],
+    [ "LinearSolver", "dir_5f2a8b7fc309a728d23784962c0d1a3c.html", "dir_5f2a8b7fc309a728d23784962c0d1a3c" ],
     [ "PETScUtils", "dir_a4d245c82537caf8a99c19949cb3c6c7.html", "dir_a4d245c82537caf8a99c19949cb3c6c7" ],
     [ "Quadratures", "dir_a62c3ea6aad71bcd097aa9cc32b82947.html", "dir_a62c3ea6aad71bcd097aa9cc32b82947" ],
     [ "RandomNumberGeneration", "dir_ffca168c19b16ed9e70a1ee18e61522e.html", "dir_ffca168c19b16ed9e70a1ee18e61522e" ],

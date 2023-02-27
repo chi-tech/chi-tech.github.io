@@ -20,10 +20,10 @@ var classchi__math_1_1_polyhedron_mapping_f_e___p_w_l =
     [ "TetGradShape_y", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#aa08f8e4a844d628a0e701118f1fc80b2", null ],
     [ "TetGradShape_z", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#ac3d7bce40885818352bfb3d932e88b30", null ],
     [ "TetShape", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#a463c170650e377d3aa70db794db00432", null ],
-    [ "alphac", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#ae82fcb0db4ad0fd473dc6a842ce98d37", null ],
-    [ "face_betaf", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#a952ce4780f3ac01f24f97a58869bd94c", null ],
-    [ "face_data", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#a695de26233462b81c305a2aaee1b269d", null ],
-    [ "node_side_maps", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#a92bf106a14ccfc7a587102e6a2c24a90", null ],
-    [ "surface_quadrature", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#a5fd06f1e354cd7e51573ee6b0141895a", null ],
-    [ "volume_quadrature", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#a17867046763631c7ccb0dce2edc5cf99", null ]
+    [ "alphac_", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#af744caeb697bf1f626b07a0a855b8383", null ],
+    [ "face_betaf_", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#a79f4300803cedd6615d60a4ab6544f36", null ],
+    [ "face_data_", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#a7255eef49aa8a1c98f5c99205a01c685", null ],
+    [ "node_side_maps_", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#a0be4189f861946d34045f88ce7e66d72", null ],
+    [ "surface_quadrature_", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#ac4d053cca706dda4e47158578d73ab1f", null ],
+    [ "volume_quadrature_", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html#ad4396ee41d812bab8e91c5dc4054a16c", null ]
 ];

@@ -17,5 +17,5 @@ var classchi__math_1_1_spatial_discretization___f_v =
     [ "MapDOFLocal", "d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html#a30dc9679b645ecf03dcdf0e1c72b4b5b", null ],
     [ "New", "d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html#a5bbe68d748cdc52e05dfcfe37f74d622", null ],
     [ "OrderNodes", "d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html#adb3e469dae7e91634f38e6277a70c4c5", null ],
-    [ "neighbor_cell_local_ids", "d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html#a4e207a2b8573a8af7332c6689c4931dd", null ]
+    [ "neighbor_cell_local_ids_", "d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html#ac11cf6dab6426733f5c1334b1445d7d8", null ]
 ];

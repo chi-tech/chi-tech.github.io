@@ -1,5 +1,5 @@
 var classchi__physics_1_1_material =
 [
-    [ "name", "d8/da4/classchi__physics_1_1_material.html#a3ac7434990000927f4e1c881cde6be21", null ],
-    [ "properties", "d8/da4/classchi__physics_1_1_material.html#a17ebd1e48d0053230ec41897c26b2ba2", null ]
+    [ "name_", "d8/da4/classchi__physics_1_1_material.html#afdf6e12dbb09825c5fd3a0b98949b403", null ],
+    [ "properties_", "d8/da4/classchi__physics_1_1_material.html#a319065d26b2d5b19a5e0412a7a34e311", null ]
 ];

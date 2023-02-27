@@ -6,5 +6,5 @@ var classchi__physics_1_1_material_property =
     [ "PushLuaTable", "df/d52/classchi__physics_1_1_material_property.html#a70272364e7b2fe3e2e378ef955d038cf", null ],
     [ "Type", "df/d52/classchi__physics_1_1_material_property.html#af89883b35d004e81f322a854daf554f9", null ],
     [ "property_name", "df/d52/classchi__physics_1_1_material_property.html#af461d97c1db1ebf2fbdd16b026044418", null ],
-    [ "type", "df/d52/classchi__physics_1_1_material_property.html#a738eada145e4521e341bb156018f0f1a", null ]
+    [ "type_", "df/d52/classchi__physics_1_1_material_property.html#a53fd9e9c340d21a87fe50314391139f4", null ]
 ];

@@ -14,10 +14,12 @@ var chi__volumemesher_8h =
       [ "PARTITION_TYPE", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a704f523c928ce09f4a03ebc860c4064b", null ],
       [ "EXTRUSION_LAYER", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a7fa5319da678071d38e04d6f571f09f5", null ],
       [ "MATID_FROMLOGICAL", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a9736e723930ad60f2829f5ef19148803", null ],
-      [ "BNDRYID_FROMLOGICAL", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a7f91a4d4b8e9e23a94dfdc882c363285", null ]
+      [ "BNDRYID_FROMLOGICAL", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a7f91a4d4b8e9e23a94dfdc882c363285", null ],
+      [ "MATID_FROM_LUA_FUNCTION", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5a5048795310aa0f9dec5a774fec00ccb0", null ],
+      [ "BNDRYID_FROM_LUA_FUNCTION", "dd/dcb/chi__volumemesher_8h.html#a496eecf9633f022b12704bc27a6726a5aa4da9272dd0f440364bc941dba470051", null ]
     ] ],
     [ "VolumeMesherType", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1", [
-      [ "EXTRUDER", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a0befd17b3ade34df1cc1ae7ecd38da20", null ],
-      [ "UNPARTITIONED", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a4ff11a25c75f2e5deefd836afcbec82a", null ]
+      [ "EXTRUDER", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a46c70d7936eb05f5f6be8d9df706449c", null ],
+      [ "UNPARTITIONED", "dd/dcb/chi__volumemesher_8h.html#a3ff8e76f208eff98d2d3e9fe169edbf1a15bbbae6c1e23486c3f013ede4474581", null ]
     ] ]
 ];

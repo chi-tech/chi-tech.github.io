@@ -25,11 +25,11 @@ var classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature =
     [ "TestIntegration", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ad3390a45afeb48550ec42ffa374c5e1b", null ],
     [ "FUNCTION_WEIGHT_FROM_RHO", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#aef3d6a3e636147f460cf6d825ac918b7", null ],
     [ "a", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ae2e2030f035f36117cf747fa5c337787", null ],
-    [ "deployed_SQs", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ab618299a4ea747832130e687f37b46b7", null ],
-    [ "deployed_SQs_history", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a36433e08e22aeee499ed3a92ee64f407", null ],
-    [ "diagonal_vertices", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#afc750480f5f92c2536da696e77ecfd36", null ],
-    [ "initial_level", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a0501ec41f54e6f49cd95cdc186ee1161", null ],
-    [ "initial_octant_SQs", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a3d1b63543b852052c60a3811f4a7f2c3", null ],
-    [ "output_filename_prefix", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#af32979e5ecf5baee5426de853a6fc14b", null ],
-    [ "qp_optimization_type", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a1a7d8d8d4e87583ed395f036eaa0bb8b", null ]
+    [ "deployed_SQs_", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a787094d4cc8a3b0535e15099dc8185bd", null ],
+    [ "deployed_SQs_history_", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a2d8b0d7feeca7ba9597513f18452eb36", null ],
+    [ "diagonal_vertices_", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#ab3259af2a2f5da37b90fae18c8f203f0", null ],
+    [ "initial_level_", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a74c9ddbf5fc849ede4055c430639c3f6", null ],
+    [ "initial_octant_SQs_", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a0949fd661f444a0022f92676e4a13638", null ],
+    [ "output_filename_prefix_", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a98d03623004da4c91307330c5a42bacc", null ],
+    [ "qp_optimization_type_", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a41510eeec510958fb6c7f9494acdb26a", null ]
 ];

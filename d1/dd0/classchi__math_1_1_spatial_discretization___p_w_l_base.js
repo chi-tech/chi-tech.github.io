@@ -12,8 +12,8 @@ var classchi__math_1_1_spatial_discretization___p_w_l_base =
     [ "LocalizePETScVector", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#ac19673a95a18f8a33985371da19c32f5", null ],
     [ "PreComputeCellSDValues", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#a7de48604fd2a76240f5de8063d2f2b02", null ],
     [ "PreComputeNeighborCellSDValues", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#a926544e031be92273ac3576b0bd1c27f", null ],
-    [ "line_quad_order_arbitrary", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#abb9cf54c0c1d4f8cd5dd66da52969ed5", null ],
-    [ "quad_quad_order_arbitrary", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#a043c1dfc9a3adc5cfb0ea0e77377d908", null ],
-    [ "tet_quad_order_arbitrary", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#a699b951f5121803f06f5c0e4fe56f0a2", null ],
-    [ "tri_quad_order_arbitrary", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#a8945b41b8ac8ba1c9d18088113fe005f", null ]
+    [ "line_quad_order_arbitrary_", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#a19221443fc1adf7a0fbcfb659f5bc899", null ],
+    [ "quad_quad_order_arbitrary_", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#a6eff59aa7077424af71ff4127544e194", null ],
+    [ "tet_quad_order_arbitrary_", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#a171ea05b97cf3c70586f45023153c258", null ],
+    [ "tri_quad_order_arbitrary_", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#a7e25da1fecf0c7bcd157244022440597", null ]
 ];

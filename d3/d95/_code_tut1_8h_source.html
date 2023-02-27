@@ -254,7 +254,7 @@ $(document).ready(function(){initNavTree('d3/d95/_code_tut1_8h_source.html','../
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">endif()</span></div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">message(STATUS &quot;CHI_TECH_DIR set to ${CHI_TECH_DIR}&quot;)</span></div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment"></span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">include(&quot;${CHI_TECH_DIR}/ChiResources/Macros/Downstream.cmake&quot;)</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">include(&quot;${CHI_TECH_DIR}/resources/Macros/Downstream.cmake&quot;)</span></div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment"></span> </div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY &quot;${PROJECT_SOURCE_DIR}/lib&quot;)</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">set(CMAKE_LIBRARY_OUTPUT_DIRECTORY &quot;${PROJECT_SOURCE_DIR}/lib&quot;)</span></div>
@@ -783,13 +783,13 @@ $(document).ready(function(){initNavTree('d3/d95/_code_tut1_8h_source.html','../
 <div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span><span class="comment">to visual solutions. In order to gain access to `chi_physics::FieldFunction` we</span></div>
 <div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span><span class="comment">need to include the header</span></div>
 <div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span><span class="comment">\code</span></div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span><span class="comment">#include &quot;ChiPhysics/FieldFunction2/fieldfunction2.h&quot;</span></div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span><span class="comment">#include &quot;ChiPhysics/FieldFunction/fieldfunction2.h&quot;</span></div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span><span class="comment">\endcode</span></div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span><span class="comment"></span> </div>
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span><span class="comment">Next we create the field function using the code</span></div>
 <div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span><span class="comment">\code</span></div>
 <div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span><span class="comment">//============================================= Create Field Function</span></div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span><span class="comment">auto ff = std::make_shared&lt;chi_physics::FieldFunction2&gt;(</span></div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span><span class="comment">auto ff = std::make_shared&lt;chi_physics::FieldFunction&gt;(</span></div>
 <div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span><span class="comment">  &quot;Phi&quot;,</span></div>
 <div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span><span class="comment">  sdm_ptr,</span></div>
 <div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span><span class="comment">  chi_math::Unknown(chi_math::UnknownType::SCALAR)</span></div>
@@ -842,7 +842,7 @@ $(document).ready(function(){initNavTree('d3/d95/_code_tut1_8h_source.html','../
 <div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span><span class="comment">#include &quot;ChiMath/SpatialDiscretization/FiniteVolume/fv.h&quot;</span></div>
 <div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span><span class="comment">#include &quot;ChiMath/PETScUtils/petsc_utils.h&quot;</span></div>
 <div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span><span class="comment"></span> </div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span><span class="comment">#include &quot;ChiPhysics/FieldFunction2/fieldfunction2.h&quot;</span></div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span><span class="comment">#include &quot;ChiPhysics/FieldFunction/fieldfunction2.h&quot;</span></div>
 <div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span><span class="comment"></span> </div>
 <div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span><span class="comment">int main(int argc, char* argv[])</span></div>
 <div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span><span class="comment">{</span></div>
@@ -971,7 +971,7 @@ $(document).ready(function(){initNavTree('d3/d95/_code_tut1_8h_source.html','../
 <div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span><span class="comment">  chi::log.Log() &lt;&lt; &quot;Done cleanup&quot;;</span></div>
 <div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span><span class="comment"></span> </div>
 <div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span><span class="comment">  //============================================= Create Field Function</span></div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span><span class="comment">  auto ff = std::make_shared&lt;chi_physics::FieldFunction2&gt;(</span></div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span><span class="comment">  auto ff = std::make_shared&lt;chi_physics::FieldFunction&gt;(</span></div>
 <div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span><span class="comment">    &quot;Phi&quot;,</span></div>
 <div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span><span class="comment">    sdm_ptr,</span></div>
 <div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span><span class="comment">    chi_math::Unknown(chi_math::UnknownType::SCALAR)</span></div>

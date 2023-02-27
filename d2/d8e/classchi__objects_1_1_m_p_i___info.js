@@ -9,9 +9,9 @@ var classchi__objects_1_1_m_p_i___info =
     [ "chi::Initialize", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#ab1cf54eb4573ca79db3e62395817afe2", null ],
     [ "instance", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#ac2fc532bcd61c8dd3d0c4d4938c25df8", null ],
     [ "location_id", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#a54f1fff8b57b767e27ff93e3da0e3efc", null ],
-    [ "m_location_id", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#aca1c4a8590412aa9c4b546a685f24b66", null ],
-    [ "m_location_id_set", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#a305a75bce8f87d6b63f3ddfa7f266681", null ],
-    [ "m_process_count", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#a7227e120a545dd2542b5d64cf8e6b5ca", null ],
-    [ "m_process_count_set", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#a4601633384d1f86d1aaa232364ff9239", null ],
-    [ "process_count", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#a3e7cf26fd15423a1552479ec4026cc10", null ]
+    [ "location_id_", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#abe183b1a225d714ef4852650c1b3eb8f", null ],
+    [ "location_id_set_", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#a0d856e664a90d78576d5fc3f591ba1ad", null ],
+    [ "process_count", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#a3e7cf26fd15423a1552479ec4026cc10", null ],
+    [ "process_count_", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#af2c082c56e4a902a150949409de6156c", null ],
+    [ "process_count_set_", "d2/d8e/classchi__objects_1_1_m_p_i___info.html#aea962adebde7e3ee64f97f9aba4db44e", null ]
 ];

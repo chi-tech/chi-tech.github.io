@@ -17,7 +17,7 @@ var classchi =
     [ "console", "d4/d35/classchi.html#afaf99163b7a54f59d6372e94cfc32dea", null ],
     [ "current_mesh_handler", "d4/d35/classchi.html#ad1f9d34fffdcc76cfb66c35740bf96ee", null ],
     [ "field_func_interpolation_stack", "d4/d35/classchi.html#ac49e26b99e533dfe75f9818201de79d0", null ],
-    [ "fieldfunc_stack", "d4/d35/classchi.html#a92e3268d2c40f778d7434f6ea9448b26", null ],
+    [ "field_function_stack", "d4/d35/classchi.html#afba79ac38d3410b337bdb6f52c1fa28c", null ],
     [ "log", "d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a", null ],
     [ "logicvolume_stack", "d4/d35/classchi.html#a22aa55302a909b4e4d9d64fbfedd9b5e", null ],
     [ "material_stack", "d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d", null ],

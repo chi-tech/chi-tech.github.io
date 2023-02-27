@@ -11,5 +11,5 @@ var classchi__physics_1_1_basic_options =
     [ "operator()", "d1/d7c/classchi__physics_1_1_basic_options.html#a9df56e08d57d1f345036a5059dba7f3b", null ],
     [ "operator[]", "d1/d7c/classchi__physics_1_1_basic_options.html#a26522c9f863508eb8cd3ba1bdd99d728", null ],
     [ "operator[]", "d1/d7c/classchi__physics_1_1_basic_options.html#a9dc5d2e64d80a55ea3653832f00f6f5f", null ],
-    [ "options", "d1/d7c/classchi__physics_1_1_basic_options.html#a2da2af4c1b2e64dd272982b9405a5464", null ]
+    [ "options_", "d1/d7c/classchi__physics_1_1_basic_options.html#a349621f1087f8ed6b5bafc2384c9ace9", null ]
 ];

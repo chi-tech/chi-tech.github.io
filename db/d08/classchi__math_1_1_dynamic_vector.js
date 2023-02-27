@@ -46,5 +46,5 @@ var classchi__math_1_1_dynamic_vector =
     [ "resize", "db/d08/classchi__math_1_1_dynamic_vector.html#a234a904fb51a5255422d1701a14a3295", null ],
     [ "resize", "db/d08/classchi__math_1_1_dynamic_vector.html#a653cb5b190909799a9b1e2ccda1fac70", null ],
     [ "size", "db/d08/classchi__math_1_1_dynamic_vector.html#af80e4ca826a1b80b6ef3ac755041d512", null ],
-    [ "elements", "db/d08/classchi__math_1_1_dynamic_vector.html#a18291dc3a562c9db40159b2128e20b8e", null ]
+    [ "elements_", "db/d08/classchi__math_1_1_dynamic_vector.html#a52f7753a9af1f951e207422a08bf3274", null ]
 ];

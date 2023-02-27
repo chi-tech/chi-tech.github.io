@@ -5,5 +5,6 @@ var searchData=
   ['jinv_2',['Jinv',['../d7/d5b/structchi__math_1_1_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d.html#adf47401aa296b08fc34ab3cb3c917840',1,'chi_math::PolygonMappingFE_PWL::FEside_data2d::Jinv()'],['../da/d21/structchi__math_1_1_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html#a477cb73659342df974001bb58d52ce49',1,'chi_math::PolyhedronMappingFE_PWL::FEside_data3d::Jinv()']]],
   ['jpartial_3',['JPARTIAL',['../d8/d43/namespacelbs_1_1acceleration.html#a659c49b7d56874978ed37700cd9addfba8e6810e931aac7a2f131c3413c3f3054',1,'lbs::acceleration']]],
   ['jtinv_4',['JTinv',['../d7/d5b/structchi__math_1_1_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d.html#ae919c582fe134a4c0a2134bd924a9343',1,'chi_math::PolygonMappingFE_PWL::FEside_data2d::JTinv()'],['../da/d21/structchi__math_1_1_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html#a56ee1d3ed59a194e8219649755261466',1,'chi_math::PolyhedronMappingFE_PWL::FEside_data3d::JTinv()']]],
-  ['jxw_5',['JxW',['../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a221610e84da37474cf16dadb07d6d27a',1,'chi_math::finite_element::InternalQuadraturePointData']]]
+  ['jxw_5',['JxW',['../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a221610e84da37474cf16dadb07d6d27a',1,'chi_math::finite_element::InternalQuadraturePointData']]],
+  ['jxw_5f_6',['JxW_',['../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a2816f0e9ac80a4a40bb69f59994ca07b',1,'chi_math::finite_element::InternalQuadraturePointData']]]
 ];

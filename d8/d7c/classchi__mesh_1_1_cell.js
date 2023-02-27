@@ -11,13 +11,13 @@ var classchi__mesh_1_1_cell =
     [ "SubType", "d8/d7c/classchi__mesh_1_1_cell.html#a73daca8aec307ecc5d27ecdb0df94709", null ],
     [ "ToString", "d8/d7c/classchi__mesh_1_1_cell.html#a874f3806f139767cf566195d8c8460e8", null ],
     [ "Type", "d8/d7c/classchi__mesh_1_1_cell.html#a6324196540b8557cb2bdf20e62c45b78", null ],
-    [ "cell_sub_type", "d8/d7c/classchi__mesh_1_1_cell.html#a87fd76c733c6c0019fe0a7780e03b5d6", null ],
-    [ "cell_type", "d8/d7c/classchi__mesh_1_1_cell.html#a26312c4a14435e5f3f06e611106d8a7c", null ],
-    [ "centroid", "d8/d7c/classchi__mesh_1_1_cell.html#a58370baa6ec59d40745ff14c444868ba", null ],
-    [ "faces", "d8/d7c/classchi__mesh_1_1_cell.html#a90d78f07990105f06483d22dc7bbb67e", null ],
-    [ "global_id", "d8/d7c/classchi__mesh_1_1_cell.html#aea49dd23ca8f09e588eb87e9a9f186d5", null ],
-    [ "local_id", "d8/d7c/classchi__mesh_1_1_cell.html#aa32bfac9ee2a5465f06bd3192faa2441", null ],
-    [ "material_id", "d8/d7c/classchi__mesh_1_1_cell.html#a1f962268f8d4be269d31e9c42f1c46b6", null ],
-    [ "partition_id", "d8/d7c/classchi__mesh_1_1_cell.html#adaf729b7d2d8dc0f9f4a8f21a630e057", null ],
-    [ "vertex_ids", "d8/d7c/classchi__mesh_1_1_cell.html#a08e53310933ec250a3f8285e9fea8a1e", null ]
+    [ "cell_sub_type_", "d8/d7c/classchi__mesh_1_1_cell.html#a8fbaf2df6103928f00167b613fc51d99", null ],
+    [ "cell_type_", "d8/d7c/classchi__mesh_1_1_cell.html#a5c07c09f76dc5aea523b8af0e15c2833", null ],
+    [ "centroid_", "d8/d7c/classchi__mesh_1_1_cell.html#ae4b66a72553f739fe6bff52f315f820f", null ],
+    [ "faces_", "d8/d7c/classchi__mesh_1_1_cell.html#a06ac397b2445506592d089749aa142f8", null ],
+    [ "global_id_", "d8/d7c/classchi__mesh_1_1_cell.html#ad1c5a26d4493a54d80419111f2c89464", null ],
+    [ "local_id_", "d8/d7c/classchi__mesh_1_1_cell.html#a9f0e62c638d3da220ba112de9c66c23b", null ],
+    [ "material_id_", "d8/d7c/classchi__mesh_1_1_cell.html#ab6fa47c0c41a57c9360fc72105ef5ed8", null ],
+    [ "partition_id_", "d8/d7c/classchi__mesh_1_1_cell.html#abe74969aa9f484cddc3e14435123f26c", null ],
+    [ "vertex_ids_", "d8/d7c/classchi__mesh_1_1_cell.html#aede114dc43442a42b76d674c5211ae0b", null ]
 ];

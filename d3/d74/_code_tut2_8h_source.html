@@ -359,7 +359,7 @@ $(document).ready(function(){initNavTree('d3/d74/_code_tut2_8h_source.html','../
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="comment">Then we use paraview to make arrow glyphs for visualization.</span></div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="comment">\code</span></div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="comment">//============================================= Create Field Function</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="comment">auto ff_grad = std::make_shared&lt;chi_physics::FieldFunction2&gt;(</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="comment">auto ff_grad = std::make_shared&lt;chi_physics::FieldFunction&gt;(</span></div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="comment">  &quot;GradPhi&quot;,</span></div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="comment">  sdm_ptr,</span></div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment">  chi_math::Unknown(chi_math::UnknownType::VECTOR_3)</span></div>
@@ -393,7 +393,7 @@ $(document).ready(function(){initNavTree('d3/d74/_code_tut2_8h_source.html','../
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="comment">#include &quot;ChiMath/SpatialDiscretization/FiniteVolume/fv.h&quot;</span></div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="comment">#include &quot;ChiMath/PETScUtils/petsc_utils.h&quot;</span></div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="comment"></span> </div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="comment">#include &quot;ChiPhysics/FieldFunction2/fieldfunction2.h&quot;</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="comment">#include &quot;ChiPhysics/FieldFunction/fieldfunction2.h&quot;</span></div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="comment"></span> </div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="comment">#include &quot;ChiMath/VectorGhostCommunicator/vector_ghost_communicator.h&quot;</span></div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="comment"></span> </div>
@@ -524,7 +524,7 @@ $(document).ready(function(){initNavTree('d3/d74/_code_tut2_8h_source.html','../
 <div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span><span class="comment">  chi::log.Log() &lt;&lt; &quot;Done cleanup&quot;;</span></div>
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span><span class="comment"></span> </div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span><span class="comment">  //============================================= Create Field Function</span></div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span><span class="comment">  auto ff = std::make_shared&lt;chi_physics::FieldFunction2&gt;(</span></div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span><span class="comment">  auto ff = std::make_shared&lt;chi_physics::FieldFunction&gt;(</span></div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="comment">    &quot;Phi&quot;,</span></div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span><span class="comment">    sdm_ptr,</span></div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span><span class="comment">    chi_math::Unknown(chi_math::UnknownType::SCALAR)</span></div>
@@ -598,7 +598,7 @@ $(document).ready(function(){initNavTree('d3/d74/_code_tut2_8h_source.html','../
 <div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span><span class="comment">  }//for cell</span></div>
 <div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span><span class="comment"></span> </div>
 <div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span><span class="comment">  //============================================= Create Field Function</span></div>
-<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span><span class="comment">  auto ff_grad = std::make_shared&lt;chi_physics::FieldFunction2&gt;(</span></div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span><span class="comment">  auto ff_grad = std::make_shared&lt;chi_physics::FieldFunction&gt;(</span></div>
 <div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span><span class="comment">    &quot;GradPhi&quot;,</span></div>
 <div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span><span class="comment">    sdm_ptr,</span></div>
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span><span class="comment">    chi_math::Unknown(chi_math::UnknownType::VECTOR_3)</span></div>

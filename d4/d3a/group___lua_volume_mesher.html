@@ -123,7 +123,7 @@ Functions</h2></td></tr>
  <br  />
 Right now 2D meshes can be partitioned but the full 2D cell geometry exists on each processor. This is mostly because of the way the extruder works. This means that for a 2D problem a continuum will have ALL of the cells (as fully defined cells), in every process, in the member vector "cells" of the continuum. The same can not be said for 3D extruded meshes where each process has all the nodes but if cells are not local then only placeholders are uploaded. Placeholders are basically the base class <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> and contains only the cell's partition_id and its centroid. The concept that these placeholders are uploaded allows a sweeping order to figure out dependencies. A similar strategy would have to be devised for using third-party meshes.<br  />
  <br  />
-Global mesh references are maintained in <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a8290e6fd6bedfba721d4aabf73b806ee">chi_mesh::MeshContinuum::cells</a>. This contains the actual mesh object. Local indices are stored in <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a008c936a64651cedfaed95213c7b13f6">chi_mesh::MeshContinuum::local_cell_glob_indices</a> and are the global indices of local cells. Conversely the local indices, given a global index, are stored in chi_mesh::MeshContinuum::glob_cell_local_indices.</p>
+Global mesh references are maintained in <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a8290e6fd6bedfba721d4aabf73b806ee">chi_mesh::MeshContinuum::cells</a>. This contains the actual mesh object. Local indices are stored in chi_mesh::MeshContinuum::local_cell_glob_indices and are the global indices of local cells. Conversely the local indices, given a global index, are stored in chi_mesh::MeshContinuum::glob_cell_local_indices.</p>
 <h2>Extruder Mesher</h2>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga97061ff17454d77b1f4359690c624299" name="ga97061ff17454d77b1f4359690c624299"></a>
@@ -166,13 +166,13 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 <h3>Extruder parameters</h3>
 <p >When the mesher type is specified to be VOLUMEMESHER_EXTRUDER then two additional arguments are required. <code>TemplateType</code> and <code>handle</code>.<br  />
 </p><ul>
-<li><code>TemplateType</code> can be either <code>ExtruderTemplateType.SURFACE_MESH</code> or <code>ExtruderTemplateType.UNPARTITIONED_MESH</code>.<br  />
+<li><code>TemplateType</code> can for now only be <code>ExtruderTemplateType.UNPARTITIONED_MESH</code>.<br  />
 </li>
-<li><code>handle</code> is a handle to the template mesh. When <code>TemplateType</code> is set to <code>ExtruderTemplateType.SURFACE_MESH</code> then this must be a handle to a valid surface mesh. Similarly, when <code>TemplateType</code> is set to <code>ExtruderTemplateType.UNPARTITIONED_MESH</code> then the handle must point to a valid unpartitioned mesh.</li>
+<li><code>handle</code> is a handle to the template mesh. When <code>TemplateType</code> is set to <code>ExtruderTemplateType.UNPARTITIONED_MESH</code> then the handle must point to a valid unpartitioned mesh.</li>
 </ul>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00924">924</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00996">996</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -193,7 +193,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 <p >Executes the volume meshing pipeline.</p>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00930">930</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01002">1002</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -213,7 +213,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 </div><div class="memdoc">
 <p >Sets the x-cuts for KBA type partitioning with a lua array. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01007">1007</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01092">1092</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -233,7 +233,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 </div><div class="memdoc">
 <p >Sets the y-cuts for KBA type partitioning with a lua array. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01011">1011</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01096">1096</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -253,7 +253,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 </div><div class="memdoc">
 <p >Sets the z-cuts for KBA type partitioning with a lua array. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01015">1015</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01100">1100</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -298,7 +298,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01003">1003</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01088">1088</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -324,7 +324,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01021">1021</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01106">1106</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -374,8 +374,8 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
  PARTITION_Y = <b>PropertyValue:[int]</b> Number of partitions in Y. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
  PARTITION_Z = <b>PropertyValue:[int]</b> Number of partitions in Z. Only supported if partition-type is <code>KBA_STYLE_XY</code> or <code>KBA_STYLE_XYZ</code>.<br  />
  MATID_FROMLOGICAL = <b>LogicalVolumeHandle:[int],Mat_id:[int], Sense:[bool](Optional, default:true)</b> Sets the material id of cells that meet the sense requirement for the given logical volume.<br  />
- BNDRYID_FROMLOGICAL = <b>LogicalVolumeHandle:[int],Bndry_id:[int], Sense:[bool](Optional, default:true)</b> Sets the cell boundary id to the specified value for cells that meet the sense requirement for the given logical volume.<br  />
- </p><h2>_</h2>
+ BNDRYID_FROMLOGICAL = <b>LogicalVolumeHandle:[int],Bndry_name:[string], Sense:[bool](Optional, default:true)</b> Sets the cell boundary id to the specified value for cells that meet the sense requirement for the given logical volume.<br  />
+ MATID_FROM_LUA_FUNCTION = <b>LuaFunctionName:[string]</b>. For each cell, will call a lua function that can change the material id. The lua function must have 4 parameters, the cell's centroid x,y,z values (doubles) and the current cell-material id (int). The function must return a material id. BNDRYID_FROM_LUA_FUNCTION = <b>LuaFunctionName:[string]</b>. For each boundary face, will call a lua function that can change the boundary id. The lua function must have 7 parameters, the face's centroid x,y,z values (doubles), the face's normal x,y,z values (double), and the current face-boundary id (int). The function must return a boundary id. </p><h2>_</h2>
 <h3>PartitionType</h3>
 <p >Can be any of the following:</p><ul>
 <li>KBA_STYLE_XYZ</li>
@@ -383,7 +383,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 </ul>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00993">993</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01078">1078</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -403,7 +403,7 @@ Global mesh references are maintained in <a class="el" href="../../d3/d1c/classc
 </div><div class="memdoc">
 <p >Sets boundary numbers on boundaries orthogonal to the cardinal directions as xmax=0, xmin=1, ymax=2, ymin=3, zmax=4, zmin=5. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00937">937</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01009">1009</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

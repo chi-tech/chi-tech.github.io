@@ -1,6 +1,5 @@
 var dir_36ed1d50771766aedad6e63e4976af89 =
 [
-    [ "lua", "dir_e3721840487ad8936b699477ba62d18e.html", "dir_e3721840487ad8936b699477ba62d18e" ],
     [ "dfem_diffusion_bndry.h", "d6/d34/dfem__diffusion__bndry_8h.html", "d6/d34/dfem__diffusion__bndry_8h" ],
     [ "dfem_diffusion_solver.cc", "d0/d12/dfem__diffusion__solver_8cc.html", "d0/d12/dfem__diffusion__solver_8cc" ],
     [ "dfem_diffusion_solver.h", "dc/d77/dfem__diffusion__solver_8h.html", [

@@ -12,5 +12,6 @@ var lbs__iterativemethods_8h =
       [ "KRYLOV_GMRES_CYCLES", "dc/d1a/lbs__iterativemethods_8h.html#a74e6ab7d8963411bcda1c642e3098508acee2c9e8a5949770d0d03e299bfd4aa7", null ],
       [ "KRYLOV_BICGSTAB", "dc/d1a/lbs__iterativemethods_8h.html#a74e6ab7d8963411bcda1c642e3098508a9180bffa8bf7b45e4aa1501c7601cf34", null ],
       [ "KRYLOV_BICGSTAB_CYCLES", "dc/d1a/lbs__iterativemethods_8h.html#a74e6ab7d8963411bcda1c642e3098508ae83b99ac91d2ae09acd49db2aa9ff804", null ]
-    ] ]
+    ] ],
+    [ "IterativeMethodPETScName", "dc/d1a/lbs__iterativemethods_8h.html#aea5c1f2d096b77c337c181ae0babbe94", null ]
 ];

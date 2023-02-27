@@ -7,7 +7,7 @@ var searchData=
   ['recoverableexception_4',['RecoverableException',['../da/d39/classchi_1_1_recoverable_exception.html',1,'chi']]],
   ['recursiveaccessor_5',['RecursiveAccessor',['../d3/daa/structchi__math_1_1_tensor_r_n_x_1_1_recursive_accessor.html',1,'chi_math::TensorRNX']]],
   ['repeatingevent_6',['RepeatingEvent',['../da/d50/classchi__objects_1_1_chi_log_1_1_repeating_event.html',1,'chi_objects::ChiLog']]],
-  ['responsefunctiondesignation_7',['ResponseFunctionDesignation',['../d2/d7f/structlbs__adjoint_1_1_response_function_designation.html',1,'lbs_adjoint']]],
+  ['responsefunctiondesignation_7',['ResponseFunctionDesignation',['../d6/d34/structlbs_1_1_response_function_designation.html',1,'lbs']]],
   ['rowiterator_8',['RowIterator',['../d2/d97/classchi__math_1_1_sparse_matrix_1_1_row_iterator_context_1_1_row_iterator.html',1,'chi_math::SparseMatrix::RowIteratorContext']]],
   ['rowiteratorcontext_9',['RowIteratorContext',['../db/dd8/classchi__math_1_1_sparse_matrix_1_1_row_iterator_context.html',1,'chi_math::SparseMatrix']]],
   ['rpplogicalvolume_10',['RPPLogicalVolume',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html',1,'chi_mesh']]],

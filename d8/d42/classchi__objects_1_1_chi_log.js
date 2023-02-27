@@ -55,8 +55,8 @@ var classchi__objects_1_1_chi_log =
     [ "PrintEventHistory", "d8/d42/classchi__objects_1_1_chi_log.html#aa3e2339e4375c706921142c58c74e2a0", null ],
     [ "ProcessEvent", "d8/d42/classchi__objects_1_1_chi_log.html#a57cf1c0addaa9fd596ffa9d32ed86c15", null ],
     [ "SetVerbosity", "d8/d42/classchi__objects_1_1_chi_log.html#a0e409fc3c30b0821f7e7da7507d35e8c", null ],
-    [ "dummy_stream", "d8/d42/classchi__objects_1_1_chi_log.html#ab550a9c2f6897f1ac64ce5e438c8f1e0", null ],
-    [ "instance", "d8/d42/classchi__objects_1_1_chi_log.html#a155eb6edc7493b01cb8331f08586aefa", null ],
+    [ "dummy_stream_", "d8/d42/classchi__objects_1_1_chi_log.html#a5b298e1a454d5f522135506e54340820", null ],
+    [ "instance_", "d8/d42/classchi__objects_1_1_chi_log.html#abd1ed7f860b3954f5e9a1ba030738800", null ],
     [ "repeating_events", "d8/d42/classchi__objects_1_1_chi_log.html#a82b1e0f283ebdb1dca5fb4e03063326f", null ],
-    [ "verbosity", "d8/d42/classchi__objects_1_1_chi_log.html#ab777ccf20043cb6fa8b25fd5820fab2a", null ]
+    [ "verbosity_", "d8/d42/classchi__objects_1_1_chi_log.html#a2fdbb319da4e82281c48a30684bc80d6", null ]
 ];

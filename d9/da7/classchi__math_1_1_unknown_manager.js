@@ -19,6 +19,6 @@ var classchi__math_1_1_unknown_manager =
     [ "SetUnknownComponentTextName", "d9/da7/classchi__math_1_1_unknown_manager.html#a694c8f92005231377e8b248f53c39439", null ],
     [ "SetUnknownNumOffBlockConnections", "d9/da7/classchi__math_1_1_unknown_manager.html#a60695601e549cc4edbe299449b41aff7", null ],
     [ "SetUnknownTextName", "d9/da7/classchi__math_1_1_unknown_manager.html#ac43ca7efb97b685d5fa80e1c3fe72c85", null ],
-    [ "dof_storage_type", "d9/da7/classchi__math_1_1_unknown_manager.html#a35cd81376b60892254252fbdd7789d6d", null ],
-    [ "unknowns", "d9/da7/classchi__math_1_1_unknown_manager.html#a71cc82006a7ae7a4a788d9ae3a2e345c", null ]
+    [ "dof_storage_type_", "d9/da7/classchi__math_1_1_unknown_manager.html#ace7effdb02ddf2cb5300eac90e472469", null ],
+    [ "unknowns_", "d9/da7/classchi__math_1_1_unknown_manager.html#abd3db4973be522e581e09c3cf3807278", null ]
 ];

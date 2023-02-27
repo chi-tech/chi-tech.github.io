@@ -25,8 +25,8 @@ var classchi__data__types_1_1_varying =
     [ "StringValue", "d8/d30/classchi__data__types_1_1_varying.html#a9af779581c7f04606d52e80a427246ae", null ],
     [ "Type", "d8/d30/classchi__data__types_1_1_varying.html#a59f2ec4fae0065e6f58cbc0763828c87", null ],
     [ "TypeName", "d8/d30/classchi__data__types_1_1_varying.html#afb5375032a60562ab21ec765068b3357", null ],
-    [ "m_data_initialized", "d8/d30/classchi__data__types_1_1_varying.html#a7d255b47b540fe2d50ae94c577f35d79", null ],
-    [ "m_raw_data", "d8/d30/classchi__data__types_1_1_varying.html#a41dda7eb8c3d0f3bc9b7ea65b1ab0369", null ],
-    [ "m_type", "d8/d30/classchi__data__types_1_1_varying.html#a22b1932e53905445d3459dfb1f9ca630", null ],
-    [ "m_type_name", "d8/d30/classchi__data__types_1_1_varying.html#a7a482e1d3686e0c20c27991dd7a1a4cb", null ]
+    [ "data_initialized_", "d8/d30/classchi__data__types_1_1_varying.html#a9fbc812aa5c390f8b801fbf0932b2888", null ],
+    [ "raw_data_", "d8/d30/classchi__data__types_1_1_varying.html#ae62a0a9cb00f77f7242978bfe9b429be", null ],
+    [ "type_", "d8/d30/classchi__data__types_1_1_varying.html#a010040d72e53b3961003c912c588af82", null ],
+    [ "type_name_", "d8/d30/classchi__data__types_1_1_varying.html#ae02e5a40fad6f257c9949cd04fa02a8a", null ]
 ];

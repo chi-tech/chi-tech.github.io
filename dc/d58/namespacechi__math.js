@@ -1,9 +1,6 @@
 var namespacechi__math =
 [
     [ "finite_element", "d3/d84/namespacechi__math_1_1finite__element.html", "d3/d84/namespacechi__math_1_1finite__element" ],
-    [ "lua_utils", "d5/da3/namespacechi__math_1_1lua__utils.html", [
-      [ "RegisterLuaEntities", "d5/da3/namespacechi__math_1_1lua__utils.html#a76842e0291fdf3a226003daf22292cc9", null ]
-    ] ],
     [ "PETScUtils", "dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html", "dc/d29/namespacechi__math_1_1_p_e_t_sc_utils" ],
     [ "SimplifiedLDFESQ", "dd/d56/namespacechi__math_1_1_simplified_l_d_f_e_s_q.html", "dd/d56/namespacechi__math_1_1_simplified_l_d_f_e_s_q" ],
     [ "AngularQuadrature", "d8/dd9/classchi__math_1_1_angular_quadrature.html", "d8/dd9/classchi__math_1_1_angular_quadrature" ],
@@ -21,10 +18,13 @@ var namespacechi__math =
     [ "DynamicMatrix", "df/d4b/classchi__math_1_1_dynamic_matrix.html", "df/d4b/classchi__math_1_1_dynamic_matrix" ],
     [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html", "db/d08/classchi__math_1_1_dynamic_vector" ],
     [ "GolubFischer", "d7/d89/classchi__math_1_1_golub_fischer.html", "d7/d89/classchi__math_1_1_golub_fischer" ],
+    [ "LinearSolver", "dd/d52/classchi__math_1_1_linear_solver.html", "dd/d52/classchi__math_1_1_linear_solver" ],
+    [ "LinearSolverContext", "d0/dfb/structchi__math_1_1_linear_solver_context.html", "d0/dfb/structchi__math_1_1_linear_solver_context" ],
     [ "NonLinearFunction", "d6/dc4/classchi__math_1_1_non_linear_function.html", "d6/dc4/classchi__math_1_1_non_linear_function" ],
     [ "PolygonMappingFE_PWL", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l" ],
     [ "PolygonMappingFE_PWL_Cylindrical", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical.html", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical" ],
     [ "PolyhedronMappingFE_PWL", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l" ],
+    [ "PreconditionerContext", "d6/db8/structchi__math_1_1_preconditioner_context.html", "d6/db8/structchi__math_1_1_preconditioner_context" ],
     [ "ProductQuadrature", "d5/df7/classchi__math_1_1_product_quadrature.html", "d5/df7/classchi__math_1_1_product_quadrature" ],
     [ "Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html", "d3/dbf/classchi__math_1_1_quadrature" ],
     [ "QuadratureConical", "da/d37/classchi__math_1_1_quadrature_conical.html", "da/d37/classchi__math_1_1_quadrature_conical" ],
@@ -131,6 +131,12 @@ var namespacechi__math =
       [ "FORTYTHIRD", "dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9ad272c903a5ad30d8068abd331e31a497", null ],
       [ "INVALID_ORDER", "dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9a094458c104a1b5793d45e15905c1a21a", null ]
     ] ],
+    [ "ResidualScaleType", "dc/d58/namespacechi__math.html#a4e4b5f82f9498c0502818552508dcd8f", [
+      [ "NONE", "dc/d58/namespacechi__math.html#a4e4b5f82f9498c0502818552508dcd8fab50339a10e1de285ac99d4c3990b8693", null ],
+      [ "RHS_NORM", "dc/d58/namespacechi__math.html#a4e4b5f82f9498c0502818552508dcd8fa2b69ff3de63bce7de9438963b6f1acdd", null ],
+      [ "RHS_PRECONDITIONED_NORM", "dc/d58/namespacechi__math.html#a4e4b5f82f9498c0502818552508dcd8faadf3301bc6a42f067f1c077885ec3903", null ],
+      [ "CUSTOM_SCALE", "dc/d58/namespacechi__math.html#a4e4b5f82f9498c0502818552508dcd8fadb3fdafb24c5fe68590488dc551befd7", null ]
+    ] ],
     [ "SpatialDiscretizationType", "dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0", [
       [ "UNDEFINED", "dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0a0db45d2a4141101bdfe48e3314cfbca3", null ],
       [ "FINITE_VOLUME", "dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0aec3041e97b53638eb474d4998174f9ee", null ],
@@ -164,6 +170,8 @@ var namespacechi__math =
     [ "Inverse", "dc/d58/namespacechi__math.html#a7d48371b6d078244114ce3d3053774d8", null ],
     [ "InverseGEPivoting", "dc/d58/namespacechi__math.html#ae0e143c398fa3d3b5fdeb165fca3009b", null ],
     [ "Legendre", "dc/d58/namespacechi__math.html#af347362b914d3d3668485568c2d66ee5", null ],
+    [ "LinearSolverMatrixAction", "dc/d58/namespacechi__math.html#afc130a272895dbe9ce6ebe06a96918de", null ],
+    [ "LinearSolverMatrixAction", "dc/d58/namespacechi__math.html#ade793f38521556b97526f93bd3609d13", null ],
     [ "MatAdd", "dc/d58/namespacechi__math.html#ac4267d12d60ee3f4478717636676eb5f", null ],
     [ "MatMul", "dc/d58/namespacechi__math.html#aca338ae5af880df37376a94a8276ebb8", null ],
     [ "MatMul", "dc/d58/namespacechi__math.html#adbc7f02c94692a8b25b1d702ba07d49e", null ],
@@ -174,6 +182,8 @@ var namespacechi__math =
     [ "operator+", "dc/d58/namespacechi__math.html#ac0f60ee03db29dec6023e1745fd44d0e", null ],
     [ "operator-", "dc/d58/namespacechi__math.html#a406bf1420d143fcb79ea57e1a3f8e1e5", null ],
     [ "PowerIteration", "dc/d58/namespacechi__math.html#a25e89fb89dad7be445fd6c0d746eef8f", null ],
+    [ "PreconditionerApplication", "dc/d58/namespacechi__math.html#a30da40673cfc7e101da9563a21051a30", null ],
+    [ "PreconditionerApplication", "dc/d58/namespacechi__math.html#a380fb295695425f88d95806132a46cb1", null ],
     [ "PrintMatrix", "dc/d58/namespacechi__math.html#a0a1234218d0064d066faf63feb1999e0", null ],
     [ "PrintVector", "dc/d58/namespacechi__math.html#a1be3c28092bbe9761c735c7db2030309", null ],
     [ "Range", "dc/d58/namespacechi__math.html#a40c91587a0cfdca9b14d9236791a1130", null ],

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xsbase_0',['XSBase',['../d8/df0/classchi__physics_1_1_x_s_base.html',1,'chi_physics']]],
-  ['xsdata_1',['XSData',['../dc/d81/structchi__physics_1_1_x_s_data.html',1,'chi_physics']]]
+  ['wgscontext_0',['WGSContext',['../dd/ddd/structlbs_1_1_w_g_s_context.html',1,'lbs']]],
+  ['wgslinearsolver_1',['WGSLinearSolver',['../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html',1,'lbs']]]
 ];

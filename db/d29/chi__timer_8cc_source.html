@@ -102,14 +102,14 @@ $(document).ready(function(){initNavTree('db/d29/chi__timer_8cc_source.html','..
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/** Default constructor.*/</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ab94ea1f5aa7abdb558dc7e07c7ba3f22">    8</a></span><a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ab94ea1f5aa7abdb558dc7e07c7ba3f22">chi_objects::ChiTimer::ChiTimer</a>() noexcept</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <a class="code hl_variable" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#a4504e8ca53a454e0f6d73f5d2df4cf7f">startTime</a> = std::chrono::steady_clock::now();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <a class="code hl_variable" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#aca3299d460b4756d8f5c5e362b61a08d">start_time_</a> = std::chrono::steady_clock::now();</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//################################################################### Reset</span><span class="comment"></span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/** Resets the timer to zero.*/</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad204f9e5951c9eece51bfe7e02e910c0">   15</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad204f9e5951c9eece51bfe7e02e910c0">chi_objects::ChiTimer::Reset</a>()</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  startTime = std::chrono::steady_clock::now();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  start_time_ = std::chrono::steady_clock::now();</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//################################################################### Get time</span><span class="comment"></span></div>
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('db/d29/chi__timer_8cc_source.html','..
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  steady_clock::time_point newTime = std::chrono::steady_clock::now();</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  duration&lt;double&gt; time_span =</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    duration_cast&lt;duration&lt;double&gt;&gt;(newTime - startTime);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    duration_cast&lt;duration&lt;double&gt;&gt;(newTime - start_time_);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">return</span> time_span.count()*1000.0;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('db/d29/chi__timer_8cc_source.html','..
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordtype">int</span>    seconds  = (int)time_sec - 3600*hours - 60*minutes;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">char</span> buff[100];</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  sprintf(buff,<span class="stringliteral">&quot;%02d:%02d:%02d&quot;</span>,hours,minutes,seconds);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  snprintf(buff,100,<span class="stringliteral">&quot;%02d:%02d:%02d&quot;</span>,hours,minutes,seconds);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">return</span> {buff};</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
@@ -159,8 +159,8 @@ $(document).ready(function(){initNavTree('db/d29/chi__timer_8cc_source.html','..
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
 <div class="ttc" id="achi__timer_8h_html"><div class="ttname"><a href="../../da/de5/chi__timer_8h.html">chi_timer.h</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_timer_html_a145f43f3900b698d134650397250ed60"><div class="ttname"><a href="../../d1/d87/classchi__objects_1_1_chi_timer.html#a145f43f3900b698d134650397250ed60">chi_objects::ChiTimer::GetLocalDateTimeString</a></div><div class="ttdeci">static std::string GetLocalDateTimeString()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d29/chi__timer_8cc_source.html#l00054">chi_timer.cc:54</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_timer_html_a4504e8ca53a454e0f6d73f5d2df4cf7f"><div class="ttname"><a href="../../d1/d87/classchi__objects_1_1_chi_timer.html#a4504e8ca53a454e0f6d73f5d2df4cf7f">chi_objects::ChiTimer::startTime</a></div><div class="ttdeci">std::chrono::steady_clock::time_point startTime</div><div class="ttdef"><b>Definition:</b> <a href="../../da/de5/chi__timer_8h_source.html#l00015">chi_timer.h:15</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_timer_html_ab94ea1f5aa7abdb558dc7e07c7ba3f22"><div class="ttname"><a href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ab94ea1f5aa7abdb558dc7e07c7ba3f22">chi_objects::ChiTimer::ChiTimer</a></div><div class="ttdeci">ChiTimer() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d29/chi__timer_8cc_source.html#l00008">chi_timer.cc:8</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_timer_html_aca3299d460b4756d8f5c5e362b61a08d"><div class="ttname"><a href="../../d1/d87/classchi__objects_1_1_chi_timer.html#aca3299d460b4756d8f5c5e362b61a08d">chi_objects::ChiTimer::start_time_</a></div><div class="ttdeci">std::chrono::steady_clock::time_point start_time_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/de5/chi__timer_8h_source.html#l00015">chi_timer.h:15</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_timer_html_ad204f9e5951c9eece51bfe7e02e910c0"><div class="ttname"><a href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad204f9e5951c9eece51bfe7e02e910c0">chi_objects::ChiTimer::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d29/chi__timer_8cc_source.html#l00015">chi_timer.cc:15</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_timer_html_ad956c70d48e7725b8b03569e26c06ea4"><div class="ttname"><a href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">chi_objects::ChiTimer::GetTimeString</a></div><div class="ttdeci">std::string GetTimeString() const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d29/chi__timer_8cc_source.html#l00037">chi_timer.cc:37</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_timer_html_af9a96f88cb38c489061d6b5206b9b7f6"><div class="ttname"><a href="../../d1/d87/classchi__objects_1_1_chi_timer.html#af9a96f88cb38c489061d6b5206b9b7f6">chi_objects::ChiTimer::GetTime</a></div><div class="ttdeci">double GetTime() const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d29/chi__timer_8cc_source.html#l00022">chi_timer.cc:22</a></div></div>

@@ -14,6 +14,6 @@ var classchi__physics_1_1_basic_option =
     [ "SetStringValue", "d2/dd8/classchi__physics_1_1_basic_option.html#a07c16f8e02180cb061475e7fa4f7f65d", null ],
     [ "StringValue", "d2/dd8/classchi__physics_1_1_basic_option.html#a1357e9364c8f020491b0904627dfa726", null ],
     [ "Type", "d2/dd8/classchi__physics_1_1_basic_option.html#a83420760581447877fcc45e14361da73", null ],
-    [ "name", "d2/dd8/classchi__physics_1_1_basic_option.html#ab9825a7f8d99f46bb64da367815aa30f", null ],
-    [ "value", "d2/dd8/classchi__physics_1_1_basic_option.html#af575270f8f4a93dc19fd6d7d107f71fd", null ]
+    [ "name_", "d2/dd8/classchi__physics_1_1_basic_option.html#a20be7f895ca0f09f0251f555ebd117a5", null ],
+    [ "value_", "d2/dd8/classchi__physics_1_1_basic_option.html#a28e57a127ac736ae5922edb341fa4a4d", null ]
 ];

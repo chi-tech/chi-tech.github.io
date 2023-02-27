@@ -10,6 +10,6 @@ var classchi__graph_1_1_directed_graph_1_1_vertex_accessor =
     [ "operator[]", "df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#adcbd932053791e3d51af616f8c344337", null ],
     [ "RemoveVertex", "df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a8b8b17e381a6d7f46e4a3018bd573e48", null ],
     [ "size", "df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a0b5ff1abb2c3a9682033e6721d3364d5", null ],
-    [ "vertex_valid_flags", "df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a6cf37cf68899a189a5b8f1a6f2fe3187", null ],
-    [ "vertices", "df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a946dd2c1e1df8c4df1d7cb07c72ffa52", null ]
+    [ "vertex_valid_flags_", "df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a33d9fd5d012a1a6ff6e4c59f221124a9", null ],
+    [ "vertices_", "df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html#a726ebce8307b4bed226cc9cad195ea49", null ]
 ];

@@ -8,5 +8,5 @@ var classchi__math_1_1_cell_mapping_f_e___p_w_l =
     [ "GetVertexLocations", "d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l.html#a2e22b668af9a9e386a2a3348d2311cb9", null ],
     [ "MakeFaceNodeMapping", "d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l.html#a0e9d3c7b5781f4eb52d01368cc518d6a", null ],
     [ "SpatialWeightFunction", "d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l.html#a89dfac318ea44ffbad13bde7deecf71e", null ],
-    [ "m_node_locations", "d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l.html#a6d02eed7fe0da07aaaffd0007b953e4b", null ]
+    [ "node_locations_", "d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l.html#a7b99a5adac8632c924b1c87b6491e20b", null ]
 ];

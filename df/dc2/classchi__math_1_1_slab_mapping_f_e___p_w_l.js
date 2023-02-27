@@ -10,10 +10,10 @@ var classchi__math_1_1_slab_mapping_f_e___p_w_l =
     [ "ShapeValues", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#ae44819949ad3b8b178dcf0fea1d1b90c", null ],
     [ "SlabGradShape", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a68aa4d39d32dd26d1d0597fa24da00eb", null ],
     [ "SlabShape", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a083c952f867417f2e5ddc7524d3a5fe4", null ],
-    [ "h", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a5a4d172b7fd8899e7eac20dec46a0d2d", null ],
-    [ "normals", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a03537a9910be0f42123fe4c46d397c54", null ],
-    [ "v0", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a948e3f35c5f3e4da4d1d149a6a84505d", null ],
-    [ "v0i", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#ace394a8b3f2481c9c5b3885e9518eedd", null ],
-    [ "v1i", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a2dbd92f6a64bed4b7bae5eb68034e6f2", null ],
-    [ "volume_quadrature", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a0fd34580027c98d1d7a3377f07380129", null ]
+    [ "h_", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a36c7e0f6d878cc3ac70e1e45e3d8023c", null ],
+    [ "normals_", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a0e4144d1e470da8f80421b3bb62fa881", null ],
+    [ "v0_", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#aa73d82bdd3f28f9b70f2d6d934223835", null ],
+    [ "v0i_", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a72c8c211c6b0526352dcaf8542db0065", null ],
+    [ "v1i_", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a9a5d2760d5b3cc0e3a9b737629160bed", null ],
+    [ "volume_quadrature_", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#ad86541a6e32541f7f422737902be77e6", null ]
 ];

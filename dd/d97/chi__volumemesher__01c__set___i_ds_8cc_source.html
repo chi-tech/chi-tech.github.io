@@ -99,128 +99,403 @@ $(document).ready(function(){initNavTree('dd/d97/chi__volumemesher__01c__set___i
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">ChiMesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d9/df5/chi__mesh__logicalvolume_8h.html">ChiMesh/LogicalVolume/chi_mesh_logicalvolume.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/de5/chi__timer_8h.html">ChiTimer/chi_timer.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">ChiConsole/chi_console.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/de5/chi__timer_8h.html">ChiTimer/chi_timer.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;ChiLua/chi_lua.h&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/**Sets material id&#39;s using a logical volume.*/</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a2ee7c927497b8dd09805ef18893026fe">   17</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a2ee7c927497b8dd09805ef18893026fe">chi_mesh::VolumeMesher::</a></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a2ee7c927497b8dd09805ef18893026fe">SetMatIDFromLogical</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html">chi_mesh::LogicalVolume</a>&amp; log_vol,<span class="keywordtype">bool</span> sense, <span class="keywordtype">int</span> mat_id)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">Log0Verbose1</a>()</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    &lt;&lt; <span class="stringliteral">&quot; Setting material id from logical volume.&quot;</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="comment">//============================================= Get current mesh handler</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">auto</span>&amp; handler = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="comment">//============================================= Get back mesh</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_typedef" href="../../d0/d81/namespacechi__mesh.html#a60cc7e5348a115cf4edcfd4ade799a51">chi_mesh::MeshContinuumPtr</a> vol_cont = handler.GetGrid();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keywordtype">int</span> num_cells_modified = 0;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : vol_cont-&gt;local_cells)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">if</span> (log_vol.<a class="code hl_function" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a658be5f3466ca059f046df9b463819d9">Inside</a>(cell.centroid) &amp;&amp; sense){</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      cell.material_id = mat_id;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      ++num_cells_modified;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ghost_ids = vol_cont-&gt;cells.GetGhostGlobalIDs();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">for</span> (uint64_t ghost_id : ghost_ids)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">auto</span>&amp; cell = vol_cont-&gt;cells[ghost_id];</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span> (log_vol.<a class="code hl_function" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a658be5f3466ca059f046df9b463819d9">Inside</a>(cell.centroid) &amp;&amp; sense)</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      cell.material_id = mat_id;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  MPI_Barrier(MPI_COMM_WORLD);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">Log0Verbose1</a>()</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    &lt;&lt; <span class="stringliteral">&quot; Done setting material id from logical volume. &quot;</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    &lt;&lt; <span class="stringliteral">&quot;Number of cells modified = &quot;</span> &lt;&lt; num_cells_modified &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">/**Sets material id&#39;s using a logical volume.*/</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a460d66054739713c4c62449c5019bd5c">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a460d66054739713c4c62449c5019bd5c">chi_mesh::VolumeMesher::</a></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a460d66054739713c4c62449c5019bd5c">SetBndryIDFromLogical</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html">chi_mesh::LogicalVolume</a>&amp; log_vol,<span class="keywordtype">bool</span> sense, <span class="keywordtype">int</span> bndry_id)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    &lt;&lt; <span class="stringliteral">&quot; Setting boundary id from logical volume.&quot;</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="comment">//============================================= Get current mesh handler</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">auto</span>&amp; handler = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">//============================================= Get back mesh</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <a class="code hl_typedef" href="../../d0/d81/namespacechi__mesh.html#a60cc7e5348a115cf4edcfd4ade799a51">chi_mesh::MeshContinuumPtr</a> vol_cont = handler.GetGrid();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordtype">int</span> num_faces_modified = 0;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : vol_cont-&gt;local_cells)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; face : cell.faces)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordflow">if</span> (face.has_neighbor) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordflow">if</span> (log_vol.<a class="code hl_function" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a658be5f3466ca059f046df9b463819d9">Inside</a>(face.centroid) &amp;&amp; sense){</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        face.neighbor_id = abs(bndry_id);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        ++num_faces_modified;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a2ee7c927497b8dd09805ef18893026fe">  SetMatIDFromLogical</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html">chi_mesh::LogicalVolume</a>&amp; log_vol,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                      <span class="keywordtype">bool</span> sense, <span class="keywordtype">int</span> mat_id)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">Log0Verbose1</a>()</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    &lt;&lt; <span class="stringliteral">&quot; Setting material id from logical volume.&quot;</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="comment">//============================================= Get current mesh handler</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">auto</span>&amp; handler = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="comment">//============================================= Get back mesh</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_typedef" href="../../d0/d81/namespacechi__mesh.html#a60cc7e5348a115cf4edcfd4ade799a51">chi_mesh::MeshContinuumPtr</a> vol_cont = handler.GetGrid();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordtype">int</span> num_cells_modified = 0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : vol_cont-&gt;local_cells)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">if</span> (log_vol.<a class="code hl_function" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a658be5f3466ca059f046df9b463819d9">Inside</a>(cell.centroid_) &amp;&amp; sense){</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      cell.material_id_ = mat_id;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      ++num_cells_modified;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ghost_ids = vol_cont-&gt;cells.GetGhostGlobalIDs();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordflow">for</span> (uint64_t ghost_id : ghost_ids)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">auto</span>&amp; cell = vol_cont-&gt;cells[ghost_id];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (log_vol.<a class="code hl_function" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a658be5f3466ca059f046df9b463819d9">Inside</a>(cell.centroid_) &amp;&amp; sense)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      cell.material_id_ = mat_id;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordtype">int</span> global_num_cells_modified;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  MPI_Allreduce(&amp;num_cells_modified,        <span class="comment">//sendbuf</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                &amp;global_num_cells_modified, <span class="comment">//recvbuf</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                1, MPI_INT,                 <span class="comment">//count + datatype</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                MPI_SUM,                    <span class="comment">//operation</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                MPI_COMM_WORLD);            <span class="comment">//comm</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">Log0Verbose1</a>()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    &lt;&lt; <span class="stringliteral">&quot; Done setting material id from logical volume. &quot;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    &lt;&lt; <span class="stringliteral">&quot;Number of cells modified = &quot;</span> &lt;&lt; global_num_cells_modified &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">/**Sets material id&#39;s using a logical volume.*/</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a28155ba88bac93361a2a458bcfa34871">   62</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a28155ba88bac93361a2a458bcfa34871">chi_mesh::VolumeMesher::</a></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a28155ba88bac93361a2a458bcfa34871">  SetBndryIDFromLogical</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html">chi_mesh::LogicalVolume</a>&amp; log_vol,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        <span class="keywordtype">bool</span> sense,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                        <span class="keyword">const</span> std::string&amp; bndry_name)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    &lt;&lt; <span class="stringliteral">&quot; Setting boundary id from logical volume.&quot;</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="comment">//============================================= Get current mesh handler</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keyword">auto</span>&amp; handler = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="comment">//============================================= Get back mesh</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <a class="code hl_typedef" href="../../d0/d81/namespacechi__mesh.html#a60cc7e5348a115cf4edcfd4ade799a51">chi_mesh::MeshContinuumPtr</a> vol_cont = handler.GetGrid();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="comment">//============================================= Check if name already has id</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keyword">auto</span>&amp; grid_bndry_id_map = vol_cont-&gt;GetBoundaryIDMap();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  uint64_t bndry_id = vol_cont-&gt;MakeBoundaryID(bndry_name);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    &lt;&lt; <span class="stringliteral">&quot; Done setting boundary id from logical volume. &quot;</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    &lt;&lt; <span class="stringliteral">&quot;Number of faces modified = &quot;</span> &lt;&lt; num_faces_modified &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">/**Sets material id&#39;s for all cells to the specified material id.*/</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ae643a5d9cae4a895b6715a8b7d63cb86">   88</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ae643a5d9cae4a895b6715a8b7d63cb86">chi_mesh::VolumeMesher::</a></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ae643a5d9cae4a895b6715a8b7d63cb86">SetMatIDToAll</a>(<span class="keywordtype">int</span> mat_id)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>{</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    &lt;&lt; <span class="stringliteral">&quot; Setting material id &quot;</span> &lt;&lt; mat_id &lt;&lt; <span class="stringliteral">&quot; to all cells.&quot;</span>;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="comment">//============================================= Get current mesh handler</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">auto</span>&amp; handler = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>();</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="comment">//============================================= Get back mesh</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keyword">auto</span> vol_cont = handler.GetGrid();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="comment">//============================================= Loop over cells</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">int</span> num_faces_modified = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : vol_cont-&gt;local_cells)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; face : cell.faces_)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <span class="keywordflow">if</span> (face.has_neighbor_) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <span class="keywordflow">if</span> (log_vol.<a class="code hl_function" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a658be5f3466ca059f046df9b463819d9">Inside</a>(face.centroid_) &amp;&amp; sense){</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        face.neighbor_id_ = bndry_id;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        ++num_faces_modified;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordtype">int</span> global_num_faces_modified;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  MPI_Allreduce(&amp;num_faces_modified,        <span class="comment">//sendbuf</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                &amp;global_num_faces_modified, <span class="comment">//recvbuf</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                1, MPI_INT,                 <span class="comment">//count + datatype</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                MPI_SUM,                    <span class="comment">//operation</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                MPI_COMM_WORLD);            <span class="comment">//comm</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : vol_cont-&gt;local_cells)</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    cell.material_id = mat_id;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ghost_ids = vol_cont-&gt;cells.GetGhostGlobalIDs();</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordflow">for</span> (uint64_t ghost_id : ghost_ids)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    vol_cont-&gt;cells[ghost_id].material_id = mat_id;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  MPI_Barrier(MPI_COMM_WORLD);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    &lt;&lt; <span class="stringliteral">&quot; Done setting material id &quot;</span> &lt;&lt; mat_id &lt;&lt; <span class="stringliteral">&quot; to all cells&quot;</span>;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">if</span> (global_num_faces_modified &gt; 0 and</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      grid_bndry_id_map.count(bndry_id) == 0)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      grid_bndry_id_map[bndry_id] = bndry_name;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    &lt;&lt; <span class="stringliteral">&quot; Done setting boundary id from logical volume. &quot;</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    &lt;&lt; <span class="stringliteral">&quot;Number of faces modified = &quot;</span> &lt;&lt; global_num_faces_modified &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">/**Sets material id&#39;s for all cells to the specified material id.*/</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ae643a5d9cae4a895b6715a8b7d63cb86">  114</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ae643a5d9cae4a895b6715a8b7d63cb86">chi_mesh::VolumeMesher::SetMatIDToAll</a>(<span class="keywordtype">int</span> mat_id)</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    &lt;&lt; <span class="stringliteral">&quot; Setting material id &quot;</span> &lt;&lt; mat_id &lt;&lt; <span class="stringliteral">&quot; to all cells.&quot;</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="comment">//============================================= Get current mesh handler</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keyword">auto</span>&amp; handler = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="comment">//============================================= Get back mesh</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="keyword">auto</span> vol_cont = handler.GetGrid();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : vol_cont-&gt;local_cells)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    cell.material_id_ = mat_id;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ghost_ids = vol_cont-&gt;cells.GetGhostGlobalIDs();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keywordflow">for</span> (uint64_t ghost_id : ghost_ids)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    vol_cont-&gt;cells[ghost_id].material_id_ = mat_id;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  MPI_Barrier(MPI_COMM_WORLD);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    &lt;&lt; <span class="stringliteral">&quot; Done setting material id &quot;</span> &lt;&lt; mat_id &lt;&lt; <span class="stringliteral">&quot; to all cells&quot;</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">/**Sets material id&#39;s using a lua function. The lua function is called</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">with for each cell with 4 arguments, the cell&#39;s centroid x,y,z values</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">and the cell&#39;s current material id.</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment"></span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">The lua function&#39;s prototype should be:</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment">\code</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">function LuaFuncName(x,y,z,id)</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment"> --stuff</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">end</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">\endcode</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a5fce7b315ddab496bfab2f9acf3509f6">  152</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a5fce7b315ddab496bfab2f9acf3509f6">chi_mesh::VolumeMesher::</a></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a5fce7b315ddab496bfab2f9acf3509f6">  SetMatIDFromLuaFunction</a>(<span class="keyword">const</span> std::string&amp; lua_fname)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>{</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keyword">const</span> std::string fname = <span class="stringliteral">&quot;chi_mesh::VolumeMesher::SetMatIDFromLuaFunction&quot;</span>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">Log0Verbose1</a>()</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    &lt;&lt; <span class="stringliteral">&quot; Setting material id from lua function.&quot;</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="comment">//============================================= Define console call</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="keyword">auto</span> L = <a class="code hl_variable" href="../../d4/d35/classchi.html#afaf99163b7a54f59d6372e94cfc32dea">chi::console</a>.<a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#af12a0a88db77a9252e264729a1cc2239">GetConsoleState</a>();</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keyword">auto</span> CallLuaXYZFunction = [&amp;L,&amp;lua_fname,&amp;fname](<span class="keyword">const</span> <a class="code hl_class" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a>&amp; cell)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">//============= Load lua function</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    lua_getglobal(L, lua_fname.c_str());</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="comment">//============= Error check lua function</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">if</span> (not lua_isfunction(L, -1))</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <span class="keywordflow">throw</span> std::logic_error(fname + <span class="stringliteral">&quot; attempted to access lua-function, &quot;</span> +</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                               lua_fname + <span class="stringliteral">&quot;, but it seems the function&quot;</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                                             <span class="stringliteral">&quot; could not be retrieved.&quot;</span>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; xyz = cell.centroid_;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="comment">//============= Push arguments</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    lua_pushnumber(L, xyz.x);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    lua_pushnumber(L, xyz.y);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    lua_pushnumber(L, xyz.z);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    lua_pushinteger(L, cell.material_id_);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="comment">//============= Call lua function</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="comment">//4 arguments, 1 result (double), 0=original error object</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordtype">int</span> lua_return;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">if</span> (lua_pcall(L,4,1,0) == 0)</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>      LuaCheckNumberValue(fname, L, -1);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>      lua_return = lua_tointeger(L,-1);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>      <span class="keywordflow">throw</span> std::logic_error(fname + <span class="stringliteral">&quot; attempted to call lua-function, &quot;</span> +</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                             lua_fname + <span class="stringliteral">&quot;, but the call failed.&quot;</span>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    lua_pop(L,1); <span class="comment">//pop the int, or error code</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">return</span> lua_return;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  };</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="comment">//============================================= Get current mesh handler</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="keyword">auto</span>&amp; handler = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>();</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <span class="comment">//============================================= Get back mesh</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <a class="code hl_class" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>&amp; grid = *handler.GetGrid();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordtype">int</span> local_num_cells_modified = 0;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : grid.<a class="code hl_variable" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">local_cells</a>)</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keywordtype">int</span> new_matid = CallLuaXYZFunction(cell);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordflow">if</span> (cell.material_id_ != new_matid)</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    {</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      cell.material_id_ = new_matid;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      ++local_num_cells_modified;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  }<span class="comment">//for local cell</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ghost_ids = grid.<a class="code hl_variable" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a8290e6fd6bedfba721d4aabf73b806ee">cells</a>.<a class="code hl_function" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a5cfb4c76fffddd1ebf4519e707cf4ff6">GetGhostGlobalIDs</a>();</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keywordflow">for</span> (uint64_t ghost_id : ghost_ids)</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  {</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">auto</span>&amp; cell = grid.<a class="code hl_variable" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a8290e6fd6bedfba721d4aabf73b806ee">cells</a>[ghost_id];</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keywordtype">int</span> new_matid = CallLuaXYZFunction(cell);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">if</span> (cell.material_id_ != new_matid)</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      cell.material_id_ = new_matid;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      ++local_num_cells_modified;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    }</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  }<span class="comment">//for ghost cell id</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keywordtype">int</span> globl_num_cells_modified;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  MPI_Allreduce(&amp;local_num_cells_modified, <span class="comment">//sendbuf</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                &amp;globl_num_cells_modified, <span class="comment">//recvbuf</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                1, MPI_INT,                <span class="comment">//count+datatype</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                MPI_SUM,                   <span class="comment">//operation</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                MPI_COMM_WORLD);           <span class="comment">//comm</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">Log0Verbose1</a>()</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    &lt;&lt; <span class="stringliteral">&quot; Done setting material id from lua function. &quot;</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    &lt;&lt; <span class="stringliteral">&quot;Number of cells modified = &quot;</span> &lt;&lt; globl_num_cells_modified &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment">/**Sets boundary id&#39;s using a lua function. The lua function is called</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="comment">for each boundary face with 7 arguments, the face&#39;s centroid x,y,z values,</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="comment">the face&#39;s normal x,y,z values and the face&#39;s current boundary id. The function</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="comment">must return a new_bndry_name (string).</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment"></span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="comment">The lua function&#39;s prototype should be:</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment">\code</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="comment">function LuaFuncName(x,y,z,nx,ny,nz,id)</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="comment"> --stuff</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="comment">end</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment">\endcode</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ab0bf455abfde5f759d46c3c1604212e5">  257</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ab0bf455abfde5f759d46c3c1604212e5">chi_mesh::VolumeMesher::</a></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><a class="code hl_function" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ab0bf455abfde5f759d46c3c1604212e5">  SetBndryIDFromLuaFunction</a>(<span class="keyword">const</span> std::string&amp; lua_fname)</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>{</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  <span class="keyword">const</span> std::string fname = <span class="stringliteral">&quot;chi_mesh::VolumeMesher::SetBndryIDFromLuaFunction&quot;</span>;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.process_count != 1)</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keywordflow">throw</span> std::logic_error(fname + <span class="stringliteral">&quot;: Can for now only be used in serial.&quot;</span>);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">Log0Verbose1</a>()</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    &lt;&lt; <span class="stringliteral">&quot; Setting boundary id from lua function.&quot;</span>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="comment">//============================================= Define console call</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="keyword">auto</span> L = <a class="code hl_variable" href="../../d4/d35/classchi.html#afaf99163b7a54f59d6372e94cfc32dea">chi::console</a>.<a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#af12a0a88db77a9252e264729a1cc2239">GetConsoleState</a>();</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="keyword">auto</span> CallLuaXYZFunction = [&amp;L,&amp;lua_fname,&amp;fname]</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    (<span class="keyword">const</span> <a class="code hl_class" href="../../db/d1b/classchi__mesh_1_1_cell_face.html">chi_mesh::CellFace</a>&amp; face)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="comment">//============= Load lua function</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    lua_getglobal(L, lua_fname.c_str());</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="comment">//============= Error check lua function</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordflow">if</span> (not lua_isfunction(L, -1))</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      <span class="keywordflow">throw</span> std::logic_error(fname + <span class="stringliteral">&quot; attempted to access lua-function, &quot;</span> +</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                             lua_fname + <span class="stringliteral">&quot;, but it seems the function&quot;</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                                         <span class="stringliteral">&quot; could not be retrieved.&quot;</span>);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; xyz = face.centroid_;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; n   = face.normal_;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="comment">//============= Push arguments</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    lua_pushnumber(L, xyz.x);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    lua_pushnumber(L, xyz.y);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    lua_pushnumber(L, xyz.z);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    lua_pushnumber(L, n.x);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    lua_pushnumber(L, n.y);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    lua_pushnumber(L, n.z);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    lua_pushinteger(L, <span class="keyword">static_cast&lt;</span>lua_Integer<span class="keyword">&gt;</span>(face.neighbor_id_));</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="comment">//============= Call lua function</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="comment">//7 arguments, 1 result (string), 0=original error object</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    std::string lua_return_bname;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="keywordflow">if</span> (lua_pcall(L,7,1,0) == 0)</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>      LuaCheckNumberValue(fname, L, -1);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>      LuaCheckStringValue(fname, L, -2);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      lua_return_bname = lua_tostring(L,-1);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      <span class="keywordflow">throw</span> std::logic_error(fname + <span class="stringliteral">&quot; attempted to call lua-function, &quot;</span> +</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                             lua_fname + <span class="stringliteral">&quot;, but the call failed.&quot;</span>);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    lua_pop(L,1); <span class="comment">//pop the string, or error code</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keywordflow">return</span> lua_return_bname;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  };</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <span class="comment">//============================================= Get current mesh handler</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  <span class="keyword">auto</span>&amp; handler = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>();</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>  <span class="comment">//============================================= Get back mesh</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>  <a class="code hl_class" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>&amp; grid = *handler.GetGrid();</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  <span class="comment">//============================================= Check if name already has id</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <span class="keyword">auto</span>&amp; grid_bndry_id_map = grid.<a class="code hl_function" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a30fe7d2b705333fc85c7a7b4972f07d2">GetBoundaryIDMap</a>();</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="keywordtype">int</span> local_num_faces_modified = 0;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : grid.<a class="code hl_variable" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">local_cells</a>)</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; face : cell.faces_)</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>      <span class="keywordflow">if</span> (not face.has_neighbor_)</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      {</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        <span class="keyword">const</span> std::string bndry_name = CallLuaXYZFunction(face);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        <span class="keyword">const</span> uint64_t bndry_id = grid.<a class="code hl_function" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aa6d0a885bcba9a6fff3ead25eb07b7d5">MakeBoundaryID</a>(bndry_name);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keywordflow">if</span> (face.neighbor_id_ != bndry_id)</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        {</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>          face.neighbor_id_ = bndry_id;</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>          ++local_num_faces_modified;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>          <span class="keywordflow">if</span> (grid_bndry_id_map.count(bndry_id) == 0)</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            grid_bndry_id_map[bndry_id] = bndry_name;</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        }</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      }<span class="comment">//for bndry face</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ghost_ids = grid.<a class="code hl_variable" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a8290e6fd6bedfba721d4aabf73b806ee">cells</a>.<a class="code hl_function" href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a5cfb4c76fffddd1ebf4519e707cf4ff6">GetGhostGlobalIDs</a>();</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  <span class="keywordflow">for</span> (uint64_t ghost_id : ghost_ids)</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keyword">auto</span>&amp; cell = grid.<a class="code hl_variable" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a8290e6fd6bedfba721d4aabf73b806ee">cells</a>[ghost_id];</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; face : cell.faces_)</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      <span class="keywordflow">if</span> (not face.has_neighbor_)</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>      {</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <span class="keyword">const</span> std::string bndry_name = CallLuaXYZFunction(face);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <span class="keyword">const</span> uint64_t bndry_id = grid.<a class="code hl_function" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aa6d0a885bcba9a6fff3ead25eb07b7d5">MakeBoundaryID</a>(bndry_name);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">if</span> (face.neighbor_id_ != bndry_id)</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        {</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>          face.neighbor_id_ = bndry_id;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>          ++local_num_faces_modified;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>          <span class="keywordflow">if</span> (grid_bndry_id_map.count(bndry_id) == 0)</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            grid_bndry_id_map[bndry_id] = bndry_name;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        }</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>      }<span class="comment">//for bndry face</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>  }<span class="comment">//for ghost cell id</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>  <span class="keywordtype">int</span> globl_num_faces_modified;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>  MPI_Allreduce(&amp;local_num_faces_modified, <span class="comment">//sendbuf</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                &amp;globl_num_faces_modified, <span class="comment">//recvbuf</span></div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                1, MPI_INT,                <span class="comment">//count+datatype</span></div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                MPI_SUM,                   <span class="comment">//operation</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                MPI_COMM_WORLD);           <span class="comment">//comm</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">Log0Verbose1</a>()</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a>.<a class="code hl_function" href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">GetTimeString</a>()</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    &lt;&lt; <span class="stringliteral">&quot; Done setting boundary id from lua function. &quot;</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    &lt;&lt; <span class="stringliteral">&quot;Number of cells modified = &quot;</span> &lt;&lt; globl_num_faces_modified &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>}</div>
+<div class="ttc" id="achi__console_8h_html"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html">chi_console.h</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__mesh__logicalvolume_8h_html"><div class="ttname"><a href="../../d9/df5/chi__mesh__logicalvolume_8h.html">chi_mesh_logicalvolume.h</a></div></div>
 <div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
 <div class="ttc" id="achi__meshhandler_8h_html"><div class="ttname"><a href="../../df/d98/chi__meshhandler_8h.html">chi_meshhandler.h</a></div></div>
+<div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="achi__timer_8h_html"><div class="ttname"><a href="../../da/de5/chi__timer_8h.html">chi_timer.h</a></div></div>
 <div class="ttc" id="achi__volumemesher_8h_html"><div class="ttname"><a href="../../dd/dcb/chi__volumemesher_8h.html">chi_volumemesher.h</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_cell_face_html"><div class="ttname"><a href="../../db/d1b/classchi__mesh_1_1_cell_face.html">chi_mesh::CellFace</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00035">cell.h:36</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_cell_html"><div class="ttname"><a href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/ddd/cell_8h_source.html#l00068">cell.h:69</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_global_cell_handler_html_a5cfb4c76fffddd1ebf4519e707cf4ff6"><div class="ttname"><a href="../../d7/d24/classchi__mesh_1_1_global_cell_handler.html#a5cfb4c76fffddd1ebf4519e707cf4ff6">chi_mesh::GlobalCellHandler::GetGhostGlobalIDs</a></div><div class="ttdeci">std::vector&lt; uint64_t &gt; GetGhostGlobalIDs() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00103">chi_meshcontinuum_globalcellhandler.cc:104</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_logical_volume_html"><div class="ttname"><a href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html">chi_mesh::LogicalVolume</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00017">chi_mesh_logicalvolume.h:18</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_logical_volume_html_a658be5f3466ca059f046df9b463819d9"><div class="ttname"><a href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a658be5f3466ca059f046df9b463819d9">chi_mesh::LogicalVolume::Inside</a></div><div class="ttdeci">virtual bool Inside(const chi_mesh::Vector3 &amp;point) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00032">chi_mesh_logicalvolume.h:32</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00033">chi_meshcontinuum.h:34</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a227b26a2cc0e920fff45d31ed171e9cc"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">chi_mesh::MeshContinuum::local_cells</a></div><div class="ttdeci">LocalCellHandler local_cells</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00048">chi_meshcontinuum.h:48</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a30fe7d2b705333fc85c7a7b4972f07d2"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a30fe7d2b705333fc85c7a7b4972f07d2">chi_mesh::MeshContinuum::GetBoundaryIDMap</a></div><div class="ttdeci">std::map&lt; uint64_t, std::string &gt; &amp; GetBoundaryIDMap()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00076">chi_meshcontinuum.h:76</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a8290e6fd6bedfba721d4aabf73b806ee"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a8290e6fd6bedfba721d4aabf73b806ee">chi_mesh::MeshContinuum::cells</a></div><div class="ttdeci">GlobalCellHandler cells</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00049">chi_meshcontinuum.h:49</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_aa6d0a885bcba9a6fff3ead25eb07b7d5"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aa6d0a885bcba9a6fff3ead25eb07b7d5">chi_mesh::MeshContinuum::MakeBoundaryID</a></div><div class="ttdeci">uint64_t MakeBoundaryID(const std::string &amp;boundary_name) const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00461">chi_meshcontinuum_utilities.cc:462</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_html_a28155ba88bac93361a2a458bcfa34871"><div class="ttname"><a href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a28155ba88bac93361a2a458bcfa34871">chi_mesh::VolumeMesher::SetBndryIDFromLogical</a></div><div class="ttdeci">static void SetBndryIDFromLogical(const chi_mesh::LogicalVolume &amp;log_vol, bool sense, const std::string &amp;bndry_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d97/chi__volumemesher__01c__set___i_ds_8cc_source.html#l00062">chi_volumemesher_01c_set_IDs.cc:63</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_html_a2ee7c927497b8dd09805ef18893026fe"><div class="ttname"><a href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a2ee7c927497b8dd09805ef18893026fe">chi_mesh::VolumeMesher::SetMatIDFromLogical</a></div><div class="ttdeci">static void SetMatIDFromLogical(const chi_mesh::LogicalVolume &amp;log_vol, bool sense, int mat_id)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d97/chi__volumemesher__01c__set___i_ds_8cc_source.html#l00017">chi_volumemesher_01c_set_IDs.cc:18</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_html_a460d66054739713c4c62449c5019bd5c"><div class="ttname"><a href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a460d66054739713c4c62449c5019bd5c">chi_mesh::VolumeMesher::SetBndryIDFromLogical</a></div><div class="ttdeci">static void SetBndryIDFromLogical(const chi_mesh::LogicalVolume &amp;log_vol, bool sense, int bndry_id)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d97/chi__volumemesher__01c__set___i_ds_8cc_source.html#l00055">chi_volumemesher_01c_set_IDs.cc:56</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_html_ae643a5d9cae4a895b6715a8b7d63cb86"><div class="ttname"><a href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ae643a5d9cae4a895b6715a8b7d63cb86">chi_mesh::VolumeMesher::SetMatIDToAll</a></div><div class="ttdeci">static void SetMatIDToAll(int mat_id)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d97/chi__volumemesher__01c__set___i_ds_8cc_source.html#l00088">chi_volumemesher_01c_set_IDs.cc:89</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_html_a5fce7b315ddab496bfab2f9acf3509f6"><div class="ttname"><a href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#a5fce7b315ddab496bfab2f9acf3509f6">chi_mesh::VolumeMesher::SetMatIDFromLuaFunction</a></div><div class="ttdeci">static void SetMatIDFromLuaFunction(const std::string &amp;lua_fname)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d97/chi__volumemesher__01c__set___i_ds_8cc_source.html#l00152">chi_volumemesher_01c_set_IDs.cc:153</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_html_ab0bf455abfde5f759d46c3c1604212e5"><div class="ttname"><a href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ab0bf455abfde5f759d46c3c1604212e5">chi_mesh::VolumeMesher::SetBndryIDFromLuaFunction</a></div><div class="ttdeci">static void SetBndryIDFromLuaFunction(const std::string &amp;lua_fname)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d97/chi__volumemesher__01c__set___i_ds_8cc_source.html#l00257">chi_volumemesher_01c_set_IDs.cc:258</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_html_ae643a5d9cae4a895b6715a8b7d63cb86"><div class="ttname"><a href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ae643a5d9cae4a895b6715a8b7d63cb86">chi_mesh::VolumeMesher::SetMatIDToAll</a></div><div class="ttdeci">static void SetMatIDToAll(int mat_id)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d97/chi__volumemesher__01c__set___i_ds_8cc_source.html#l00114">chi_volumemesher_01c_set_IDs.cc:114</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_console_html_af12a0a88db77a9252e264729a1cc2239"><div class="ttname"><a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#af12a0a88db77a9252e264729a1cc2239">chi_objects::ChiConsole::GetConsoleState</a></div><div class="ttdeci">lua_State *&amp; GetConsoleState()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00032">chi_console.h:32</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a473ab4a211782a780fdd267f864dc5f9"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">chi_objects::ChiLog::Log0Verbose1</a></div><div class="ttdeci">LogStream Log0Verbose1()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00226">chi_log.h:226</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00025">chi_log.cc:25</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_timer_html_ad956c70d48e7725b8b03569e26c06ea4"><div class="ttname"><a href="../../d1/d87/classchi__objects_1_1_chi_timer.html#ad956c70d48e7725b8b03569e26c06ea4">chi_objects::ChiTimer::GetTimeString</a></div><div class="ttdeci">std::string GetTimeString() const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d29/chi__timer_8cc_source.html#l00037">chi_timer.cc:37</a></div></div>
+<div class="ttc" id="aclasschi_html_a2457fed74471fae43ed8d6c5e91378fd"><div class="ttname"><a href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a></div><div class="ttdeci">static chi_objects::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00067">chi_runtime.h:67</a></div></div>
 <div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
 <div class="ttc" id="aclasschi_html_ab5d0585bd45f9397540817433d194647"><div class="ttname"><a href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a></div><div class="ttdeci">static chi_objects::ChiTimer program_timer</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00068">chi_runtime.h:68</a></div></div>
+<div class="ttc" id="aclasschi_html_afaf99163b7a54f59d6372e94cfc32dea"><div class="ttname"><a href="../../d4/d35/classchi.html#afaf99163b7a54f59d6372e94cfc32dea">chi::console</a></div><div class="ttdeci">static chi_objects::ChiConsole &amp; console</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00069">chi_runtime.h:69</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_a60cc7e5348a115cf4edcfd4ade799a51"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a60cc7e5348a115cf4edcfd4ade799a51">chi_mesh::MeshContinuumPtr</a></div><div class="ttdeci">std::shared_ptr&lt; MeshContinuum &gt; MeshContinuumPtr</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00045">chi_mesh.h:44</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_addcd6899961d4c527b02c33708a7941f"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler &amp; GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00013">chi_mesh_meshhandler_utils.cc:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

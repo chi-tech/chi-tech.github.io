@@ -104,17 +104,15 @@ Functions</h2></td></tr>
 <tr class="separator:ga851ed8021dc547c6b2c5f36a17d33520"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga22ead80a73c8ed10395140965d049291"><td class="memItemLeft" align="right" valign="top">Handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html#ga22ead80a73c8ed10395140965d049291">chi_lua::chiSurfaceMeshCreate</a> ()</td></tr>
 <tr class="separator:ga22ead80a73c8ed10395140965d049291"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga65ed63b794a9e006e21fe2e2a7b4e674"><td class="memItemLeft" align="right" valign="top">Handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html#ga65ed63b794a9e006e21fe2e2a7b4e674">chi_lua::chiSurfaceMeshCreateFromArrays</a> (array vertices_x, array vertices_y)</td></tr>
-<tr class="separator:ga65ed63b794a9e006e21fe2e2a7b4e674"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3483f350d02420d8b901c79e1ae52706"><td class="memItemLeft" align="right" valign="top">success&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html#ga3483f350d02420d8b901c79e1ae52706">chi_lua::chiSurfaceMeshImportFromOBJFile</a> (int SurfaceHandle, char *FileName, bool polyflag, table3 transform)</td></tr>
-<tr class="separator:ga3483f350d02420d8b901c79e1ae52706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28a733ace3696288d92b7755a1704e8c"><td class="memItemLeft" align="right" valign="top">success&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html#ga28a733ace3696288d92b7755a1704e8c">chi_lua::chiSurfaceMeshImportFromOBJFile</a> (int SurfaceHandle, string FileName, bool polyflag, table3 transform)</td></tr>
+<tr class="separator:ga28a733ace3696288d92b7755a1704e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8918d931faf9c1a2058a05fe191d3939"><td class="memItemLeft" align="right" valign="top">success&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html#ga8918d931faf9c1a2058a05fe191d3939">chi_lua::chiSurfaceMeshImportFromTriangleFiles</a> (int SurfaceHandle, char *FileName, bool polyflag)</td></tr>
 <tr class="separator:ga8918d931faf9c1a2058a05fe191d3939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga511405af7c2e5b8a4f288d3297ad828d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html#ga511405af7c2e5b8a4f288d3297ad828d">chi_lua::chiSurfaceMeshExtractOpenEdgesToObj</a> (int SurfaceHandle, char FileName)</td></tr>
 <tr class="separator:ga511405af7c2e5b8a4f288d3297ad828d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3c34979eff5bdfb93be9601057a9551c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html#ga3c34979eff5bdfb93be9601057a9551c">chi_lua::chiSurfaceMeshCheckCycles</a> (int SurfaceHandle, int NumAngles)</td></tr>
 <tr class="separator:ga3c34979eff5bdfb93be9601057a9551c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab9bfcc904e59b322bd616c88abc463c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html#gab9bfcc904e59b322bd616c88abc463c2">chi_lua::chiComputeLoadBalancing</a> (int SurfaceHandle, <a class="el" href="../../d8/dd9/namespacechi__lua.html#a89d1648649a9670c6e2dcc775111381f">table</a> Xcuts, <a class="el" href="../../d8/dd9/namespacechi__lua.html#a89d1648649a9670c6e2dcc775111381f">table</a> Ycuts)</td></tr>
+<tr class="memitem:gab9bfcc904e59b322bd616c88abc463c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc8/group___lua_surface_mesh.html#gab9bfcc904e59b322bd616c88abc463c2">chi_lua::chiComputeLoadBalancing</a> (int SurfaceHandle, table Xcuts, table Ycuts)</td></tr>
 <tr class="separator:gab9bfcc904e59b322bd616c88abc463c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -134,13 +132,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/dd9/namespacechi__lua.html#a89d1648649a9670c6e2dcc775111381f">table</a>&#160;</td>
+          <td class="paramtype">table&#160;</td>
           <td class="paramname"><em>Xcuts</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/dd9/namespacechi__lua.html#a89d1648649a9670c6e2dcc775111381f">table</a>&#160;</td>
+          <td class="paramtype">table&#160;</td>
           <td class="paramname"><em>Ycuts</em>&#160;</td>
         </tr>
         <tr>
@@ -161,7 +159,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01141">1141</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01241">1241</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -200,7 +198,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01131">1131</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01231">1231</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -219,55 +217,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Creates a new empty surface mesh.</p>
-<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created surface mesh.</dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01065">1065</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
-
-</div>
-</div>
-<a id="ga65ed63b794a9e006e21fe2e2a7b4e674" name="ga65ed63b794a9e006e21fe2e2a7b4e674"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga65ed63b794a9e006e21fe2e2a7b4e674">&#9670;&nbsp;</a></span>chiSurfaceMeshCreateFromArrays()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Handle chi_lua::chiSurfaceMeshCreateFromArrays </td>
-          <td>(</td>
-          <td class="paramtype">array&#160;</td>
-          <td class="paramname"><em>vertices_x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">array&#160;</td>
-          <td class="paramname"><em>vertices_y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Creates a new surface mesh from a set of vertex arrays.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vertices_x</td><td>array Array of vertices along x. </td></tr>
-    <tr><td class="paramname">vertices_y</td><td>array Array of vertices along y.</td></tr>
-  </table>
-  </dd>
-</dl>
-<h2>_</h2>
-<p >Example: </p><div class="fragment"><div class="line">xmesh = {0.0,0.1,0.2,0.3,0.5}</div>
-<div class="line">ymesh = {0.0,0.1,0.2,0.3,0.5}</div>
-<div class="line">surf_mesh = <a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga65ed63b794a9e006e21fe2e2a7b4e674">chiSurfaceMeshCreateFromArrays</a>(xmesh,ymesh)</div>
-<div class="ttc" id="agroup___lua_surface_mesh_html_ga65ed63b794a9e006e21fe2e2a7b4e674"><div class="ttname"><a href="../../db/dc8/group___lua_surface_mesh.html#ga65ed63b794a9e006e21fe2e2a7b4e674">chi_lua::chiSurfaceMeshCreateFromArrays</a></div><div class="ttdeci">Handle chiSurfaceMeshCreateFromArrays(array vertices_x, array vertices_y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01083">lua_functions.c:1083</a></div></div>
+<h3>Example</h3>
+<p >Example usage: </p><div class="fragment"><div class="line">surfmesh = <a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga22ead80a73c8ed10395140965d049291">chiSurfaceMeshCreate</a>()</div>
+<div class="ttc" id="agroup___lua_surface_mesh_html_ga22ead80a73c8ed10395140965d049291"><div class="ttname"><a href="../../db/dc8/group___lua_surface_mesh.html#ga22ead80a73c8ed10395140965d049291">chi_lua::chiSurfaceMeshCreate</a></div><div class="ttdeci">Handle chiSurfaceMeshCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01156">lua_functions.c:1156</a></div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created surface mesh.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01083">1083</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01156">1156</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -306,7 +262,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01055">1055</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01140">1140</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -345,7 +301,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01047">1047</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01132">1132</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -384,12 +340,12 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01121">1121</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01221">1221</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
-<a id="ga3483f350d02420d8b901c79e1ae52706" name="ga3483f350d02420d8b901c79e1ae52706"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3483f350d02420d8b901c79e1ae52706">&#9670;&nbsp;</a></span>chiSurfaceMeshImportFromOBJFile()</h2>
+<a id="ga28a733ace3696288d92b7755a1704e8c" name="ga28a733ace3696288d92b7755a1704e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga28a733ace3696288d92b7755a1704e8c">&#9670;&nbsp;</a></span>chiSurfaceMeshImportFromOBJFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -403,7 +359,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>FileName</em>, </td>
         </tr>
         <tr>
@@ -429,16 +385,39 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">SurfaceHandle</td><td>int Handle to the surface on which the operation is to be performed. </td></tr>
-    <tr><td class="paramname">FileName</td><td>char* Path to the file to be imported. </td></tr>
-    <tr><td class="paramname">polyflag</td><td>bool (Optional)Flag indicating whether triangles are to be read as polygons. [Default: true]. </td></tr>
+    <tr><td class="paramname">FileName</td><td>string Path to the file to be imported. </td></tr>
+    <tr><td class="paramname">polyflag</td><td>bool (Optional)Flag indicating whether triangles are to be read as polygons. [Default: true (read as polygons)]. </td></tr>
     <tr><td class="paramname">transform</td><td>table3 (Optional) Translation vector to move all the vertices. [Default: none].</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>success bool Return true if file was successfully loaded and false otherwise.</dd></dl>
+<h3>Note:</h3>
+<p >If the intent of a surface mesh is to serve as a 3D logical volume then the <code>polyFlag</code> parameter should be set to false.</p>
+<h3>Example</h3>
+<p >Example usage: </p><div class="fragment"><div class="line">-- Basic example</div>
+<div class="line">surfmesh1 = <a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga22ead80a73c8ed10395140965d049291">chiSurfaceMeshCreate</a>()</div>
+<div class="line"><a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga28a733ace3696288d92b7755a1704e8c">chiSurfaceMeshImportFromOBJFile</a>(surfmesh1, &quot;MeshFile1.obj&quot;)</div>
+<div class="line"> </div>
+<div class="line">-- Surface mesh used as Logical volume</div>
+<div class="line">lv_surfmesh1 = <a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga22ead80a73c8ed10395140965d049291">chiSurfaceMeshCreate</a>()</div>
+<div class="line"><a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga28a733ace3696288d92b7755a1704e8c">chiSurfaceMeshImportFromOBJFile</a>(lv_surfmesh1, &quot;MeshFile3D.obj&quot;, false)</div>
+<div class="line"> </div>
+<div class="line">lv1 = <a class="code hl_function" href="../../d9/d32/group___lua_logic_volumes.html#gac362f65e2642b15efd6abf99d2224d54">chiLogicalVolumeCreate</a>(<a class="code hl_define" href="../../d9/df5/chi__mesh__logicalvolume_8h.html#a5ec2e414545e7c2a2f3ebe4c93600b76">SURFACE</a>, lv_surfmesh1)</div>
+<div class="line"> </div>
+<div class="line">-- Surface mesh with transform</div>
+<div class="line">dx = 1.5</div>
+<div class="line">dy = -2.5</div>
+<div class="line">lv_surfmesh2 = <a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga22ead80a73c8ed10395140965d049291">chiSurfaceMeshCreate</a>()</div>
+<div class="line"><a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga28a733ace3696288d92b7755a1704e8c">chiSurfaceMeshImportFromOBJFile</a>(lv_surfmesh2, &quot;MeshFile3D.obj&quot;, false, {dx,dy,0.0})</div>
+<div class="line"> </div>
+<div class="line">lv2 = <a class="code hl_function" href="../../d9/d32/group___lua_logic_volumes.html#gac362f65e2642b15efd6abf99d2224d54">chiLogicalVolumeCreate</a>(<a class="code hl_define" href="../../d9/df5/chi__mesh__logicalvolume_8h.html#a5ec2e414545e7c2a2f3ebe4c93600b76">SURFACE</a>, lv_surfmesh2)</div>
+<div class="ttc" id="achi__mesh__logicalvolume_8h_html_a5ec2e414545e7c2a2f3ebe4c93600b76"><div class="ttname"><a href="../../d9/df5/chi__mesh__logicalvolume_8h.html#a5ec2e414545e7c2a2f3ebe4c93600b76">SURFACE</a></div><div class="ttdeci">#define SURFACE</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00012">chi_mesh_logicalvolume.h:12</a></div></div>
+<div class="ttc" id="agroup___lua_logic_volumes_html_gac362f65e2642b15efd6abf99d2224d54"><div class="ttname"><a href="../../d9/d32/group___lua_logic_volumes.html#gac362f65e2642b15efd6abf99d2224d54">chi_lua::chiLogicalVolumeCreate</a></div><div class="ttdeci">Handle chiLogicalVolumeCreate(int TypeIndex, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00574">lua_functions.c:574</a></div></div>
+<div class="ttc" id="agroup___lua_surface_mesh_html_ga28a733ace3696288d92b7755a1704e8c"><div class="ttname"><a href="../../db/dc8/group___lua_surface_mesh.html#ga28a733ace3696288d92b7755a1704e8c">chi_lua::chiSurfaceMeshImportFromOBJFile</a></div><div class="ttdeci">success chiSurfaceMeshImportFromOBJFile(int SurfaceHandle, string FileName, bool polyflag, table3 transform)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01198">lua_functions.c:1198</a></div></div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>success bool Return true if file was successfully loaded and false otherwise.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01098">1098</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01198">1198</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -485,7 +464,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>success bool Return true if file was successfully loaded and false otherwise.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01110">1110</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01210">1210</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

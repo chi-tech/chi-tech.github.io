@@ -16,6 +16,6 @@ var classchi__data__types_1_1_byte_array =
     [ "Seek", "d5/d5b/classchi__data__types_1_1_byte_array.html#a48e0f9ae02bea3e6321e67b6fb93700b", null ],
     [ "Size", "d5/d5b/classchi__data__types_1_1_byte_array.html#affcb1987f5a5505fea1a05f4e5d03f7b", null ],
     [ "Write", "d5/d5b/classchi__data__types_1_1_byte_array.html#aedd94f132e33986122d880161a79f4fb", null ],
-    [ "m_offset", "d5/d5b/classchi__data__types_1_1_byte_array.html#a2c7e234b0aa189b96ae180798b089525", null ],
-    [ "m_raw_data", "d5/d5b/classchi__data__types_1_1_byte_array.html#a00ad919777073843964fc77e59cacd5b", null ]
+    [ "offset_", "d5/d5b/classchi__data__types_1_1_byte_array.html#a5ad8168f0cd7a73556c318e2ca3fbced", null ],
+    [ "raw_data_", "d5/d5b/classchi__data__types_1_1_byte_array.html#ab4f70cecc36ccc4b4512432083ffaddb", null ]
 ];

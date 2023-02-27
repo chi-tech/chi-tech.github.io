@@ -9,5 +9,7 @@ var searchData=
   ['volume_5fmesher_5foptions_6',['VOLUME_MESHER_OPTIONS',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html',1,'chi_mesh::VolumeMesher']]],
   ['volumemesher_7',['VolumeMesher',['../de/df0/classchi__mesh_1_1_volume_mesher.html',1,'chi_mesh']]],
   ['volumemesherextruder_8',['VolumeMesherExtruder',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html',1,'chi_mesh']]],
-  ['volumemesherpredefinedunpartitioned_9',['VolumeMesherPredefinedUnpartitioned',['../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html',1,'chi_mesh']]]
+  ['volumemesherpredefinedunpartitioned_9',['VolumeMesherPredefinedUnpartitioned',['../dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html',1,'chi_mesh']]],
+  ['vtknew_10',['vtkNew',['../db/ddd/classvtk_new.html',1,'']]],
+  ['vtksmartpointer_11',['vtkSmartPointer',['../d5/d8c/classvtk_smart_pointer.html',1,'']]]
 ];

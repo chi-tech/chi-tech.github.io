@@ -1,7 +1,7 @@
 var structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder =
 [
     [ "GetDownwindPsi", "da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#aa4cc33efa4fd1afce35e26ad27109c5e", null ],
-    [ "GetUpwindPsi", "da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a859d713a7641154c99f4f341695577a4", null ],
+    [ "GetUpwindPsi", "da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a54c8696d7e426ff79dc165a62bcd0eff", null ],
     [ "angle_num", "da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a2d3451604a7dbc98614c65e528feb1d4", null ],
     [ "angle_set", "da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a660549e2fe7d36560ea9f1ac7a79adab", null ],
     [ "angle_set_index", "da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a00cf46e53f2694b4173401bc762b1201", null ],

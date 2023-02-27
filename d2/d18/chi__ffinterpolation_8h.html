@@ -92,14 +92,13 @@ $(document).ready(function(){initNavTree('d2/d18/chi__ffinterpolation_8h.html','
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">chi_ffinterpolation.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">../MeshContinuum/chi_meshcontinuum.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d3/dcb/chi__mesh_8h_source.html">../chi_mesh.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d1/db1/fieldfunction_8h_source.html">ChiPhysics/FieldFunction/fieldfunction.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d6/d28/spatial__discretization_8h_source.html">ChiMath/SpatialDiscretization/spatial_discretization.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div>
 <p><a href="../../d2/d18/chi__ffinterpolation_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -108,208 +107,55 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/classchi__mesh_1_1_field_function_interpolation.html">chi_mesh::FieldFunctionInterpolation</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a268a77fcd8d3323c58d77997157c684e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#a268a77fcd8d3323c58d77997157c684e">FFI_SLICE</a>&#160;&#160;&#160;1</td></tr>
-<tr class="separator:a268a77fcd8d3323c58d77997157c684e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16281af39b757be2dd5ceb581da9d613"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#a16281af39b757be2dd5ceb581da9d613">FFI_LINE</a>&#160;&#160;&#160;2</td></tr>
-<tr class="separator:a16281af39b757be2dd5ceb581da9d613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a38c486d35a963fcafb8ee59c806017"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#a3a38c486d35a963fcafb8ee59c806017">FFI_VOLUME</a>&#160;&#160;&#160;3</td></tr>
-<tr class="separator:a3a38c486d35a963fcafb8ee59c806017"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae89d988e1a93fa8a58b192e7931d90fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#ae89d988e1a93fa8a58b192e7931d90fc">FFI_SDM_CFEM</a>&#160;&#160;&#160;1</td></tr>
-<tr class="separator:ae89d988e1a93fa8a58b192e7931d90fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d2bcb01d07db7707057d50decdcdb68"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#a8d2bcb01d07db7707057d50decdcdb68">FFI_SDM_PWLD_GM</a>&#160;&#160;&#160;2</td></tr>
-<tr class="separator:a8d2bcb01d07db7707057d50decdcdb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c678dad124e2bdeb6861bf367df2bb8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#a2c678dad124e2bdeb6861bf367df2bb8">OP_SUM</a>&#160;&#160;&#160;10</td></tr>
-<tr class="separator:a2c678dad124e2bdeb6861bf367df2bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8926d2c4aa19c7bbf0ccc6cba3343ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#ae8926d2c4aa19c7bbf0ccc6cba3343ab">OP_AVG</a>&#160;&#160;&#160;11</td></tr>
-<tr class="separator:ae8926d2c4aa19c7bbf0ccc6cba3343ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96c6b949ef9a3fa992b27d2a0055c559"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#a96c6b949ef9a3fa992b27d2a0055c559">OP_MAX</a>&#160;&#160;&#160;12</td></tr>
-<tr class="separator:a96c6b949ef9a3fa992b27d2a0055c559"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b429e3745cd6c3b549e9ce1db7a2ef4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#a4b429e3745cd6c3b549e9ce1db7a2ef4">OP_SUM_LUA</a>&#160;&#160;&#160;13</td></tr>
-<tr class="separator:a4b429e3745cd6c3b549e9ce1db7a2ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af048b1e2487700367b2d8b6c2fec27aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#af048b1e2487700367b2d8b6c2fec27aa">OP_AVG_LUA</a>&#160;&#160;&#160;14</td></tr>
-<tr class="separator:af048b1e2487700367b2d8b6c2fec27aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abded4cc531a8b9ba28f0e72a14ba77aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d18/chi__ffinterpolation_8h.html#abded4cc531a8b9ba28f0e72a14ba77aa">OP_MAX_LUA</a>&#160;&#160;&#160;15</td></tr>
-<tr class="separator:abded4cc531a8b9ba28f0e72a14ba77aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:d6/d5f/namespacechi__physics"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html">chi_physics</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/d81/namespacechi__mesh"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:da/db4/namespacechi__mesh_1_1ff__interpolation"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html">chi_mesh::ff_interpolation</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a41946aa31ffa33770b770aaf59eb1b26"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a41946aa31ffa33770b770aaf59eb1b26">chi_mesh::ff_interpolation::Type</a> : int { <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a41946aa31ffa33770b770aaf59eb1b26a0a1031e189c0c5e08d55c44fc02a4b26">chi_mesh::ff_interpolation::SLICE</a> = 1
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a41946aa31ffa33770b770aaf59eb1b26a17b8ef2c330f1430e00c9de5469fc7e7">chi_mesh::ff_interpolation::LINE</a> = 2
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a41946aa31ffa33770b770aaf59eb1b26a730956af87021c351084317bbc63eea6">chi_mesh::ff_interpolation::VOLUME</a> = 3
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a41946aa31ffa33770b770aaf59eb1b26aaebdbcb765394d25d6a604589a890f82">chi_mesh::ff_interpolation::POINT</a> = 4
+ }</td></tr>
+<tr class="separator:a41946aa31ffa33770b770aaf59eb1b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207ad6cc312218de51e8b227bd339030"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a207ad6cc312218de51e8b227bd339030">chi_mesh::ff_interpolation::Operation</a> : int { <br />
+&#160;&#160;<a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a207ad6cc312218de51e8b227bd339030aff2e92d6142f5285227563d220db74db">chi_mesh::ff_interpolation::OP_SUM</a> = 10
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a207ad6cc312218de51e8b227bd339030a066914d2df305e14845340a9ab8b7be9">chi_mesh::ff_interpolation::OP_AVG</a> = 11
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a207ad6cc312218de51e8b227bd339030ab5e94d95fa46ffa6afc11703db1ef7d5">chi_mesh::ff_interpolation::OP_MAX</a> = 12
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a207ad6cc312218de51e8b227bd339030a0f5b3579e87c28379fd204c871cf67a2">chi_mesh::ff_interpolation::OP_SUM_LUA</a> = 13
+, <br />
+&#160;&#160;<a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a207ad6cc312218de51e8b227bd339030ae36625e0dda4feff1571bacd727bf0b9">chi_mesh::ff_interpolation::OP_AVG_LUA</a> = 14
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a207ad6cc312218de51e8b227bd339030a2635c6fac2a0e213c28317f68960d8d4">chi_mesh::ff_interpolation::OP_MAX_LUA</a> = 15
+<br />
+ }</td></tr>
+<tr class="separator:a207ad6cc312218de51e8b227bd339030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49f92e14e4f4b59f46f7a0ba141f355a"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355a">chi_mesh::ff_interpolation::Property</a> : int { <br />
+&#160;&#160;<a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aaeeb74c974c6bd453828d5e2b783506b5">chi_mesh::ff_interpolation::PROBEPOINT</a> = 0
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aade64d652129d13265f5d8a8b04f752db">chi_mesh::ff_interpolation::SLICEPOINT</a> = 1
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aa1b8fa9b1b74ea5d37eaecc0d7a420424">chi_mesh::ff_interpolation::SLICENORMAL</a> = 2
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aa9740aff4c8e714ded8459cfb88731bb0">chi_mesh::ff_interpolation::SLICETANGENT</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aa7f10565d853e3c393c6ae3c416b560dc">chi_mesh::ff_interpolation::SLICEBINORM</a> = 4
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aad6a0beecbcc46b64a23307ffc084ed36">chi_mesh::ff_interpolation::OPERATION</a> = 5
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aace05ff01e79f8a8df551a8782e79372b">chi_mesh::ff_interpolation::LOGICAL_VOLUME</a> = 8
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aa13c46e203c4995761ad1744b69493f37">chi_mesh::ff_interpolation::ADD_FIELD_FUNCTION</a> = 9
+, <br />
+&#160;&#160;<a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aa5170e5b9105ed4a2c0b71fa78bd2682a">chi_mesh::ff_interpolation::SET_FIELD_FUNCTIONS</a> = 10
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aab7ab996a51a00777605a6b9becc974ae">chi_mesh::ff_interpolation::FIRSTPOINT</a> = 11
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aadbd7c4bf4a9ab5b41c697ce475418479">chi_mesh::ff_interpolation::SECONDPOINT</a> = 12
+, <a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aa9bb06b94167c928f5034b348251982cb">chi_mesh::ff_interpolation::NUMBEROFPOINTS</a> = 13
+, <br />
+&#160;&#160;<a class="el" href="../../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aa1999e40840b0649f3503a5bcfe0d0303">chi_mesh::ff_interpolation::CUSTOM_ARRAY</a> = 14
+<br />
+ }</td></tr>
+<tr class="separator:a49f92e14e4f4b59f46f7a0ba141f355a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a16281af39b757be2dd5ceb581da9d613" name="a16281af39b757be2dd5ceb581da9d613"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16281af39b757be2dd5ceb581da9d613">&#9670;&nbsp;</a></span>FFI_LINE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FFI_LINE&#160;&#160;&#160;2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00010">10</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
-<a id="ae89d988e1a93fa8a58b192e7931d90fc" name="ae89d988e1a93fa8a58b192e7931d90fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae89d988e1a93fa8a58b192e7931d90fc">&#9670;&nbsp;</a></span>FFI_SDM_CFEM</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FFI_SDM_CFEM&#160;&#160;&#160;1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00013">13</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
-<a id="a8d2bcb01d07db7707057d50decdcdb68" name="a8d2bcb01d07db7707057d50decdcdb68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d2bcb01d07db7707057d50decdcdb68">&#9670;&nbsp;</a></span>FFI_SDM_PWLD_GM</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FFI_SDM_PWLD_GM&#160;&#160;&#160;2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00014">14</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
-<a id="a268a77fcd8d3323c58d77997157c684e" name="a268a77fcd8d3323c58d77997157c684e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a268a77fcd8d3323c58d77997157c684e">&#9670;&nbsp;</a></span>FFI_SLICE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FFI_SLICE&#160;&#160;&#160;1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00009">9</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
-<a id="a3a38c486d35a963fcafb8ee59c806017" name="a3a38c486d35a963fcafb8ee59c806017"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a38c486d35a963fcafb8ee59c806017">&#9670;&nbsp;</a></span>FFI_VOLUME</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FFI_VOLUME&#160;&#160;&#160;3</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00011">11</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
-<a id="ae8926d2c4aa19c7bbf0ccc6cba3343ab" name="ae8926d2c4aa19c7bbf0ccc6cba3343ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8926d2c4aa19c7bbf0ccc6cba3343ab">&#9670;&nbsp;</a></span>OP_AVG</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define OP_AVG&#160;&#160;&#160;11</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00017">17</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
-<a id="af048b1e2487700367b2d8b6c2fec27aa" name="af048b1e2487700367b2d8b6c2fec27aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af048b1e2487700367b2d8b6c2fec27aa">&#9670;&nbsp;</a></span>OP_AVG_LUA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define OP_AVG_LUA&#160;&#160;&#160;14</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00020">20</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
-<a id="a96c6b949ef9a3fa992b27d2a0055c559" name="a96c6b949ef9a3fa992b27d2a0055c559"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96c6b949ef9a3fa992b27d2a0055c559">&#9670;&nbsp;</a></span>OP_MAX</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define OP_MAX&#160;&#160;&#160;12</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00018">18</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
-<a id="abded4cc531a8b9ba28f0e72a14ba77aa" name="abded4cc531a8b9ba28f0e72a14ba77aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abded4cc531a8b9ba28f0e72a14ba77aa">&#9670;&nbsp;</a></span>OP_MAX_LUA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define OP_MAX_LUA&#160;&#160;&#160;15</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00021">21</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
-<a id="a2c678dad124e2bdeb6861bf367df2bb8" name="a2c678dad124e2bdeb6861bf367df2bb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c678dad124e2bdeb6861bf367df2bb8">&#9670;&nbsp;</a></span>OP_SUM</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define OP_SUM&#160;&#160;&#160;10</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00016">16</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
-<a id="a4b429e3745cd6c3b549e9ce1db7a2ef4" name="a4b429e3745cd6c3b549e9ce1db7a2ef4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b429e3745cd6c3b549e9ce1db7a2ef4">&#9670;&nbsp;</a></span>OP_SUM_LUA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define OP_SUM_LUA&#160;&#160;&#160;13</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00019">19</a> of file <a class="el" href="../../d2/d18/chi__ffinterpolation_8h_source.html">chi_ffinterpolation.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

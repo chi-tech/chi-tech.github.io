@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['varyingdatatype_0',['VaryingDataType',['../d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542',1,'chi_data_types']]],
-  ['volumemesherproperty_1',['VolumeMesherProperty',['../d0/d81/namespacechi__mesh.html#a496eecf9633f022b12704bc27a6726a5',1,'chi_mesh']]],
-  ['volumemeshertype_2',['VolumeMesherType',['../d0/d81/namespacechi__mesh.html#a3ff8e76f208eff98d2d3e9fe169edbf1',1,'chi_mesh']]]
+  ['templatetype_0',['TemplateType',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a0397c6d3b836f2132697065ef26bb4d5',1,'chi_mesh::VolumeMesherExtruder']]],
+  ['type_1',['Type',['../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a41946aa31ffa33770b770aaf59eb1b26',1,'chi_mesh::ff_interpolation']]]
 ];
