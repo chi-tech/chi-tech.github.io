@@ -1,6 +1,7 @@
 var classchi__mesh_1_1sweep__management_1_1_angle_set =
 [
-    [ "AngleSet", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#ae4cbd726ef1dfc70a287489c83836bd2", null ],
+    [ "SweepBndryPtr", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a5e321dfbeeb9d852033ae9664946b47a", null ],
+    [ "AngleSet", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a3c3177be9ff95005ff44fbd954d0de9d", null ],
     [ "AngleSetAdvance", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a295dd5ee7bb4c3b699a25bba32453595", null ],
     [ "FlushSendBuffers", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a3b8b58c0fb731c4f424117999797ff97", null ],
     [ "GetMaxBufferMessages", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a3080001fa4bb9d625f9940d4894302f4", null ],
@@ -20,11 +21,11 @@ var classchi__mesh_1_1sweep__management_1_1_angle_set =
     [ "delayed_prelocI_outgoing_psi_old", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#aa9223b9601eac3c97875fc3fff642e42", null ],
     [ "deplocI_outgoing_psi", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a5b90d55a7a5a504981060f742154cfb2", null ],
     [ "executed", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a401c4cc3cccf0ae0172940eb721fd2af", null ],
-    [ "fluds", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a7d3f3b813cc09205e23fd98c38b5d931", null ],
+    [ "fluds", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a875ce1ad2d09f78b2395164068d5e3ca", null ],
     [ "local_psi", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#af8b7db47e9cc850c27aa32e1c6ff49c0", null ],
     [ "num_grps", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#acb165b4ec243b9fcbb464f4c4fd746ce", null ],
     [ "prelocI_outgoing_psi", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#aeace91971fb9ded6026b7e4ac817413f", null ],
-    [ "ref_boundaries", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a2bd9cb700d60ec9e79b430f330affdb0", null ],
+    [ "ref_boundaries", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#aa2014970f9ac9370e7f327bdd55899ec", null ],
     [ "ref_subset", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a051f6e2248b2a009853d8d6daa7ec06a", null ],
     [ "spds", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a0c75366014fe5602ea0fdec3e6505e71", null ],
     [ "sweep_buffer", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a4d6450f498edc4c4a2811d9b6dde1af1", null ]

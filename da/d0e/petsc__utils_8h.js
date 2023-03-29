@@ -11,10 +11,11 @@ var petsc__utils_8h =
     [ "CreateVector", "da/d0e/petsc__utils_8h.html#ae2ebedf1cd0712f3d6e0b2047c389949", null ],
     [ "CreateVector", "da/d0e/petsc__utils_8h.html#a2d6fa9475bbb29adf2f37214886261ee", null ],
     [ "CreateVectorWithGhosts", "da/d0e/petsc__utils_8h.html#a3431beefda260df6f2d7b723255de460", null ],
-    [ "GeneralKSPMonitor", "da/d0e/petsc__utils_8h.html#a36287c7a7d1689a4ba48eaacb123e406", null ],
     [ "GetGhostVectorLocalViewRead", "da/d0e/petsc__utils_8h.html#a16e62cffedce8767d3214a64f02cc5f1", null ],
     [ "InitMatrixSparsity", "da/d0e/petsc__utils_8h.html#a1baca8287da5a48e6d56ba3da4c39bab", null ],
     [ "InitMatrixSparsity", "da/d0e/petsc__utils_8h.html#ac20418f18ca4f05d93442a6158bc4a78", null ],
+    [ "KSPMonitorRelativeToRHS", "da/d0e/petsc__utils_8h.html#ac0a45299ec491833a2d1f9df3c401e8c", null ],
+    [ "KSPMonitorStraight", "da/d0e/petsc__utils_8h.html#a4d23878dd79cb1325b6fb025afb68600", null ],
     [ "RelativeResidualConvergenceTest", "da/d0e/petsc__utils_8h.html#a77fd6feef9f909de887c2533d2ca144c", null ],
     [ "RestoreGhostVectorLocalViewRead", "da/d0e/petsc__utils_8h.html#a0c5eb90fb46ec9271439481a67c2bc12", null ]
 ];

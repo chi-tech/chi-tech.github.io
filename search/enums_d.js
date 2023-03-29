@@ -6,5 +6,6 @@ var searchData=
   ['spatialdiscretizationtype_3',['SpatialDiscretizationType',['../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0',1,'chi_math']]],
   ['stdtags_4',['StdTags',['../d8/d42/classchi__objects_1_1_chi_log.html#ab7d5c9c658abc50dc33cdf3f2e4ea3bf',1,'chi_objects::ChiLog']]],
   ['steppingmethod_5',['SteppingMethod',['../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127',1,'chi_math']]],
-  ['surfacemeshertype_6',['SurfaceMesherType',['../d0/d81/namespacechi__mesh.html#a86b91e648fa560486ba65712269df162',1,'chi_mesh']]]
+  ['stringsteamcolorcode_6',['StringSteamColorCode',['../d1/d96/namespacechi__objects.html#ab94a88e6e8384a15a4ba2a4b52eec99c',1,'chi_objects']]],
+  ['surfacemeshertype_7',['SurfaceMesherType',['../d0/d81/namespacechi__mesh.html#a86b91e648fa560486ba65712269df162',1,'chi_mesh']]]
 ];

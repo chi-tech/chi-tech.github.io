@@ -114,6 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa0dd9cb7cd5ae4679058bff35f8ad133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0497f8f1e68b651bc9381ce8cfb438f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a0497f8f1e68b651bc9381ce8cfb438f6">DiffusionMIPSolver</a> (std::string text_name, const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const <a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a> &amp;sdm, const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;uk_man, std::map&lt; uint64_t, <a class="el" href="../../d5/df7/structlbs_1_1acceleration_1_1_boundary_condition.html">BoundaryCondition</a> &gt; bcs, <a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a076841f8ef4fc7d39382c21857ea33e9">MatID2XSMap</a> map_mat_id_2_xs, const std::vector&lt; <a class="el" href="../../dc/d37/structlbs_1_1_unit_cell_matrices.html">UnitCellMatrices</a> &gt; &amp;unit_cell_matrices, bool verbose=false)</td></tr>
 <tr class="separator:a0497f8f1e68b651bc9381ce8cfb438f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee78fdaf95d962306a3a0ed96ac10f36"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#aee78fdaf95d962306a3a0ed96ac10f36">TextName</a> () const</td></tr>
+<tr class="separator:aee78fdaf95d962306a3a0ed96ac10f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a9d3f0899c8479831578b312f1f447f"><td class="memItemLeft" align="right" valign="top">const Vec &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a4a9d3f0899c8479831578b312f1f447f">RHS</a> () const</td></tr>
 <tr class="separator:a4a9d3f0899c8479831578b312f1f447f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af755f355a37436a870b2e5e4a2f49f7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#af755f355a37436a870b2e5e4a2f49f7c">Initialize</a> ()</td></tr>
@@ -128,14 +130,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a04f0f68ba8781df0c347f77433da71c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d9d4c9a866999bdaad79e67452214cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a1d9d4c9a866999bdaad79e67452214cc">Assemble_b</a> (Vec petsc_q_vector)</td></tr>
 <tr class="separator:a1d9d4c9a866999bdaad79e67452214cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad140f9c68f31e621456e3eec2d66081f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#ad140f9c68f31e621456e3eec2d66081f">Solve</a> (std::vector&lt; double &gt; &amp;solution)</td></tr>
-<tr class="separator:ad140f9c68f31e621456e3eec2d66081f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae09d11c5e7547a8de1f0bd08c4c9d5a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#ae09d11c5e7547a8de1f0bd08c4c9d5a9">Solve</a> (Vec petsc_solution)</td></tr>
-<tr class="separator:ae09d11c5e7547a8de1f0bd08c4c9d5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44875308c1e45d5cb9eaa68ae1e6b92b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a44875308c1e45d5cb9eaa68ae1e6b92b">Solve</a> (std::vector&lt; double &gt; &amp;solution, bool use_initial_guess=false)</td></tr>
+<tr class="separator:a44875308c1e45d5cb9eaa68ae1e6b92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae03b6f440cb90df73901a2fbeb4146b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#ae03b6f440cb90df73901a2fbeb4146b3">Solve</a> (Vec petsc_solution, bool use_initial_guess=false)</td></tr>
+<tr class="separator:ae03b6f440cb90df73901a2fbeb4146b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94f206fae184cf1d028dce227dfb5525"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a94f206fae184cf1d028dce227dfb5525">HPerpendicular</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, unsigned int f)</td></tr>
 <tr class="separator:a94f206fae184cf1d028dce227dfb5525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b9f809881f3f6e7c5189b1b516dfcd7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a8b9f809881f3f6e7c5189b1b516dfcd7">MapFaceNodeDisc</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cur_cell, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;adj_cell, const std::vector&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt; &amp;cc_node_locs, const std::vector&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt; &amp;ac_node_locs, size_t ccf, size_t acf, size_t ccfi, double epsilon=1.0e-12)</td></tr>
 <tr class="separator:a8b9f809881f3f6e7c5189b1b516dfcd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a5144661f9f98921ca13c69317abf28"><td class="memItemLeft" align="right" valign="top">std::pair&lt; size_t, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a5a5144661f9f98921ca13c69317abf28">GetNumPhiIterativeUnknowns</a> ()</td></tr>
+<tr class="separator:a5a5144661f9f98921ca13c69317abf28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add12e2d34480007b8b84fd1a5f51385a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#add12e2d34480007b8b84fd1a5f51385a">~DiffusionMIPSolver</a> ()</td></tr>
 <tr class="separator:add12e2d34480007b8b84fd1a5f51385a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -465,6 +469,25 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a5a5144661f9f98921ca13c69317abf28" name="a5a5144661f9f98921ca13c69317abf28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5144661f9f98921ca13c69317abf28">&#9670;&nbsp;</a></span>GetNumPhiIterativeUnknowns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; size_t, size_t &gt; lbs::acceleration::DiffusionMIPSolver::GetNumPhiIterativeUnknowns </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d58/diffusion__mip__00__constrdestr_8cc_source.html#l00056">56</a> of file <a class="el" href="../../df/d58/diffusion__mip__00__constrdestr_8cc_source.html">diffusion_mip_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
 <a id="a94f206fae184cf1d028dce227dfb5525" name="a94f206fae184cf1d028dce227dfb5525"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94f206fae184cf1d028dce227dfb5525">&#9670;&nbsp;</a></span>HPerpendicular()</h2>
 
@@ -608,8 +631,8 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 
 </div>
 </div>
-<a id="ad140f9c68f31e621456e3eec2d66081f" name="ad140f9c68f31e621456e3eec2d66081f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad140f9c68f31e621456e3eec2d66081f">&#9670;&nbsp;</a></span>Solve() <span class="overload">[1/2]</span></h2>
+<a id="a44875308c1e45d5cb9eaa68ae1e6b92b" name="a44875308c1e45d5cb9eaa68ae1e6b92b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44875308c1e45d5cb9eaa68ae1e6b92b">&#9670;&nbsp;</a></span>Solve() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -618,8 +641,18 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
           <td class="memname">void lbs::acceleration::DiffusionMIPSolver::Solve </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>solution</em></td><td>)</td>
+          <td class="paramname"><em>solution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_initial_guess</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -627,16 +660,17 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">solution</td><td>Vector in to which the solution will be parsed. </td></tr>
+    <tr><td class="paramname">use_initial_guess</td><td>bool [Default:False] Flag, when set, will use the values of the output solution as initial guess. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d0a/diffusion__mip__03__solve_8cc_source.html#l00015">15</a> of file <a class="el" href="../../dc/d0a/diffusion__mip__03__solve_8cc_source.html">diffusion_mip_03_solve.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d0a/diffusion__mip__03__solve_8cc_source.html#l00017">17</a> of file <a class="el" href="../../dc/d0a/diffusion__mip__03__solve_8cc_source.html">diffusion_mip_03_solve.cc</a>.</p>
 
 </div>
 </div>
-<a id="ae09d11c5e7547a8de1f0bd08c4c9d5a9" name="ae09d11c5e7547a8de1f0bd08c4c9d5a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae09d11c5e7547a8de1f0bd08c4c9d5a9">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/2]</span></h2>
+<a id="ae03b6f440cb90df73901a2fbeb4146b3" name="ae03b6f440cb90df73901a2fbeb4146b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae03b6f440cb90df73901a2fbeb4146b3">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -645,8 +679,18 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
           <td class="memname">void lbs::acceleration::DiffusionMIPSolver::Solve </td>
           <td>(</td>
           <td class="paramtype">Vec&#160;</td>
-          <td class="paramname"><em>petsc_solution</em></td><td>)</td>
+          <td class="paramname"><em>petsc_solution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_initial_guess</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -654,11 +698,39 @@ Nv = Number of vertices. If Nv &lt;= 4 then the perimeter parameter should be re
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">petsc_solution</td><td>Vector in to which the solution will be parsed. </td></tr>
+    <tr><td class="paramname">use_initial_guess</td><td>bool [Default:False] Flag, when set, will use the values of the output solution as initial guess. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d0a/diffusion__mip__03__solve_8cc_source.html#l00080">80</a> of file <a class="el" href="../../dc/d0a/diffusion__mip__03__solve_8cc_source.html">diffusion_mip_03_solve.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d0a/diffusion__mip__03__solve_8cc_source.html#l00098">98</a> of file <a class="el" href="../../dc/d0a/diffusion__mip__03__solve_8cc_source.html">diffusion_mip_03_solve.cc</a>.</p>
+
+</div>
+</div>
+<a id="aee78fdaf95d962306a3a0ed96ac10f36" name="aee78fdaf95d962306a3a0ed96ac10f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee78fdaf95d962306a3a0ed96ac10f36">&#9670;&nbsp;</a></span>TextName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lbs::acceleration::DiffusionMIPSolver::TextName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d01/diffusion__mip_8h_source.html#l00112">112</a> of file <a class="el" href="../../d9/d01/diffusion__mip_8h_source.html">diffusion_mip.h</a>.</p>
 
 </div>
 </div>

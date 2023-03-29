@@ -1,10 +1,10 @@
 var classlbs__curvilinear_1_1_sweep_chunk_p_w_l =
 [
-    [ "SweepChunkPWL", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#acce4db98967edf0b6feb20032fd1fa31", null ],
+    [ "SweepChunkPWL", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#a86f4f01ac3060716aab6b3659ea5969b", null ],
     [ "Sweep", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#a7d47503976375dabc8c48698de4e3b9c", null ],
-    [ "map_polar_level", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#a748ce0027837728f5e207aed8ee02f21", null ],
-    [ "normal_vector_boundary", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#af18364b2798ddb3560ab4b239ba7e956", null ],
-    [ "psi_sweep", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#af117a63f8447c2cedfd55836a5b4c5b5", null ],
+    [ "map_polar_level_", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#a0461a8dc01f165daddafcba7067652e1", null ],
+    [ "normal_vector_boundary_", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#a23cbc3618d3e4984ab8c2df842af4c1a", null ],
+    [ "psi_sweep_", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#ab2a9749d95c1a55706e45bc9ba7d8cde", null ],
     [ "secondary_unit_cell_matrices_", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#ab0061559265d491bc577e2c55eb8952c", null ],
-    [ "unknown_manager", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#a99507b11a31625e9098d837c5ddb0ee3", null ]
+    [ "unknown_manager_", "d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#a738f00c296ad5739650222ed4b92332c", null ]
 ];

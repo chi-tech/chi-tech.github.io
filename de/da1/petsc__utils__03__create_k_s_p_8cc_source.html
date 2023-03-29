@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('de/da1/petsc__utils__03__create_k_s_p_
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">                 in_maximum_iterations);</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">KSPSetInitialGuessNonzero(setup.ksp,PETSC_TRUE);</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"></span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">KSPMonitorSet(setup.ksp,&amp;GeneralKSPMonitor,NULL,NULL);</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">KSPMonitorSet(setup.ksp,&amp;KSPMonitorRelativeToRHS,NULL,NULL);</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">KSPSetConvergenceTest(setup.ksp,&amp;RelativeResidualConvergenceTest,NULL,NULL);</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">return setup;</span></div>
@@ -155,7 +155,7 @@ $(document).ready(function(){initNavTree('de/da1/petsc__utils__03__create_k_s_p_
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                        <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  KSPSetFromOptions(setup.<a class="code hl_variable" href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88">ksp</a>);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  KSPMonitorSet(setup.<a class="code hl_variable" href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88">ksp</a>,&amp;<a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a36287c7a7d1689a4ba48eaacb123e406">chi_math::PETScUtils::GeneralKSPMonitor</a>,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  KSPMonitorSet(setup.<a class="code hl_variable" href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88">ksp</a>, &amp;<a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac0a45299ec491833a2d1f9df3c401e8c">chi_math::PETScUtils::KSPMonitorRelativeToRHS</a>,</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordflow">return</span> setup;</div>
@@ -201,48 +201,81 @@ $(document).ready(function(){initNavTree('de/da1/petsc__utils__03__create_k_s_p_
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">/**General monitor.*/</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a36287c7a7d1689a4ba48eaacb123e406">  110</a></span>PetscErrorCode <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a36287c7a7d1689a4ba48eaacb123e406">chi_math::PETScUtils::GeneralKSPMonitor</a>(</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  KSP ksp, PetscInt n, PetscReal rnorm, <span class="keywordtype">void</span>*)</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>{</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  Vec Rhs;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  KSPGetRhs(ksp,&amp;Rhs);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keywordtype">double</span> rhs_norm;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  VecNorm(Rhs,NORM_2,&amp;rhs_norm);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keywordflow">if</span> (rhs_norm &lt; 1.0e-12)</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    rhs_norm = 1.0;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="comment">//Get solver name</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* ksp_name;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  KSPGetOptionsPrefix(ksp,&amp;ksp_name);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="comment">//Default to this if ksp_name is NULL</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> NONAME_SOLVER[] = <span class="stringliteral">&quot;NoName-Solver\0&quot;</span>;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordflow">if</span> (ksp_name == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    ksp_name = NONAME_SOLVER;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="comment">//Print message</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  std::stringstream buff;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  buff</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    &lt;&lt; ksp_name</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    &lt;&lt; <span class="stringliteral">&quot; iteration &quot;</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    &lt;&lt; std::setw(4) &lt;&lt; n</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    &lt;&lt; <span class="stringliteral">&quot; - Residual &quot;</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    &lt;&lt; std::scientific &lt;&lt; std::setprecision(7) &lt;&lt; rnorm / rhs_norm</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; buff.str();</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">/**General monitor that print the residual norm relative to the</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment"> * right-hand side norm.*/</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac0a45299ec491833a2d1f9df3c401e8c">  111</a></span>PetscErrorCode <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac0a45299ec491833a2d1f9df3c401e8c">chi_math::PETScUtils::KSPMonitorRelativeToRHS</a>(</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  KSP ksp, PetscInt n, PetscReal rnorm, <span class="keywordtype">void</span>*)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>{</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  Vec Rhs;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  KSPGetRhs(ksp,&amp;Rhs);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="keywordtype">double</span> rhs_norm;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  VecNorm(Rhs,NORM_2,&amp;rhs_norm);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">if</span> (rhs_norm &lt; 1.0e-12)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    rhs_norm = 1.0;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="comment">//Get solver name</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* ksp_name;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  KSPGetOptionsPrefix(ksp,&amp;ksp_name);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="comment">//Default to this if ksp_name is NULL</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> NONAME_SOLVER[] = <span class="stringliteral">&quot;NoName-Solver\0&quot;</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordflow">if</span> (ksp_name == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    ksp_name = NONAME_SOLVER;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <span class="comment">//Print message</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  std::stringstream buff;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  buff</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    &lt;&lt; ksp_name</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    &lt;&lt; <span class="stringliteral">&quot; iteration &quot;</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    &lt;&lt; std::setw(4) &lt;&lt; n</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    &lt;&lt; <span class="stringliteral">&quot; - Residual &quot;</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    &lt;&lt; std::scientific &lt;&lt; std::setprecision(7) &lt;&lt; rnorm / rhs_norm</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; buff.str();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>}</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">/**General monitor that print the residual norm relative to the</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment"> * right-hand side norm.*/</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a4d23878dd79cb1325b6fb025afb68600">  149</a></span>PetscErrorCode <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a4d23878dd79cb1325b6fb025afb68600">chi_math::PETScUtils::KSPMonitorStraight</a>(</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  KSP ksp, PetscInt n, PetscReal rnorm, <span class="keywordtype">void</span>*)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>{</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="comment">//Get solver name</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* ksp_name;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  KSPGetOptionsPrefix(ksp,&amp;ksp_name);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="comment">//Default to this if ksp_name is NULL</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> NONAME_SOLVER[] = <span class="stringliteral">&quot;NoName-Solver\0&quot;</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="keywordflow">if</span> (ksp_name == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    ksp_name = NONAME_SOLVER;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="comment">//Print message</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  std::stringstream buff;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  buff</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    &lt;&lt; ksp_name</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    &lt;&lt; <span class="stringliteral">&quot; iteration &quot;</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    &lt;&lt; std::setw(4) &lt;&lt; n</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    &lt;&lt; <span class="stringliteral">&quot; - Residual &quot;</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    &lt;&lt; std::scientific &lt;&lt; std::setprecision(7) &lt;&lt; rnorm</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; buff.str();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>}</div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00025">chi_log.cc:25</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00027">chi_log.cc:27</a></div></div>
 <div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
-<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a36287c7a7d1689a4ba48eaacb123e406"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a36287c7a7d1689a4ba48eaacb123e406">chi_math::PETScUtils::GeneralKSPMonitor</a></div><div class="ttdeci">PetscErrorCode GeneralKSPMonitor(KSP ksp, PetscInt n, PetscReal rnorm, void *monitordestroy)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00110">petsc_utils_03_createKSP.cc:110</a></div></div>
+<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a4d23878dd79cb1325b6fb025afb68600"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a4d23878dd79cb1325b6fb025afb68600">chi_math::PETScUtils::KSPMonitorStraight</a></div><div class="ttdeci">PetscErrorCode KSPMonitorStraight(KSP ksp, PetscInt n, PetscReal rnorm, void *)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00149">petsc_utils_03_createKSP.cc:149</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a77fd6feef9f909de887c2533d2ca144c"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a77fd6feef9f909de887c2533d2ca144c">chi_math::PETScUtils::RelativeResidualConvergenceTest</a></div><div class="ttdeci">PetscErrorCode RelativeResidualConvergenceTest(KSP ksp, PetscInt n, PetscReal rnorm, KSPConvergedReason *convergedReason, void *monitordestroy)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00081">petsc_utils_03_createKSP.cc:81</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ab59d60d5f5daa3929e3669acdcce1b39"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ab59d60d5f5daa3929e3669acdcce1b39">chi_math::PETScUtils::CreateCommonKrylovSolverSetup</a></div><div class="ttdeci">PETScSolverSetup CreateCommonKrylovSolverSetup(Mat ref_matrix, const std::string &amp;in_solver_name=&quot;KSPSolver&quot;, const std::string &amp;in_solver_type=KSPGMRES, const std::string &amp;in_preconditioner_type=PCNONE, double in_relative_residual_tolerance=1.0e-6, int64_t in_maximum_iterations=100)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00035">petsc_utils_03_createKSP.cc:35</a></div></div>
+<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ac0a45299ec491833a2d1f9df3c401e8c"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac0a45299ec491833a2d1f9df3c401e8c">chi_math::PETScUtils::KSPMonitorRelativeToRHS</a></div><div class="ttdeci">PetscErrorCode KSPMonitorRelativeToRHS(KSP ksp, PetscInt n, PetscReal rnorm, void *)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00111">petsc_utils_03_createKSP.cc:111</a></div></div>
 <div class="ttc" id="apetsc__utils_8h_html"><div class="ttname"><a href="../../da/d0e/petsc__utils_8h.html">petsc_utils.h</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html">chi_math::PETScUtils::PETScSolverSetup</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00010">petsc_utils.h:11</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html_a3113df80f416ecf34b66978b8c4d1e0f"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a3113df80f416ecf34b66978b8c4d1e0f">chi_math::PETScUtils::PETScSolverSetup::pc</a></div><div class="ttdeci">PC pc</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00013">petsc_utils.h:13</a></div></div>

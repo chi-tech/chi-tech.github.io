@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['u_5fll_5fint_0',['u_ll_int',['../d9/d11/sweepbuffer_8h.html#a13c0d9c8c925922a27cee81b356ad14d',1,'sweepbuffer.h']]],
-  ['uidata_1',['UIData',['../d5/d3e/classchi__math_1_1_spatial_discretization___f_e.html#a0d5d33d7ef0e2b4a64950f422effc144',1,'chi_math::SpatialDiscretization_FE']]],
-  ['uint_2',['uint',['../d6/d32/classchi__diffusion_1_1_solver.html#af2908525025b293391f4ce24e86c34a0',1,'chi_diffusion::Solver']]],
-  ['uniquesogroupings_3',['UniqueSOGroupings',['../d9/d42/namespacelbs.html#aee2e09cc47baec60805b625cc87351d5',1,'lbs']]],
-  ['unknowninfo_4',['UnknownInfo',['../d9/da7/classchi__math_1_1_unknown_manager.html#a6d50fa800e23465f7fb6aa351a995c1c',1,'chi_math::UnknownManager']]],
-  ['unpartitionedmeshptr_5',['UnpartitionedMeshPtr',['../d0/d81/namespacechi__mesh.html#a5c1d91b69650c8df55b84d492b31184d',1,'chi_mesh']]],
-  ['unpartmeshptr_6',['UnpartMeshPtr',['../d0/d81/namespacechi__mesh.html#ad1b44afe46a5296e3e1fe075e850bc49',1,'chi_mesh']]]
+  ['tangleset_0',['TAngleSet',['../df/d95/sweepscheduler_8h.html#abdb5f8f95ffb4f442927d9edad884128',1,'sweepscheduler.h']]],
+  ['tanglesetgroup_1',['TAngleSetGroup',['../df/d95/sweepscheduler_8h.html#afdc768c9d767e01f92a0737de5b2294a',1,'sweepscheduler.h']]],
+  ['tensor2n_2',['Tensor2N',['../dc/d58/namespacechi__math.html#a70284ca276fc295317eee71e23f0df19',1,'chi_math']]],
+  ['tensorrn_3',['TensorRN',['../dc/d58/namespacechi__math.html#a24af91734cb5a0b5d7375e4b7f732ab3',1,'chi_math']]],
+  ['tgspo_4',['TGSPO',['../df/d95/sweepscheduler_8h.html#a7994968a2e59e0282ab73aba3fe0a0d2',1,'sweepscheduler.h']]],
+  ['tleveled_5fgraph_5',['TLEVELED_GRAPH',['../df/d95/sweepscheduler_8h.html#acc72eb68e19ebc25e8ff0aada1051e77',1,'sweepscheduler.h']]],
+  ['tvecdbl_6',['Tvecdbl',['../dc/dc0/_golub_fischer_8h.html#a837bc11f591e6fa026ea828bc85e46b4',1,'GolubFischer.h']]]
 ];

@@ -1,18 +1,20 @@
 var namespacechi__physics =
 [
+    [ "AdjointMGXS", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s" ],
     [ "BasicOption", "d2/dd8/classchi__physics_1_1_basic_option.html", "d2/dd8/classchi__physics_1_1_basic_option" ],
     [ "BasicOptions", "d1/d7c/classchi__physics_1_1_basic_options.html", "d1/d7c/classchi__physics_1_1_basic_options" ],
     [ "FieldFunction", "df/de9/classchi__physics_1_1_field_function.html", "df/de9/classchi__physics_1_1_field_function" ],
     [ "IsotropicMultiGrpSource", "dc/d04/classchi__physics_1_1_isotropic_multi_grp_source.html", "dc/d04/classchi__physics_1_1_isotropic_multi_grp_source" ],
     [ "Material", "d8/da4/classchi__physics_1_1_material.html", "d8/da4/classchi__physics_1_1_material" ],
     [ "MaterialProperty", "df/d52/classchi__physics_1_1_material_property.html", "df/d52/classchi__physics_1_1_material_property" ],
+    [ "MultiGroupXS", "df/db7/classchi__physics_1_1_multi_group_x_s.html", "df/db7/classchi__physics_1_1_multi_group_x_s" ],
     [ "ScalarValue", "db/d6e/classchi__physics_1_1_scalar_value.html", "db/d6e/classchi__physics_1_1_scalar_value" ],
+    [ "SingleStateMGXS", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s" ],
     [ "Solver", "d9/d3a/classchi__physics_1_1_solver.html", "d9/d3a/classchi__physics_1_1_solver" ],
-    [ "TransportCrossSections", "d3/dff/classchi__physics_1_1_transport_cross_sections.html", "d3/dff/classchi__physics_1_1_transport_cross_sections" ],
     [ "FieldFunctionPtr", "d6/d5f/namespacechi__physics.html#a7be82ed94415ed63ada0a556e20800a5", null ],
     [ "MaterialPtr", "d6/d5f/namespacechi__physics.html#ab6460275cc07ff17d5c0ccfab1c08a60", null ],
+    [ "MultiGroupXSPtr", "d6/d5f/namespacechi__physics.html#a48d2013a0766df0786d80512694b1661", null ],
     [ "SolverPtr", "d6/d5f/namespacechi__physics.html#a32b7a961a070e810475068b46eadcab3", null ],
-    [ "TransportCrossSectionsPtr", "d6/d5f/namespacechi__physics.html#afe4db76ccf1ef83c491575c4e30043ef", null ],
     [ "OperationType", "d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95", [
       [ "SINGLE_VALUE", "d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95ac8946fa6a83e99cc3e25a9c564b13c8e", null ],
       [ "FROM_ARRAY", "d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95a38c8dc2dd474c3ba3bdc1a35b7debff6", null ],

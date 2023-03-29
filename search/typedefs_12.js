@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xsptr_0',['XSPtr',['../d9/d42/namespacelbs.html#aa3fe9dbdd19e017796db0da109e2b107',1,'lbs']]]
+  ['wgscontextptr_0',['WGSContextPtr',['../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a3e2a0cab8620e65b669435467f9edff2',1,'lbs::WGSLinearSolver']]]
 ];

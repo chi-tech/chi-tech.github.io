@@ -181,49 +181,65 @@ $(document).ready(function(){initNavTree('d5/d89/ags__linear__solver_8cc_source.
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  Vec x_old;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  VecDuplicate(x_, &amp;x_old);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iter = 0; iter &lt; tolerance_options_.maximum_iterations; ++iter)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    lbs_solver.SetGroupScopedPETScVecFromPrimarySTLvector(gid_i,gid_f,x_old,phi);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; solver : ags_context_ptr-&gt;sub_solvers_list_)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      solver-&gt;Setup();</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      solver-&gt;Solve();</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="comment">//Save qmoms to be restored after each iteration.</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="comment">//This is necessary for multiple ags iterations to function</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="comment">//and for keigen-value problems</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keyword">const</span> <span class="keyword">auto</span> saved_qmoms = lbs_solver.QMomentsLocal();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iter = 0; iter &lt; tolerance_options_.maximum_iterations; ++iter)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    lbs_solver.SetGroupScopedPETScVecFromPrimarySTLvector(gid_i,gid_f,x_old,phi);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    lbs_solver.SetGroupScopedPETScVecFromPrimarySTLvector(gid_i,gid_f,x_,phi);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    VecAXPY(x_old, -1.0, x_);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    PetscReal error_norm; VecNorm(x_old, NORM_2, &amp;error_norm);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    PetscReal sol_norm;VecNorm(x_, NORM_2, &amp;sol_norm);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; solver : ags_context_ptr-&gt;sub_solvers_list_)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      solver-&gt;Setup();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      solver-&gt;Solve();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">if</span> (verbose_)</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      &lt;&lt; <span class="stringliteral">&quot;********** AGS solver iteration &quot;</span> &lt;&lt; std::setw(3) &lt;&lt; iter &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      &lt;&lt; <span class="stringliteral">&quot; Relative change &quot;</span> &lt;&lt; std::setw(10) &lt;&lt; std::setprecision(4)</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      &lt;&lt; error_norm/sol_norm;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    lbs_solver.SetGroupScopedPETScVecFromPrimarySTLvector(gid_i,gid_f,x_,phi);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    VecAXPY(x_old, -1.0, x_);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    PetscReal error_norm; VecNorm(x_old, NORM_2, &amp;error_norm);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    PetscReal sol_norm;VecNorm(x_, NORM_2, &amp;sol_norm);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">if</span> (error_norm &lt; tolerance_options_.residual_absolute)</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  }<span class="comment">//for iteration</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  VecDestroy(&amp;x_old);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}<span class="comment">//namespace lbs</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">if</span> (verbose_)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      &lt;&lt; <span class="stringliteral">&quot;********** AGS solver iteration &quot;</span> &lt;&lt; std::setw(3) &lt;&lt; iter &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      &lt;&lt; <span class="stringliteral">&quot; Relative change &quot;</span> &lt;&lt; std::setw(10) &lt;&lt; std::setprecision(4)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      &lt;&lt; error_norm/sol_norm;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    lbs_solver.QMomentsLocal() = saved_qmoms; <span class="comment">//Restore qmoms</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">if</span> (error_norm &lt; tolerance_options_.residual_absolute)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  }<span class="comment">//for iteration</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  VecDestroy(&amp;x_old);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#a3686e23c9417247a54b59026ef091164">  129</a></span><a class="code hl_function" href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#adc50ef0728b5614f3210a162c8c4e302">AGSLinearSolver&lt;Mat,Vec,KSP&gt;::~AGSLinearSolver</a>()</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  MatDestroy(&amp;A_);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}<span class="comment">//namespace lbs</span></div>
 <div class="ttc" id="aags__linear__solver_8cc_html_aca72b954c33693324f7103f94572d8cc"><div class="ttname"><a href="../../d5/d89/ags__linear__solver_8cc.html#aca72b954c33693324f7103f94572d8cc">sc_int64_t</a></div><div class="ttdeci">#define sc_int64_t</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d89/ags__linear__solver_8cc_source.html#l00015">ags_linear_solver.cc:15</a></div></div>
 <div class="ttc" id="aags__linear__solver_8cc_html_aee70207623fda4dfd58eff611828254a"><div class="ttname"><a href="../../d5/d89/ags__linear__solver_8cc.html#aee70207623fda4dfd58eff611828254a">GetAGSContextPtr</a></div><div class="ttdeci">#define GetAGSContextPtr(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d89/ags__linear__solver_8cc_source.html#l00017">ags_linear_solver.cc:17</a></div></div>
 <div class="ttc" id="aags__linear__solver_8h_html"><div class="ttname"><a href="../../d5/d5d/ags__linear__solver_8h.html">ags_linear_solver.h</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00025">chi_log.cc:25</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00027">chi_log.cc:27</a></div></div>
 <div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_a_g_s_linear_solver_html_a7ac08a67205511c69459af756338d8cd"><div class="ttname"><a href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#a7ac08a67205511c69459af756338d8cd">lbs::AGSLinearSolver::SetInitialGuess</a></div><div class="ttdeci">void SetInitialGuess() override</div></div>
 <div class="ttc" id="aclasslbs_1_1_a_g_s_linear_solver_html_aa04c547c1c2dddf4d81d3fcdf2645a53"><div class="ttname"><a href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#aa04c547c1c2dddf4d81d3fcdf2645a53">lbs::AGSLinearSolver::SetPreconditioner</a></div><div class="ttdeci">void SetPreconditioner() override</div></div>
 <div class="ttc" id="aclasslbs_1_1_a_g_s_linear_solver_html_abda28b8079b9d2ca5b20e9ad8aa7d627"><div class="ttname"><a href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#abda28b8079b9d2ca5b20e9ad8aa7d627">lbs::AGSLinearSolver::SetSystemSize</a></div><div class="ttdeci">virtual void SetSystemSize() override</div></div>
 <div class="ttc" id="aclasslbs_1_1_a_g_s_linear_solver_html_ac2a83a93af62163289ef0fd62b71d563"><div class="ttname"><a href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#ac2a83a93af62163289ef0fd62b71d563">lbs::AGSLinearSolver::SetRHS</a></div><div class="ttdeci">void SetRHS() override</div></div>
 <div class="ttc" id="aclasslbs_1_1_a_g_s_linear_solver_html_ad152c8c41725248854c12ce800db534a"><div class="ttname"><a href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#ad152c8c41725248854c12ce800db534a">lbs::AGSLinearSolver::SetSystem</a></div><div class="ttdeci">virtual void SetSystem() override</div></div>
+<div class="ttc" id="aclasslbs_1_1_a_g_s_linear_solver_html_adc50ef0728b5614f3210a162c8c4e302"><div class="ttname"><a href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#adc50ef0728b5614f3210a162c8c4e302">lbs::AGSLinearSolver::~AGSLinearSolver</a></div><div class="ttdeci">virtual ~AGSLinearSolver() override</div></div>
 <div class="ttc" id="aclasslbs_1_1_a_g_s_linear_solver_html_ae7725f17e29846d1faac24aaccabe6b3"><div class="ttname"><a href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#ae7725f17e29846d1faac24aaccabe6b3">lbs::AGSLinearSolver::Solve</a></div><div class="ttdeci">void Solve() override</div></div>
 <div class="ttc" id="albs__solver_8h_html"><div class="ttname"><a href="../../d9/d53/lbs__solver_8h.html">lbs_solver.h</a></div></div>
 <div class="ttc" id="alinear__matrix__action___ax_8h_html"><div class="ttname"><a href="../../da/ded/linear__matrix__action___ax_8h.html">linear_matrix_action_Ax.h</a></div></div>

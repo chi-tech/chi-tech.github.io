@@ -14,7 +14,7 @@ var lbs__structs_8h =
     [ "UniqueSOGroupings", "d9/dc3/lbs__structs_8h.html#aee2e09cc47baec60805b625cc87351d5", null ],
     [ "VecDbl", "d9/dc3/lbs__structs_8h.html#af08418093f4b92c33c17e60fbecb9bc9", null ],
     [ "VecVec3", "d9/dc3/lbs__structs_8h.html#a5ecbc6599e893d039af91c058bd2b413", null ],
-    [ "XSPtr", "d9/dc3/lbs__structs_8h.html#aa3fe9dbdd19e017796db0da109e2b107", null ],
+    [ "XSPtr", "d9/dc3/lbs__structs_8h.html#adba5568913514d673c29c4b7e8350fe3", null ],
     [ "AGSSchemeEntryType", "d9/dc3/lbs__structs_8h.html#a3744b264392916fdf18f954ad8f32e28", [
       [ "GROUPSET_ID", "d9/dc3/lbs__structs_8h.html#a3744b264392916fdf18f954ad8f32e28a769c50716f254a3ad87d0a601016e0e7", null ],
       [ "SCHEME", "d9/dc3/lbs__structs_8h.html#a3744b264392916fdf18f954ad8f32e28a3a70b5d6e416eeccda948d3ccc246f25", null ]
@@ -28,7 +28,8 @@ var lbs__structs_8h =
     [ "BoundaryType", "d9/dc3/lbs__structs_8h.html#a40358655cfa572a772641f9f06d9e91d", [
       [ "VACUUM", "d9/dc3/lbs__structs_8h.html#a40358655cfa572a772641f9f06d9e91da9a311ef6dad816cb7a15c0ab41920ad8", null ],
       [ "INCIDENT_ISOTROPIC", "d9/dc3/lbs__structs_8h.html#a40358655cfa572a772641f9f06d9e91da1cc3753228b759f2be4d82bafb63d45c", null ],
-      [ "REFLECTING", "d9/dc3/lbs__structs_8h.html#a40358655cfa572a772641f9f06d9e91da6890fc3005a75adb9e5a84b693e8741c", null ]
+      [ "REFLECTING", "d9/dc3/lbs__structs_8h.html#a40358655cfa572a772641f9f06d9e91da6890fc3005a75adb9e5a84b693e8741c", null ],
+      [ "INCIDENT_ANISTROPIC_HETEROGENEOUS", "d9/dc3/lbs__structs_8h.html#a40358655cfa572a772641f9f06d9e91da71688870165cb96882c1085047d14429", null ]
     ] ],
     [ "GeometryType", "d9/dc3/lbs__structs_8h.html#af80cef3c8aeb4f3e39ef1e18cb27fd83", [
       [ "NO_GEOMETRY_SET", "d9/dc3/lbs__structs_8h.html#af80cef3c8aeb4f3e39ef1e18cb27fd83a1ecf534645b84aaad2e52c037267a6b4", null ],
@@ -52,5 +53,6 @@ var lbs__structs_8h =
       [ "APPLY_AGS_FISSION_SOURCES", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6a2b270786e3408c459026e45f5fe50f0b", null ],
       [ "SUPPRESS_WG_SCATTER", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6a747ae7094df6e242dc859a6aec9a203f", null ]
     ] ],
+    [ "MapGeometryTypeToCoordSys", "d9/dc3/lbs__structs_8h.html#a5801535b388e4f0376b900117c30fdf9", null ],
     [ "operator|", "d9/dc3/lbs__structs_8h.html#ad7e658e9bc7ac9918bb87500278c9e7b", null ]
 ];

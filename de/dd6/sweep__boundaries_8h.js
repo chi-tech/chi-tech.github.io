@@ -1,14 +1,15 @@
 var sweep__boundaries_8h =
 [
-    [ "chi_mesh::sweep_management::BoundaryBase", "dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html", "dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base" ],
-    [ "chi_mesh::sweep_management::BoundaryVacuum", "dc/d41/classchi__mesh_1_1sweep__management_1_1_boundary_vacuum.html", "dc/d41/classchi__mesh_1_1sweep__management_1_1_boundary_vacuum" ],
-    [ "chi_mesh::sweep_management::BoundaryIncidentHomogenous", "d2/dbc/classchi__mesh_1_1sweep__management_1_1_boundary_incident_homogenous.html", "d2/dbc/classchi__mesh_1_1sweep__management_1_1_boundary_incident_homogenous" ],
-    [ "chi_mesh::sweep_management::BoundaryIncidentHeterogenous", "dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html", "dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous" ],
+    [ "chi_mesh::sweep_management::SweepBoundary", "d9/d83/classchi__mesh_1_1sweep__management_1_1_sweep_boundary.html", "d9/d83/classchi__mesh_1_1sweep__management_1_1_sweep_boundary" ],
+    [ "chi_mesh::sweep_management::BoundaryVaccuum", "d1/de0/classchi__mesh_1_1sweep__management_1_1_boundary_vaccuum.html", "d1/de0/classchi__mesh_1_1sweep__management_1_1_boundary_vaccuum" ],
+    [ "chi_mesh::sweep_management::BoundaryIsotropicHomogenous", "d0/dbe/classchi__mesh_1_1sweep__management_1_1_boundary_isotropic_homogenous.html", "d0/dbe/classchi__mesh_1_1sweep__management_1_1_boundary_isotropic_homogenous" ],
     [ "chi_mesh::sweep_management::BoundaryReflecting", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting" ],
+    [ "chi_mesh::sweep_management::BoundaryFunction", "d3/d51/classchi__mesh_1_1sweep__management_1_1_boundary_function.html", "d3/d51/classchi__mesh_1_1sweep__management_1_1_boundary_function" ],
+    [ "chi_mesh::sweep_management::BoundaryIncidentHeterogeneous", "d8/da9/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogeneous.html", "d8/da9/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogeneous" ],
     [ "BoundaryType", "de/dd6/sweep__boundaries_8h.html#a6cd9803675df8262126d71d894dde25d", [
-      [ "VACUUM", "de/dd6/sweep__boundaries_8h.html#a6cd9803675df8262126d71d894dde25da9a311ef6dad816cb7a15c0ab41920ad8", null ],
-      [ "INCIDENT_HOMOGENOUS", "de/dd6/sweep__boundaries_8h.html#a6cd9803675df8262126d71d894dde25da857360a246793bc54c7f4b0987d88d60", null ],
+      [ "INCIDENT_VACCUUM", "de/dd6/sweep__boundaries_8h.html#a6cd9803675df8262126d71d894dde25daa44e9a4b37b28ef47297d2f352a24a22", null ],
+      [ "INCIDENT_ISOTROPIC_HOMOGENOUS", "de/dd6/sweep__boundaries_8h.html#a6cd9803675df8262126d71d894dde25da66551bc77731bc1b07aff6fc8d3a53df", null ],
       [ "REFLECTING", "de/dd6/sweep__boundaries_8h.html#a6cd9803675df8262126d71d894dde25da6890fc3005a75adb9e5a84b693e8741c", null ],
-      [ "INCIDENT_HETEROGENOUS", "de/dd6/sweep__boundaries_8h.html#a6cd9803675df8262126d71d894dde25da77f10d27c69cfa62b4b2d16470134cb1", null ]
+      [ "INCIDENT_ANISOTROPIC_HETEROGENEOUS", "de/dd6/sweep__boundaries_8h.html#a6cd9803675df8262126d71d894dde25da354f310f56a032d33d104ad8ebb36755", null ]
     ] ]
 ];

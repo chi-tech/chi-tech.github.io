@@ -23,10 +23,10 @@ var classchi =
     [ "material_stack", "d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d", null ],
     [ "meshhandler_stack", "d4/d35/classchi.html#a5bc87832f51e2196e2a230a5deb75838", null ],
     [ "mpi", "d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd", null ],
+    [ "multigroup_xs_stack", "d4/d35/classchi.html#ac63327052f2f45b85155f455c798d9cf", null ],
     [ "program_timer", "d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647", null ],
     [ "quadrature_stack", "d4/d35/classchi.html#af95e663696f1bb453de942ae30e765e7", null ],
     [ "solver_stack", "d4/d35/classchi.html#ac61de38bf878913b59c570995346052e", null ],
     [ "surface_mesh_stack", "d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae", null ],
-    [ "trnsprt_xs_stack", "d4/d35/classchi.html#af2077efc5802d64a2ae52105384d7605", null ],
     [ "unpartitionedmesh_stack", "d4/d35/classchi.html#a47b557d0bdd217181e6f5b7798cec13a", null ]
 ];

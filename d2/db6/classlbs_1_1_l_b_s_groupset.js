@@ -1,6 +1,7 @@
 var classlbs_1_1_l_b_s_groupset =
 [
     [ "TwoGridAccelerationInfo", "de/d52/structlbs_1_1_l_b_s_groupset_1_1_two_grid_acceleration_info.html", "de/d52/structlbs_1_1_l_b_s_groupset_1_1_two_grid_acceleration_info" ],
+    [ "AngleAggPtr", "d2/db6/classlbs_1_1_l_b_s_groupset.html#aa63324da72f40e17f7294bc7028fb9be", null ],
     [ "SPDS_ptr", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a0481ad751021dbacb0266c01ac68a1f1", null ],
     [ "LBSGroupset", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a93c4ea8b8ff1452c91442390d6583466", null ],
     [ "LBSGroupset", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a85fa0d2b7ed5de9674e0e19200ca956a", null ],
@@ -9,7 +10,7 @@ var classlbs_1_1_l_b_s_groupset =
     [ "BuildSubsets", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a3dda19dae7a713557b4a046ef210bcaa", null ],
     [ "PrintSweepInfoFile", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a1c0c89d576640cf7c43c6f5903ce28fd", null ],
     [ "allow_cycles_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a89edec5dda02fed02284b0c51a681544", null ],
-    [ "angle_agg_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#afecdd0918d5c40d2b61beab0108a2a22", null ],
+    [ "angle_agg_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a2bca3c96aeb2531a8bbe5e4bc0b0604a", null ],
     [ "angleagg_method_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a19c2c370773aa46eff12aacf1ce787d5", null ],
     [ "apply_tgdsa_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a599c482c3a69f259470012dcef4a7634", null ],
     [ "apply_wgdsa_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a1ffe44d9077e493af6375c86a4e644e5", null ],
@@ -26,7 +27,6 @@ var classlbs_1_1_l_b_s_groupset =
     [ "psi_uk_man_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a9da4f5823d768f192cf5bc7f4dbda68b", null ],
     [ "quadrature_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a5c5294e713617f0377df6536ae9543b4", null ],
     [ "residual_tolerance_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a0ceccae420f6d328bb71cf5918533d45", null ],
-    [ "sweep_orderings_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a1f2e19290dd5f9cdf23607c49afa60f6", null ],
     [ "tg_acceleration_info_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#aa51d32ee0c51f2acdadcb53df7e2858b", null ],
     [ "tgdsa_max_iters_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#acf38c841952f12ae47e107b89c458da9", null ],
     [ "tgdsa_solver_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#ac49c0fea778f67dfb4e5761a7d0a3e84", null ],

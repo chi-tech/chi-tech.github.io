@@ -1,31 +1,7 @@
 var classlbs_1_1_disc_ord_steady_state_solver =
 [
-    [ "AngQuadPtr", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#ae3411fa52c2b267d7da464edeec1cda8", null ],
-    [ "FLUDSTemplate", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#ace7745bbefaa0bba1c7fcd62e56c6e57", null ],
-    [ "FLUDSTemplatePtr", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#ab53c5245c133b282e8276efb163adfc4", null ],
-    [ "FLUDSTemplatePtrs", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a57b39d83b76b3313d96ef96326b5dcd8", null ],
-    [ "SPDS_ptr", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a63e2ffa7b122f53f0252e7654291fba2", null ],
-    [ "SPDS_ptrs", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#ae618758a4d2faca32b16c50281f3e8a8", null ],
-    [ "SweepChunk", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a77305ed62597e1a273e6e25b70644337", null ],
-    [ "SwpOrderGroupingInfo", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#ac9185bd0c0cf35f8c094ee6e76c35e2f", null ],
     [ "DiscOrdSteadyStateSolver", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#ad9dcf1481c4b4432f623e8d9842832ac", null ],
-    [ "~DiscOrdSteadyStateSolver", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#aba6e21224390eec99eeb2bce2ef8b6fb", null ],
     [ "DiscOrdSteadyStateSolver", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#af6c5b22057c27933f655787693e0154d", null ],
-    [ "AssociateSOsAndDirections", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a6566aa2f0f63eb0ce266b8a8d1acd5e4", null ],
-    [ "ComputeBalance", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a488f9ca64b3d08313d74e73b79f89cfd", null ],
     [ "Execute", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#ab3bc2e895099d473b01d943c8a65e148", null ],
-    [ "GSScopedCopyPrimarySTLvectors", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a03a484cae769ceb63cffc98d116e0ea5", null ],
-    [ "InitFluxDataStructures", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#ab4ffd1732ceb048808d0ce93aa23530f", null ],
-    [ "Initialize", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#af95aa14531582a15366b09d8a2a27ebc", null ],
-    [ "InitializeSweepDataStructures", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a9505dbeab4df7336fe5e25f4dd19f7cc", null ],
-    [ "InitializeWGSSolvers", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a8a12d8c1fffcd5fb853f47a22dc937b7", null ],
-    [ "operator=", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a64d0ddec97c5477b491efb0651b6fdde", null ],
-    [ "ResetSweepOrderings", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a621beb2002a388ea567f07ced6ddf927", null ],
-    [ "SetGSPETScVecFromPrimarySTLvector", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#adc5b716661a1ceeb45b74841f045fa0b", null ],
-    [ "SetPrimarySTLvectorFromGSPETScVec", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a8e1ffc44c9b44ba04e8d4fb65fb50712", null ],
-    [ "SetSweepChunk", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a88b52a2a7e761840bac539692336c86d", null ],
-    [ "ZeroOutflowBalanceVars", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a0a1e57620dace659e8d7d93a68261a77", null ],
-    [ "quadrature_fluds_templates_map_", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a73451edefaed7d4ccdd33521280e642b", null ],
-    [ "quadrature_spds_map_", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a8c9eed0befc5850af4ae3ce6c982f86e", null ],
-    [ "quadrature_unq_so_grouping_map_", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#aa4656dd0022d38269a341242b303fd2f", null ]
+    [ "operator=", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#a64d0ddec97c5477b491efb0651b6fdde", null ]
 ];

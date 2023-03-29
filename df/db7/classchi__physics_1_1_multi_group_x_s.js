@@ -1,0 +1,27 @@
+var classchi__physics_1_1_multi_group_x_s =
+[
+    [ "Precursor", "de/d51/structchi__physics_1_1_multi_group_x_s_1_1_precursor.html", "de/d51/structchi__physics_1_1_multi_group_x_s_1_1_precursor" ],
+    [ "MultiGroupXS", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a09fc875a97ac10026d8d69ef288e8e0b", null ],
+    [ "DiffusionCoefficient", "df/db7/classchi__physics_1_1_multi_group_x_s.html#af406d395edd6df0ea391f7136be721ea", null ],
+    [ "DiffusionInitialized", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a4212df7de6815dfaa5a4bf9b7bc5f177", null ],
+    [ "ExportToChiXSFile", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a980382b4e3c899f08946e69d1c5b6f2a", null ],
+    [ "InverseVelocity", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a0e114cebd3b9b7a8ef62c9ced1331f21", null ],
+    [ "IsFissionable", "df/db7/classchi__physics_1_1_multi_group_x_s.html#ac1d749b2acbacd714ae2c27151dd6bd1", null ],
+    [ "NuDelayedSigmaF", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a452497526d26492557f0145f6064446a", null ],
+    [ "NumGroups", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a050332a0487386c249985098d9d530e1", null ],
+    [ "NumPrecursors", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a09ed99d4d0a8ae1e3aac22bbbac2ab37", null ],
+    [ "NuPromptSigmaF", "df/db7/classchi__physics_1_1_multi_group_x_s.html#acd988e8b5ae302f3a3531fdabdc704bb", null ],
+    [ "NuSigmaF", "df/db7/classchi__physics_1_1_multi_group_x_s.html#ab22b4f71d686ec16cac3f684d7c8f459", null ],
+    [ "Precursors", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a086dbc1b62c5e5e48162aac8ff561abe", null ],
+    [ "ProductionMatrix", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a677b70375995208961bbf5d062541000", null ],
+    [ "PushLuaTable", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a1f712de1efad21b1c09b714accc04215", null ],
+    [ "ScatteringInitialized", "df/db7/classchi__physics_1_1_multi_group_x_s.html#ad9fdf5ed910a43e291076760fdf55150", null ],
+    [ "ScatteringOrder", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a9f74969742f758e35f4aad85112f84d5", null ],
+    [ "SigmaAbsorption", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a8b7f2264639e5787f7843bdff95a7e7e", null ],
+    [ "SigmaFission", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a9d764cd837307c43b8c07b9d4c46e998", null ],
+    [ "SigmaRemoval", "df/db7/classchi__physics_1_1_multi_group_x_s.html#aab55b2315f46d984386ee3fdb62054ec", null ],
+    [ "SigmaSGtoG", "df/db7/classchi__physics_1_1_multi_group_x_s.html#af0f63c0c77ab83d91f202e347e2ce16b", null ],
+    [ "SigmaTotal", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a85faed3006b04247fcb069bb63f0b6d1", null ],
+    [ "TransferMatrices", "df/db7/classchi__physics_1_1_multi_group_x_s.html#ae68e3a4d4c262fe123e352915795f5e4", null ],
+    [ "TransferMatrix", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a0dc6606a15e8bff4caec74efca687538", null ]
+];

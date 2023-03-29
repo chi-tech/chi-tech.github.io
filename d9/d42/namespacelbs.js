@@ -1,27 +1,35 @@
 var namespacelbs =
 [
     [ "acceleration", "d8/d43/namespacelbs_1_1acceleration.html", "d8/d43/namespacelbs_1_1acceleration" ],
+    [ "AdjointSourceFunction", "d8/d7e/classlbs_1_1_adjoint_source_function.html", "d8/d7e/classlbs_1_1_adjoint_source_function" ],
     [ "AGSContext", "d4/d2a/structlbs_1_1_a_g_s_context.html", "d4/d2a/structlbs_1_1_a_g_s_context" ],
     [ "AGSLinearSolver", "d9/df9/classlbs_1_1_a_g_s_linear_solver.html", "d9/df9/classlbs_1_1_a_g_s_linear_solver" ],
     [ "AGSSchemeEntry", "d9/d24/classlbs_1_1_a_g_s_scheme_entry.html", "d9/d24/classlbs_1_1_a_g_s_scheme_entry" ],
+    [ "BoundaryFunctionToLua", "d6/dd3/classlbs_1_1_boundary_function_to_lua.html", "d6/dd3/classlbs_1_1_boundary_function_to_lua" ],
     [ "BoundaryPreference", "d4/d8e/structlbs_1_1_boundary_preference.html", "d4/d8e/structlbs_1_1_boundary_preference" ],
     [ "CellLBSView", "d4/d32/classlbs_1_1_cell_l_b_s_view.html", "d4/d32/classlbs_1_1_cell_l_b_s_view" ],
     [ "DiscOrdKEigenvalueSolver", "d4/dd0/classlbs_1_1_disc_ord_k_eigenvalue_solver.html", "d4/dd0/classlbs_1_1_disc_ord_k_eigenvalue_solver" ],
     [ "DiscOrdSteadyStateAdjointSolver", "d6/d0f/classlbs_1_1_disc_ord_steady_state_adjoint_solver.html", "d6/d0f/classlbs_1_1_disc_ord_steady_state_adjoint_solver" ],
     [ "DiscOrdSteadyStateSolver", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver" ],
     [ "DiscOrdTransientSolver", "d6/d7b/classlbs_1_1_disc_ord_transient_solver.html", "d6/d7b/classlbs_1_1_disc_ord_transient_solver" ],
+    [ "KResidualFunctionContext", "d7/d94/structlbs_1_1_k_residual_function_context.html", "d7/d94/structlbs_1_1_k_residual_function_context" ],
+    [ "LBSDiscreteOrdinatesSolver", "d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html", "d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver" ],
     [ "LBSGroup", "d5/d86/classlbs_1_1_l_b_s_group.html", "d5/d86/classlbs_1_1_l_b_s_group" ],
     [ "LBSGroupset", "d2/db6/classlbs_1_1_l_b_s_groupset.html", "d2/db6/classlbs_1_1_l_b_s_groupset" ],
     [ "LBSSolver", "dc/db7/classlbs_1_1_l_b_s_solver.html", "dc/db7/classlbs_1_1_l_b_s_solver" ],
     [ "MIPSteadyStateSolver", "d5/d5f/classlbs_1_1_m_i_p_steady_state_solver.html", "d5/d5f/classlbs_1_1_m_i_p_steady_state_solver" ],
     [ "MIPWGSContext", "d4/dd2/structlbs_1_1_m_i_p_w_g_s_context.html", "d4/dd2/structlbs_1_1_m_i_p_w_g_s_context" ],
+    [ "NLKEigenAGSContext", "dc/d17/structlbs_1_1_n_l_k_eigen_a_g_s_context.html", "dc/d17/structlbs_1_1_n_l_k_eigen_a_g_s_context" ],
+    [ "NLKEigenvalueAGSSolver", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver" ],
     [ "Options", "dc/dcd/structlbs_1_1_options.html", "dc/dcd/structlbs_1_1_options" ],
     [ "PointSource", "dc/d4f/classlbs_1_1_point_source.html", "dc/d4f/classlbs_1_1_point_source" ],
     [ "ResponseFunctionDesignation", "d6/d34/structlbs_1_1_response_function_designation.html", "d6/d34/structlbs_1_1_response_function_designation" ],
+    [ "SourceFunction", "dc/d64/classlbs_1_1_source_function.html", "dc/d64/classlbs_1_1_source_function" ],
     [ "SubSetInfo", "da/d31/structlbs_1_1_sub_set_info.html", "da/d31/structlbs_1_1_sub_set_info" ],
     [ "SweepChunkPWL", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l" ],
     [ "SweepChunkPWLTransientTheta", "d8/da5/classlbs_1_1_sweep_chunk_p_w_l_transient_theta.html", "d8/da5/classlbs_1_1_sweep_chunk_p_w_l_transient_theta" ],
     [ "SweepWGSContext", "d9/df7/structlbs_1_1_sweep_w_g_s_context.html", "d9/df7/structlbs_1_1_sweep_w_g_s_context" ],
+    [ "TransientSourceFunction", "dc/d71/classlbs_1_1_transient_source_function.html", "dc/d71/classlbs_1_1_transient_source_function" ],
     [ "UnitCellMatrices", "dc/d37/structlbs_1_1_unit_cell_matrices.html", "dc/d37/structlbs_1_1_unit_cell_matrices" ],
     [ "WGSContext", "dd/ddd/structlbs_1_1_w_g_s_context.html", "dd/ddd/structlbs_1_1_w_g_s_context" ],
     [ "WGSLinearSolver", "d7/d8c/classlbs_1_1_w_g_s_linear_solver.html", "d7/d8c/classlbs_1_1_w_g_s_linear_solver" ],
@@ -34,7 +42,7 @@ var namespacelbs =
     [ "UniqueSOGroupings", "d9/d42/namespacelbs.html#aee2e09cc47baec60805b625cc87351d5", null ],
     [ "VecDbl", "d9/d42/namespacelbs.html#af08418093f4b92c33c17e60fbecb9bc9", null ],
     [ "VecVec3", "d9/d42/namespacelbs.html#a5ecbc6599e893d039af91c058bd2b413", null ],
-    [ "XSPtr", "d9/d42/namespacelbs.html#aa3fe9dbdd19e017796db0da109e2b107", null ],
+    [ "XSPtr", "d9/d42/namespacelbs.html#adba5568913514d673c29c4b7e8350fe3", null ],
     [ "AGSSchemeEntryType", "d9/d42/namespacelbs.html#a3744b264392916fdf18f954ad8f32e28", [
       [ "GROUPSET_ID", "d9/d42/namespacelbs.html#a3744b264392916fdf18f954ad8f32e28a769c50716f254a3ad87d0a601016e0e7", null ],
       [ "SCHEME", "d9/d42/namespacelbs.html#a3744b264392916fdf18f954ad8f32e28a3a70b5d6e416eeccda948d3ccc246f25", null ]
@@ -48,7 +56,8 @@ var namespacelbs =
     [ "BoundaryType", "d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91d", [
       [ "VACUUM", "d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91da9a311ef6dad816cb7a15c0ab41920ad8", null ],
       [ "INCIDENT_ISOTROPIC", "d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91da1cc3753228b759f2be4d82bafb63d45c", null ],
-      [ "REFLECTING", "d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91da6890fc3005a75adb9e5a84b693e8741c", null ]
+      [ "REFLECTING", "d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91da6890fc3005a75adb9e5a84b693e8741c", null ],
+      [ "INCIDENT_ANISTROPIC_HETEROGENEOUS", "d9/d42/namespacelbs.html#a40358655cfa572a772641f9f06d9e91da71688870165cb96882c1085047d14429", null ]
     ] ],
     [ "GeometryType", "d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83", [
       [ "NO_GEOMETRY_SET", "d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83a1ecf534645b84aaad2e52c037267a6b4", null ],
@@ -87,10 +96,18 @@ var namespacelbs =
     ] ],
     [ "GSConvergenceTest", "d9/d42/namespacelbs.html#ab2ebade8b7bc1e83079c700804c8aa47", null ],
     [ "IterativeMethodPETScName", "d9/d42/namespacelbs.html#aea5c1f2d096b77c337c181ae0babbe94", null ],
+    [ "KEigenKSPMonitor", "d9/d42/namespacelbs.html#afdaed09e84ffcd1ec11ef05eac9265af", null ],
+    [ "KEigenSNESMonitor", "d9/d42/namespacelbs.html#a6f317791d7a083b374fd3d3d35dfec69", null ],
     [ "MakeExpRepFromP1", "d9/d42/namespacelbs.html#a863a0a04bcadf31e63ca6365a29a1bb0", null ],
     [ "MakeSubSets", "d9/d42/namespacelbs.html#a9bae66dfc98c36f55ee6f3a484a1be66", null ],
+    [ "MapGeometryTypeToCoordSys", "d9/d42/namespacelbs.html#a5801535b388e4f0376b900117c30fdf9", null ],
     [ "MIP_TGDSA_PreConditionerMult", "d9/d42/namespacelbs.html#ad62cb56f26cc4637665fcca322597b92", null ],
+    [ "NLKEigenResidualFunction", "d9/d42/namespacelbs.html#a1431574e49ca288a5b680e61df51155f", null ],
     [ "operator|", "d9/d42/namespacelbs.html#ad7e658e9bc7ac9918bb87500278c9e7b", null ],
+    [ "PowerIterationKEigen", "d9/d42/namespacelbs.html#a3b583d0693dbac934e7243a9ab733b49", null ],
+    [ "PowerIterationKEigen1", "d9/d42/namespacelbs.html#ae1bdbb6aa5c0a0eaab787875f6fcff1b", null ],
+    [ "PowerIterationKEigen2", "d9/d42/namespacelbs.html#aba6367f680e31667142e5e3f625deeb4", null ],
     [ "TestFunction", "d9/d42/namespacelbs.html#a73204e69771a419b9a04ebd30773d7b3", null ],
-    [ "WGDSA_TGDSA_PreConditionerMult", "d9/d42/namespacelbs.html#a1a4f62e5b0f07d115201d4e396655090", null ]
+    [ "WGDSA_TGDSA_PreConditionerMult", "d9/d42/namespacelbs.html#a1a4f62e5b0f07d115201d4e396655090", null ],
+    [ "WGDSA_TGDSA_PreConditionerMult2", "d9/d42/namespacelbs.html#a5fe2ad9773109128b389845b045e5367", null ]
 ];

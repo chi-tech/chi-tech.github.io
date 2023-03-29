@@ -31,13 +31,10 @@ var hierarchy =
     [ "dfem_diffusion::Boundary", "dd/d4b/classdfem__diffusion_1_1_boundary.html", null ],
     [ "fv_diffusion::Boundary", "d2/df4/classfv__diffusion_1_1_boundary.html", null ],
     [ "mg_diffusion::Boundary", "d6/dea/classmg__diffusion_1_1_boundary.html", null ],
-    [ "chi_mesh::sweep_management::BoundaryBase", "dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html", [
-      [ "chi_mesh::sweep_management::BoundaryIncidentHeterogenous", "dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html", null ],
-      [ "chi_mesh::sweep_management::BoundaryIncidentHomogenous", "d2/dbc/classchi__mesh_1_1sweep__management_1_1_boundary_incident_homogenous.html", null ],
-      [ "chi_mesh::sweep_management::BoundaryReflecting", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html", null ],
-      [ "chi_mesh::sweep_management::BoundaryVacuum", "dc/d41/classchi__mesh_1_1sweep__management_1_1_boundary_vacuum.html", null ]
-    ] ],
     [ "lbs::acceleration::BoundaryCondition", "d5/df7/structlbs_1_1acceleration_1_1_boundary_condition.html", null ],
+    [ "chi_mesh::sweep_management::BoundaryFunction", "d3/d51/classchi__mesh_1_1sweep__management_1_1_boundary_function.html", [
+      [ "lbs::BoundaryFunctionToLua", "d6/dd3/classlbs_1_1_boundary_function_to_lua.html", null ]
+    ] ],
     [ "lbs::BoundaryPreference", "d4/d8e/structlbs_1_1_boundary_preference.html", null ],
     [ "chi_mesh::UnpartitionedMesh::BoundBox", "d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html", null ],
     [ "chi_data_types::ByteArray", "d5/d5b/classchi__data__types_1_1_byte_array.html", null ],
@@ -115,6 +112,7 @@ var hierarchy =
     ] ],
     [ "chi_graph::DirectedGraph::VertexAccessor::iterator", "dc/d81/classchi__graph_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html", null ],
     [ "chi_mesh::LocalCellHandler::iterator", "d2/dd3/classchi__mesh_1_1_local_cell_handler_1_1iterator.html", null ],
+    [ "lbs::KResidualFunctionContext", "d7/d94/structlbs_1_1_k_residual_function_context.html", null ],
     [ "mg_diffusion::KSPAppContext", "dc/da1/structmg__diffusion_1_1_k_s_p_app_context.html", null ],
     [ "lbs::LBSGroup", "d5/d86/classlbs_1_1_l_b_s_group.html", null ],
     [ "lbs::LBSGroupset", "d2/db6/classlbs_1_1_l_b_s_groupset.html", null ],
@@ -142,8 +140,11 @@ var hierarchy =
     [ "chi_physics::Material", "d8/da4/classchi__physics_1_1_material.html", null ],
     [ "chi_physics::MaterialProperty", "df/d52/classchi__physics_1_1_material_property.html", [
       [ "chi_physics::IsotropicMultiGrpSource", "dc/d04/classchi__physics_1_1_isotropic_multi_grp_source.html", null ],
-      [ "chi_physics::ScalarValue", "db/d6e/classchi__physics_1_1_scalar_value.html", null ],
-      [ "chi_physics::TransportCrossSections", "d3/dff/classchi__physics_1_1_transport_cross_sections.html", null ]
+      [ "chi_physics::MultiGroupXS", "df/db7/classchi__physics_1_1_multi_group_x_s.html", [
+        [ "chi_physics::AdjointMGXS", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html", null ],
+        [ "chi_physics::SingleStateMGXS", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html", null ]
+      ] ],
+      [ "chi_physics::ScalarValue", "db/d6e/classchi__physics_1_1_scalar_value.html", null ]
     ] ],
     [ "chi_mesh::Matrix3x3", "d0/dec/structchi__mesh_1_1_matrix3x3.html", null ],
     [ "chi_mesh::MeshContinuum", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html", null ],
@@ -153,6 +154,18 @@ var hierarchy =
     [ "lbs::acceleration::Multigroup_D_and_sigR", "d6/d81/structlbs_1_1acceleration_1_1_multigroup___d__and__sig_r.html", null ],
     [ "chi_data_types::NDArray< T >", "d2/d5d/classchi__data__types_1_1_n_d_array.html", null ],
     [ "chi_math::NonLinearFunction", "d6/dc4/classchi__math_1_1_non_linear_function.html", null ],
+    [ "chi_math::NonLinearSolver< MatType, VecType, SolverType >", "dd/deb/classchi__math_1_1_non_linear_solver.html", [
+      [ "lbs::NLKEigenvalueAGSSolver< MatType, VecType, SolverType >", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html", null ]
+    ] ],
+    [ "chi_math::NonLinearSolver< Mat, Vec, SNES >", "dd/deb/classchi__math_1_1_non_linear_solver.html", [
+      [ "lbs::acceleration::NLKEigenDiffSolver", "d7/d3b/classlbs_1_1acceleration_1_1_n_l_k_eigen_diff_solver.html", null ]
+    ] ],
+    [ "chi_math::NonLinearSolverContext< VecType, SolverType >", "d2/d14/structchi__math_1_1_non_linear_solver_context.html", [
+      [ "lbs::NLKEigenAGSContext< VecType, SolverType >", "dc/d17/structlbs_1_1_n_l_k_eigen_a_g_s_context.html", null ]
+    ] ],
+    [ "chi_math::NonLinearSolverContext< Vec, SNES >", "d2/d14/structchi__math_1_1_non_linear_solver_context.html", [
+      [ "lbs::acceleration::NLKEigenDiffContext", "d3/d65/structlbs_1_1acceleration_1_1_n_l_k_eigen_diff_context.html", null ]
+    ] ],
     [ "chi_mesh::UnpartitionedMesh::Options", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html", null ],
     [ "lbs::acceleration::DiffusionMIPSolver::Options", "d9/dd8/structlbs_1_1acceleration_1_1_diffusion_m_i_p_solver_1_1_options.html", null ],
     [ "lbs::DiscOrdTransientSolver::Options", "d4/d3b/structlbs_1_1_disc_ord_transient_solver_1_1_options.html", null ],
@@ -164,7 +177,7 @@ var hierarchy =
     [ "lbs::PointSource", "dc/d4f/classlbs_1_1_point_source.html", null ],
     [ "chi_mesh::PolyFace", "d4/ddb/structchi__mesh_1_1_poly_face.html", null ],
     [ "chi_math::PreconditionerContext< PCType, VecType >", "d6/db8/structchi__math_1_1_preconditioner_context.html", null ],
-    [ "chi_physics::TransportCrossSections::Precursor", "d1/da6/structchi__physics_1_1_transport_cross_sections_1_1_precursor.html", null ],
+    [ "chi_physics::MultiGroupXS::Precursor", "de/d51/structchi__physics_1_1_multi_group_x_s_1_1_precursor.html", null ],
     [ "chi_math::Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html", [
       [ "chi_math::QuadratureConical", "da/d37/classchi__math_1_1_quadrature_conical.html", null ],
       [ "chi_math::QuadratureGaussChebyshev", "d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev.html", null ],
@@ -197,16 +210,22 @@ var hierarchy =
       [ "dfem_diffusion::Solver", "df/ddc/classdfem__diffusion_1_1_solver.html", null ],
       [ "fv_diffusion::Solver", "d1/dd1/classfv__diffusion_1_1_solver.html", null ],
       [ "lbs::LBSSolver", "dc/db7/classlbs_1_1_l_b_s_solver.html", [
-        [ "lbs::DiscOrdSteadyStateSolver", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html", [
+        [ "lbs::LBSDiscreteOrdinatesSolver", "d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html", [
           [ "lbs::DiscOrdKEigenvalueSolver", "d4/dd0/classlbs_1_1_disc_ord_k_eigenvalue_solver.html", [
             [ "lbs::DiscOrdTransientSolver", "d6/d7b/classlbs_1_1_disc_ord_transient_solver.html", null ]
           ] ],
           [ "lbs::DiscOrdSteadyStateAdjointSolver", "d6/d0f/classlbs_1_1_disc_ord_steady_state_adjoint_solver.html", null ],
-          [ "lbs_curvilinear::DiscOrdSteadyStateSolver", "df/de3/classlbs__curvilinear_1_1_disc_ord_steady_state_solver.html", null ]
+          [ "lbs::DiscOrdSteadyStateSolver", "dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html", [
+            [ "lbs_curvilinear::DiscOrdSteadyStateSolver", "df/de3/classlbs__curvilinear_1_1_disc_ord_steady_state_solver.html", null ]
+          ] ]
         ] ],
         [ "lbs::MIPSteadyStateSolver", "d5/d5f/classlbs_1_1_m_i_p_steady_state_solver.html", null ]
       ] ],
       [ "mg_diffusion::Solver", "d4/d4c/classmg__diffusion_1_1_solver.html", null ]
+    ] ],
+    [ "lbs::SourceFunction", "dc/d64/classlbs_1_1_source_function.html", [
+      [ "lbs::AdjointSourceFunction", "d8/d7e/classlbs_1_1_adjoint_source_function.html", null ],
+      [ "lbs::TransientSourceFunction", "dc/d71/classlbs_1_1_transient_source_function.html", null ]
     ] ],
     [ "chi_math::SparseMatrix", "de/d51/classchi__math_1_1_sparse_matrix.html", null ],
     [ "chi_math::SpatialDiscretization", "dd/d1d/classchi__math_1_1_spatial_discretization.html", [
@@ -235,6 +254,12 @@ var hierarchy =
       [ "chi_mesh::SurfaceMesherPassthrough", "d3/d2d/classchi__mesh_1_1_surface_mesher_passthrough.html", null ],
       [ "chi_mesh::SurfaceMesherPredefined", "d0/d83/classchi__mesh_1_1_surface_mesher_predefined.html", null ]
     ] ],
+    [ "chi_mesh::sweep_management::SweepBoundary", "d9/d83/classchi__mesh_1_1sweep__management_1_1_sweep_boundary.html", [
+      [ "chi_mesh::sweep_management::BoundaryIncidentHeterogeneous", "d8/da9/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogeneous.html", null ],
+      [ "chi_mesh::sweep_management::BoundaryIsotropicHomogenous", "d0/dbe/classchi__mesh_1_1sweep__management_1_1_boundary_isotropic_homogenous.html", null ],
+      [ "chi_mesh::sweep_management::BoundaryReflecting", "d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html", null ],
+      [ "chi_mesh::sweep_management::BoundaryVaccuum", "d1/de0/classchi__mesh_1_1sweep__management_1_1_boundary_vaccuum.html", null ]
+    ] ],
     [ "chi_mesh::sweep_management::SweepBuffer", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html", null ],
     [ "chi_mesh::sweep_management::SweepChunk", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html", [
       [ "lbs::SweepChunkPWL", "d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html", [
@@ -247,6 +272,7 @@ var hierarchy =
     [ "chi_math::TensorRNX< R, N, NumberFormat >", "d1/dbe/structchi__math_1_1_tensor_r_n_x.html", null ],
     [ "chi_math::TensorRNX< 2, N, NumberFormat >", "d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4.html", null ],
     [ "chi_math::LinearSolver< MatType, VecType, SolverType >::ToleranceOptions", "db/d8f/structchi__math_1_1_linear_solver_1_1_tolerance_options.html", null ],
+    [ "chi_math::NonLinearSolver< MatType, VecType, SolverType >::ToleranceOptions", "df/dd9/structchi__math_1_1_non_linear_solver_1_1_tolerance_options.html", null ],
     [ "lbs::LBSGroupset::TwoGridAccelerationInfo", "de/d52/structlbs_1_1_l_b_s_groupset_1_1_two_grid_acceleration_info.html", null ],
     [ "lbs::acceleration::TwoGridCollapsedInfo", "db/d99/structlbs_1_1acceleration_1_1_two_grid_collapsed_info.html", null ],
     [ "mg_diffusion::TwoGridCollapsedInfo", "d6/d5b/structmg__diffusion_1_1_two_grid_collapsed_info.html", null ],

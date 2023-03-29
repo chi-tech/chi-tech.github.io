@@ -2,7 +2,8 @@ var classlbs_1_1_a_g_s_linear_solver =
 [
     [ "AGSContextPtr", "d9/df9/classlbs_1_1_a_g_s_linear_solver.html#a21fad537150f74766fd24af35accbcd3", null ],
     [ "AGSLinearSolver", "d9/df9/classlbs_1_1_a_g_s_linear_solver.html#aa0c4a69dfacbfaee8dd97896cada639c", null ],
-    [ "~AGSLinearSolver", "d9/df9/classlbs_1_1_a_g_s_linear_solver.html#aa42eb8a8de6f3070f251715bd6d15ac4", null ],
+    [ "~AGSLinearSolver", "d9/df9/classlbs_1_1_a_g_s_linear_solver.html#adc50ef0728b5614f3210a162c8c4e302", null ],
+    [ "~AGSLinearSolver", "d9/df9/classlbs_1_1_a_g_s_linear_solver.html#a3686e23c9417247a54b59026ef091164", null ],
     [ "GroupSpanFirstID", "d9/df9/classlbs_1_1_a_g_s_linear_solver.html#aa48f3ad78c78f76f3dc00f50b50373c2", null ],
     [ "GroupSpanLastID", "d9/df9/classlbs_1_1_a_g_s_linear_solver.html#a336de7bc701cd574886edfc299a8bcde", null ],
     [ "IsVerbose", "d9/df9/classlbs_1_1_a_g_s_linear_solver.html#a7f40d5ea2c8b8337b6359c1a1c9388ba", null ],

@@ -113,10 +113,10 @@ $(document).ready(function(){initNavTree('dd/d38/lbts__settransientsource_8cc_so
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * */</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#aef85d19ed759380845bd11261edfe29f">   20</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#aef85d19ed759380845bd11261edfe29f">lbs::DiscOrdTransientSolver::</a></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><a class="code hl_function" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#aef85d19ed759380845bd11261edfe29f">  SetTransientSource</a>(<a class="code hl_class" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a>&amp; groupset,</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                     std::vector&lt;double&gt;&amp; destination_q,</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                     <span class="keyword">const</span> std::vector&lt;double&gt;&amp; phi,</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                     <a class="code hl_enumeration" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> source_flags)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><a class="code hl_function" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#aef85d19ed759380845bd11261edfe29f">SetTransientSource</a>(<a class="code hl_class" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a>&amp; groupset,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                   std::vector&lt;double&gt;&amp; destination_q,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                   <span class="keyword">const</span> std::vector&lt;double&gt;&amp; phi,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                   <a class="code hl_enumeration" href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">SourceFlags</a> source_flags)</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a990ef1e1564fe1baa8f43591308720a5">LogEvent</a>(<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a95612dc8cee34dd9cb917691efc43739">source_event_tag_</a>, <a class="code hl_enumvalue" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a095bd445e91d775e42bbffee8d8560e7aaa3cba5f6cd9cd162c2d35af6187d802">chi_objects::ChiLog::EventType::EVENT_BEGIN</a>);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
@@ -152,163 +152,164 @@ $(document).ready(function(){initNavTree('dd/d38/lbts__settransientsource_8cc_so
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">// Apply all nodal sources</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;local_cells)</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; fe_values = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a20c78eb51d060d9b90af8f240004995d">unit_cell_matrices_</a>[cell.local_id_];</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">auto</span>&amp; transport_view = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a178d6fd32bbeb3b8f0e5e5157d88e9e3">cell_transport_views_</a>[cell.local_id_];</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> cell_volume = transport_view.Volume();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">//==================== Obtain xs</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">auto</span> xs = transport_view.XS();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">auto</span> P0_src = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#aea7f5236d2ea3324364a509353810a2b">matid_to_src_map_</a>[cell.material_id_];</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; S = xs.transfer_matrices_;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">//==================== Obtain src</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">double</span>* src = default_zero_src.data();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">if</span> (P0_src and apply_fixed_src)</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      src = P0_src-&gt;source_value_g_.data();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">//======================================== Loop over nodes</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes = transport_view.NumNodes();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="comment">//======================================== Loop over moments</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; static_cast&lt;int&gt;(<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#afca05dead66c2f93ce78159ad0d92d11">num_moments_</a>); ++m)</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ell = m_to_ell_em_map[m].ell;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordtype">size_t</span> uk_map = transport_view.MapDOF(i, m, 0); <span class="comment">//unknown map</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">auto</span>&amp; transport_view = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a178d6fd32bbeb3b8f0e5e5157d88e9e3">cell_transport_views_</a>[cell.local_id_];</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> cell_volume = transport_view.Volume();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">//==================== Obtain xs</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; xs = transport_view.XS();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">auto</span> P0_src = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a94b1036c3b99cc560b0b9db1d3c08194">matid_to_src_map_</a>[cell.material_id_];</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; S = xs.TransferMatrices();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; F = xs.ProductionMatrix();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; precursors = xs.Precursors();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; nu_delayed_sigma_f = xs.NuDelayedSigmaF();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">//==================== Obtain src</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">double</span>* src = default_zero_src.data();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">if</span> (P0_src and apply_fixed_src)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      src = P0_src-&gt;source_value_g_.data();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">//======================================== Loop over nodes</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes = transport_view.NumNodes();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="comment">//======================================== Loop over moments</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; static_cast&lt;int&gt;(<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#afca05dead66c2f93ce78159ad0d92d11">num_moments_</a>); ++m)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ell = m_to_ell_em_map[m].ell;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="comment">//=================================== Loop over groupset groups</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g = gs_i; g &lt;= gs_f; ++g)</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        {</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>          <span class="keywordtype">double</span> rhs = 0.0;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>          <span class="comment">//============================== Apply fixed sources</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>          <span class="keywordflow">if</span> (not <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#a18b0a5d5b18946c42cce655a453fdab8">use_src_moments</a>) <span class="comment">//using regular material src</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            rhs += (apply_fixed_src and ell == 0)? src[g] : 0.0;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (apply_fixed_src)  <span class="comment">//using ext_src_moments</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>           rhs += <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a85c6a3b80841d2a6ece4e814d9d523cd">ext_src_moments_local_</a>[uk_map + g];</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>          <span class="comment">//============================== Apply scattering sources</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> moment_avail = (ell &lt; S.size());</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>          <span class="comment">//==================== Across groupset</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>          <span class="keywordflow">if</span> (moment_avail and apply_ags_scatter_src)</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [_, gp, sigma_sm] : S[ell].Row(g))</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>              <span class="keywordflow">if</span> (gp &lt; gs_i or gp &gt; gs_f)</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                rhs += sigma_sm * phi[uk_map + gp];</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>          <span class="comment">//==================== Within groupset</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>          <span class="keywordflow">if</span> (moment_avail and apply_wgs_scatter_src)</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [_, gp, sigma_sm] : S[ell].Row(g))</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>              <span class="keywordflow">if</span> (gp &gt;= gs_i and gp &lt;= gs_f)</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                rhs += sigma_sm * phi[uk_map + gp];</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>          <span class="comment">//============================== Apply fission sources</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> fission_avail = xs.is_fissionable_ and ell == 0;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>          <span class="comment">//==================== Across groupset</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>          <span class="keywordflow">if</span> (fission_avail and apply_ags_fission_src)</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>          {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; prod = xs.production_matrix_[g];</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> gp = first_grp; gp &lt;= last_grp; ++gp)</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>              <span class="keywordflow">if</span> (gp &lt; gs_i or gp &gt; gs_f)</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>              {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                rhs += prod[gp] * phi[uk_map + gp];</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">use_precursors</a>)</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; precursor : xs.precursors_)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                  {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    <span class="keyword">const</span> <span class="keywordtype">double</span> coeff =</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                        precursor.emission_spectrum[g] *</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                        precursor.decay_constant /</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                        (1.0 + eff_dt * precursor.decay_constant);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    rhs += coeff * eff_dt *</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                           precursor.fractional_yield *</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                           xs.nu_delayed_sigma_f_[gp] *</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                           phi[uk_map + gp] /</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                           cell_volume;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                  }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>              }</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>          }</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>          <span class="comment">//==================== Within groupset</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>          <span class="keywordflow">if</span> (fission_avail and apply_wgs_fission_src)</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>          {</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; prod = xs.production_matrix_[g];</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> gp = gs_i; gp &lt;= gs_f; ++gp)</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            {</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>              rhs += prod[gp] * phi[uk_map + gp];</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>              <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">use_precursors</a>)</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; precursor : xs.precursors_)</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                {</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                  <span class="keyword">const</span> <span class="keywordtype">double</span> coeff =</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                      precursor.emission_spectrum[g] *</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                      precursor.decay_constant /</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                      (1.0 + eff_dt * precursor.decay_constant);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                  rhs += coeff * eff_dt *</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                         precursor.fractional_yield *</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                         xs.nu_delayed_sigma_f_[gp] *</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                         phi[uk_map + gp] /</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                         cell_volume;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                }</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>          }</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>          <span class="comment">//============================== Apply previous precursors</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>          <span class="keywordflow">if</span> (fission_avail and apply_fixed_src and <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">use_precursors</a>)</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>          {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; J = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ae9b4eea6beb5f7f7487b1cc9fbdf004c">max_precursors_per_material_</a>;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> dof_map = cell.local_id_ * J;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; xs.num_precursors_; ++j)</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            {</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>              <span class="keyword">const</span> <span class="keyword">auto</span>&amp; precursor = xs.precursors_[j];</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>              <span class="keyword">const</span> <span class="keywordtype">double</span> coeff =</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                  precursor.emission_spectrum[g] *</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                  precursor.decay_constant /</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                  (1.0 + eff_dt * precursor.decay_constant);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>              rhs += coeff * <a class="code hl_variable" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a226925255de5cfe75ac2722d820c417e">precursor_prev_local_</a>[dof_map + j];</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            }</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>          }</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>          <span class="comment">//============================== Add to destination vector</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>          destination_q[uk_map + g] += rhs;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        }<span class="comment">//for g</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>      }<span class="comment">//for m</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    }<span class="comment">//for dof i</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  }<span class="comment">//for cell</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="comment">//================================================== Apply point sources</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keywordflow">if</span> (not <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#a18b0a5d5b18946c42cce655a453fdab8">use_src_moments</a> and apply_fixed_src)</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; point_source : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a0f2f89fa0528c80135bcdd6bf47f3551">point_sources_</a>)</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    {</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; info_list = point_source.ContainingCellsInfo();</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; info : info_list)</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      {</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keyword">auto</span>&amp; transport_view = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a178d6fd32bbeb3b8f0e5e5157d88e9e3">cell_transport_views_</a>[info.cell_local_id];</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; strength = point_source.Strength();</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; node_weights = info.node_weights;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> vol_w = info.volume_weight;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes = transport_view.NumNodes();</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        {</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>          <span class="keyword">const</span> <span class="keywordtype">size_t</span> uk_map = transport_view.MapDOF(i, <span class="comment">/*moment=*/</span>0, <span class="comment">/*grp=*/</span>0);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>          <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g = gs_i; g &lt;= gs_f; ++g)</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            destination_q[uk_map + g] += strength[g] * node_weights[i] * vol_w;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        }<span class="comment">//for node i</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      }<span class="comment">//for cell</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }<span class="comment">//for point source</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a990ef1e1564fe1baa8f43591308720a5">LogEvent</a>(<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a95612dc8cee34dd9cb917691efc43739">source_event_tag_</a>, <a class="code hl_enumvalue" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a095bd445e91d775e42bbffee8d8560e7af2ba99e542039eba504f4cd3beec38b0">chi_objects::ChiLog::EventType::EVENT_END</a>);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">size_t</span> uk_map = transport_view.MapDOF(i, m, 0); <span class="comment">//unknown map</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="comment">//=================================== Loop over groupset groups</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g = gs_i; g &lt;= gs_f; ++g)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>          <span class="keywordtype">double</span> rhs = 0.0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>          <span class="comment">//============================== Apply fixed sources</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>          <span class="keywordflow">if</span> (not <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#a18b0a5d5b18946c42cce655a453fdab8">use_src_moments</a>) <span class="comment">//using regular material src</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            rhs += (apply_fixed_src and ell == 0)? src[g] : 0.0;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (apply_fixed_src)  <span class="comment">//using ext_src_moments</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>           rhs += <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a85c6a3b80841d2a6ece4e814d9d523cd">ext_src_moments_local_</a>[uk_map + g];</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>          <span class="comment">//============================== Apply scattering sources</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> moment_avail = ell &lt;= xs.ScatteringOrder();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>          <span class="comment">//==================== Across groupset</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>          <span class="keywordflow">if</span> (moment_avail and apply_ags_scatter_src)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [_, gp, sigma_sm] : S[ell].Row(g))</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>              <span class="keywordflow">if</span> (gp &lt; gs_i or gp &gt; gs_f)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                rhs += sigma_sm * phi[uk_map + gp];</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>          <span class="comment">//==================== Within groupset</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>          <span class="keywordflow">if</span> (moment_avail and apply_wgs_scatter_src)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [_, gp, sigma_sm] : S[ell].Row(g))</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>              <span class="keywordflow">if</span> (gp &gt;= gs_i and gp &lt;= gs_f)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                rhs += sigma_sm * phi[uk_map + gp];</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>          <span class="comment">//============================== Apply fission sources</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>          <span class="keyword">const</span> <span class="keywordtype">bool</span> fission_avail = xs.IsFissionable() and ell == 0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>          <span class="comment">//==================== Across groupset</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>          <span class="keywordflow">if</span> (fission_avail and apply_ags_fission_src)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>          {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; prod = F[g];</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> gp = first_grp; gp &lt;= last_grp; ++gp)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>              <span class="keywordflow">if</span> (gp &lt; gs_i or gp &gt; gs_f)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>              {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                rhs += prod[gp] * phi[uk_map + gp];</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">use_precursors</a>)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; precursor : precursors)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                  {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <span class="keyword">const</span> <span class="keywordtype">double</span> coeff =</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                        precursor.emission_spectrum[g] *</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                        precursor.decay_constant /</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                        (1.0 + eff_dt * precursor.decay_constant);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                    rhs += coeff * eff_dt *</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                           precursor.fractional_yield *</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                           nu_delayed_sigma_f[gp] *</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                           phi[uk_map + gp] /</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                           cell_volume;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                  }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>              }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>          }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>          <span class="comment">//==================== Within groupset</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>          <span class="keywordflow">if</span> (fission_avail and apply_wgs_fission_src)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>          {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; prod = F[g];</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> gp = gs_i; gp &lt;= gs_f; ++gp)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>              rhs += prod[gp] * phi[uk_map + gp];</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>              <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">use_precursors</a>)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; precursor : precursors)</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                  <span class="keyword">const</span> <span class="keywordtype">double</span> coeff =</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                      precursor.emission_spectrum[g] *</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                      precursor.decay_constant /</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                      (1.0 + eff_dt * precursor.decay_constant);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                  rhs += coeff * eff_dt *</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                         precursor.fractional_yield *</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                         nu_delayed_sigma_f[gp] *</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                         phi[uk_map + gp] /</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                         cell_volume;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>          }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>          <span class="comment">//============================== Apply previous precursors</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>          <span class="keywordflow">if</span> (fission_avail and apply_fixed_src and <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">use_precursors</a>)</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>          {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; J = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ae9b4eea6beb5f7f7487b1cc9fbdf004c">max_precursors_per_material_</a>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> dof_map = cell.local_id_ * J;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; xs.NumPrecursors(); ++j)</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>              <span class="keyword">const</span> <span class="keyword">auto</span>&amp; precursor = precursors[j];</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>              <span class="keyword">const</span> <span class="keywordtype">double</span> coeff =</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                  precursor.emission_spectrum[g] *</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                  precursor.decay_constant /</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                  (1.0 + eff_dt * precursor.decay_constant);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>              rhs += coeff * <a class="code hl_variable" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a226925255de5cfe75ac2722d820c417e">precursor_prev_local_</a>[dof_map + j];</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>          }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>          <span class="comment">//============================== Add to destination vector</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>          destination_q[uk_map + g] += rhs;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        }<span class="comment">//for g</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>      }<span class="comment">//for m</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    }<span class="comment">//for dof i</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  }<span class="comment">//for cell</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="comment">//================================================== Apply point sources</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="keywordflow">if</span> (not <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#a18b0a5d5b18946c42cce655a453fdab8">use_src_moments</a> and apply_fixed_src)</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; point_source : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a0f2f89fa0528c80135bcdd6bf47f3551">point_sources_</a>)</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; info_list = point_source.ContainingCellsInfo();</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; info : info_list)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keyword">auto</span>&amp; transport_view = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a178d6fd32bbeb3b8f0e5e5157d88e9e3">cell_transport_views_</a>[info.cell_local_id];</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; strength = point_source.Strength();</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; node_weights = info.node_weights;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> vol_w = info.volume_weight;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes = transport_view.NumNodes();</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_nodes; ++i)</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>          <span class="keyword">const</span> <span class="keywordtype">size_t</span> uk_map = transport_view.MapDOF(i, <span class="comment">/*moment=*/</span>0, <span class="comment">/*grp=*/</span>0);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>          <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g = gs_i; g &lt;= gs_f; ++g)</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            destination_q[uk_map + g] += strength[g] * node_weights[i] * vol_w;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        }<span class="comment">//for node i</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      }<span class="comment">//for cell</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }<span class="comment">//for point source</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a990ef1e1564fe1baa8f43591308720a5">LogEvent</a>(<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a95612dc8cee34dd9cb917691efc43739">source_event_tag_</a>, <a class="code hl_enumvalue" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a095bd445e91d775e42bbffee8d8560e7af2ba99e542039eba504f4cd3beec38b0">chi_objects::ChiLog::EventType::EVENT_END</a>);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>}</div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__timer_8h_html"><div class="ttname"><a href="../../da/de5/chi__timer_8h.html">chi_timer.h</a></div></div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a095bd445e91d775e42bbffee8d8560e7aaa3cba5f6cd9cd162c2d35af6187d802"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a095bd445e91d775e42bbffee8d8560e7aaa3cba5f6cd9cd162c2d35af6187d802">chi_objects::ChiLog::EventType::EVENT_BEGIN</a></div><div class="ttdeci">@ EVENT_BEGIN</div><div class="ttdoc">Signals the begin of an event.</div></div>
@@ -325,26 +326,25 @@ $(document).ready(function(){initNavTree('dd/d38/lbts__settransientsource_8cc_so
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a0f2f89fa0528c80135bcdd6bf47f3551"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a0f2f89fa0528c80135bcdd6bf47f3551">lbs::LBSSolver::point_sources_</a></div><div class="ttdeci">std::vector&lt; PointSource &gt; point_sources_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00060">lbs_solver.h:60</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a1144b5d5d598050cb3687894a1b84acc"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">lbs::LBSSolver::grid_ptr_</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr grid_ptr_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00066">lbs_solver.h:66</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a178d6fd32bbeb3b8f0e5e5157d88e9e3"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a178d6fd32bbeb3b8f0e5e5157d88e9e3">lbs::LBSSolver::cell_transport_views_</a></div><div class="ttdeci">std::vector&lt; lbs::CellLBSView &gt; cell_transport_views_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00074">lbs_solver.h:74</a></div></div>
-<div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a20c78eb51d060d9b90af8f240004995d"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a20c78eb51d060d9b90af8f240004995d">lbs::LBSSolver::unit_cell_matrices_</a></div><div class="ttdeci">std::vector&lt; UnitCellMatrices &gt; unit_cell_matrices_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00072">lbs_solver.h:72</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a37e82e1d480f316be1ffdf3200b95b5d"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a37e82e1d480f316be1ffdf3200b95b5d">lbs::LBSSolver::groups_</a></div><div class="ttdeci">std::vector&lt; LBSGroup &gt; groups_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00058">lbs_solver.h:58</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a762566feeac2f4dd1d95a5b3fed63390"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">lbs::LBSSolver::options_</a></div><div class="ttdeci">lbs::Options options_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00052">lbs_solver.h:52</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a85c6a3b80841d2a6ece4e814d9d523cd"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a85c6a3b80841d2a6ece4e814d9d523cd">lbs::LBSSolver::ext_src_moments_local_</a></div><div class="ttdeci">std::vector&lt; double &gt; ext_src_moments_local_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00085">lbs_solver.h:85</a></div></div>
+<div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a94b1036c3b99cc560b0b9db1d3c08194"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a94b1036c3b99cc560b0b9db1d3c08194">lbs::LBSSolver::matid_to_src_map_</a></div><div class="ttdeci">std::map&lt; int, IsotropicSrcPtr &gt; matid_to_src_map_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00063">lbs_solver.h:63</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a95612dc8cee34dd9cb917691efc43739"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a95612dc8cee34dd9cb917691efc43739">lbs::LBSSolver::source_event_tag_</a></div><div class="ttdeci">size_t source_event_tag_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00049">lbs_solver.h:49</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_ae9b4eea6beb5f7f7487b1cc9fbdf004c"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ae9b4eea6beb5f7f7487b1cc9fbdf004c">lbs::LBSSolver::max_precursors_per_material_</a></div><div class="ttdeci">size_t max_precursors_per_material_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00056">lbs_solver.h:56</a></div></div>
-<div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_aea7f5236d2ea3324364a509353810a2b"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#aea7f5236d2ea3324364a509353810a2b">lbs::LBSSolver::matid_to_src_map_</a></div><div class="ttdeci">std::map&lt; int, IsotropicSrcPtr &gt; matid_to_src_map_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00063">lbs_solver.h:63</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_afca05dead66c2f93ce78159ad0d92d11"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#afca05dead66c2f93ce78159ad0d92d11">lbs::LBSSolver::num_moments_</a></div><div class="ttdeci">size_t num_moments_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00053">lbs_solver.h:53</a></div></div>
 <div class="ttc" id="albs__groupset_8h_html"><div class="ttname"><a href="../../d9/dc3/lbs__groupset_8h.html">lbs_groupset.h</a></div></div>
 <div class="ttc" id="albts__transient__solver_8h_html"><div class="ttname"><a href="../../d8/d89/lbts__transient__solver_8h.html">lbts_transient_solver.h</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127a3465588bedb02dfcefcc726625308fb3"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a3465588bedb02dfcefcc726625308fb3">chi_math::SteppingMethod::BACKWARD_EULER</a></div><div class="ttdeci">@ BACKWARD_EULER</div></div>
 <div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127ac8a0bea4cc96e12ed1fedd9695c99b81"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ac8a0bea4cc96e12ed1fedd9695c99b81">chi_math::SteppingMethod::CRANK_NICHOLSON</a></div><div class="ttdeci">@ CRANK_NICHOLSON</div></div>
-<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">lbs::SourceFlags</a></div><div class="ttdeci">SourceFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00058">lbs_structs.h:59</a></div></div>
-<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6a2b270786e3408c459026e45f5fe50f0b"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a2b270786e3408c459026e45f5fe50f0b">lbs::APPLY_AGS_FISSION_SOURCES</a></div><div class="ttdeci">@ APPLY_AGS_FISSION_SOURCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00065">lbs_structs.h:65</a></div></div>
-<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6a5570f0f65ee2779f599a563a6ecba204"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a5570f0f65ee2779f599a563a6ecba204">lbs::APPLY_WGS_FISSION_SOURCES</a></div><div class="ttdeci">@ APPLY_WGS_FISSION_SOURCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00064">lbs_structs.h:64</a></div></div>
-<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6a65857a6d05b03635d7c5bcfbe082962e"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a65857a6d05b03635d7c5bcfbe082962e">lbs::APPLY_FIXED_SOURCES</a></div><div class="ttdeci">@ APPLY_FIXED_SOURCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00061">lbs_structs.h:61</a></div></div>
-<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6a857871f3577df7c803926e1b050e4243"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a857871f3577df7c803926e1b050e4243">lbs::APPLY_WGS_SCATTER_SOURCES</a></div><div class="ttdeci">@ APPLY_WGS_SCATTER_SOURCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00062">lbs_structs.h:62</a></div></div>
-<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6afe083af20720153ae9553a01473586b9"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6afe083af20720153ae9553a01473586b9">lbs::APPLY_AGS_SCATTER_SOURCES</a></div><div class="ttdeci">@ APPLY_AGS_SCATTER_SOURCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00063">lbs_structs.h:63</a></div></div>
-<div class="ttc" id="astructlbs_1_1_options_html_a18b0a5d5b18946c42cce655a453fdab8"><div class="ttname"><a href="../../dc/dcd/structlbs_1_1_options.html#a18b0a5d5b18946c42cce655a453fdab8">lbs::Options::use_src_moments</a></div><div class="ttdeci">bool use_src_moments</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00111">lbs_structs.h:111</a></div></div>
-<div class="ttc" id="astructlbs_1_1_options_html_ac31e06eb959155210668a82b4def6abc"><div class="ttname"><a href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">lbs::Options::use_precursors</a></div><div class="ttdeci">bool use_precursors</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00110">lbs_structs.h:110</a></div></div>
+<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6">lbs::SourceFlags</a></div><div class="ttdeci">SourceFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00080">lbs_structs.h:81</a></div></div>
+<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6a2b270786e3408c459026e45f5fe50f0b"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a2b270786e3408c459026e45f5fe50f0b">lbs::APPLY_AGS_FISSION_SOURCES</a></div><div class="ttdeci">@ APPLY_AGS_FISSION_SOURCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00087">lbs_structs.h:87</a></div></div>
+<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6a5570f0f65ee2779f599a563a6ecba204"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a5570f0f65ee2779f599a563a6ecba204">lbs::APPLY_WGS_FISSION_SOURCES</a></div><div class="ttdeci">@ APPLY_WGS_FISSION_SOURCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00086">lbs_structs.h:86</a></div></div>
+<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6a65857a6d05b03635d7c5bcfbe082962e"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a65857a6d05b03635d7c5bcfbe082962e">lbs::APPLY_FIXED_SOURCES</a></div><div class="ttdeci">@ APPLY_FIXED_SOURCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00083">lbs_structs.h:83</a></div></div>
+<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6a857871f3577df7c803926e1b050e4243"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a857871f3577df7c803926e1b050e4243">lbs::APPLY_WGS_SCATTER_SOURCES</a></div><div class="ttdeci">@ APPLY_WGS_SCATTER_SOURCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00084">lbs_structs.h:84</a></div></div>
+<div class="ttc" id="anamespacelbs_html_a82d24dab89dfe291850d6d18cf1338c6afe083af20720153ae9553a01473586b9"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6afe083af20720153ae9553a01473586b9">lbs::APPLY_AGS_SCATTER_SOURCES</a></div><div class="ttdeci">@ APPLY_AGS_SCATTER_SOURCES</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00085">lbs_structs.h:85</a></div></div>
+<div class="ttc" id="astructlbs_1_1_options_html_a18b0a5d5b18946c42cce655a453fdab8"><div class="ttname"><a href="../../dc/dcd/structlbs_1_1_options.html#a18b0a5d5b18946c42cce655a453fdab8">lbs::Options::use_src_moments</a></div><div class="ttdeci">bool use_src_moments</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00133">lbs_structs.h:133</a></div></div>
+<div class="ttc" id="astructlbs_1_1_options_html_ac31e06eb959155210668a82b4def6abc"><div class="ttname"><a href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">lbs::Options::use_precursors</a></div><div class="ttdeci">bool use_precursors</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00132">lbs_structs.h:132</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

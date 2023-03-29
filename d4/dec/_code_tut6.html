@@ -233,7 +233,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">  <span class="keywordflow">throw</span> std::logic_error(fname + <span class="stringliteral">&quot;Error with the dimensionality &quot;</span></div>
 <div class="line">                                 <span class="stringliteral">&quot;of the mesh.&quot;</span>);</div>
 <div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Quadrature created.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00025">chi_log.cc:25</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00027">chi_log.cc:27</a></div></div>
 <div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
 </div><!-- fragment --><p >Depending on the dimensionality of the grid we instate a different quadrature set. For example, in one dimension we instantiate the Gauss-Legendre quadrature encapsulated in a product quadrature, <code><a class="el" href="../../d5/d32/classchi__math_1_1_angular_quadrature_prod_g_l.html">chi_math::AngularQuadratureProdGL</a></code>. </p><div class="fragment"><div class="line">quadrature = std::make_shared&lt;chi_math::AngularQuadratureProdGL&gt;(8);</div>
 </div><!-- fragment --><p> where the parameter is the number of polar angles per hemisphere.</p>
@@ -277,7 +277,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;End ukmanagers.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//============================================= Make XSs</span></div>
-<div class="line"><a class="code hl_class" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a> xs;</div>
+<div class="line">chi_physics::TransportCrossSections xs;</div>
 <div class="line">xs.MakeFromCHIxsFile(<span class="stringliteral">&quot;tests/xs_graphite_pure.cxs&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//============================================= Initializes vectors</span></div>
@@ -309,9 +309,8 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">}<span class="comment">//for cell</span></div>
 <div class="ttc" id="aclasschi__math_1_1_unknown_html"><div class="ttname"><a href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00031">unknown_manager.h:32</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_unknown_manager_html"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00107">unknown_manager.h:108</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_transport_cross_sections_html"><div class="ttname"><a href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dda/material__property__transportxsections_8h_source.html#l00017">material_property_transportxsections.h:18</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a></div><div class="ttdeci">@ VECTOR_N</div></div>
-</div><!-- fragment --><p >First is the unknown managers for \( \phi \) and \( \psi \). Then transport cross sections via the class <code><a class="el" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a></code>.</p>
+</div><!-- fragment --><p >First is the unknown managers for \( \phi \) and \( \psi \). Then transport cross sections via the class <code>chi_physics::TransportCrossSections</code>.</p>
 <p >We then define the unknown vectors. </p><div class="fragment"><div class="line"><span class="comment">//============================================= Initializes vectors</span></div>
 <div class="line">std::vector&lt;double&gt; phi_old(num_local_phi_dofs,0.0);</div>
 <div class="line">std::vector&lt;double&gt; psi(num_local_psi_dofs, 0.0);</div>
@@ -357,7 +356,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">  (<span class="keyword">const</span> std::array&lt;int64_t,3&gt;&amp; ijk,</div>
 <div class="line">   <span class="keyword">const</span> Vec3&amp; omega,</div>
 <div class="line">   <span class="keyword">const</span> <span class="keywordtype">size_t</span> d,</div>
-<div class="line">   <span class="keyword">const</span> <a class="code hl_class" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a>&amp; cell_xs)</div>
+<div class="line">   <span class="keyword">const</span> chi_physics::TransportCrossSections&amp; cell_xs)</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>   cell_global_id = ijk_mapping.MapNDtoLin(ijk[1],ijk[0],ijk[2]);</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp;  cell           = grid.cells[cell_global_id];</div>
@@ -496,7 +495,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">psi_ds_z(i,j,k,g) = 2.0*psi_ijk - psi_us_z[g];</div>
 </div><!-- fragment --><h1><a class="anchor" id="CodeTut6Sec7"></a>
 7 Defining a sweep over all directions</h1>
-<p >Next we define a routine that will sweep through cells with the correct upwinding structure for all the directions in the quadrature. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> Sweep = [&amp;num_dirs,&amp;quadrature,Nx,Ny,Nz,&amp;<a class="code hl_typedef" href="../../d2/d0f/_b___d_o___steady_state_2lbs__01__main__initialize_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a>,&amp;xs]()</div>
+<p >Next we define a routine that will sweep through cells with the correct upwinding structure for all the directions in the quadrature. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> Sweep = [&amp;num_dirs,&amp;quadrature,Nx,Ny,Nz,&amp;<a class="code hl_typedef" href="../../d9/df7/lbs_d_o__01__main__initialize_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a>,&amp;xs]()</div>
 <div class="line">{</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d=0; d&lt;num_dirs; ++d)</div>
 <div class="line">  {</div>
@@ -514,10 +513,10 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: iorder)</div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keyword">auto</span> j: jorder)</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> k: korder)</div>
-<div class="line">          <a class="code hl_typedef" href="../../d2/d0f/_b___d_o___steady_state_2lbs__01__main__initialize_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a>({i,j,k}, omega, d, xs);</div>
+<div class="line">          <a class="code hl_typedef" href="../../d9/df7/lbs_d_o__01__main__initialize_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a>({i,j,k}, omega, d, xs);</div>
 <div class="line">  }<span class="comment">//for d</span></div>
 <div class="line">};</div>
-<div class="ttc" id="a_b___d_o___steady_state_2lbs__01__main__initialize_8cc_html_adfad77f405a91e0c24b4bed78523652d"><div class="ttname"><a href="../../d2/d0f/_b___d_o___steady_state_2lbs__01__main__initialize_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a></div><div class="ttdeci">chi_mesh::sweep_management::SweepChunk SweepChunk</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d0f/_b___d_o___steady_state_2lbs__01__main__initialize_8cc_source.html#l00010">lbs_01_main_initialize.cc:10</a></div></div>
+<div class="ttc" id="albs_d_o__01__main__initialize_8cc_html_adfad77f405a91e0c24b4bed78523652d"><div class="ttname"><a href="../../d9/df7/lbs_d_o__01__main__initialize_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a></div><div class="ttdeci">chi_mesh::sweep_management::SweepChunk SweepChunk</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df7/lbs_d_o__01__main__initialize_8cc_source.html#l00011">lbsDO_01_main_initialize.cc:11</a></div></div>
 </div><!-- fragment --><p> This kind of code, for the sweep ordering, will only work for orthogonal meshes hence why this tutorial is based on orthogonal meshes.</p>
 <h1><a class="anchor" id="CodeTut6Sec8"></a>
 8 The Classic Richardson iterative scheme</h1>
@@ -555,7 +554,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a>&amp; phi_uk_man,</div>
 <div class="line">    <span class="keyword">const</span> std::vector&lt;double&gt;&amp; q_source,</div>
 <div class="line">    <span class="keyword">const</span> std::vector&lt;double&gt;&amp; phi_old,</div>
-<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a>&amp; xs,</div>
+<div class="line">    <span class="keyword">const</span> chi_physics::TransportCrossSections&amp; xs,</div>
 <div class="line">    <span class="keyword">const</span> std::vector&lt;YlmIndices&gt;&amp; m_ell_em_map)</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_local_phi_dofs = sdm.<a class="code hl_function" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#a2ebdc6713acf43edb3ae74ac4146e4c3">GetNumLocalDOFs</a>(phi_uk_man);</div>
@@ -704,7 +703,7 @@ The complete program</h1>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d1c/chi__math__range_8h.html">ChiMath/chi_math_range.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;ChiPhysics/FieldFunction/fieldfunction2.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../db/dda/material__property__transportxsections_8h.html">ChiPhysics/PhysicsMaterial/transportxsections/material_property_transportxsections.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;ChiPhysics/PhysicsMaterial/transportxsections/material_property_transportxsections.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../de/d01/ndarray_8h.html">ChiDataTypes/ndarray.h</a>&quot;</span></div>
 <div class="line"> </div>
@@ -804,7 +803,7 @@ The complete program</h1>
 <div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;End ukmanagers.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Make XSs</span></div>
-<div class="line">  <a class="code hl_class" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a> xs;</div>
+<div class="line">  chi_physics::TransportCrossSections xs;</div>
 <div class="line">  xs.MakeFromCHIxsFile(<span class="stringliteral">&quot;tests/xs_graphite_pure.cxs&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Initializes vectors</span></div>
@@ -852,7 +851,7 @@ The complete program</h1>
 <div class="line">    (<span class="keyword">const</span> std::array&lt;int64_t,3&gt;&amp; ijk,</div>
 <div class="line">     <span class="keyword">const</span> Vec3&amp; omega,</div>
 <div class="line">     <span class="keyword">const</span> <span class="keywordtype">size_t</span> d,</div>
-<div class="line">     <span class="keyword">const</span> <a class="code hl_class" href="../../d3/dff/classchi__physics_1_1_transport_cross_sections.html">chi_physics::TransportCrossSections</a>&amp; cell_xs)</div>
+<div class="line">     <span class="keyword">const</span> chi_physics::TransportCrossSections&amp; cell_xs)</div>
 <div class="line">  {</div>
 <div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>   cell_global_id = ijk_mapping.MapNDtoLin(ijk[1],ijk[0],ijk[2]);</div>
 <div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp;  cell           = grid.cells[cell_global_id];</div>
@@ -921,7 +920,7 @@ The complete program</h1>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Define sweep for all dirs</span></div>
-<div class="line">  <span class="keyword">auto</span> Sweep = [&amp;num_dirs,&amp;quadrature,Nx,Ny,Nz,&amp;<a class="code hl_typedef" href="../../d2/d0f/_b___d_o___steady_state_2lbs__01__main__initialize_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a>,&amp;xs]()</div>
+<div class="line">  <span class="keyword">auto</span> Sweep = [&amp;num_dirs,&amp;quadrature,Nx,Ny,Nz,&amp;<a class="code hl_typedef" href="../../d9/df7/lbs_d_o__01__main__initialize_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a>,&amp;xs]()</div>
 <div class="line">  {</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> d=0; d&lt;num_dirs; ++d)</div>
 <div class="line">    {</div>
@@ -939,7 +938,7 @@ The complete program</h1>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: iorder)</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j: jorder)</div>
 <div class="line">          <span class="keywordflow">for</span> (<span class="keyword">auto</span> k: korder)</div>
-<div class="line">            <a class="code hl_typedef" href="../../d2/d0f/_b___d_o___steady_state_2lbs__01__main__initialize_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a>({i,j,k}, omega, d, xs);</div>
+<div class="line">            <a class="code hl_typedef" href="../../d9/df7/lbs_d_o__01__main__initialize_8cc.html#adfad77f405a91e0c24b4bed78523652d">SweepChunk</a>({i,j,k}, omega, d, xs);</div>
 <div class="line">    }<span class="comment">//for d</span></div>
 <div class="line">  };</div>
 <div class="line"> </div>
@@ -1012,10 +1011,10 @@ The complete program</h1>
 <div class="ttc" id="aclasschi__math_1_1_spatial_discretization___f_v_html_a5bbe68d748cdc52e05dfcfe37f74d622"><div class="ttname"><a href="../../d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html#a5bbe68d748cdc52e05dfcfe37f74d622">chi_math::SpatialDiscretization_FV::New</a></div><div class="ttdeci">static std::shared_ptr&lt; SpatialDiscretization_FV &gt; New(chi_mesh::MeshContinuumPtr &amp;in_grid, CoordinateSystemType in_cs_type=CoordinateSystemType::CARTESIAN)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d50/fv_8h_source.html#l00030">fv.h:30</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_spatial_discretization_html_a04c0c7022de9c74ac6a807398afec030"><div class="ttname"><a href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#a04c0c7022de9c74ac6a807398afec030">chi_math::SpatialDiscretization::GetNumGlobalDOFs</a></div><div class="ttdeci">virtual size_t GetNumGlobalDOFs(const UnknownManager &amp;unknown_manager) const =0</div></div>
 <div class="ttc" id="aclasschi__math_1_1_spatial_discretization_html_ab44301c258e4b6921f7afad19e355746"><div class="ttname"><a href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#ab44301c258e4b6921f7afad19e355746">chi_math::SpatialDiscretization::UNITARY_UNKNOWN_MANAGER</a></div><div class="ttdeci">const UnknownManager UNITARY_UNKNOWN_MANAGER</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d28/spatial__discretization_8h_source.html#l00026">spatial_discretization.h:26</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a15eed36e4da5d55ac9ad26d6a37a7a72"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a15eed36e4da5d55ac9ad26d6a37a7a72">chi_mesh::MeshContinuum::Attributes</a></div><div class="ttdeci">MeshAttributes Attributes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00129">chi_meshcontinuum.h:129</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a5cb74fab0769b9fda964b5429623d04a"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a5cb74fab0769b9fda964b5429623d04a">chi_mesh::MeshContinuum::GetIJKInfo</a></div><div class="ttdeci">std::array&lt; size_t, 3 &gt; GetIJKInfo() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00392">chi_meshcontinuum_utilities.cc:392</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a66224c8024c8e1e395389dd8ccd547c1"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a66224c8024c8e1e395389dd8ccd547c1">chi_mesh::MeshContinuum::MakeCellOrthoSizes</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Vector3 &gt; MakeCellOrthoSizes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00429">chi_meshcontinuum_utilities.cc:430</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a6ff14aae03e8c78ca276c9f2884bcd98"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a6ff14aae03e8c78ca276c9f2884bcd98">chi_mesh::MeshContinuum::MakeIJKToGlobalIDMapping</a></div><div class="ttdeci">chi_data_types::NDArray&lt; uint64_t &gt; MakeIJKToGlobalIDMapping() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00405">chi_meshcontinuum_utilities.cc:406</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a15eed36e4da5d55ac9ad26d6a37a7a72"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a15eed36e4da5d55ac9ad26d6a37a7a72">chi_mesh::MeshContinuum::Attributes</a></div><div class="ttdeci">MeshAttributes Attributes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00131">chi_meshcontinuum.h:131</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a5cb74fab0769b9fda964b5429623d04a"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a5cb74fab0769b9fda964b5429623d04a">chi_mesh::MeshContinuum::GetIJKInfo</a></div><div class="ttdeci">std::array&lt; size_t, 3 &gt; GetIJKInfo() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00417">chi_meshcontinuum_utilities.cc:417</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a66224c8024c8e1e395389dd8ccd547c1"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a66224c8024c8e1e395389dd8ccd547c1">chi_mesh::MeshContinuum::MakeCellOrthoSizes</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Vector3 &gt; MakeCellOrthoSizes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00454">chi_meshcontinuum_utilities.cc:455</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a6ff14aae03e8c78ca276c9f2884bcd98"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a6ff14aae03e8c78ca276c9f2884bcd98">chi_mesh::MeshContinuum::MakeIJKToGlobalIDMapping</a></div><div class="ttdeci">chi_data_types::NDArray&lt; uint64_t &gt; MakeIJKToGlobalIDMapping() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00430">chi_meshcontinuum_utilities.cc:431</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_aeb466c76d1b4d532fe8bc5fc7765a338"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aeb466c76d1b4d532fe8bc5fc7765a338">chi_mesh::MeshContinuum::GetGlobalNumberOfCells</a></div><div class="ttdeci">size_t GetGlobalNumberOfCells() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00084">chi_meshcontinuum_globalcellhandler.cc:84</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_handler_html_aa87887c1a76634cb07134b5faa1e3587"><div class="ttname"><a href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">chi_mesh::MeshHandler::GetGrid</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr &amp; GetGrid() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/chi__meshhandler_8cc_source.html#l00012">chi_meshhandler.cc:12</a></div></div>
 <div class="ttc" id="aclasschi_html_a2457fed74471fae43ed8d6c5e91378fd"><div class="ttname"><a href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a></div><div class="ttdeci">static chi_objects::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00067">chi_runtime.h:67</a></div></div>
@@ -1023,7 +1022,6 @@ The complete program</h1>
 <div class="ttc" id="aclasschi_html_a88720f743f80818b08e68716233d9051"><div class="ttname"><a href="../../d4/d35/classchi.html#a88720f743f80818b08e68716233d9051">chi::Finalize</a></div><div class="ttdeci">static void Finalize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00179">chi_runtime.cc:179</a></div></div>
 <div class="ttc" id="aclasschi_html_ad2e614f7b9733c863908ce0eeb4480f1"><div class="ttname"><a href="../../d4/d35/classchi.html#ad2e614f7b9733c863908ce0eeb4480f1">chi::RunBatch</a></div><div class="ttdeci">static int RunBatch(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00244">chi_runtime.cc:244</a></div></div>
 <div class="ttc" id="afv_8h_html"><div class="ttname"><a href="../../de/d50/fv_8h.html">fv.h</a></div></div>
-<div class="ttc" id="amaterial__property__transportxsections_8h_html"><div class="ttname"><a href="../../db/dda/material__property__transportxsections_8h.html">material_property_transportxsections.h</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ab6754b3179f7dbf965932210273fead7"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a></div><div class="ttdeci">std::shared_ptr&lt; SpatialDiscretization &gt; SDMPtr</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df1/cfem__diffusion__solver_8h_source.html#l00025">cfem_diffusion_solver.h:24</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_addcd6899961d4c527b02c33708a7941f"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler &amp; GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00013">chi_mesh_meshhandler_utils.cc:13</a></div></div>
 <div class="ttc" id="andarray_8h_html"><div class="ttname"><a href="../../de/d01/ndarray_8h.html">ndarray.h</a></div></div>

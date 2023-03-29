@@ -34,7 +34,6 @@ var classchi__mesh_1_1_unpartitioned_mesh =
     [ "ReadFromVTU", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a59f08ff23fd30d5dda99a94f5a627972", null ],
     [ "ReadFromWavefrontOBJ", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ad68fad226faed25b155e0569b1a5f713", null ],
     [ "SetBoundaryIDsFromBlocks", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#abec294e067fb5b7e6037296e43111495", null ],
-    [ "SetMaterialIDsFromBlocks", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a7357ffadbb825b050bf5bfff24c9fc5c", null ],
     [ "SetMaterialIDsFromList", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a94bd2eddc79e716285e624ce4b9a5cb1", null ],
     [ "attributes_", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ad6e103adfb03e2ed794bdfdf0ba0fb67", null ],
     [ "bound_box_", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#af8b7718e36c756293cea53860af2ff95", null ],

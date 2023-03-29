@@ -1,6 +1,6 @@
 var dir_3d4220d5f1121d971de3477d0aefc744 =
 [
-    [ "transportxsections", "dir_48100c8a323c42359c3b1a7a19788c94.html", "dir_48100c8a323c42359c3b1a7a19788c94" ],
+    [ "MultiGroupXS", "dir_eebd45f309da684bbc6831e929a4b5d3.html", "dir_eebd45f309da684bbc6831e929a4b5d3" ],
     [ "chi_physicsmaterial.h", "d4/d82/chi__physicsmaterial_8h.html", [
       [ "chi_physics::Material", "d8/da4/classchi__physics_1_1_material.html", "d8/da4/classchi__physics_1_1_material" ]
     ] ],

@@ -26,7 +26,7 @@ var classmg__diffusion_1_1_solver =
     [ "last_fast_group_", "d4/d4c/classmg__diffusion_1_1_solver.html#ae57f188c7d11c59b0a304e317d9a271a", null ],
     [ "map_mat_id_2_tginfo", "d4/d4c/classmg__diffusion_1_1_solver.html#a27dce509d75af649862d002c68809863", null ],
     [ "matid_to_src_map", "d4/d4c/classmg__diffusion_1_1_solver.html#adff479a007f15b698a86a40d6cdf32b1", null ],
-    [ "matid_to_xs_map", "d4/d4c/classmg__diffusion_1_1_solver.html#a0a424e414e735b7ccd87d27c58d9fcf6", null ],
+    [ "matid_to_xs_map", "d4/d4c/classmg__diffusion_1_1_solver.html#a7e2ae04c1ccdccb016ae9604c42cac3e", null ],
     [ "my_app_context_", "d4/d4c/classmg__diffusion_1_1_solver.html#a4c32e1313147168c4fba99f78871bfe0", null ],
     [ "num_globl_dofs_", "d4/d4c/classmg__diffusion_1_1_solver.html#a3d95a23780651384df723f560b22239e", null ],
     [ "num_groups_", "d4/d4c/classmg__diffusion_1_1_solver.html#ac52c88e7214c89cfd3f7dce171795935", null ],

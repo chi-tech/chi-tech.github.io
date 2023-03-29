@@ -2,7 +2,8 @@ var classlbs_1_1_w_g_s_linear_solver =
 [
     [ "WGSContextPtr", "d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a3e2a0cab8620e65b669435467f9edff2", null ],
     [ "WGSLinearSolver", "d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a8e1961a6ec513c6b5d47b811d802dac5", null ],
-    [ "~WGSLinearSolver", "d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a73c3ad7c1faf0cc0a7ab1b0ec70025d9", null ],
+    [ "~WGSLinearSolver", "d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a25f91ede71366ee84dfbf6cd0458c4ce", null ],
+    [ "~WGSLinearSolver", "d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#aefd33ce5e3b4843063f22495a599543d", null ],
     [ "PostSetupCallback", "d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a2b0de1699ae396d87c1141bd18791de6", null ],
     [ "PostSetupCallback", "d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a93257ae0dd543264b592a2b75f29f667", null ],
     [ "PostSolveCallback", "d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a75cc7e0e434731307396cc10c2c2bbbc", null ],

@@ -2,6 +2,7 @@ var dir_cda5a77f58e8b1c15e40efd3db3ec6d2 =
 [
     [ "GolubFischer", "dir_c31c22279e3df4be443c2f57ef53a0bf.html", "dir_c31c22279e3df4be443c2f57ef53a0bf" ],
     [ "LinearSolver", "dir_5f2a8b7fc309a728d23784962c0d1a3c.html", "dir_5f2a8b7fc309a728d23784962c0d1a3c" ],
+    [ "NonLinearSolver", "dir_0874df569176d18983c5864928fdf3e5.html", "dir_0874df569176d18983c5864928fdf3e5" ],
     [ "PETScUtils", "dir_a4d245c82537caf8a99c19949cb3c6c7.html", "dir_a4d245c82537caf8a99c19949cb3c6c7" ],
     [ "Quadratures", "dir_a62c3ea6aad71bcd097aa9cc32b82947.html", "dir_a62c3ea6aad71bcd097aa9cc32b82947" ],
     [ "RandomNumberGeneration", "dir_ffca168c19b16ed9e70a1ee18e61522e.html", "dir_ffca168c19b16ed9e70a1ee18e61522e" ],
@@ -16,6 +17,8 @@ var dir_cda5a77f58e8b1c15e40efd3db3ec6d2 =
     [ "chi_math_02_matrix_operations.cc", "df/d6a/chi__math__02__matrix__operations_8cc.html", null ],
     [ "chi_math_03_vector_operations.cc", "d9/d89/chi__math__03__vector__operations_8cc.html", null ],
     [ "chi_math_incdef.h", "da/d34/chi__math__incdef_8h.html", null ],
+    [ "chi_math_mpi.h", "d6/d8e/chi__math__mpi_8h.html", "d6/d8e/chi__math__mpi_8h" ],
+    [ "chi_math_mpi_03_vecops.cc", "d8/d86/chi__math__mpi__03__vecops_8cc.html", "d8/d86/chi__math__mpi__03__vecops_8cc" ],
     [ "chi_math_range.h", "d4/d1c/chi__math__range_8h.html", "d4/d1c/chi__math__range_8h" ],
     [ "chi_math_tensorRNX.h", "d6/d10/chi__math__tensor_r_n_x_8h.html", "d6/d10/chi__math__tensor_r_n_x_8h" ],
     [ "chi_math_time_stepping.h", "dc/d40/chi__math__time__stepping_8h.html", "dc/d40/chi__math__time__stepping_8h" ],

@@ -9,5 +9,6 @@ var searchData=
   ['mipsteadystatesolver_6',['MIPSteadyStateSolver',['../d5/d5f/classlbs_1_1_m_i_p_steady_state_solver.html',1,'lbs']]],
   ['mipwgscontext_7',['MIPWGSContext',['../d4/dd2/structlbs_1_1_m_i_p_w_g_s_context.html',1,'lbs']]],
   ['mpi_5finfo_8',['MPI_Info',['../d2/d8e/classchi__objects_1_1_m_p_i___info.html',1,'chi_objects']]],
-  ['multigroup_5fd_5fand_5fsigr_9',['Multigroup_D_and_sigR',['../d6/d81/structlbs_1_1acceleration_1_1_multigroup___d__and__sig_r.html',1,'lbs::acceleration']]]
+  ['multigroup_5fd_5fand_5fsigr_9',['Multigroup_D_and_sigR',['../d6/d81/structlbs_1_1acceleration_1_1_multigroup___d__and__sig_r.html',1,'lbs::acceleration']]],
+  ['multigroupxs_10',['MultiGroupXS',['../df/db7/classchi__physics_1_1_multi_group_x_s.html',1,'chi_physics']]]
 ];

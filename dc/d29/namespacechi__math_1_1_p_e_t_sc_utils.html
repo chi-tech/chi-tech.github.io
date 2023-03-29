@@ -124,8 +124,10 @@ Functions</h2></td></tr>
 <tr class="separator:ab59d60d5f5daa3929e3669acdcce1b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77fd6feef9f909de887c2533d2ca144c"><td class="memItemLeft" align="right" valign="top">PetscErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a77fd6feef9f909de887c2533d2ca144c">RelativeResidualConvergenceTest</a> (KSP ksp, PetscInt n, PetscReal rnorm, KSPConvergedReason *convergedReason, void *monitordestroy)</td></tr>
 <tr class="separator:a77fd6feef9f909de887c2533d2ca144c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36287c7a7d1689a4ba48eaacb123e406"><td class="memItemLeft" align="right" valign="top">PetscErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a36287c7a7d1689a4ba48eaacb123e406">GeneralKSPMonitor</a> (KSP ksp, PetscInt n, PetscReal rnorm, void *monitordestroy)</td></tr>
-<tr class="separator:a36287c7a7d1689a4ba48eaacb123e406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a45299ec491833a2d1f9df3c401e8c"><td class="memItemLeft" align="right" valign="top">PetscErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac0a45299ec491833a2d1f9df3c401e8c">KSPMonitorRelativeToRHS</a> (KSP ksp, PetscInt n, PetscReal rnorm, void *)</td></tr>
+<tr class="separator:ac0a45299ec491833a2d1f9df3c401e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d23878dd79cb1325b6fb025afb68600"><td class="memItemLeft" align="right" valign="top">PetscErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a4d23878dd79cb1325b6fb025afb68600">KSPMonitorStraight</a> (KSP ksp, PetscInt n, PetscReal rnorm, void *)</td></tr>
+<tr class="separator:a4d23878dd79cb1325b6fb025afb68600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a422a92d2ae77b5a740a874c24ed48dc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a422a92d2ae77b5a740a874c24ed48dc9">CopyVecToSTLvector</a> (Vec x, std::vector&lt; double &gt; &amp;data, size_t N)</td></tr>
 <tr class="separator:a422a92d2ae77b5a740a874c24ed48dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6018f791e6dd6b11cff9c1b7cce0c277"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">CopyGlobalVecToSTLvector</a> (Vec x, const std::vector&lt; int64_t &gt; &amp;global_indices, std::vector&lt; double &gt; &amp;data)</td></tr>
@@ -299,12 +301,12 @@ Functions</h2></td></tr>
 <div class="line">                 in_maximum_iterations);</div>
 <div class="line">KSPSetInitialGuessNonzero(setup.<a class="code hl_variable" href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88">ksp</a>,PETSC_TRUE);</div>
 <div class="line"> </div>
-<div class="line">KSPMonitorSet(setup.<a class="code hl_variable" href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88">ksp</a>,&amp;<a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a36287c7a7d1689a4ba48eaacb123e406">GeneralKSPMonitor</a>,NULL,NULL);</div>
+<div class="line">KSPMonitorSet(setup.<a class="code hl_variable" href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88">ksp</a>,&amp;<a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac0a45299ec491833a2d1f9df3c401e8c">KSPMonitorRelativeToRHS</a>,NULL,NULL);</div>
 <div class="line">KSPSetConvergenceTest(setup.<a class="code hl_variable" href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88">ksp</a>,&amp;<a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a77fd6feef9f909de887c2533d2ca144c">RelativeResidualConvergenceTest</a>,NULL,NULL);</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">return</span> setup;</div>
-<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a36287c7a7d1689a4ba48eaacb123e406"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a36287c7a7d1689a4ba48eaacb123e406">chi_math::PETScUtils::GeneralKSPMonitor</a></div><div class="ttdeci">PetscErrorCode GeneralKSPMonitor(KSP ksp, PetscInt n, PetscReal rnorm, void *monitordestroy)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00110">petsc_utils_03_createKSP.cc:110</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a77fd6feef9f909de887c2533d2ca144c"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a77fd6feef9f909de887c2533d2ca144c">chi_math::PETScUtils::RelativeResidualConvergenceTest</a></div><div class="ttdeci">PetscErrorCode RelativeResidualConvergenceTest(KSP ksp, PetscInt n, PetscReal rnorm, KSPConvergedReason *convergedReason, void *monitordestroy)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00081">petsc_utils_03_createKSP.cc:81</a></div></div>
+<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ac0a45299ec491833a2d1f9df3c401e8c"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac0a45299ec491833a2d1f9df3c401e8c">chi_math::PETScUtils::KSPMonitorRelativeToRHS</a></div><div class="ttdeci">PetscErrorCode KSPMonitorRelativeToRHS(KSP ksp, PetscInt n, PetscReal rnorm, void *)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00111">petsc_utils_03_createKSP.cc:111</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html">chi_math::PETScUtils::PETScSolverSetup</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00010">petsc_utils.h:11</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html_a3113df80f416ecf34b66978b8c4d1e0f"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a3113df80f416ecf34b66978b8c4d1e0f">chi_math::PETScUtils::PETScSolverSetup::pc</a></div><div class="ttdeci">PC pc</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00013">petsc_utils.h:13</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html_a498bc88eb4c38a8cef7861daa1238d88"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88">chi_math::PETScUtils::PETScSolverSetup::ksp</a></div><div class="ttdeci">KSP ksp</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00012">petsc_utils.h:12</a></div></div>
@@ -535,49 +537,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a36287c7a7d1689a4ba48eaacb123e406" name="a36287c7a7d1689a4ba48eaacb123e406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36287c7a7d1689a4ba48eaacb123e406">&#9670;&nbsp;</a></span>GeneralKSPMonitor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">PetscErrorCode chi_math::PETScUtils::GeneralKSPMonitor </td>
-          <td>(</td>
-          <td class="paramtype">KSP&#160;</td>
-          <td class="paramname"><em>ksp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PetscInt&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PetscReal&#160;</td>
-          <td class="paramname"><em>rnorm</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>monitordestroy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >General monitor. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00110">110</a> of file <a class="el" href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html">petsc_utils_03_createKSP.cc</a>.</p>
-
-</div>
-</div>
 <a id="a16e62cffedce8767d3214a64f02cc5f1" name="a16e62cffedce8767d3214a64f02cc5f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16e62cffedce8767d3214a64f02cc5f1">&#9670;&nbsp;</a></span>GetGhostVectorLocalViewRead()</h2>
 
@@ -680,6 +639,92 @@ Functions</h2></td></tr>
 <div class="line">MatSetUp(A);</div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="../../dc/d70/petsc__utils__02__create_mat_8cc_source.html#l00108">108</a> of file <a class="el" href="../../dc/d70/petsc__utils__02__create_mat_8cc_source.html">petsc_utils_02_createMat.cc</a>.</p>
+
+</div>
+</div>
+<a id="ac0a45299ec491833a2d1f9df3c401e8c" name="ac0a45299ec491833a2d1f9df3c401e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a45299ec491833a2d1f9df3c401e8c">&#9670;&nbsp;</a></span>KSPMonitorRelativeToRHS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PetscErrorCode chi_math::PETScUtils::KSPMonitorRelativeToRHS </td>
+          <td>(</td>
+          <td class="paramtype">KSP&#160;</td>
+          <td class="paramname"><em>ksp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PetscInt&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PetscReal&#160;</td>
+          <td class="paramname"><em>rnorm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >General monitor that print the residual norm relative to the right-hand side norm. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00111">111</a> of file <a class="el" href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html">petsc_utils_03_createKSP.cc</a>.</p>
+
+</div>
+</div>
+<a id="a4d23878dd79cb1325b6fb025afb68600" name="a4d23878dd79cb1325b6fb025afb68600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d23878dd79cb1325b6fb025afb68600">&#9670;&nbsp;</a></span>KSPMonitorStraight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PetscErrorCode chi_math::PETScUtils::KSPMonitorStraight </td>
+          <td>(</td>
+          <td class="paramtype">KSP&#160;</td>
+          <td class="paramname"><em>ksp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PetscInt&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PetscReal&#160;</td>
+          <td class="paramname"><em>rnorm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >General monitor that print the residual norm relative to the right-hand side norm. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00149">149</a> of file <a class="el" href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html">petsc_utils_03_createKSP.cc</a>.</p>
 
 </div>
 </div>

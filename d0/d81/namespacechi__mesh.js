@@ -138,7 +138,7 @@ var namespacechi__mesh =
     [ "CheckPlaneTetIntersect", "d0/d81/namespacechi__mesh.html#a1ee0d007282f366dac49174e80b8a930", null ],
     [ "CheckPointInTriangle", "d0/d81/namespacechi__mesh.html#a9014e7899a847b4e57ed756312896389", null ],
     [ "ComputeLBF", "d0/d81/namespacechi__mesh.html#a16e8861ac0049ea5b30b57462f307491", null ],
-    [ "ConsolidateAndCleanBlocks", "d0/d81/namespacechi__mesh.html#ac3868bcc6cfcf973730168aff439643d", null ],
+    [ "ConsolidateGridBlocks", "d0/d81/namespacechi__mesh.html#ac934c7d4e922881d2638f0e3c0606977", null ],
     [ "CreateUnpartitioned1DOrthoMesh", "d0/d81/namespacechi__mesh.html#aaff393e9ecd7af4f8b34a330aad15f77", null ],
     [ "CreateUnpartitioned2DOrthoMesh", "d0/d81/namespacechi__mesh.html#af2a8c29a2bf6594288f308cc6e68b443", null ],
     [ "CreateUnpartitioned3DOrthoMesh", "d0/d81/namespacechi__mesh.html#a8be2fe2792a86ed2e10d14229beedb5d", null ],
@@ -150,6 +150,9 @@ var namespacechi__mesh =
     [ "PopulateRaySegmentLengths", "d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50", null ],
     [ "PrepareVtkUnstructuredGrid", "d0/d81/namespacechi__mesh.html#a91ecdd287c2aa7597234e3816196e8fa", null ],
     [ "PushNewHandlerAndGetIndex", "d0/d81/namespacechi__mesh.html#a05ce2e71e2c83c67d2c2d94c850e716f", null ],
-    [ "UploadCellGeometry", "d0/d81/namespacechi__mesh.html#a59f48170ab84a2b0c453619b7d313b26", null ],
+    [ "SetBlockIDArrays", "d0/d81/namespacechi__mesh.html#ae7ae724d18b8558fa0843dc6c9c85da2", null ],
+    [ "UploadCellGeometryContinuous", "d0/d81/namespacechi__mesh.html#a7f2d9060356013e716d3c82c9ffa7e10", null ],
+    [ "UploadCellGeometryDiscontinuous", "d0/d81/namespacechi__mesh.html#ab106f755376d57a95d8c1e6ad2f681d7", null ],
+    [ "UploadFaceGeometry", "d0/d81/namespacechi__mesh.html#a770edb637675bf3766b5512429b28ebe", null ],
     [ "WritePVTUFiles", "d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f", null ]
 ];

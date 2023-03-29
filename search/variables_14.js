@@ -7,14 +7,13 @@ var searchData=
   ['unit_5fghost_5fcell_5fmatrices_5f_4',['unit_ghost_cell_matrices_',['../dc/db7/classlbs_1_1_l_b_s_solver.html#abf7bfec20e4a1fa62ee9b042f82b3065',1,'lbs::LBSSolver']]],
   ['unitary_5funknown_5fmanager_5',['UNITARY_UNKNOWN_MANAGER',['../dd/d1d/classchi__math_1_1_spatial_discretization.html#ab44301c258e4b6921f7afad19e355746',1,'chi_math::SpatialDiscretization']]],
   ['unknown_5f_6',['unknown_',['../df/de9/classchi__physics_1_1_field_function.html#af45dea51f3c337ae6ff5ffcabdd186a8',1,'chi_physics::FieldFunction']]],
-  ['unknown_5fmanager_7',['unknown_manager',['../d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#a99507b11a31625e9098d837c5ddb0ee3',1,'lbs_curvilinear::SweepChunkPWL']]],
-  ['unknown_5fmanager_5f_8',['unknown_manager_',['../df/de9/classchi__physics_1_1_field_function.html#a90049c284a8b7040fe23ec60728d31ba',1,'chi_physics::FieldFunction::unknown_manager_()'],['../d6/d32/classchi__diffusion_1_1_solver.html#aef411594ca051e7a14a5acc1155c1cf3',1,'chi_diffusion::Solver::unknown_manager_()']]],
-  ['unknowns_5f_9',['unknowns_',['../d9/da7/classchi__math_1_1_unknown_manager.html#abd3db4973be522e581e09c3cf3807278',1,'chi_math::UnknownManager']]],
-  ['unpartitionedmesh_5fstack_10',['unpartitionedmesh_stack',['../d4/d35/classchi.html#a47b557d0bdd217181e6f5b7798cec13a',1,'chi']]],
-  ['upstream_5fdata_5finitialized_11',['upstream_data_initialized',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#ae3a6d4d2acbd11640f9994936b080662',1,'chi_mesh::sweep_management::SweepBuffer']]],
-  ['upwind_5fdof_5fmapping_12',['upwind_dof_mapping',['../d8/daf/structchi__mesh_1_1sweep__management_1_1_i_n_c_o_m_i_n_g___f_a_c_e___i_n_f_o.html#a17e9c47f7966834dc14f39997c01b06a',1,'chi_mesh::sweep_management::INCOMING_FACE_INFO']]],
-  ['us_5fedge_13',['us_edge',['../da/d1d/structchi__graph_1_1_graph_vertex.html#a507fc24d43a4acf07edd1c5426c0fd08',1,'chi_graph::GraphVertex']]],
-  ['us_5fweights_14',['us_weights',['../da/d1d/structchi__graph_1_1_graph_vertex.html#a4986d0414eab737490fff5692e46273e',1,'chi_graph::GraphVertex']]],
-  ['use_5fprecursors_15',['use_precursors',['../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc',1,'lbs::Options']]],
-  ['use_5fsrc_5fmoments_16',['use_src_moments',['../dc/dcd/structlbs_1_1_options.html#a18b0a5d5b18946c42cce655a453fdab8',1,'lbs::Options']]]
+  ['unknown_5fmanager_5f_7',['unknown_manager_',['../df/de9/classchi__physics_1_1_field_function.html#a90049c284a8b7040fe23ec60728d31ba',1,'chi_physics::FieldFunction::unknown_manager_()'],['../d6/d32/classchi__diffusion_1_1_solver.html#aef411594ca051e7a14a5acc1155c1cf3',1,'chi_diffusion::Solver::unknown_manager_()'],['../d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#a738f00c296ad5739650222ed4b92332c',1,'lbs_curvilinear::SweepChunkPWL::unknown_manager_()']]],
+  ['unknowns_5f_8',['unknowns_',['../d9/da7/classchi__math_1_1_unknown_manager.html#abd3db4973be522e581e09c3cf3807278',1,'chi_math::UnknownManager']]],
+  ['unpartitionedmesh_5fstack_9',['unpartitionedmesh_stack',['../d4/d35/classchi.html#a47b557d0bdd217181e6f5b7798cec13a',1,'chi']]],
+  ['upstream_5fdata_5finitialized_10',['upstream_data_initialized',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#ae3a6d4d2acbd11640f9994936b080662',1,'chi_mesh::sweep_management::SweepBuffer']]],
+  ['upwind_5fdof_5fmapping_11',['upwind_dof_mapping',['../d8/daf/structchi__mesh_1_1sweep__management_1_1_i_n_c_o_m_i_n_g___f_a_c_e___i_n_f_o.html#a17e9c47f7966834dc14f39997c01b06a',1,'chi_mesh::sweep_management::INCOMING_FACE_INFO']]],
+  ['us_5fedge_12',['us_edge',['../da/d1d/structchi__graph_1_1_graph_vertex.html#a507fc24d43a4acf07edd1c5426c0fd08',1,'chi_graph::GraphVertex']]],
+  ['us_5fweights_13',['us_weights',['../da/d1d/structchi__graph_1_1_graph_vertex.html#a4986d0414eab737490fff5692e46273e',1,'chi_graph::GraphVertex']]],
+  ['use_5fprecursors_14',['use_precursors',['../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc',1,'lbs::Options']]],
+  ['use_5fsrc_5fmoments_15',['use_src_moments',['../dc/dcd/structlbs_1_1_options.html#a18b0a5d5b18946c42cce655a453fdab8',1,'lbs::Options']]]
 ];

@@ -36,6 +36,8 @@ var chi__math_8h =
     [ "SampleCDF", "d2/d08/chi__math_8h.html#a46211d1897a690eb5828d7041b77d387", null ],
     [ "Scale", "d2/d08/chi__math_8h.html#a1eec94fde137265a429b5082d2302c87", null ],
     [ "Scale", "d2/d08/chi__math_8h.html#a408917c286c16e9fc82ed928c9db6b64", null ],
+    [ "Set", "d2/d08/chi__math_8h.html#a0e78731e9ccd2c4fa382c411e59df53b", null ],
+    [ "Set", "d2/d08/chi__math_8h.html#a75948cb3d263fe5216470bae075742ea", null ],
     [ "SubMatrix", "d2/d08/chi__math_8h.html#a800268583e3fdc9fac2fe508983012f0", null ],
     [ "SwapColumn", "d2/d08/chi__math_8h.html#ab30dd2014a4354f68a977efe34dcc2b5", null ],
     [ "SwapRow", "d2/d08/chi__math_8h.html#aff9076e0bc50c8b187a29eaab4b2df46", null ],

@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('d1/daa/lbts__compute__beta_8cc_source.
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/**Computes the delayed neutron factor.*/</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a74c84ede335cf7a1d2814364174a6e29">    4</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a74c84ede335cf7a1d2814364174a6e29">lbs::DiscOrdTransientSolver::ComputeBeta</a>()</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a5356cc3999e4748d57fb64f2c592d70e">num_precursors_</a> == 0 || !<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">use_precursors</a>)</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a5356cc3999e4748d57fb64f2c592d70e">num_precursors_</a> == 0 or not <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a>.<a class="code hl_variable" href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">use_precursors</a>)</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordflow">return</span> 0.0;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="comment">//compute total fission neutron production</span></div>
@@ -112,40 +112,42 @@ $(document).ready(function(){initNavTree('d1/daa/lbts__compute__beta_8cc_source.
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> cell_volume = transport_view.Volume();</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> dof_map = cell.local_id_ + <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ae9b4eea6beb5f7f7487b1cc9fbdf004c">max_precursors_per_material_</a>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">auto</span> xs = transport_view.XS();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">//skip cell if not fissionable</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">if</span> (!xs.is_fissionable_)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">//============================= Loop over groupsets</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; groupset : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#aae9577cea5d158e049ebcb749b6a8de4">groupsets_</a>)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <span class="keyword">auto</span> gs_i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(groupset.groups_.front().id_);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="keyword">auto</span> gs_f = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(groupset.groups_.back().id_);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <span class="comment">//============================= Loop over groupset groups</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g = gs_i; g &lt;= gs_f; ++g)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; xs.num_precursors_; ++j)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>          <span class="keyword">const</span> <span class="keyword">auto</span>&amp; precursor = xs.precursors_[j];</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>          <span class="comment">//TODO: Verify that this is correct.</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>          localDNPR += precursor.emission_spectrum[g] *</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                       precursor.decay_constant *</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                       <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a0005cc98a31ca5060dbbf9d4eeebe6dd">precursor_new_local_</a>[dof_map + j] *</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                       cell_volume;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="comment">//============================================= Allreduce global DNPR</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">double</span> DNPR = 0.0;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  MPI_Allreduce(&amp;localDNPR, &amp;DNPR, 1,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">return</span> DNPR / (DNPR + FPR);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; xs = transport_view.XS();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; num_precursors = xs.NumPrecursors();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; precursors = xs.Precursors();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">//skip cell if not fissionable</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">if</span> (not xs.IsFissionable())</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">//============================= Loop over groupsets</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; groupset : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#aae9577cea5d158e049ebcb749b6a8de4">groupsets_</a>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keyword">auto</span> gs_i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(groupset.groups_.front().id_);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <span class="keyword">auto</span> gs_f = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(groupset.groups_.back().id_);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      <span class="comment">//============================= Loop over groupset groups</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g = gs_i; g &lt;= gs_f; ++g)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; num_precursors; ++j)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>          <span class="keyword">const</span> <span class="keyword">auto</span>&amp; precursor = precursors[j];</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>          <span class="comment">//TODO: Verify that this is correct.</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>          localDNPR += precursor.emission_spectrum[g] *</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                       precursor.decay_constant *</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                       <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a0005cc98a31ca5060dbbf9d4eeebe6dd">precursor_new_local_</a>[dof_map + j] *</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                       cell_volume;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="comment">//============================================= Allreduce global DNPR</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">double</span> DNPR = 0.0;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  MPI_Allreduce(&amp;localDNPR, &amp;DNPR, 1,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">return</span> DNPR / (DNPR + FPR);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
 <div class="ttc" id="aclasslbs_1_1_disc_ord_transient_solver_html_a74c84ede335cf7a1d2814364174a6e29"><div class="ttname"><a href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a74c84ede335cf7a1d2814364174a6e29">lbs::DiscOrdTransientSolver::ComputeBeta</a></div><div class="ttdeci">double ComputeBeta()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/lbts__compute__beta_8cc_source.html#l00004">lbts_compute_beta.cc:4</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a0005cc98a31ca5060dbbf9d4eeebe6dd"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a0005cc98a31ca5060dbbf9d4eeebe6dd">lbs::LBSSolver::precursor_new_local_</a></div><div class="ttdeci">std::vector&lt; double &gt; precursor_new_local_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00088">lbs_solver.h:88</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a1144b5d5d598050cb3687894a1b84acc"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">lbs::LBSSolver::grid_ptr_</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr grid_ptr_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00066">lbs_solver.h:66</a></div></div>
@@ -157,7 +159,7 @@ $(document).ready(function(){initNavTree('d1/daa/lbts__compute__beta_8cc_source.
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_aae9577cea5d158e049ebcb749b6a8de4"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#aae9577cea5d158e049ebcb749b6a8de4">lbs::LBSSolver::groupsets_</a></div><div class="ttdeci">std::vector&lt; LBSGroupset &gt; groupsets_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00059">lbs_solver.h:59</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_ae9b4eea6beb5f7f7487b1cc9fbdf004c"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ae9b4eea6beb5f7f7487b1cc9fbdf004c">lbs::LBSSolver::max_precursors_per_material_</a></div><div class="ttdeci">size_t max_precursors_per_material_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00056">lbs_solver.h:56</a></div></div>
 <div class="ttc" id="albts__transient__solver_8h_html"><div class="ttname"><a href="../../d8/d89/lbts__transient__solver_8h.html">lbts_transient_solver.h</a></div></div>
-<div class="ttc" id="astructlbs_1_1_options_html_ac31e06eb959155210668a82b4def6abc"><div class="ttname"><a href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">lbs::Options::use_precursors</a></div><div class="ttdeci">bool use_precursors</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00110">lbs_structs.h:110</a></div></div>
+<div class="ttc" id="astructlbs_1_1_options_html_ac31e06eb959155210668a82b4def6abc"><div class="ttname"><a href="../../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc">lbs::Options::use_precursors</a></div><div class="ttdeci">bool use_precursors</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00133">lbs_structs.h:133</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

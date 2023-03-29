@@ -91,7 +91,9 @@ $(document).ready(function(){initNavTree('dc/d71/classchi__mesh_1_1sweep__manage
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle"><div class="title">chi_mesh::sweep_management::BoundaryIncidentHeterogenous Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -109,43 +111,142 @@ Inheritance diagram for chi_mesh::sweep_management::BoundaryIncidentHeterogenous
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa4dad1e35f2ad933170d221c1ac2645f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#aa4dad1e35f2ad933170d221c1ac2645f">BoundaryIncidentHeterogenous</a> (const std::vector&lt; double &gt; &amp;ref_boundary_flux)</td></tr>
-<tr class="separator:aa4dad1e35f2ad933170d221c1ac2645f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18225263607a96cc0eb5c0af32aee6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#ab18225263607a96cc0eb5c0af32aee6d">BoundaryIncidentHeterogenous</a> (size_t in_num_groups, std::unique_ptr&lt; <a class="el" href="../../d3/d51/classchi__mesh_1_1sweep__management_1_1_boundary_function.html">BoundaryFunction</a> &gt; in_bndry_function, uint64_t in_ref_boundary_id, <a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a> coord_type=<a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1ac02304094f2866a43251b12946a9a21b">chi_math::CoordinateSystemType::CARTESIAN</a>)</td></tr>
+<tr class="separator:ab18225263607a96cc0eb5c0af32aee6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac91b8506acbaaaa471ee64df27859dca"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#ac91b8506acbaaaa471ee64df27859dca">HeterogenousPsiIncoming</a> (uint64_t cell_local_id, int face_num, int fi, int angle_num, int group_num, int gs_ss_begin) override</td></tr>
+<tr class="separator:ac91b8506acbaaaa471ee64df27859dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72684810c98b87ddd10ecbbdaf1530ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a72684810c98b87ddd10ecbbdaf1530ff">Setup</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const <a class="el" href="../../d8/dd9/classchi__math_1_1_angular_quadrature.html">chi_math::AngularQuadrature</a> &amp;quadrature) override</td></tr>
+<tr class="separator:a72684810c98b87ddd10ecbbdaf1530ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html">chi_mesh::sweep_management::BoundaryBase</a></td></tr>
-<tr class="memitem:a4373f67b6c8637218401e4f384c5d0b2 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a4373f67b6c8637218401e4f384c5d0b2">BoundaryBase</a> (<a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25d">BoundaryType</a> bndry_type, const std::vector&lt; double &gt; &amp;ref_boundary_flux)</td></tr>
-<tr class="separator:a4373f67b6c8637218401e4f384c5d0b2 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6148b4c1a4bd947d9f64e7d367276ad inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#ad6148b4c1a4bd947d9f64e7d367276ad">BoundaryBase</a> (<a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25d">BoundaryType</a> bndry_type, size_t in_num_groups, <a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a> coord_type)</td></tr>
+<tr class="separator:ad6148b4c1a4bd947d9f64e7d367276ad inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affd5e6784a4e07caa3a776db7ed3a5d4 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#affd5e6784a4e07caa3a776db7ed3a5d4">~BoundaryBase</a> ()=default</td></tr>
 <tr class="separator:affd5e6784a4e07caa3a776db7ed3a5d4 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaa749a8654e65644077b3ae5ac100be inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25d">BoundaryType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#afaa749a8654e65644077b3ae5ac100be">Type</a> () const</td></tr>
 <tr class="separator:afaa749a8654e65644077b3ae5ac100be inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77b99aec7a65875d5b142afae357821 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#ab77b99aec7a65875d5b142afae357821">CoordType</a> () const</td></tr>
+<tr class="separator:ab77b99aec7a65875d5b142afae357821 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a700695f7bd003a2e5f96bfca19b58570 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a700695f7bd003a2e5f96bfca19b58570">IsReflecting</a> () const</td></tr>
 <tr class="separator:a700695f7bd003a2e5f96bfca19b58570 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af69a199f9064327c8f0d347fa8439b05 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#af69a199f9064327c8f0d347fa8439b05">HeterogenousPsiIncoming</a> (int angle_num, uint64_t cell_local_id, int face_num, int fi, int gs_ss_begin)</td></tr>
-<tr class="separator:af69a199f9064327c8f0d347fa8439b05 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d64d082c64503a6f9629f75549cec92 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a2d64d082c64503a6f9629f75549cec92">HeterogenousPsiOutgoing</a> (int angle_num, uint64_t cell_local_id, int face_num, int fi, int gs_ss_begin)</td></tr>
-<tr class="separator:a2d64d082c64503a6f9629f75549cec92 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ef113fd18f8242753c0908e6d762267 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a1ef113fd18f8242753c0908e6d762267">HeterogenousPsiIncoming</a> (uint64_t cell_local_id, int face_num, int fi, int angle_num, int group_num, int gs_ss_begin)</td></tr>
+<tr class="separator:a1ef113fd18f8242753c0908e6d762267 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1d96aee61d0fb66a01d1e8a92662db inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#abe1d96aee61d0fb66a01d1e8a92662db">HeterogenousPsiOutgoing</a> (uint64_t cell_local_id, int face_num, int fi, int angle_num, int gs_ss_begin)</td></tr>
+<tr class="separator:abe1d96aee61d0fb66a01d1e8a92662db inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfe16f770bc9529ff241c7167b4fe0a1 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#abfe16f770bc9529ff241c7167b4fe0a1">UpdateAnglesReadyStatus</a> (const std::vector&lt; size_t &gt; &amp;angles, size_t gs_ss)</td></tr>
 <tr class="separator:abfe16f770bc9529ff241c7167b4fe0a1 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7038c03e639ed099fb6ac91e2eac259e inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a7038c03e639ed099fb6ac91e2eac259e">CheckAnglesReadyStatus</a> (const std::vector&lt; size_t &gt; &amp;angles, size_t gs_ss)</td></tr>
 <tr class="separator:a7038c03e639ed099fb6ac91e2eac259e inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea49a96e77e0752148e912249cb4fec inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#acea49a96e77e0752148e912249cb4fec">Setup</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const <a class="el" href="../../d8/dd9/classchi__math_1_1_angular_quadrature.html">chi_math::AngularQuadrature</a> &amp;quadrature)</td></tr>
+<tr class="separator:acea49a96e77e0752148e912249cb4fec inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0241ab1031c2aa0784b39f85216587 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a5d0241ab1031c2aa0784b39f85216587">ZeroFlux</a> (int group_num)</td></tr>
+<tr class="separator:a5d0241ab1031c2aa0784b39f85216587 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:affafa8b44174bb0006930ce1b6ee6fa1"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#affafa8b44174bb0006930ce1b6ee6fa1">FaceNodeData</a></td></tr>
+<tr class="separator:affafa8b44174bb0006930ce1b6ee6fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d69477b1eed0b8904ad15a3c35592f"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#affafa8b44174bb0006930ce1b6ee6fa1">FaceNodeData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a75d69477b1eed0b8904ad15a3c35592f">FaceData</a></td></tr>
+<tr class="separator:a75d69477b1eed0b8904ad15a3c35592f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8a0b2ed9d95098c3de8f9593571946"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a75d69477b1eed0b8904ad15a3c35592f">FaceData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a4e8a0b2ed9d95098c3de8f9593571946">CellData</a></td></tr>
+<tr class="separator:a4e8a0b2ed9d95098c3de8f9593571946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad2630088da3f46f66dd2df9866bd6cc5"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d3/d51/classchi__mesh_1_1sweep__management_1_1_boundary_function.html">BoundaryFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#ad2630088da3f46f66dd2df9866bd6cc5">boundary_function_</a></td></tr>
+<tr class="separator:ad2630088da3f46f66dd2df9866bd6cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a7f3d13e56511571157676a1b8e163f"><td class="memItemLeft" align="right" valign="top">const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a4a7f3d13e56511571157676a1b8e163f">ref_boundary_id_</a></td></tr>
+<tr class="separator:a4a7f3d13e56511571157676a1b8e163f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac450c5f4f4c64de8702c6429e772000a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a4e8a0b2ed9d95098c3de8f9593571946">CellData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#ac450c5f4f4c64de8702c6429e772000a">local_cell_data_</a></td></tr>
+<tr class="separator:ac450c5f4f4c64de8702c6429e772000a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base')"><img src="../../closed.png" alt="-"/>&#160;Data Fields inherited from <a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html">chi_mesh::sweep_management::BoundaryBase</a></td></tr>
-<tr class="memitem:a1426cdc4664e6afac7b57f1467298b27 inherit pub_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25d">chi_mesh::sweep_management::BoundaryType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a1426cdc4664e6afac7b57f1467298b27">type</a></td></tr>
-<tr class="separator:a1426cdc4664e6afac7b57f1467298b27 inherit pub_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad68de60ee7222338a5901b2f03cf983f inherit pub_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#ad68de60ee7222338a5901b2f03cf983f">boundary_flux</a></td></tr>
-<tr class="separator:ad68de60ee7222338a5901b2f03cf983f inherit pub_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45c70db97d8fb9a3a080c9a1c3ea42c0 inherit pub_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a45c70db97d8fb9a3a080c9a1c3ea42c0">zero_boundary_flux</a></td></tr>
-<tr class="separator:a45c70db97d8fb9a3a080c9a1c3ea42c0 inherit pub_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html">chi_mesh::sweep_management::BoundaryBase</a></td></tr>
+<tr class="memitem:ad0509cf7326e57f6db40a7c1d09482c3 inherit pro_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#ad0509cf7326e57f6db40a7c1d09482c3">zero_boundary_flux_</a></td></tr>
+<tr class="separator:ad0509cf7326e57f6db40a7c1d09482c3 inherit pro_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429c45f765a7232ecc6eac123d6ecd66 inherit pro_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a429c45f765a7232ecc6eac123d6ecd66">num_groups_</a></td></tr>
+<tr class="separator:a429c45f765a7232ecc6eac123d6ecd66 inherit pro_attribs_classchi__mesh_1_1sweep__management_1_1_boundary_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Specified incident fluxes homogenous on a boundary. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html#l00089">89</a> of file <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa4dad1e35f2ad933170d221c1ac2645f" name="aa4dad1e35f2ad933170d221c1ac2645f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4dad1e35f2ad933170d221c1ac2645f">&#9670;&nbsp;</a></span>BoundaryIncidentHeterogenous()</h2>
+<p class="definition">Definition at line <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html#l00213">213</a> of file <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a4e8a0b2ed9d95098c3de8f9593571946" name="a4e8a0b2ed9d95098c3de8f9593571946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e8a0b2ed9d95098c3de8f9593571946">&#9670;&nbsp;</a></span>CellData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a75d69477b1eed0b8904ad15a3c35592f">FaceData</a>&gt; <a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a4e8a0b2ed9d95098c3de8f9593571946">chi_mesh::sweep_management::BoundaryIncidentHeterogenous::CellData</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html#l00221">221</a> of file <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a>.</p>
+
+</div>
+</div>
+<a id="a75d69477b1eed0b8904ad15a3c35592f" name="a75d69477b1eed0b8904ad15a3c35592f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d69477b1eed0b8904ad15a3c35592f">&#9670;&nbsp;</a></span>FaceData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#affafa8b44174bb0006930ce1b6ee6fa1">FaceNodeData</a>&gt; <a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a75d69477b1eed0b8904ad15a3c35592f">chi_mesh::sweep_management::BoundaryIncidentHeterogenous::FaceData</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html#l00220">220</a> of file <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a>.</p>
+
+</div>
+</div>
+<a id="affafa8b44174bb0006930ce1b6ee6fa1" name="affafa8b44174bb0006930ce1b6ee6fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affafa8b44174bb0006930ce1b6ee6fa1">&#9670;&nbsp;</a></span>FaceNodeData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;double&gt; <a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#affafa8b44174bb0006930ce1b6ee6fa1">chi_mesh::sweep_management::BoundaryIncidentHeterogenous::FaceNodeData</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html#l00219">219</a> of file <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab18225263607a96cc0eb5c0af32aee6d" name="ab18225263607a96cc0eb5c0af32aee6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18225263607a96cc0eb5c0af32aee6d">&#9670;&nbsp;</a></span>BoundaryIncidentHeterogenous()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,9 +257,31 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">chi_mesh::sweep_management::BoundaryIncidentHeterogenous::BoundaryIncidentHeterogenous </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>ref_boundary_flux</em></td><td>)</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>in_num_groups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d51/classchi__mesh_1_1sweep__management_1_1_boundary_function.html">BoundaryFunction</a> &gt;&#160;</td>
+          <td class="paramname"><em>in_bndry_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>in_ref_boundary_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math::CoordinateSystemType</a>&#160;</td>
+          <td class="paramname"><em>coord_type</em> = <code><a class="el" href="../../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1ac02304094f2866a43251b12946a9a21b">chi_math::CoordinateSystemType::CARTESIAN</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -168,12 +291,193 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html#l00093">93</a> of file <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html#l00226">226</a> of file <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac91b8506acbaaaa471ee64df27859dca" name="ac91b8506acbaaaa471ee64df27859dca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac91b8506acbaaaa471ee64df27859dca">&#9670;&nbsp;</a></span>HeterogenousPsiIncoming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double * chi_mesh::sweep_management::BoundaryIncidentHeterogenous::HeterogenousPsiIncoming </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>cell_local_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>face_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>angle_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>group_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>gs_ss_begin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns a pointer to a heterogenous flux storage location. </p>
+
+<p>Reimplemented from <a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#a1ef113fd18f8242753c0908e6d762267">chi_mesh::sweep_management::BoundaryBase</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/da9/boundary__aniso__hetero_8cc_source.html#l00011">11</a> of file <a class="el" href="../../db/da9/boundary__aniso__hetero_8cc_source.html">boundary_aniso_hetero.cc</a>.</p>
+
+</div>
+</div>
+<a id="a72684810c98b87ddd10ecbbdaf1530ff" name="a72684810c98b87ddd10ecbbdaf1530ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72684810c98b87ddd10ecbbdaf1530ff">&#9670;&nbsp;</a></span>Setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_mesh::sweep_management::BoundaryIncidentHeterogenous::Setup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td>
+          <td class="paramname"><em>grid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d8/dd9/classchi__math_1_1_angular_quadrature.html">chi_math::AngularQuadrature</a> &amp;&#160;</td>
+          <td class="paramname"><em>quadrature</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Performs the setup for a particular quadrature. </p>
+
+<p>Reimplemented from <a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html#acea49a96e77e0752148e912249cb4fec">chi_mesh::sweep_management::BoundaryBase</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/da9/boundary__aniso__hetero_8cc_source.html#l00035">35</a> of file <a class="el" href="../../db/da9/boundary__aniso__hetero_8cc_source.html">boundary_aniso_hetero.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="ad2630088da3f46f66dd2df9866bd6cc5" name="ad2630088da3f46f66dd2df9866bd6cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2630088da3f46f66dd2df9866bd6cc5">&#9670;&nbsp;</a></span>boundary_function_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="../../d3/d51/classchi__mesh_1_1sweep__management_1_1_boundary_function.html">BoundaryFunction</a>&gt; chi_mesh::sweep_management::BoundaryIncidentHeterogenous::boundary_function_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html#l00216">216</a> of file <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a>.</p>
+
+</div>
+</div>
+<a id="ac450c5f4f4c64de8702c6429e772000a" name="ac450c5f4f4c64de8702c6429e772000a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac450c5f4f4c64de8702c6429e772000a">&#9670;&nbsp;</a></span>local_cell_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html#a4e8a0b2ed9d95098c3de8f9593571946">CellData</a>&gt; chi_mesh::sweep_management::BoundaryIncidentHeterogenous::local_cell_data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html#l00223">223</a> of file <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a>.</p>
+
+</div>
+</div>
+<a id="a4a7f3d13e56511571157676a1b8e163f" name="a4a7f3d13e56511571157676a1b8e163f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a7f3d13e56511571157676a1b8e163f">&#9670;&nbsp;</a></span>ref_boundary_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint64_t chi_mesh::sweep_management::BoundaryIncidentHeterogenous::ref_boundary_id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html#l00217">217</a> of file <a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>framework/ChiMesh/SweepUtilities/SweepBoundary/<a class="el" href="../../de/dd6/sweep__boundaries_8h_source.html">sweep_boundaries.h</a></li>
+<li>framework/ChiMesh/SweepUtilities/SweepBoundary/<a class="el" href="../../db/da9/boundary__aniso__hetero_8cc_source.html">boundary_aniso_hetero.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -98,6 +98,7 @@ $(document).ready(function(){initNavTree('de/dd6/sweep__boundaries_8h.html','../
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d3/dcb/chi__mesh_8h_source.html">ChiMesh/chi_mesh.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d08/chi__math_8h_source.html">ChiMath/chi_math.h</a>&quot;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
 </div>
@@ -105,15 +106,17 @@ $(document).ready(function(){initNavTree('de/dd6/sweep__boundaries_8h.html','../
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classchi__mesh_1_1sweep__management_1_1_boundary_base.html">chi_mesh::sweep_management::BoundaryBase</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d83/classchi__mesh_1_1sweep__management_1_1_sweep_boundary.html">chi_mesh::sweep_management::SweepBoundary</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d41/classchi__mesh_1_1sweep__management_1_1_boundary_vacuum.html">chi_mesh::sweep_management::BoundaryVacuum</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de0/classchi__mesh_1_1sweep__management_1_1_boundary_vaccuum.html">chi_mesh::sweep_management::BoundaryVaccuum</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbc/classchi__mesh_1_1sweep__management_1_1_boundary_incident_homogenous.html">chi_mesh::sweep_management::BoundaryIncidentHomogenous</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d71/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogenous.html">chi_mesh::sweep_management::BoundaryIncidentHeterogenous</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbe/classchi__mesh_1_1sweep__management_1_1_boundary_isotropic_homogenous.html">chi_mesh::sweep_management::BoundaryIsotropicHomogenous</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html">chi_mesh::sweep_management::BoundaryReflecting</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d51/classchi__mesh_1_1sweep__management_1_1_boundary_function.html">chi_mesh::sweep_management::BoundaryFunction</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogeneous.html">chi_mesh::sweep_management::BoundaryIncidentHeterogeneous</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -125,10 +128,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a6cd9803675df8262126d71d894dde25d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25d">chi_mesh::sweep_management::BoundaryType</a> { <a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da9a311ef6dad816cb7a15c0ab41920ad8">chi_mesh::sweep_management::VACUUM</a> = 0
-, <a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da857360a246793bc54c7f4b0987d88d60">chi_mesh::sweep_management::INCIDENT_HOMOGENOUS</a> = 1
+<tr class="memitem:a6cd9803675df8262126d71d894dde25d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25d">chi_mesh::sweep_management::BoundaryType</a> { <a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25daa44e9a4b37b28ef47297d2f352a24a22">chi_mesh::sweep_management::INCIDENT_VACCUUM</a> = 0
+, <a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da66551bc77731bc1b07aff6fc8d3a53df">chi_mesh::sweep_management::INCIDENT_ISOTROPIC_HOMOGENOUS</a> = 1
 , <a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da6890fc3005a75adb9e5a84b693e8741c">chi_mesh::sweep_management::REFLECTING</a> = 2
-, <a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da77f10d27c69cfa62b4b2d16470134cb1">chi_mesh::sweep_management::INCIDENT_HETEROGENOUS</a> = 3
+, <a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da354f310f56a032d33d104ad8ebb36755">chi_mesh::sweep_management::INCIDENT_ANISOTROPIC_HETEROGENEOUS</a> = 3
  }</td></tr>
 <tr class="separator:a6cd9803675df8262126d71d894dde25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>

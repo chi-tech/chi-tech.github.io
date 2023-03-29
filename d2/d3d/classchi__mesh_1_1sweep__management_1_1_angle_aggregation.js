@@ -1,16 +1,20 @@
 var classchi__mesh_1_1sweep__management_1_1_angle_aggregation =
 [
-    [ "AppendNewDelayedAngularDOFsToArray", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a3adf3a43e1d9259670245b34646f0ef5", null ],
-    [ "AppendOldDelayedAngularDOFsToArray", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a93aa1c954e85e1a043833a40331a4258", null ],
-    [ "GetDelayedAngularDOFsAsSTLVector", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#acedca758f3464b215c46147f91e7fa8f", null ],
+    [ "SweepBndryPtr", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a905012a0575c46c672d8bd9f852bdd04", null ],
+    [ "AngleAggregation", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#ade8d2a04cc704058605d5e96e15f229f", null ],
+    [ "AppendNewDelayedAngularDOFsToArray", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#ad956d28f2e9d408aac2f508efa64620e", null ],
+    [ "AppendOldDelayedAngularDOFsToArray", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a5e5e0288f4a317e23fcc390d7f77e4ec", null ],
+    [ "GetNewDelayedAngularDOFsAsSTLVector", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#ab291136b3b27730758b0250a5f02d2fd", null ],
     [ "GetNumDelayedAngularDOFs", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#aee7511e4c914b6fa10a356e10d49513a", null ],
+    [ "GetOldDelayedAngularDOFsAsSTLVector", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a130181b5d8c3075caf619d13ce29f502", null ],
     [ "InitializeReflectingBCs", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a4518965f4752364a0fc460a6fb648439", null ],
-    [ "SetDelayedAngularDOFsFromSTLVector", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a98e453f3daf469ed47e6c5a0b34a5b70", null ],
+    [ "IsSetup", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a7dd3a6e8a647ec3d53dccf04b3cea2fe", null ],
     [ "SetDelayedPsiNew2Old", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#addd5b280396c0b1e4e8fbc3d500e4bc9", null ],
     [ "SetDelayedPsiOld2New", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#af79246ffe6e02bc76b09cfb10af42f3e", null ],
-    [ "SetNewDelayedAngularDOFsFromArray", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a963bbe107de39f47d2d90d184866e9de", null ],
-    [ "SetOldDelayedAngularDOFsFromArray", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a86d5bde1418022b39eaff81bb3235a7d", null ],
-    [ "Setup", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#ade2e0685bff35d92ad378b8e797985a6", null ],
+    [ "SetNewDelayedAngularDOFsFromArray", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#add5d4f5d2ea2d46bdddb067ae3aa8421", null ],
+    [ "SetNewDelayedAngularDOFsFromSTLVector", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#ab682cbce856edd4ee691c9f5891a2e04", null ],
+    [ "SetOldDelayedAngularDOFsFromArray", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a288a143986d375963c0089ba205916b5", null ],
+    [ "SetOldDelayedAngularDOFsFromSTLVector", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a2ea7de18d2dcbb9ae82a547ec74a7373", null ],
     [ "ZeroIncomingDelayedPsi", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#abfcbc23790402886ba120966e780de6a", null ],
     [ "ZeroOutgoingDelayedPsi", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a18ac8749a1bea3cc0c57c99d85d1169d", null ],
     [ "angle_set_groups", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a0077bc7395ee0ee4f028ffd7cf58e317", null ],
@@ -21,5 +25,5 @@ var classchi__mesh_1_1sweep__management_1_1_angle_aggregation =
     [ "number_of_group_subsets", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#acea2b11702cb20177c991633f37e7d13", null ],
     [ "number_of_groups", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a0a073cf05052e8f9f7fbef10374b59d6", null ],
     [ "quadrature", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a515002078c0318ba874164350242f4e1", null ],
-    [ "sim_boundaries", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a3382021dd8ecd3aed96695629dcb5112", null ]
+    [ "sim_boundaries", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#abbf9c95ca181b20666570d04b76d5238", null ]
 ];

@@ -90,13 +90,157 @@ $(document).ready(function(){initNavTree('de/d16/lbs__01h__init__boundaries_8cc.
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">lbs_01h_init_boundaries.cc File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/dc5/lbs__bndry__func__lua_8h_source.html">Tools/lbs_bndry_func_lua.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>&quot;</code><br />
 </div>
 <p><a href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ae598903af29e125dc11a3a9ab0434088"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc.html#ae598903af29e125dc11a3a9ab0434088">mk_shrd</a>(x)&#160;&#160;&#160;std::make_shared&lt;x&gt;</td></tr>
+<tr class="separator:ae598903af29e125dc11a3a9ab0434088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20891cfefb85ef5a50813e2f863123ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc.html#a20891cfefb85ef5a50813e2f863123ff">SweepVaccuumBndry</a>&#160;&#160;&#160;<a class="el" href="../../d1/de0/classchi__mesh_1_1sweep__management_1_1_boundary_vaccuum.html">chi_mesh::sweep_management::BoundaryVaccuum</a></td></tr>
+<tr class="separator:a20891cfefb85ef5a50813e2f863123ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278a8eee84401b354ee40fbf2ea7a084"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc.html#a278a8eee84401b354ee40fbf2ea7a084">SweepIncHomoBndry</a>&#160;&#160;&#160;<a class="el" href="../../d0/dbe/classchi__mesh_1_1sweep__management_1_1_boundary_isotropic_homogenous.html">chi_mesh::sweep_management::BoundaryIsotropicHomogenous</a></td></tr>
+<tr class="separator:a278a8eee84401b354ee40fbf2ea7a084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a881c26ec45077a841cc3934356427"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc.html#a25a881c26ec45077a841cc3934356427">SweepReflectingBndry</a>&#160;&#160;&#160;<a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html">chi_mesh::sweep_management::BoundaryReflecting</a></td></tr>
+<tr class="separator:a25a881c26ec45077a841cc3934356427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5c42766ff8cd705ef739ec7fd02b22c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc.html#ad5c42766ff8cd705ef739ec7fd02b22c">SweepAniHeteroBndry</a>&#160;&#160;&#160;<a class="el" href="../../d8/da9/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogeneous.html">chi_mesh::sweep_management::BoundaryIncidentHeterogeneous</a></td></tr>
+<tr class="separator:ad5c42766ff8cd705ef739ec7fd02b22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716606bc6efc8c0864a0646094eff3c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc.html#a716606bc6efc8c0864a0646094eff3c0">ExceptionLocalFaceNormalsDiffer</a></td></tr>
+<tr class="separator:a716606bc6efc8c0864a0646094eff3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35cda7e6c0258815de0a16cd268ed96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc.html#ab35cda7e6c0258815de0a16cd268ed96">ExceptionGlobalFaceNormalsDiffer</a></td></tr>
+<tr class="separator:ab35cda7e6c0258815de0a16cd268ed96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ab35cda7e6c0258815de0a16cd268ed96" name="ab35cda7e6c0258815de0a16cd268ed96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35cda7e6c0258815de0a16cd268ed96">&#9670;&nbsp;</a></span>ExceptionGlobalFaceNormalsDiffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ExceptionGlobalFaceNormalsDiffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">std::logic_error(fname + <span class="stringliteral">&quot;: Not all face normals are,&quot;</span> \</div>
+<div class="line"><span class="stringliteral">&quot; within tolerance, globally the same for the reflecting boundary&quot;</span> \</div>
+<div class="line"><span class="stringliteral">&quot; condition requested.&quot;</span>)</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html#l00022">22</a> of file <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a>.</p>
+
+</div>
+</div>
+<a id="a716606bc6efc8c0864a0646094eff3c0" name="a716606bc6efc8c0864a0646094eff3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a716606bc6efc8c0864a0646094eff3c0">&#9670;&nbsp;</a></span>ExceptionLocalFaceNormalsDiffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ExceptionLocalFaceNormalsDiffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">std::logic_error(fname + <span class="stringliteral">&quot;: Not all face normals are,&quot;</span> \</div>
+<div class="line"><span class="stringliteral">&quot; within tolerance, locally the same for the reflecting boundary&quot;</span> \</div>
+<div class="line"><span class="stringliteral">&quot; condition requested.&quot;</span>)</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html#l00017">17</a> of file <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a>.</p>
+
+</div>
+</div>
+<a id="ae598903af29e125dc11a3a9ab0434088" name="ae598903af29e125dc11a3a9ab0434088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae598903af29e125dc11a3a9ab0434088">&#9670;&nbsp;</a></span>mk_shrd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mk_shrd</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;std::make_shared&lt;x&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html#l00007">7</a> of file <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a>.</p>
+
+</div>
+</div>
+<a id="ad5c42766ff8cd705ef739ec7fd02b22c" name="ad5c42766ff8cd705ef739ec7fd02b22c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5c42766ff8cd705ef739ec7fd02b22c">&#9670;&nbsp;</a></span>SweepAniHeteroBndry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SweepAniHeteroBndry&#160;&#160;&#160;<a class="el" href="../../d8/da9/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogeneous.html">chi_mesh::sweep_management::BoundaryIncidentHeterogeneous</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html#l00014">14</a> of file <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a>.</p>
+
+</div>
+</div>
+<a id="a278a8eee84401b354ee40fbf2ea7a084" name="a278a8eee84401b354ee40fbf2ea7a084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278a8eee84401b354ee40fbf2ea7a084">&#9670;&nbsp;</a></span>SweepIncHomoBndry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SweepIncHomoBndry&#160;&#160;&#160;<a class="el" href="../../d0/dbe/classchi__mesh_1_1sweep__management_1_1_boundary_isotropic_homogenous.html">chi_mesh::sweep_management::BoundaryIsotropicHomogenous</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html#l00010">10</a> of file <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a>.</p>
+
+</div>
+</div>
+<a id="a25a881c26ec45077a841cc3934356427" name="a25a881c26ec45077a841cc3934356427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a881c26ec45077a841cc3934356427">&#9670;&nbsp;</a></span>SweepReflectingBndry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SweepReflectingBndry&#160;&#160;&#160;<a class="el" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html">chi_mesh::sweep_management::BoundaryReflecting</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html#l00012">12</a> of file <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a>.</p>
+
+</div>
+</div>
+<a id="a20891cfefb85ef5a50813e2f863123ff" name="a20891cfefb85ef5a50813e2f863123ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20891cfefb85ef5a50813e2f863123ff">&#9670;&nbsp;</a></span>SweepVaccuumBndry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SweepVaccuumBndry&#160;&#160;&#160;<a class="el" href="../../d1/de0/classchi__mesh_1_1sweep__management_1_1_boundary_vaccuum.html">chi_mesh::sweep_management::BoundaryVaccuum</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html#l00008">8</a> of file <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

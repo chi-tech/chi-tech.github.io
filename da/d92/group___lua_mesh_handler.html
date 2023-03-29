@@ -102,6 +102,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga6045293a83e8b97b548860df3911d2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae0ceeadeae53b7ac22b32f3665d1ea2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler.html#gae0ceeadeae53b7ac22b32f3665d1ea2a">chi_lua::chiMeshHandlerExportMeshToVTK</a> (char FileName)</td></tr>
 <tr class="separator:gae0ceeadeae53b7ac22b32f3665d1ea2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaced6b42c4facef20a0c289f579146eb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler.html#gaced6b42c4facef20a0c289f579146eb0">chi_lua::chiMeshHandlerExportMeshToExodus</a> (char FileName)</td></tr>
+<tr class="separator:gaced6b42c4facef20a0c289f579146eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3be36a5ecf5469ad0980dd5aa4097a2a"><td class="memItemLeft" align="right" valign="top">Handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chi_lua::chiMeshHandlerCreate</a> ()</td></tr>
 <tr class="separator:ga3be36a5ecf5469ad0980dd5aa4097a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8b57c222c6d266eb65404417d03c336e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d92/group___lua_mesh_handler.html#ga8b57c222c6d266eb65404417d03c336e">chi_lua::chiMeshHandlerSetCurrent</a> (int HandlerHandler)</td></tr>
@@ -127,7 +129,33 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created mesh handler.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01262">1262</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01263">1263</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="gaced6b42c4facef20a0c289f579146eb0" name="gaced6b42c4facef20a0c289f579146eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaced6b42c4facef20a0c289f579146eb0">&#9670;&nbsp;</a></span>chiMeshHandlerExportMeshToExodus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_lua::chiMeshHandlerExportMeshToExodus </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>FileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Exports the mesh to exodus format (.e extensions). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FileName</td><td>char Base name of the file to be used. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01256">1256</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -158,13 +186,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Exports the mesh to a wavefront.obj format. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">FileName</td><td>char Name of the file to be used. </td></tr>
+    <tr><td class="paramname">FileName</td><td>char Base name of the file to be used. </td></tr>
     <tr><td class="paramname">ExportByMaterial</td><td>bool Default: False. Flag indicating whether to export the extruder's surface mesh by material. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01250">1250</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01246">1246</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -185,12 +213,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Exports the mesh to vtu format. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">FileName</td><td>char Name of the file to be used. </td></tr>
+    <tr><td class="paramname">FileName</td><td>char Base name of the file to be used. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01255">1255</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01251">1251</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -218,7 +246,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01270">1270</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01271">1271</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

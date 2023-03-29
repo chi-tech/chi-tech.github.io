@@ -11,7 +11,7 @@ var searchData=
   ['face_5fdof_5fmappings_5f_8',['face_dof_mappings_',['../de/d0d/classchi__math_1_1finite__element_1_1_unit_integral_data.html#a7e42c960d476ed9e22bdc87cf5ed6a59',1,'chi_math::finite_element::UnitIntegralData::face_dof_mappings_()'],['../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a0df8aee50aa0f33c38fd633c7dfa1231',1,'chi_math::finite_element::InternalQuadraturePointData::face_dof_mappings_()']]],
   ['face_5fg_5fmatrices_9',['face_G_matrices',['../dc/d37/structlbs_1_1_unit_cell_matrices.html#a9e818d414711881d03b02c8bfcef9b54',1,'lbs::UnitCellMatrices']]],
   ['face_5findices_10',['face_indices',['../d4/ddb/structchi__mesh_1_1_poly_face.html#ae37810db74b8968677b351142dd027d9',1,'chi_mesh::PolyFace']]],
-  ['face_5flocal_5fflags_11',['face_local_flags',['../d4/d32/classlbs_1_1_cell_l_b_s_view.html#a133599f7b519bc62934e2ca3a3d24ba3',1,'lbs::CellLBSView']]],
+  ['face_5flocal_5fflags_5f_11',['face_local_flags_',['../d4/d32/classlbs_1_1_cell_l_b_s_view.html#ab0667673adfd1dd5b036b7683e5353d1',1,'lbs::CellLBSView']]],
   ['face_5fm_5fmatrices_12',['face_M_matrices',['../dc/d37/structlbs_1_1_unit_cell_matrices.html#a59de94d72dc71896559bdda93f3f0635',1,'lbs::UnitCellMatrices']]],
   ['face_5fmap_13',['face_map',['../dd/d96/structchi__math_1_1_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_map.html#a013fc3442dc3c4a0b3aa828f0a42a226',1,'chi_math::PolyhedronMappingFE_PWL::FEnodeMap']]],
   ['face_5fnode_5fmappings_5f_14',['face_node_mappings_',['../d8/d08/classchi__math_1_1_cell_mapping.html#a47ff5ece9a2cbd654eee1994140f1f5d',1,'chi_math::CellMapping']]],
@@ -29,9 +29,11 @@ var searchData=
   ['field_5fvector_5f_26',['field_vector_',['../df/de9/classchi__physics_1_1_field_function.html#a23889e591447488b93002439c5eb92be',1,'chi_physics::FieldFunction']]],
   ['file_5fname_27',['file_name',['../d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html#ad365cd8da54610ef8be240becbcb6fef',1,'chi_mesh::UnpartitionedMesh::Options']]],
   ['final_5fres_5f_28',['final_res_',['../d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a30b0784de0cad2001b917c8a2ef116c2',1,'chi_math::CDFSampler']]],
-  ['fission_5frate_5flocal_5f_29',['fission_rate_local_',['../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a503bc52f0059577f562ef657383e364b',1,'lbs::DiscOrdTransientSolver']]],
-  ['fluds_30',['fluds',['../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a7d3f3b813cc09205e23fd98c38b5d931',1,'chi_mesh::sweep_management::AngleSet::fluds()'],['../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a2ac1daa4b2324998a79e3c5250a4f2dd',1,'lbs::SweepChunkPWL::Upwinder::fluds()'],['../d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html#a623532002c382da7037a0d0322eb57eb',1,'lbs::SweepChunkPWLTransientTheta::Upwinder::fluds()']]],
-  ['flux_5fmoments_5fuk_5fman_5f_31',['flux_moments_uk_man_',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a54a9bad4d3b0e43ad0e732f8b0381759',1,'lbs::LBSSolver']]],
-  ['force_5fpolygons_32',['force_polygons',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a9d0d80b0063ed44a3456f01d9bea5d9e',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS']]],
-  ['fractional_5fyield_33',['fractional_yield',['../d1/da6/structchi__physics_1_1_transport_cross_sections_1_1_precursor.html#a6afe6fb45e650522b53f06638a1f64e8',1,'chi_physics::TransportCrossSections::Precursor']]]
+  ['first_5fgrp_5f_29',['first_grp_',['../dc/d64/classlbs_1_1_source_function.html#a6b4402f25206a5d78f25e564a10b40a8',1,'lbs::SourceFunction']]],
+  ['fission_5frate_5flocal_5f_30',['fission_rate_local_',['../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a503bc52f0059577f562ef657383e364b',1,'lbs::DiscOrdTransientSolver']]],
+  ['fixed_5fsrc_5fmoments_5f_31',['fixed_src_moments_',['../dc/d64/classlbs_1_1_source_function.html#ad76a26e2099a9a12aa46614c9391cdf1',1,'lbs::SourceFunction']]],
+  ['fluds_32',['fluds',['../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html#a875ce1ad2d09f78b2395164068d5e3ca',1,'chi_mesh::sweep_management::AngleSet::fluds()'],['../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html#a945a118f21de0769ebabb54cabab382c',1,'lbs::SweepChunkPWL::Upwinder::fluds()'],['../d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html#a4a99708d08f37ffe6f52d11ba3cdb213',1,'lbs::SweepChunkPWLTransientTheta::Upwinder::fluds()']]],
+  ['flux_5fmoments_5fuk_5fman_5f_33',['flux_moments_uk_man_',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a54a9bad4d3b0e43ad0e732f8b0381759',1,'lbs::LBSSolver']]],
+  ['force_5fpolygons_34',['force_polygons',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a9d0d80b0063ed44a3456f01d9bea5d9e',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS']]],
+  ['fractional_5fyield_35',['fractional_yield',['../de/d51/structchi__physics_1_1_multi_group_x_s_1_1_precursor.html#a63023c378b663429c778b249b9d069f1',1,'chi_physics::MultiGroupXS::Precursor']]]
 ];

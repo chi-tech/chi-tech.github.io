@@ -142,20 +142,20 @@ $(document).ready(function(){initNavTree('d9/d9b/sweep__boundaries_8cc_source.ht
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordtype">int</span> fi,</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="keywordtype">int</span> gs_ss_begin)</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">double</span>* Psi = zero_boundary_flux.data();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">double</span>* Psi = zero_boundary_flux_.data();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">int</span> reflected_angle_num = reflected_anglenum[angle_num];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">int</span> reflected_angle_num = reflected_anglenum_[angle_num];</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">if</span> (opposing_reflected)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">if</span> (opposing_reflected_)</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    Psi = &amp;hetero_boundary_flux_old[reflected_angle_num]</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    Psi = &amp;hetero_boundary_flux_old_[reflected_angle_num]</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                   [cell_local_id]</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                   [face_num]</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                                   [fi][gs_ss_begin];</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    Psi = &amp;hetero_boundary_flux[reflected_angle_num]</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    Psi = &amp;hetero_boundary_flux_[reflected_angle_num]</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                               [cell_local_id]</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                               [face_num]</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                               [fi][gs_ss_begin];</div>
@@ -174,7 +174,7 @@ $(document).ready(function(){initNavTree('d9/d9b/sweep__boundaries_8cc_source.ht
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordtype">int</span> fi,</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordtype">int</span> gs_ss_begin)</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordflow">return</span> &amp;hetero_boundary_flux[angle_num]</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordflow">return</span> &amp;hetero_boundary_flux_[angle_num]</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                              [cell_local_id]</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                              [face_num]</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                              [fi][gs_ss_begin];</div>
@@ -187,7 +187,7 @@ $(document).ready(function(){initNavTree('d9/d9b/sweep__boundaries_8cc_source.ht
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><a class="code hl_function" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a45948eda89af9db4bb40dd6b84c1bac1">  UpdateAnglesReadyStatus</a>(<span class="keyword">const</span> std::vector&lt;size_t&gt;&amp; angles, <span class="keywordtype">size_t</span> gs_ss)</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>{</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; n : angles)</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    angle_readyflags[reflected_anglenum[n]][gs_ss] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    angle_readyflags_[reflected_anglenum_[n]][gs_ss] = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
@@ -195,11 +195,11 @@ $(document).ready(function(){initNavTree('d9/d9b/sweep__boundaries_8cc_source.ht
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a12e60d5562c37a2984c2ae0c5b50f4fb">  100</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a12e60d5562c37a2984c2ae0c5b50f4fb">chi_mesh::sweep_management::BoundaryReflecting::</a></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><a class="code hl_function" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a12e60d5562c37a2984c2ae0c5b50f4fb">  CheckAnglesReadyStatus</a>(<span class="keyword">const</span> std::vector&lt;size_t&gt;&amp; angles, <span class="keywordtype">size_t</span> gs_ss)</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>{</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordflow">if</span> (opposing_reflected) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordflow">if</span> (opposing_reflected_) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keywordtype">bool</span> ready_flag = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; n : angles)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">if</span> (!hetero_boundary_flux[reflected_anglenum[n]].empty())</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keywordflow">if</span> (not angle_readyflags[n][gs_ss]) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">if</span> (!hetero_boundary_flux_[reflected_anglenum_[n]].empty())</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keywordflow">if</span> (not angle_readyflags_[n][gs_ss]) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordflow">return</span> ready_flag;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
@@ -210,10 +210,10 @@ $(document).ready(function(){initNavTree('d9/d9b/sweep__boundaries_8cc_source.ht
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><a class="code hl_function" href="../../d2/d07/classchi__mesh_1_1sweep__management_1_1_boundary_reflecting.html#a306f157713aa3f3cc2f930db3ce7bdf3">  ResetAnglesReadyStatus</a>()</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>{</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keywordtype">double</span> local_pw_change = 0.0;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">if</span> (opposing_reflected)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">if</span> (opposing_reflected_)</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  {</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">int</span> n=0;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; angle : hetero_boundary_flux){</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; angle : hetero_boundary_flux_){</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <span class="keywordtype">int</span> c=0;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cellvec : angle){</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordtype">int</span> f=0;</div>
@@ -223,7 +223,7 @@ $(document).ready(function(){initNavTree('d9/d9b/sweep__boundaries_8cc_source.ht
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordtype">int</span> g=0;</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; new_val : dofvec)</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>              <span class="keywordtype">double</span> old_val = hetero_boundary_flux_old[n][c][f][i][g];</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>              <span class="keywordtype">double</span> old_val = hetero_boundary_flux_old_[n][c][f][i][g];</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>              <span class="keywordtype">double</span> delta_val = std::fabs(new_val-old_val);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>              <span class="keywordtype">double</span> max_val = std::max(new_val,old_val);</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
@@ -232,7 +232,7 @@ $(document).ready(function(){initNavTree('d9/d9b/sweep__boundaries_8cc_source.ht
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>              <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                local_pw_change = std::max(delta_val,local_pw_change);</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>              hetero_boundary_flux_old[n][c][f][i][g] = new_val;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>              hetero_boundary_flux_old_[n][c][f][i][g] = new_val;</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>              ++g;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            }</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            ++i;</div>
@@ -246,7 +246,7 @@ $(document).ready(function(){initNavTree('d9/d9b/sweep__boundaries_8cc_source.ht
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    MPI_Allreduce(&amp;local_pw_change,&amp;pw_change,1,MPI_DOUBLE,MPI_MAX,MPI_COMM_WORLD);</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  }</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; flags : angle_readyflags)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; flags : angle_readyflags_)</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gs_ss=0; gs_ss&lt;flags.size(); ++gs_ss)</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      flags[gs_ss] = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>}</div>

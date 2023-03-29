@@ -14,5 +14,6 @@ var dir_354221738c66b7e8bb259b6b1043c818 =
       [ "chi_objects::DummyStream", "d7/d40/structchi__objects_1_1_dummy_stream.html", "d7/d40/structchi__objects_1_1_dummy_stream" ],
       [ "chi_objects::DummyStream::DummyStreamBuffer", "dd/d4e/structchi__objects_1_1_dummy_stream_1_1_dummy_stream_buffer.html", "dd/d4e/structchi__objects_1_1_dummy_stream_1_1_dummy_stream_buffer" ]
     ] ],
-    [ "doc.cc", "d1/d95/_chi_log_2doc_8cc.html", null ]
+    [ "doc.cc", "d1/d95/_chi_log_2doc_8cc.html", null ],
+    [ "stringstream_color.h", "d6/d2d/stringstream__color_8h.html", "d6/d2d/stringstream__color_8h" ]
 ];

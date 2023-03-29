@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['qmomentslocal_0',['QMomentsLocal',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a278a2eb01d497ebef86570e9eccc5fcb',1,'lbs::LBSSolver']]],
+  ['qmomentslocal_0',['QMomentsLocal',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a278a2eb01d497ebef86570e9eccc5fcb',1,'lbs::LBSSolver::QMomentsLocal()'],['../dc/db7/classlbs_1_1_l_b_s_solver.html#a87e1d7dff468d6aaaa269e8870e37e0d',1,'lbs::LBSSolver::QMomentsLocal() const']]],
   ['qpointxyz_1',['QPointXYZ',['../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#ad9935574d332f19a9863886d1f2079ca',1,'chi_math::finite_element::InternalQuadraturePointData']]],
   ['quadrature_2',['Quadrature',['../d3/dbf/classchi__math_1_1_quadrature.html#ab3a8253b2fe9ac41606512fa918523c8',1,'chi_math::Quadrature::Quadrature()'],['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a9a999c43c61d74a88a6ee458bf7d0a2f',1,'chi_math::SimplifiedLDFESQ::Quadrature::Quadrature()']]],
   ['quadratureconical_3',['QuadratureConical',['../da/d37/classchi__math_1_1_quadrature_conical.html#a2b3b729d776060651d38b362b9032f1a',1,'chi_math::QuadratureConical']]],
