@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -107,9 +100,9 @@ Data Fields</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Simple data structure to specify boundary conditions. Its stores the BC-type in <code>type</code> and an array of 3 values in <code>values</code>. For a Dirichlet-BC only <code>values[0]</code> is used to specify the value of the BC. For a robin boundary condition we use all 3 values in the form </p><p class="formulaDsp">
-\[ a\phi + b \mathbf{n} \frac{\partial \phi}{\partial \mathbf{x}} = f \]
+<img class="formulaDsp" alt="\[ a\phi + b \mathbf{n} \frac{\partial \phi}{\partial \mathbf{x}} = f \]" src="../../form_330.png" width="101" height="33"/>
 </p>
-<p> where \( a \), \( b \) and \( f \) map to <code>values[0]</code>, <code>values[1]</code> and <code>values[2]</code>, respectively. </p>
+<p> where <img class="formulaInl" alt="$ a $" src="../../form_331.png" width="8" height="8"/>, <img class="formulaInl" alt="$ b $" src="../../form_332.png" width="6" height="12"/> and <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> map to <code>values[0]</code>, <code>values[1]</code> and <code>values[2]</code>, respectively. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d01/diffusion__mip_8h_source.html#l00055">55</a> of file <a class="el" href="../../d9/d01/diffusion__mip_8h_source.html">diffusion_mip.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>

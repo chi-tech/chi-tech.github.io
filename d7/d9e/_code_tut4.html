@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -162,11 +155,11 @@ $(document).ready(function(){initNavTree('d7/d9e/_code_tut4.html','../../'); ini
 <div class="line">                 qp_data.ShapeValue(i, qp) * qp_data.JxW(qp);</div>
 </div><!-- fragment --><h1><a class="anchor" id="CodeTut4Sec4"></a>
 4 Convergence study</h1>
-<p >The Method of Manufactured Solution (MMS) is often used to verify the rate of convergence of computational methods. In order to determine magnitude of the error of the FEM solution, \( \phi_{FEM} \), compared to the MS, \( \phi_{MMS} \), we need to evaluate the following norm </p><p class="formulaDsp">
-\[ ||e||_2 = \sqrt{\int_V \biggr( \phi_{MMS}(\mathbf{x}) - \phi_{FEM}(\mathbf{x})\biggr)^2 dV} \]
+<p >The Method of Manufactured Solution (MMS) is often used to verify the rate of convergence of computational methods. In order to determine magnitude of the error of the FEM solution, <img class="formulaInl" alt="$ \phi_{FEM} $" src="../../form_190.png" width="39" height="15"/>, compared to the MS, <img class="formulaInl" alt="$ \phi_{MMS} $" src="../../form_191.png" width="42" height="15"/>, we need to evaluate the following norm </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ ||e||_2 = \sqrt{\int_V \biggr( \phi_{MMS}(\mathbf{x}) - \phi_{FEM}(\mathbf{x})\biggr)^2 dV} \]" src="../../form_192.png" width="276" height="45"/>
 </p>
 <p> We again here use the quadrature rules to obtain this integral as </p><p class="formulaDsp">
-\[ \int_V \biggr( \phi_{MMS}(\mathbf{x}) - \phi_{FEM}(\mathbf{x})\biggr)^2 dV = \sum_c \sum_n^{N_V} w_n \biggr( \phi_{MMS}(\mathbf{x}_n) - \phi_{FEM}(\tilde{\mathbf{x}}_n)\biggr)^2 \ | J(\tilde{\mathbf{x}}_n | \]
+<img class="formulaDsp" alt="\[ \int_V \biggr( \phi_{MMS}(\mathbf{x}) - \phi_{FEM}(\mathbf{x})\biggr)^2 dV = \sum_c \sum_n^{N_V} w_n \biggr( \phi_{MMS}(\mathbf{x}_n) - \phi_{FEM}(\tilde{\mathbf{x}}_n)\biggr)^2 \ | J(\tilde{\mathbf{x}}_n | \]" src="../../form_193.png" width="515" height="45"/>
 </p>
 <p> for which we use the code </p><div class="fragment"><div class="line"><span class="comment">//============================================= Compute error</span></div>
 <div class="line"><span class="comment">//First get ghosted values</span></div>
@@ -213,8 +206,8 @@ $(document).ready(function(){initNavTree('d7/d9e/_code_tut4.html','../../'); ini
 <div class="line">               &lt;&lt; <span class="stringliteral">&quot; Num-cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00027">chi_log.cc:27</a></div></div>
 <div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
-</div><!-- fragment --><p> Notice that we grab the nodal values of \( \phi_{FEM} \) before we loop over quadrature points. We then use these nodal values within the quadrature-point loop to construct \( \phi_{FEM}(\tilde{\mathbf{x}}_n) \) as </p><p class="formulaDsp">
-\[ \phi_{FEM}(\tilde{\mathbf{x}}_n) = \sum_j \phi_j b_j(\tilde{\mathbf{x}}_n) \]
+</div><!-- fragment --><p> Notice that we grab the nodal values of <img class="formulaInl" alt="$ \phi_{FEM} $" src="../../form_190.png" width="39" height="15"/> before we loop over quadrature points. We then use these nodal values within the quadrature-point loop to construct <img class="formulaInl" alt="$ \phi_{FEM}(\tilde{\mathbf{x}}_n) $" src="../../form_194.png" width="69" height="17"/> as </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \phi_{FEM}(\tilde{\mathbf{x}}_n) = \sum_j \phi_j b_j(\tilde{\mathbf{x}}_n) \]" src="../../form_195.png" width="170" height="35"/>
 </p>
 <p> with the code </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0; j &lt; num_nodes; ++j)</div>
 <div class="line">  phi_fem += nodal_phi[j] * qp_data.ShapeValue(j, qp);</div>

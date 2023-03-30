@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -109,7 +102,7 @@ Figure 1 - Hierarchy of field functions</div></div>
 <div class="line"><a class="code hl_function" href="../../d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chiFFInterpolationSetProperty</a>(slice1,ADD_FIELDFUNCTION,fflist[1])</div>
 <div class="ttc" id="agroup___lua_f_f_interpol_html_ga7305438e0a0dac15a779e1a340b12f7b"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#ga7305438e0a0dac15a779e1a340b12f7b">chi_lua::chiFFInterpolationCreate</a></div><div class="ttdeci">Handle chiFFInterpolationCreate(int FFITypeIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01333">lua_functions.c:1333</a></div></div>
 <div class="ttc" id="agroup___lua_f_f_interpol_html_gaf870d79259973f193b0d485bfdc1fc8d"><div class="ttname"><a href="../../d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chi_lua::chiFFInterpolationSetProperty</a></div><div class="ttdeci">Handle chiFFInterpolationSetProperty(int FFIHandle, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01418">lua_functions.c:1418</a></div></div>
-</div><!-- fragment --><p >The first call creates a interpolator of type SLICE. At the time of writing this tutorial we support LINE, SLICE and VOLUME. The default orientation of a slice interpolator is with the cutting plane's normal pointing in the direction of \( \hat{k} \) and the reference point at (0,0,0). A change in reference point is achieved with a call to <a class="el" href="../../d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chiFFInterpolationSetProperty()</a> with a property index SLICE_POINT. The last line here is to add a field function to this interpolator. We use the same function but this time with a property index ADD_FIELDFUNCTION.</p>
+</div><!-- fragment --><p >The first call creates a interpolator of type SLICE. At the time of writing this tutorial we support LINE, SLICE and VOLUME. The default orientation of a slice interpolator is with the cutting plane's normal pointing in the direction of <img class="formulaInl" alt="$ \hat{k} $" src="../../form_322.png" width="8" height="15"/> and the reference point at (0,0,0). A change in reference point is achieved with a call to <a class="el" href="../../d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chiFFInterpolationSetProperty()</a> with a property index SLICE_POINT. The last line here is to add a field function to this interpolator. We use the same function but this time with a property index ADD_FIELDFUNCTION.</p>
 <h2>Step 4 - Initialize and execute</h2>
 <p >For very complex meshes it might be prudent to perform initialization before actually solving the systems, since this established the necessary interpolation parameters and allows one to execute the interpolator multiple times after that with minimal cost.</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="../../d9/dfa/group___lua_f_f_interpol.html#gac6e3979ecc5e6a577eb268be00f4cfa0">chiFFInterpolationInitialize</a>(slice1)</div>

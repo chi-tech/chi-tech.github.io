@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -323,12 +316,12 @@ OPERATION = Some interpolations support operation types. See OpTypes.<br  />
 LOGICAL_VOLUME = To be followed by a handle to a logical volume to be used by the interpolator.<br  />
  </p><h3>OpTypes</h3>
 <p >Basic operations are volume sum, volume average or volume max. The volume sum is computed from </p><p class="formulaDsp">
-\[ Sum = \sum_k \sum_i u_i \int_V N_i .dV. \]
+<img class="formulaDsp" alt="\[ Sum = \sum_k \sum_i u_i \int_V N_i .dV. \]" src="../../form_3.png" width="179" height="41"/>
 </p>
 <p> The volume average is computed from </p><p class="formulaDsp">
-\[ Avg = \frac{\sum_k \sum_i u_i \int_V N_i .dV}{\sum_k \sum_i \int_V N_i .dV} \]
+<img class="formulaDsp" alt="\[ Avg = \frac{\sum_k \sum_i u_i \int_V N_i .dV}{\sum_k \sum_i \int_V N_i .dV} \]" src="../../form_4.png" width="176" height="41"/>
 </p>
-<p> The volume max is simply \( max_{k,i}(u_i) \).<br  />
+<p> The volume max is simply <img class="formulaInl" alt="$ max_{k,i}(u_i) $" src="../../form_5.png" width="71" height="17"/>.<br  />
 <br  />
  OP_SUM<br  />
 For volume interpolations, computes the volume integral.<br  />
@@ -343,7 +336,7 @@ A modified version of these operations are also available. Instead of OP_SUM, OP
 <div class="line"> ret_val = 0.0;   --Or some computation</div>
 <div class="line"> <span class="keywordflow">return</span> ret_val</div>
 <div class="line">end</div>
-</div><!-- fragment --><p >This code will be called to return a value \( f(u_i) \) to be used instead of the field function \( u_i \).<br  />
+</div><!-- fragment --><p >This code will be called to return a value <img class="formulaInl" alt="$ f(u_i) $" src="../../form_6.png" width="33" height="17"/> to be used instead of the field function <img class="formulaInl" alt="$ u_i $" src="../../form_7.png" width="14" height="11"/>.<br  />
  Example: </p><div class="fragment"><div class="line">xwing=2.0</div>
 <div class="line">function IntegrateMaterialVolume(ff_value,mat_id)</div>
 <div class="line">    <span class="keywordflow">return</span> xwing</div>

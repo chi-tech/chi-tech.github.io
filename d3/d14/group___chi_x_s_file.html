@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -119,41 +112,41 @@ $(document).ready(function(){initNavTree('d3/d14/group___chi_x_s_file.html','../
 </div><!-- fragment --><h2>Steady state simulations:</h2>
 <p >The cross sections can be used in simulations solving the steady state Linear Boltzmann Equation of the form:</p>
 <p class="formulaDsp">
-\[ \vec{\Omega}_n \boldsymbol{\cdot} \vec{\nabla} \psi_{ng} + \sigma_{tg} \psi_{ng} = \sum_{\ell=0}^L \sum_{m=-\ell}^{+\ell} \frac{2\ell+1}{4\pi} Y_{\ell m} (\vec{\Omega}_n) \sum_{g&#39;=0}^{G-1} \sigma_{s\ell,g&#39;{\to}g} \phi_{\ell m,g&#39;} + q_{ext,ng} + q_{fission,ng} \]
+<img class="formulaDsp" alt="\[ \vec{\Omega}_n \boldsymbol{\cdot} \vec{\nabla} \psi_{ng} + \sigma_{tg} \psi_{ng} = \sum_{\ell=0}^L \sum_{m=-\ell}^{+\ell} \frac{2\ell+1}{4\pi} Y_{\ell m} (\vec{\Omega}_n) \sum_{g'=0}^{G-1} \sigma_{s\ell,g'{\to}g} \phi_{\ell m,g'} + q_{ext,ng} + q_{fission,ng} \]" src="../../form_98.png" width="545" height="48"/>
 </p>
-<p >The two most prominent items required here includes \( \sigma_{tg} \) and \( \sigma_{s\ell,g&#39;{\to}g} \). The latter is an entry in a structure we call a generic transfer matrix for moment \( \ell \) with rows \(g=0..G-1\) and columns \(g&#39;=0..G-1\). These two items are often the only items required in a transport simulation.</p>
+<p >The two most prominent items required here includes <img class="formulaInl" alt="$ \sigma_{tg} $" src="../../form_99.png" width="20" height="12"/> and <img class="formulaInl" alt="$ \sigma_{s\ell,g'{\to}g} $" src="../../form_100.png" width="51" height="12"/>. The latter is an entry in a structure we call a generic transfer matrix for moment <img class="formulaInl" alt="$ \ell $" src="../../form_14.png" width="8" height="12"/> with rows <img class="formulaInl" alt="$g=0..G-1$" src="../../form_101.png" width="81" height="15"/> and columns <img class="formulaInl" alt="$g'=0..G-1$" src="../../form_102.png" width="86" height="15"/>. These two items are often the only items required in a transport simulation.</p>
 <p >In simulations with fission-sources, cross sections support two formats, the simple combined cross sections without delayed neutrons</p>
 <p class="formulaDsp">
-\[ q_{fission,ng} = \frac{\chi_g}{4\pi} \sum_{g&#39;=0}^{G-1} \nu_{g&#39;} \sigma_{fg&#39;} \phi_{00g&#39;} \]
+<img class="formulaDsp" alt="\[ q_{fission,ng} = \frac{\chi_g}{4\pi} \sum_{g'=0}^{G-1} \nu_{g'} \sigma_{fg'} \phi_{00g'} \]" src="../../form_103.png" width="210" height="48"/>
 </p>
 <p >and those with delayed neutrons, the latter which are currently only used in the k-eigenvalue solver.</p>
 <h2>k-eigenvalue related items</h2>
 <p >As stated before, the cross section file supports two formats, the simple combined cross sections without delayed neutrons which are depicted above and those with delayed neutrons shown below</p>
 <p class="formulaDsp">
-\[ q_{fission,ng} = \frac{\chi_g}{4\pi} \sum_{g&#39;=0}^{G-1} \nu_{prompt,g&#39;} \sigma_{fg&#39;} \phi_{00g&#39;} + \sum_{j=0}^{J-1} \frac{\chi_{delayed,jg}}{4\pi} \gamma_j \sum_{g&#39;=0}^{G-1} \nu_{delayed,g&#39;} \sigma_{fg&#39;} \phi_{00g&#39;} \]
+<img class="formulaDsp" alt="\[ q_{fission,ng} = \frac{\chi_g}{4\pi} \sum_{g'=0}^{G-1} \nu_{prompt,g'} \sigma_{fg'} \phi_{00g'} + \sum_{j=0}^{J-1} \frac{\chi_{delayed,jg}}{4\pi} \gamma_j \sum_{g'=0}^{G-1} \nu_{delayed,g'} \sigma_{fg'} \phi_{00g'} \]" src="../../form_104.png" width="525" height="48"/>
 </p>
 <p>.</p>
-<p >Codes may also choose to update precursor concentrations for which their decay constants, \( \lambda_j \) are required.</p>
+<p >Codes may also choose to update precursor concentrations for which their decay constants, <img class="formulaInl" alt="$ \lambda_j $" src="../../form_105.png" width="14" height="17"/> are required.</p>
 <h2>Keyword definitions</h2>
 <ul>
-<li>NUM_GROUPS num_groups Required. Specifies the number of groups for this cross section. Symbol \( G \).</li>
-<li>NUM_MOMENTS num_moments Required. The number of transfer matrices to allocate for this cross section (whether used or not). Typically this number is one greater than the scattering order (i.e., \( L+1 \))</li>
-<li>NUM_PRECURSORS num_precursors Optional. Indicates how many precursors are used in this cross section. Symbol \( J \)</li>
+<li>NUM_GROUPS num_groups Required. Specifies the number of groups for this cross section. Symbol <img class="formulaInl" alt="$ G $" src="../../form_106.png" width="12" height="12"/>.</li>
+<li>NUM_MOMENTS num_moments Required. The number of transfer matrices to allocate for this cross section (whether used or not). Typically this number is one greater than the scattering order (i.e., <img class="formulaInl" alt="$ L+1 $" src="../../form_107.png" width="35" height="14"/>)</li>
+<li>NUM_PRECURSORS num_precursors Optional. Indicates how many precursors are used in this cross section. Symbol <img class="formulaInl" alt="$ J $" src="../../form_108.png" width="9" height="12"/></li>
 <li>Optional key words per line:<ul>
-<li>SIGMA_T_BEGIN. Optional. Starts a block that is terminated by a line SIGMA_T_END. Each line in the block processes the first two words as [group, sigma_t]. Populates the sigma_tg field. Symbol \( \sigma_{tg} \).</li>
-<li>SIGMA_A_BEGIN. Optional. Starts a block that is terminated by a line SIGMA_A_END. Each line in the block processes the first two words as [group, sigma_a]. Populates the sigma_ag field. Symbol \( \sigma_{ag} \). If this is not supplied then sigma_a is estimated from the transfer matrix and may erroneously estimate balance.</li>
-<li>SIGMA_F_BEGIN. Optional. Starts a block that is terminated by a line SIGMA_F_END. Each line in the block processes the first two words as [group, sigma_f]. Populates the sigma_fg field. Symbol \( \sigma_{fg} \).</li>
-<li>NU_BEGIN. Optional. Starts a block that is terminated by a line NU_END. Each line in the block processes the first two words as [group, nu]. Populates the nu field. Upon completing the file processing the nu_sigma_fg field gets populated from the product of nu and sigma_fg. Symbol \( \nu_g \).</li>
-<li>NU_PROMPT_BEGIN. Optional. Starts a block that is terminated by a line NU_PROMPT_END. Each line in the block processes the first two words as [group, nu_prompt]. Populates the nu_prompt field. Upon completing the file processing the nu_p_sigma_fg field gets populated from the product of nu_prompt and sigma_fg. Symbol \( \nu_{prompt,g} \).</li>
-<li>NU_DELAYED_BEGIN. Optional. Starts a block that is terminated by a line NU_DELAYED_END. Each line in the block processes the first two words as [group, nu_delayed]. Populates the nu_delayed field. Upon completing the file processing the nu_d_sigma_fg field gets populated from the product of nu_delayed and sigma_fg. Symbol \( \nu_{delayed,g} \).</li>
-<li>CHI_BEGIN. Optional. Starts a block that is terminated by a line CHI_END. Each line in the block processes the first two words as [group, chi]. Populates the chi field. Symbol \( \chi_{g} \).</li>
-<li>CHI_PROMPT_BEGIN. Optional. Starts a block that is terminated by a line CHI_PROMPT_END. Each line in the block processes the first two words as [group, chi]. Populates the chi_prompt field. Symbol \( \chi_{prompt, g} \).</li>
-<li>VELOCITY_BEGIN. Optional. Starts a block that is terminated by a line VELOCITY_END. Each line in the block processes the first two words as [group, velocity]. Populates the inv_velocity field by inverting parsed values. Symbol \( \frac{1}{v_g} \).</li>
-<li>INV_VELOCITY_BEGIN. Optional. Starts a block that is terminated by a line INV_VELOCITY_END. Each line in the block processes the first two words as [group, inv_velocity]. Populates the inv_velocity field. If this field and VELOCITY are provided, this field will be used. Symbol \( \frac{1}{v_g} \).</li>
-<li>PRECURSOR_DECAY_CONSTANTS_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_DECAY_CONSTANTS_END. Each line in the block processes the first two words as [precursor, lambda]. Populates the lambda field (the precursor decay constant). Symbol \( \lambda_j \).</li>
-<li>PRECURSOR_FRACTIONAL_YIELDS_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_FRACTIONAL_YIELDS_END. Each line in the block processes the first two words as [precursor, gamma]. Populates the gamma field (the precursor production fraction per fission). Symbol \( \gamma_j \).</li>
-<li>CHI_DELAYED_BEGIN. Optional. Starts a block that is terminated by a line CHI_DELAYED_END. Each line in the block processes the first word as the group index and the remaining NUM_PRECURSORS words as the the individual precursor's associated delayed spectrum (chi). Populates the chi_d field. Symbol \( \chi_{delayed,jg} \).</li>
-<li>TRANSFER_MOMENTS_BEGIN. Optional. Starts a block that is terminated by a line TRANSFER_MOMENTS_END. Each line in the block processes a line only if it starts with the keyword M_GPRIME_G_VAL which needs to be followed by four values [moment,gprime,g,value]. Populates transfer-matrix for moment m, row g, column gprime, with value. Symbol \( \sigma_{s\ell,g&#39;{\to}g} \).</li>
+<li>SIGMA_T_BEGIN. Optional. Starts a block that is terminated by a line SIGMA_T_END. Each line in the block processes the first two words as [group, sigma_t]. Populates the sigma_tg field. Symbol <img class="formulaInl" alt="$ \sigma_{tg} $" src="../../form_99.png" width="20" height="12"/>.</li>
+<li>SIGMA_A_BEGIN. Optional. Starts a block that is terminated by a line SIGMA_A_END. Each line in the block processes the first two words as [group, sigma_a]. Populates the sigma_ag field. Symbol <img class="formulaInl" alt="$ \sigma_{ag} $" src="../../form_109.png" width="21" height="12"/>. If this is not supplied then sigma_a is estimated from the transfer matrix and may erroneously estimate balance.</li>
+<li>SIGMA_F_BEGIN. Optional. Starts a block that is terminated by a line SIGMA_F_END. Each line in the block processes the first two words as [group, sigma_f]. Populates the sigma_fg field. Symbol <img class="formulaInl" alt="$ \sigma_{fg} $" src="../../form_110.png" width="21" height="12"/>.</li>
+<li>NU_BEGIN. Optional. Starts a block that is terminated by a line NU_END. Each line in the block processes the first two words as [group, nu]. Populates the nu field. Upon completing the file processing the nu_sigma_fg field gets populated from the product of nu and sigma_fg. Symbol <img class="formulaInl" alt="$ \nu_g $" src="../../form_111.png" width="14" height="12"/>.</li>
+<li>NU_PROMPT_BEGIN. Optional. Starts a block that is terminated by a line NU_PROMPT_END. Each line in the block processes the first two words as [group, nu_prompt]. Populates the nu_prompt field. Upon completing the file processing the nu_p_sigma_fg field gets populated from the product of nu_prompt and sigma_fg. Symbol <img class="formulaInl" alt="$ \nu_{prompt,g} $" src="../../form_112.png" width="56" height="12"/>.</li>
+<li>NU_DELAYED_BEGIN. Optional. Starts a block that is terminated by a line NU_DELAYED_END. Each line in the block processes the first two words as [group, nu_delayed]. Populates the nu_delayed field. Upon completing the file processing the nu_d_sigma_fg field gets populated from the product of nu_delayed and sigma_fg. Symbol <img class="formulaInl" alt="$ \nu_{delayed,g} $" src="../../form_113.png" width="57" height="12"/>.</li>
+<li>CHI_BEGIN. Optional. Starts a block that is terminated by a line CHI_END. Each line in the block processes the first two words as [group, chi]. Populates the chi field. Symbol <img class="formulaInl" alt="$ \chi_{g} $" src="../../form_114.png" width="17" height="12"/>.</li>
+<li>CHI_PROMPT_BEGIN. Optional. Starts a block that is terminated by a line CHI_PROMPT_END. Each line in the block processes the first two words as [group, chi]. Populates the chi_prompt field. Symbol <img class="formulaInl" alt="$ \chi_{prompt, g} $" src="../../form_115.png" width="60" height="12"/>.</li>
+<li>VELOCITY_BEGIN. Optional. Starts a block that is terminated by a line VELOCITY_END. Each line in the block processes the first two words as [group, velocity]. Populates the inv_velocity field by inverting parsed values. Symbol <img class="formulaInl" alt="$ \frac{1}{v_g} $" src="../../form_116.png" width="15" height="23"/>.</li>
+<li>INV_VELOCITY_BEGIN. Optional. Starts a block that is terminated by a line INV_VELOCITY_END. Each line in the block processes the first two words as [group, inv_velocity]. Populates the inv_velocity field. If this field and VELOCITY are provided, this field will be used. Symbol <img class="formulaInl" alt="$ \frac{1}{v_g} $" src="../../form_116.png" width="15" height="23"/>.</li>
+<li>PRECURSOR_DECAY_CONSTANTS_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_DECAY_CONSTANTS_END. Each line in the block processes the first two words as [precursor, lambda]. Populates the lambda field (the precursor decay constant). Symbol <img class="formulaInl" alt="$ \lambda_j $" src="../../form_105.png" width="14" height="17"/>.</li>
+<li>PRECURSOR_FRACTIONAL_YIELDS_BEGIN. Optional. Starts a block that is terminated by a line PRECURSOR_FRACTIONAL_YIELDS_END. Each line in the block processes the first two words as [precursor, gamma]. Populates the gamma field (the precursor production fraction per fission). Symbol <img class="formulaInl" alt="$ \gamma_j $" src="../../form_117.png" width="14" height="12"/>.</li>
+<li>CHI_DELAYED_BEGIN. Optional. Starts a block that is terminated by a line CHI_DELAYED_END. Each line in the block processes the first word as the group index and the remaining NUM_PRECURSORS words as the the individual precursor's associated delayed spectrum (chi). Populates the chi_d field. Symbol <img class="formulaInl" alt="$ \chi_{delayed,jg} $" src="../../form_118.png" width="66" height="12"/>.</li>
+<li>TRANSFER_MOMENTS_BEGIN. Optional. Starts a block that is terminated by a line TRANSFER_MOMENTS_END. Each line in the block processes a line only if it starts with the keyword M_GPRIME_G_VAL which needs to be followed by four values [moment,gprime,g,value]. Populates transfer-matrix for moment m, row g, column gprime, with value. Symbol <img class="formulaInl" alt="$ \sigma_{s\ell,g'{\to}g} $" src="../../form_100.png" width="51" height="12"/>.</li>
 </ul>
 </li>
 <li>Comments can be between individual blocks but only the TRANSFER_MOMENTS block may have comments between the _BEGIN and _END</li>

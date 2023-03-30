@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -126,13 +119,13 @@ Introduction</h1>
 <img src="../../UkManVertsNodes.png" alt="" width="600px"/>
 <div class="caption">
 Figure 1: Cells, vertices and nodes.</div></div>
-<p >Where degrees-of-freedom differ from nodes is that each node can be stacked with a number of unknowns, e.g., one might have to solve a number of physical variables in a multiphysics simulation involving 2D velocity, \( u_x \) and \( u_y \), a three energy group flux, \( \phi_0, \ \phi_1, \ \phi_2 \), and pressure, \( p \). One can stack these variables in any form, for example:</p><ul>
-<li>Unknown 0, a 6 component vector containing \( u_x, \ u_y, \ \phi_0, \ \phi_1, \ \phi_2 \), and \( p \)</li>
+<p >Where degrees-of-freedom differ from nodes is that each node can be stacked with a number of unknowns, e.g., one might have to solve a number of physical variables in a multiphysics simulation involving 2D velocity, <img class="formulaInl" alt="$ u_x $" src="../../form_316.png" width="17" height="11"/> and <img class="formulaInl" alt="$ u_y $" src="../../form_317.png" width="17" height="12"/>, a three energy group flux, <img class="formulaInl" alt="$ \phi_0, \ \phi_1, \ \phi_2 $" src="../../form_318.png" width="69" height="15"/>, and pressure, <img class="formulaInl" alt="$ p $" src="../../form_61.png" width="9" height="11"/>. One can stack these variables in any form, for example:</p><ul>
+<li>Unknown 0, a 6 component vector containing <img class="formulaInl" alt="$ u_x, \ u_y, \ \phi_0, \ \phi_1, \ \phi_2 $" src="../../form_319.png" width="126" height="17"/>, and <img class="formulaInl" alt="$ p $" src="../../form_61.png" width="9" height="11"/></li>
 </ul>
 <p >or more elegantly</p><ul>
-<li>Unknown 0, a 2 component vector containing \( u_x \) and \( u_y \)</li>
-<li>Unknown 1, a 3 component vector containing \( \phi_0, \ \phi_1, \ \phi_2 \)</li>
-<li>Unknown 2, a single scalar (1 component) containing just \( p \)</li>
+<li>Unknown 0, a 2 component vector containing <img class="formulaInl" alt="$ u_x $" src="../../form_316.png" width="17" height="11"/> and <img class="formulaInl" alt="$ u_y $" src="../../form_317.png" width="17" height="12"/></li>
+<li>Unknown 1, a 3 component vector containing <img class="formulaInl" alt="$ \phi_0, \ \phi_1, \ \phi_2 $" src="../../form_318.png" width="69" height="15"/></li>
+<li>Unknown 2, a single scalar (1 component) containing just <img class="formulaInl" alt="$ p $" src="../../form_61.png" width="9" height="11"/></li>
 </ul>
 <p >The latter essentially means that each node can have a number of unknowns stacked onto it as shown in Figure 2 below.</p>
 <div class="image">

@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -1116,7 +1109,7 @@ template&lt;int N&gt; </div>
 </div><div class="memdoc">
 <p >Computes the dot product of two vectors.</p>
 <p class="formulaDsp">
-\[ \mathrm{a} \cdot \mathrm{b}=\sum_{i=1}^{n} a_{i} b_{i} \]
+<img class="formulaDsp" alt="\[ \mathrm{a} \cdot \mathrm{b}=\sum_{i=1}^{n} a_{i} b_{i} \]" src="../../form_26.png" width="95" height="42"/>
 </p>
  
 <p class="definition">Definition at line <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00036">36</a> of file <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html">chi_math_03_vector_operations.cc</a>.</p>
@@ -1873,7 +1866,7 @@ template&lt;typename T , typename D  = int&gt; </div>
 <li>bin 8 = 1.0</li>
 <li>bin 9 = 1.0</li>
 </ul>
-<p >Supplying a random number between 0 and 1 should indicate sampling one of the bins 0,1,5 or 8. The most inefficient way to do this is to linearly loop through the cdf and check \( cdf_{i-1} \ge \theta &lt; cdf_i \). An optimized version of this sampling would be to perform a recursive block search which starts with a course view of the cdf and then gradually refines the view until the final linear search can be performed. </p>
+<p >Supplying a random number between 0 and 1 should indicate sampling one of the bins 0,1,5 or 8. The most inefficient way to do this is to linearly loop through the cdf and check <img class="formulaInl" alt="$ cdf_{i-1} \ge \theta &lt; cdf_i $" src="../../form_73.png" width="110" height="15"/>. An optimized version of this sampling would be to perform a recursive block search which starts with a course view of the cdf and then gradually refines the view until the final linear search can be performed. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d3b/cdfsampler_8cc_source.html#l00272">272</a> of file <a class="el" href="../../d5/d3b/cdfsampler_8cc_source.html">cdfsampler.cc</a>.</p>
 
@@ -2152,7 +2145,7 @@ template&lt;typename T , typename D  = int&gt; </div>
 </div><div class="memdoc">
 <p >Returns the 1-norm. Also known as the Taxicab or Manhattan norm.</p>
 <p class="formulaDsp">
-\[ \|\boldsymbol{x}\|_{1}=\sum_{i=1}^{n}\left|x_{i}\right| \]
+<img class="formulaDsp" alt="\[ \|\boldsymbol{x}\|_{1}=\sum_{i=1}^{n}\left|x_{i}\right| \]" src="../../form_27.png" width="95" height="42"/>
 </p>
  
 <p class="definition">Definition at line <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00073">73</a> of file <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html">chi_math_03_vector_operations.cc</a>.</p>
@@ -2176,7 +2169,7 @@ template&lt;typename T , typename D  = int&gt; </div>
 </div><div class="memdoc">
 <p >Returns the 2-norm. Also known as the Euclidian or Frobenius norm.</p>
 <p class="formulaDsp">
-\[ \|\boldsymbol{x}\|_{2}=\sqrt{x_{1}^{2}+\cdots+x_{n}^{2}} \]
+<img class="formulaDsp" alt="\[ \|\boldsymbol{x}\|_{2}=\sqrt{x_{1}^{2}+\cdots+x_{n}^{2}} \]" src="../../form_28.png" width="152" height="29"/>
 </p>
  
 <p class="definition">Definition at line <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00093">93</a> of file <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html">chi_math_03_vector_operations.cc</a>.</p>
@@ -2231,7 +2224,7 @@ template&lt;typename T , typename D  = int&gt; </div>
 </div><div class="memdoc">
 <p >Returns the infinity-norm.</p>
 <p class="formulaDsp">
-\[ \|\mathbf{x}\|_{\infty}=\max \left(\left|x_{1}\right|, \ldots,\left|x_{n}\right|\right) \]
+<img class="formulaDsp" alt="\[ \|\mathbf{x}\|_{\infty}=\max \left(\left|x_{1}\right|, \ldots,\left|x_{n}\right|\right) \]" src="../../form_29.png" width="182" height="17"/>
 </p>
  
 <p class="definition">Definition at line <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00112">112</a> of file <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html">chi_math_03_vector_operations.cc</a>.</p>
@@ -2296,7 +2289,7 @@ template&lt;typename T , typename D  = int&gt; </div>
 </div><div class="memdoc">
 <p >Returns the p-norm.</p>
 <p class="formulaDsp">
-\[ \|\mathbf{x}\|_{p}=\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{1 / p} \]
+<img class="formulaDsp" alt="\[ \|\mathbf{x}\|_{p}=\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{1 / p} \]" src="../../form_30.png" width="144" height="51"/>
 </p>
  
 <p class="definition">Definition at line <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00131">131</a> of file <a class="el" href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html">chi_math_03_vector_operations.cc</a>.</p>

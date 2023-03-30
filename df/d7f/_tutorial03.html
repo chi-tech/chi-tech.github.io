@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -95,7 +88,7 @@ $(document).ready(function(){initNavTree('df/d7f/_tutorial03.html','../../'); in
 <div class="contents">
 <div class="textblock"><p >Let us tackle a basic transport simulation on a 3D mesh<br  />
  </p><p class="formulaDsp">
-\[ \hat{\Omega} \nabla \Psi(\hat{\Omega}) + \sigma_t \Psi (\hat{\Omega}) = \int_{\hat{\Omega}} \sigma_s (\hat{\Omega}&#39; \to \hat{\Omega}) \Psi (\hat{\Omega}&#39;).d\hat{\Omega}&#39; + q(\hat{\Omega}) \]
+<img class="formulaDsp" alt="\[ \hat{\Omega} \nabla \Psi(\hat{\Omega}) + \sigma_t \Psi (\hat{\Omega}) = \int_{\hat{\Omega}} \sigma_s (\hat{\Omega}' \to \hat{\Omega}) \Psi (\hat{\Omega}').d\hat{\Omega}' + q(\hat{\Omega}) \]" src="../../form_323.png" width="351" height="36"/>
 </p>
 <h2>Step 1 - Create your input file, open it in a text editor</h2>
 <p >As before, go to the directory of your choosing and make an input file of your choosing.</p>
@@ -179,7 +172,7 @@ $(document).ready(function(){initNavTree('df/d7f/_tutorial03.html','../../'); in
 <div class="ttc" id="agroup___lua_l_b_s_html_ga56ba50206c4125503807c5889416b66a"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#ga56ba50206c4125503807c5889416b66a">chi_lua::chiLBSSetProperty</a></div><div class="ttdeci">void chiLBSSetProperty(int SolverIndex, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01950">lua_functions.c:1950</a></div></div>
 <div class="ttc" id="agroup___lua_l_b_s_html_gab469beed321e0c7688d4f537b480f5a6"><div class="ttname"><a href="../../d0/daf/group___lua_l_b_s.html#gab469beed321e0c7688d4f537b480f5a6">chi_lua::chiLBSCreateSolver</a></div><div class="ttdeci">SolverHandle chiLBSCreateSolver(string SolverName)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02622">lua_functions.c:2622</a></div></div>
 <div class="ttc" id="agroup___lua_quadrature_html_ga310caeec08395d1fa35d319489fc08f2"><div class="ttname"><a href="../../de/d37/group___lua_quadrature.html#ga310caeec08395d1fa35d319489fc08f2">chi_lua::chiCreateProductQuadrature</a></div><div class="ttdeci">Returns chiCreateProductQuadrature(int QuadratureType, varying values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01586">lua_functions.c:1586</a></div></div>
-</div><!-- fragment --><p >A transport solver is invoked by using a call to <a class="el" href="../../d0/daf/group___lua_l_b_s.html#gab469beed321e0c7688d4f537b480f5a6">chiLBSCreateSolver()</a>. This creates a derived object based on a base physics solver so the mesh region gets added to the solver using the generic call chiSolverAddRegion(). Past this point we need to create the single required group with <a class="el" href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga7d16e3fc369204834a671a6ecf34b564">chiLBSCreateGroup()</a>, although we put this in a loop for in-case we want to increase the number of groups, and then a quadrature rule for integration of the angular fluxes. Since we are dealing with a 3D simulation we will be integrating over \( \theta \), the polar angle, and \( \varphi \), the azimuthal angle. A quadrature with favorable parallel properties is the Gauss-Legendre-Chebyshev quadrature. We create this quadrature with a call to <a class="el" href="../../de/d37/group___lua_quadrature.html#ga310caeec08395d1fa35d319489fc08f2">chiCreateProductQuadrature()</a> and specifying GAUSS_LEGENDRE_CHEBYSHEV as the rule and we then specify 2 azimuthal angles per octant and 2 polar angles per octant.</p>
+</div><!-- fragment --><p >A transport solver is invoked by using a call to <a class="el" href="../../d0/daf/group___lua_l_b_s.html#gab469beed321e0c7688d4f537b480f5a6">chiLBSCreateSolver()</a>. This creates a derived object based on a base physics solver so the mesh region gets added to the solver using the generic call chiSolverAddRegion(). Past this point we need to create the single required group with <a class="el" href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga7d16e3fc369204834a671a6ecf34b564">chiLBSCreateGroup()</a>, although we put this in a loop for in-case we want to increase the number of groups, and then a quadrature rule for integration of the angular fluxes. Since we are dealing with a 3D simulation we will be integrating over <img class="formulaInl" alt="$ \theta $" src="../../form_9.png" width="8" height="12"/>, the polar angle, and <img class="formulaInl" alt="$ \varphi $" src="../../form_16.png" width="9" height="11"/>, the azimuthal angle. A quadrature with favorable parallel properties is the Gauss-Legendre-Chebyshev quadrature. We create this quadrature with a call to <a class="el" href="../../de/d37/group___lua_quadrature.html#ga310caeec08395d1fa35d319489fc08f2">chiCreateProductQuadrature()</a> and specifying GAUSS_LEGENDRE_CHEBYSHEV as the rule and we then specify 2 azimuthal angles per octant and 2 polar angles per octant.</p>
 <p >The next step in the process is to assign a group-set. Group-sets are very useful aggregation features in higher dimension simulations but here we only have a single groupset. The group-set is created with a call to <a class="el" href="../../d5/d03/group___lua_l_b_s_groupsets.html#gaf5d1e656f52f80b4615f022003d1b407">chiLBSCreateGroupset()</a>. Next we add groups to the group-set using a range, however, since we only have one group here the range will be 0 to 0. The final piece of a groupset is to add a quadrature which is achieved with a call to <a class="el" href="../../d5/d03/group___lua_l_b_s_groupsets.html#ga6259f18338815b40c3dabacc85bbaa20">chiLBSGroupsetSetQuadrature()</a>.</p>
 <h2>Step 5 - Initialize and Execute</h2>
 <div class="fragment"><div class="line">chiLBSInitialize(phys1)</div>

@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -95,7 +88,7 @@ $(document).ready(function(){initNavTree('d4/d0f/_tutorial01.html','../../'); in
 <div class="contents">
 <div class="textblock"><p >Let us tackle the basic diffusion equation as applied to steady state heat transfer on a 3D orthogonal mesh.<br  />
  </p><p class="formulaDsp">
-\[ -\nabla \cdot k \nabla T = q \]
+<img class="formulaDsp" alt="\[ -\nabla \cdot k \nabla T = q \]" src="../../form_320.png" width="93" height="15"/>
 </p>
 <p >The purpose of this tutorial is to understand the basics of the input paradigm which is completely different from the traditional input-card based method. ChiTech uses an imbedded Lua console. For a history of Lua please see its wikipedia page <a href="https://en.wikipedia.org/wiki/Lua_(programming_language)">here</a>. This paradigm allows the user to control many aspects of the program flow as well to be more versatile when creating inputs, i.e. reading files, for loops to create multiple entities etc. So let us get started.</p>
 <h2>Step 1 - Create your input file, open it in a text editor</h2>
@@ -110,7 +103,7 @@ $(document).ready(function(){initNavTree('d4/d0f/_tutorial01.html','../../'); in
 <img src="../../CubeMeshTut1.png" alt="" width="350px"/>
 <div class="caption">
 Figure 1 - Mesh spanning from [-1,-1,-1] to [1,1,1]</div></div>
-<p >The first step of this process is to define an array of nodes starting from -1.0 with a distance \( ds \) between each of them. In lua we can create this array programatically: </p><div class="fragment"><div class="line">nodes={}</div>
+<p >The first step of this process is to define an array of nodes starting from -1.0 with a distance <img class="formulaInl" alt="$ ds $" src="../../form_321.png" width="15" height="12"/> between each of them. In lua we can create this array programatically: </p><div class="fragment"><div class="line">nodes={}</div>
 <div class="line">N=32</div>
 <div class="line">ds=2.0/N</div>
 <div class="line"><span class="keywordflow">for</span> i=0,N <span class="keywordflow">do</span></div>
