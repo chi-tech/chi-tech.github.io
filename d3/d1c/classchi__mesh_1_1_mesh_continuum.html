@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -117,14 +124,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae91aa1f03a9808d7dabe4204c78f3ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab98f87bd28f7f647a763e5ed739d8b01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#ab98f87bd28f7f647a763e5ed739d8b01">ExportCellsToVTK</a> (const std::string &amp;file_base_name) const</td></tr>
 <tr class="separator:ab98f87bd28f7f647a763e5ed739d8b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8e87208f4a282d9e10e60b78c550799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#ab8e87208f4a282d9e10e60b78c550799">ExportCellsToExodus</a> (const std::string &amp;file_base_name) const</td></tr>
-<tr class="separator:ab8e87208f4a282d9e10e60b78c550799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12896725fc625c5aec2d94844f9d6096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a12896725fc625c5aec2d94844f9d6096">ExportCellsToExodus</a> (const std::string &amp;file_base_name, bool suppress_node_sets=false, bool suppress_side_sets=false) const</td></tr>
+<tr class="separator:a12896725fc625c5aec2d94844f9d6096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17ab2488ecbb2746dd8bcbbb9ffec8e4"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d1/df6/classchi__mesh_1_1_grid_face_histogram.html">GridFaceHistogram</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a17ab2488ecbb2746dd8bcbbb9ffec8e4">MakeGridFaceHistogram</a> (double master_tolerance=100.0, double slave_tolerance=1.1) const</td></tr>
 <tr class="separator:a17ab2488ecbb2746dd8bcbbb9ffec8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c48a8c33c7d940c2c6d2d3c37bce688"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a8c48a8c33c7d940c2c6d2d3c37bce688">IsCellLocal</a> (uint64_t cell_global_index) const</td></tr>
 <tr class="separator:a8c48a8c33c7d940c2c6d2d3c37bce688"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b82b83a58ae3c740bf8a378f8519f66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a4b82b83a58ae3c740bf8a378f8519f66">IsCellBndry</a> (uint64_t cell_global_index) const</td></tr>
-<tr class="separator:a4b82b83a58ae3c740bf8a378f8519f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec3c1a2dfbd25ba5ef23e8dfd50d4890"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aec3c1a2dfbd25ba5ef23e8dfd50d4890">FindAssociatedVertices</a> (const <a class="el" href="../../db/d1b/classchi__mesh_1_1_cell_face.html">chi_mesh::CellFace</a> &amp;cur_face, std::vector&lt; short &gt; &amp;dof_mapping) const</td></tr>
 <tr class="separator:aec3c1a2dfbd25ba5ef23e8dfd50d4890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e204c5461025df42fa1c2659c2cf9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a09e204c5461025df42fa1c2659c2cf9c">ComputeCentroidFromListOfNodes</a> (const std::vector&lt; uint64_t &gt; &amp;list) const</td></tr>
@@ -147,6 +152,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6ff14aae03e8c78ca276c9f2884bcd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66224c8024c8e1e395389dd8ccd547c1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a66224c8024c8e1e395389dd8ccd547c1">MakeCellOrthoSizes</a> () const</td></tr>
 <tr class="separator:a66224c8024c8e1e395389dd8ccd547c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35cc93924c6e36bbc57aab52c5eb79e"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>, <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aa35cc93924c6e36bbc57aab52c5eb79e">GetLocalBoundingBox</a> () const</td></tr>
+<tr class="separator:aa35cc93924c6e36bbc57aab52c5eb79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -218,7 +225,7 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Stores the relevant information for completely defining a computational domain. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00033">33</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00034">34</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a09eccfba04f99bf811f941bf46b175aa" name="a09eccfba04f99bf811f941bf46b175aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09eccfba04f99bf811f941bf46b175aa">&#9670;&nbsp;</a></span>MPILocalCommSetPtr</h2>
@@ -240,7 +247,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00036">36</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00037">37</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -268,7 +275,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00063">63</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00064">64</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -296,7 +303,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00131">131</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00134">134</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -327,7 +334,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Checks whether a point is within a cell. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00310">310</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00291">291</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -355,7 +362,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Method to be called if cells and nodes have been transferred to another grid. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00089">89</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00090">90</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -376,7 +383,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Computes the centroid from nodes specified by the given list. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00270">270</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00252">252</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -397,12 +404,12 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Counts the number of cells within a logical volume across all partitions. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00288">288</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00270">270</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
-<a id="ab8e87208f4a282d9e10e60b78c550799" name="ab8e87208f4a282d9e10e60b78c550799"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8e87208f4a282d9e10e60b78c550799">&#9670;&nbsp;</a></span>ExportCellsToExodus()</h2>
+<a id="a12896725fc625c5aec2d94844f9d6096" name="a12896725fc625c5aec2d94844f9d6096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12896725fc625c5aec2d94844f9d6096">&#9670;&nbsp;</a></span>ExportCellsToExodus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,8 +418,24 @@ Friends</h2></td></tr>
           <td class="memname">void chi_mesh::MeshContinuum::ExportCellsToExodus </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file_base_name</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>file_base_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>suppress_node_sets</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>suppress_side_sets</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -456,7 +479,7 @@ Friends</h2></td></tr>
 <p >Export cells to python.</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">Todo:</a></b></dt><dd>Export Cells to OBJ needs polygon support. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d61/chi__meshcontinuum__exportobj_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d6/d61/chi__meshcontinuum__exportobj_8cc_source.html">chi_meshcontinuum_exportobj.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d61/chi__meshcontinuum__exportobj_8cc_source.html#l00016">16</a> of file <a class="el" href="../../d6/d61/chi__meshcontinuum__exportobj_8cc_source.html">chi_meshcontinuum_exportobj.cc</a>.</p>
 
 </div>
 </div>
@@ -508,7 +531,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >General map vertices </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00180">180</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00164">164</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -535,7 +558,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00076">76</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00077">77</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -562,7 +585,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00079">79</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00080">80</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -591,7 +614,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Check whether a cell is a boundary by checking if the key is found in the native or foreign cell maps. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00155">155</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00136">136</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -611,7 +634,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Builds and returns a vector of unique boundary id's present in the mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d5f/chi__meshcontinuum__uniquebndry_i_ds_8cc_source.html#l00013">13</a> of file <a class="el" href="../../da/d5f/chi__meshcontinuum__uniquebndry_i_ds_8cc_source.html">chi_meshcontinuum_uniquebndryIDs.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d5f/chi__meshcontinuum__uniquebndry_i_ds_8cc_source.html#l00012">12</a> of file <a class="el" href="../../da/d5f/chi__meshcontinuum__uniquebndry_i_ds_8cc_source.html">chi_meshcontinuum_uniquebndryIDs.cc</a>.</p>
 
 </div>
 </div>
@@ -631,7 +654,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the total number of global cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00084">84</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html#l00085">85</a> of file <a class="el" href="../../d4/d01/chi__meshcontinuum__globalcellhandler_8cc_source.html">chi_meshcontinuum_globalcellhandler.cc</a>.</p>
 
 </div>
 </div>
@@ -658,7 +681,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00073">73</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00074">74</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -678,28 +701,26 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets and orthogonal mesh interface object. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00417">417</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00396">396</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
-<a id="a4b82b83a58ae3c740bf8a378f8519f66" name="a4b82b83a58ae3c740bf8a378f8519f66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b82b83a58ae3c740bf8a378f8519f66">&#9670;&nbsp;</a></span>IsCellBndry()</h2>
+<a id="aa35cc93924c6e36bbc57aab52c5eb79e" name="aa35cc93924c6e36bbc57aab52c5eb79e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35cc93924c6e36bbc57aab52c5eb79e">&#9670;&nbsp;</a></span>GetLocalBoundingBox()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool chi_mesh::MeshContinuum::IsCellBndry </td>
+          <td class="memname">std::pair&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>, <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt; chi_mesh::MeshContinuum::GetLocalBoundingBox </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>cell_global_index</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Check whether a cell is a boundary by checking if the key is found in the native or foreign cell maps. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00137">137</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00479">479</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -720,7 +741,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Check whether a cell is local by attempting to find the key in the native index map. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00123">123</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00124">124</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -741,7 +762,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Makes a bndry id given a name. If the bndry name already exists, the associated bndry id will be returned. Other the id will be set to one more than the maximum boundary id. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00486">486</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00464">464</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -761,7 +782,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Determines the bounding box size of each cell and returns it as a list of 3-component vectors, one Vec3 for each cell. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00454">454</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00433">433</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -800,7 +821,7 @@ Friends</h2></td></tr>
 </dl>
 <p>The function populates face_categories which is a structure containing pairs. Pair.first is the max dofs-per-face for the category and Pair.second is the number of faces in this category. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00032">32</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00033">33</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -820,7 +841,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Provides a mapping from cell ijk indices to global ids. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00430">430</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00408">408</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -885,7 +906,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Given the current cell, cell A, and its adjacent cell, cell B, with cell B adjacent to A at the <code>f</code>-th face of cell A. Will determine the <code>af</code>-th index of the face on cell B that interface with the <code>f</code>-th face of cell A. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00234">234</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00216">216</a> of file <a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html">chi_meshcontinuum_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -912,7 +933,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00084">84</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00085">85</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -950,7 +971,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00139">139</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00144">144</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -978,7 +999,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00072">72</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00073">73</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1024,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00138">138</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00143">143</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1049,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00051">51</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00052">52</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1073,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00060">60</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00061">61</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1068,7 +1089,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00049">49</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00050">50</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1094,7 +1115,7 @@ Friends</h2></td></tr>
 
 <p>Locally stored ghosts. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00039">39</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00040">40</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1118,7 +1139,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00041">41</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00042">42</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1142,7 +1163,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00042">42</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00043">43</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1166,7 +1187,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00044">44</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00045">45</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1182,7 +1203,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00048">48</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00049">49</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1208,7 +1229,7 @@ Friends</h2></td></tr>
 
 <p>Actual local cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00038">38</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00039">39</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1224,7 +1245,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00055">55</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00056">56</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1240,7 +1261,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00056">56</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00057">57</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1256,7 +1277,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00057">57</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00058">58</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>
@@ -1286,7 +1307,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00047">47</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00048">48</a> of file <a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">chi_meshcontinuum.h</a>.</p>
 
 </div>
 </div>

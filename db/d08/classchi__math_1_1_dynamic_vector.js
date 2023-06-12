@@ -4,7 +4,7 @@ var classchi__math_1_1_dynamic_vector =
     [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html#ab6309b872ceef35328603909e91c194b", null ],
     [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html#a48cfee184d1fae500dbbeb643a0cac18", null ],
     [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html#ae35a96062388b48a66e8608fb887b619", null ],
-    [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html#a4257e12d4649d0b6084db79b8dc6b9cc", null ],
+    [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html#a356544dfe5f1e51a26c9f94c3e320c3e", null ],
     [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html#addea2a6ce0f449ac1b4d80a023594c57", null ],
     [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html#ac3ff573961fe16beb12a5b14ec060234", null ],
     [ "at", "db/d08/classchi__math_1_1_dynamic_vector.html#a0580c80fd9222cec252956ffdc776e7b", null ],
@@ -35,7 +35,7 @@ var classchi__math_1_1_dynamic_vector =
     [ "operator/=", "db/d08/classchi__math_1_1_dynamic_vector.html#a8e63aca4e403f0fa0c677b128beadd39", null ],
     [ "operator=", "db/d08/classchi__math_1_1_dynamic_vector.html#a295d85aaf4640ff09eb2af8812d4ee60", null ],
     [ "operator=", "db/d08/classchi__math_1_1_dynamic_vector.html#a0e05158fa07f8adf97f415f5a85dc70e", null ],
-    [ "operator=", "db/d08/classchi__math_1_1_dynamic_vector.html#a1608e0955ba397d95be32956a88759b2", null ],
+    [ "operator=", "db/d08/classchi__math_1_1_dynamic_vector.html#a379e060dc6bde49d7a76ce165a856199", null ],
     [ "operator=", "db/d08/classchi__math_1_1_dynamic_vector.html#a2548a3b7a8e46fb0c6ef0f7e22684746", null ],
     [ "operator[]", "db/d08/classchi__math_1_1_dynamic_vector.html#a8a251e42e7421e579300bd2ae13f3911", null ],
     [ "operator[]", "db/d08/classchi__math_1_1_dynamic_vector.html#ae042374b534c06c185539fee3759156e", null ],
@@ -45,6 +45,7 @@ var classchi__math_1_1_dynamic_vector =
     [ "reserve", "db/d08/classchi__math_1_1_dynamic_vector.html#a58310c99c5951cd5d44e459b4b7bdc4c", null ],
     [ "resize", "db/d08/classchi__math_1_1_dynamic_vector.html#a234a904fb51a5255422d1701a14a3295", null ],
     [ "resize", "db/d08/classchi__math_1_1_dynamic_vector.html#a653cb5b190909799a9b1e2ccda1fac70", null ],
+    [ "Set", "db/d08/classchi__math_1_1_dynamic_vector.html#a66f0c19bf9eb98b710d67f4641aa2447", null ],
     [ "size", "db/d08/classchi__math_1_1_dynamic_vector.html#af80e4ca826a1b80b6ef3ac755041d512", null ],
     [ "elements_", "db/d08/classchi__math_1_1_dynamic_vector.html#a52f7753a9af1f951e207422a08bf3274", null ]
 ];

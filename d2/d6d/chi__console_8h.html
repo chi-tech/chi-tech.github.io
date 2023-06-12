@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -85,7 +92,8 @@ $(document).ready(function(){initNavTree('d2/d6d/chi__console_8h.html','../../')
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">chi_console.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -93,8 +101,13 @@ $(document).ready(function(){initNavTree('d2/d6d/chi__console_8h.html','../../')
 <code>#include &lt;lualib.h&gt;</code><br />
 <code>#include &lt;lauxlib.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/ded/chi__console__structs_8h_source.html">chi_console_structs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d6/dd2/parameter__block_8h_source.html">ChiParameters/parameter_block.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d24/input__parameters_8h_source.html">ChiParameters/input_parameters.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>&quot;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;stack&gt;</code><br />
 </div>
 <p><a href="../../d2/d6d/chi__console_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -102,12 +115,269 @@ $(document).ready(function(){initNavTree('d2/d6d/chi__console_8h.html','../../')
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">chi_objects::ChiConsole</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/daa/structchi__objects_1_1_chi_console_1_1_lua_function_registry_entry.html">chi_objects::ChiConsole::LuaFunctionRegistryEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d75/structchi__objects_1_1_chi_console_1_1_lua_func_wrapper_reg_entry.html">chi_objects::ChiConsole::LuaFuncWrapperRegEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:d6/d5f/namespacechi__physics"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html">chi_physics</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d1/d96/namespacechi__objects"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d96/namespacechi__objects.html">chi_objects</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9836fa5848e04b0e6aee667f4a6f0a35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/chi__console_8h.html#a9836fa5848e04b0e6aee667f4a6f0a35">ChiConsoleJoinWordsA</a>(x,  y)&#160;&#160;&#160;x##y</td></tr>
+<tr class="separator:a9836fa5848e04b0e6aee667f4a6f0a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b9859ee78fabc6f778d8020d4092c6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/chi__console_8h.html#a2b9859ee78fabc6f778d8020d4092c6c">ChiConsoleJoinWordsB</a>(x,  y)&#160;&#160;&#160;<a class="el" href="../../d2/d6d/chi__console_8h.html#a9836fa5848e04b0e6aee667f4a6f0a35">ChiConsoleJoinWordsA</a>(x, y)</td></tr>
+<tr class="separator:a2b9859ee78fabc6f778d8020d4092c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d91eaff84af8886277bcc86fa486d7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/chi__console_8h.html#a3d91eaff84af8886277bcc86fa486d7d">RegisterLuaFunctionAsIs</a>(func_name)</td></tr>
+<tr class="separator:a3d91eaff84af8886277bcc86fa486d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac055fb1c9ec26c73ebc99f96f5394a49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/chi__console_8h.html#ac055fb1c9ec26c73ebc99f96f5394a49">RegisterLuaFunction</a>(function,  namespace_name,  func_name)</td></tr>
+<tr class="separator:ac055fb1c9ec26c73ebc99f96f5394a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c05d35606e96aa7115024ceae3e588f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/chi__console_8h.html#a7c05d35606e96aa7115024ceae3e588f">RegisterLuaFunctionMethod</a>(function,  namespace_name,  func_name)</td></tr>
+<tr class="separator:a7c05d35606e96aa7115024ceae3e588f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20c3ee4abcf6989e135ef1628b23e54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6d/chi__console_8h.html#ae20c3ee4abcf6989e135ef1628b23e54">RegisterWrapperFunction</a>( namespace_name,  name_in_lua,  syntax_function,  actual_function)</td></tr>
+<tr class="separator:ae20c3ee4abcf6989e135ef1628b23e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a9836fa5848e04b0e6aee667f4a6f0a35" name="a9836fa5848e04b0e6aee667f4a6f0a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9836fa5848e04b0e6aee667f4a6f0a35">&#9670;&nbsp;</a></span>ChiConsoleJoinWordsA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ChiConsoleJoinWordsA</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;x##y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Small utility macro for joining two words. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00024">24</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
+<a id="a2b9859ee78fabc6f778d8020d4092c6c" name="a2b9859ee78fabc6f778d8020d4092c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9859ee78fabc6f778d8020d4092c6c">&#9670;&nbsp;</a></span>ChiConsoleJoinWordsB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ChiConsoleJoinWordsB</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="../../d2/d6d/chi__console_8h.html#a9836fa5848e04b0e6aee667f4a6f0a35">ChiConsoleJoinWordsA</a>(x, y)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >IDK why this is needed. Seems like counter doesnt work properly without it </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00026">26</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
+<a id="ac055fb1c9ec26c73ebc99f96f5394a49" name="ac055fb1c9ec26c73ebc99f96f5394a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac055fb1c9ec26c73ebc99f96f5394a49">&#9670;&nbsp;</a></span>RegisterLuaFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RegisterLuaFunction</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">namespace_name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func_name&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code hl_define" href="../../d2/d6d/chi__console_8h.html#a2b9859ee78fabc6f778d8020d4092c6c">ChiConsoleJoinWordsB</a>(unique_var_name_luacfunc_##func_name##_,    \</div>
+<div class="line">                                   __COUNTER__) =                              <a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a203db2449e2c18dcef55aa3e122121f2">\</a></div>
+<div class="line"><a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a203db2449e2c18dcef55aa3e122121f2">    chi_objects::ChiConsole::AddFunctionToRegistryInNamespaceWithName</a>(         \</div>
+<div class="line">      function, #namespace_name, #func_name)</div>
+<div class="ttc" id="achi__console_8h_html_a2b9859ee78fabc6f778d8020d4092c6c"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html#a2b9859ee78fabc6f778d8020d4092c6c">ChiConsoleJoinWordsB</a></div><div class="ttdeci">#define ChiConsoleJoinWordsB(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00026">chi_console.h:26</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_console_html_a203db2449e2c18dcef55aa3e122121f2"><div class="ttname"><a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a203db2449e2c18dcef55aa3e122121f2">chi_objects::ChiConsole::AddFunctionToRegistryInNamespaceWithName</a></div><div class="ttdeci">static char AddFunctionToRegistryInNamespaceWithName(lua_CFunction function_ptr, const std::string &amp;namespace_name, const std::string &amp;function_name, bool self_callable=false)</div><div class="ttdoc">Adds a lua_CFunction to the registry. With namespace-table analogy.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d17/chi__console__utilities_8cc_source.html#l00110">chi_console_utilities.cc:110</a></div></div>
+</div><!-- fragment --><p >Macro for registering a lua_CFunction within the ChiConsole singleton. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">function</td><td>LuaCFunction. The function to use. </td></tr>
+    <tr><td class="paramname">namespace_name</td><td>NonQuotedString. May include scope resolution </td></tr>
+    <tr><td class="paramname">func_name</td><td>NonQuotedString. The name of the function as it will appear in the lua console. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00050">50</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
+<a id="a3d91eaff84af8886277bcc86fa486d7d" name="a3d91eaff84af8886277bcc86fa486d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d91eaff84af8886277bcc86fa486d7d">&#9670;&nbsp;</a></span>RegisterLuaFunctionAsIs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RegisterLuaFunctionAsIs</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func_name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code hl_define" href="../../d2/d6d/chi__console_8h.html#a2b9859ee78fabc6f778d8020d4092c6c">ChiConsoleJoinWordsB</a>(unique_var_name_luacfunc_##func_name##_,    \</div>
+<div class="line">                                   __COUNTER__) =                              <a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae97972d1f44ed845c524991d6b41a1cf">\</a></div>
+<div class="line"><a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae97972d1f44ed845c524991d6b41a1cf">    chi_objects::ChiConsole::AddFunctionToRegistryGlobalNamespace</a>(#func_name,  \</div>
+<div class="line">                                                                  func_name)</div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_console_html_ae97972d1f44ed845c524991d6b41a1cf"><div class="ttname"><a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae97972d1f44ed845c524991d6b41a1cf">chi_objects::ChiConsole::AddFunctionToRegistryGlobalNamespace</a></div><div class="ttdeci">static char AddFunctionToRegistryGlobalNamespace(const std::string &amp;raw_name_in_lua, lua_CFunction function_ptr)</div><div class="ttdoc">Adds a lua_CFunction to the registry.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d17/chi__console__utilities_8cc_source.html#l00093">chi_console_utilities.cc:93</a></div></div>
+</div><!-- fragment --><p >Macro for registering a lua_CFunction within the ChiConsole singleton, with the function being in the global namespace. Example: </p><div class="fragment"><div class="line">ChiConsoleRegisterLuaFunction(<a class="code hl_function" href="../../dc/d4e/group___lua_solver.html#gab828b1bcee57fed19f7dda9befc5846b">chiSolverInitialize</a>);</div>
+<div class="ttc" id="agroup___lua_solver_html_gab828b1bcee57fed19f7dda9befc5846b"><div class="ttname"><a href="../../dc/d4e/group___lua_solver.html#gab828b1bcee57fed19f7dda9befc5846b">chi_lua::chiSolverInitialize</a></div><div class="ttdeci">void chiSolverInitialize(int solver_handle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00771">lua_functions.c:771</a></div></div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Remember to include the header "ChiConsole/chi_console.h". The name supplied to this function cannot have scope resolution operators, i.e., "::". </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00037">37</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
+<a id="a7c05d35606e96aa7115024ceae3e588f" name="a7c05d35606e96aa7115024ceae3e588f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c05d35606e96aa7115024ceae3e588f">&#9670;&nbsp;</a></span>RegisterLuaFunctionMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RegisterLuaFunctionMethod</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">function, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">namespace_name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func_name&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code hl_define" href="../../d2/d6d/chi__console_8h.html#a2b9859ee78fabc6f778d8020d4092c6c">ChiConsoleJoinWordsB</a>(unique_var_name_luacfunc_##func_name##_,    \</div>
+<div class="line">                                   __COUNTER__) =                              <a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a203db2449e2c18dcef55aa3e122121f2">\</a></div>
+<div class="line"><a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a203db2449e2c18dcef55aa3e122121f2">    chi_objects::ChiConsole::AddFunctionToRegistryInNamespaceWithName</a>(         \</div>
+<div class="line">      function, #namespace_name, #func_name, <span class="keyword">true</span>)</div>
+</div><!-- fragment --><p >Macro for registering a lua_CFunction within the ChiConsole singleton, functioning as a method of the class pointed to by the namespace. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">function</td><td>LuaCFunction. The function to use. </td></tr>
+    <tr><td class="paramname">namespace_name</td><td>NonQuotedString. May include scope resolution </td></tr>
+    <tr><td class="paramname">func_name</td><td>NonQuotedString. The name of the function as it will appear in the lua console. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00063">63</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
+<a id="ae20c3ee4abcf6989e135ef1628b23e54" name="ae20c3ee4abcf6989e135ef1628b23e54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae20c3ee4abcf6989e135ef1628b23e54">&#9670;&nbsp;</a></span>RegisterWrapperFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RegisterWrapperFunction</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">namespace_name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name_in_lua, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">syntax_function, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">actual_function&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code hl_define" href="../../d2/d6d/chi__console_8h.html#a2b9859ee78fabc6f778d8020d4092c6c">ChiConsoleJoinWordsB</a>(unique_var_name_luacfunc_##name_in_lua##_,  \</div>
+<div class="line">                                   __COUNTER__) =                              <a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a30d6987d122e0b3b461ac0823530d0c9">\</a></div>
+<div class="line"><a class="code hl_function" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a30d6987d122e0b3b461ac0823530d0c9">    chi_objects::ChiConsole::AddWrapperToRegistryInNamespaceWithName</a>(          \</div>
+<div class="line">      #namespace_name, #name_in_lua, syntax_function, actual_function)</div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_console_html_a30d6987d122e0b3b461ac0823530d0c9"><div class="ttname"><a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a30d6987d122e0b3b461ac0823530d0c9">chi_objects::ChiConsole::AddWrapperToRegistryInNamespaceWithName</a></div><div class="ttdeci">static char AddWrapperToRegistryInNamespaceWithName(const std::string &amp;namespace_name, const std::string &amp;name_in_lua, WrapperGetInParamsFunc syntax_function, WrapperCallFunc actual_function, bool ignore_null_call_func=false)</div><div class="ttdoc">Adds a function wrapper to the lua registry.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d17/chi__console__utilities_8cc_source.html#l00132">chi_console_utilities.cc:132</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00069">69</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

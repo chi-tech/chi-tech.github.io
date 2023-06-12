@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -89,127 +96,147 @@ $(document).ready(function(){initNavTree('dc/de5/petsc__utils__04__vecmanip_8cc_
 <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/d0e/petsc__utils_8h.html">petsc_utils.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/**Copies a PETSc vector to a STL vector. Only the local portion is</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * copied.*/</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a422a92d2ae77b5a740a874c24ed48dc9">    9</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a422a92d2ae77b5a740a874c24ed48dc9">chi_math::PETScUtils::CopyVecToSTLvector</a>(</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  Vec x, std::vector&lt;double&gt;&amp; data, <span class="keywordtype">size_t</span> N)</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  data.clear();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  data.resize(N,0.0);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keyword">const</span> <span class="keywordtype">double</span>* x_ref;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  VecGetArrayRead(x,&amp;x_ref);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;N; ++i)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    data[i] = x_ref[i];</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  VecRestoreArrayRead(x,&amp;x_ref);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">/**Copies global values from a PETSc vector to a STL vector.*/</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">chi_math::PETScUtils::CopyGlobalVecToSTLvector</a>(</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  Vec x,</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keyword">const</span> std::vector&lt;int64_t&gt;&amp; global_indices,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  std::vector&lt;double&gt; &amp;data)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="comment">//=================================== Populating local indices</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordtype">size_t</span> N = global_indices.size();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  std::vector&lt;int64_t&gt; local_indices(N,0);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordtype">size_t</span> counter=0;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> val : global_indices)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    local_indices[counter] = counter;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    ++counter;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="comment">//=================================== Creating PETSc vector</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  Vec local_vec;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  VecCreateSeq(PETSC_COMM_SELF,global_indices.size()+1,&amp;local_vec);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  VecSet(local_vec,0.0);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="comment">//=================================== Create and transfer index sets</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  IS global_set;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  IS local_set;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  ISCreateGeneral(PETSC_COMM_SELF, N, global_indices.data(),</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                  PETSC_COPY_VALUES,&amp;global_set);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  ISCreateGeneral(PETSC_COMM_SELF, N, local_indices.data(),</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                  PETSC_COPY_VALUES,&amp;local_set);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  VecScatter scat;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  VecScatterCreate(x,global_set,local_vec,local_set,&amp;scat);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  VecScatterBegin(scat,x,local_vec,INSERT_VALUES,SCATTER_FORWARD);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  VecScatterEnd(scat,x,local_vec,INSERT_VALUES,SCATTER_FORWARD);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">//=================================== Copy to STL</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  data.clear();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  data.resize(N,0.0);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">const</span> <span class="keywordtype">double</span>* x_ref;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  VecGetArrayRead(local_vec,&amp;x_ref);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;N; ++i)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    data[i] = x_ref[i];</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  VecRestoreArrayRead(x,&amp;x_ref);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="comment">//=================================== Cleanup</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  ISDestroy(&amp;global_set);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  ISDestroy(&amp;local_set);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  VecDestroy(&amp;local_vec);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">/**Communicates ghost entries of a ghost vector. This operation</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"> * is suitable when only a single vector is communicated. When</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"> * more than vector is communicated it would be more efficient</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"> * to &quot;Begin&quot; all the vectors followed by and &quot;End&quot; of each</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment"> * vector.*/</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac31111351b2bffd45dc550de08c1355a">   81</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac31111351b2bffd45dc550de08c1355a">chi_math::PETScUtils::CommunicateGhostEntries</a>(Vec x)</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  VecGhostUpdateBegin(x,INSERT_VALUES,SCATTER_FORWARD);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  VecGhostUpdateEnd  (x,INSERT_VALUES,SCATTER_FORWARD);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/**Copies a PETSc vector to a STL vector. Only the local portion is</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * copied.*/</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a422a92d2ae77b5a740a874c24ed48dc9">    8</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a422a92d2ae77b5a740a874c24ed48dc9">chi_math::PETScUtils::CopyVecToSTLvector</a>(</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  Vec x, std::vector&lt;double&gt;&amp; data, <span class="keywordtype">size_t</span> N)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  data.clear();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  data.resize(N,0.0);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keyword">const</span> <span class="keywordtype">double</span>* x_ref;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  VecGetArrayRead(x,&amp;x_ref);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;N; ++i)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    data[i] = x_ref[i];</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  VecRestoreArrayRead(x,&amp;x_ref);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">/**Copies a PETSc vector to a STL vector. Only the local portion is</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * copied.*/</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a78ea9913447d96008912a4cc9f40bccb">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a78ea9913447d96008912a4cc9f40bccb">chi_math::PETScUtils::CopyVecToSTLvectorWithGhosts</a>(</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  Vec x, std::vector&lt;double&gt;&amp; data, <span class="keywordtype">size_t</span> N)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  data.clear();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  data.resize(N,0.0);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keyword">auto</span> info = <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a16e62cffedce8767d3214a64f02cc5f1">GetGhostVectorLocalViewRead</a>(x);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">const</span> <span class="keywordtype">double</span>* x_ref = info.x_localized_raw;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="comment">//VecGetArrayRead(x,&amp;x_ref);</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;N; ++i)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    data[i] = x_ref[i];</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="comment">//VecRestoreArrayRead(x,&amp;x_ref);</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a0c5eb90fb46ec9271439481a67c2bc12">RestoreGhostVectorLocalViewRead</a>(x, info);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">/**Copies global values from a PETSc vector to a STL vector.*/</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">   44</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">chi_math::PETScUtils::CopyGlobalVecToSTLvector</a>(</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  Vec x,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keyword">const</span> std::vector&lt;int64_t&gt;&amp; global_indices,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  std::vector&lt;double&gt; &amp;data)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="comment">//=================================== Populating local indices</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">size_t</span> N = global_indices.size();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  std::vector&lt;int64_t&gt; local_indices(N,0);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">size_t</span> counter=0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> val : global_indices)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    local_indices[counter] = counter;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    ++counter;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">//=================================== Creating PETSc vector</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  Vec local_vec;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  VecCreateSeq(PETSC_COMM_SELF,global_indices.size()+1,&amp;local_vec);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  VecSet(local_vec,0.0);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">//=================================== Create and transfer index sets</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  IS global_set;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  IS local_set;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  ISCreateGeneral(PETSC_COMM_SELF, N, global_indices.data(),</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                  PETSC_COPY_VALUES,&amp;global_set);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  ISCreateGeneral(PETSC_COMM_SELF, N, local_indices.data(),</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                  PETSC_COPY_VALUES,&amp;local_set);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  VecScatter scat;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  VecScatterCreate(x,global_set,local_vec,local_set,&amp;scat);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  VecScatterBegin(scat,x,local_vec,INSERT_VALUES,SCATTER_FORWARD);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  VecScatterEnd(scat,x,local_vec,INSERT_VALUES,SCATTER_FORWARD);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="comment">//=================================== Copy to STL</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  data.clear();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  data.resize(N,0.0);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keyword">const</span> <span class="keywordtype">double</span>* x_ref;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  VecGetArrayRead(local_vec,&amp;x_ref);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;N; ++i)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    data[i] = x_ref[i];</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  VecRestoreArrayRead(x,&amp;x_ref);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">/**Gets a local raw view of a ghost vector.*/</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><a class="code hl_struct" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html">chi_math::PETScUtils::GhostVecLocalRaw</a></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a16e62cffedce8767d3214a64f02cc5f1">   90</a></span>  <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a16e62cffedce8767d3214a64f02cc5f1">chi_math::PETScUtils::GetGhostVectorLocalViewRead</a>(Vec x)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  Vec x_localized;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  VecGhostGetLocalForm(x,&amp;x_localized);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keyword">const</span> <span class="keywordtype">double</span>* x_localized_raw;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  VecGetArrayRead(x_localized,&amp;x_localized_raw);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <a class="code hl_struct" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html">GhostVecLocalRaw</a> local_data;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  local_data.<a class="code hl_variable" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a10ae77e73afee4a62bbc8ab8753d3a12">x_localized</a> = x_localized;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  local_data.<a class="code hl_variable" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a397cac73443cf56da7c2e09a4b50030c">x_localized_raw</a> = (<span class="keywordtype">double</span>*)x_localized_raw;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">return</span> local_data;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">/**Gets a local raw view of a ghost vector.*/</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a0c5eb90fb46ec9271439481a67c2bc12">  107</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a0c5eb90fb46ec9271439481a67c2bc12">chi_math::PETScUtils::</a></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a0c5eb90fb46ec9271439481a67c2bc12">  RestoreGhostVectorLocalViewRead</a>(Vec x, <a class="code hl_struct" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html">GhostVecLocalRaw</a>&amp; local_data)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>{</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  VecRestoreArrayRead(local_data.<a class="code hl_variable" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a10ae77e73afee4a62bbc8ab8753d3a12">x_localized</a>,</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                      (<span class="keyword">const</span> <span class="keywordtype">double</span>**)&amp;local_data.<a class="code hl_variable" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a397cac73443cf56da7c2e09a4b50030c">x_localized_raw</a>);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  VecGhostRestoreLocalForm(x,&amp;local_data.<a class="code hl_variable" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a10ae77e73afee4a62bbc8ab8753d3a12">x_localized</a>);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="comment">//=================================== Cleanup</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  ISDestroy(&amp;global_set);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  ISDestroy(&amp;local_set);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  VecDestroy(&amp;local_vec);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">/**Communicates ghost entries of a ghost vector. This operation</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment"> * is suitable when only a single vector is communicated. When</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment"> * more than vector is communicated it would be more efficient</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment"> * to &quot;Begin&quot; all the vectors followed by and &quot;End&quot; of each</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment"> * vector.*/</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac31111351b2bffd45dc550de08c1355a">  100</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac31111351b2bffd45dc550de08c1355a">chi_math::PETScUtils::CommunicateGhostEntries</a>(Vec x)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>{</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  VecGhostUpdateBegin(x,INSERT_VALUES,SCATTER_FORWARD);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  VecGhostUpdateEnd  (x,INSERT_VALUES,SCATTER_FORWARD);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">/**Gets a local raw view of a ghost vector.*/</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><a class="code hl_struct" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html">chi_math::PETScUtils::GhostVecLocalRaw</a></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a16e62cffedce8767d3214a64f02cc5f1">  109</a></span>  <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a16e62cffedce8767d3214a64f02cc5f1">chi_math::PETScUtils::GetGhostVectorLocalViewRead</a>(Vec x)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  Vec x_localized;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  VecGhostGetLocalForm(x,&amp;x_localized);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="keyword">const</span> <span class="keywordtype">double</span>* x_localized_raw;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  VecGetArrayRead(x_localized,&amp;x_localized_raw);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <a class="code hl_struct" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html">GhostVecLocalRaw</a> local_data;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  local_data.<a class="code hl_variable" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a10ae77e73afee4a62bbc8ab8753d3a12">x_localized</a> = x_localized;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  local_data.<a class="code hl_variable" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a397cac73443cf56da7c2e09a4b50030c">x_localized_raw</a> = (<span class="keywordtype">double</span>*)x_localized_raw;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keywordflow">return</span> local_data;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">/**Gets a local raw view of a ghost vector.*/</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a0c5eb90fb46ec9271439481a67c2bc12">  126</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a0c5eb90fb46ec9271439481a67c2bc12">chi_math::PETScUtils::</a></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a0c5eb90fb46ec9271439481a67c2bc12">  RestoreGhostVectorLocalViewRead</a>(Vec x, <a class="code hl_struct" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html">GhostVecLocalRaw</a>&amp; local_data)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>{</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  VecRestoreArrayRead(local_data.<a class="code hl_variable" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a10ae77e73afee4a62bbc8ab8753d3a12">x_localized</a>,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                      (<span class="keyword">const</span> <span class="keywordtype">double</span>**)&amp;local_data.<a class="code hl_variable" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a397cac73443cf56da7c2e09a4b50030c">x_localized_raw</a>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  VecGhostRestoreLocalForm(x,&amp;local_data.<a class="code hl_variable" href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a10ae77e73afee4a62bbc8ab8753d3a12">x_localized</a>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
-<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a0c5eb90fb46ec9271439481a67c2bc12"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a0c5eb90fb46ec9271439481a67c2bc12">chi_math::PETScUtils::RestoreGhostVectorLocalViewRead</a></div><div class="ttdeci">void RestoreGhostVectorLocalViewRead(Vec x, GhostVecLocalRaw &amp;local_data)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00107">petsc_utils_04_vecmanip.cc:108</a></div></div>
-<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a16e62cffedce8767d3214a64f02cc5f1"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a16e62cffedce8767d3214a64f02cc5f1">chi_math::PETScUtils::GetGhostVectorLocalViewRead</a></div><div class="ttdeci">GhostVecLocalRaw GetGhostVectorLocalViewRead(Vec x)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00090">petsc_utils_04_vecmanip.cc:90</a></div></div>
-<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a422a92d2ae77b5a740a874c24ed48dc9"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a422a92d2ae77b5a740a874c24ed48dc9">chi_math::PETScUtils::CopyVecToSTLvector</a></div><div class="ttdeci">void CopyVecToSTLvector(Vec x, std::vector&lt; double &gt; &amp;data, size_t N)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00009">petsc_utils_04_vecmanip.cc:9</a></div></div>
-<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a6018f791e6dd6b11cff9c1b7cce0c277"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">chi_math::PETScUtils::CopyGlobalVecToSTLvector</a></div><div class="ttdeci">void CopyGlobalVecToSTLvector(Vec x, const std::vector&lt; int64_t &gt; &amp;global_indices, std::vector&lt; double &gt; &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00025">petsc_utils_04_vecmanip.cc:25</a></div></div>
-<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ac31111351b2bffd45dc550de08c1355a"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac31111351b2bffd45dc550de08c1355a">chi_math::PETScUtils::CommunicateGhostEntries</a></div><div class="ttdeci">void CommunicateGhostEntries(Vec x)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00081">petsc_utils_04_vecmanip.cc:81</a></div></div>
+<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a0c5eb90fb46ec9271439481a67c2bc12"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a0c5eb90fb46ec9271439481a67c2bc12">chi_math::PETScUtils::RestoreGhostVectorLocalViewRead</a></div><div class="ttdeci">void RestoreGhostVectorLocalViewRead(Vec x, GhostVecLocalRaw &amp;local_data)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00126">petsc_utils_04_vecmanip.cc:127</a></div></div>
+<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a16e62cffedce8767d3214a64f02cc5f1"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a16e62cffedce8767d3214a64f02cc5f1">chi_math::PETScUtils::GetGhostVectorLocalViewRead</a></div><div class="ttdeci">GhostVecLocalRaw GetGhostVectorLocalViewRead(Vec x)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00109">petsc_utils_04_vecmanip.cc:109</a></div></div>
+<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a422a92d2ae77b5a740a874c24ed48dc9"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a422a92d2ae77b5a740a874c24ed48dc9">chi_math::PETScUtils::CopyVecToSTLvector</a></div><div class="ttdeci">void CopyVecToSTLvector(Vec x, std::vector&lt; double &gt; &amp;data, size_t N)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00008">petsc_utils_04_vecmanip.cc:8</a></div></div>
+<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a6018f791e6dd6b11cff9c1b7cce0c277"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">chi_math::PETScUtils::CopyGlobalVecToSTLvector</a></div><div class="ttdeci">void CopyGlobalVecToSTLvector(Vec x, const std::vector&lt; int64_t &gt; &amp;global_indices, std::vector&lt; double &gt; &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00044">petsc_utils_04_vecmanip.cc:44</a></div></div>
+<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a78ea9913447d96008912a4cc9f40bccb"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a78ea9913447d96008912a4cc9f40bccb">chi_math::PETScUtils::CopyVecToSTLvectorWithGhosts</a></div><div class="ttdeci">void CopyVecToSTLvectorWithGhosts(Vec x, std::vector&lt; double &gt; &amp;data, size_t N)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00025">petsc_utils_04_vecmanip.cc:25</a></div></div>
+<div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ac31111351b2bffd45dc550de08c1355a"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac31111351b2bffd45dc550de08c1355a">chi_math::PETScUtils::CommunicateGhostEntries</a></div><div class="ttdeci">void CommunicateGhostEntries(Vec x)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00100">petsc_utils_04_vecmanip.cc:100</a></div></div>
 <div class="ttc" id="apetsc__utils_8h_html"><div class="ttname"><a href="../../da/d0e/petsc__utils_8h.html">petsc_utils.h</a></div></div>
-<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw_html"><div class="ttname"><a href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html">chi_math::PETScUtils::GhostVecLocalRaw</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00076">petsc_utils.h:77</a></div></div>
-<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw_html_a10ae77e73afee4a62bbc8ab8753d3a12"><div class="ttname"><a href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a10ae77e73afee4a62bbc8ab8753d3a12">chi_math::PETScUtils::GhostVecLocalRaw::x_localized</a></div><div class="ttdeci">Vec x_localized</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00078">petsc_utils.h:78</a></div></div>
-<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw_html_a397cac73443cf56da7c2e09a4b50030c"><div class="ttname"><a href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a397cac73443cf56da7c2e09a4b50030c">chi_math::PETScUtils::GhostVecLocalRaw::x_localized_raw</a></div><div class="ttdeci">double * x_localized_raw</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00079">petsc_utils.h:79</a></div></div>
+<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw_html"><div class="ttname"><a href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html">chi_math::PETScUtils::GhostVecLocalRaw</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00077">petsc_utils.h:78</a></div></div>
+<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw_html_a10ae77e73afee4a62bbc8ab8753d3a12"><div class="ttname"><a href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a10ae77e73afee4a62bbc8ab8753d3a12">chi_math::PETScUtils::GhostVecLocalRaw::x_localized</a></div><div class="ttdeci">Vec x_localized</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00079">petsc_utils.h:79</a></div></div>
+<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw_html_a397cac73443cf56da7c2e09a4b50030c"><div class="ttname"><a href="../../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a397cac73443cf56da7c2e09a4b50030c">chi_math::PETScUtils::GhostVecLocalRaw::x_localized_raw</a></div><div class="ttdeci">double * x_localized_raw</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00080">petsc_utils.h:80</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

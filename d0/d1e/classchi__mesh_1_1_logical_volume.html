@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -85,7 +92,8 @@ $(document).ready(function(){initNavTree('d0/d1e/classchi__mesh_1_1_logical_volu
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle"><div class="title">chi_mesh::LogicalVolume Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -107,25 +115,28 @@ Inheritance diagram for chi_mesh::LogicalVolume:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac0c9ea0468850857d6351e53d4ed7f86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#ac0c9ea0468850857d6351e53d4ed7f86">LogicalVolume</a> ()</td></tr>
-<tr class="separator:ac0c9ea0468850857d6351e53d4ed7f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98d0b624209c843d61568a99801f5e32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a98d0b624209c843d61568a99801f5e32">Type</a> () const</td></tr>
-<tr class="separator:a98d0b624209c843d61568a99801f5e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10e0529e8889a671df749c2988adc03f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2">LogicalVolumeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a10e0529e8889a671df749c2988adc03f">Type</a> () const</td></tr>
+<tr class="separator:a10e0529e8889a671df749c2988adc03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a658be5f3466ca059f046df9b463819d9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a658be5f3466ca059f046df9b463819d9">Inside</a> (const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;point) const</td></tr>
 <tr class="separator:a658be5f3466ca059f046df9b463819d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr class="memitem:a68773c2a558c6925c444cc33d9dbded6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a68773c2a558c6925c444cc33d9dbded6">type_index</a></td></tr>
-<tr class="separator:a68773c2a558c6925c444cc33d9dbded6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:abf8c8a82246c23602c3fddf17b51900d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#abf8c8a82246c23602c3fddf17b51900d">LogicalVolume</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2">LogicalVolumeType</a> type)</td></tr>
+<tr class="separator:abf8c8a82246c23602c3fddf17b51900d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a078922a6eb0feb41adc971db09d36354"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2">LogicalVolumeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html#a078922a6eb0feb41adc971db09d36354">type_</a></td></tr>
+<tr class="separator:a078922a6eb0feb41adc971db09d36354"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Class for defining base logical volumes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00017">17</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00023">23</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac0c9ea0468850857d6351e53d4ed7f86" name="ac0c9ea0468850857d6351e53d4ed7f86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0c9ea0468850857d6351e53d4ed7f86">&#9670;&nbsp;</a></span>LogicalVolume()</h2>
+<a id="abf8c8a82246c23602c3fddf17b51900d" name="abf8c8a82246c23602c3fddf17b51900d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf8c8a82246c23602c3fddf17b51900d">&#9670;&nbsp;</a></span>LogicalVolume()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,18 +147,19 @@ Data Fields</h2></td></tr>
         <tr>
           <td class="memname">chi_mesh::LogicalVolume::LogicalVolume </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2">LogicalVolumeType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00022">22</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00029">29</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
 
 </div>
 </div>
@@ -178,12 +190,12 @@ Data Fields</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#adf552f5b968b74ad0bee587ebb2a686e">chi_mesh::SphereLogicalVolume</a>, <a class="el" href="../../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#ad06f6a8096556af6927aaad474098778">chi_mesh::RPPLogicalVolume</a>, <a class="el" href="../../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a61c91e02c50e9f286030573a2c8e788f">chi_mesh::RCCLogicalVolume</a>, <a class="el" href="../../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html#a575c7d513dc001a991ecf13298f77afe">chi_mesh::SurfaceMeshLogicalVolume</a>, and <a class="el" href="../../da/dca/classchi__mesh_1_1_boolean_logical_volume.html#a4c448a6ba955b62d8ace6a8cf39ec615">chi_mesh::BooleanLogicalVolume</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00032">32</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00036">36</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
 
 </div>
 </div>
-<a id="a98d0b624209c843d61568a99801f5e32" name="a98d0b624209c843d61568a99801f5e32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98d0b624209c843d61568a99801f5e32">&#9670;&nbsp;</a></span>Type()</h2>
+<a id="a10e0529e8889a671df749c2988adc03f" name="a10e0529e8889a671df749c2988adc03f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10e0529e8889a671df749c2988adc03f">&#9670;&nbsp;</a></span>Type()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,7 +204,7 @@ Data Fields</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_mesh::LogicalVolume::Type </td>
+          <td class="memname"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2">LogicalVolumeType</a> chi_mesh::LogicalVolume::Type </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -205,24 +217,32 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00027">27</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00031">31</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
-<a id="a68773c2a558c6925c444cc33d9dbded6" name="a68773c2a558c6925c444cc33d9dbded6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68773c2a558c6925c444cc33d9dbded6">&#9670;&nbsp;</a></span>type_index</h2>
+<a id="a078922a6eb0feb41adc971db09d36354" name="a078922a6eb0feb41adc971db09d36354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a078922a6eb0feb41adc971db09d36354">&#9670;&nbsp;</a></span>type_</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_mesh::LogicalVolume::type_index</td>
+          <td class="memname">const <a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2">LogicalVolumeType</a> chi_mesh::LogicalVolume::type_</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00020">20</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00026">26</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
 
 </div>
 </div>

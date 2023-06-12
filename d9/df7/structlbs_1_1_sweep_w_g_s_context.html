@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -104,11 +111,11 @@ Inheritance diagram for lbs::SweepWGSContext&lt; MatType, VecType, SolverType &g
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a607c5ecbd15436bf2528caeb7c91cf45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html#a607c5ecbd15436bf2528caeb7c91cf45">SweepWGSContext</a> (<a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html">LBSDiscreteOrdinatesSolver</a> &amp;lbs_solver, <a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, const <a class="el" href="../../d9/d42/namespacelbs.html#aeebda41bfec934de30892227f2156397">SetSourceFunction</a> &amp;set_source_function, int lhs_scope, int rhs_scope, bool log_info, std::shared_ptr&lt; <a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a> &gt; sweep_chunk)</td></tr>
-<tr class="separator:a607c5ecbd15436bf2528caeb7c91cf45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff5d732557e6b127d949d4eca5e3d36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html#adff5d732557e6b127d949d4eca5e3d36">SweepWGSContext</a> (<a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html">DiscreteOrdinatesSolver</a> &amp;lbs_solver, <a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset, const <a class="el" href="../../d9/d42/namespacelbs.html#aeebda41bfec934de30892227f2156397">SetSourceFunction</a> &amp;set_source_function, int lhs_scope, int rhs_scope, bool log_info, std::shared_ptr&lt; <a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a> &gt; sweep_chunk)</td></tr>
+<tr class="separator:adff5d732557e6b127d949d4eca5e3d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf380826f8428b3b67a6215dc73f4f09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html#acf380826f8428b3b67a6215dc73f4f09">PreSetupCallback</a> () override</td></tr>
 <tr class="separator:acf380826f8428b3b67a6215dc73f4f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31fd187481c0e7140f0a2782fbaf065a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html#a31fd187481c0e7140f0a2782fbaf065a">SetPreconditioner</a> (SolverType &amp;solver) override</td></tr>
+<tr class="memitem:a31fd187481c0e7140f0a2782fbaf065a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html#a31fd187481c0e7140f0a2782fbaf065a">SetPreconditioner</a> (<a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &amp;solver) override</td></tr>
 <tr class="separator:a31fd187481c0e7140f0a2782fbaf065a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65d337367330ad6131167898b063b5aa"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int64_t, int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html#a65d337367330ad6131167898b063b5aa">SystemSize</a> () override</td></tr>
 <tr class="separator:a65d337367330ad6131167898b063b5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +138,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aee34259e202207850ef26e4804f207a3 inherit pub_methods_structlbs_1_1_w_g_s_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae46b5f4edc70dfb32563a94b6697386f inherit pub_methods_structlbs_1_1_w_g_s_context"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html#ae46b5f4edc70dfb32563a94b6697386f">PreSetupCallback</a> ()</td></tr>
 <tr class="separator:ae46b5f4edc70dfb32563a94b6697386f inherit pub_methods_structlbs_1_1_w_g_s_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec35077f326442400fa8056a04e7db4b inherit pub_methods_structlbs_1_1_w_g_s_context"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html#aec35077f326442400fa8056a04e7db4b">SetPreconditioner</a> (SolverType &amp;solver)</td></tr>
+<tr class="memitem:aec35077f326442400fa8056a04e7db4b inherit pub_methods_structlbs_1_1_w_g_s_context"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html#aec35077f326442400fa8056a04e7db4b">SetPreconditioner</a> (<a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &amp;solver)</td></tr>
 <tr class="separator:aec35077f326442400fa8056a04e7db4b inherit pub_methods_structlbs_1_1_w_g_s_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f7d65219ba56a2623b06fb1926eb76c inherit pub_methods_structlbs_1_1_w_g_s_context"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html#a1f7d65219ba56a2623b06fb1926eb76c">PostSetupCallback</a> ()</td></tr>
 <tr class="separator:a1f7d65219ba56a2623b06fb1926eb76c inherit pub_methods_structlbs_1_1_w_g_s_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,8 +166,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:aaae296945f8e11be987f7b1ed79fe0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e3669083c9669b31426fdaf20ae85e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html">chi_mesh::sweep_management::SweepScheduler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html#a9e3669083c9669b31426fdaf20ae85e2">sweep_scheduler_</a></td></tr>
 <tr class="separator:a9e3669083c9669b31426fdaf20ae85e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39cd2cfea98c5090019b9950f807deb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html">LBSDiscreteOrdinatesSolver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html#a39cd2cfea98c5090019b9950f807deb6">lbs_ss_solver_</a></td></tr>
-<tr class="separator:a39cd2cfea98c5090019b9950f807deb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9080aaa96383b16b96f6e452ec5630c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html">DiscreteOrdinatesSolver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html#a9080aaa96383b16b96f6e452ec5630c8">lbs_ss_solver_</a></td></tr>
+<tr class="separator:a9080aaa96383b16b96f6e452ec5630c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_structlbs_1_1_w_g_s_context"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structlbs_1_1_w_g_s_context')"><img src="../../closed.png" alt="-"/>&#160;Data Fields inherited from <a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html">lbs::WGSContext&lt; MatType, VecType, SolverType &gt;</a></td></tr>
 <tr class="memitem:ad1fa6012dee30c59e9538d0f4e0a1799 inherit pub_attribs_structlbs_1_1_w_g_s_context"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">LBSSolver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html#ad1fa6012dee30c59e9538d0f4e0a1799">lbs_solver_</a></td></tr>
 <tr class="separator:ad1fa6012dee30c59e9538d0f4e0a1799 inherit pub_attribs_structlbs_1_1_w_g_s_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,25 +194,25 @@ Data Fields</h2></td></tr>
 <tr class="separator:a0bdd644638bbfb58aeb14e6691f983d8 inherit pub_attribs_structchi__math_1_1_linear_solver_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class MatType, class VecType, class SolverType&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;class MatType, class VecType, class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a>&gt;<br />
 struct lbs::SweepWGSContext&lt; MatType, VecType, SolverType &gt;</div>
 <p class="definition">Definition at line <a class="el" href="../../d0/dc0/sweep__wgs__context_8h_source.html#l00018">18</a> of file <a class="el" href="../../d0/dc0/sweep__wgs__context_8h_source.html">sweep_wgs_context.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a607c5ecbd15436bf2528caeb7c91cf45" name="a607c5ecbd15436bf2528caeb7c91cf45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a607c5ecbd15436bf2528caeb7c91cf45">&#9670;&nbsp;</a></span>SweepWGSContext()</h2>
+<a id="adff5d732557e6b127d949d4eca5e3d36" name="adff5d732557e6b127d949d4eca5e3d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff5d732557e6b127d949d4eca5e3d36">&#9670;&nbsp;</a></span>SweepWGSContext()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, SolverType &gt;::SweepWGSContext </td>
+          <td class="memname"><a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SweepWGSContext </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html">LBSDiscreteOrdinatesSolver</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html">DiscreteOrdinatesSolver</a> &amp;&#160;</td>
           <td class="paramname"><em>lbs_solver</em>, </td>
         </tr>
         <tr>
@@ -299,13 +306,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, SolverType &gt;::ApplyInverseTransportOperator </td>
+          <td class="memname">void <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::ApplyInverseTransportOperator </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>scope</em></td><td>)</td>
@@ -360,13 +367,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, SolverType &gt;::PostSolveCallback </td>
+          <td class="memname">void <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::PostSolveCallback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -419,13 +426,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, SolverType &gt;::PreSetupCallback </td>
+          <td class="memname">void <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::PreSetupCallback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -469,15 +476,15 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, SolverType &gt;::SetPreconditioner </td>
+          <td class="memname">void <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SetPreconditioner </td>
           <td>(</td>
-          <td class="paramtype">SolverType &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &amp;&#160;</td>
           <td class="paramname"><em>solver</em></td><td>)</td>
           <td></td>
         </tr>
@@ -529,13 +536,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; int64_t, int64_t &gt; <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, SolverType &gt;::SystemSize </td>
+          <td class="memname">std::pair&lt; int64_t, int64_t &gt; <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SystemSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -553,16 +560,16 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
-<a id="a39cd2cfea98c5090019b9950f807deb6" name="a39cd2cfea98c5090019b9950f807deb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39cd2cfea98c5090019b9950f807deb6">&#9670;&nbsp;</a></span>lbs_ss_solver_</h2>
+<a id="a9080aaa96383b16b96f6e452ec5630c8" name="a9080aaa96383b16b96f6e452ec5630c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9080aaa96383b16b96f6e452ec5630c8">&#9670;&nbsp;</a></span>lbs_ss_solver_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html">LBSDiscreteOrdinatesSolver</a>&amp; <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, SolverType &gt;::lbs_ss_solver_</td>
+          <td class="memname"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html">DiscreteOrdinatesSolver</a>&amp; <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::lbs_ss_solver_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -577,10 +584,10 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a>&gt; <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, SolverType &gt;::sweep_chunk_</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a>&gt; <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::sweep_chunk_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -595,10 +602,10 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html">chi_mesh::sweep_management::SweepScheduler</a> <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, SolverType &gt;::sweep_scheduler_</td>
+          <td class="memname"><a class="el" href="../../d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html">chi_mesh::sweep_management::SweepScheduler</a> <a class="el" href="../../d9/df7/structlbs_1_1_sweep_w_g_s_context.html">lbs::SweepWGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::sweep_scheduler_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -608,7 +615,7 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>modules/LinearBoltzmannSolvers/B_DO_Solver/IterativeMethods/<a class="el" href="../../d0/dc0/sweep__wgs__context_8h_source.html">sweep_wgs_context.h</a></li>
+<li>modules/LinearBoltzmannSolvers/B_DiscreteOrdinatesSolver/IterativeMethods/<a class="el" href="../../d0/dc0/sweep__wgs__context_8h_source.html">sweep_wgs_context.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

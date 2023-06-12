@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -93,9 +100,9 @@ $(document).ready(function(){initNavTree('d2/ddf/lbts__00__constrdestr_8cc_sourc
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"></span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/**Constructor.*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#ad8e89ef7932bf96fc2e05cb5f6bd852a">    7</a></span><a class="code hl_function" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#ad8e89ef7932bf96fc2e05cb5f6bd852a">lbs::DiscOrdTransientSolver::DiscOrdTransientSolver</a>(<span class="keyword">const</span> std::string &amp;in_text_name) :</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  <a class="code hl_namespace" href="../../d9/d42/namespacelbs.html">lbs</a>::<a class="code hl_class" href="../../d4/dd0/classlbs_1_1_disc_ord_k_eigenvalue_solver.html">DiscOrdKEigenvalueSolver</a>(in_text_name)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  <a class="code hl_namespace" href="../../d9/d42/namespacelbs.html">lbs</a>::DiscOrdKEigenvalueSolver(in_text_name)</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <a class="code hl_function" href="../../d9/d3a/classchi__physics_1_1_solver.html#a0b087a92fd17788519515b5bd331d87b">TextName</a>() &lt;&lt; <span class="stringliteral">&quot; created.&quot;</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; TextName() &lt;&lt; <span class="stringliteral">&quot; created.&quot;</span>;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"></span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/**Destructor*/</span></div>
@@ -105,14 +112,12 @@ $(document).ready(function(){initNavTree('d2/ddf/lbts__00__constrdestr_8cc_sourc
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00027">chi_log.cc:27</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_solver_html_a0b087a92fd17788519515b5bd331d87b"><div class="ttname"><a href="../../d9/d3a/classchi__physics_1_1_solver.html#a0b087a92fd17788519515b5bd331d87b">chi_physics::Solver::TextName</a></div><div class="ttdeci">std::string TextName() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d54/chi__solver_8h_source.html#l00045">chi_solver.h:45</a></div></div>
-<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
-<div class="ttc" id="aclasslbs_1_1_disc_ord_k_eigenvalue_solver_html"><div class="ttname"><a href="../../d4/dd0/classlbs_1_1_disc_ord_k_eigenvalue_solver.html">lbs::DiscOrdKEigenvalueSolver</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d64/lbkes__k__eigenvalue__solver_8h_source.html#l00014">lbkes_k_eigenvalue_solver.h:15</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00036">chi_log.cc:36</a></div></div>
+<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_disc_ord_transient_solver_html_a8dfec3b5828c67ca191649d492923fa6"><div class="ttname"><a href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a8dfec3b5828c67ca191649d492923fa6">lbs::DiscOrdTransientSolver::~DiscOrdTransientSolver</a></div><div class="ttdeci">virtual ~DiscOrdTransientSolver() override</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/ddf/lbts__00__constrdestr_8cc_source.html#l00014">lbts_00_constrdestr.cc:14</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_disc_ord_transient_solver_html_ad8e89ef7932bf96fc2e05cb5f6bd852a"><div class="ttname"><a href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#ad8e89ef7932bf96fc2e05cb5f6bd852a">lbs::DiscOrdTransientSolver::DiscOrdTransientSolver</a></div><div class="ttdeci">DiscOrdTransientSolver(const std::string &amp;in_text_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/ddf/lbts__00__constrdestr_8cc_source.html#l00007">lbts_00_constrdestr.cc:7</a></div></div>
 <div class="ttc" id="albts__transient__solver_8h_html"><div class="ttname"><a href="../../d8/d89/lbts__transient__solver_8h.html">lbts_transient_solver.h</a></div></div>
-<div class="ttc" id="anamespacelbs_html"><div class="ttname"><a href="../../d9/d42/namespacelbs.html">lbs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de8/acceleration_8h_source.html#l00013">acceleration.h:14</a></div></div>
+<div class="ttc" id="anamespacelbs_html"><div class="ttname"><a href="../../d9/d42/namespacelbs.html">lbs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/acceleration_8cc_source.html#l00009">acceleration.cc:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,6 +1,7 @@
 var dir_c96a5df0caba4cf0e1c155d2b2c84ff3 =
 [
     [ "Cell", "dir_556fd8b011a3b13970709fbe128e7b6f.html", "dir_556fd8b011a3b13970709fbe128e7b6f" ],
+    [ "doc", "dir_75794d8e07b5e7c74ea7408555398060.html", "dir_75794d8e07b5e7c74ea7408555398060" ],
     [ "DomainDecomposition", "dir_1eecad092444207c30f42eba2df2132d.html", "dir_1eecad092444207c30f42eba2df2132d" ],
     [ "FieldFunctionInterpolation", "dir_a72f26602bc41b3df9b9e9ae80910712.html", "dir_a72f26602bc41b3df9b9e9ae80910712" ],
     [ "LogicalVolume", "dir_7815e1d8f72fdc1ebf842e821a7e1a42.html", "dir_7815e1d8f72fdc1ebf842e821a7e1a42" ],
@@ -25,6 +26,5 @@ var dir_c96a5df0caba4cf0e1c155d2b2c84ff3 =
       [ "chi_mesh::Matrix3x3", "d0/dec/structchi__mesh_1_1_matrix3x3.html", "d0/dec/structchi__mesh_1_1_matrix3x3" ]
     ] ],
     [ "chi_meshtensor_rank2_dim3.h", "d5/dfd/chi__meshtensor__rank2__dim3_8h.html", "d5/dfd/chi__meshtensor__rank2__dim3_8h" ],
-    [ "chi_meshvector.h", "d1/d7f/chi__meshvector_8h.html", "d1/d7f/chi__meshvector_8h" ],
-    [ "mesh_maindoc_page.cc", "d0/d21/mesh__maindoc__page_8cc.html", null ]
+    [ "chi_meshvector.h", "d1/d7f/chi__meshvector_8h.html", "d1/d7f/chi__meshvector_8h" ]
 ];

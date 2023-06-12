@@ -9,7 +9,7 @@ var searchData=
   ['compute_5fqp_5fdata_6',['COMPUTE_QP_DATA',['../d3/d84/namespacechi__math_1_1finite__element.html#a445458c6eab776b583c79f39d8e88f6ca64381e10f62f68485d9f2189b6b20b47',1,'chi_math::finite_element']]],
   ['compute_5funit_5fintegrals_7',['COMPUTE_UNIT_INTEGRALS',['../d3/d84/namespacechi__math_1_1finite__element.html#a445458c6eab776b583c79f39d8e88f6ca2dbd9916e7104714a2effb489d7d9f5f',1,'chi_math::finite_element']]],
   ['constant_8',['CONSTANT',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9a8d6b5cada83510220f59e00ce86d4d92',1,'chi_math']]],
-  ['crank_5fnicholson_9',['CRANK_NICHOLSON',['../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ac8a0bea4cc96e12ed1fedd9695c99b81',1,'chi_math']]],
+  ['crank_5fnicolson_9',['CRANK_NICOLSON',['../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a689ac4e1be37d17acd845c23f1a62609',1,'chi_math']]],
   ['custom_5farray_10',['CUSTOM_ARRAY',['../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aa1999e40840b0649f3503a5bcfe0d0303',1,'chi_mesh::ff_interpolation']]],
   ['custom_5fquadrature_11',['CUSTOM_QUADRATURE',['../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791aaee8e3fd1e34806b94439252ea51aa8c',1,'chi_math']]],
   ['custom_5fscale_12',['CUSTOM_SCALE',['../dc/d58/namespacechi__math.html#a4e4b5f82f9498c0502818552508dcd8fadb3fdafb24c5fe68590488dc551befd7',1,'chi_math']]],

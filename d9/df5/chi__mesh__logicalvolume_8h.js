@@ -6,10 +6,12 @@ var chi__mesh__logicalvolume_8h =
     [ "chi_mesh::RCCLogicalVolume", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume" ],
     [ "chi_mesh::SurfaceMeshLogicalVolume", "dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html", "dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume" ],
     [ "chi_mesh::BooleanLogicalVolume", "da/dca/classchi__mesh_1_1_boolean_logical_volume.html", "da/dca/classchi__mesh_1_1_boolean_logical_volume" ],
-    [ "BOOLEAN", "d9/df5/chi__mesh__logicalvolume_8h.html#a50168fdbaa52d4a0b1c287d476050f12", null ],
-    [ "RCC", "d9/df5/chi__mesh__logicalvolume_8h.html#a74944438a086975793d26ae48d5882d4", null ],
-    [ "RPP", "d9/df5/chi__mesh__logicalvolume_8h.html#ab27b91d4128c63b2fa1ff9d4c7f179a5", null ],
-    [ "SPHERE", "d9/df5/chi__mesh__logicalvolume_8h.html#ad6372e14875f107f90642c7da8e10d12", null ],
-    [ "SPHERE_ORIGIN", "d9/df5/chi__mesh__logicalvolume_8h.html#a8fa293695ca84c47fbcd8bf99f6357f7", null ],
-    [ "SURFACE", "d9/df5/chi__mesh__logicalvolume_8h.html#a5ec2e414545e7c2a2f3ebe4c93600b76", null ]
+    [ "LogicalVolumeType", "d9/df5/chi__mesh__logicalvolume_8h.html#a0188560b69c38277389a3b9054070fb2", [
+      [ "LVSPHERE", "d9/df5/chi__mesh__logicalvolume_8h.html#a0188560b69c38277389a3b9054070fb2a8c8a076c1703c9f3535a5225bd8d9317", null ],
+      [ "LVSPHERE_ORIGIN", "d9/df5/chi__mesh__logicalvolume_8h.html#a0188560b69c38277389a3b9054070fb2a1abb99eae8a5e20e2ba19dc2188c2a3d", null ],
+      [ "LVRPP", "d9/df5/chi__mesh__logicalvolume_8h.html#a0188560b69c38277389a3b9054070fb2a0faaafb69d8450f1f7424397c8ccb2e6", null ],
+      [ "LVRCC", "d9/df5/chi__mesh__logicalvolume_8h.html#a0188560b69c38277389a3b9054070fb2a57ca75e65b137dbe42b6f4e83b622993", null ],
+      [ "LVSURFACE", "d9/df5/chi__mesh__logicalvolume_8h.html#a0188560b69c38277389a3b9054070fb2afff94b8acb91013c95e1d4108724d543", null ],
+      [ "LVBOOLEAN", "d9/df5/chi__mesh__logicalvolume_8h.html#a0188560b69c38277389a3b9054070fb2a19f2ce5d3a3b8329b08ead2e0544e4ac", null ]
+    ] ]
 ];

@@ -3,9 +3,9 @@ var dir_22b254c5e4949359147845a3f3aababa =
     [ "IterativeMethods", "dir_34cab2b6b3ddb5c5da61cba3e73d464b.html", "dir_34cab2b6b3ddb5c5da61cba3e73d464b" ],
     [ "SweepChunks", "dir_d4fbf6e9722c7fcd08b198d81111e482.html", "dir_d4fbf6e9722c7fcd08b198d81111e482" ],
     [ "lbs_discrete_ordinates_solver.h", "de/d53/lbs__discrete__ordinates__solver_8h.html", [
-      [ "lbs::LBSDiscreteOrdinatesSolver", "d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html", "d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver" ]
+      [ "lbs::DiscreteOrdinatesSolver", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html", "d4/dec/classlbs_1_1_discrete_ordinates_solver" ]
     ] ],
-    [ "lbsDO_00_constrdestraccesors.cc", "d9/d98/lbs_d_o__00__constrdestraccesors_8cc.html", null ],
+    [ "lbsDO_00_constrdestraccesors.cc", "d9/d98/lbs_d_o__00__constrdestraccesors_8cc.html", "d9/d98/lbs_d_o__00__constrdestraccesors_8cc" ],
     [ "lbsDO_01_main_initialize.cc", "d9/df7/lbs_d_o__01__main__initialize_8cc.html", "d9/df7/lbs_d_o__01__main__initialize_8cc" ],
     [ "lbsDO_07_vectorassembly.cc", "d6/d76/lbs_d_o__07__vectorassembly_8cc.html", null ],
     [ "lbsDO_balance.cc", "d4/d6b/lbs_d_o__balance_8cc.html", null ],

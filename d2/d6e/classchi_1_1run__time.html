@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -113,6 +120,14 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a8373631a85b1e237085c0673f0a1d7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae32b5dfbbce3dff060533ad34e49372e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classchi_1_1run__time.html#ae32b5dfbbce3dff060533ad34e49372e">allow_petsc_error_handler_</a> = false</td></tr>
 <tr class="separator:ae32b5dfbbce3dff060533ad34e49372e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9de4e5bbefb7d8872935a08916e37faa"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classchi_1_1run__time.html#a9de4e5bbefb7d8872935a08916e37faa">supress_beg_end_timelog_</a> = false</td></tr>
+<tr class="separator:a9de4e5bbefb7d8872935a08916e37faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69de542e3b016a0e472dd67de3121e6d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classchi_1_1run__time.html#a69de542e3b016a0e472dd67de3121e6d">suppress_color_</a> = false</td></tr>
+<tr class="separator:a69de542e3b016a0e472dd67de3121e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cca9ded247d06d50a3cd8601802baef"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classchi_1_1run__time.html#a7cca9ded247d06d50a3cd8601802baef">dump_registry_</a> = false</td></tr>
+<tr class="separator:a7cca9ded247d06d50a3cd8601802baef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a5e7335ca94eeb9c55c6a46346f1b6"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classchi_1_1run__time.html#a48a5e7335ca94eeb9c55c6a46346f1b6">command_line_help_string_</a></td></tr>
+<tr class="separator:a48a5e7335ca94eeb9c55c6a46346f1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
@@ -129,7 +144,7 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Data block for run-time quantities. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00090">90</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00099">99</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4cf16c6c2ae817875d23dc1e228f108b" name="a4cf16c6c2ae817875d23dc1e228f108b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4cf16c6c2ae817875d23dc1e228f108b">&#9670;&nbsp;</a></span>run_time() <span class="overload">[1/2]</span></h2>
@@ -218,7 +233,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Initializes PetSc for use by all entities. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00157">157</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00190">190</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -289,7 +304,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00062">62</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00077">77</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -314,7 +329,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00099">99</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00113">113</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +354,69 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00096">96</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00105">105</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+
+</div>
+</div>
+<a id="a48a5e7335ca94eeb9c55c6a46346f1b6" name="a48a5e7335ca94eeb9c55c6a46346f1b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48a5e7335ca94eeb9c55c6a46346f1b6">&#9670;&nbsp;</a></span>command_line_help_string_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string chi::run_time::command_line_help_string_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">  <span class="stringliteral">&quot;\nUsage: exe inputfile [options values]\n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;     -v                          Level of verbosity. Default 0.\n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;                                 Can be either 0, 1 or 2.\n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;     a=b                         Executes argument as a lua string. &quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;i.e. x=2 or y=[[\&quot;string\&quot;]]\n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;     --allow_petsc_error_handler Allow petsc error handler.\n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;     --supress_beg_end_timelog   Suppress time logs at the \n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;                                 beginning and end of execution.\n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;     --suppress_color            Suppresses the printing of color.\n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;                                 useful for unit tests requiring a diff.\n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;     --dump-object-registry      Dumps the object registry.\n&quot;</span></div>
+<div class="line">  <span class="stringliteral">&quot;\n\n\n&quot;</span></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00110">110</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+
+</div>
+</div>
+<a id="a7cca9ded247d06d50a3cd8601802baef" name="a7cca9ded247d06d50a3cd8601802baef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cca9ded247d06d50a3cd8601802baef">&#9670;&nbsp;</a></span>dump_registry_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chi::run_time::dump_registry_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00108">108</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -363,7 +440,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00094">94</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00103">103</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +464,55 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00095">95</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00104">104</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+
+</div>
+</div>
+<a id="a69de542e3b016a0e472dd67de3121e6d" name="a69de542e3b016a0e472dd67de3121e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69de542e3b016a0e472dd67de3121e6d">&#9670;&nbsp;</a></span>suppress_color_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chi::run_time::suppress_color_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00107">107</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+
+</div>
+</div>
+<a id="a9de4e5bbefb7d8872935a08916e37faa" name="a9de4e5bbefb7d8872935a08916e37faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9de4e5bbefb7d8872935a08916e37faa">&#9670;&nbsp;</a></span>supress_beg_end_timelog_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chi::run_time::supress_beg_end_timelog_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00106">106</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -411,7 +536,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00093">93</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00102">102</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>

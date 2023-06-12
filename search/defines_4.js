@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['errorreadingfile_0',['ErrorReadingFile',['../d5/d74/unpartmesh__01a__readfromvtu_8cc.html#af7ee8ee37fea570f0e462db9b8ebb75b',1,'ErrorReadingFile():&#160;unpartmesh_01a_readfromvtu.cc'],['../d1/daf/unpartmesh__01b__readfrompvtu_8cc.html#af7ee8ee37fea570f0e462db9b8ebb75b',1,'ErrorReadingFile():&#160;unpartmesh_01b_readfrompvtu.cc'],['../de/d19/unpartmesh__01c__readfromensight_8cc.html#af7ee8ee37fea570f0e462db9b8ebb75b',1,'ErrorReadingFile():&#160;unpartmesh_01c_readfromensight.cc'],['../d7/df5/unpartmesh__01f__readfromexodus_8cc.html#af7ee8ee37fea570f0e462db9b8ebb75b',1,'ErrorReadingFile():&#160;unpartmesh_01f_readfromexodus.cc']]],
-  ['exceptionglobalfacenormalsdiffer_1',['ExceptionGlobalFaceNormalsDiffer',['../de/d16/lbs__01h__init__boundaries_8cc.html#ab35cda7e6c0258815de0a16cd268ed96',1,'lbs_01h_init_boundaries.cc']]],
-  ['exceptionlocalfacenormalsdiffer_2',['ExceptionLocalFaceNormalsDiffer',['../de/d16/lbs__01h__init__boundaries_8cc.html#a716606bc6efc8c0864a0646094eff3c0',1,'lbs_01h_init_boundaries.cc']]],
-  ['exceptionreflectedangleerror_3',['ExceptionReflectedAngleError',['../dd/d94/angleaggregation_8cc.html#a3dea993268d8bfa93cfc9d65bd2b9d92',1,'angleaggregation.cc']]]
+  ['getagscontextptr_0',['GetAGSContextPtr',['../d5/d89/ags__linear__solver_8cc.html#aee70207623fda4dfd58eff611828254a',1,'ags_linear_solver.cc']]],
+  ['getgscontextptr_1',['GetGSContextPtr',['../d4/d7e/ags__context_8cc.html#a1dab71ced4c665e3d15f0e7fb7ca8c94',1,'GetGSContextPtr():&#160;ags_context.cc'],['../d3/d8a/wgs__linear__solver_8cc.html#a1dab71ced4c665e3d15f0e7fb7ca8c94',1,'GetGSContextPtr():&#160;wgs_linear_solver.cc']]],
+  ['getnlkagscontextptr_2',['GetNLKAGSContextPtr',['../de/db7/nl__keigen__ags__solver_8cc.html#a62ae62569f5246f3e711d1bb7606eec7',1,'nl_keigen_ags_solver.cc']]],
+  ['getnlkdiffcontextptr_3',['GetNLKDiffContextPtr',['../d5/d70/nl__keigen__acc__solver_8cc.html#a19a9a0aa47c9179c5b4a8a73a254dc52',1,'nl_keigen_acc_solver.cc']]]
 ];

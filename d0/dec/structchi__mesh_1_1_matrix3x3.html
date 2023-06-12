@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -343,9 +350,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Produces a rotation matrix with a reference vector rotated from the cartesian basis vectors <img class="formulaInl" alt="$\hat{i}$" src="../../form_80.png" width="6" height="15"/>, <img class="formulaInl" alt="$\hat{j}$" src="../../form_81.png" width="8" height="18"/> and <img class="formulaInl" alt="$\hat{k}$" src="../../form_82.png" width="8" height="15"/>.</p>
-<p >By default a rotation matrix that creates no rotation is the identity matrix. Such a matrix can be defined from basis vectors following the notion that the "up-vector" is <img class="formulaInl" alt="$\hat{k}$" src="../../form_82.png" width="8" height="15"/>, this is also called the normal vector <img class="formulaInl" alt="$\hat{n}$" src="../../form_83.png" width="11" height="12"/>. The tangent vector is <img class="formulaInl" alt="$\hat{i}$" src="../../form_80.png" width="6" height="15"/>, denoted with <img class="formulaInl" alt="$\hat{t}$" src="../../form_84.png" width="8" height="14"/>. And the bi-norm vector is <img class="formulaInl" alt="$\hat{j}$" src="../../form_81.png" width="8" height="18"/>, denoted with <img class="formulaInl" alt="$\hat{b}$" src="../../form_85.png" width="6" height="15"/>.</p>
-<p >By specifying only the normal vector we can compute a simple pitch based rotation matrix. The supplied vector is therefore the new normal-vector, the tangent vector is computed as <img class="formulaInl" alt="$ \hat{t} = \hat{n} \times \hat{k} $" src="../../form_86.png" width="62" height="15"/>, and the bi-norm vector is computed as <img class="formulaInl" alt="$ \hat{b} = \hat{n} \times \hat{t} $" src="../../form_87.png" width="60" height="15"/> </p>
+<p >Produces a rotation matrix with a reference vector rotated from the cartesian basis vectors \(\hat{i}\), \(\hat{j}\) and \(\hat{k}\).</p>
+<p >By default a rotation matrix that creates no rotation is the identity matrix. Such a matrix can be defined from basis vectors following the notion that the "up-vector" is \(\hat{k}\), this is also called the normal vector \(\hat{n}\). The tangent vector is \(\hat{i}\), denoted with \(\hat{t}\). And the bi-norm vector is \(\hat{j}\), denoted with \(\hat{b}\).</p>
+<p >By specifying only the normal vector we can compute a simple pitch based rotation matrix. The supplied vector is therefore the new normal-vector, the tangent vector is computed as \( \hat{t} = \hat{n} \times \hat{k} \), and the bi-norm vector is computed as \( \hat{b} = \hat{n} \times \hat{t} \) </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/df9/chi__meshmatrix3x3_8h_source.html#l00035">35</a> of file <a class="el" href="../../d8/df9/chi__meshmatrix3x3_8h_source.html">chi_meshmatrix3x3.h</a>.</p>
 

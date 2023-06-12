@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -90,7 +97,7 @@ $(document).ready(function(){initNavTree('d7/d2b/dfem__diffusion__utils_8cc_sour
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;ChiLua/chi_lua.h&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d77/dfem__diffusion__solver_8h.html">dfem_diffusion_solver.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d1/db1/fieldfunction_8h.html">ChiPhysics/FieldFunction/fieldfunction.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/d72/fieldfunction__gridbased_8h.html">ChiPhysics/FieldFunction/fieldfunction_gridbased.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d28/spatial__discretization_8h.html">ChiMath/SpatialDiscretization/spatial_discretization.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
@@ -273,13 +280,13 @@ $(document).ready(function(){initNavTree('d7/d2b/dfem__diffusion__utils_8cc_sour
 <div class="ttc" id="aclassdfem__diffusion_1_1_solver_html_aefa732d6459cad87908b68b49001ec3d"><div class="ttname"><a href="../../df/ddc/classdfem__diffusion_1_1_solver.html#aefa732d6459cad87908b68b49001ec3d">dfem_diffusion::Solver::HPerpendicular</a></div><div class="ttdeci">double HPerpendicular(const chi_mesh::Cell &amp;cell, unsigned int f)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d2b/dfem__diffusion__utils_8cc_source.html#l00022">dfem_diffusion_utils.cc:22</a></div></div>
 <div class="ttc" id="adfem__diffusion__solver_8h_html"><div class="ttname"><a href="../../dc/d77/dfem__diffusion__solver_8h.html">dfem_diffusion_solver.h</a></div></div>
 <div class="ttc" id="adfem__diffusion__utils_8cc_html_a0bfacbc56025d3246cc0c2d681b12ec0"><div class="ttname"><a href="../../d7/d2b/dfem__diffusion__utils_8cc.html#a0bfacbc56025d3246cc0c2d681b12ec0">scdouble</a></div><div class="ttdeci">#define scdouble</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d2b/dfem__diffusion__utils_8cc_source.html#l00009">dfem_diffusion_utils.cc:9</a></div></div>
-<div class="ttc" id="afieldfunction_8h_html"><div class="ttname"><a href="../../d1/db1/fieldfunction_8h.html">fieldfunction.h</a></div></div>
+<div class="ttc" id="afieldfunction__gridbased_8h_html"><div class="ttname"><a href="../../d8/d72/fieldfunction__gridbased_8h.html">fieldfunction_gridbased.h</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74">chi_mesh::CellType::POLYHEDRON</a></div><div class="ttdeci">@ POLYHEDRON</div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ac0040cc3dbd19fdbf7d5dc46e61a5ca9ad1360da3ac37ed5c02244bbe2ef9a34e"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9ad1360da3ac37ed5c02244bbe2ef9a34e">chi_mesh::CellType::SLAB</a></div><div class="ttdeci">@ SLAB</div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ac0040cc3dbd19fdbf7d5dc46e61a5ca9aecdc92bf56d960b73b02ee40125758bc"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9aecdc92bf56d960b73b02ee40125758bc">chi_mesh::CellType::POLYGON</a></div><div class="ttdeci">@ POLYGON</div></div>
 <div class="ttc" id="aspatial__discretization_8h_html"><div class="ttname"><a href="../../d6/d28/spatial__discretization_8h.html">spatial_discretization.h</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00018">chi_meshvector.h:19</a></div></div>
-<div class="ttc" id="astructchi__mesh_1_1_vector3_html_a33d8bca1bdf32a3936e96862f238de34"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a33d8bca1bdf32a3936e96862f238de34">chi_mesh::Vector3::PrintStr</a></div><div class="ttdeci">std::string PrintStr() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00428">chi_meshvector.h:428</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_vector3_html_a33d8bca1bdf32a3936e96862f238de34"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a33d8bca1bdf32a3936e96862f238de34">chi_mesh::Vector3::PrintStr</a></div><div class="ttdeci">std::string PrintStr() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00457">chi_meshvector.h:457</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_vector3_html_a3e75a0cebaa0134cdd89724f6c101472"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472">chi_mesh::Vector3::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">Element-0.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00020">chi_meshvector.h:20</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_vector3_html_a8b89a79cfebafd04dbda021f626a9694"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a8b89a79cfebafd04dbda021f626a9694">chi_mesh::Vector3::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">Element-1.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00021">chi_meshvector.h:21</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_vector3_html_a95963ca137a97c9d927bc9d10a98a36f"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html#a95963ca137a97c9d927bc9d10a98a36f">chi_mesh::Vector3::z</a></div><div class="ttdeci">double z</div><div class="ttdoc">Element-2.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00022">chi_meshvector.h:22</a></div></div>

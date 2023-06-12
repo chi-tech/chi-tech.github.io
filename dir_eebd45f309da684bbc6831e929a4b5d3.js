@@ -1,5 +1,6 @@
 var dir_eebd45f309da684bbc6831e929a4b5d3 =
 [
+    [ "doc", "dir_b9c54e4217a0ebd4e662f3ee121ac6d3.html", "dir_b9c54e4217a0ebd4e662f3ee121ac6d3" ],
     [ "adjoint_mgxs.cc", "d4/d07/adjoint__mgxs_8cc.html", null ],
     [ "adjoint_mgxs.h", "df/da2/adjoint__mgxs_8h.html", [
       [ "chi_physics::AdjointMGXS", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s" ]

@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -157,7 +164,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created angular quadrature</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01484">1484</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03047">3047</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -209,9 +216,13 @@ Functions</h2></td></tr>
 <li>Na : (int) number of azimuthal angles (unique number at each polar level), or (table&lt;int&gt;) number of azimuthal angles (diverse number at each polar level)</li>
 <li>verbose : (bool) verbosity flag (optional).</li>
 </ul>
-<dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule</dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../d6/de8/tests__transport__steady__cyl__transport2_d_cyl_2_multigroup_lua.html">tests/Transport_Steady_Cyl/Transport2DCyl_2Multigroup.lua</a> <br  />
+ <a class="el" href="../../d3/d09/tests__transport__steady__cyl__transport2_d_cyl_1_monoenergetic_lua.html">tests/Transport_Steady_Cyl/Transport2DCyl_1Monoenergetic.lua</a> <br  />
+ </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01518">1518</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03084">3084</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -261,7 +272,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created quadrature rule</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01615">1615</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03230">3230</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -314,9 +325,58 @@ Functions</h2></td></tr>
 <br  />
 </p>
 <dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule</dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../d4/de2/tests__m_g_diffusion__k_eigen__k_eigenvalue_m_i_p2_d_1b__q_block_lua.html">tests/MGDiffusion_KEigen/KEigenvalueMIP2D_1b_QBlock.lua</a> <br  />
+ <a class="el" href="../../d0/d91/tests__m_g_diffusion__k_eigen__k_eigenvalue_m_i_p1_d_1_g_lua.html">tests/MGDiffusion_KEigen/KEigenvalueMIP1D_1G.lua</a> <br  />
+ <a class="el" href="../../d3/d2b/tests__m_g_diffusion__k_eigen__k_eigenvalue_m_i_p2_d_1a__q_block_lua.html">tests/MGDiffusion_KEigen/KEigenvalueMIP2D_1a_QBlock.lua</a> <br  />
+ <a class="el" href="../../df/dad/tests__transport__keigen__k_eigenvalue_transport2_d_2b__q_block_lua.html">tests/Transport_Keigen/KEigenvalueTransport2D_2b_QBlock.lua</a> <br  />
+ <a class="el" href="../../da/d1d/tests__transport__keigen__k_eigenvalue_transport1_d_1_g_lua.html">tests/Transport_Keigen/KEigenvalueTransport1D_1G.lua</a> <br  />
+ <a class="el" href="../../d9/d8f/tests__transport__keigen__k_eigenvalue_transport2_d_1b__q_block_lua.html">tests/Transport_Keigen/KEigenvalueTransport2D_1b_QBlock.lua</a> <br  />
+ <a class="el" href="../../db/d23/tests__transport__keigen__k_eigenvalue_transport2_d_1a__q_block_lua.html">tests/Transport_Keigen/KEigenvalueTransport2D_1a_QBlock.lua</a> <br  />
+ <a class="el" href="../../d5/d17/tests__transport__keigen__k_eigenvalue_transport2_d_2a__q_block_lua.html">tests/Transport_Keigen/KEigenvalueTransport2D_2a_QBlock.lua</a> <br  />
+ <a class="el" href="../../da/dfd/tests__m_g_diffusion__steady__m_i_p_diffusion3_d_1b__ortho_lua.html">tests/MGDiffusion_Steady/MIPDiffusion3D_1b_Ortho.lua</a> <br  />
+ <a class="el" href="../../d2/de8/tests__m_g_diffusion__steady__m_i_p_diffusion3_d_3a__d_s_a_ortho_lua.html">tests/MGDiffusion_Steady/MIPDiffusion3D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../d8/de8/tests__transport__steady__transport2_d_2_unstructured_lua.html">tests/Transport_Steady/Transport2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d0/d4b/tests__transport__steady__transport2_d_1_poly__balance_lua.html">tests/Transport_Steady/Transport2D_1Poly_Balance.lua</a> <br  />
+ <a class="el" href="../../dd/d91/tests__transport__steady__transport1_d_3a__d_s_a_ortho_lua.html">tests/Transport_Steady/Transport1D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../dd/d95/tests__transport__steady__transport2_d_4a__d_s_a_ortho_lua.html">tests/Transport_Steady/Transport2D_4a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../de/da7/tests__transport__steady__transport3_d_1b__ortho_lua.html">tests/Transport_Steady/Transport3D_1b_Ortho.lua</a> <br  />
+ <a class="el" href="../../d4/d0e/tests__transport__steady__transport3_d_4_cycles1_lua.html">tests/Transport_Steady/Transport3D_4Cycles1.lua</a> <br  />
+ <a class="el" href="../../dc/d35/tests__transport__steady__transport2_d_4b__d_s_a_ortho_lua.html">tests/Transport_Steady/Transport2D_4b_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../d2/df7/tests__transport__steady__transport3_d_3a__d_s_a_ortho_lua.html">tests/Transport_Steady/Transport3D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../d7/d55/tests__transport__steady__transport1_d_4__d_s_a_ortho_inf_lua.html">tests/Transport_Steady/Transport1D_4_DSA_ortho_inf.lua</a> <br  />
+ <a class="el" href="../../da/d15/tests__transport__steady__transport3_d_1_poly_qmom_part2_lua.html">tests/Transport_Steady/Transport3D_1Poly_qmom_part2.lua</a> <br  />
+ <a class="el" href="../../d4/df1/tests__transport__steady__transport1_d_1_lua.html">tests/Transport_Steady/Transport1D_1.lua</a> <br  />
+ <a class="el" href="../../dd/df2/tests__transport__steady__transport2_d_1_poly_lua.html">tests/Transport_Steady/Transport2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../da/d81/tests__transport__steady__transport3_d_1_poly_parmetis_lua.html">tests/Transport_Steady/Transport3D_1Poly_parmetis.lua</a> <br  />
+ <a class="el" href="../../da/d7f/tests__transport__steady__transport2_d_1_poly__balance_m_g_lua.html">tests/Transport_Steady/Transport2D_1Poly_BalanceMG.lua</a> <br  />
+ <a class="el" href="../../da/dd1/tests__transport__steady__transport3_d_1_poly_qmom_part1_lua.html">tests/Transport_Steady/Transport3D_1Poly_qmom_part1.lua</a> <br  />
+ <a class="el" href="../../de/d6d/tests__transport__steady__transport3_d_1a__extruder_lua.html">tests/Transport_Steady/Transport3D_1a_Extruder.lua</a> <br  />
+ <a class="el" href="../../db/d94/tests__transport__steady__transport3_d_5_cycles2_lua.html">tests/Transport_Steady/Transport3D_5Cycles2.lua</a> <br  />
+ <a class="el" href="../../df/d4b/tests__transport__steady__transport2_d_5_poly_a__ani_hetero_bndry_lua.html">tests/Transport_Steady/Transport2D_5PolyA_AniHeteroBndry.lua</a> <br  />
+ <a class="el" href="../../d9/d97/tests__transport__steady__transport2_d_3_poly_quad_mod_lua.html">tests/Transport_Steady/Transport2D_3Poly_quad_mod.lua</a> <br  />
+ <a class="el" href="../../d0/dcb/tests__transport__steady__transport3_d_2_unstructured_lua.html">tests/Transport_Steady/Transport3D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../db/d2a/tests_unit_test_inputs__sim_test93__ray_tracing_lua.html">tests/unit_test_inputs/SimTest93_RayTracing.lua</a> <br  />
+ <a class="el" href="../../de/da8/tests__transport__adjoint__adjoint2_d_3c_response_lua.html">tests/Transport_Adjoint/Adjoint2D_3c_response.lua</a> <br  />
+ <a class="el" href="../../d9/d61/tests__transport__adjoint__adjoint2_d_1b_adjoint_lua.html">tests/Transport_Adjoint/Adjoint2D_1b_adjoint.lua</a> <br  />
+ <a class="el" href="../../df/d38/tests__transport__adjoint__adjoint2_d_3a_forward_lua.html">tests/Transport_Adjoint/Adjoint2D_3a_forward.lua</a> <br  />
+ <a class="el" href="../../d5/d02/tests__transport__adjoint__adjoint2_d_2a_forward_lua.html">tests/Transport_Adjoint/Adjoint2D_2a_forward.lua</a> <br  />
+ <a class="el" href="../../d0/d29/tests__transport__adjoint__adjoint2_d_1a_forward_lua.html">tests/Transport_Adjoint/Adjoint2D_1a_forward.lua</a> <br  />
+ <a class="el" href="../../d5/d1f/tests__transport__adjoint__adjoint2_d_1c_response_lua.html">tests/Transport_Adjoint/Adjoint2D_1c_response.lua</a> <br  />
+ <a class="el" href="../../da/d42/tests__transport__adjoint__adjoint2_d_3b_adjoint_lua.html">tests/Transport_Adjoint/Adjoint2D_3b_adjoint.lua</a> <br  />
+ <a class="el" href="../../d6/d25/tests__transport__adjoint__adjoint2_d_2b_adjoint_lua.html">tests/Transport_Adjoint/Adjoint2D_2b_adjoint.lua</a> <br  />
+ <a class="el" href="../../d4/db5/tests__transport__adjoint__adjoint2_d_2c_response_lua.html">tests/Transport_Adjoint/Adjoint2D_2c_response.lua</a> <br  />
+ <a class="el" href="../../de/d24/tests__big_tests__q_block__q_block1b_lua.html">tests/BigTests/QBlock/QBlock1b.lua</a> <br  />
+ <a class="el" href="../../d5/d45/tests__big_tests__q_block__q_block1a_lua.html">tests/BigTests/QBlock/QBlock1a.lua</a> <br  />
+ <a class="el" href="../../dd/d20/tests__big_tests_c5g7__test1__x__sim1_lua.html">tests/BigTests/c5g7/Test1/X_Sim1.lua</a> <br  />
+ <a class="el" href="../../d6/d91/tests__transport__transient__transient_transport1_d_3_lua.html">tests/Transport_Transient/TransientTransport1D_3.lua</a> <br  />
+ <a class="el" href="../../d9/d01/tests__transport__transient__transient_transport1_d_2_lua.html">tests/Transport_Transient/TransientTransport1D_2.lua</a> <br  />
+ <a class="el" href="../../d7/dbf/tests__transport__transient__transient_transport1_d_1_lua.html">tests/Transport_Transient/TransientTransport1D_1.lua</a> <br  />
+ <a class="el" href="../../d6/da5/tests__transport__transient__transient_transport2_d_2_lua.html">tests/Transport_Transient/TransientTransport2D_2.lua</a> <br  />
+ <a class="el" href="../../d9/da3/tests__transport__transient__transient_transport2_d_3_lua.html">tests/Transport_Transient/TransientTransport2D_3.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01586">1586</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03201">3201</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -368,7 +428,7 @@ Functions</h2></td></tr>
 </ul>
 <dl class="section return"><dt>Returns</dt><dd>Returns a unique handle to the created product quadrature rule </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01547">1547</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03113">3113</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -397,7 +457,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Table A lua table with each entry being another table with entries .weight .polar .azimuthal.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01597">1597</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03212">3212</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -438,11 +498,41 @@ Functions</h2></td></tr>
 <h3>Example:</h3>
 <p >Example: </p><div class="fragment"><div class="line">pquad = <a class="code hl_function" href="../../de/d37/group___lua_quadrature.html#ga310caeec08395d1fa35d319489fc08f2">chiCreateProductQuadrature</a>(GAUSS_LEGENDRE_CHEBYSHEV,2, 1)</div>
 <div class="line"><a class="code hl_function" href="../../de/d37/group___lua_quadrature.html#ga8c4e64918adaadfcd5bcfa03d515143a">chiOptimizeAngularQuadratureForPolarSymmetry</a>(pqaud, 4.0*math.pi)</div>
-<div class="ttc" id="agroup___lua_quadrature_html_ga310caeec08395d1fa35d319489fc08f2"><div class="ttname"><a href="../../de/d37/group___lua_quadrature.html#ga310caeec08395d1fa35d319489fc08f2">chi_lua::chiCreateProductQuadrature</a></div><div class="ttdeci">Returns chiCreateProductQuadrature(int QuadratureType, varying values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01586">lua_functions.c:1586</a></div></div>
-<div class="ttc" id="agroup___lua_quadrature_html_ga8c4e64918adaadfcd5bcfa03d515143a"><div class="ttname"><a href="../../de/d37/group___lua_quadrature.html#ga8c4e64918adaadfcd5bcfa03d515143a">chi_lua::chiOptimizeAngularQuadratureForPolarSymmetry</a></div><div class="ttdeci">void chiOptimizeAngularQuadratureForPolarSymmetry(int. handle, double. normalization)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01635">lua_functions.c:1635</a></div></div>
-</div><!-- fragment --><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+<div class="ttc" id="agroup___lua_quadrature_html_ga310caeec08395d1fa35d319489fc08f2"><div class="ttname"><a href="../../de/d37/group___lua_quadrature.html#ga310caeec08395d1fa35d319489fc08f2">chi_lua::chiCreateProductQuadrature</a></div><div class="ttdeci">Returns chiCreateProductQuadrature(int QuadratureType, varying values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l03201">lua_functions.c:3201</a></div></div>
+<div class="ttc" id="agroup___lua_quadrature_html_ga8c4e64918adaadfcd5bcfa03d515143a"><div class="ttname"><a href="../../de/d37/group___lua_quadrature.html#ga8c4e64918adaadfcd5bcfa03d515143a">chi_lua::chiOptimizeAngularQuadratureForPolarSymmetry</a></div><div class="ttdeci">void chiOptimizeAngularQuadratureForPolarSymmetry(int. handle, double. normalization)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l03280">lua_functions.c:3280</a></div></div>
+</div><!-- fragment --><h3>Usage Examples:</h3>
+<p ><a class="el" href="../../d4/de2/tests__m_g_diffusion__k_eigen__k_eigenvalue_m_i_p2_d_1b__q_block_lua.html">tests/MGDiffusion_KEigen/KEigenvalueMIP2D_1b_QBlock.lua</a> <br  />
+ <a class="el" href="../../d3/d2b/tests__m_g_diffusion__k_eigen__k_eigenvalue_m_i_p2_d_1a__q_block_lua.html">tests/MGDiffusion_KEigen/KEigenvalueMIP2D_1a_QBlock.lua</a> <br  />
+ <a class="el" href="../../df/dad/tests__transport__keigen__k_eigenvalue_transport2_d_2b__q_block_lua.html">tests/Transport_Keigen/KEigenvalueTransport2D_2b_QBlock.lua</a> <br  />
+ <a class="el" href="../../d9/d8f/tests__transport__keigen__k_eigenvalue_transport2_d_1b__q_block_lua.html">tests/Transport_Keigen/KEigenvalueTransport2D_1b_QBlock.lua</a> <br  />
+ <a class="el" href="../../db/d23/tests__transport__keigen__k_eigenvalue_transport2_d_1a__q_block_lua.html">tests/Transport_Keigen/KEigenvalueTransport2D_1a_QBlock.lua</a> <br  />
+ <a class="el" href="../../d5/d17/tests__transport__keigen__k_eigenvalue_transport2_d_2a__q_block_lua.html">tests/Transport_Keigen/KEigenvalueTransport2D_2a_QBlock.lua</a> <br  />
+ <a class="el" href="../../d8/de8/tests__transport__steady__transport2_d_2_unstructured_lua.html">tests/Transport_Steady/Transport2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d0/d4b/tests__transport__steady__transport2_d_1_poly__balance_lua.html">tests/Transport_Steady/Transport2D_1Poly_Balance.lua</a> <br  />
+ <a class="el" href="../../dd/d95/tests__transport__steady__transport2_d_4a__d_s_a_ortho_lua.html">tests/Transport_Steady/Transport2D_4a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../dc/d35/tests__transport__steady__transport2_d_4b__d_s_a_ortho_lua.html">tests/Transport_Steady/Transport2D_4b_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../dd/df2/tests__transport__steady__transport2_d_1_poly_lua.html">tests/Transport_Steady/Transport2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../da/d7f/tests__transport__steady__transport2_d_1_poly__balance_m_g_lua.html">tests/Transport_Steady/Transport2D_1Poly_BalanceMG.lua</a> <br  />
+ <a class="el" href="../../df/d4b/tests__transport__steady__transport2_d_5_poly_a__ani_hetero_bndry_lua.html">tests/Transport_Steady/Transport2D_5PolyA_AniHeteroBndry.lua</a> <br  />
+ <a class="el" href="../../d9/d97/tests__transport__steady__transport2_d_3_poly_quad_mod_lua.html">tests/Transport_Steady/Transport2D_3Poly_quad_mod.lua</a> <br  />
+ <a class="el" href="../../db/d2a/tests_unit_test_inputs__sim_test93__ray_tracing_lua.html">tests/unit_test_inputs/SimTest93_RayTracing.lua</a> <br  />
+ <a class="el" href="../../de/da8/tests__transport__adjoint__adjoint2_d_3c_response_lua.html">tests/Transport_Adjoint/Adjoint2D_3c_response.lua</a> <br  />
+ <a class="el" href="../../d9/d61/tests__transport__adjoint__adjoint2_d_1b_adjoint_lua.html">tests/Transport_Adjoint/Adjoint2D_1b_adjoint.lua</a> <br  />
+ <a class="el" href="../../df/d38/tests__transport__adjoint__adjoint2_d_3a_forward_lua.html">tests/Transport_Adjoint/Adjoint2D_3a_forward.lua</a> <br  />
+ <a class="el" href="../../d5/d02/tests__transport__adjoint__adjoint2_d_2a_forward_lua.html">tests/Transport_Adjoint/Adjoint2D_2a_forward.lua</a> <br  />
+ <a class="el" href="../../d0/d29/tests__transport__adjoint__adjoint2_d_1a_forward_lua.html">tests/Transport_Adjoint/Adjoint2D_1a_forward.lua</a> <br  />
+ <a class="el" href="../../d5/d1f/tests__transport__adjoint__adjoint2_d_1c_response_lua.html">tests/Transport_Adjoint/Adjoint2D_1c_response.lua</a> <br  />
+ <a class="el" href="../../da/d42/tests__transport__adjoint__adjoint2_d_3b_adjoint_lua.html">tests/Transport_Adjoint/Adjoint2D_3b_adjoint.lua</a> <br  />
+ <a class="el" href="../../d6/d25/tests__transport__adjoint__adjoint2_d_2b_adjoint_lua.html">tests/Transport_Adjoint/Adjoint2D_2b_adjoint.lua</a> <br  />
+ <a class="el" href="../../d4/db5/tests__transport__adjoint__adjoint2_d_2c_response_lua.html">tests/Transport_Adjoint/Adjoint2D_2c_response.lua</a> <br  />
+ <a class="el" href="../../de/d24/tests__big_tests__q_block__q_block1b_lua.html">tests/BigTests/QBlock/QBlock1b.lua</a> <br  />
+ <a class="el" href="../../d5/d45/tests__big_tests__q_block__q_block1a_lua.html">tests/BigTests/QBlock/QBlock1a.lua</a> <br  />
+ <a class="el" href="../../dd/d20/tests__big_tests_c5g7__test1__x__sim1_lua.html">tests/BigTests/c5g7/Test1/X_Sim1.lua</a> <br  />
+ <a class="el" href="../../d6/da5/tests__transport__transient__transient_transport2_d_2_lua.html">tests/Transport_Transient/TransientTransport2D_2.lua</a> <br  />
+ <a class="el" href="../../d9/da3/tests__transport__transient__transient_transport2_d_3_lua.html">tests/Transport_Transient/TransientTransport2D_3.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l01635">1635</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03280">3280</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

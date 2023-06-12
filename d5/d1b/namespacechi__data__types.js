@@ -1,5 +1,10 @@
 var namespacechi__data__types =
 [
+    [ "AllowableRange", "d2/d18/classchi__data__types_1_1_allowable_range.html", "d2/d18/classchi__data__types_1_1_allowable_range" ],
+    [ "AllowableRangeHighLimit", "d4/d8e/classchi__data__types_1_1_allowable_range_high_limit.html", "d4/d8e/classchi__data__types_1_1_allowable_range_high_limit" ],
+    [ "AllowableRangeList", "df/d0b/classchi__data__types_1_1_allowable_range_list.html", "df/d0b/classchi__data__types_1_1_allowable_range_list" ],
+    [ "AllowableRangeLowHighLimit", "dd/d6e/classchi__data__types_1_1_allowable_range_low_high_limit.html", "dd/d6e/classchi__data__types_1_1_allowable_range_low_high_limit" ],
+    [ "AllowableRangeLowLimit", "d4/d3c/classchi__data__types_1_1_allowable_range_low_limit.html", "d4/d3c/classchi__data__types_1_1_allowable_range_low_limit" ],
     [ "ByteArray", "d5/d5b/classchi__data__types_1_1_byte_array.html", "d5/d5b/classchi__data__types_1_1_byte_array" ],
     [ "NDArray", "d2/d5d/classchi__data__types_1_1_n_d_array.html", "d2/d5d/classchi__data__types_1_1_n_d_array" ],
     [ "Varying", "d8/d30/classchi__data__types_1_1_varying.html", "d8/d30/classchi__data__types_1_1_varying" ],

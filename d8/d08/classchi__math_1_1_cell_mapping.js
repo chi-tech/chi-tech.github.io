@@ -1,7 +1,7 @@
 var classchi__math_1_1_cell_mapping =
 [
     [ "VandAFunction", "d8/d08/classchi__math_1_1_cell_mapping.html#a70fc061067e4841ce10e697e75858aa6", null ],
-    [ "CellMapping", "d8/d08/classchi__math_1_1_cell_mapping.html#ac3dfab96848b7ef9b77b28db5a6db56f", null ],
+    [ "CellMapping", "d8/d08/classchi__math_1_1_cell_mapping.html#aa12e90716c5960afadb77b3a3614bf96", null ],
     [ "~CellMapping", "d8/d08/classchi__math_1_1_cell_mapping.html#a132c92e0abce7e21a8fd71529141310a", null ],
     [ "CellVolume", "d8/d08/classchi__math_1_1_cell_mapping.html#a1c4b2020dcc708edfde62a12fc8808bc", null ],
     [ "ComputeCellVolumeAndAreas", "d8/d08/classchi__math_1_1_cell_mapping.html#a53e36b221bdaa9bc1fd04c2e50b3eaf0", null ],
@@ -23,7 +23,7 @@ var classchi__math_1_1_cell_mapping =
     [ "areas_", "d8/d08/classchi__math_1_1_cell_mapping.html#ade1a72dc964c9315c8c0958ed9a82391", null ],
     [ "cell_", "d8/d08/classchi__math_1_1_cell_mapping.html#afe826aad18eb77ccb726f4f5a679a89a", null ],
     [ "face_node_mappings_", "d8/d08/classchi__math_1_1_cell_mapping.html#a47ff5ece9a2cbd654eee1994140f1f5d", null ],
-    [ "grid_ptr_", "d8/d08/classchi__math_1_1_cell_mapping.html#af3857dbf3a43b1aae086f9cde44463e1", null ],
     [ "num_nodes_", "d8/d08/classchi__math_1_1_cell_mapping.html#aa196c7b4859f4162210952083e2de3b1", null ],
+    [ "ref_grid_", "d8/d08/classchi__math_1_1_cell_mapping.html#a9d0dfba43b989283a49238415e45bbad", null ],
     [ "volume_", "d8/d08/classchi__math_1_1_cell_mapping.html#a89041f0966d416eadd1546cdf7743916", null ]
 ];

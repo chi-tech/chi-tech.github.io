@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -113,6 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a98c74be15fd6ebc0c0bdb20e37862f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76913197d74aa847d7197e7061d07030"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">UnknownManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a76913197d74aa847d7197e7061d07030">operator=</a> (const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">UnknownManager</a> &amp;other)=default</td></tr>
 <tr class="separator:a76913197d74aa847d7197e7061d07030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95f05a3c0b849701aad35088213055d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#ad95f05a3c0b849701aad35088213055d">NumberOfUnknowns</a> () const</td></tr>
+<tr class="separator:ad95f05a3c0b849701aad35088213055d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4893672d723115e6da1d37951e92dfd8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d8/df3/classchi__math_1_1_unknown.html">Unknown</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a4893672d723115e6da1d37951e92dfd8">GetUnknown</a> (size_t id) const</td></tr>
+<tr class="separator:a4893672d723115e6da1d37951e92dfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa578b51e51d576545af3dba2b961e50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#afa578b51e51d576545af3dba2b961e50">SetDOFStorageType</a> (const <a class="el" href="../../dc/d58/namespacechi__math.html#a863c3eb4ef311ca7cd86c5e26f89f44c">UnknownStorageType</a> in_storage_type)</td></tr>
 <tr class="separator:afa578b51e51d576545af3dba2b961e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59d220d4da709e27ef059716efb9c996"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d58/namespacechi__math.html#a863c3eb4ef311ca7cd86c5e26f89f44c">UnknownStorageType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a59d220d4da709e27ef059716efb9c996">GetDOFStorageType</a> () const</td></tr>
@@ -151,7 +162,7 @@ Data Fields</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >General object for the management of unknowns in mesh-based mathematical model. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00107">107</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00122">122</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a6d50fa800e23465f7fb6aa351a995c1c" name="a6d50fa800e23465f7fb6aa351a995c1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d50fa800e23465f7fb6aa351a995c1c">&#9670;&nbsp;</a></span>UnknownInfo</h2>
@@ -165,7 +176,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00116">116</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00129">129</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -194,7 +205,7 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00118">118</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00131">131</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -232,7 +243,7 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00123">123</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00137">137</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -270,7 +281,7 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00132">132</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00146">146</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -308,7 +319,7 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00141">141</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00155">155</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -418,7 +429,7 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00176">176</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00195">195</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -445,7 +456,7 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00174">174</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00193">193</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -492,7 +503,35 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00166">166</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00180">180</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="a4893672d723115e6da1d37951e92dfd8" name="a4893672d723115e6da1d37951e92dfd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4893672d723115e6da1d37951e92dfd8">&#9670;&nbsp;</a></span>GetUnknown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d8/df3/classchi__math_1_1_unknown.html">Unknown</a> &amp; chi_math::UnknownManager::GetUnknown </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00186">186</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -524,6 +563,33 @@ Data Fields</h2></td></tr>
 <p >Maps the unknown's component within the storage of a node. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d4c/unknown__manager_8cc_source.html#l00073">73</a> of file <a class="el" href="../../d0/d4c/unknown__manager_8cc_source.html">unknown_manager.cc</a>.</p>
+
+</div>
+</div>
+<a id="ad95f05a3c0b849701aad35088213055d" name="ad95f05a3c0b849701aad35088213055d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95f05a3c0b849701aad35088213055d">&#9670;&nbsp;</a></span>NumberOfUnknowns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t chi_math::UnknownManager::NumberOfUnknowns </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00185">185</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -577,7 +643,7 @@ Data Fields</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00171">171</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00188">188</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -730,7 +796,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00114">114</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00127">127</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>
@@ -746,7 +812,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00113">113</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00126">126</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
 
 </div>
 </div>

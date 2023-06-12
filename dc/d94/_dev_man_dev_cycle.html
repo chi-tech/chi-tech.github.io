@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -113,12 +120,12 @@ Monday January 9 a contributor makes a complex PR. The last dedicated PR-review 
 </div>
 <h2><a class="anchor" id="devman_sec0_4"></a>
 Regression tests</h2>
-<p >Before any contributer makes a pull request an <b> <img class="formulaInl" alt="$\alpha$" src="../../form_314.png" width="9" height="8"/>-regression</b> test-suite must be run. This is a regression test suite that can be run on a number of local machine processes (typically on the contributor's personal machine). On a weekly basis we will execute a high performance <b> <img class="formulaInl" alt="$\beta$" src="../../form_315.png" width="11" height="15"/>-regression</b> test-suite. This test-suite comprises high process-count tests necessary to ensure that the scalability of core features remain unaffected. If the <img class="formulaInl" alt="$\beta$" src="../../form_315.png" width="11" height="15"/>-regression fails, all pull requests that were merged after the last successful <img class="formulaInl" alt="$\beta$" src="../../form_315.png" width="11" height="15"/>-regression will be reverted and the contributors notified.</p>
+<p >Before any contributer makes a pull request an <b> \(\alpha\)-regression</b> test-suite must be run. This is a regression test suite that can be run on a number of local machine processes (typically on the contributor's personal machine). On a weekly basis we will execute a high performance <b> \(\beta\)-regression</b> test-suite. This test-suite comprises high process-count tests necessary to ensure that the scalability of core features remain unaffected. If the \(\beta\)-regression fails, all pull requests that were merged after the last successful \(\beta\)-regression will be reverted and the contributors notified.</p>
 <h2><a class="anchor" id="devman_sec0_5"></a>
 Code review criterion</h2>
 <ol type="1">
 <li>Changes have a clear purpose and are useful.</li>
-<li>The code passes the <img class="formulaInl" alt="$\alpha$" src="../../form_314.png" width="9" height="8"/>-regression tests.</li>
+<li>The code passes the \(\alpha\)-regression tests.</li>
 <li>If appropriate, test cases are added to regression or unit test suites. We will not force unit tests without good cause.</li>
 <li>No memory leaks (checked with valgrind).</li>
 <li>Conforms to the ChiTech style guide.</li>

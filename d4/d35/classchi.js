@@ -8,6 +8,7 @@ var classchi =
     [ "Finalize", "d4/d35/classchi.html#a88720f743f80818b08e68716233d9051", null ],
     [ "GetStackItem", "d4/d35/classchi.html#af43ceb1c400e48570becf01d97e6deb3", null ],
     [ "GetStackItemPtr", "d4/d35/classchi.html#a4a31400d861c0fb3b6e8c809a83b53af", null ],
+    [ "GetStackItemPtrAsType", "d4/d35/classchi.html#a3669050587fd772da3360a8293c8ba56", null ],
     [ "GetVersionStr", "d4/d35/classchi.html#a9ec1229b6f859cf9cf59c28ee97facaa", null ],
     [ "Initialize", "d4/d35/classchi.html#a4e6b239c3512a82a18bb114f84bf22e8", null ],
     [ "operator=", "d4/d35/classchi.html#aa2ce58747c37ab12ff944051c9911131", null ],
@@ -24,9 +25,11 @@ var classchi =
     [ "meshhandler_stack", "d4/d35/classchi.html#a5bc87832f51e2196e2a230a5deb75838", null ],
     [ "mpi", "d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd", null ],
     [ "multigroup_xs_stack", "d4/d35/classchi.html#ac63327052f2f45b85155f455c798d9cf", null ],
+    [ "object_stack", "d4/d35/classchi.html#ab943224840354fdebc84ee218e70afb7", null ],
     [ "program_timer", "d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647", null ],
     [ "quadrature_stack", "d4/d35/classchi.html#af95e663696f1bb453de942ae30e765e7", null ],
-    [ "solver_stack", "d4/d35/classchi.html#ac61de38bf878913b59c570995346052e", null ],
+    [ "sdm_stack", "d4/d35/classchi.html#a2cfa53daa8c627247a751053dccc91d2", null ],
+    [ "SIZE_T_INVALID", "d4/d35/classchi.html#a83aa58252f32304603bd91affbbe63b3", null ],
     [ "surface_mesh_stack", "d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae", null ],
     [ "unpartitionedmesh_stack", "d4/d35/classchi.html#a47b557d0bdd217181e6f5b7798cec13a", null ]
 ];

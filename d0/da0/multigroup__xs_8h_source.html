@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -156,14 +163,16 @@ $(document).ready(function(){initNavTree('d0/da0/multigroup__xs_8h_source.html',
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#af406d395edd6df0ea391f7136be721ea">   69</a></span>  <span class="keyword">virtual</span> <span class="keyword">const</span> std::vector&lt;double&gt;&amp; <a class="code hl_function" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#af406d395edd6df0ea391f7136be721ea">DiffusionCoefficient</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#aab55b2315f46d984386ee3fdb62054ec">   71</a></span>  <span class="keyword">virtual</span> <span class="keyword">const</span> std::vector&lt;double&gt;&amp; <a class="code hl_function" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#aab55b2315f46d984386ee3fdb62054ec">SigmaRemoval</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#a992d3f6686364a09e8ff0cf9458bb446">   71</a></span>  <span class="keyword">virtual</span> std::vector&lt;double&gt; <a class="code hl_function" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#a992d3f6686364a09e8ff0cf9458bb446">SigmaTransport</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#af0f63c0c77ab83d91f202e347e2ce16b">   73</a></span>  <span class="keyword">virtual</span> <span class="keyword">const</span> std::vector&lt;double&gt;&amp; <a class="code hl_function" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#af0f63c0c77ab83d91f202e347e2ce16b">SigmaSGtoG</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}<span class="comment">//namespace chi_physics</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#aab55b2315f46d984386ee3fdb62054ec">   73</a></span>  <span class="keyword">virtual</span> <span class="keyword">const</span> std::vector&lt;double&gt;&amp; <a class="code hl_function" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#aab55b2315f46d984386ee3fdb62054ec">SigmaRemoval</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#af0f63c0c77ab83d91f202e347e2ce16b">   75</a></span>  <span class="keyword">virtual</span> <span class="keyword">const</span> std::vector&lt;double&gt;&amp; <a class="code hl_function" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#af0f63c0c77ab83d91f202e347e2ce16b">SigmaSGtoG</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif </span><span class="comment">//MULTIGROUP_XS_H</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}<span class="comment">//namespace chi_physics</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif </span><span class="comment">//MULTIGROUP_XS_H</span></div>
 <div class="ttc" id="achi__math__sparse__matrix_8h_html"><div class="ttname"><a href="../../d6/df3/chi__math__sparse__matrix_8h.html">chi_math_sparse_matrix.h</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_sparse_matrix_html"><div class="ttname"><a href="../../de/d51/classchi__math_1_1_sparse_matrix.html">chi_math::SparseMatrix</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df3/chi__math__sparse__matrix_8h_source.html#l00012">chi_math_sparse_matrix.h:13</a></div></div>
 <div class="ttc" id="aclasschi__physics_1_1_material_property_html"><div class="ttname"><a href="../../df/d52/classchi__physics_1_1_material_property.html">chi_physics::MaterialProperty</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dbd/material__property__base_8h_source.html#l00020">material_property_base.h:21</a></div></div>
@@ -181,6 +190,7 @@ $(document).ready(function(){initNavTree('d0/da0/multigroup__xs_8h_source.html',
 <div class="ttc" id="aclasschi__physics_1_1_multi_group_x_s_html_a85faed3006b04247fcb069bb63f0b6d1"><div class="ttname"><a href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#a85faed3006b04247fcb069bb63f0b6d1">chi_physics::MultiGroupXS::SigmaTotal</a></div><div class="ttdeci">virtual const std::vector&lt; double &gt; &amp; SigmaTotal() const =0</div></div>
 <div class="ttc" id="aclasschi__physics_1_1_multi_group_x_s_html_a8b7f2264639e5787f7843bdff95a7e7e"><div class="ttname"><a href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#a8b7f2264639e5787f7843bdff95a7e7e">chi_physics::MultiGroupXS::SigmaAbsorption</a></div><div class="ttdeci">virtual const std::vector&lt; double &gt; &amp; SigmaAbsorption() const =0</div></div>
 <div class="ttc" id="aclasschi__physics_1_1_multi_group_x_s_html_a980382b4e3c899f08946e69d1c5b6f2a"><div class="ttname"><a href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#a980382b4e3c899f08946e69d1c5b6f2a">chi_physics::MultiGroupXS::ExportToChiXSFile</a></div><div class="ttdeci">void ExportToChiXSFile(const std::string &amp;file_name, const double fission_scaling=1.0) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d82/multigroup__xs__export_8cc_source.html#l00019">multigroup_xs_export.cc:20</a></div></div>
+<div class="ttc" id="aclasschi__physics_1_1_multi_group_x_s_html_a992d3f6686364a09e8ff0cf9458bb446"><div class="ttname"><a href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#a992d3f6686364a09e8ff0cf9458bb446">chi_physics::MultiGroupXS::SigmaTransport</a></div><div class="ttdeci">virtual std::vector&lt; double &gt; SigmaTransport() const =0</div></div>
 <div class="ttc" id="aclasschi__physics_1_1_multi_group_x_s_html_a9d764cd837307c43b8c07b9d4c46e998"><div class="ttname"><a href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#a9d764cd837307c43b8c07b9d4c46e998">chi_physics::MultiGroupXS::SigmaFission</a></div><div class="ttdeci">virtual const std::vector&lt; double &gt; &amp; SigmaFission() const =0</div></div>
 <div class="ttc" id="aclasschi__physics_1_1_multi_group_x_s_html_a9f74969742f758e35f4aad85112f84d5"><div class="ttname"><a href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#a9f74969742f758e35f4aad85112f84d5">chi_physics::MultiGroupXS::ScatteringOrder</a></div><div class="ttdeci">virtual const unsigned int ScatteringOrder() const =0</div></div>
 <div class="ttc" id="aclasschi__physics_1_1_multi_group_x_s_html_aab55b2315f46d984386ee3fdb62054ec"><div class="ttname"><a href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#aab55b2315f46d984386ee3fdb62054ec">chi_physics::MultiGroupXS::SigmaRemoval</a></div><div class="ttdeci">virtual const std::vector&lt; double &gt; &amp; SigmaRemoval() const =0</div></div>

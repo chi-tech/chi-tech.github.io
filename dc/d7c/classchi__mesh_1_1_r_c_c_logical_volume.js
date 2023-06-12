@@ -3,11 +3,11 @@ var classchi__mesh_1_1_r_c_c_logical_volume =
     [ "RCCLogicalVolume", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a852329da95ff2eafa76235e604156f1f", null ],
     [ "RCCLogicalVolume", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a8d2bfe1a63acbfd77b2f4e40685a8869", null ],
     [ "Inside", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a61c91e02c50e9f286030573a2c8e788f", null ],
-    [ "r", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#ae62dd421e577341caa6aa30d06ee974f", null ],
-    [ "vx", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#af43a1ad5b9fbb9fa8cb212a14825f157", null ],
-    [ "vy", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a7750261d365abb9a377700a84191f8fa", null ],
-    [ "vz", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#aa7d832de8c938f87eabaf84f28b356dd", null ],
-    [ "x0", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a7fcf77b81bfca196797386bb25799275", null ],
-    [ "y0", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#aa5e066c297e337f5426d5190080889f5", null ],
-    [ "z0", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a80610d52355ab5a26d74228aa5196eba", null ]
+    [ "r_", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a9b2df996e7b592124822a2a0e477f77e", null ],
+    [ "vx_", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a37577fa217d0f46295cc4f88cd425903", null ],
+    [ "vy_", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#ab75f0e441ca9c6723c6cb8a042b0fd2c", null ],
+    [ "vz_", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a9e31b86a944926aaa1a85a54d80e3797", null ],
+    [ "x0_", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a603d31b0c170633be4f63331c6ce0a8a", null ],
+    [ "y0_", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a633b3b34d49dd935384572b1cc0515c5", null ],
+    [ "z0_", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#ad0238982aa8260ac9e8d579ddc5f298e", null ]
 ];

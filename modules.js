@@ -6,5 +6,6 @@ var modules =
     [ "D Output and Logging", "d4/d87/group___lua_logging.html", "d4/d87/group___lua_logging" ],
     [ "E MPI Utilities", "dd/d5c/group__chi_m_p_i.html", "dd/d5c/group__chi_m_p_i" ],
     [ "F Code modules", "da/da3/group___lua_modules.html", "da/da3/group___lua_modules" ],
-    [ "G General utilities", "d1/d85/group___lua_general_utilities.html", "d1/d85/group___lua_general_utilities" ]
+    [ "G Unit Testing", "d8/d64/group___doc_unit_tests.html", "d8/d64/group___doc_unit_tests" ],
+    [ "Z Experimental", "da/dfa/group___doc_experimental.html", "da/dfa/group___doc_experimental" ]
 ];

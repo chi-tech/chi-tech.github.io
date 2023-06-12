@@ -1,6 +1,7 @@
 var dir_a62c3ea6aad71bcd097aa9cc32b82947 =
 [
     [ "Conical", "dir_2462c2d029904698163e4390df0d30b8.html", "dir_2462c2d029904698163e4390df0d30b8" ],
+    [ "doc", "dir_aa721d5a053606705f839a5c06ce6db9.html", "dir_aa721d5a053606705f839a5c06ce6db9" ],
     [ "Jacobi", "dir_cda2733d9e7069be7aa91bc5481617a5.html", "dir_cda2733d9e7069be7aa91bc5481617a5" ],
     [ "LegendrePoly", "dir_34c77cd8fcf18ca11087272c755fc3b1.html", "dir_34c77cd8fcf18ca11087272c755fc3b1" ],
     [ "SLDFESQ", "dir_41e7127c04078799bac50b56e57cc8b0.html", "dir_41e7127c04078799bac50b56e57cc8b0" ],

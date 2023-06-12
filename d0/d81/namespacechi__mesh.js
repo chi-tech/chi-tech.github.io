@@ -97,6 +97,14 @@ var namespacechi__mesh =
       [ "POLYHEDRON", "d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74", null ],
       [ "POINT", "d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9aaebdbcb765394d25d6a604589a890f82", null ]
     ] ],
+    [ "LogicalVolumeType", "d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2", [
+      [ "LVSPHERE", "d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a8c8a076c1703c9f3535a5225bd8d9317", null ],
+      [ "LVSPHERE_ORIGIN", "d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a1abb99eae8a5e20e2ba19dc2188c2a3d", null ],
+      [ "LVRPP", "d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a0faaafb69d8450f1f7424397c8ccb2e6", null ],
+      [ "LVRCC", "d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a57ca75e65b137dbe42b6f4e83b622993", null ],
+      [ "LVSURFACE", "d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2afff94b8acb91013c95e1d4108724d543", null ],
+      [ "LVBOOLEAN", "d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a19f2ce5d3a3b8329b08ead2e0544e4ac", null ]
+    ] ],
     [ "MeshAttributes", "d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362", [
       [ "NONE", "d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ade90288b1550646ffb617507835f50fd", null ],
       [ "DIMENSION_1", "d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975", null ],

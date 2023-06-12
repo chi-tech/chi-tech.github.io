@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -84,7 +91,9 @@ $(document).ready(function(){initNavTree('dc/db7/classlbs_1_1_l_b_s_solver.html'
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
@@ -100,21 +109,28 @@ Inheritance diagram for lbs::LBSSolver:</div>
  <div class="center">
   <img src="../../dc/db7/classlbs_1_1_l_b_s_solver.png" usemap="#lbs::LBSSolver_map" alt=""/>
   <map id="lbs::LBSSolver_map" name="lbs::LBSSolver_map">
-<area href="../../d9/d3a/classchi__physics_1_1_solver.html" alt="chi_physics::Solver" shape="rect" coords="394,0,647,24"/>
-<area href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html" alt="lbs::LBSDiscreteOrdinatesSolver" shape="rect" coords="263,112,516,136"/>
-<area href="../../d5/d5f/classlbs_1_1_m_i_p_steady_state_solver.html" alt="lbs::MIPSteadyStateSolver" shape="rect" coords="526,112,779,136"/>
-<area href="../../d4/dd0/classlbs_1_1_disc_ord_k_eigenvalue_solver.html" alt="lbs::DiscOrdKEigenvalueSolver" shape="rect" coords="0,168,253,192"/>
-<area href="../../d6/d0f/classlbs_1_1_disc_ord_steady_state_adjoint_solver.html" alt="lbs::DiscOrdSteadyStateAdjointSolver" shape="rect" coords="263,168,516,192"/>
-<area href="../../dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html" alt="lbs::DiscOrdSteadyStateSolver" shape="rect" coords="526,168,779,192"/>
-<area href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html" alt="lbs::DiscOrdTransientSolver" shape="rect" coords="0,224,253,248"/>
-<area href="../../df/de3/classlbs__curvilinear_1_1_disc_ord_steady_state_solver.html" alt="lbs_curvilinear::DiscOrdSteadyStateSolver" shape="rect" coords="526,224,779,248"/>
+<area href="../../d9/d3a/classchi__physics_1_1_solver.html" alt="chi_physics::Solver" shape="rect" coords="123,56,359,80"/>
+<area href="../../d6/d15/class_chi_object.html" alt="ChiObject" shape="rect" coords="123,0,359,24"/>
+<area href="../../df/dd4/classlbs_1_1_diffusion_d_f_e_m_solver.html" alt="lbs::DiffusionDFEMSolver" shape="rect" coords="0,168,236,192"/>
+<area href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html" alt="lbs::DiscreteOrdinatesSolver" shape="rect" coords="246,168,482,192"/>
+<area href="../../dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html" alt="lbs::DiscreteOrdinatesAdjointSolver" shape="rect" coords="123,224,359,248"/>
+<area href="../../d6/d33/classlbs_1_1_discrete_ordinates_curvilinear_solver.html" alt="lbs::DiscreteOrdinatesCurvilinearSolver" shape="rect" coords="369,224,605,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac475c8da5a84b365fa2bda6c9ce0ee8b"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html">AGSLinearSolver</a>&lt; Mat, Vec, KSP &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac475c8da5a84b365fa2bda6c9ce0ee8b">AGSLinSolverPtr</a></td></tr>
+<tr class="separator:ac475c8da5a84b365fa2bda6c9ce0ee8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e20cd882284b20da7ec77fbecaf9c78"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../dd/d52/classchi__math_1_1_linear_solver.html">chi_math::LinearSolver</a>&lt; Mat, Vec, KSP &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a7e20cd882284b20da7ec77fbecaf9c78">LinSolvePtr</a></td></tr>
+<tr class="separator:a7e20cd882284b20da7ec77fbecaf9c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afcb7dc6d63ef61cb3bc1151c169c8af7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#afcb7dc6d63ef61cb3bc1151c169c8af7">LBSSolver</a> (const std::string &amp;text_name)</td></tr>
 <tr class="separator:afcb7dc6d63ef61cb3bc1151c169c8af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a420d09be002e0bb465ecaf910852d75a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a420d09be002e0bb465ecaf910852d75a">LBSSolver</a> (const <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> &amp;params)</td></tr>
+<tr class="separator:a420d09be002e0bb465ecaf910852d75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51216a38f4fc32452fdb7510e54e30c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a51216a38f4fc32452fdb7510e54e30c5">LBSSolver</a> (const <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">LBSSolver</a> &amp;)=delete</td></tr>
 <tr class="separator:a51216a38f4fc32452fdb7510e54e30c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb7679803fe726b5f0bb3dddecb05e26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">LBSSolver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#aeb7679803fe726b5f0bb3dddecb05e26">operator=</a> (const <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">LBSSolver</a> &amp;)=delete</td></tr>
@@ -127,10 +143,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a828790c175e06ee600387e0db7187721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45ce41d694824e3653a8cbace144e824"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a45ce41d694824e3653a8cbace144e824">LastRestartWrite</a> ()</td></tr>
 <tr class="separator:a45ce41d694824e3653a8cbace144e824"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2ac6c598650da26c13ccadd6cf6be9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html">lbs::Options</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac2ac6c598650da26c13ccadd6cf6be9c">Options</a> ()</td></tr>
-<tr class="separator:ac2ac6c598650da26c13ccadd6cf6be9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae36d7b522f04151d942e5ae01e5f91fe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/dcd/structlbs_1_1_options.html">lbs::Options</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ae36d7b522f04151d942e5ae01e5f91fe">Options</a> () const</td></tr>
-<tr class="separator:ae36d7b522f04151d942e5ae01e5f91fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ffad0ab5fcc8d89d7c112f1c2c732b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html">lbs::Options</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac7ffad0ab5fcc8d89d7c112f1c2c732b">Options</a> ()</td></tr>
+<tr class="separator:ac7ffad0ab5fcc8d89d7c112f1c2c732b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3641b2c2e3edfe176d65f0dbeaf927c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/dcd/structlbs_1_1_options.html">lbs::Options</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ab3641b2c2e3edfe176d65f0dbeaf927c">Options</a> () const</td></tr>
+<tr class="separator:ab3641b2c2e3edfe176d65f0dbeaf927c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b523e43a70d66befd7abf889947dff4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1b523e43a70d66befd7abf889947dff4">SetOptions</a> (const <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> &amp;params)</td></tr>
+<tr class="separator:a1b523e43a70d66befd7abf889947dff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c58d00e93a368f795461e9bbdb4f6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ab0c58d00e93a368f795461e9bbdb4f6d">SetBoundaryOptions</a> (const <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> &amp;params)</td></tr>
+<tr class="separator:ab0c58d00e93a368f795461e9bbdb4f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc0369ddc8673e7b777e9ce0ef2ec02"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a9dc0369ddc8673e7b777e9ce0ef2ec02">NumMoments</a> () const</td></tr>
 <tr class="separator:a9dc0369ddc8673e7b777e9ce0ef2ec02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35c66287a70f410584565a01e65df5ba"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a35c66287a70f410584565a01e65df5ba">NumGroups</a> () const</td></tr>
@@ -141,32 +161,34 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8281b6b646a672425622ba10e6a8c4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac36d753b9692d31c7740b67d3327d01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#aac36d753b9692d31c7740b67d3327d01">AddGroup</a> (int id)</td></tr>
 <tr class="separator:aac36d753b9692d31c7740b67d3327d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab57c4aa8eaaf27b9efd886cf6bdb13d1"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d5/d86/classlbs_1_1_l_b_s_group.html">LBSGroup</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ab57c4aa8eaaf27b9efd886cf6bdb13d1">Groups</a> () const</td></tr>
-<tr class="separator:ab57c4aa8eaaf27b9efd886cf6bdb13d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6cc91e090cff38a99c75c56458beee"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d5/d86/classlbs_1_1_l_b_s_group.html">LBSGroup</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a5e6cc91e090cff38a99c75c56458beee">Groups</a> () const</td></tr>
+<tr class="separator:a5e6cc91e090cff38a99c75c56458beee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55483c6e3502dd2a2f46d67c911eaec6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a55483c6e3502dd2a2f46d67c911eaec6">AddGroupset</a> ()</td></tr>
 <tr class="separator:a55483c6e3502dd2a2f46d67c911eaec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4978519121b1964c228a4fbcdde95dd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#af4978519121b1964c228a4fbcdde95dd">Groupsets</a> ()</td></tr>
-<tr class="separator:af4978519121b1964c228a4fbcdde95dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5f04d775e5d47f7cdbb839912b17c44"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ae5f04d775e5d47f7cdbb839912b17c44">Groupsets</a> () const</td></tr>
-<tr class="separator:ae5f04d775e5d47f7cdbb839912b17c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28310ee4d517263e9c6adca1033bf9ca"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a28310ee4d517263e9c6adca1033bf9ca">Groupsets</a> ()</td></tr>
+<tr class="separator:a28310ee4d517263e9c6adca1033bf9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93fb9ca031e9e1c1fb6b9c5c9fc52333"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a93fb9ca031e9e1c1fb6b9c5c9fc52333">Groupsets</a> () const</td></tr>
+<tr class="separator:a93fb9ca031e9e1c1fb6b9c5c9fc52333"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5baa6999ccc00bc0587796b18f8df2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#af5baa6999ccc00bc0587796b18f8df2d">AddPointSource</a> (<a class="el" href="../../dc/d4f/classlbs_1_1_point_source.html">PointSource</a> psrc)</td></tr>
 <tr class="separator:af5baa6999ccc00bc0587796b18f8df2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03f61dbe0dd3e05bf4eef6f6a3ae80eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a03f61dbe0dd3e05bf4eef6f6a3ae80eb">ClearPointSources</a> ()</td></tr>
 <tr class="separator:a03f61dbe0dd3e05bf4eef6f6a3ae80eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e32d8a73d31e01e1722e2d260650843"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../dc/d4f/classlbs_1_1_point_source.html">PointSource</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a9e32d8a73d31e01e1722e2d260650843">PointSources</a> () const</td></tr>
-<tr class="separator:a9e32d8a73d31e01e1722e2d260650843"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d34bcb38175a07d05a54dfc172a389a"><td class="memItemLeft" align="right" valign="top">const std::map&lt; int, <a class="el" href="../../d9/d42/namespacelbs.html#adba5568913514d673c29c4b7e8350fe3">XSPtr</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a6d34bcb38175a07d05a54dfc172a389a">GetMatID2XSMap</a> () const</td></tr>
-<tr class="separator:a6d34bcb38175a07d05a54dfc172a389a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8434afb5c743cb3d7e9581a541b04ff0"><td class="memItemLeft" align="right" valign="top">const std::map&lt; int, <a class="el" href="../../d9/d42/namespacelbs.html#ad437ea2eba5df2caa739b42acbf1ca98">IsotropicSrcPtr</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a8434afb5c743cb3d7e9581a541b04ff0">GetMatID2IsoSrcMap</a> () const</td></tr>
-<tr class="separator:a8434afb5c743cb3d7e9581a541b04ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bda2b6306a59f6d895ffd7a45964e0f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../dc/d4f/classlbs_1_1_point_source.html">PointSource</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a3bda2b6306a59f6d895ffd7a45964e0f">PointSources</a> () const</td></tr>
+<tr class="separator:a3bda2b6306a59f6d895ffd7a45964e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0341811cb165338426f5c4a742fdb81"><td class="memItemLeft" align="right" valign="top">const std::map&lt; int, <a class="el" href="../../d9/d42/namespacelbs.html#adba5568913514d673c29c4b7e8350fe3">XSPtr</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#aa0341811cb165338426f5c4a742fdb81">GetMatID2XSMap</a> () const</td></tr>
+<tr class="separator:aa0341811cb165338426f5c4a742fdb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a04dbdfd2e246217ec9285f4cbca45"><td class="memItemLeft" align="right" valign="top">const std::map&lt; int, <a class="el" href="../../d9/d42/namespacelbs.html#ad437ea2eba5df2caa739b42acbf1ca98">IsotropicSrcPtr</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#aa1a04dbdfd2e246217ec9285f4cbca45">GetMatID2IsoSrcMap</a> () const</td></tr>
+<tr class="separator:aa1a04dbdfd2e246217ec9285f4cbca45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f9811ca24ac3cf310ed1e8aa559ff10"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a2f9811ca24ac3cf310ed1e8aa559ff10">SpatialDiscretization</a> () const</td></tr>
 <tr class="separator:a2f9811ca24ac3cf310ed1e8aa559ff10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac186e4755141730fd1386bff19727e5f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../dc/d37/structlbs_1_1_unit_cell_matrices.html">UnitCellMatrices</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac186e4755141730fd1386bff19727e5f">GetUnitCellMatrices</a> () const</td></tr>
+<tr class="separator:ac186e4755141730fd1386bff19727e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93cd8038fffc6cca023f8fd410b5a3c7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a93cd8038fffc6cca023f8fd410b5a3c7">Grid</a> () const</td></tr>
 <tr class="separator:a93cd8038fffc6cca023f8fd410b5a3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a252c89461f5ca589d30e45c1222c020f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d4/d32/classlbs_1_1_cell_l_b_s_view.html">lbs::CellLBSView</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a252c89461f5ca589d30e45c1222c020f">GetCellTransportViews</a> () const</td></tr>
-<tr class="separator:a252c89461f5ca589d30e45c1222c020f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1df07e9ca39c299206a8058db1665cad"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, <a class="el" href="../../d4/d8e/structlbs_1_1_boundary_preference.html">BoundaryPreference</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1df07e9ca39c299206a8058db1665cad">BoundaryPreferences</a> ()</td></tr>
-<tr class="separator:a1df07e9ca39c299206a8058db1665cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55be891387f77b61ed08c4d749ea3442"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d4/d32/classlbs_1_1_cell_l_b_s_view.html">lbs::CellLBSView</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a55be891387f77b61ed08c4d749ea3442">GetCellTransportViews</a> () const</td></tr>
+<tr class="separator:a55be891387f77b61ed08c4d749ea3442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03edefd957e6b71451391f47db59c4fb"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, <a class="el" href="../../d4/d8e/structlbs_1_1_boundary_preference.html">BoundaryPreference</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a03edefd957e6b71451391f47db59c4fb">BoundaryPreferences</a> ()</td></tr>
+<tr class="separator:a03edefd957e6b71451391f47db59c4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75597353ae5cadf49d5eacc47edc39b7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a75597353ae5cadf49d5eacc47edc39b7">UnknownManager</a> () const</td></tr>
 <tr class="separator:a75597353ae5cadf49d5eacc47edc39b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e337787620484af65e89fd23f4542b7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a4e337787620484af65e89fd23f4542b7">LocalNodeCount</a> () const</td></tr>
@@ -189,14 +211,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0318264f425c010b7a711b9af841ab2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add9332b98a40f6efc4df287e5ba6ccb3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#add9332b98a40f6efc4df287e5ba6ccb3">PhiNewLocal</a> () const</td></tr>
 <tr class="separator:add9332b98a40f6efc4df287e5ba6ccb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ce519dea84e2d2e090ac50ebda1cbc4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a2ce519dea84e2d2e090ac50ebda1cbc4">PrecursorsNewLocal</a> ()</td></tr>
+<tr class="separator:a2ce519dea84e2d2e090ac50ebda1cbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace93ba7f5a7b1a5f756246e323050173"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ace93ba7f5a7b1a5f756246e323050173">PrecursorsNewLocal</a> () const</td></tr>
+<tr class="separator:ace93ba7f5a7b1a5f756246e323050173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5efd1de2244d239af200f7c0df56f7b8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d42/namespacelbs.html#af08418093f4b92c33c17e60fbecb9bc9">VecDbl</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a5efd1de2244d239af200f7c0df56f7b8">PsiNewLocal</a> ()</td></tr>
+<tr class="separator:a5efd1de2244d239af200f7c0df56f7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ba35e391ab9d871e5b5e157b0d5441"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d9/d42/namespacelbs.html#af08418093f4b92c33c17e60fbecb9bc9">VecDbl</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a27ba35e391ab9d871e5b5e157b0d5441">PsiNewLocal</a> () const</td></tr>
+<tr class="separator:a27ba35e391ab9d871e5b5e157b0d5441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705b793269df5d6ffe65af56fdf6d63b"><td class="memItemLeft" align="right" valign="top">const std::map&lt; uint64_t, std::shared_ptr&lt; <a class="el" href="../../d1/df2/angleset_8h.html#a66cfad4bf0e864e6fea723efe64d5d0b">SweepBndry</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a705b793269df5d6ffe65af56fdf6d63b">SweepBoundaries</a> () const</td></tr>
+<tr class="separator:a705b793269df5d6ffe65af56fdf6d63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a430e855de8684c18a983747d9972eaf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d42/namespacelbs.html#aeebda41bfec934de30892227f2156397">SetSourceFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a430e855de8684c18a983747d9972eaf8">GetActiveSetSourceFunction</a> () const</td></tr>
 <tr class="separator:a430e855de8684c18a983747d9972eaf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a2bcc67811cba119b230c7a611a34ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a36d538ba86f1d6db46219ba5216b887a">AGSLinSolverPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a8a2bcc67811cba119b230c7a611a34ee">GetPrimaryAGSSolver</a> ()</td></tr>
-<tr class="separator:a8a2bcc67811cba119b230c7a611a34ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec97bc3b7a45c27e30a338e2a144dd6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1386dd06e8e6f79fdaf8e728c4dad204">LinSolvePtr</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a5ec97bc3b7a45c27e30a338e2a144dd6">GetWGSSolvers</a> ()</td></tr>
-<tr class="separator:a5ec97bc3b7a45c27e30a338e2a144dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03098a01e2c88db46db316c373cbaf92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac475c8da5a84b365fa2bda6c9ce0ee8b">AGSLinSolverPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a03098a01e2c88db46db316c373cbaf92">GetPrimaryAGSSolver</a> ()</td></tr>
+<tr class="separator:a03098a01e2c88db46db316c373cbaf92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a323a5d03f38326ca82cb9511259d9780"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a7e20cd882284b20da7ec77fbecaf9c78">LinSolvePtr</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a323a5d03f38326ca82cb9511259d9780">GetWGSSolvers</a> ()</td></tr>
+<tr class="separator:a323a5d03f38326ca82cb9511259d9780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa833669ec52624afa4ab8b492d1a51cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html">WGSContext</a>&lt; Mat, Vec, KSP &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#aa833669ec52624afa4ab8b492d1a51cd">GetWGSContext</a> (int groupset_id)</td></tr>
+<tr class="separator:aa833669ec52624afa4ab8b492d1a51cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23b32c6f037060cc4c28f707822a9430"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; size_t, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a23b32c6f037060cc4c28f707822a9430">GetNumPhiIterativeUnknowns</a> ()</td></tr>
 <tr class="separator:a23b32c6f037060cc4c28f707822a9430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26de35f9fd9b40c20318bb630eb98a36"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a26de35f9fd9b40c20318bb630eb98a36">MapPhiFieldFunction</a> (size_t g, size_t m) const</td></tr>
+<tr class="separator:a26de35f9fd9b40c20318bb630eb98a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1d9be9f341086a7a953e712d43a75a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a2e1d9be9f341086a7a953e712d43a75a">GetHandleToPowerGenFieldFunc</a> () const</td></tr>
+<tr class="separator:a2e1d9be9f341086a7a953e712d43a75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a974e32c8699681589b52362134f2f6c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a974e32c8699681589b52362134f2f6c4">Initialize</a> () override</td></tr>
 <tr class="separator:a974e32c8699681589b52362134f2f6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af905ab5ca316b011aabaf872c0622167"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#af905ab5ca316b011aabaf872c0622167">InitMaterials</a> ()</td></tr>
@@ -233,10 +271,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa5f3473e7bf02376932596a4cfd0dbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af423cf23faaf7cc884df17d4ecdf4689"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#af423cf23faaf7cc884df17d4ecdf4689">UpdateFieldFunctions</a> ()</td></tr>
 <tr class="separator:af423cf23faaf7cc884df17d4ecdf4689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14caa7b772f3c012fec103df5ba072cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a14caa7b772f3c012fec103df5ba072cd">SetPhiFromFieldFunctions</a> (<a class="el" href="../../d9/d42/namespacelbs.html#add11e6bdb0475d616eaae76aef5dad8e">PhiSTLOption</a> which_phi, const std::vector&lt; size_t &gt; &amp;m_indices, const std::vector&lt; size_t &gt; &amp;g_indices)</td></tr>
+<tr class="separator:a14caa7b772f3c012fec103df5ba072cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d34cd68252f52270fa36ba60ae8f672"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a2d34cd68252f52270fa36ba60ae8f672">ComputeFissionProduction</a> (const std::vector&lt; double &gt; &amp;phi)</td></tr>
 <tr class="separator:a2d34cd68252f52270fa36ba60ae8f672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad87c4cd57f9eba9e4e4627f6b380c563"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ad87c4cd57f9eba9e4e4627f6b380c563">ComputeFissionRate</a> (const std::vector&lt; double &gt; &amp;phi)</td></tr>
 <tr class="separator:ad87c4cd57f9eba9e4e4627f6b380c563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198b62137cd025749168123bbdac14f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a198b62137cd025749168123bbdac14f8">ComputePrecursors</a> ()</td></tr>
+<tr class="separator:a198b62137cd025749168123bbdac14f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87ab55ee094166de4b75e0ddf4f164f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a87ab55ee094166de4b75e0ddf4f164f9">SetPhiVectorScalarValues</a> (std::vector&lt; double &gt; &amp;phi_vector, double value)</td></tr>
 <tr class="separator:a87ab55ee094166de4b75e0ddf4f164f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99a231dad5a9cb173f485aeabacc4d41"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a99a231dad5a9cb173f485aeabacc4d41">ScalePhiVector</a> (<a class="el" href="../../d9/d42/namespacelbs.html#add11e6bdb0475d616eaae76aef5dad8e">PhiSTLOption</a> which_phi, double value)</td></tr>
@@ -262,16 +304,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5a9abf9624b305ae5741ef42fe630af5 inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a733cf2e09a7a545a1aa642f6ae2a73e0 inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a733cf2e09a7a545a1aa642f6ae2a73e0">Solver</a> (std::string in_text_name, std::initializer_list&lt; <a class="el" href="../../d2/dd8/classchi__physics_1_1_basic_option.html">BasicOption</a> &gt; in_options)</td></tr>
 <tr class="separator:a733cf2e09a7a545a1aa642f6ae2a73e0 inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4a803b97db3217ac6e5709a8532795b inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#af4a803b97db3217ac6e5709a8532795b">Solver</a> (const <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> &amp;params)</td></tr>
+<tr class="separator:af4a803b97db3217ac6e5709a8532795b inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a854f173a318a412fccc6cc09414c615b inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a854f173a318a412fccc6cc09414c615b">~Solver</a> ()=default</td></tr>
 <tr class="separator:a854f173a318a412fccc6cc09414c615b inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a572a0edbed56e6bb1f72d9f0989752 inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d7c/classchi__physics_1_1_basic_options.html">BasicOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a5a572a0edbed56e6bb1f72d9f0989752">GetBasicOptions</a> ()</td></tr>
 <tr class="separator:a5a572a0edbed56e6bb1f72d9f0989752 inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a108ff92c57611603a961b7fd782e2899 inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d7c/classchi__physics_1_1_basic_options.html">BasicOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a108ff92c57611603a961b7fd782e2899">GetBasicOptions</a> () const</td></tr>
 <tr class="separator:a108ff92c57611603a961b7fd782e2899 inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecca60321e324a1258e06c6e192630aa inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">FieldFunction</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#aecca60321e324a1258e06c6e192630aa">GetFieldFunctions</a> ()</td></tr>
-<tr class="separator:aecca60321e324a1258e06c6e192630aa inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22091a62d25ab33f8e0a2eed489d9c97 inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">FieldFunction</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a22091a62d25ab33f8e0a2eed489d9c97">GetFieldFunctions</a> () const</td></tr>
-<tr class="separator:a22091a62d25ab33f8e0a2eed489d9c97 inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a3c022e87b020cfdf11a87c60a1ff4 inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html">FieldFunctionGridBased</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ae2a3c022e87b020cfdf11a87c60a1ff4">GetFieldFunctions</a> ()</td></tr>
+<tr class="separator:ae2a3c022e87b020cfdf11a87c60a1ff4 inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c9bd39b60b597a1ac5e0e84a063a61 inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html">FieldFunctionGridBased</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a03c9bd39b60b597a1ac5e0e84a063a61">GetFieldFunctions</a> () const</td></tr>
+<tr class="separator:a03c9bd39b60b597a1ac5e0e84a063a61 inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b087a92fd17788519515b5bd331d87b inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a0b087a92fd17788519515b5bd331d87b">TextName</a> () const</td></tr>
 <tr class="separator:a0b087a92fd17788519515b5bd331d87b inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14e95fbc905d9c3b3ebdc89f06e53b29 inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a14e95fbc905d9c3b3ebdc89f06e53b29">Initialize</a> ()</td></tr>
@@ -280,15 +324,41 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa416dcd9ba22712272ebd0ec4414046d inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fa53f6d47f1a2d8badbfa8c12e1f2ca inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a9fa53f6d47f1a2d8badbfa8c12e1f2ca">Step</a> ()</td></tr>
 <tr class="separator:a9fa53f6d47f1a2d8badbfa8c12e1f2ca inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac756a10be55c52b970fe577e0fdf68ab inherit pub_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ac756a10be55c52b970fe577e0fdf68ab">Advance</a> ()</td></tr>
+<tr class="separator:ac756a10be55c52b970fe577e0fdf68ab inherit pub_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_chi_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_chi_object')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d6/d15/class_chi_object.html">ChiObject</a></td></tr>
+<tr class="memitem:a6b5d154b5c0f89094df86e5ac345d30e inherit pub_methods_class_chi_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d15/class_chi_object.html#a6b5d154b5c0f89094df86e5ac345d30e">ChiObject</a> ()</td></tr>
+<tr class="separator:a6b5d154b5c0f89094df86e5ac345d30e inherit pub_methods_class_chi_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7503b2eba35fb17ab2c23308186242b inherit pub_methods_class_chi_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d15/class_chi_object.html#ad7503b2eba35fb17ab2c23308186242b">ChiObject</a> (const <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> &amp;params)</td></tr>
+<tr class="separator:ad7503b2eba35fb17ab2c23308186242b inherit pub_methods_class_chi_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f9734037306a826e2fa6fff5e5d790 inherit pub_methods_class_chi_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d15/class_chi_object.html#a79f9734037306a826e2fa6fff5e5d790">SetStackID</a> (size_t stack_id)</td></tr>
+<tr class="separator:a79f9734037306a826e2fa6fff5e5d790 inherit pub_methods_class_chi_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad33c95f99c04ad0c54018a5bc38b4fb4 inherit pub_methods_class_chi_object"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d15/class_chi_object.html#ad33c95f99c04ad0c54018a5bc38b4fb4">StackID</a> () const</td></tr>
+<tr class="separator:ad33c95f99c04ad0c54018a5bc38b4fb4 inherit pub_methods_class_chi_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459f20ecf49ce1cd2ac023ecb8e0ba47 inherit pub_methods_class_chi_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d15/class_chi_object.html#a459f20ecf49ce1cd2ac023ecb8e0ba47">PushOntoStack</a> (std::shared_ptr&lt; <a class="el" href="../../d6/d15/class_chi_object.html">ChiObject</a> &gt; &amp;new_object)</td></tr>
+<tr class="separator:a459f20ecf49ce1cd2ac023ecb8e0ba47 inherit pub_methods_class_chi_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2aab60d1de8c24f52ac6d4159c71c3 inherit pub_methods_class_chi_object"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d15/class_chi_object.html#aeb2aab60d1de8c24f52ac6d4159c71c3">~ChiObject</a> ()=default</td></tr>
+<tr class="separator:aeb2aab60d1de8c24f52ac6d4159c71c3 inherit pub_methods_class_chi_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a461960f9b3f4aa9f0fd0708ab165b66b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a461960f9b3f4aa9f0fd0708ab165b66b">GetInputParameters</a> ()</td></tr>
+<tr class="separator:a461960f9b3f4aa9f0fd0708ab165b66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374fb1564a2ae884d10489f6a2bf64db"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a374fb1564a2ae884d10489f6a2bf64db">OptionsBlock</a> ()</td></tr>
+<tr class="separator:a374fb1564a2ae884d10489f6a2bf64db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9630f386c02d104fa0612066fae892c4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a9630f386c02d104fa0612066fae892c4">BoundaryOptionsBlock</a> ()</td></tr>
+<tr class="separator:a9630f386c02d104fa0612066fae892c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classchi__physics_1_1_solver"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classchi__physics_1_1_solver')"><img src="../../closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html">chi_physics::Solver</a></td></tr>
+<tr class="memitem:ac7e7f047d50589fe8962b218bfdf7c0a inherit pub_static_methods_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#ac7e7f047d50589fe8962b218bfdf7c0a">GetInputParameters</a> ()</td></tr>
+<tr class="separator:ac7e7f047d50589fe8962b218bfdf7c0a inherit pub_static_methods_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_chi_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_chi_object')"><img src="../../closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="../../d6/d15/class_chi_object.html">ChiObject</a></td></tr>
+<tr class="memitem:a4e7642984eef9982624cd9c3864a4b8e inherit pub_static_methods_class_chi_object"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d15/class_chi_object.html#a4e7642984eef9982624cd9c3864a4b8e">GetInputParameters</a> ()</td></tr>
+<tr class="separator:a4e7642984eef9982624cd9c3864a4b8e inherit pub_static_methods_class_chi_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr class="memitem:a736286da4f1f9eaedbbd770258127475"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a1d5e21843d8b4412ce5ad3f5c12dde42">chi_mesh::sweep_management::CellFaceNodalMapping</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a736286da4f1f9eaedbbd770258127475">CellFaceNodalMapping</a></td></tr>
 <tr class="separator:a736286da4f1f9eaedbbd770258127475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36d538ba86f1d6db46219ba5216b887a"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html">AGSLinearSolver</a>&lt; Mat, Vec, KSP &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a36d538ba86f1d6db46219ba5216b887a">AGSLinSolverPtr</a></td></tr>
-<tr class="separator:a36d538ba86f1d6db46219ba5216b887a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1386dd06e8e6f79fdaf8e728c4dad204"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../dd/d52/classchi__math_1_1_linear_solver.html">chi_math::LinearSolver</a>&lt; Mat, Vec, KSP &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1386dd06e8e6f79fdaf8e728c4dad204">LinSolvePtr</a></td></tr>
-<tr class="separator:a1386dd06e8e6f79fdaf8e728c4dad204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -306,6 +376,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ac99e2e57701c8063f5961ebe0ad664fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0fff586d9e7b8f72d2c94a53397423d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ad0fff586d9e7b8f72d2c94a53397423d">InitializeParrays</a> ()</td></tr>
 <tr class="separator:ad0fff586d9e7b8f72d2c94a53397423d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821911f21a5b714203dd44618cc4c4a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a821911f21a5b714203dd44618cc4c4a6">InitializeFieldFunctions</a> ()</td></tr>
+<tr class="separator:a821911f21a5b714203dd44618cc4c4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2f98febe1bc0e2390a4a87878e8e1cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ae2f98febe1bc0e2390a4a87878e8e1cc">InitializeBoundaries</a> ()</td></tr>
 <tr class="separator:ae2f98febe1bc0e2390a4a87878e8e1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba6fd1a63322f36e604994705531dbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#abba6fd1a63322f36e604994705531dbd">InitializeSolverSchemes</a> ()</td></tr>
@@ -314,8 +386,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:aa8e0b20a29a972347a4aa24833f1464a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83fcaff95f52077c4d2dde1d5f019379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a83fcaff95f52077c4d2dde1d5f019379">InitTGDSA</a> (<a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &amp;groupset)</td></tr>
 <tr class="separator:a83fcaff95f52077c4d2dde1d5f019379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a198b62137cd025749168123bbdac14f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a198b62137cd025749168123bbdac14f8">ComputePrecursors</a> ()</td></tr>
-<tr class="separator:a198b62137cd025749168123bbdac14f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
@@ -326,9 +396,9 @@ Static Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a95612dc8cee34dd9cb917691efc43739"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a95612dc8cee34dd9cb917691efc43739">source_event_tag_</a> =0</td></tr>
+<tr class="memitem:a95612dc8cee34dd9cb917691efc43739"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a95612dc8cee34dd9cb917691efc43739">source_event_tag_</a> = 0</td></tr>
 <tr class="separator:a95612dc8cee34dd9cb917691efc43739"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45440680f77f260f4647a73d553ac87d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a45440680f77f260f4647a73d553ac87d">last_restart_write_</a> =0.0</td></tr>
+<tr class="memitem:a45440680f77f260f4647a73d553ac87d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a45440680f77f260f4647a73d553ac87d">last_restart_write_</a> = 0.0</td></tr>
 <tr class="separator:a45440680f77f260f4647a73d553ac87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a762566feeac2f4dd1d95a5b3fed63390"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html">lbs::Options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a762566feeac2f4dd1d95a5b3fed63390">options_</a></td></tr>
 <tr class="separator:a762566feeac2f4dd1d95a5b3fed63390"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -392,44 +462,42 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a0005cc98a31ca5060dbbf9d4eeebe6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2f4d69e64ab0434cf889522afb680a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d42/namespacelbs.html#aeebda41bfec934de30892227f2156397">SetSourceFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#af2f4d69e64ab0434cf889522afb680a5">active_set_source_function_</a></td></tr>
 <tr class="separator:af2f4d69e64ab0434cf889522afb680a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a7f8cffc7dd7f94954fcedec437b798"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a36d538ba86f1d6db46219ba5216b887a">AGSLinSolverPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1a7f8cffc7dd7f94954fcedec437b798">ags_solvers_</a></td></tr>
+<tr class="memitem:a1a7f8cffc7dd7f94954fcedec437b798"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac475c8da5a84b365fa2bda6c9ce0ee8b">AGSLinSolverPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1a7f8cffc7dd7f94954fcedec437b798">ags_solvers_</a></td></tr>
 <tr class="separator:a1a7f8cffc7dd7f94954fcedec437b798"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3389eaf9deac622e7d9c71dbd52987f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1386dd06e8e6f79fdaf8e728c4dad204">LinSolvePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac3389eaf9deac622e7d9c71dbd52987f">wgs_solvers_</a></td></tr>
+<tr class="memitem:ac3389eaf9deac622e7d9c71dbd52987f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a7e20cd882284b20da7ec77fbecaf9c78">LinSolvePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac3389eaf9deac622e7d9c71dbd52987f">wgs_solvers_</a></td></tr>
 <tr class="separator:ac3389eaf9deac622e7d9c71dbd52987f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac796e379725fa5e8c54dfbee808a07d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a36d538ba86f1d6db46219ba5216b887a">AGSLinSolverPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac796e379725fa5e8c54dfbee808a07d3">primary_ags_solver_</a></td></tr>
+<tr class="memitem:ac796e379725fa5e8c54dfbee808a07d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac475c8da5a84b365fa2bda6c9ce0ee8b">AGSLinSolverPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac796e379725fa5e8c54dfbee808a07d3">primary_ags_solver_</a></td></tr>
 <tr class="separator:ac796e379725fa5e8c54dfbee808a07d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9019aa3e7ede7a00cd9e422c796decb5"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::pair&lt; size_t, size_t &gt;, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a9019aa3e7ede7a00cd9e422c796decb5">phi_field_functions_local_map_</a></td></tr>
+<tr class="separator:a9019aa3e7ede7a00cd9e422c796decb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5efb7c657eb1b737542c100075e7e20d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a5efb7c657eb1b737542c100075e7e20d">power_gen_fieldfunc_local_handle_</a> = 0</td></tr>
+<tr class="separator:a5efb7c657eb1b737542c100075e7e20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a308fa11ba1bf6f5098120a5a4368e401"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const <a class="el" href="../../d8/d2b/classchi__math_1_1_time_integration.html">chi_math::TimeIntegration</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a308fa11ba1bf6f5098120a5a4368e401">time_integration_</a> = nullptr</td></tr>
+<tr class="separator:a308fa11ba1bf6f5098120a5a4368e401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classchi__physics_1_1_solver"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classchi__physics_1_1_solver')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html">chi_physics::Solver</a></td></tr>
 <tr class="memitem:aa2a45c22166d170285413be221385464 inherit pro_attribs_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d7c/classchi__physics_1_1_basic_options.html">BasicOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#aa2a45c22166d170285413be221385464">basic_options_</a></td></tr>
 <tr class="separator:aa2a45c22166d170285413be221385464 inherit pro_attribs_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d3ee7021d8447fd9804be22b3efb8f2 inherit pro_attribs_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">FieldFunction</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a3d3ee7021d8447fd9804be22b3efb8f2">field_functions_</a></td></tr>
-<tr class="separator:a3d3ee7021d8447fd9804be22b3efb8f2 inherit pro_attribs_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0273179b7843a7a6f37d33c42073f6da inherit pro_attribs_classchi__physics_1_1_solver"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html">FieldFunctionGridBased</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a0273179b7843a7a6f37d33c42073f6da">field_functions_</a></td></tr>
+<tr class="separator:a0273179b7843a7a6f37d33c42073f6da inherit pro_attribs_classchi__physics_1_1_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Base class for all Linear Boltzmann Solvers. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00042">42</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00049">49</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a36d538ba86f1d6db46219ba5216b887a" name="a36d538ba86f1d6db46219ba5216b887a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36d538ba86f1d6db46219ba5216b887a">&#9670;&nbsp;</a></span>AGSLinSolverPtr</h2>
+<a id="ac475c8da5a84b365fa2bda6c9ce0ee8b" name="ac475c8da5a84b365fa2bda6c9ce0ee8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac475c8da5a84b365fa2bda6c9ce0ee8b">&#9670;&nbsp;</a></span>AGSLinSolverPtr</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html">AGSLinearSolver</a>&lt;Mat,Vec,KSP&gt; &gt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a36d538ba86f1d6db46219ba5216b887a">lbs::LBSSolver::AGSLinSolverPtr</a></td>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html">AGSLinearSolver</a>&lt;Mat, Vec, KSP&gt; &gt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac475c8da5a84b365fa2bda6c9ce0ee8b">lbs::LBSSolver::AGSLinSolverPtr</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00046">46</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00052">52</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -453,37 +521,29 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00045">45</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00056">56</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
-<a id="a1386dd06e8e6f79fdaf8e728c4dad204" name="a1386dd06e8e6f79fdaf8e728c4dad204"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1386dd06e8e6f79fdaf8e728c4dad204">&#9670;&nbsp;</a></span>LinSolvePtr</h2>
+<a id="a7e20cd882284b20da7ec77fbecaf9c78" name="a7e20cd882284b20da7ec77fbecaf9c78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e20cd882284b20da7ec77fbecaf9c78">&#9670;&nbsp;</a></span>LinSolvePtr</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../dd/d52/classchi__math_1_1_linear_solver.html">chi_math::LinearSolver</a>&lt;Mat,Vec,KSP&gt; &gt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1386dd06e8e6f79fdaf8e728c4dad204">lbs::LBSSolver::LinSolvePtr</a></td>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../dd/d52/classchi__math_1_1_linear_solver.html">chi_math::LinearSolver</a>&lt;Mat, Vec, KSP&gt; &gt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a7e20cd882284b20da7ec77fbecaf9c78">lbs::LBSSolver::LinSolvePtr</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00047">47</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00053">53</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afcb7dc6d63ef61cb3bc1151c169c8af7" name="afcb7dc6d63ef61cb3bc1151c169c8af7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcb7dc6d63ef61cb3bc1151c169c8af7">&#9670;&nbsp;</a></span>LBSSolver() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb7dc6d63ef61cb3bc1151c169c8af7">&#9670;&nbsp;</a></span>LBSSolver() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -507,12 +567,41 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Base class constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00004">4</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00013">13</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="a420d09be002e0bb465ecaf910852d75a" name="a420d09be002e0bb465ecaf910852d75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a420d09be002e0bb465ecaf910852d75a">&#9670;&nbsp;</a></span>LBSSolver() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lbs::LBSSolver::LBSSolver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Input parameters based construction. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00044">44</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
 <a id="a51216a38f4fc32452fdb7510e54e30c5" name="a51216a38f4fc32452fdb7510e54e30c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51216a38f4fc32452fdb7510e54e30c5">&#9670;&nbsp;</a></span>LBSSolver() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a51216a38f4fc32452fdb7510e54e30c5">&#9670;&nbsp;</a></span>LBSSolver() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -580,7 +669,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Adds a group to the list of groups. If group id &lt; 0, the id will be logically derived from the list size. If &gt;= 0 the id will be set to the id specified. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00056">56</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00116">116</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -600,7 +689,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Adds a groupset to the list of groupsets. The groupset id will be logically derived from the list size. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00072">72</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00128">128</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -621,7 +710,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Adds a point source to the solver's point source list. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00091">91</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00143">143</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -658,7 +747,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles a delta-phi vector on the first moment. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00096">96</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00085">85</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
 
 </div>
 </div>
@@ -695,18 +784,45 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles a delta-phi vector on the first moment. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00174">174</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00138">138</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
 
 </div>
 </div>
-<a id="a1df07e9ca39c299206a8058db1665cad" name="a1df07e9ca39c299206a8058db1665cad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1df07e9ca39c299206a8058db1665cad">&#9670;&nbsp;</a></span>BoundaryPreferences()</h2>
+<a id="a9630f386c02d104fa0612066fae892c4" name="a9630f386c02d104fa0612066fae892c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9630f386c02d104fa0612066fae892c4">&#9670;&nbsp;</a></span>BoundaryOptionsBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> lbs::LBSSolver::BoundaryOptionsBlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d14/lbs__00a__setoptions_8cc_source.html#l00117">117</a> of file <a class="el" href="../../d0/d14/lbs__00a__setoptions_8cc_source.html">lbs_00a_setoptions.cc</a>.</p>
+
+</div>
+</div>
+<a id="a03edefd957e6b71451391f47db59c4fb" name="a03edefd957e6b71451391f47db59c4fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03edefd957e6b71451391f47db59c4fb">&#9670;&nbsp;</a></span>BoundaryPreferences()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt; uint64_t, <a class="el" href="../../d4/d8e/structlbs_1_1_boundary_preference.html">lbs::BoundaryPreference</a> &gt; &amp; lbs::LBSSolver::BoundaryPreferences </td>
+          <td class="memname">std::map&lt; uint64_t, <a class="el" href="../../d4/d8e/structlbs_1_1_boundary_preference.html">BoundaryPreference</a> &gt; &amp; lbs::LBSSolver::BoundaryPreferences </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -715,7 +831,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Read/Write access to the boundary preferences. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00202">202</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00290">290</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -744,7 +860,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Cleans up memory consuming items. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00088">88</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00078">78</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
 
 </div>
 </div>
@@ -773,7 +889,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Cleans up memory consuming items. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00094">94</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00059">59</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
 
 </div>
 </div>
@@ -793,7 +909,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Clears all the point sources from the solver's point source list. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00097">97</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00149">149</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -814,7 +930,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Compute the total fission production in the problem. </p><dl class="section author"><dt>Author</dt><dd>Zachary Hardy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d95/lbs__06b__compute__fission__rates_8cc_source.html#l00008">8</a> of file <a class="el" href="../../d8/d95/lbs__06b__compute__fission__rates_8cc_source.html">lbs_06b_compute_fission_rates.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d95/lbs__06b__compute__fission__rates_8cc_source.html#l00009">9</a> of file <a class="el" href="../../d8/d95/lbs__06b__compute__fission__rates_8cc_source.html">lbs_06b_compute_fission_rates.cc</a>.</p>
 
 </div>
 </div>
@@ -835,7 +951,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Computes the total fission rate in the problem. </p><dl class="section author"><dt>Author</dt><dd>Zachary Hardy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d95/lbs__06b__compute__fission__rates_8cc_source.html#l00066">66</a> of file <a class="el" href="../../d8/d95/lbs__06b__compute__fission__rates_8cc_source.html">lbs_06b_compute_fission_rates.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d95/lbs__06b__compute__fission__rates_8cc_source.html#l00067">67</a> of file <a class="el" href="../../d8/d95/lbs__06b__compute__fission__rates_8cc_source.html">lbs_06b_compute_fission_rates.cc</a>.</p>
 
 </div>
 </div>
@@ -872,9 +988,6 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void lbs::LBSSolver::ComputePrecursors </td>
@@ -883,11 +996,6 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p >Compute the steady state delayed neutron precursor concentrations. </p>
 
@@ -955,7 +1063,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >DAssembles a delta-phi vector on the first moment. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00139">139</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html#l00128">128</a> of file <a class="el" href="../../d8/d54/lbs__03e__tgdsa_8cc_source.html">lbs_03e_tgdsa.cc</a>.</p>
 
 </div>
 </div>
@@ -992,7 +1100,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >DAssembles a delta-phi vector on the first moment. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00213">213</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00177">177</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
 
 </div>
 </div>
@@ -1012,7 +1120,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Read/write access to exterior src moments vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00167">167</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00211">211</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1032,7 +1140,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Read access to exterior src moments vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00173">173</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00217">217</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1041,9 +1149,6 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d9/d42/namespacelbs.html#aeebda41bfec934de30892227f2156397">SetSourceFunction</a> lbs::LBSSolver::GetActiveSetSourceFunction </td>
@@ -1052,25 +1157,20 @@ Protected Attributes</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00153">153</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00262">262</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a252c89461f5ca589d30e45c1222c020f" name="a252c89461f5ca589d30e45c1222c020f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a252c89461f5ca589d30e45c1222c020f">&#9670;&nbsp;</a></span>GetCellTransportViews()</h2>
+<a id="a55be891387f77b61ed08c4d749ea3442" name="a55be891387f77b61ed08c4d749ea3442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55be891387f77b61ed08c4d749ea3442">&#9670;&nbsp;</a></span>GetCellTransportViews()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="../../d4/d32/classlbs_1_1_cell_l_b_s_view.html">lbs::CellLBSView</a> &gt; &amp; lbs::LBSSolver::GetCellTransportViews </td>
+          <td class="memname">const std::vector&lt; <a class="el" href="../../d4/d32/classlbs_1_1_cell_l_b_s_view.html">CellLBSView</a> &gt; &amp; lbs::LBSSolver::GetCellTransportViews </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1079,18 +1179,66 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a reference to the list of local cell transport views. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00136">136</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00185">185</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a8434afb5c743cb3d7e9581a541b04ff0" name="a8434afb5c743cb3d7e9581a541b04ff0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8434afb5c743cb3d7e9581a541b04ff0">&#9670;&nbsp;</a></span>GetMatID2IsoSrcMap()</h2>
+<a id="a2e1d9be9f341086a7a953e712d43a75a" name="a2e1d9be9f341086a7a953e712d43a75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1d9be9f341086a7a953e712d43a75a">&#9670;&nbsp;</a></span>GetHandleToPowerGenFieldFunc()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::map&lt; int, <a class="el" href="../../d9/d42/namespacelbs.html#ad437ea2eba5df2caa739b42acbf1ca98">lbs::IsotropicSrcPtr</a> &gt; &amp; lbs::LBSSolver::GetMatID2IsoSrcMap </td>
+          <td class="memname">size_t lbs::LBSSolver::GetHandleToPowerGenFieldFunc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns the local handle to the power generation field function, if enabled. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00319">319</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="a461960f9b3f4aa9f0fd0708ab165b66b" name="a461960f9b3f4aa9f0fd0708ab165b66b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a461960f9b3f4aa9f0fd0708ab165b66b">&#9670;&nbsp;</a></span>GetInputParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> lbs::LBSSolver::GetInputParameters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns the input parameters for this object. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00019">19</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="aa1a04dbdfd2e246217ec9285f4cbca45" name="aa1a04dbdfd2e246217ec9285f4cbca45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1a04dbdfd2e246217ec9285f4cbca45">&#9670;&nbsp;</a></span>GetMatID2IsoSrcMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; int, <a class="el" href="../../d9/d42/namespacelbs.html#ad437ea2eba5df2caa739b42acbf1ca98">IsotropicSrcPtr</a> &gt; &amp; lbs::LBSSolver::GetMatID2IsoSrcMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1099,18 +1247,18 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a reference to the map of material ids to Isotropic Srcs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00116">116</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00164">164</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a6d34bcb38175a07d05a54dfc172a389a" name="a6d34bcb38175a07d05a54dfc172a389a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d34bcb38175a07d05a54dfc172a389a">&#9670;&nbsp;</a></span>GetMatID2XSMap()</h2>
+<a id="aa0341811cb165338426f5c4a742fdb81" name="aa0341811cb165338426f5c4a742fdb81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0341811cb165338426f5c4a742fdb81">&#9670;&nbsp;</a></span>GetMatID2XSMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::map&lt; int, <a class="el" href="../../d9/d42/namespacelbs.html#adba5568913514d673c29c4b7e8350fe3">lbs::XSPtr</a> &gt; &amp; lbs::LBSSolver::GetMatID2XSMap </td>
+          <td class="memname">const std::map&lt; int, <a class="el" href="../../d9/d42/namespacelbs.html#adba5568913514d673c29c4b7e8350fe3">XSPtr</a> &gt; &amp; lbs::LBSSolver::GetMatID2XSMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1119,7 +1267,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a reference to the map of material ids to XSs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00110">110</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00158">158</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1139,7 +1287,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the maximum number of precursors, for a material, as encountered accross all the materials. This will only be non-zero after initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00051">51</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00109">109</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1167,36 +1315,28 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets the local and global number of iterative unknowns. This normally is only the flux moments, however, the sweep based solvers might include delayed angular fluxes in this number. </p>
 
-<p>Reimplemented in <a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html#a7dfb25d2cf60ee332fc23eb5e085717f">lbs::LBSDiscreteOrdinatesSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a487521b0b1e3af2dedae4a3618e1c03c">lbs::DiscreteOrdinatesSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00211">211</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00298">298</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a8a2bcc67811cba119b230c7a611a34ee" name="a8a2bcc67811cba119b230c7a611a34ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a2bcc67811cba119b230c7a611a34ee">&#9670;&nbsp;</a></span>GetPrimaryAGSSolver()</h2>
+<a id="a03098a01e2c88db46db316c373cbaf92" name="a03098a01e2c88db46db316c373cbaf92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03098a01e2c88db46db316c373cbaf92">&#9670;&nbsp;</a></span>GetPrimaryAGSSolver()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a36d538ba86f1d6db46219ba5216b887a">AGSLinSolverPtr</a> lbs::LBSSolver::GetPrimaryAGSSolver </td>
+          <td class="memname"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac475c8da5a84b365fa2bda6c9ce0ee8b">LBSSolver::AGSLinSolverPtr</a> lbs::LBSSolver::GetPrimaryAGSSolver </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00158">158</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00267">267</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1216,34 +1356,66 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the source event tag used for logging the time it takes to set source moments. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00012">12</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00080">80</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a5ec97bc3b7a45c27e30a338e2a144dd6" name="a5ec97bc3b7a45c27e30a338e2a144dd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ec97bc3b7a45c27e30a338e2a144dd6">&#9670;&nbsp;</a></span>GetWGSSolvers()</h2>
+<a id="ac186e4755141730fd1386bff19727e5f" name="ac186e4755141730fd1386bff19727e5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac186e4755141730fd1386bff19727e5f">&#9670;&nbsp;</a></span>GetUnitCellMatrices()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1386dd06e8e6f79fdaf8e728c4dad204">LinSolvePtr</a> &gt; &amp; lbs::LBSSolver::GetWGSSolvers </td>
+          <td class="memname">const std::vector&lt; <a class="el" href="../../dc/d37/structlbs_1_1_unit_cell_matrices.html">UnitCellMatrices</a> &gt; &amp; lbs::LBSSolver::GetUnitCellMatrices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns read-only access to the unit cell matrices. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00176">176</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="aa833669ec52624afa4ab8b492d1a51cd" name="aa833669ec52624afa4ab8b492d1a51cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa833669ec52624afa4ab8b492d1a51cd">&#9670;&nbsp;</a></span>GetWGSContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html">WGSContext</a>&lt; Mat, Vec, KSP &gt; &amp; lbs::LBSSolver::GetWGSContext </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>groupset_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00277">277</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="a323a5d03f38326ca82cb9511259d9780" name="a323a5d03f38326ca82cb9511259d9780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a323a5d03f38326ca82cb9511259d9780">&#9670;&nbsp;</a></span>GetWGSSolvers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a7e20cd882284b20da7ec77fbecaf9c78">LBSSolver::LinSolvePtr</a> &gt; &amp; lbs::LBSSolver::GetWGSSolvers </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00163">163</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00272">272</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1263,7 +1435,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the global node count for the flux-moments data structures. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00152">152</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00200">200</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1283,18 +1455,18 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Obtains a reference to the grid. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00129">129</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00182">182</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="ab57c4aa8eaaf27b9efd886cf6bdb13d1" name="ab57c4aa8eaaf27b9efd886cf6bdb13d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab57c4aa8eaaf27b9efd886cf6bdb13d1">&#9670;&nbsp;</a></span>Groups()</h2>
+<a id="a5e6cc91e090cff38a99c75c56458beee" name="a5e6cc91e090cff38a99c75c56458beee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e6cc91e090cff38a99c75c56458beee">&#9670;&nbsp;</a></span>Groups()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="../../d5/d86/classlbs_1_1_l_b_s_group.html">lbs::LBSGroup</a> &gt; &amp; lbs::LBSSolver::Groups </td>
+          <td class="memname">const std::vector&lt; <a class="el" href="../../d5/d86/classlbs_1_1_l_b_s_group.html">LBSGroup</a> &gt; &amp; lbs::LBSSolver::Groups </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1303,18 +1475,18 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Const accessor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00065">65</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00124">124</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="af4978519121b1964c228a4fbcdde95dd" name="af4978519121b1964c228a4fbcdde95dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4978519121b1964c228a4fbcdde95dd">&#9670;&nbsp;</a></span>Groupsets() <span class="overload">[1/2]</span></h2>
+<a id="a28310ee4d517263e9c6adca1033bf9ca" name="a28310ee4d517263e9c6adca1033bf9ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28310ee4d517263e9c6adca1033bf9ca">&#9670;&nbsp;</a></span>Groupsets() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">lbs::LBSGroupset</a> &gt; &amp; lbs::LBSSolver::Groupsets </td>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &gt; &amp; lbs::LBSSolver::Groupsets </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1323,18 +1495,18 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Non-Const accessor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00078">78</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00134">134</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="ae5f04d775e5d47f7cdbb839912b17c44" name="ae5f04d775e5d47f7cdbb839912b17c44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5f04d775e5d47f7cdbb839912b17c44">&#9670;&nbsp;</a></span>Groupsets() <span class="overload">[2/2]</span></h2>
+<a id="a93fb9ca031e9e1c1fb6b9c5c9fc52333" name="a93fb9ca031e9e1c1fb6b9c5c9fc52333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93fb9ca031e9e1c1fb6b9c5c9fc52333">&#9670;&nbsp;</a></span>Groupsets() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">lbs::LBSGroupset</a> &gt; &amp; lbs::LBSSolver::Groupsets </td>
+          <td class="memname">const std::vector&lt; <a class="el" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">LBSGroupset</a> &gt; &amp; lbs::LBSSolver::Groupsets </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1343,7 +1515,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Const accessor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00084">84</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00137">137</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1380,7 +1552,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >From the WGDSA DOFs, projects the scalar moments back into a primary STL vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00141">141</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00106">106</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
 
 </div>
 </div>
@@ -1470,7 +1642,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles a vector for a given groupset from a source vector. </p>
 
-<p>Reimplemented in <a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html#a91d4d42814d8d2a3ccc5ecb33f0840ab">lbs::LBSDiscreteOrdinatesSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ab9c0f4616628997eec8b3317e188332f">lbs::DiscreteOrdinatesSolver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html#l00169">169</a> of file <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html">lbs_07_vectorassembly.cc</a>.</p>
 
@@ -1502,7 +1674,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#a14e95fbc905d9c3b3ebdc89f06e53b29">chi_physics::Solver</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html#a7ce8e7db9f3ba1a70315eb4e8663a5fb">lbs::LBSDiscreteOrdinatesSolver</a>, <a class="el" href="../../d5/d5f/classlbs_1_1_m_i_p_steady_state_solver.html#a53314828b5940478084e1d5e5848e440">lbs::MIPSteadyStateSolver</a>, <a class="el" href="../../d6/d0f/classlbs_1_1_disc_ord_steady_state_adjoint_solver.html#a41eac1268fa5a7659651d0528ebe79c3">lbs::DiscOrdSteadyStateAdjointSolver</a>, and <a class="el" href="../../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a76e8e23f9cc245c94749fd5fc21c286e">lbs::DiscOrdTransientSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../df/dd4/classlbs_1_1_diffusion_d_f_e_m_solver.html#a9821d6e588b9908e14f207a83b260748">lbs::DiffusionDFEMSolver</a>, <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ac90bfb658e05a541dabbcfb03179c469">lbs::DiscreteOrdinatesSolver</a>, and <a class="el" href="../../dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#ae3f47ff6fa57306f430ed5f16441e451">lbs::DiscreteOrdinatesAdjointSolver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d04/lbs__01__main__initialize_8cc_source.html#l00008">8</a> of file <a class="el" href="../../d6/d04/lbs__01__main__initialize_8cc_source.html">lbs_01_main_initialize.cc</a>.</p>
 
@@ -1532,7 +1704,34 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Initializes transport related boundaries. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html#l00029">29</a> of file <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html#l00030">30</a> of file <a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a>.</p>
+
+</div>
+</div>
+<a id="a821911f21a5b714203dd44618cc4c4a6" name="a821911f21a5b714203dd44618cc4c4a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a821911f21a5b714203dd44618cc4c4a6">&#9670;&nbsp;</a></span>InitializeFieldFunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lbs::LBSSolver::InitializeFieldFunctions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d13/lbs__01ga__init__fieldfuncs_8cc_source.html#l00010">10</a> of file <a class="el" href="../../d4/d13/lbs__01ga__init__fieldfuncs_8cc_source.html">lbs_01ga_init_fieldfuncs.cc</a>.</p>
 
 </div>
 </div>
@@ -1663,7 +1862,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../df/de3/classlbs__curvilinear_1_1_disc_ord_steady_state_solver.html#a4b54936a63654fb336f06f308a705690">lbs_curvilinear::DiscOrdSteadyStateSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d6/d33/classlbs_1_1_discrete_ordinates_curvilinear_solver.html#a64a93f70a3322d52bb84b9a18bf1cb7d">lbs::DiscreteOrdinatesCurvilinearSolver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d4c/lbs__01d__init__spat__discr_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d8/d4c/lbs__01d__init__spat__discr_8cc_source.html">lbs_01d_init_spat_discr.cc</a>.</p>
 
@@ -1692,9 +1891,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html#ae4b2e0377fe78ba6c263e6abdf494a52">lbs::LBSDiscreteOrdinatesSolver</a>, and <a class="el" href="../../d5/d5f/classlbs_1_1_m_i_p_steady_state_solver.html#a1749d80e7e34d8232859d76194dc5a33">lbs::MIPSteadyStateSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../df/dd4/classlbs_1_1_diffusion_d_f_e_m_solver.html#aa791b6efeb001e50fc126ff3ae4bcf34">lbs::DiffusionDFEMSolver</a>, and <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a9a088c9ac08a9e5eff29161ea2f5dd15">lbs::DiscreteOrdinatesSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00198">198</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00236">236</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -1794,7 +1993,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a reference to the time at which the last restart was written. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00022">22</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00086">86</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1814,7 +2013,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the time at which the last restart was written. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00018">18</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00083">83</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1834,7 +2033,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the local node count for the flux-moments data structures. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00148">148</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00197">197</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1858,6 +2057,37 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a26de35f9fd9b40c20318bb630eb98a36" name="a26de35f9fd9b40c20318bb630eb98a36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26de35f9fd9b40c20318bb630eb98a36">&#9670;&nbsp;</a></span>MapPhiFieldFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t lbs::LBSSolver::MapPhiFieldFunction </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Gets the local handle of a flux-moment based field function. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00308">308</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
 <a id="a35c66287a70f410584565a01e65df5ba" name="a35c66287a70f410584565a01e65df5ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35c66287a70f410584565a01e65df5ba">&#9670;&nbsp;</a></span>NumGroups()</h2>
 
@@ -1874,7 +2104,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the number of groups for the solver. This will only be non-zero after initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00040">40</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00100">100</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1894,7 +2124,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the number of moments for the solver. This will only be non-zero after initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00035">35</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00096">96</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1914,7 +2144,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the number of precursors for the solver. This will only be non-zero after initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00045">45</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00104">104</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -1944,14 +2174,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac2ac6c598650da26c13ccadd6cf6be9c" name="ac2ac6c598650da26c13ccadd6cf6be9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2ac6c598650da26c13ccadd6cf6be9c">&#9670;&nbsp;</a></span>Options() <span class="overload">[1/2]</span></h2>
+<a id="ac7ffad0ab5fcc8d89d7c112f1c2c732b" name="ac7ffad0ab5fcc8d89d7c112f1c2c732b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7ffad0ab5fcc8d89d7c112f1c2c732b">&#9670;&nbsp;</a></span>Options() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html">lbs::Options</a> &amp; lbs::LBSSolver::Options </td>
+          <td class="memname"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html">Options</a> &amp; lbs::LBSSolver::Options </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1960,18 +2190,18 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a reference to the solver options. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00026">26</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00089">89</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="ae36d7b522f04151d942e5ae01e5f91fe" name="ae36d7b522f04151d942e5ae01e5f91fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae36d7b522f04151d942e5ae01e5f91fe">&#9670;&nbsp;</a></span>Options() <span class="overload">[2/2]</span></h2>
+<a id="ab3641b2c2e3edfe176d65f0dbeaf927c" name="ab3641b2c2e3edfe176d65f0dbeaf927c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3641b2c2e3edfe176d65f0dbeaf927c">&#9670;&nbsp;</a></span>Options() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../dc/dcd/structlbs_1_1_options.html">lbs::Options</a> &amp; lbs::LBSSolver::Options </td>
+          <td class="memname">const <a class="el" href="../../dc/dcd/structlbs_1_1_options.html">Options</a> &amp; lbs::LBSSolver::Options </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1980,7 +2210,34 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a constant reference to the solver options. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00030">30</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00092">92</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="a374fb1564a2ae884d10489f6a2bf64db" name="a374fb1564a2ae884d10489f6a2bf64db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374fb1564a2ae884d10489f6a2bf64db">&#9670;&nbsp;</a></span>OptionsBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> lbs::LBSSolver::OptionsBlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d14/lbs__00a__setoptions_8cc_source.html#l00013">13</a> of file <a class="el" href="../../d0/d14/lbs__00a__setoptions_8cc_source.html">lbs_00a_setoptions.cc</a>.</p>
 
 </div>
 </div>
@@ -2008,9 +2265,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Performs general input checks before initialization continues. </p>
 
-<p>Reimplemented in <a class="el" href="../../df/de3/classlbs__curvilinear_1_1_disc_ord_steady_state_solver.html#a32ac2ca6d6e2a893f901428ecef20e59">lbs_curvilinear::DiscOrdSteadyStateSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d6/d33/classlbs_1_1_discrete_ordinates_curvilinear_solver.html#a1a6ab335eb89d9e1c978254d0f5d38c7">lbs::DiscreteOrdinatesCurvilinearSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html#l00009">9</a> of file <a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html">lbs_01a_inputchecks.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html#l00010">10</a> of file <a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html">lbs_01a_inputchecks.cc</a>.</p>
 
 </div>
 </div>
@@ -2030,7 +2287,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Read/write access to newest updated flux vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00191">191</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00232">232</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -2050,7 +2307,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Read access to newest updated flux vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00196">196</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00234">234</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -2070,7 +2327,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Read/write access to last updated flux vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00179">179</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00223">223</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -2090,18 +2347,18 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Read access to last updated flux vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00185">185</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00226">226</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a9e32d8a73d31e01e1722e2d260650843" name="a9e32d8a73d31e01e1722e2d260650843"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e32d8a73d31e01e1722e2d260650843">&#9670;&nbsp;</a></span>PointSources()</h2>
+<a id="a3bda2b6306a59f6d895ffd7a45964e0f" name="a3bda2b6306a59f6d895ffd7a45964e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bda2b6306a59f6d895ffd7a45964e0f">&#9670;&nbsp;</a></span>PointSources()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="../../dc/d4f/classlbs_1_1_point_source.html">lbs::PointSource</a> &gt; &amp; lbs::LBSSolver::PointSources </td>
+          <td class="memname">const std::vector&lt; <a class="el" href="../../dc/d4f/classlbs_1_1_point_source.html">PointSource</a> &gt; &amp; lbs::LBSSolver::PointSources </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -2110,7 +2367,47 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Const accessor to the list of point sources. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00103">103</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00152">152</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="a2ce519dea84e2d2e090ac50ebda1cbc4" name="a2ce519dea84e2d2e090ac50ebda1cbc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ce519dea84e2d2e090ac50ebda1cbc4">&#9670;&nbsp;</a></span>PrecursorsNewLocal() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; &amp; lbs::LBSSolver::PrecursorsNewLocal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Read/write access to newest updated precursors vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00240">240</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="ace93ba7f5a7b1a5f756246e323050173" name="ace93ba7f5a7b1a5f756246e323050173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace93ba7f5a7b1a5f756246e323050173">&#9670;&nbsp;</a></span>PrecursorsNewLocal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; double &gt; &amp; lbs::LBSSolver::PrecursorsNewLocal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Read access to newest updated precursors vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00242">242</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -2138,7 +2435,47 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Prints header information of simulation. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/da3/lbs__01b__print__simheader_8cc_source.html#l00008">8</a> of file <a class="el" href="../../dc/da3/lbs__01b__print__simheader_8cc_source.html">lbs_01b_print_simheader.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/da3/lbs__01b__print__simheader_8cc_source.html#l00009">9</a> of file <a class="el" href="../../dc/da3/lbs__01b__print__simheader_8cc_source.html">lbs_01b_print_simheader.cc</a>.</p>
+
+</div>
+</div>
+<a id="a5efd1de2244d239af200f7c0df56f7b8" name="a5efd1de2244d239af200f7c0df56f7b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5efd1de2244d239af200f7c0df56f7b8">&#9670;&nbsp;</a></span>PsiNewLocal() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d42/namespacelbs.html#af08418093f4b92c33c17e60fbecb9bc9">VecDbl</a> &gt; &amp; lbs::LBSSolver::PsiNewLocal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Read/write access to newest updated angular flux vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00248">248</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="a27ba35e391ab9d871e5b5e157b0d5441" name="a27ba35e391ab9d871e5b5e157b0d5441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ba35e391ab9d871e5b5e157b0d5441">&#9670;&nbsp;</a></span>PsiNewLocal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="../../d9/d42/namespacelbs.html#af08418093f4b92c33c17e60fbecb9bc9">VecDbl</a> &gt; &amp; lbs::LBSSolver::PsiNewLocal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Read access to newest updated angular flux vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00250">250</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -2158,7 +2495,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Read/write access to source moments vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00156">156</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00203">203</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -2178,7 +2515,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Read access to source moments vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00161">161</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00205">205</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -2316,9 +2653,29 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Scales a flux moment vector. For sweep methods the delayed angular fluxes will also be scaled. </p>
 
-<p>Reimplemented in <a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html#aef39ce4b0ebe8d7cd7bb52710f87275f">lbs::LBSDiscreteOrdinatesSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#afc35564d63668b520d8fe7c3de9607f1">lbs::DiscreteOrdinatesSolver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html#l00036">36</a> of file <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html">lbs_07_vectorassembly.cc</a>.</p>
+
+</div>
+</div>
+<a id="ab0c58d00e93a368f795461e9bbdb4f6d" name="ab0c58d00e93a368f795461e9bbdb4f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0c58d00e93a368f795461e9bbdb4f6d">&#9670;&nbsp;</a></span>SetBoundaryOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lbs::LBSSolver::SetBoundaryOptions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d14/lbs__00a__setoptions_8cc_source.html#l00252">252</a> of file <a class="el" href="../../d0/d14/lbs__00a__setoptions_8cc_source.html">lbs_00a_setoptions.cc</a>.</p>
 
 </div>
 </div>
@@ -2414,7 +2771,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles a vector for a given groupset from a source vector. </p>
 
-<p>Reimplemented in <a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html#a4d9b972cf19525aab451bf43dc6a6d4c">lbs::LBSDiscreteOrdinatesSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a623dceb6e35ec5aa20c3e27508ed2d0a">lbs::DiscreteOrdinatesSolver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html#l00053">53</a> of file <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html">lbs_07_vectorassembly.cc</a>.</p>
 
@@ -2461,9 +2818,66 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles a PETSc vector from multiple groupsets. </p>
 
-<p>Reimplemented in <a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html#a0c6c8447f0cdd2b821b621cc71b544a5">lbs::LBSDiscreteOrdinatesSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ab8b51a6c5b7cad962e871096b2cbf061">lbs::DiscreteOrdinatesSolver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html#l00288">288</a> of file <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html">lbs_07_vectorassembly.cc</a>.</p>
+
+</div>
+</div>
+<a id="a1b523e43a70d66befd7abf889947dff4" name="a1b523e43a70d66befd7abf889947dff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b523e43a70d66befd7abf889947dff4">&#9670;&nbsp;</a></span>SetOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lbs::LBSSolver::SetOptions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d14/lbs__00a__setoptions_8cc_source.html#l00153">153</a> of file <a class="el" href="../../d0/d14/lbs__00a__setoptions_8cc_source.html">lbs_00a_setoptions.cc</a>.</p>
+
+</div>
+</div>
+<a id="a14caa7b772f3c012fec103df5ba072cd" name="a14caa7b772f3c012fec103df5ba072cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14caa7b772f3c012fec103df5ba072cd">&#9670;&nbsp;</a></span>SetPhiFromFieldFunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lbs::LBSSolver::SetPhiFromFieldFunctions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d42/namespacelbs.html#add11e6bdb0475d616eaae76aef5dad8e">PhiSTLOption</a>&#160;</td>
+          <td class="paramname"><em>which_phi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m_indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>g_indices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets the internal phi vector to the value in the associated field function. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d32/lbs__05a__update__fieldfuncs_8cc_source.html#l00135">135</a> of file <a class="el" href="../../d0/d32/lbs__05a__update__fieldfuncs_8cc_source.html">lbs_05a_update_fieldfuncs.cc</a>.</p>
 
 </div>
 </div>
@@ -2598,7 +3012,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles a vector for a given groupset from a source vector. </p>
 
-<p>Reimplemented in <a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html#a8a5bb51a0d8d5500266c0150d3128e2a">lbs::LBSDiscreteOrdinatesSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a9454458d3fc5287436f8427c1b41fdba">lbs::DiscreteOrdinatesSolver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html#l00097">97</a> of file <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html">lbs_07_vectorassembly.cc</a>.</p>
 
@@ -2645,7 +3059,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Disassembles a multiple Groupset PETSc vector STL vectors. </p>
 
-<p>Reimplemented in <a class="el" href="../../d4/d0b/classlbs_1_1_l_b_s_discrete_ordinates_solver.html#a077f557ce50a19c0a8970ce17782a86d">lbs::LBSDiscreteOrdinatesSolver</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ad1d3c2fe1834faeedebbf0c8f2bf2533">lbs::DiscreteOrdinatesSolver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html#l00337">337</a> of file <a class="el" href="../../d4/d79/lbs__07__vectorassembly_8cc_source.html">lbs_07_vectorassembly.cc</a>.</p>
 
@@ -2667,7 +3081,27 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Obtains a reference to the spatial discretization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00122">122</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00170">170</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="a705b793269df5d6ffe65af56fdf6d63b" name="a705b793269df5d6ffe65af56fdf6d63b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705b793269df5d6ffe65af56fdf6d63b">&#9670;&nbsp;</a></span>SweepBoundaries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; uint64_t, std::shared_ptr&lt; <a class="el" href="../../d1/df2/angleset_8h.html#a66cfad4bf0e864e6fea723efe64d5d0b">SweepBndry</a> &gt; &gt; &amp; lbs::LBSSolver::SweepBoundaries </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns the sweep boundaries as a read only reference </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00257">257</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -2687,7 +3121,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Obtains a reference to the unknown manager for flux-moments. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00142">142</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html#l00191">191</a> of file <a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -2707,7 +3141,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Copy relevant section of phi_old to the field functions. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d32/lbs__05a__update__fieldfuncs_8cc_source.html#l00007">7</a> of file <a class="el" href="../../d0/d32/lbs__05a__update__fieldfuncs_8cc_source.html">lbs_05a_update_fieldfuncs.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d32/lbs__05a__update__fieldfuncs_8cc_source.html#l00012">12</a> of file <a class="el" href="../../d0/d32/lbs__05a__update__fieldfuncs_8cc_source.html">lbs_05a_update_fieldfuncs.cc</a>.</p>
 
 </div>
 </div>
@@ -2738,7 +3172,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Creates a vector from a lbs primary stl vector where only the scalar moments are mapped to the DOFs needed by WGDSA. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00102">102</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html#l00068">68</a> of file <a class="el" href="../../dc/ddb/lbs__03d__wgdsa_8cc_source.html">lbs_03d_wgdsa.cc</a>.</p>
 
 </div>
 </div>
@@ -2856,7 +3290,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00090">90</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00099">99</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2870,7 +3304,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a36d538ba86f1d6db46219ba5216b887a">AGSLinSolverPtr</a>&gt; lbs::LBSSolver::ags_solvers_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac475c8da5a84b365fa2bda6c9ce0ee8b">AGSLinSolverPtr</a>&gt; lbs::LBSSolver::ags_solvers_</td>
         </tr>
       </table>
   </td>
@@ -2880,7 +3314,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00092">92</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00101">101</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2904,7 +3338,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00076">76</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00085">85</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2928,7 +3362,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00074">74</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00083">83</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2952,7 +3386,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00065">65</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00074">74</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -2976,7 +3410,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00085">85</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00094">94</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3000,7 +3434,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00079">79</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00088">88</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3024,7 +3458,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00083">83</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00092">92</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3048,7 +3482,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00070">70</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00079">79</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3072,7 +3506,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00069">69</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00078">78</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3096,7 +3530,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00068">68</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00077">77</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3120,7 +3554,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00066">66</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00075">75</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3144,7 +3578,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00058">58</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00067">67</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3168,7 +3602,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00059">59</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00068">68</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3182,7 +3616,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double lbs::LBSSolver::last_restart_write_ =0.0</td>
+          <td class="memname">double lbs::LBSSolver::last_restart_write_ = 0.0</td>
         </tr>
       </table>
   </td>
@@ -3192,7 +3626,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00050">50</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00059">59</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3216,7 +3650,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00082">82</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00091">91</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3240,7 +3674,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00063">63</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00072">72</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3264,7 +3698,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00062">62</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00071">71</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3288,7 +3722,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00081">81</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00090">90</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3312,7 +3746,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00056">56</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00065">65</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3336,7 +3770,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00054">54</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00063">63</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3360,7 +3794,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00053">53</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00062">62</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3384,7 +3818,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00055">55</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00064">64</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3408,7 +3842,31 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00052">52</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00061">61</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+
+</div>
+</div>
+<a id="a9019aa3e7ede7a00cd9e422c796decb5" name="a9019aa3e7ede7a00cd9e422c796decb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9019aa3e7ede7a00cd9e422c796decb5">&#9670;&nbsp;</a></span>phi_field_functions_local_map_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::pair&lt;size_t, size_t&gt;, size_t&gt; lbs::LBSSolver::phi_field_functions_local_map_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00105">105</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3432,7 +3890,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00086">86</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00095">95</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3456,7 +3914,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00086">86</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00095">95</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3480,7 +3938,31 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00060">60</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00069">69</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+
+</div>
+</div>
+<a id="a5efb7c657eb1b737542c100075e7e20d" name="a5efb7c657eb1b737542c100075e7e20d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5efb7c657eb1b737542c100075e7e20d">&#9670;&nbsp;</a></span>power_gen_fieldfunc_local_handle_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t lbs::LBSSolver::power_gen_fieldfunc_local_handle_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00106">106</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3504,7 +3986,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00088">88</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00097">97</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3518,7 +4000,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a36d538ba86f1d6db46219ba5216b887a">AGSLinSolverPtr</a> lbs::LBSSolver::primary_ags_solver_</td>
+          <td class="memname"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#ac475c8da5a84b365fa2bda6c9ce0ee8b">AGSLinSolverPtr</a> lbs::LBSSolver::primary_ags_solver_</td>
         </tr>
       </table>
   </td>
@@ -3528,7 +4010,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00094">94</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00103">103</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3552,7 +4034,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00087">87</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00096">96</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3576,7 +4058,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00085">85</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00094">94</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3590,7 +4072,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t lbs::LBSSolver::source_event_tag_ =0</td>
+          <td class="memname">size_t lbs::LBSSolver::source_event_tag_ = 0</td>
         </tr>
       </table>
   </td>
@@ -3600,7 +4082,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00049">49</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00058">58</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3624,7 +4106,32 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00077">77</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00086">86</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+
+</div>
+</div>
+<a id="a308fa11ba1bf6f5098120a5a4368e401" name="a308fa11ba1bf6f5098120a5a4368e401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a308fa11ba1bf6f5098120a5a4368e401">&#9670;&nbsp;</a></span>time_integration_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;const <a class="el" href="../../d8/d2b/classchi__math_1_1_time_integration.html">chi_math::TimeIntegration</a>&gt; lbs::LBSSolver::time_integration_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Time integration parameter meant to be set by an executor </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00109">109</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3648,7 +4155,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00072">72</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00081">81</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3672,7 +4179,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00073">73</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00082">82</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
@@ -3686,7 +4193,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1386dd06e8e6f79fdaf8e728c4dad204">LinSolvePtr</a>&gt; lbs::LBSSolver::wgs_solvers_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a7e20cd882284b20da7ec77fbecaf9c78">LinSolvePtr</a>&gt; lbs::LBSSolver::wgs_solvers_</td>
         </tr>
       </table>
   </td>
@@ -3696,13 +4203,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00093">93</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/d53/lbs__solver_8h_source.html#l00102">102</a> of file <a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../d9/d53/lbs__solver_8h_source.html">lbs_solver.h</a></li>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../db/dbc/lbs__00__constrdestr_8cc_source.html">lbs_00_constrdestr.cc</a></li>
+<li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../d0/d14/lbs__00a__setoptions_8cc_source.html">lbs_00a_setoptions.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../d6/d04/lbs__01__main__initialize_8cc_source.html">lbs_01_main_initialize.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../d8/dbc/lbs__01a__inputchecks_8cc_source.html">lbs_01a_inputchecks.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../dc/da3/lbs__01b__print__simheader_8cc_source.html">lbs_01b_print_simheader.cc</a></li>
@@ -3711,6 +4219,7 @@ Protected Attributes</h2></td></tr>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../dd/d02/lbs__01e__initgroupsets_8cc_source.html">lbs_01e_initgroupsets.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../db/d8f/lbs__01f__compute__nummoments_8cc_source.html">lbs_01f_compute_nummoments.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../d3/d37/lbs__01g__initparrays_8cc_source.html">lbs_01g_initparrays.cc</a></li>
+<li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../d4/d13/lbs__01ga__init__fieldfuncs_8cc_source.html">lbs_01ga_init_fieldfuncs.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../de/d16/lbs__01h__init__boundaries_8cc_source.html">lbs_01h_init_boundaries.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html">lbs_01i_init_point_sources.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/A_LBSSolver/<a class="el" href="../../df/d5f/lbs__01j__init__solver__schemes_8cc_source.html">lbs_01j_init_solver_schemes.cc</a></li>

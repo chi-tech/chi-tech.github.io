@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -106,8 +113,8 @@ $(document).ready(function(){initNavTree('d7/db4/transient__source__function_8cc
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                  <span class="keyword">const</span> std::vector&lt;double&gt; &amp;nu_delayed_sigma_f,</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                  <span class="keyword">const</span> <span class="keywordtype">double</span> *phi)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; BackwardEuler = <a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a3465588bedb02dfcefcc726625308fb3">chi_math::SteppingMethod::BACKWARD_EULER</a>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; CrankNicolson = <a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ac8a0bea4cc96e12ed1fedd9695c99b81">chi_math::SteppingMethod::CRANK_NICHOLSON</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; BackwardEuler = <a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a0cd0003c0d1211c26f34a7bac8e4fcf4">chi_math::SteppingMethod::IMPLICIT_EULER</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; CrankNicolson = <a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a689ac4e1be37d17acd845c23f1a62609">chi_math::SteppingMethod::CRANK_NICOLSON</a>;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordtype">double</span> theta;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordflow">if</span>      (method_ == BackwardEuler) theta = 1.0;</div>
@@ -152,14 +159,14 @@ $(document).ready(function(){initNavTree('d7/db4/transient__source__function_8cc
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordflow">return</span> value;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
-<div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">lbs::LBSSolver</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00042">lbs_solver.h:43</a></div></div>
+<div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">lbs::LBSSolver</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00049">lbs_solver.h:50</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_source_function_html"><div class="ttname"><a href="../../dc/d64/classlbs_1_1_source_function.html">lbs::SourceFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbb/source__function_8h_source.html#l00020">source_function.h:21</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_source_function_html_a4c204d911f5338c88ca51abd4d424c0c"><div class="ttname"><a href="../../dc/d64/classlbs_1_1_source_function.html#a4c204d911f5338c88ca51abd4d424c0c">lbs::SourceFunction::PrecursorList</a></div><div class="ttdeci">std::vector&lt; chi_physics::MultiGroupXS::Precursor &gt; PrecursorList</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dbb/source__function_8h_source.html#l00054">source_function.h:54</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_transient_source_function_html_a210de8a0bc7c5e1bce90596af1199b20"><div class="ttname"><a href="../../dc/d71/classlbs_1_1_transient_source_function.html#a210de8a0bc7c5e1bce90596af1199b20">lbs::TransientSourceFunction::AddDelayedFission</a></div><div class="ttdeci">double AddDelayedFission(const PrecursorList &amp;precursors, const std::vector&lt; double &gt; &amp;nu_delayed_sigma_f, const double *phi) const override</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db4/transient__source__function_8cc_source.html#l00016">transient_source_function.cc:17</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_transient_source_function_html_a49a6d93360665d1730e2b58b9cc097e5"><div class="ttname"><a href="../../dc/d71/classlbs_1_1_transient_source_function.html#a49a6d93360665d1730e2b58b9cc097e5">lbs::TransientSourceFunction::TransientSourceFunction</a></div><div class="ttdeci">TransientSourceFunction(const LBSSolver &amp;lbs_solver, double &amp;ref_dt, chi_math::SteppingMethod &amp;method)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db4/transient__source__function_8cc_source.html#l00006">transient_source_function.cc:7</a></div></div>
-<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">chi_math::SteppingMethod</a></div><div class="ttdeci">SteppingMethod</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d40/chi__math__time__stepping_8h_source.html#l00007">chi_math_time_stepping.h:8</a></div></div>
-<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127a3465588bedb02dfcefcc726625308fb3"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a3465588bedb02dfcefcc726625308fb3">chi_math::SteppingMethod::BACKWARD_EULER</a></div><div class="ttdeci">@ BACKWARD_EULER</div></div>
-<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127ac8a0bea4cc96e12ed1fedd9695c99b81"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ac8a0bea4cc96e12ed1fedd9695c99b81">chi_math::SteppingMethod::CRANK_NICHOLSON</a></div><div class="ttdeci">@ CRANK_NICHOLSON</div></div>
+<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">chi_math::SteppingMethod</a></div><div class="ttdeci">SteppingMethod</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d40/chi__math__time__stepping_8h_source.html#l00009">chi_math_time_stepping.h:10</a></div></div>
+<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127a0cd0003c0d1211c26f34a7bac8e4fcf4"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a0cd0003c0d1211c26f34a7bac8e4fcf4">chi_math::SteppingMethod::IMPLICIT_EULER</a></div><div class="ttdeci">@ IMPLICIT_EULER</div></div>
+<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127a689ac4e1be37d17acd845c23f1a62609"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a689ac4e1be37d17acd845c23f1a62609">chi_math::SteppingMethod::CRANK_NICOLSON</a></div><div class="ttdeci">@ CRANK_NICOLSON</div></div>
 <div class="ttc" id="atransient__source__function_8h_html"><div class="ttname"><a href="../../dc/d46/transient__source__function_8h.html">transient_source_function.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

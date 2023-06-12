@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -127,23 +134,26 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:af43ceb1c400e48570becf01d97e6deb3"><td class="memTemplParams" colspan="2">template&lt;class R , class T &gt; </td></tr>
 <tr class="memitem:af43ceb1c400e48570becf01d97e6deb3"><td class="memTemplItemLeft" align="right" valign="top">static R &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#af43ceb1c400e48570becf01d97e6deb3">GetStackItem</a> (std::vector&lt; std::shared_ptr&lt; T &gt; &gt; &amp;stack, const size_t handle, const std::string &amp;calling_function_name=&quot;Unknown&quot;)</td></tr>
 <tr class="separator:af43ceb1c400e48570becf01d97e6deb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3669050587fd772da3360a8293c8ba56"><td class="memTemplParams" colspan="2">template&lt;class T , class P &gt; </td></tr>
+<tr class="memitem:a3669050587fd772da3360a8293c8ba56"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a3669050587fd772da3360a8293c8ba56">GetStackItemPtrAsType</a> (std::vector&lt; std::shared_ptr&lt; P &gt; &gt; &amp;stack, const size_t handle, const std::string &amp;calling_function_name=&quot;Unknown&quot;)</td></tr>
+<tr class="separator:a3669050587fd772da3360a8293c8ba56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a31400d861c0fb3b6e8c809a83b53af"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a4a31400d861c0fb3b6e8c809a83b53af"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a4a31400d861c0fb3b6e8c809a83b53af">GetStackItemPtr</a> (std::vector&lt; std::shared_ptr&lt; T &gt; &gt; &amp;stack, const size_t handle, const std::string &amp;calling_function_name=&quot;Unknown&quot;)</td></tr>
 <tr class="separator:a4a31400d861c0fb3b6e8c809a83b53af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a2457fed74471fae43ed8d6c5e91378fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8e/classchi__objects_1_1_m_p_i___info.html">chi_objects::MPI_Info</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">mpi</a> = <a class="el" href="../../d2/d8e/classchi__objects_1_1_m_p_i___info.html#ad5ebe40936ee0317010abc87882cd459">chi_objects::MPI_Info::GetInstance</a>()</td></tr>
+<tr class="memitem:a2457fed74471fae43ed8d6c5e91378fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d8e/classchi__objects_1_1_m_p_i___info.html">chi_objects::MPI_Info</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">mpi</a> = <a class="el" href="../../d2/d8e/classchi__objects_1_1_m_p_i___info.html#a16dc6412d3f4174bcff60c7a4319b9a5">chi_objects::MPI_Info::GetInstance</a>()</td></tr>
 <tr class="separator:a2457fed74471fae43ed8d6c5e91378fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d0585bd45f9397540817433d194647"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d1/d87/classchi__objects_1_1_chi_timer.html">chi_objects::ChiTimer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">program_timer</a></td></tr>
 <tr class="separator:ab5d0585bd45f9397540817433d194647"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaf99163b7a54f59d6372e94cfc32dea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">chi_objects::ChiConsole</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#afaf99163b7a54f59d6372e94cfc32dea">console</a> = <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ad16df9ce0d0b2427ec7159249f2ff173">chi_objects::ChiConsole::GetInstance</a>()</td></tr>
+<tr class="memitem:afaf99163b7a54f59d6372e94cfc32dea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">chi_objects::ChiConsole</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#afaf99163b7a54f59d6372e94cfc32dea">console</a> = <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a7510e64d1fdd71e790964748ed1db7de">chi_objects::ChiConsole::GetInstance</a>()</td></tr>
 <tr class="separator:afaf99163b7a54f59d6372e94cfc32dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dedda8a44a89f39b4038becaa9f304a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">chi_objects::ChiLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">log</a> = <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a3de59d3e34e0731ec54eae64e64d594c">chi_objects::ChiLog::GetInstance</a>()</td></tr>
+<tr class="memitem:a2dedda8a44a89f39b4038becaa9f304a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">chi_objects::ChiLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">log</a> = <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a7bcd0205c96e6fedbfb5df9eaf8bfb25">chi_objects::ChiLog::GetInstance</a>()</td></tr>
 <tr class="separator:a2dedda8a44a89f39b4038becaa9f304a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bc87832f51e2196e2a230a5deb75838"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a23d926104939fae47ba5663103c28f2c">chi_mesh::MeshHandlerPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a5bc87832f51e2196e2a230a5deb75838">meshhandler_stack</a></td></tr>
 <tr class="separator:a5bc87832f51e2196e2a230a5deb75838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1f9d34fffdcc76cfb66c35740bf96ee"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#ad1f9d34fffdcc76cfb66c35740bf96ee">current_mesh_handler</a> =-1</td></tr>
+<tr class="memitem:ad1f9d34fffdcc76cfb66c35740bf96ee"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#ad1f9d34fffdcc76cfb66c35740bf96ee">current_mesh_handler</a> = -1</td></tr>
 <tr class="separator:ad1f9d34fffdcc76cfb66c35740bf96ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af077bfe7a264e17599151d4bea2dd9ae"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a89629945f407e6db4517fd160b5e08ad">chi_mesh::SurfaceMeshPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae">surface_mesh_stack</a></td></tr>
 <tr class="separator:af077bfe7a264e17599151d4bea2dd9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,23 +163,27 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:ac49e26b99e533dfe75f9818201de79d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47b557d0bdd217181e6f5b7798cec13a"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#ad1b44afe46a5296e3e1fe075e850bc49">chi_mesh::UnpartMeshPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a47b557d0bdd217181e6f5b7798cec13a">unpartitionedmesh_stack</a></td></tr>
 <tr class="separator:a47b557d0bdd217181e6f5b7798cec13a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac61de38bf878913b59c570995346052e"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d6/d5f/namespacechi__physics.html#a32b7a961a070e810475068b46eadcab3">chi_physics::SolverPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#ac61de38bf878913b59c570995346052e">solver_stack</a></td></tr>
-<tr class="separator:ac61de38bf878913b59c570995346052e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa99611570d864cef55872bc180e0862d"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d6/d5f/namespacechi__physics.html#ab6460275cc07ff17d5c0ccfab1c08a60">chi_physics::MaterialPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d">material_stack</a></td></tr>
 <tr class="separator:aa99611570d864cef55872bc180e0862d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac63327052f2f45b85155f455c798d9cf"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d6/d5f/namespacechi__physics.html#a48d2013a0766df0786d80512694b1661">chi_physics::MultiGroupXSPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#ac63327052f2f45b85155f455c798d9cf">multigroup_xs_stack</a></td></tr>
 <tr class="separator:ac63327052f2f45b85155f455c798d9cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afba79ac38d3410b337bdb6f52c1fa28c"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d6/d5f/namespacechi__physics.html#a7be82ed94415ed63ada0a556e20800a5">chi_physics::FieldFunctionPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#afba79ac38d3410b337bdb6f52c1fa28c">field_function_stack</a></td></tr>
+<tr class="memitem:afba79ac38d3410b337bdb6f52c1fa28c"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d6/d5f/namespacechi__physics.html#a3877c47a24c665e3b562a978ecbbb3fb">chi_physics::FieldFunctionPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#afba79ac38d3410b337bdb6f52c1fa28c">field_function_stack</a></td></tr>
 <tr class="separator:afba79ac38d3410b337bdb6f52c1fa28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af95e663696f1bb453de942ae30e765e7"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../dc/d58/namespacechi__math.html#a5da7bd3ae9da4ef1a6d6a62d4f78c346">chi_math::QuadraturePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#af95e663696f1bb453de942ae30e765e7">quadrature_stack</a></td></tr>
 <tr class="separator:af95e663696f1bb453de942ae30e765e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b93d2f569533bb5354f4eb19b96e10c"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../dc/d58/namespacechi__math.html#a637714681be11402efe6c55193c7af1f">chi_math::AngularQuadraturePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a5b93d2f569533bb5354f4eb19b96e10c">angular_quadrature_stack</a></td></tr>
 <tr class="separator:a5b93d2f569533bb5354f4eb19b96e10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab943224840354fdebc84ee218e70afb7"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d3/db2/chi__runtime_8h.html#a9619f15f05ad9d25349bba47f8028491">ChiObjectPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#ab943224840354fdebc84ee218e70afb7">object_stack</a></td></tr>
+<tr class="separator:ab943224840354fdebc84ee218e70afb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfa53daa8c627247a751053dccc91d2"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../dc/d58/namespacechi__math.html#aed18279f80ae4b3fc28796abe3da97f4">chi_math::SpatialDiscretizationPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a2cfa53daa8c627247a751053dccc91d2">sdm_stack</a></td></tr>
+<tr class="separator:a2cfa53daa8c627247a751053dccc91d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83aa58252f32304603bd91affbbe63b3"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d35/classchi.html#a83aa58252f32304603bd91affbbe63b3">SIZE_T_INVALID</a> = ((size_t)-1)</td></tr>
+<tr class="separator:a83aa58252f32304603bd91affbbe63b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >General utilities in ChiTech </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00064">64</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00069">69</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af0ff6972ec19aa17d135ddb9c1fea6ed" name="af0ff6972ec19aa17d135ddb9c1fea6ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0ff6972ec19aa17d135ddb9c1fea6ed">&#9670;&nbsp;</a></span>chi() <span class="overload">[1/2]</span></h2>
@@ -248,7 +262,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Exits the program appropriately. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00306">306</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00333">333</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -276,7 +290,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Finalizes ChiTech. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00179">179</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00211">211</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -326,9 +340,9 @@ template&lt;class R , class T &gt; </div>
 Example usage:</p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; surf_mesh = chi::GetStackItem&lt;chi_mesh::SurfaceMesh&gt;(</div>
 <div class="line">   <a class="code hl_variable" href="../../d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae">chi::surface_mesh_stack</a>, surface_hndl);</div>
-<div class="ttc" id="aclasschi_html_af077bfe7a264e17599151d4bea2dd9ae"><div class="ttname"><a href="../../d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae">chi::surface_mesh_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::SurfaceMeshPtr &gt; surface_mesh_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
+<div class="ttc" id="aclasschi_html_af077bfe7a264e17599151d4bea2dd9ae"><div class="ttname"><a href="../../d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae">chi::surface_mesh_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::SurfaceMeshPtr &gt; surface_mesh_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00080">chi_runtime.h:80</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00156">156</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00174">174</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -373,13 +387,64 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Attempts to object of type <code>shared_ptr&lt;T&gt;</code> at the given handle. <br  />
+<p >Attempts to obtain object of type <code>shared_ptr&lt;T&gt;</code> at the given handle of a stack ALSO OF TYPE T. <br  />
 <br  />
 Example usage:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> surf_mesh_ptr = chi::GetStackItemPtr&lt;chi_mesh::SurfaceMesh&gt;(</div>
 <div class="line"> <a class="code hl_variable" href="../../d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae">chi::surface_mesh_stack</a>, surf_mesh_hndle, fname);</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00189">189</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00246">246</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+
+</div>
+</div>
+<a id="a3669050587fd772da3360a8293c8ba56" name="a3669050587fd772da3360a8293c8ba56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3669050587fd772da3360a8293c8ba56">&#9670;&nbsp;</a></span>GetStackItemPtrAsType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class P &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::shared_ptr&lt; T &gt; chi::GetStackItemPtrAsType </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; P &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>stack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>calling_function_name</em> = <code>&quot;Unknown&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Attempts to obtain object of type <code>shared_ptr&lt;T&gt;</code> at the given handle of a stack with parent type P. <br  />
+<br  />
+Example usage:</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> surf_mesh_ptr = chi::GetStackItemPtr&lt;chi_mesh::SurfaceMesh&gt;(</div>
+<div class="line"> <a class="code hl_variable" href="../../d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae">chi::surface_mesh_stack</a>, surf_mesh_hndle, fname);</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00209">209</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -407,7 +472,7 @@ Example usage:</p>
 </div><div class="memdoc">
 <p >Gets the ChiTech-version string. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00314">314</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00337">337</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -452,7 +517,7 @@ Example usage:</p>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00136">136</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00168">168</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -517,7 +582,7 @@ Example usage:</p>
 </div><div class="memdoc">
 <p >Runs ChiTech in pure batch mode. Start then finish. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00244">244</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00276">276</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -556,7 +621,7 @@ Example usage:</p>
 </div><div class="memdoc">
 <p >Runs the interactive chitech engine </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00198">198</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html#l00230">230</a> of file <a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a>.</p>
 
 </div>
 </div>
@@ -581,7 +646,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00086">86</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00090">90</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -595,7 +660,7 @@ Example usage:</p>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">chi_objects::ChiConsole</a> &amp; chi::console = <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ad16df9ce0d0b2427ec7159249f2ff173">chi_objects::ChiConsole::GetInstance</a>()</td>
+          <td class="memname"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">chi_objects::ChiConsole</a> &amp; chi::console = <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a7510e64d1fdd71e790964748ed1db7de">chi_objects::ChiConsole::GetInstance</a>()</td>
         </tr>
       </table>
   </td>
@@ -605,7 +670,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00069">69</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00074">74</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -619,7 +684,7 @@ Example usage:</p>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int chi::current_mesh_handler =-1</td>
+          <td class="memname">int chi::current_mesh_handler = -1</td>
         </tr>
       </table>
   </td>
@@ -629,7 +694,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00073">73</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00078">78</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -653,7 +718,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00077">77</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00082">82</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -667,7 +732,7 @@ Example usage:</p>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="../../d6/d5f/namespacechi__physics.html#a7be82ed94415ed63ada0a556e20800a5">chi_physics::FieldFunctionPtr</a> &gt; chi::field_function_stack</td>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d6/d5f/namespacechi__physics.html#a3877c47a24c665e3b562a978ecbbb3fb">chi_physics::FieldFunctionPtr</a> &gt; chi::field_function_stack</td>
         </tr>
       </table>
   </td>
@@ -677,7 +742,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00083">83</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00087">87</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -691,7 +756,7 @@ Example usage:</p>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">chi_objects::ChiLog</a> &amp; chi::log = <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a3de59d3e34e0731ec54eae64e64d594c">chi_objects::ChiLog::GetInstance</a>()</td>
+          <td class="memname"><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">chi_objects::ChiLog</a> &amp; chi::log = <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a7bcd0205c96e6fedbfb5df9eaf8bfb25">chi_objects::ChiLog::GetInstance</a>()</td>
         </tr>
       </table>
   </td>
@@ -701,7 +766,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00070">70</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00075">75</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -725,7 +790,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00076">76</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00081">81</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -749,7 +814,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00081">81</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00085">85</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -774,7 +839,7 @@ Example usage:</p>
 </div><div class="memdoc">
 <p >Global stack of handlers </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00072">72</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00077">77</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -788,7 +853,7 @@ Example usage:</p>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d8e/classchi__objects_1_1_m_p_i___info.html">chi_objects::MPI_Info</a> &amp; chi::mpi = <a class="el" href="../../d2/d8e/classchi__objects_1_1_m_p_i___info.html#ad5ebe40936ee0317010abc87882cd459">chi_objects::MPI_Info::GetInstance</a>()</td>
+          <td class="memname"><a class="el" href="../../d2/d8e/classchi__objects_1_1_m_p_i___info.html">chi_objects::MPI_Info</a> &amp; chi::mpi = <a class="el" href="../../d2/d8e/classchi__objects_1_1_m_p_i___info.html#a16dc6412d3f4174bcff60c7a4319b9a5">chi_objects::MPI_Info::GetInstance</a>()</td>
         </tr>
       </table>
   </td>
@@ -798,7 +863,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00067">67</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00072">72</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -822,7 +887,31 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00082">82</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00086">86</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+
+</div>
+</div>
+<a id="ab943224840354fdebc84ee218e70afb7" name="ab943224840354fdebc84ee218e70afb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab943224840354fdebc84ee218e70afb7">&#9670;&nbsp;</a></span>object_stack</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d3/db2/chi__runtime_8h.html#a9619f15f05ad9d25349bba47f8028491">ChiObjectPtr</a> &gt; chi::object_stack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00092">92</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -846,7 +935,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00068">68</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00073">73</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -870,12 +959,12 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00085">85</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00089">89</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
-<a id="ac61de38bf878913b59c570995346052e" name="ac61de38bf878913b59c570995346052e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac61de38bf878913b59c570995346052e">&#9670;&nbsp;</a></span>solver_stack</h2>
+<a id="a2cfa53daa8c627247a751053dccc91d2" name="a2cfa53daa8c627247a751053dccc91d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cfa53daa8c627247a751053dccc91d2">&#9670;&nbsp;</a></span>sdm_stack</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -884,7 +973,7 @@ Example usage:</p>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="../../d6/d5f/namespacechi__physics.html#a32b7a961a070e810475068b46eadcab3">chi_physics::SolverPtr</a> &gt; chi::solver_stack</td>
+          <td class="memname">std::vector&lt; <a class="el" href="../../dc/d58/namespacechi__math.html#aed18279f80ae4b3fc28796abe3da97f4">chi_math::SpatialDiscretizationPtr</a> &gt; chi::sdm_stack</td>
         </tr>
       </table>
   </td>
@@ -894,7 +983,31 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00080">80</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00093">93</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+
+</div>
+</div>
+<a id="a83aa58252f32304603bd91affbbe63b3" name="a83aa58252f32304603bd91affbbe63b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83aa58252f32304603bd91affbbe63b3">&#9670;&nbsp;</a></span>SIZE_T_INVALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t chi::SIZE_T_INVALID = ((size_t)-1)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00095">95</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -918,7 +1031,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00075">75</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00080">80</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -942,7 +1055,7 @@ Example usage:</p>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00078">78</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00083">83</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>

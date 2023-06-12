@@ -8,7 +8,7 @@ var classlbs_1_1_disc_ord_transient_solver =
     ] ],
     [ "DiscOrdTransientSolver", "d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#ad8e89ef7932bf96fc2e05cb5f6bd852a", null ],
     [ "~DiscOrdTransientSolver", "d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a8dfec3b5828c67ca191649d492923fa6", null ],
-    [ "AdvanceTimeValues", "d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#acfa9909a0d9c18cf45a71475575326e7", null ],
+    [ "Advance", "d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a252812876bc9a0505afd753f58b8dfae", null ],
     [ "ComputeBeta", "d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a74c84ede335cf7a1d2814364174a6e29", null ],
     [ "Execute", "d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#ac43ef28818d5c9a9874246d27360560d", null ],
     [ "Initialize", "d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a76e8e23f9cc245c94749fd5fc21c286e", null ],

@@ -57,6 +57,20 @@ var _programmer_manual =
     [ "Adding Lua-input to the system", "d1/d86/_dev_man_adding_lua.html", [
       [ "Adding Lua-input", "d1/d86/_dev_man_adding_lua.html#devman03_sec0", null ]
     ] ],
+    [ "Static Registration", "d0/d6f/_dev_man_static_registration.html", [
+      [ "1 The general philosophy of Static Registration", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec1", [
+        [ "Rigging static initialization for object factories or object makers", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec1_1", null ],
+        [ "Implementation in ChiTech", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec1_2", null ]
+      ] ],
+      [ "2 The InputParameters system", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec2", [
+        [ "FAQ1 Documentation-strings (Doc-strings)", "d0/d6f/_dev_man_static_registration.html#DevManParametersSecFAQ1", null ],
+        [ "FAQ2 Optional Parameters", "d0/d6f/_dev_man_static_registration.html#DevManParametersSecFAQ2", null ],
+        [ "FAQ3 Inheriting parameters from parent objects", "d0/d6f/_dev_man_static_registration.html#DevManParametersSecFAQ3", null ],
+        [ "FAQ4 Changing inherited options to optional/required", "d0/d6f/_dev_man_static_registration.html#DevManParametersSecFAQ4", null ],
+        [ "FAQ5 Deprecated parameters", "d0/d6f/_dev_man_static_registration.html#DevManParametersSecFAQ5", null ],
+        [ "FAQ6 Constrained ranges", "d0/d6f/_dev_man_static_registration.html#DevManParametersSecFAQ6", null ]
+      ] ]
+    ] ],
     [ "Coding Tutorial 1 - Poisson's problem with Finite Volume", "dc/da4/_code_tut1.html", [
       [ "1 Poisson's equation", "dc/da4/_code_tut1.html#CodeTut1Sec1", [
         [ "1.1 Our specific problem", "dc/da4/_code_tut1.html#CodeTut1Sec1_1", null ],

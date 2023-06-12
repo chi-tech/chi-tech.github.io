@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -86,21 +93,60 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Chi-Tech </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#MainPage1">Input Functions</a><ul><li class="level2"><a href="#MainPage1_1">1.1 MPI Utilities</a></li>
+<li class="level2"><a href="#MainPage1_2">1.2 Logging Utilities</a></li>
+<li class="level2"><a href="#MainPage1_3">1.3 Math Utilities</a></li>
+<li class="level2"><a href="#MainPage1_4">1.4 Quadratures</a></li>
+<li class="level2"><a href="#MainPage1_5">1.5 Orthogonal Meshes</a></li>
+<li class="level2"><a href="#MainPage1_6">1.6 Loading a Mesh from File</a></li>
+<li class="level2"><a href="#MainPage1_7">1.7 Manual Unpartitioned Mesh</a></li>
+<li class="level2"><a href="#MainPage1_8">1.8 Logical Volumes</a></li>
+<li class="level2"><a href="#MainPage1_9">1.9 Mesh Handler</a></li>
+<li class="level2"><a href="#MainPage1_10">1.10 Surface Meshes</a></li>
+<li class="level2"><a href="#MainPage1_11">1.11 Meshers</a></li>
+<li class="level2"><a href="#MainPage1_12">1.12 Experimental</a></li>
+<li class="level2"><a href="#MainPage1_13">1.13 Field-functions</a></li>
+<li class="level2"><a href="#MainPage1_14">1.14 Field-function Manipulation</a></li>
+<li class="level2"><a href="#MainPage1_15">1.15 Physics Utilities</a></li>
+<li class="level2"><a href="#MainPage1_16">1.16 Transport interaction cross-sections</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#MainPage2">Modules</a><ul><li class="level2"><a href="#MainPage2_1">2.1 Linear Boltzmann Solvers</a><ul><li class="level3"><a href="#MainPage2_2_1">Utilities</a></li>
+<li class="level3"><a href="#MainPage2_2_2">Deprecated</a></li>
+<li class="level3"><a href="#MainPage2_2_3">Groupsets</a></li>
+<li class="level3"><a href="#MainPage2_2_4">Discrete Ordinates</a></li>
+<li class="level3"><a href="#MainPage2_2_5">LBS Adjoint SteadyStateSolver</a></li>
+<li class="level3"><a href="#MainPage2_2_6">LBS Transient SteadyStateSolver</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#MainPage2_2">2.2 Diffusion Solvers</a><ul><li class="level3"><a href="#MainPage2_3_7">Diffusion</a></li>
+<li class="level3"><a href="#MainPage2_3_8">CFEM Diffusion solver</a></li>
+<li class="level3"><a href="#MainPage2_3_9">DFEM Diffusion solver</a></li>
+<li class="level3"><a href="#MainPage2_3_10">Finite Volume Diffusion solver</a></li>
+<li class="level3"><a href="#MainPage2_3_11">CFEM Multigroup Diffusion solver</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#MainPage2_3">2.3 Point Reactor Kinetics</a></li>
+<li class="level2"><a href="#MainPage2_4">2.4 Test scripts</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="textblock"><p >ChiTech is an engineering development platform under development to support various scientific simulations. At the core of the platform is the <b>Lua</b> scripting engine which allows the user to interact with their C++ code using a script-environment.<br  />
 <br  />
 Please be patient as we add more capabilities and tutorials to the code. For now we have only a couple of tutorials.<br  />
 <br  />
  </p><h1>Index</h1>
 <p ><a class="el" href="d8/d2d/_tutorial00.html">User Tutorials</a> <br  />
- <a class="el" href="d4/d25/_mesh_tutorials.html">Meshing Tutorials</a> <br  />
  <a class="el" href="d7/db6/_programmer_manual.html">Developer's manual</a> <br  />
  <a href="https://www.lua.org/manual/5.3/"><b>Lua 5.3 Reference</b></a><br  />
  <a href="https://www.mcs.anl.gov/petsc/documentation/index.html"><b>PETSc Documentation</b></a><br  />
  <a href="https://lorensen.github.io/VTKExamples/site/"><b>Visualization Tool Kit (VTK) documentation</b></a><br  />
-</p>
+ <a href="https://clang.llvm.org/extra/clang-tidy/#suppressing-undesired-diagnostics"><b>clang-tidy Documentation</b></a></p>
 <p ><br  />
 </p>
-<h2>Variables defined in lua</h2>
+<h1>Variables defined in lua</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Variable Name   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Variable Name   </th><th class="markdownTableHeadNone">Description    </th></tr>
@@ -113,25 +159,30 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 </table>
 <p ><br  />
 </p>
-<h2>Input Functions</h2>
-<h3>MPI Utilities</h3>
+<h1><a class="anchor" id="MainPage1"></a>
+Input Functions</h1>
+<h2><a class="anchor" id="MainPage1_1"></a>
+1.1 MPI Utilities</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="dd/d5c/group__chi_m_p_i.html#ga9cb624104190befb4f294d6c90452502">chiMPIBarrier()</a>  </td></tr>
 </table>
-<h3>Logging Utilities</h3>
+<h2><a class="anchor" id="MainPage1_2"></a>
+1.2 Logging Utilities</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d4/d87/group___lua_logging.html#gac4c23d141fddd0557829e6b5471262ce">chiLogSetVerbosity()</a> </td><td width="33%"><a class="el" href="d4/d87/group___lua_logging.html#ga8139e633fb74f8d739bcfd6badd80376">chiLog()</a>  </td></tr>
 </table>
-<h3>Math Utilities</h3>
+<h2><a class="anchor" id="MainPage1_3"></a>
+1.3 Math Utilities</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d0/d4d/group___lua_math.html#ga03c22b6e760970c8b5e054481355109e">chiLegendre()</a> </td><td width="33%"><a class="el" href="d0/d4d/group___lua_math.html#ga917237b9bb358474af7f938e3c7ed2ac">chiLegendreDerivative()</a> </td><td width="33%"><a class="el" href="d0/d4d/group___lua_math.html#ga1266ad6fd8ac5ff3828c2dbc258d28bd">chiYlm()</a>  </td></tr>
 <tr>
 </tr>
 </table>
-<h3>Quadratures</h3>
+<h2><a class="anchor" id="MainPage1_4"></a>
+1.4 Quadratures</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#gabc1dda12fc33b4d97409910d6b150eeb">chiCreateLineQuadrature()</a> </td><td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#ga310caeec08395d1fa35d319489fc08f2">chiCreateProductQuadrature()</a> </td><td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#ga1b1e0347acc28da6892dac146596e683">chiCreateCylindricalProductQuadrature()</a>  </td></tr>
@@ -142,40 +193,46 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <tr>
 <td width="33%"><a class="el" href="de/d37/group___lua_quadrature.html#ga8c4e64918adaadfcd5bcfa03d515143a">chiOptimizeAngularQuadratureForPolarSymmetry()</a>  </td></tr>
 </table>
-<h3>Orthogonal Meshes</h3>
+<h2><a class="anchor" id="MainPage1_5"></a>
+1.5 Orthogonal Meshes</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d9/db8/group___lua_mesh_macros.html#gabcd0e135b1081c3b9eb6661d44fb21d7">chiMeshCreateUnpartitioned1DOrthoMesh()</a> </td><td width="33%"><a class="el" href="d9/db8/group___lua_mesh_macros.html#ga83d9d3e4a7ae7060391faefe17c1076a">chiMeshCreateUnpartitioned2DOrthoMesh()</a> </td><td width="33%"><a class="el" href="d9/db8/group___lua_mesh_macros.html#ga12dcd80ee2ab6104ba6e7142d7885221">chiMeshCreateUnpartitioned3DOrthoMesh()</a>  </td></tr>
 <tr>
 </tr>
 </table>
-<h3>Loading a Mesh from File</h3>
+<h2><a class="anchor" id="MainPage1_6"></a>
+1.6 Loading a Mesh from File</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#ga8fd3c77424bb548d492468b2cadc220c">chiUnpartitionedMeshFromVTU()</a> </td><td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#gaf29132bae6e3cdf17f39591e3012e1b9">chiUnpartitionedMeshFromEnsightGold()</a> </td><td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#ga0f476b765a307ec7a477c237134298c2">chiUnpartitionedMeshFromWavefrontOBJ()</a>  </td></tr>
 <tr>
-<td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#ga3feeabcd6b9ab6d60d66b6a3426e81da">chiUnpartitionedMeshFromMshFormat()</a>  </td></tr>
+<td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#ga3feeabcd6b9ab6d60d66b6a3426e81da">chiUnpartitionedMeshFromMshFormat()</a> </td><td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#ga786a5766d529beefbf4a695ee76993fd">chiUnpartitionedMeshFromExodusII()</a>  </td></tr>
 </table>
-<h3>Manual Unpartitioned Mesh</h3>
+<h2><a class="anchor" id="MainPage1_7"></a>
+1.7 Manual Unpartitioned Mesh</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#ga685a99cf54e2c8e94b896057558c8c97">chiCreateEmptyUnpartitionedMesh()</a> </td><td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#ga1da9f3ccc044ea7723cc1a88a0bf8446">chiUnpartitionedMeshUploadVertex()</a> </td><td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#ga96a613a4d30b1f5e0f1597e6c4fd021d">chiUnpartitionedMeshUploadCell()</a>  </td></tr>
 <tr>
 <td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#ga5c378e2674c1bef0f0964a2265819e6f">chiUnpartitionedMeshFinalizeEmpty()</a> </td><td width="33%"><a class="el" href="d2/dde/group___lua_unpartitioned_mesh.html#gadc5ded03a8c133015f41e70de61a9abd">chiDestroyUnpartitionedMesh()</a>  </td></tr>
 </table>
-<h3>Logical Volumes</h3>
+<h2><a class="anchor" id="MainPage1_8"></a>
+1.8 Logical Volumes</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d9/d32/group___lua_logic_volumes.html#gac362f65e2642b15efd6abf99d2224d54">chiLogicalVolumeCreate()</a>  </td></tr>
 </table>
-<h3>Mesh Handler</h3>
+<h2><a class="anchor" id="MainPage1_9"></a>
+1.9 Mesh Handler</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chiMeshHandlerCreate()</a> </td><td width="33%"><a class="el" href="da/d92/group___lua_mesh_handler.html#ga8b57c222c6d266eb65404417d03c336e">chiMeshHandlerSetCurrent()</a> </td><td width="33%"><a class="el" href="da/d92/group___lua_mesh_handler.html#ga6045293a83e8b97b548860df3911d2c4">chiMeshHandlerExportMeshToObj()</a>  </td></tr>
 <tr>
 <td width="33%"><a class="el" href="da/d92/group___lua_mesh_handler.html#gae0ceeadeae53b7ac22b32f3665d1ea2a">chiMeshHandlerExportMeshToVTK()</a>  </td></tr>
 </table>
-<h3>Surface Meshes</h3>
+<h2><a class="anchor" id="MainPage1_10"></a>
+1.10 Surface Meshes</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="db/dc8/group___lua_surface_mesh.html#ga22ead80a73c8ed10395140965d049291">chiSurfaceMeshCreate()</a> </td><td width="33%"><a class="el" href="db/dc8/group___lua_surface_mesh.html#ga28a733ace3696288d92b7755a1704e8c">chiSurfaceMeshImportFromOBJFile()</a> </td><td width="33%"><a class="el" href="db/dc8/group___lua_surface_mesh.html#ga8918d931faf9c1a2058a05fe191d3939">chiSurfaceMeshImportFromTriangleFiles()</a>  </td></tr>
@@ -184,7 +241,8 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <tr>
 <td width="33%"><a class="el" href="db/dc8/group___lua_surface_mesh.html#gab9bfcc904e59b322bd616c88abc463c2">chiComputeLoadBalancing()</a>  </td></tr>
 </table>
-<h3>Meshers</h3>
+<h2><a class="anchor" id="MainPage1_11"></a>
+1.11 Meshers</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d1/d9b/group___lua_surface_mesher.html#ga093aea22f7d29fe5ab8d6977dd22395c">chiSurfaceMesherCreate()</a> </td><td width="33%"><a class="el" href="d1/d9b/group___lua_surface_mesher.html#gafa49ea05b8a7ca38d50ea324b39fb219">chiSurfaceMesherExecute()</a> </td><td width="33%"><a class="el" href="d1/d9b/group___lua_surface_mesher.html#gaaa3820a29c97437936e0199433e1d742">chiSurfaceMesherSetProperty()</a>  </td></tr>
@@ -197,21 +255,24 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <tr>
 </tr>
 </table>
-<h3>Experimental</h3>
+<h2><a class="anchor" id="MainPage1_12"></a>
+1.12 Experimental</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="dd/d63/group___lua_domain_decomposition.html#ga7b9954c291e150959e7fdac17615cf36">chiDecomposeSurfaceMeshPxPy()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a5a29b3e136f6a22ea3633f2b92477981">chiCutMesh()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a611cde93ce3246f837494d02d7352eec">chiCountMeshInLogicalVolume()</a>  </td></tr>
 <tr>
 </tr>
 </table>
-<h3>Field-functions</h3>
+<h2><a class="anchor" id="MainPage1_13"></a>
+1.13 Field-functions</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#aa98bc59e0c79ae51d0a3337da4311cf2">chiGetFieldFunctionHandleByName()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#ade62e412808353858dbd1a655127ae2e">chiExportFieldFunctionToVTK()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#ab044ed9b1310ab95d5af2266a87869d3">chiExportMultiFieldFunctionToVTK()</a>  </td></tr>
 <tr>
 </tr>
 </table>
-<h3>Field-function Manipulation</h3>
+<h2><a class="anchor" id="MainPage1_14"></a>
+1.14 Field-function Manipulation</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d9/dfa/group___lua_f_f_interpol.html#ga7305438e0a0dac15a779e1a340b12f7b">chiFFInterpolationCreate()</a> </td><td width="33%"><a class="el" href="d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chiFFInterpolationSetProperty()</a> </td><td width="33%"><a class="el" href="d9/dfa/group___lua_f_f_interpol.html#gac6e3979ecc5e6a577eb268be00f4cfa0">chiFFInterpolationInitialize()</a>  </td></tr>
@@ -220,7 +281,8 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <tr>
 </tr>
 </table>
-<h3>Physics Utilities</h3>
+<h2><a class="anchor" id="MainPage1_15"></a>
+1.15 Physics Utilities</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="dc/d4e/group___lua_solver.html#gab828b1bcee57fed19f7dda9befc5846b">chiSolverInitialize()</a> </td><td width="33%"><a class="el" href="dc/d4e/group___lua_solver.html#ga28fdf6aad809b089f96c1776f699ee5c">chiSolverExecute()</a> </td><td width="33%"><a class="el" href="dc/d4e/group___lua_solver.html#ga2522341caaf1b9ae3f18451542d1956b">chiSolverSetBasicOption()</a>  </td></tr>
@@ -231,7 +293,8 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <tr>
 <td width="33%"><a class="el" href="d7/d11/group___lua_physics_materials.html#gafc17967cd72687d326d2f59017e90636">chiPhysicsMaterialGetProperty()</a> </td><td width="33%">chiPhysicsMaterialModifyTotalCrossSection()  </td></tr>
 </table>
-<h3>Transport interaction cross-sections</h3>
+<h2><a class="anchor" id="MainPage1_16"></a>
+1.16 Transport interaction cross-sections</h2>
 <p ><a class="el" href="d3/d14/group___chi_x_s_file.html">Chi-Tech Cross-section format 1</a> Chi-Tech native cross-section file format</p>
 <table class="doxtable">
 <tr>
@@ -239,23 +302,40 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <tr>
 <td width="33%"><a class="el" href="de/dd8/group___lua_transport_x_ss.html#gaaf87347d2ab88ea5e88058038754bddf">chiPhysicsTransportXSGet()</a> </td><td width="33%"><a class="el" href="de/dd8/group___lua_transport_x_ss.html#ga00349b2169e2fded9b60c239590d85ec">chiPhysicsTransportXSExportToChiTechFormat()</a>  </td></tr>
 </table>
-<h2>Modules</h2>
-<h3>Linear Boltzmann Solvers</h3>
+<h1><a class="anchor" id="MainPage2"></a>
+Modules</h1>
+<h2><a class="anchor" id="MainPage2_1"></a>
+2.1 Linear Boltzmann Solvers</h2>
 <p ><a class="el" href="d0/daf/group___lua_l_b_s.html">Linear Boltzmann Solver</a> Documentation page</p>
 <table class="doxtable">
 <tr>
-<td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga56ba50206c4125503807c5889416b66a">chiLBSSetProperty()</a> </td><td width="33%">chiLBSGetFieldFunctionList() </td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#gaf96d1d72d1274c36390436edabb1b0f9">chiLBSGetScalarFieldFunctionList()</a>  </td></tr>
+<td width="33%"><a class="el" href="d2/df3/group__lbs_____discrete_ordinates_solver.html">DiscreteOrdinatesSolver</a> </td><td width="33%"><a class="el" href="da/d0d/group__lbs_____diffusion_d_f_e_m_solver.html">DiffusionDFEMSolver</a> </td><td width="33%">chiLBSSetOptions()  </td></tr>
 <tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a73c97de153015dbb06ea5025628211c1">chiLBSWriteGroupsetAngularFlux()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a8caffc672507f77c683cee0f3456f350">chiLBSReadGroupsetAngularFlux()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a25d4454a9446c7f052d4dc0b8c02b3db">chiLBSWriteFluxMoments()</a>  </td></tr>
-<tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#af7ff25258d19529fa93495369b077985">chiLBSCreateAndWriteSourceMoments()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a22d3d95a8bcf55dd63eba5324f1a2cae">chiLBSReadFluxMomentsAndMakeSourceMoments()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#abc85d49db3c3e20552ade3bc0323e99e">chiLBSReadSourceMoments()</a>  </td></tr>
-<tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a849987fa4e766b427675e1e072a71721">chiLBSReadFluxMoments()</a> </td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga925760d56a5295d53aea810939693b39">chiLBSAddPointSource()</a> </td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga7513fa45ae95b31665ec2f6711467543">chiLBSClearPointSources()</a>  </td></tr>
-<tr>
-<td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga6cbc485c13c7b42572d1258cc64c6501">chiLBSInitializePointSources()</a>  </td></tr>
+</tr>
 </table>
-<h3>Linear Boltzmann Solvers - Groupset manipulation</h3>
-<p ><a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html">LBS Groupsets</a> Main page</p>
+<h3><a class="anchor" id="MainPage2_2_1"></a>
+Utilities</h3>
+<table class="doxtable">
+<tr>
+<td width="33%"><a class="el" href="d8/d19/group___l_b_s_lua_functions.html#gaf96d1d72d1274c36390436edabb1b0f9">chiLBSGetScalarFieldFunctionList()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a73c97de153015dbb06ea5025628211c1">chiLBSWriteGroupsetAngularFlux()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a8caffc672507f77c683cee0f3456f350">chiLBSReadGroupsetAngularFlux()</a>  </td></tr>
+<tr>
+<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a25d4454a9446c7f052d4dc0b8c02b3db">chiLBSWriteFluxMoments()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#af7ff25258d19529fa93495369b077985">chiLBSCreateAndWriteSourceMoments()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a22d3d95a8bcf55dd63eba5324f1a2cae">chiLBSReadFluxMomentsAndMakeSourceMoments()</a>  </td></tr>
+<tr>
+<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#abc85d49db3c3e20552ade3bc0323e99e">chiLBSReadSourceMoments()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a849987fa4e766b427675e1e072a71721">chiLBSReadFluxMoments()</a> </td><td width="33%"><a class="el" href="d8/d19/group___l_b_s_lua_functions.html#ga925760d56a5295d53aea810939693b39">chiLBSAddPointSource()</a>  </td></tr>
+<tr>
+<td width="33%"><a class="el" href="d8/d19/group___l_b_s_lua_functions.html#ga7513fa45ae95b31665ec2f6711467543">chiLBSClearPointSources()</a> </td><td width="33%"><a class="el" href="d8/d19/group___l_b_s_lua_functions.html#ga6cbc485c13c7b42572d1258cc64c6501">chiLBSInitializePointSources()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a26a76d2400c7e96e1f4c776ddb7f8d51">chiLBSSetPhiFromFieldFunction()</a>  </td></tr>
+<tr>
+</tr>
+</table>
+<h3><a class="anchor" id="MainPage2_2_2"></a>
+Deprecated</h3>
+<table class="doxtable">
+<tr>
+<td width="33%"><a class="el" href="d8/d19/group___l_b_s_lua_functions.html#ga56ba50206c4125503807c5889416b66a">chiLBSSetProperty()</a>  </td></tr>
+</table>
+<h3><a class="anchor" id="MainPage2_2_3"></a>
+Groupsets</h3>
+<p ><a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html">Groupsets</a> Main page</p>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#ga7d16e3fc369204834a671a6ecf34b564">chiLBSCreateGroup()</a> </td><td width="33%"><a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#gaf5d1e656f52f80b4615f022003d1b407">chiLBSCreateGroupset()</a> </td><td width="33%"><a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#ga01177a474f138bc1a8b2de984c5d19ae">chiLBSGroupsetAddGroups()</a>  </td></tr>
@@ -268,61 +348,74 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <tr>
 <td width="33%"><a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#gab0c834b63faf291866f5db2b063897b5">chiLBSGroupsetSetWGDSA()</a> </td><td width="33%"><a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#ga6f775fa549a000e9ef4dca648a8f0f26">chiLBSGroupsetSetTGDSA()</a>  </td></tr>
 </table>
-<h3>Linear Boltzmann Discrete Ordinates Steady-State</h3>
+<h3><a class="anchor" id="MainPage2_2_4"></a>
+Discrete Ordinates</h3>
 <table class="doxtable">
 <tr>
-<td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#gab469beed321e0c7688d4f537b480f5a6">chiLBSCreateSolver()</a> </td><td width="33%"><a class="el" href="d0/daf/group___lua_l_b_s.html#ga1d82231c3f7a0661e4f8371498d933c7">chiLBSComputeBalance()</a>  </td></tr>
+<td width="33%"><a class="el" href="d2/df3/group__lbs_____discrete_ordinates_solver.html">DiscreteOrdinatesSolver</a> </td><td width="33%"><a class="el" href="d8/d19/group___l_b_s_lua_functions.html#ga1d82231c3f7a0661e4f8371498d933c7">chiLBSComputeBalance()</a> </td><td width="33%"><a class="el" href="d8/d19/group___l_b_s_lua_functions.html#gafd8946f71ec27d557b9d2e49c81ba0c1">chiLBSComputeLeakage()</a>  </td></tr>
+<tr>
+</tr>
 </table>
-<h3>LinearBoltzmann - KEigenvalueSolver</h3>
-<p ><a class="el" href="db/d41/group___l_b_s_d_o_keigen.html">LBS Discrete Ordinates k-eigenvalue solver</a> Documentation page</p>
+<h3><a class="anchor" id="MainPage2_2_5"></a>
+LBS Adjoint SteadyStateSolver</h3>
 <table class="doxtable">
 <tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a2ab586d2eb85bc3164299497871c8abf">chiLBKESCreateSolver()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#afa05f65c8e59f60b628b973204107feb">chiLBKESSetProperty()</a>  </td></tr>
-</table>
-<h3>LBS Adjoint SteadyStateSolver</h3>
-<table class="doxtable">
-<tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a37ce0190421f21b309244a7277c5dc9e">chiAdjointSolverCreate()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a5f37bfee2717670248b68b723c383115">chiAdjointSolverAddResponseFunction()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#aa9b1bfe91324f464ae136d08a58312bc">chiAdjointSolverMakeExpRepFromP1Moments()</a>  </td></tr>
+<td width="33%">chiAdjointSolverCreate() </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a5f37bfee2717670248b68b723c383115">chiAdjointSolverAddResponseFunction()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#aa9b1bfe91324f464ae136d08a58312bc">chiAdjointSolverMakeExpRepFromP1Moments()</a>  </td></tr>
 <tr>
 <td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a32518d1fcb0276913c14e0064cf43020">chiAdjointSolverExportImportanceMapBinary()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#abb2fdc7ac2eb169834576d77ccb65087">chiAdjointSolverComputeInnerProduct()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a68c593d83b8cc07aa4e9b7749431841c">chiAdjointSolverReadFluxMomentsToBuffer()</a>  </td></tr>
 <tr>
 <td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#ab0b8572038d42c647873756edecc0232">chiAdjointSolverApplyFluxMomentBuffer()</a>  </td></tr>
 </table>
-<h3>Curvilinear Linear Boltzmann SteadyStateSolver</h3>
-<table class="doxtable">
-<tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a4a3184b46b8e8c24b16f15b078e4cc4d">chiLBSCurvilinearCreateSolver()</a>  </td></tr>
-</table>
-<h3>LBS Transient SteadyStateSolver</h3>
+<h3><a class="anchor" id="MainPage2_2_6"></a>
+LBS Transient SteadyStateSolver</h3>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a529534755839f8be78616016fa1bc711">chiLBSCreateTransientSolver()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#adc93d6def641a364a7d236d4e0544a80">chiLBTSSetProperty()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a218a1b3c8e8c63410bca1097d3f464df">chiLBTSGetProperty()</a>  </td></tr>
 <tr>
 <td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#ab51b4997706125b668f1c0ac9f3b79f5">chiLBTSAdvanceTimeData()</a>  </td></tr>
 </table>
-<h3>Diffusion</h3>
+<h2><a class="anchor" id="MainPage2_2"></a>
+2.2 Diffusion Solvers</h2>
+<h3><a class="anchor" id="MainPage2_3_7"></a>
+Diffusion</h3>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#gaa864dd5fda9e6c05e66e80b2411ccc83">chiDiffusionCreateSolver()</a> </td><td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#ga4bdfbb9479a366e20aa38967521363fb">chiDiffusionInitialize()</a> </td><td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#gaafc0819e34c8bdad070c5b3dcbf25e46">chiDiffusionExecute()</a>  </td></tr>
 <tr>
 <td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#ga6ccf8162a4fd525c1fb520f21cc02050">chiDiffusionSetProperty()</a>  </td></tr>
 </table>
-<h3>CFEM Diffusion solver</h3>
+<h3><a class="anchor" id="MainPage2_3_8"></a>
+CFEM Diffusion solver</h3>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#ga3ba95dae1e7a304f4c3e97eda855625d">chiCFEMDiffusionSolverCreate()</a> </td><td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#ga5331d5d64e47705f13438030332354d0">chiCFEMDiffusionSetBCProperty()</a>  </td></tr>
 </table>
-<h3>DFEM Diffusion solver</h3>
+<h3><a class="anchor" id="MainPage2_3_9"></a>
+DFEM Diffusion solver</h3>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#gaa204e0f4273fce1a60a7c95a8925f28b">chiDFEMDiffusionSolverCreate()</a> </td><td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#ga414ccf35e9892e26cd48da62b89489f0">chiDFEMDiffusionSetBCProperty()</a>  </td></tr>
 </table>
-<h3>CFEM Multigroup Diffusion solver</h3>
+<h3><a class="anchor" id="MainPage2_3_10"></a>
+Finite Volume Diffusion solver</h3>
+<table class="doxtable">
+<tr>
+<td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#ga7afd072a93defa6bb3539bd97747c723">chiFVDiffusionSolverCreate()</a> </td><td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#ga979b8f3f2997daddf4ada933aaa3811e">chiFVDiffusionSetBCProperty()</a>  </td></tr>
+</table>
+<h3><a class="anchor" id="MainPage2_3_11"></a>
+CFEM Multigroup Diffusion solver</h3>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#ga03ebf9b2b82b58630fe34918d40042cc">chiCFEMMGDiffusionSolverCreate()</a> </td><td width="33%"><a class="el" href="de/d15/group___lua_diffusion.html#ga7146d7ff73c94bc58b05bf7e23615fa4">chiCFEMMGDiffusionSetBCProperty()</a>  </td></tr>
 </table>
-<h3>Test scripts</h3>
+<h2><a class="anchor" id="MainPage2_3"></a>
+2.3 Point Reactor Kinetics</h2>
+<p ><a class="el" href="d4/d2b/group__prk.html">Point Reactor Kinetics</a></p>
+<ul>
+<li><a class="el" href="df/d02/group__prk_____transient_solver.html">prk.TransientSolver</a></li>
+</ul>
+<h2><a class="anchor" id="MainPage2_4"></a>
+2.4 Test scripts</h2>
 <table class="doxtable">
 <tr>
 <td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a80b22258d8965c8f90184237a334d405">chiSimTest01_FV()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a16cab1318a74a587402d4cdffe968309">chiSimTest02_FV()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a06679075939764a3163cecb66fd46c13">chiSimTest03_PWLC()</a>  </td></tr>
@@ -331,7 +424,7 @@ Please be patient as we add more capabilities and tutorials to the code. For now
 <tr>
 <td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a4cec898658d8dcdb6f3dc46413fff266">chiSimTest92_DSA()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a90f1bf8db9dd03373ea54a140cd446fc">chiSimTest93_RayTracing()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a90f1bf8db9dd03373ea54a140cd446fc">chiSimTest93_RayTracing()</a>  </td></tr>
 <tr>
-<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a710404d85c5f13265814ad097b4f29cd">chiSimTest_IP_MMS_L2error()</a> </td><td width="33%"><a class="el" href="d1/d85/group___lua_general_utilities.html#ga1b25d34f221bf2b4c6bdc879c703345d">chiLuaTest()</a>  </td></tr>
+<td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a710404d85c5f13265814ad097b4f29cd">chiSimTest_IP_MMS_L2error()</a> </td><td width="33%"><a class="el" href="d8/dd9/namespacechi__lua.html#a1b25d34f221bf2b4c6bdc879c703345d">chiLuaTest()</a>  </td></tr>
 </table>
 <p >This file was generated using the script: doc/scripts/MakeMainPage.py </p>
 </div></div><!-- PageDoc -->

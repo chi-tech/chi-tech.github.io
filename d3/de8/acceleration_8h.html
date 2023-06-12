@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -86,17 +93,23 @@ $(document).ready(function(){initNavTree('d3/de8/acceleration_8h.html','../../')
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">acceleration.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
 </div>
 <p><a href="../../d3/de8/acceleration_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df7/structlbs_1_1acceleration_1_1_boundary_condition.html">lbs::acceleration::BoundaryCondition</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d81/structlbs_1_1acceleration_1_1_multigroup___d__and__sig_r.html">lbs::acceleration::Multigroup_D_and_sigR</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d99/structlbs_1_1acceleration_1_1_two_grid_collapsed_info.html">lbs::acceleration::TwoGridCollapsedInfo</a></td></tr>
@@ -104,6 +117,10 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:d0/d81/namespacechi__mesh"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d7/dc7/namespacechi__mesh_1_1sweep__management"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html">chi_mesh::sweep_management</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d6/d5f/namespacechi__physics"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html">chi_physics</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d9/d42/namespacelbs"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html">lbs</a></td></tr>
@@ -111,8 +128,19 @@ Namespaces</h2></td></tr>
 <tr class="memitem:d8/d43/namespacelbs_1_1acceleration"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html">lbs::acceleration</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a747b7935d8657550035f2730eabf8ab4"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../d9/d83/classchi__mesh_1_1sweep__management_1_1_sweep_boundary.html">chi_mesh::sweep_management::SweepBoundary</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#a747b7935d8657550035f2730eabf8ab4">lbs::acceleration::SwpBndryPtr</a></td></tr>
+<tr class="separator:a747b7935d8657550035f2730eabf8ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f216c0cb94ba45b6c88e9074346fe6a"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html">chi_physics::MultiGroupXS</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#a1f216c0cb94ba45b6c88e9074346fe6a">lbs::acceleration::MGXSPtr</a></td></tr>
+<tr class="separator:a1f216c0cb94ba45b6c88e9074346fe6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:abe7c1c9c9be0a643101c524be65528b4"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#abe7c1c9c9be0a643101c524be65528b4">lbs::acceleration::BCType</a> { <a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#abe7c1c9c9be0a643101c524be65528b4ae151350b63efc6c3bbe2e3f0d27863ba">lbs::acceleration::DIRICHLET</a> = 1
+, <a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#abe7c1c9c9be0a643101c524be65528b4abcd811f0b658b589b503a44dcde68c46">lbs::acceleration::ROBIN</a> = 2
+ }</td></tr>
+<tr class="separator:abe7c1c9c9be0a643101c524be65528b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a659c49b7d56874978ed37700cd9addfb"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#a659c49b7d56874978ed37700cd9addfb">lbs::acceleration::EnergyCollapseScheme</a> { <a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#a659c49b7d56874978ed37700cd9addfba5098a9ed68661584018903dca6d499f8">lbs::acceleration::JFULL</a> = 1
 , <a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#a659c49b7d56874978ed37700cd9addfba8e6810e931aac7a2f131c3413c3f3054">lbs::acceleration::JPARTIAL</a> = 2
  }</td></tr>
@@ -120,8 +148,12 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aceca0c5c6f2fa9d94860714c422e1a25"><td class="memItemLeft" align="right" valign="top">TwoGridCollapsedInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#aceca0c5c6f2fa9d94860714c422e1a25">lbs::acceleration::MakeTwoGridCollapsedInfo</a> (const <a class="el" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html">chi_physics::MultiGroupXS</a> &amp;xs, EnergyCollapseScheme scheme)</td></tr>
-<tr class="separator:aceca0c5c6f2fa9d94860714c422e1a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac52e64cce9f6cf56db0be475f52744bb"><td class="memItemLeft" align="right" valign="top">TwoGridCollapsedInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#ac52e64cce9f6cf56db0be475f52744bb">lbs::acceleration::MakeTwoGridCollapsedInfo</a> (const <a class="el" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html">chi_physics::MultiGroupXS</a> &amp;xs, EnergyCollapseScheme scheme)</td></tr>
+<tr class="separator:ac52e64cce9f6cf56db0be475f52744bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cdeee873aaa7ca3bbd24bf24c40b892"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, BoundaryCondition &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#a5cdeee873aaa7ca3bbd24bf24c40b892">lbs::acceleration::TranslateBCs</a> (const std::map&lt; uint64_t, SwpBndryPtr &gt; &amp;sweep_boundaries, bool vaccum_bcs_are_dirichlet)</td></tr>
+<tr class="separator:a5cdeee873aaa7ca3bbd24bf24c40b892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449459397e03fe3404adae752579fe0e"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, Multigroup_D_and_sigR &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d43/namespacelbs_1_1acceleration.html#a449459397e03fe3404adae752579fe0e">lbs::acceleration::PackGroupsetXS</a> (const std::map&lt; int, MGXSPtr &gt; &amp;matid_to_xs_map, int first_grp_index, int last_group_index)</td></tr>
+<tr class="separator:a449459397e03fe3404adae752579fe0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

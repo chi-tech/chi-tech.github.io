@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -89,22 +96,34 @@ $(document).ready(function(){initNavTree('dc/d40/chi__math__time__stepping_8h_so
 <a href="../../dc/d40/chi__math__time__stepping_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CHITECH_CHI_MATH_TIME_STEPPING_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CHITECH_CHI_MATH_TIME_STEPPING_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d58/namespacechi__math.html">chi_math</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">    7</a></span>  <span class="keyword">enum class</span> <a class="code hl_enumeration" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">SteppingMethod</a></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a3465588bedb02dfcefcc726625308fb3">BACKWARD_EULER</a>  = 0,</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ac8a0bea4cc96e12ed1fedd9695c99b81">CRANK_NICHOLSON</a> = 1</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  };</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}<span class="comment">//namespace chi_math</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif </span><span class="comment">//CHITECH_CHI_MATH_TIME_STEPPING_H</span></div>
-<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00043">chi_runtime.h:44</a></div></div>
-<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">chi_math::SteppingMethod</a></div><div class="ttdeci">SteppingMethod</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d40/chi__math__time__stepping_8h_source.html#l00007">chi_math_time_stepping.h:8</a></div></div>
-<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127a3465588bedb02dfcefcc726625308fb3"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a3465588bedb02dfcefcc726625308fb3">chi_math::SteppingMethod::BACKWARD_EULER</a></div><div class="ttdeci">@ BACKWARD_EULER</div></div>
-<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127ac8a0bea4cc96e12ed1fedd9695c99b81"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ac8a0bea4cc96e12ed1fedd9695c99b81">chi_math::SteppingMethod::CRANK_NICHOLSON</a></div><div class="ttdeci">@ CRANK_NICHOLSON</div></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d58/namespacechi__math.html">chi_math</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">    9</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">SteppingMethod</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  NONE = 0,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127aa6748c4e56da087a2e6ff9f90eed769d">EXPLICIT_EULER</a> = 1,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a0cd0003c0d1211c26f34a7bac8e4fcf4">IMPLICIT_EULER</a> = 2,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a689ac4e1be37d17acd845c23f1a62609">CRANK_NICOLSON</a> = 3,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ab6345f8ea30c2889b98ec2dfc3144f2d">THETA_SCHEME</a> = 4,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>std::string <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aa376a9a0bc13d90c0252ff6d8cc8a23e">SteppingMethodStringName</a>(<a class="code hl_enumeration" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">SteppingMethod</a>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../dc/d58/namespacechi__math.html#a4ee64d8bcac438062cfbdb793fdd60c8">   19</a></span><a class="code hl_enumeration" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">SteppingMethod</a> <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a4ee64d8bcac438062cfbdb793fdd60c8">SteppingMethodFromString</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// namespace chi_math</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">// CHITECH_CHI_MATH_TIME_STEPPING_H</span></div>
+<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00042">chi_runtime.h:43</a></div></div>
+<div class="ttc" id="anamespacechi__math_html_a4ee64d8bcac438062cfbdb793fdd60c8"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a4ee64d8bcac438062cfbdb793fdd60c8">chi_math::SteppingMethodFromString</a></div><div class="ttdeci">SteppingMethod SteppingMethodFromString(const std::string &amp;name)</div></div>
+<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">chi_math::SteppingMethod</a></div><div class="ttdeci">SteppingMethod</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d40/chi__math__time__stepping_8h_source.html#l00009">chi_math_time_stepping.h:10</a></div></div>
+<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127a0cd0003c0d1211c26f34a7bac8e4fcf4"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a0cd0003c0d1211c26f34a7bac8e4fcf4">chi_math::SteppingMethod::IMPLICIT_EULER</a></div><div class="ttdeci">@ IMPLICIT_EULER</div></div>
+<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127a689ac4e1be37d17acd845c23f1a62609"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a689ac4e1be37d17acd845c23f1a62609">chi_math::SteppingMethod::CRANK_NICOLSON</a></div><div class="ttdeci">@ CRANK_NICOLSON</div></div>
+<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127aa6748c4e56da087a2e6ff9f90eed769d"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127aa6748c4e56da087a2e6ff9f90eed769d">chi_math::SteppingMethod::EXPLICIT_EULER</a></div><div class="ttdeci">@ EXPLICIT_EULER</div></div>
+<div class="ttc" id="anamespacechi__math_html_a64a92566f482ac6f5e1fecbfedd54127ab6345f8ea30c2889b98ec2dfc3144f2d"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ab6345f8ea30c2889b98ec2dfc3144f2d">chi_math::SteppingMethod::THETA_SCHEME</a></div><div class="ttdeci">@ THETA_SCHEME</div></div>
+<div class="ttc" id="anamespacechi__math_html_aa376a9a0bc13d90c0252ff6d8cc8a23e"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#aa376a9a0bc13d90c0252ff6d8cc8a23e">chi_math::SteppingMethodStringName</a></div><div class="ttdeci">std::string SteppingMethodStringName(SteppingMethod method)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d50/chi__math__time__stepping_8cc_source.html#l00011">chi_math_time_stepping.cc:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

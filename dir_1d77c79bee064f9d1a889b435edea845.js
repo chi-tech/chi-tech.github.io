@@ -1,5 +1,6 @@
 var dir_1d77c79bee064f9d1a889b435edea845 =
 [
+    [ "doc", "dir_036c43b41601ac554552128adeb073e8.html", "dir_036c43b41601ac554552128adeb073e8" ],
     [ "chi_unpartitioned_mesh.h", "d6/d60/chi__unpartitioned__mesh_8h.html", [
       [ "chi_mesh::UnpartitionedMesh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh" ],
       [ "chi_mesh::UnpartitionedMesh::LightWeightFace", "da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html", "da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face" ],
@@ -7,7 +8,6 @@ var dir_1d77c79bee064f9d1a889b435edea845 =
       [ "chi_mesh::UnpartitionedMesh::Options", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options.html", "d6/d15/structchi__mesh_1_1_unpartitioned_mesh_1_1_options" ],
       [ "chi_mesh::UnpartitionedMesh::BoundBox", "d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html", "d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box" ]
     ] ],
-    [ "doc.cc", "d7/d64/_chi_mesh_2_unpartitioned_mesh_2doc_8cc.html", null ],
     [ "unpartmesh_00a_general.cc", "de/dca/unpartmesh__00a__general_8cc.html", null ],
     [ "unpartmesh_00b_connectivity.cc", "d2/daf/unpartmesh__00b__connectivity_8cc.html", null ],
     [ "unpartmesh_00c_vtk_cellsvtk2chi.cc", "d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc.html", null ],

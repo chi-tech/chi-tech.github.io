@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -89,8 +96,7 @@ $(document).ready(function(){initNavTree('d8/d42/classchi__objects_1_1_chi_log.h
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle"><div class="title">chi_objects::ChiLog Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -191,8 +197,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3de59d3e34e0731ec54eae64e64d594c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">ChiLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a3de59d3e34e0731ec54eae64e64d594c">GetInstance</a> () noexcept</td></tr>
-<tr class="separator:a3de59d3e34e0731ec54eae64e64d594c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bcd0205c96e6fedbfb5df9eaf8bfb25"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">ChiLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a7bcd0205c96e6fedbfb5df9eaf8bfb25">GetInstance</a> () noexcept</td></tr>
+<tr class="separator:a7bcd0205c96e6fedbfb5df9eaf8bfb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -207,11 +213,6 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a2fdbb319da4e82281c48a30684bc80d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82b1e0f283ebdb1dca5fb4e03063326f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../da/d50/classchi__objects_1_1_chi_log_1_1_repeating_event.html">RepeatingEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a82b1e0f283ebdb1dca5fb4e03063326f">repeating_events</a></td></tr>
 <tr class="separator:a82b1e0f283ebdb1dca5fb4e03063326f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:abd1ed7f860b3954f5e9a1ba030738800"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">ChiLog</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abd1ed7f860b3954f5e9a1ba030738800">instance_</a></td></tr>
-<tr class="separator:abd1ed7f860b3954f5e9a1ba030738800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Object for controlling logging.</p>
@@ -236,8 +237,8 @@ Static Private Attributes</h2></td></tr>
 <p class="startli">A log can be made by first connecting code with the logger. This is done by including the log header and then defining an extern reference to the global object.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;chi::log.h&gt;</span></div>
 <div class="line"><span class="keyword">extern</span> <a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a64ae3abc4ccb3bfc8ae319e372266c83">ChiLog</a>&amp; <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>;</div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a64ae3abc4ccb3bfc8ae319e372266c83"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a64ae3abc4ccb3bfc8ae319e372266c83">chi_objects::ChiLog::ChiLog</a></div><div class="ttdeci">ChiLog() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00011">chi_log.cc:11</a></div></div>
-<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a64ae3abc4ccb3bfc8ae319e372266c83"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a64ae3abc4ccb3bfc8ae319e372266c83">chi_objects::ChiLog::ChiLog</a></div><div class="ttdeci">ChiLog() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00020">chi_log.cc:20</a></div></div>
+<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
 </div><!-- fragment --><p class="startli">A log is then written inside a piece of code as follows:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> PrintSomethingToLog()</div>
 <div class="line">{</div>
@@ -245,9 +246,9 @@ Static Private Attributes</h2></td></tr>
 <div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a30339b31f520423a4086e00e62bb5b98">Log0Warning</a>() &lt;&lt; <span class="stringliteral">&quot;This is a warning&quot;</span>;</div>
 <div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a5b78f521dcc7b9fb0ab49754f91d3b93">Log0Error</a>() &lt;&lt; <span class="stringliteral">&quot;This is an error&quot;</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a30339b31f520423a4086e00e62bb5b98"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a30339b31f520423a4086e00e62bb5b98">chi_objects::ChiLog::Log0Warning</a></div><div class="ttdeci">LogStream Log0Warning()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00223">chi_log.h:223</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a5b78f521dcc7b9fb0ab49754f91d3b93"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a5b78f521dcc7b9fb0ab49754f91d3b93">chi_objects::ChiLog::Log0Error</a></div><div class="ttdeci">LogStream Log0Error()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00224">chi_log.h:224</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00027">chi_log.cc:27</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a30339b31f520423a4086e00e62bb5b98"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a30339b31f520423a4086e00e62bb5b98">chi_objects::ChiLog::Log0Warning</a></div><div class="ttdeci">LogStream Log0Warning()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00220">chi_log.h:220</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a5b78f521dcc7b9fb0ab49754f91d3b93"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a5b78f521dcc7b9fb0ab49754f91d3b93">chi_objects::ChiLog::Log0Error</a></div><div class="ttdeci">LogStream Log0Error()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00221">chi_log.h:221</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00036">chi_log.cc:36</a></div></div>
 </div><!-- fragment --></li>
 </ul>
 <pre class="fragment">[0]  This is printed on location 0 only
@@ -256,15 +257,15 @@ Static Private Attributes</h2></td></tr>
 </pre><h2>Part B: Repeating events log</h2>
 <p >Suppose a routine or segment of code gets called multiple times. Now suppose we want to know how many times this routine was called, how long it ran (total and on-avg), or we want to know at which timestamp it ran every time. We do this by using a repeating event. A repeating event is identified by a tag. Therefore the first step is to obtain a unique id for the event using <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a3d5e3d82d2be027ee30506832a5665ea">ChiLog::GetRepeatingEventTag</a>.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> tag = <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a3d5e3d82d2be027ee30506832a5665ea">GetRepeatingEventTag</a>(std::string(<span class="stringliteral">&quot;Sweep Timing&quot;</span>))</div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a3d5e3d82d2be027ee30506832a5665ea"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a3d5e3d82d2be027ee30506832a5665ea">chi_objects::ChiLog::GetRepeatingEventTag</a></div><div class="ttdeci">size_t GetRepeatingEventTag(std::string event_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00172">chi_log.cc:172</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a3d5e3d82d2be027ee30506832a5665ea"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a3d5e3d82d2be027ee30506832a5665ea">chi_objects::ChiLog::GetRepeatingEventTag</a></div><div class="ttdeci">size_t GetRepeatingEventTag(std::string event_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00181">chi_log.cc:181</a></div></div>
 </div><!-- fragment --><p >Events can now be logged using <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a3386517dac84daddc4e6544a892d41bf">ChiLog::LogEvent(size_t ev_tag, ChiLog::EventType ev_type)</a>. As an example, consider we want to count the number of occurrences of an event. We trigger multiple occurences using</p>
 <div class="fragment"><div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a990ef1e1564fe1baa8f43591308720a5">LogEvent</a>(tag,<a class="code hl_enumvalue" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a095bd445e91d775e42bbffee8d8560e7a0e6076b032363fb0c97fe0324d3f50bd">ChiLog::EventType::SINGLE_OCCURRENCE</a>);</div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a095bd445e91d775e42bbffee8d8560e7a0e6076b032363fb0c97fe0324d3f50bd"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a095bd445e91d775e42bbffee8d8560e7a0e6076b032363fb0c97fe0324d3f50bd">chi_objects::ChiLog::EventType::SINGLE_OCCURRENCE</a></div><div class="ttdeci">@ SINGLE_OCCURRENCE</div><div class="ttdoc">Signals a single occurrence.</div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a990ef1e1564fe1baa8f43591308720a5"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a990ef1e1564fe1baa8f43591308720a5">chi_objects::ChiLog::LogEvent</a></div><div class="ttdeci">void LogEvent(size_t ev_tag, EventType ev_type, const std::shared_ptr&lt; EventInfo &gt; &amp;ev_info)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00188">chi_log.cc:188</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a990ef1e1564fe1baa8f43591308720a5"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a990ef1e1564fe1baa8f43591308720a5">chi_objects::ChiLog::LogEvent</a></div><div class="ttdeci">void LogEvent(size_t ev_tag, EventType ev_type, const std::shared_ptr&lt; EventInfo &gt; &amp;ev_info)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00197">chi_log.cc:197</a></div></div>
 </div><!-- fragment --><p >At the end of the block for which you wanted to log these events we can now extract the number of occurrences using</p>
 <div class="fragment"><div class="line"><span class="keywordtype">double</span> number_of_occ = <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a57cf1c0addaa9fd596ffa9d32ed86c15">ProcessEvent</a>(tag,<a class="code hl_enumvalue" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a134cbf425f3ae4fd2e697f992eb8d370adc8203a9cb5581bf53bc495276ac836b">ChiLog::EventOperation::NUMBER_OF_OCCURRENCES</a>);</div>
 <div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a134cbf425f3ae4fd2e697f992eb8d370adc8203a9cb5581bf53bc495276ac836b"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a134cbf425f3ae4fd2e697f992eb8d370adc8203a9cb5581bf53bc495276ac836b">chi_objects::ChiLog::EventOperation::NUMBER_OF_OCCURRENCES</a></div><div class="ttdeci">@ NUMBER_OF_OCCURRENCES</div><div class="ttdoc">Counts creation events, single occurrences and begins.</div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a57cf1c0addaa9fd596ffa9d32ed86c15"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a57cf1c0addaa9fd596ffa9d32ed86c15">chi_objects::ChiLog::ProcessEvent</a></div><div class="ttdeci">double ProcessEvent(size_t ev_tag, EventOperation ev_operation)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00268">chi_log.cc:268</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a57cf1c0addaa9fd596ffa9d32ed86c15"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a57cf1c0addaa9fd596ffa9d32ed86c15">chi_objects::ChiLog::ProcessEvent</a></div><div class="ttdeci">double ProcessEvent(size_t ev_tag, EventOperation ev_operation)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00277">chi_log.cc:277</a></div></div>
 </div><!-- fragment --><p >Below is a complete example:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> tag = <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a3d5e3d82d2be027ee30506832a5665ea">GetRepeatingEventTag</a>(std::string());</div>
 <div class="line"> </div>
@@ -273,7 +274,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a1e75e1551e2f59ed418fb0da21971877">LogAll</a>()</div>
 <div class="line">  &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a57cf1c0addaa9fd596ffa9d32ed86c15">ProcessEvent</a>(tag, <a class="code hl_enumvalue" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a134cbf425f3ae4fd2e697f992eb8d370adc8203a9cb5581bf53bc495276ac836b">ChiLog::EventOperation::NUMBER_OF_OCCURRENCES</a>);</div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a1e75e1551e2f59ed418fb0da21971877"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a1e75e1551e2f59ed418fb0da21971877">chi_objects::ChiLog::LogAll</a></div><div class="ttdeci">LogStream LogAll()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00229">chi_log.h:229</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a1e75e1551e2f59ed418fb0da21971877"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a1e75e1551e2f59ed418fb0da21971877">chi_objects::ChiLog::LogAll</a></div><div class="ttdeci">LogStream LogAll()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00226">chi_log.h:226</a></div></div>
 </div><!-- fragment --> <pre class="fragment">6
 </pre><p >Since <a class="el" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a> is a global object this functionality is really powerful for use in modules or class objects where multiple methods can contribute to the same event track. For example an object can have an event tag as a member and initialize it at construction then all of the objects methods can contribute to the event.</p>
 <h3>Supplying event information</h3>
@@ -308,7 +309,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment --> <pre class="fragment">1.33333
 </pre><p >To get a string value of the event history developers can use <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa3e2339e4375c706921142c58c74e2a0">ChiLog::PrintEventHistory</a> along with the event tag. Just note that it will automatically be formatted for each location so no need to use <a class="el" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a> to print it. Also, each event will be prepended with a program timestamp in seconds.</p>
 <div class="fragment"><div class="line">std::cout &lt;&lt; <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa3e2339e4375c706921142c58c74e2a0">PrintEventHistory</a>(tag);</div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_aa3e2339e4375c706921142c58c74e2a0"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa3e2339e4375c706921142c58c74e2a0">chi_objects::ChiLog::PrintEventHistory</a></div><div class="ttdeci">std::string PrintEventHistory(size_t ev_tag)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00225">chi_log.cc:225</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_aa3e2339e4375c706921142c58c74e2a0"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa3e2339e4375c706921142c58c74e2a0">chi_objects::ChiLog::PrintEventHistory</a></div><div class="ttdeci">std::string PrintEventHistory(size_t ev_tag)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00234">chi_log.cc:234</a></div></div>
 </div><!-- fragment --> <pre class="fragment">1.33333
 [0]      3.813119000 EVENT_CREATED
 [0]      3.813120000 SINGLE_OCCURRENCE A
@@ -349,7 +350,7 @@ Static Private Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00250">250</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00247">247</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -383,7 +384,7 @@ Static Private Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00243">243</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00240">240</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -445,7 +446,7 @@ Static Private Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00239">239</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00236">236</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -474,13 +475,13 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Default constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00011">11</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00020">20</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3de59d3e34e0731ec54eae64e64d594c" name="a3de59d3e34e0731ec54eae64e64d594c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3de59d3e34e0731ec54eae64e64d594c">&#9670;&nbsp;</a></span>GetInstance()</h2>
+<a id="a7bcd0205c96e6fedbfb5df9eaf8bfb25" name="a7bcd0205c96e6fedbfb5df9eaf8bfb25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bcd0205c96e6fedbfb5df9eaf8bfb25">&#9670;&nbsp;</a></span>GetInstance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,7 +490,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">ChiLog</a> &amp; chi_objects::ChiLog::GetInstance </td>
+          <td class="memname"><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">chi_objects::ChiLog</a> &amp; chi_objects::ChiLog::GetInstance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -497,12 +498,13 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Access to the singleton </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00210">210</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00012">12</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
 
 </div>
 </div>
@@ -523,7 +525,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a unique tag to a newly created repeating event. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00172">172</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00181">181</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
 
 </div>
 </div>
@@ -543,7 +545,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets the current verbosity level. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00165">165</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00174">174</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
 
 </div>
 </div>
@@ -564,7 +566,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Makes a log entry. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00027">27</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00036">36</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
 
 </div>
 </div>
@@ -591,7 +593,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00222">222</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00219">219</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -618,7 +620,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00224">224</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00221">221</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -645,7 +647,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00225">225</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00222">222</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -672,7 +674,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00226">226</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00223">223</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -699,7 +701,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00227">227</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00224">224</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -726,7 +728,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00223">223</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00220">220</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -753,7 +755,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00229">229</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00226">226</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -780,7 +782,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00231">231</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00228">228</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -807,7 +809,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00232">232</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00229">229</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -834,7 +836,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00233">233</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00230">230</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -861,7 +863,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00234">234</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00231">231</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -888,7 +890,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00230">230</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00227">227</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -919,7 +921,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Logs an event without any event information. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00205">205</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00214">214</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
 
 </div>
 </div>
@@ -956,7 +958,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Logs an event with the supplied event information. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00188">188</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00197">197</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
 
 </div>
 </div>
@@ -977,7 +979,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a string representation of the event history associated with the tag. Each event entry will be prepended by the location id and the program timestamp in seconds. This method uses the <a class="el" href="../../dd/dd6/structchi__objects_1_1_chi_log_1_1_event_info.html#ad08a60a7cd11d5fd60cd70fb13135142">ChiLog::EventInfo::GetString</a> method to append information. This allows derived classes to implement more sophisticated outputs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00225">225</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00234">234</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
 
 </div>
 </div>
@@ -1008,7 +1010,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Processes an event given an event operation. See <a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">ChiLog</a> for further reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00268">268</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00277">277</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
 
 </div>
 </div>
@@ -1029,7 +1031,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Sets the verbosity level. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00158">158</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d1c/chi__log_8cc_source.html#l00167">167</a> of file <a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a>.</p>
 
 </div>
 </div>
@@ -1058,30 +1060,6 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abd1ed7f860b3954f5e9a1ba030738800" name="abd1ed7f860b3954f5e9a1ba030738800"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd1ed7f860b3954f5e9a1ba030738800">&#9670;&nbsp;</a></span>instance_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html">chi_objects::ChiLog</a> chi_objects::ChiLog::instance_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00207">207</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
-
-</div>
-</div>
 <a id="a82b1e0f283ebdb1dca5fb4e03063326f" name="a82b1e0f283ebdb1dca5fb4e03063326f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82b1e0f283ebdb1dca5fb4e03063326f">&#9670;&nbsp;</a></span>repeating_events</h2>
 
@@ -1102,7 +1080,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00262">262</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d75/chi__log_8h_source.html#l00259">259</a> of file <a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1110,6 @@ Static Private Attributes</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>framework/ChiLog/<a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a></li>
-<li>framework/<a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a></li>
 <li>framework/ChiLog/<a class="el" href="../../dd/d1c/chi__log_8cc_source.html">chi_log.cc</a></li>
 </ul>
 </div><!-- contents -->

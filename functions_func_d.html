@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -88,6 +95,7 @@ $(document).ready(function(){initNavTree('functions_func_d.html',''); initResiza
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>Data()&#160;:&#160;<a class="el" href="d5/d5b/classchi__data__types_1_1_byte_array.html#a50b68d3a4507f2cd72f81d8a82411f52">chi_data_types::ByteArray</a></li>
 <li>data()&#160;:&#160;<a class="el" href="d2/d5d/classchi__data__types_1_1_n_d_array.html#a364f486441539ec57eac38d44772befa">chi_data_types::NDArray&lt; T &gt;</a>, <a class="el" href="df/d4b/classchi__math_1_1_dynamic_matrix.html#a60b77d39997e9fb6c9e2d290c29baf1d">chi_math::DynamicMatrix&lt; NumberFormat &gt;</a>, <a class="el" href="db/d08/classchi__math_1_1_dynamic_vector.html#a45b2afca132580217e6c2df493683702">chi_math::DynamicVector&lt; NumberFormat &gt;</a></li>
+<li>DefaultValue()&#160;:&#160;<a class="el" href="d8/d30/classchi__data__types_1_1_varying.html#ab2a459dcfcbd8a445fab7ddfedc661e2">chi_data_types::Varying</a></li>
 <li>DeSerialize()&#160;:&#160;<a class="el" href="d8/d7c/classchi__mesh_1_1_cell.html#a09bfbfaaf607b0bc621fde87c0450887">chi_mesh::Cell</a>, <a class="el" href="db/d1b/classchi__mesh_1_1_cell_face.html#adb9ac890f87a7b7f89b4015de0c7925b">chi_mesh::CellFace</a></li>
 <li>DeSerializeCellInfo()&#160;:&#160;<a class="el" href="d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a25fe02fdbd089b8f556e19d5b502ae06">chi_mesh::sweep_management::PRIMARY_FLUDS</a></li>
 <li>Det()&#160;:&#160;<a class="el" href="d0/dec/structchi__mesh_1_1_matrix3x3.html#aeb57ad21857c8093807797c6e5baa6ce">chi_mesh::Matrix3x3</a></li>
@@ -96,20 +104,26 @@ $(document).ready(function(){initNavTree('functions_func_d.html',''); initResiza
 <li>Diag()&#160;:&#160;<a class="el" href="d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4.html#a024f37c060f6b12a483032d15e499ec9">chi_math::TensorRNX&lt; 2, N, NumberFormat &gt;</a>, <a class="el" href="d8/d2c/structchi__mesh_1_1_tensor_rank2_dim3.html#ad1081f0eaab6f74934f1da5e040bb3db">chi_mesh::TensorRank2Dim3</a></li>
 <li>DiagSum()&#160;:&#160;<a class="el" href="d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4.html#a1d811feb66893859e9590f7926cea677">chi_math::TensorRNX&lt; 2, N, NumberFormat &gt;</a>, <a class="el" href="d8/d2c/structchi__mesh_1_1_tensor_rank2_dim3.html#afc20383af2acb3b03797684b3bb65266">chi_mesh::TensorRank2Dim3</a></li>
 <li>DiffusionCoefficient()&#160;:&#160;<a class="el" href="df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a18138a2867ac585df2d6cf0cf4f51283">chi_physics::AdjointMGXS</a>, <a class="el" href="df/db7/classchi__physics_1_1_multi_group_x_s.html#af406d395edd6df0ea391f7136be721ea">chi_physics::MultiGroupXS</a>, <a class="el" href="de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#abfd22075a685c7e54b761904ae1d3d46">chi_physics::SingleStateMGXS</a></li>
+<li>DiffusionDFEMSolver()&#160;:&#160;<a class="el" href="df/dd4/classlbs_1_1_diffusion_d_f_e_m_solver.html#ab72657fb3568c73e0e75f5865bb211d5">lbs::DiffusionDFEMSolver</a></li>
 <li>DiffusionInitialized()&#160;:&#160;<a class="el" href="df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a6197381c91d9c96ed81b29d3411c7726">chi_physics::AdjointMGXS</a>, <a class="el" href="df/db7/classchi__physics_1_1_multi_group_x_s.html#a4212df7de6815dfaa5a4bf9b7bc5f177">chi_physics::MultiGroupXS</a>, <a class="el" href="de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#a98b98de00c88097bf79df4d6e79fcd1c">chi_physics::SingleStateMGXS</a></li>
-<li>DiffusionMIPSolver()&#160;:&#160;<a class="el" href="d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a0497f8f1e68b651bc9381ce8cfb438f6">lbs::acceleration::DiffusionMIPSolver</a></li>
+<li>DiffusionMIPSolver()&#160;:&#160;<a class="el" href="d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a69d3a171ec94b8a912ed33054323249d">lbs::acceleration::DiffusionMIPSolver</a></li>
+<li>DiffusionPWLCSolver()&#160;:&#160;<a class="el" href="df/dff/classlbs_1_1acceleration_1_1_diffusion_p_w_l_c_solver.html#aff693c6f1be2aba5b30d98af08e027b5">lbs::acceleration::DiffusionPWLCSolver</a></li>
+<li>DiffusionSolver()&#160;:&#160;<a class="el" href="d2/d51/classlbs_1_1acceleration_1_1_diffusion_solver.html#a6e9a622192e989ef1c5a0ac03648638e">lbs::acceleration::DiffusionSolver</a></li>
 <li>dimension()&#160;:&#160;<a class="el" href="d2/d5d/classchi__data__types_1_1_n_d_array.html#a454d37fb0804e0e81c24871a16c48399">chi_data_types::NDArray&lt; T &gt;</a></li>
 <li>Dimensions()&#160;:&#160;<a class="el" href="df/d4b/classchi__math_1_1_dynamic_matrix.html#a93b5e42d49e4a616b6031e4099e64037">chi_math::DynamicMatrix&lt; NumberFormat &gt;</a></li>
+<li>DirectionDataCallback()&#160;:&#160;<a class="el" href="d9/d2c/classlbs_1_1_sweep_chunk_p_w_l_r_z.html#a6d7bbc0b92134efc498c580e55861a08">lbs::SweepChunkPWLRZ</a></li>
 <li>DisAssembleTGDSADeltaPhiVector()&#160;:&#160;<a class="el" href="dc/db7/classlbs_1_1_l_b_s_solver.html#a434308ead37c6dbe38ce339c33e91dce">lbs::LBSSolver</a></li>
 <li>DisAssembleWGDSADeltaPhiVector()&#160;:&#160;<a class="el" href="dc/db7/classlbs_1_1_l_b_s_solver.html#a08440304884e66405740fddf030dbadc">lbs::LBSSolver</a></li>
-<li>DiscOrdKEigenvalueSolver()&#160;:&#160;<a class="el" href="d4/dd0/classlbs_1_1_disc_ord_k_eigenvalue_solver.html#a8d332bb8edcc5e27293f4593609005e6">lbs::DiscOrdKEigenvalueSolver</a></li>
-<li>DiscOrdSteadyStateAdjointSolver()&#160;:&#160;<a class="el" href="d6/d0f/classlbs_1_1_disc_ord_steady_state_adjoint_solver.html#a59b8d62ba81522d426cd893c77ebef87">lbs::DiscOrdSteadyStateAdjointSolver</a></li>
-<li>DiscOrdSteadyStateSolver()&#160;:&#160;<a class="el" href="dd/d4b/classlbs_1_1_disc_ord_steady_state_solver.html#ad9dcf1481c4b4432f623e8d9842832ac">lbs::DiscOrdSteadyStateSolver</a>, <a class="el" href="df/de3/classlbs__curvilinear_1_1_disc_ord_steady_state_solver.html#a90317565982e768b4b11a90dbaf9b43d">lbs_curvilinear::DiscOrdSteadyStateSolver</a></li>
 <li>DiscOrdTransientSolver()&#160;:&#160;<a class="el" href="d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#ad8e89ef7932bf96fc2e05cb5f6bd852a">lbs::DiscOrdTransientSolver</a></li>
+<li>DiscreteOrdinatesAdjointSolver()&#160;:&#160;<a class="el" href="dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#ac55c613b1446bf478f13296521119f9a">lbs::DiscreteOrdinatesAdjointSolver</a></li>
+<li>DiscreteOrdinatesCurvilinearSolver()&#160;:&#160;<a class="el" href="d6/d33/classlbs_1_1_discrete_ordinates_curvilinear_solver.html#acb71a3108227d97b326d97d59c71f5a0">lbs::DiscreteOrdinatesCurvilinearSolver</a></li>
+<li>DiscreteOrdinatesSolver()&#160;:&#160;<a class="el" href="d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a87def1581c0a99426a4a7a5dfa97fb60">lbs::DiscreteOrdinatesSolver</a></li>
 <li>DoneSending()&#160;:&#160;<a class="el" href="dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#a4676eafe651f1b005223ceee457bf9e7">chi_mesh::sweep_management::SweepBuffer</a></li>
 <li>dOrtho()&#160;:&#160;<a class="el" href="d7/d89/classchi__math_1_1_golub_fischer.html#a538f28dfa0f3228e2aeedede5d061bca">chi_math::GolubFischer</a></li>
 <li>Dot()&#160;:&#160;<a class="el" href="db/d08/classchi__math_1_1_dynamic_vector.html#af0978e3d787c3cc41a3ae6235da74c61">chi_math::DynamicVector&lt; NumberFormat &gt;</a>, <a class="el" href="d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4.html#ac71152475e5416071857bcc76013a3fc">chi_math::TensorRNX&lt; 2, N, NumberFormat &gt;</a>, <a class="el" href="d5/d8e/structchi__math_1_1_vector_n_x.html#a0bbf3f53b9996ae2ae71b63e4ea78bf5">chi_math::VectorNX&lt; N, NumberFormat &gt;</a>, <a class="el" href="d8/d2c/structchi__mesh_1_1_tensor_rank2_dim3.html#acccc36dbe48b21767c3fc291a0e892dc">chi_mesh::TensorRank2Dim3</a>, <a class="el" href="dd/d54/structchi__mesh_1_1_vector3.html#a810a528610394fd3344fb996af7dfc07">chi_mesh::Vector3</a></li>
 <li>DummyStream()&#160;:&#160;<a class="el" href="d7/d40/structchi__objects_1_1_dummy_stream.html#aa7774bde27ed54035d5c8f00e5ee952d">chi_objects::DummyStream</a></li>
+<li>DumpParameters()&#160;:&#160;<a class="el" href="dc/dab/classchi__objects_1_1_input_parameters.html#a7e4f8b08e4d54f5731f481f2b5c75466">chi_objects::InputParameters</a></li>
+<li>DumpRegister()&#160;:&#160;<a class="el" href="d0/dc4/classchi__objects_1_1_chi_console.html#af79baa13aa82cfaa0ac463d4e01cbdfd">chi_objects::ChiConsole</a>, <a class="el" href="d9/d3b/class_chi_object_maker.html#a5d7ed96c461069ebc9c45545b4d525c0">ChiObjectMaker</a></li>
 <li>dunavant_rule()&#160;:&#160;<a class="el" href="d0/d61/classchi__math_1_1_quadrature_triangle.html#a5aef0ffa7724849e1309d76bb3cb1f7c">chi_math::QuadratureTriangle</a></li>
 <li>dunavant_rule2()&#160;:&#160;<a class="el" href="d0/d61/classchi__math_1_1_quadrature_triangle.html#a0104e7ab0a7cf27b7e293340652ce306">chi_math::QuadratureTriangle</a></li>
 <li>DynamicMatrix()&#160;:&#160;<a class="el" href="df/d4b/classchi__math_1_1_dynamic_matrix.html#a33ac95cc7126514f1008602a104f9159">chi_math::DynamicMatrix&lt; NumberFormat &gt;</a></li>

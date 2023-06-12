@@ -1,6 +1,7 @@
 var chi__ffinterpolation_8h =
 [
     [ "chi_mesh::FieldFunctionInterpolation", "d5/dd4/classchi__mesh_1_1_field_function_interpolation.html", "d5/dd4/classchi__mesh_1_1_field_function_interpolation" ],
+    [ "FieldFunctionGridBasedPtr", "d2/d18/chi__ffinterpolation_8h.html#ae46bc8b7f297ab432b192ea62fec1bc0", null ],
     [ "Operation", "d2/d18/chi__ffinterpolation_8h.html#a207ad6cc312218de51e8b227bd339030", [
       [ "OP_SUM", "d2/d18/chi__ffinterpolation_8h.html#a207ad6cc312218de51e8b227bd339030aff2e92d6142f5285227563d220db74db", null ],
       [ "OP_AVG", "d2/d18/chi__ffinterpolation_8h.html#a207ad6cc312218de51e8b227bd339030a066914d2df305e14845340a9ab8b7be9", null ],

@@ -34,7 +34,7 @@ var classchi__objects_1_1_chi_log =
       [ "MAX_MEMORY_USAGE", "d8/d42/classchi__objects_1_1_chi_log.html#ab7d5c9c658abc50dc33cdf3f2e4ea3bfa412f4059d6d705babce9310d49de0615", null ]
     ] ],
     [ "ChiLog", "d8/d42/classchi__objects_1_1_chi_log.html#a64ae3abc4ccb3bfc8ae319e372266c83", null ],
-    [ "GetInstance", "d8/d42/classchi__objects_1_1_chi_log.html#a3de59d3e34e0731ec54eae64e64d594c", null ],
+    [ "GetInstance", "d8/d42/classchi__objects_1_1_chi_log.html#a7bcd0205c96e6fedbfb5df9eaf8bfb25", null ],
     [ "GetRepeatingEventTag", "d8/d42/classchi__objects_1_1_chi_log.html#a3d5e3d82d2be027ee30506832a5665ea", null ],
     [ "GetVerbosity", "d8/d42/classchi__objects_1_1_chi_log.html#a6151f276b19e042eaa799bc6a83fb503", null ],
     [ "Log", "d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1", null ],
@@ -56,7 +56,6 @@ var classchi__objects_1_1_chi_log =
     [ "ProcessEvent", "d8/d42/classchi__objects_1_1_chi_log.html#a57cf1c0addaa9fd596ffa9d32ed86c15", null ],
     [ "SetVerbosity", "d8/d42/classchi__objects_1_1_chi_log.html#a0e409fc3c30b0821f7e7da7507d35e8c", null ],
     [ "dummy_stream_", "d8/d42/classchi__objects_1_1_chi_log.html#a5b298e1a454d5f522135506e54340820", null ],
-    [ "instance_", "d8/d42/classchi__objects_1_1_chi_log.html#abd1ed7f860b3954f5e9a1ba030738800", null ],
     [ "repeating_events", "d8/d42/classchi__objects_1_1_chi_log.html#a82b1e0f283ebdb1dca5fb4e03063326f", null ],
     [ "verbosity_", "d8/d42/classchi__objects_1_1_chi_log.html#a2fdbb319da4e82281c48a30684bc80d6", null ]
 ];

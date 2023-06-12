@@ -27,6 +27,7 @@ var classchi__physics_1_1_single_state_m_g_x_s =
     [ "SigmaRemoval", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#a061164b0bb529e606c8db3b3a5533f77", null ],
     [ "SigmaSGtoG", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#aafcdc62c8283ed68acf3625c2e853488", null ],
     [ "SigmaTotal", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#aa17842a0d20edb0f6409c3345fdd38ff", null ],
+    [ "SigmaTransport", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#aa03af866e22e47c92ae2135eed46493a", null ],
     [ "TransferMatrices", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#a6301a3fd57b0494d9387fc3de8c816c8", null ],
     [ "TransferMatrix", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#a9d39927c888ec83de5725bf0bb510fe5", null ],
     [ "cdf_gprime_g_", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#a7bf90b33b03c3eefa059ae9392bf4f93", null ],

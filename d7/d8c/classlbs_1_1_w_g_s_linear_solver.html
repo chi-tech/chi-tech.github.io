@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -105,7 +112,7 @@ Inheritance diagram for lbs::WGSLinearSolver&lt; MatType, VecType, SolverType &g
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a3e2a0cab8620e65b669435467f9edff2"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html">WGSContext</a>&lt; MatType, VecType, SolverType &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a3e2a0cab8620e65b669435467f9edff2">WGSContextPtr</a></td></tr>
+<tr class="memitem:a3e2a0cab8620e65b669435467f9edff2"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html">WGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a3e2a0cab8620e65b669435467f9edff2">WGSContextPtr</a></td></tr>
 <tr class="separator:a3e2a0cab8620e65b669435467f9edff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classchi__math_1_1_linear_solver"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classchi__math_1_1_linear_solver')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../dd/d52/classchi__math_1_1_linear_solver.html">chi_math::LinearSolver&lt; MatType, VecType, SolverType &gt;</a></td></tr>
 <tr class="memitem:a28f23e17140794a71fe5c54a7f4b64ea inherit pub_types_classchi__math_1_1_linear_solver"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d0/dfb/structchi__math_1_1_linear_solver_context.html">LinearSolverContext</a>&lt; MatType, VecType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d52/classchi__math_1_1_linear_solver.html#a28f23e17140794a71fe5c54a7f4b64ea">LinSolveContext</a></td></tr>
@@ -264,10 +271,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ac27600413aaa7c6f36d24d96ec5595b7 inherit pro_attribs_classchi__math_1_1_linear_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class MatType, class VecType, class SolverType&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;class MatType, class VecType, class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a>&gt;<br />
 class lbs::WGSLinearSolver&lt; MatType, VecType, SolverType &gt;</div><p >Linear Solver specialization for Within GroupSet (WGS) solves. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html#l00019">19</a> of file <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html">wgs_linear_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html#l00018">18</a> of file <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html">wgs_linear_solver.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a3e2a0cab8620e65b669435467f9edff2" name="a3e2a0cab8620e65b669435467f9edff2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e2a0cab8620e65b669435467f9edff2">&#9670;&nbsp;</a></span>WGSContextPtr</h2>
@@ -275,15 +282,15 @@ class lbs::WGSLinearSolver&lt; MatType, VecType, SolverType &gt;</div><p >Linear
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html">WGSContext</a>&lt;MatType,VecType,SolverType&gt; &gt; <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::WGSContextPtr</td>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../dd/ddd/structlbs_1_1_w_g_s_context.html">WGSContext</a>&lt;MatType,VecType,<a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a>&gt; &gt; <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::WGSContextPtr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html#l00026">26</a> of file <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html">wgs_linear_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html#l00025">25</a> of file <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html">wgs_linear_solver.h</a>.</p>
 
 </div>
 </div>
@@ -294,13 +301,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::WGSLinearSolver </td>
+          <td class="memname"><a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::WGSLinearSolver </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html#a3e2a0cab8620e65b669435467f9edff2">WGSContextPtr</a>&#160;</td>
           <td class="paramname"><em>gs_context_ptr</em></td><td>)</td>
@@ -320,7 +327,7 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html#l00030">30</a> of file <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html">wgs_linear_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html#l00029">29</a> of file <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html">wgs_linear_solver.h</a>.</p>
 
 </div>
 </div>
@@ -330,13 +337,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::~<a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">WGSLinearSolver</a> </td>
+          <td class="memname">virtual <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::~<a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">WGSLinearSolver</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -406,13 +413,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::PostSetupCallback </td>
+          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::PostSetupCallback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -465,13 +472,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::PostSolveCallback </td>
+          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::PostSolveCallback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -523,13 +530,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::PreSetupCallback </td>
+          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::PreSetupCallback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -581,13 +588,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::PreSolveCallback </td>
+          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::PreSolveCallback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -639,13 +646,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::SetConvergenceTest </td>
+          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SetConvergenceTest </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -698,13 +705,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::SetInitialGuess </td>
+          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SetInitialGuess </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -756,13 +763,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::SetPreconditioner </td>
+          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SetPreconditioner </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -814,13 +821,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::SetRHS </td>
+          <td class="memname">void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SetRHS </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -872,13 +879,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::SetSystem </td>
+          <td class="memname">virtual void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SetSystem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -930,13 +937,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::SetSystemSize </td>
+          <td class="memname">virtual void <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SetSystemSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -960,13 +967,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;double&gt; <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, SolverType &gt;::saved_q_moments_local_</td>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="../../d7/d8c/classlbs_1_1_w_g_s_linear_solver.html">lbs::WGSLinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::saved_q_moments_local_</td>
         </tr>
       </table>
   </td>
@@ -976,7 +983,7 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html#l00023">23</a> of file <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html">wgs_linear_solver.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html#l00022">22</a> of file <a class="el" href="../../df/d61/wgs__linear__solver_8h_source.html">wgs_linear_solver.h</a>.</p>
 
 </div>
 </div>

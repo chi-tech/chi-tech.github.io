@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -88,23 +95,28 @@ $(document).ready(function(){initNavTree('db/d42/chi__log__exceptions_8h.html','
   <div class="headertitle"><div class="title">chi_log_exceptions.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
+</div>
 <p><a href="../../db/d42/chi__log__exceptions_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aa9cc74d8a32c9dac7af508730caf0a74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d42/chi__log__exceptions_8h.html#aa9cc74d8a32c9dac7af508730caf0a74">ChiInvalidArgument</a>(condition,  message)</td></tr>
-<tr class="separator:aa9cc74d8a32c9dac7af508730caf0a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31680e5ec723cdab36573515b217cb52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d42/chi__log__exceptions_8h.html#a31680e5ec723cdab36573515b217cb52">ChiLogicalError</a>(condition,  message)</td></tr>
-<tr class="separator:a31680e5ec723cdab36573515b217cb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79de71008cb1f97603e5ce05080822f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d42/chi__log__exceptions_8h.html#a79de71008cb1f97603e5ce05080822f1">ChiInvalidArgumentIf</a>(condition,  message)</td></tr>
+<tr class="separator:a79de71008cb1f97603e5ce05080822f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff10fbd0718b15a0e3dc6612ad627fdb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d42/chi__log__exceptions_8h.html#aff10fbd0718b15a0e3dc6612ad627fdb">ChiInvalidArgument</a>(message)</td></tr>
+<tr class="separator:aff10fbd0718b15a0e3dc6612ad627fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36726be6664d4637124c15f474c18504"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d42/chi__log__exceptions_8h.html#a36726be6664d4637124c15f474c18504">ChiLogicalErrorIf</a>(condition,  message)</td></tr>
+<tr class="separator:a36726be6664d4637124c15f474c18504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee9ce4fc79c3b3727e88a6608c345c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d42/chi__log__exceptions_8h.html#a4ee9ce4fc79c3b3727e88a6608c345c4">ChiLogicalError</a>(message)&#160;&#160;&#160;  throw std::logic_error(std::string(__PRETTY_FUNCTION__) + &quot;: &quot; + message)</td></tr>
+<tr class="separator:a4ee9ce4fc79c3b3727e88a6608c345c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7565b71204af89dfb9f943b82be21515"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d42/chi__log__exceptions_8h.html#a7565b71204af89dfb9f943b82be21515">ChiRecoverableInvalidArgument</a>(condition,  message)</td></tr>
 <tr class="separator:a7565b71204af89dfb9f943b82be21515"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93ef68f15d10cb4442154a632e876675"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d42/chi__log__exceptions_8h.html#a93ef68f15d10cb4442154a632e876675">ChiRecoverableLogicalError</a>(condition,  message)</td></tr>
 <tr class="separator:a93ef68f15d10cb4442154a632e876675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aa9cc74d8a32c9dac7af508730caf0a74" name="aa9cc74d8a32c9dac7af508730caf0a74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9cc74d8a32c9dac7af508730caf0a74">&#9670;&nbsp;</a></span>ChiInvalidArgument</h2>
+<a id="aff10fbd0718b15a0e3dc6612ad627fdb" name="aff10fbd0718b15a0e3dc6612ad627fdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff10fbd0718b15a0e3dc6612ad627fdb">&#9670;&nbsp;</a></span>ChiInvalidArgument</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,40 +125,26 @@ Macros</h2></td></tr>
           <td class="memname">#define ChiInvalidArgument</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">condition, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname">message</td><td>)</td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">message&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                               \</div>
-<div class="line">  if (condition)                                \</div>
-<div class="line">    throw std::invalid_argument(                \</div>
-<div class="line">      std::string(__PRETTY_FUNCTION__) + <span class="stringliteral">&quot;: &quot;</span> + \</div>
-<div class="line">      #message);                                \</div>
-<div class="line">}</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">throw</span> std::invalid_argument(std::string(__PRETTY_FUNCTION__) + <span class="stringliteral">&quot;: &quot;</span> +        \</div>
+<div class="line">                              message)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html#l00004">4</a> of file <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html#l00010">10</a> of file <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>.</p>
 
 </div>
 </div>
-<a id="a31680e5ec723cdab36573515b217cb52" name="a31680e5ec723cdab36573515b217cb52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31680e5ec723cdab36573515b217cb52">&#9670;&nbsp;</a></span>ChiLogicalError</h2>
+<a id="a79de71008cb1f97603e5ce05080822f1" name="a79de71008cb1f97603e5ce05080822f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79de71008cb1f97603e5ce05080822f1">&#9670;&nbsp;</a></span>ChiInvalidArgumentIf</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ChiLogicalError</td>
+          <td class="memname">#define ChiInvalidArgumentIf</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">condition, </td>
@@ -164,14 +162,63 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                               \</div>
-<div class="line">  if (condition)                                \</div>
-<div class="line">    throw std::logic_error(                     \</div>
-<div class="line">      std::string(__PRETTY_FUNCTION__) + <span class="stringliteral">&quot;: &quot;</span> + \</div>
-<div class="line">      #message);                                \</div>
-<div class="line">}</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (condition)                                                               \</div>
+<div class="line">  throw std::invalid_argument(std::string(__PRETTY_FUNCTION__) + <span class="stringliteral">&quot;: &quot;</span> +        \</div>
+<div class="line">                              message)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html#l00012">12</a> of file <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html#l00006">6</a> of file <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>.</p>
+
+</div>
+</div>
+<a id="a4ee9ce4fc79c3b3727e88a6608c345c4" name="a4ee9ce4fc79c3b3727e88a6608c345c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee9ce4fc79c3b3727e88a6608c345c4">&#9670;&nbsp;</a></span>ChiLogicalError</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ChiLogicalError</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">message</td><td>)</td>
+          <td>&#160;&#160;&#160;  throw std::logic_error(std::string(__PRETTY_FUNCTION__) + &quot;: &quot; + message)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html#l00018">18</a> of file <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>.</p>
+
+</div>
+</div>
+<a id="a36726be6664d4637124c15f474c18504" name="a36726be6664d4637124c15f474c18504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36726be6664d4637124c15f474c18504">&#9670;&nbsp;</a></span>ChiLogicalErrorIf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ChiLogicalErrorIf</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">condition, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">message&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (condition)                                                               \</div>
+<div class="line">  throw std::logic_error(std::string(__PRETTY_FUNCTION__) + <span class="stringliteral">&quot;: &quot;</span> + message)</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html#l00014">14</a> of file <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>.</p>
 
 </div>
 </div>
@@ -200,15 +247,14 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                                    \</div>
-<div class="line">  if (condition)                                     \</div>
-<div class="line">    throw std::RecoverableException(                 \</div>
-<div class="line">      std::string(<span class="stringliteral">&quot;Recoverable Invalid Argument: &quot;</span>), \</div>
-<div class="line">      std::string(__PRETTY_FUNCTION__) + <span class="stringliteral">&quot;: &quot;</span> +      \</div>
-<div class="line">      #message);                                     \</div>
-<div class="line">}</div>
+<b>Value:</b><div class="fragment"><div class="line">  {                                                                            \</div>
+<div class="line">    if (condition)                                                             \</div>
+<div class="line">      throw std::RecoverableException(                                         \</div>
+<div class="line">        std::string(<span class="stringliteral">&quot;Recoverable Invalid Argument: &quot;</span>),                         \</div>
+<div class="line">        std::string(__PRETTY_FUNCTION__) + <span class="stringliteral">&quot;: &quot;</span> + #message);                   \</div>
+<div class="line">  }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html#l00020">20</a> of file <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html#l00021">21</a> of file <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>.</p>
 
 </div>
 </div>
@@ -237,13 +283,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                               \</div>
-<div class="line">  if (condition)                                \</div>
-<div class="line">    throw std::RecoverableException(            \</div>
-<div class="line">      std::string(<span class="stringliteral">&quot;Recoverable Logic Error: &quot;</span>)  \</div>
-<div class="line">      std::string(__PRETTY_FUNCTION__) + <span class="stringliteral">&quot;: &quot;</span> + \</div>
-<div class="line">      #message);                                \</div>
-<div class="line">}</div>
+<b>Value:</b><div class="fragment"><div class="line">  {                                                                            \</div>
+<div class="line">    if (condition)                                                             \</div>
+<div class="line">      throw std::RecoverableException(std::string(<span class="stringliteral">&quot;Recoverable Logic Error: &quot;</span>) \</div>
+<div class="line">                                        std::string(__PRETTY_FUNCTION__) +     \</div>
+<div class="line">                                      <span class="stringliteral">&quot;: &quot;</span> + #message);                        \</div>
+<div class="line">  }</div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html#l00029">29</a> of file <a class="el" href="../../db/d42/chi__log__exceptions_8h_source.html">chi_log_exceptions.h</a>.</p>
 

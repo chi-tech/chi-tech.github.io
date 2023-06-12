@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -107,7 +114,7 @@ Public Member Functions</h2></td></tr>
 Data Fields</h2></td></tr>
 <tr class="memitem:a4d398a5d347cb1189ebef5f7bbe7339b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83">GeometryType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#a4d398a5d347cb1189ebef5f7bbe7339b">geometry_type</a> = <a class="el" href="../../d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83a1ecf534645b84aaad2e52c037267a6b4">GeometryType::NO_GEOMETRY_SET</a></td></tr>
 <tr class="separator:a4d398a5d347cb1189ebef5f7bbe7339b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf4b7377437bdac08475243769a1ff29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0">SDMType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#acf4b7377437bdac08475243769a1ff29">sd_type</a> = SDMType::UNDEFINED</td></tr>
+<tr class="memitem:acf4b7377437bdac08475243769a1ff29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0">SDMType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#acf4b7377437bdac08475243769a1ff29">sd_type</a> = SDMType::PIECEWISE_LINEAR_DISCONTINUOUS</td></tr>
 <tr class="separator:acf4b7377437bdac08475243769a1ff29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabdaf71ac57391f6cada3dc5b7b709f9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#aabdaf71ac57391f6cada3dc5b7b709f9">scattering_order</a> =1</td></tr>
 <tr class="separator:aabdaf71ac57391f6cada3dc5b7b709f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,13 +146,23 @@ Data Fields</h2></td></tr>
 <tr class="separator:a6bb598bfec8cc53d9ca1a7c35f7b0c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7208447cb1dde1c33dee7a3bd76cfc04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#a7208447cb1dde1c33dee7a3bd76cfc04">verbose_outer_iterations</a> = true</td></tr>
 <tr class="separator:a7208447cb1dde1c33dee7a3bd76cfc04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff54dbe0101467eeed748a3b2a9a0814"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#aff54dbe0101467eeed748a3b2a9a0814">power_field_function_on</a> = false</td></tr>
+<tr class="separator:aff54dbe0101467eeed748a3b2a9a0814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa991e12967cf2f3f33859604a5b0d397"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#aa991e12967cf2f3f33859604a5b0d397">power_default_kappa</a> = 3.20435e-11</td></tr>
+<tr class="separator:aa991e12967cf2f3f33859604a5b0d397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603560744a777f77722ed8638b6d35fa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#a603560744a777f77722ed8638b6d35fa">power_normalization</a> = -1.0</td></tr>
+<tr class="separator:a603560744a777f77722ed8638b6d35fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a505082838252989382ec3523ad4824a2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#a505082838252989382ec3523ad4824a2">field_function_prefix_option</a> = &quot;prefix&quot;</td></tr>
+<tr class="separator:a505082838252989382ec3523ad4824a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f971feeab4c339becba5f9eace08ca0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#a8f971feeab4c339becba5f9eace08ca0">field_function_prefix</a></td></tr>
+<tr class="separator:a8f971feeab4c339becba5f9eace08ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcfebc7a92870f968f422b5600f02042"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d24/classlbs_1_1_a_g_s_scheme_entry.html">AGSSchemeEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dcd/structlbs_1_1_options.html#abcfebc7a92870f968f422b5600f02042">ags_scheme</a></td></tr>
 <tr class="separator:abcfebc7a92870f968f422b5600f02042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Struct for storing LBS options. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00115">115</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00122">122</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae0846a733bafccd36b7f6c1f6c654c2a" name="ae0846a733bafccd36b7f6c1f6c654c2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0846a733bafccd36b7f6c1f6c654c2a">&#9670;&nbsp;</a></span>SDMType</h2>
@@ -159,7 +176,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00117">117</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00124">124</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -202,7 +219,39 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00144">144</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00158">158</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+
+</div>
+</div>
+<a id="a8f971feeab4c339becba5f9eace08ca0" name="a8f971feeab4c339becba5f9eace08ca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f971feeab4c339becba5f9eace08ca0">&#9670;&nbsp;</a></span>field_function_prefix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lbs::Options::field_function_prefix</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00154">154</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+
+</div>
+</div>
+<a id="a505082838252989382ec3523ad4824a2" name="a505082838252989382ec3523ad4824a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a505082838252989382ec3523ad4824a2">&#9670;&nbsp;</a></span>field_function_prefix_option</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lbs::Options::field_function_prefix_option = &quot;prefix&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00153">153</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -218,7 +267,55 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00119">119</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00126">126</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+
+</div>
+</div>
+<a id="aa991e12967cf2f3f33859604a5b0d397" name="aa991e12967cf2f3f33859604a5b0d397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa991e12967cf2f3f33859604a5b0d397">&#9670;&nbsp;</a></span>power_default_kappa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lbs::Options::power_default_kappa = 3.20435e-11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00150">150</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+
+</div>
+</div>
+<a id="aff54dbe0101467eeed748a3b2a9a0814" name="aff54dbe0101467eeed748a3b2a9a0814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff54dbe0101467eeed748a3b2a9a0814">&#9670;&nbsp;</a></span>power_field_function_on</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lbs::Options::power_field_function_on = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00149">149</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+
+</div>
+</div>
+<a id="a603560744a777f77722ed8638b6d35fa" name="a603560744a777f77722ed8638b6d35fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603560744a777f77722ed8638b6d35fa">&#9670;&nbsp;</a></span>power_normalization</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lbs::Options::power_normalization = -1.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00151">151</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -234,7 +331,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00124">124</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00131">131</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -250,7 +347,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00126">126</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00133">133</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -266,7 +363,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00125">125</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00132">132</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -282,7 +379,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00136">136</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00143">143</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -298,7 +395,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00121">121</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00128">128</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -309,12 +406,12 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0">SDMType</a> lbs::Options::sd_type = SDMType::UNDEFINED</td>
+          <td class="memname"><a class="el" href="../../dc/d58/namespacechi__math.html#a6849793d0950c05a3e5a26a9ea700cb0">SDMType</a> lbs::Options::sd_type = SDMType::PIECEWISE_LINEAR_DISCONTINUOUS</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00120">120</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00127">127</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -330,7 +427,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00122">122</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00129">129</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -346,7 +443,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00133">133</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00140">140</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -362,7 +459,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00134">134</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00141">141</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -378,7 +475,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00139">139</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00146">146</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -394,7 +491,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00138">138</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00145">145</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -410,7 +507,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00140">140</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00147">147</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -426,7 +523,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00128">128</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00135">135</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -442,7 +539,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00130">130</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00137">137</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -458,7 +555,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00129">129</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00136">136</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>
@@ -474,7 +571,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00131">131</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html#l00138">138</a> of file <a class="el" href="../../d9/dc3/lbs__structs_8h_source.html">lbs_structs.h</a>.</p>
 
 </div>
 </div>

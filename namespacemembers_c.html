@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -99,7 +106,6 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <li>chiAdjointSolverAddResponseFunction()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a5f37bfee2717670248b68b723c383115">chi_lua</a></li>
 <li>chiAdjointSolverApplyFluxMomentBuffer()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#ab0b8572038d42c647873756edecc0232">chi_lua</a></li>
 <li>chiAdjointSolverComputeInnerProduct()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#abb2fdc7ac2eb169834576d77ccb65087">chi_lua</a></li>
-<li>chiAdjointSolverCreate()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a37ce0190421f21b309244a7277c5dc9e">chi_lua</a></li>
 <li>chiAdjointSolverExportImportanceMapBinary()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a32518d1fcb0276913c14e0064cf43020">chi_lua</a></li>
 <li>chiAdjointSolverMakeExpRepFromP1Moments()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#aa9b1bfe91324f464ae136d08a58312bc">chi_lua</a></li>
 <li>chiAdjointSolverReadFluxMomentsToBuffer()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a68c593d83b8cc07aa4e9b7749431841c">chi_lua</a></li>
@@ -133,24 +139,22 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <li>chiFFInterpolationGetValue()&#160;:&#160;<a class="el" href="d9/dfa/group___lua_f_f_interpol.html#gabe37b9b7813af20ba8dc82a6b1eef3b8">chi_lua</a></li>
 <li>chiFFInterpolationInitialize()&#160;:&#160;<a class="el" href="d9/dfa/group___lua_f_f_interpol.html#gac6e3979ecc5e6a577eb268be00f4cfa0">chi_lua</a></li>
 <li>chiFFInterpolationSetProperty()&#160;:&#160;<a class="el" href="d9/dfa/group___lua_f_f_interpol.html#gaf870d79259973f193b0d485bfdc1fc8d">chi_lua</a></li>
+<li>chiFieldOperationExecute()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a478ed451896986d00826c93121e3d0f5">chi_lua</a></li>
+<li>chiFunctionDimAToDimBEvaluate()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a4b8db3a2246a0cb022256ca2a752a4df">chi_lua</a></li>
 <li>chiFVDiffusionSetBCProperty()&#160;:&#160;<a class="el" href="de/d15/group___lua_diffusion.html#ga979b8f3f2997daddf4ada933aaa3811e">chi_lua</a></li>
 <li>chiFVDiffusionSolverCreate()&#160;:&#160;<a class="el" href="de/d15/group___lua_diffusion.html#ga7afd072a93defa6bb3539bd97747c723">chi_lua</a></li>
 <li>chiGetFieldFunctionHandleByName()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#aa98bc59e0c79ae51d0a3337da4311cf2">chi_lua</a></li>
 <li>chiGetProductQuadrature()&#160;:&#160;<a class="el" href="de/d37/group___lua_quadrature.html#ga8037d84cbcdf5f20b06868d87579985d">chi_lua</a></li>
-<li>chiLBKESCreateSolver()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a2ab586d2eb85bc3164299497871c8abf">chi_lua</a></li>
-<li>chiLBKESSetProperty()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#afa05f65c8e59f60b628b973204107feb">chi_lua</a></li>
-<li>chiLBSAddPointSource()&#160;:&#160;<a class="el" href="d0/daf/group___lua_l_b_s.html#ga925760d56a5295d53aea810939693b39">chi_lua</a></li>
-<li>chiLBSClearPointSources()&#160;:&#160;<a class="el" href="d0/daf/group___lua_l_b_s.html#ga7513fa45ae95b31665ec2f6711467543">chi_lua</a></li>
-<li>chiLBSComputeBalance()&#160;:&#160;<a class="el" href="d0/daf/group___lua_l_b_s.html#ga1d82231c3f7a0661e4f8371498d933c7">chi_lua</a></li>
-<li>chiLBSComputeFissionRate()&#160;:&#160;<a class="el" href="d0/daf/group___lua_l_b_s.html#gab808368124d002e83f86816c20681e30">chi_lua</a></li>
-<li>chiLBSComputeLeakage()&#160;:&#160;<a class="el" href="d0/daf/group___lua_l_b_s.html#gafd8946f71ec27d557b9d2e49c81ba0c1">chi_lua</a></li>
+<li>chiLBSAddPointSource()&#160;:&#160;<a class="el" href="d8/d19/group___l_b_s_lua_functions.html#ga925760d56a5295d53aea810939693b39">chi_lua</a></li>
+<li>chiLBSClearPointSources()&#160;:&#160;<a class="el" href="d8/d19/group___l_b_s_lua_functions.html#ga7513fa45ae95b31665ec2f6711467543">chi_lua</a></li>
+<li>chiLBSComputeBalance()&#160;:&#160;<a class="el" href="d8/d19/group___l_b_s_lua_functions.html#ga1d82231c3f7a0661e4f8371498d933c7">chi_lua</a></li>
+<li>chiLBSComputeFissionRate()&#160;:&#160;<a class="el" href="d8/d19/group___l_b_s_lua_functions.html#gab808368124d002e83f86816c20681e30">chi_lua</a></li>
+<li>chiLBSComputeLeakage()&#160;:&#160;<a class="el" href="d8/d19/group___l_b_s_lua_functions.html#gafd8946f71ec27d557b9d2e49c81ba0c1">chi_lua</a></li>
 <li>chiLBSCreateAndWriteSourceMoments()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#af7ff25258d19529fa93495369b077985">chi_lua</a></li>
 <li>chiLBSCreateGroup()&#160;:&#160;<a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#ga7d16e3fc369204834a671a6ecf34b564">chi_lua</a></li>
 <li>chiLBSCreateGroupset()&#160;:&#160;<a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#gaf5d1e656f52f80b4615f022003d1b407">chi_lua</a></li>
-<li>chiLBSCreateSolver()&#160;:&#160;<a class="el" href="d0/daf/group___lua_l_b_s.html#gab469beed321e0c7688d4f537b480f5a6">chi_lua</a></li>
 <li>chiLBSCreateTransientSolver()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a529534755839f8be78616016fa1bc711">chi_lua</a></li>
-<li>chiLBSCurvilinearCreateSolver()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a4a3184b46b8e8c24b16f15b078e4cc4d">chi_lua</a></li>
-<li>chiLBSGetScalarFieldFunctionList()&#160;:&#160;<a class="el" href="d0/daf/group___lua_l_b_s.html#gaf96d1d72d1274c36390436edabb1b0f9">chi_lua</a></li>
+<li>chiLBSGetScalarFieldFunctionList()&#160;:&#160;<a class="el" href="d8/d19/group___l_b_s_lua_functions.html#gaf96d1d72d1274c36390436edabb1b0f9">chi_lua</a></li>
 <li>chiLBSGroupsetAddGroups()&#160;:&#160;<a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#ga01177a474f138bc1a8b2de984c5d19ae">chi_lua</a></li>
 <li>chiLBSGroupsetSetAngleAggDiv()&#160;:&#160;<a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#ga80f2a61eab1d91be0b1a2fbb7eee248d">chi_lua</a></li>
 <li>chiLBSGroupsetSetAngleAggregationType()&#160;:&#160;<a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#ga8f9de7a927209f9d2988404bd1eb7d83">chi_lua</a></li>
@@ -163,14 +167,14 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <li>chiLBSGroupsetSetResidualTolerance()&#160;:&#160;<a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#gaa3a93090cb8354c7f2140d569497d9ca">chi_lua</a></li>
 <li>chiLBSGroupsetSetTGDSA()&#160;:&#160;<a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#ga6f775fa549a000e9ef4dca648a8f0f26">chi_lua</a></li>
 <li>chiLBSGroupsetSetWGDSA()&#160;:&#160;<a class="el" href="d5/d03/group___lua_l_b_s_groupsets.html#gab0c834b63faf291866f5db2b063897b5">chi_lua</a></li>
-<li>chiLBSInitializeMaterials()&#160;:&#160;<a class="el" href="d0/daf/group___lua_l_b_s.html#gad44dcd1c761be67367c66fd3ff7cf865">chi_lua</a></li>
-<li>chiLBSInitializePointSources()&#160;:&#160;<a class="el" href="d0/daf/group___lua_l_b_s.html#ga6cbc485c13c7b42572d1258cc64c6501">chi_lua</a></li>
-<li>chiLBSMIPCreateSolver()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a633f686a449edd9780cacff7ab600a25">chi_lua</a></li>
+<li>chiLBSInitializeMaterials()&#160;:&#160;<a class="el" href="d8/d19/group___l_b_s_lua_functions.html#gad44dcd1c761be67367c66fd3ff7cf865">chi_lua</a></li>
+<li>chiLBSInitializePointSources()&#160;:&#160;<a class="el" href="d8/d19/group___l_b_s_lua_functions.html#ga6cbc485c13c7b42572d1258cc64c6501">chi_lua</a></li>
 <li>chiLBSReadFluxMoments()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a849987fa4e766b427675e1e072a71721">chi_lua</a></li>
 <li>chiLBSReadFluxMomentsAndMakeSourceMoments()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a22d3d95a8bcf55dd63eba5324f1a2cae">chi_lua</a></li>
 <li>chiLBSReadGroupsetAngularFlux()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a8caffc672507f77c683cee0f3456f350">chi_lua</a></li>
 <li>chiLBSReadSourceMoments()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#abc85d49db3c3e20552ade3bc0323e99e">chi_lua</a></li>
-<li>chiLBSSetProperty()&#160;:&#160;<a class="el" href="d0/daf/group___lua_l_b_s.html#ga56ba50206c4125503807c5889416b66a">chi_lua</a></li>
+<li>chiLBSSetPhiFromFieldFunction()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a26a76d2400c7e96e1f4c776ddb7f8d51">chi_lua</a></li>
+<li>chiLBSSetProperty()&#160;:&#160;<a class="el" href="d8/d19/group___l_b_s_lua_functions.html#ga56ba50206c4125503807c5889416b66a">chi_lua</a></li>
 <li>chiLBSWriteFluxMoments()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a25d4454a9446c7f052d4dc0b8c02b3db">chi_lua</a></li>
 <li>chiLBSWriteGroupsetAngularFlux()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a73c97de153015dbb06ea5025628211c1">chi_lua</a></li>
 <li>chiLBTSAdvanceTimeData()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#ab51b4997706125b668f1c0ac9f3b79f5">chi_lua</a></li>
@@ -183,12 +187,14 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <li>chiLogicalVolumeCreate()&#160;:&#160;<a class="el" href="d9/d32/group___lua_logic_volumes.html#gac362f65e2642b15efd6abf99d2224d54">chi_lua</a></li>
 <li>chiLogicalVolumePointSense()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a1e128899eecf4cbc9de08c42178c2801">chi_lua</a></li>
 <li>chiLogSetVerbosity()&#160;:&#160;<a class="el" href="d4/d87/group___lua_logging.html#gac4c23d141fddd0557829e6b5471262ce">chi_lua</a></li>
-<li>chiLuaTest()&#160;:&#160;<a class="el" href="d1/d85/group___lua_general_utilities.html#ga1b25d34f221bf2b4c6bdc879c703345d">chi_lua</a></li>
+<li>chiLuaTest()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a1b25d34f221bf2b4c6bdc879c703345d">chi_lua</a></li>
+<li>chiMakeObject()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a7fd9fab441fd017ee9e3a67e50369d90">chi_lua</a>, <a class="el" href="d3/dc9/namespacechi__objects_1_1lua__utils.html#a193db1acd841d263742f16cad71c8a05">chi_objects::lua_utils</a></li>
+<li>chiMakeObjectType()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a51cc37889508e0547a0b2b0629a3ed78">chi_lua</a></li>
 <li>chiMeshCreateUnpartitioned1DOrthoMesh()&#160;:&#160;<a class="el" href="d9/db8/group___lua_mesh_macros.html#gabcd0e135b1081c3b9eb6661d44fb21d7">chi_lua</a></li>
 <li>chiMeshCreateUnpartitioned2DOrthoMesh()&#160;:&#160;<a class="el" href="d9/db8/group___lua_mesh_macros.html#ga83d9d3e4a7ae7060391faefe17c1076a">chi_lua</a></li>
 <li>chiMeshCreateUnpartitioned3DOrthoMesh()&#160;:&#160;<a class="el" href="d9/db8/group___lua_mesh_macros.html#ga12dcd80ee2ab6104ba6e7142d7885221">chi_lua</a></li>
 <li>chiMeshHandlerCreate()&#160;:&#160;<a class="el" href="da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chi_lua</a></li>
-<li>chiMeshHandlerExportMeshToExodus()&#160;:&#160;<a class="el" href="da/d92/group___lua_mesh_handler.html#gaced6b42c4facef20a0c289f579146eb0">chi_lua</a></li>
+<li>chiMeshHandlerExportMeshToExodus()&#160;:&#160;<a class="el" href="da/d92/group___lua_mesh_handler.html#gaa96304d30ee9edcdbeb7362b9dcdebc3">chi_lua</a></li>
 <li>chiMeshHandlerExportMeshToObj()&#160;:&#160;<a class="el" href="da/d92/group___lua_mesh_handler.html#ga6045293a83e8b97b548860df3911d2c4">chi_lua</a></li>
 <li>chiMeshHandlerExportMeshToVTK()&#160;:&#160;<a class="el" href="da/d92/group___lua_mesh_handler.html#gae0ceeadeae53b7ac22b32f3665d1ea2a">chi_lua</a></li>
 <li>chiMeshHandlerSetCurrent()&#160;:&#160;<a class="el" href="da/d92/group___lua_mesh_handler.html#ga8b57c222c6d266eb65404417d03c336e">chi_lua</a></li>
@@ -205,15 +211,20 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <li>chiPhysicsTransportXSSet()&#160;:&#160;<a class="el" href="de/dd8/group___lua_transport_x_ss.html#ga5b6ee9dc31bfa7617f4f8e49edcc278c">chi_lua</a></li>
 <li>chiPhysicsTransportXSSetCombined()&#160;:&#160;<a class="el" href="de/dd8/group___lua_transport_x_ss.html#ga2fddfbc10bc42e35233dd05e2b61082c">chi_lua</a></li>
 <li>chiPrintToPythonSLDFESQAngularQuadrature()&#160;:&#160;<a class="el" href="de/d7d/group___lua_s_l_d_f_e_s_q.html#ga922f086ff20a1e5d4e246b253546204c">chi_lua</a></li>
-<li>chiSimTest01_FV()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a80b22258d8965c8f90184237a334d405">chi_lua</a></li>
-<li>chiSimTest02_FV()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a16cab1318a74a587402d4cdffe968309">chi_lua</a></li>
-<li>chiSimTest03_PWLC()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a06679075939764a3163cecb66fd46c13">chi_lua</a></li>
-<li>chiSimTest04_PWLC()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#abea4e2d66757b0745f109b81735d55e9">chi_lua</a></li>
-<li>chiSimTest06_WDD()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#ad6a560822424f3b3ba2d73d7f91db7d9">chi_lua</a></li>
-<li>chiSimTest91_PWLD()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#ae30dd6f5747f1f342bf51197e3778d75">chi_lua</a></li>
-<li>chiSimTest92_DSA()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a4cec898658d8dcdb6f3dc46413fff266">chi_lua</a></li>
-<li>chiSimTest93_RayTracing()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a90f1bf8db9dd03373ea54a140cd446fc">chi_lua</a></li>
-<li>chiSimTest_IP_MMS_L2error()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a710404d85c5f13265814ad097b4f29cd">chi_lua</a></li>
+<li>chiPRKGetParam()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a4624acf60a71c0fca89e95c35aaff7f8">chi_lua</a></li>
+<li>chiPRKSetParam()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a1b40b56d86983ace124f7f0a792fa173">chi_lua</a></li>
+<li>chiSimTest01_FV()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a80b22258d8965c8f90184237a334d405">chi_lua</a>, <a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#a186789930d0a3cee1cadcae192f77b3a">chi_unit_sim_tests</a></li>
+<li>chiSimTest02_FV()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a16cab1318a74a587402d4cdffe968309">chi_lua</a>, <a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#a2972eae6f7e93ea393b7eb10fcc59149">chi_unit_sim_tests</a></li>
+<li>chiSimTest03_PWLC()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a06679075939764a3163cecb66fd46c13">chi_lua</a>, <a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#a4831439c7d9ab176d7c66e9412d9ff1f">chi_unit_sim_tests</a></li>
+<li>chiSimTest04_PWLC()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#abea4e2d66757b0745f109b81735d55e9">chi_lua</a>, <a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#a6c02a60cee53aabf68b708017d3997ad">chi_unit_sim_tests</a></li>
+<li>chiSimTest06_WDD()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#ad6a560822424f3b3ba2d73d7f91db7d9">chi_lua</a>, <a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#a6c23dc497aa2f8af0fad7f2b40952024">chi_unit_sim_tests</a></li>
+<li>chiSimTest91_PWLD()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#ae30dd6f5747f1f342bf51197e3778d75">chi_lua</a>, <a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#ac9f21db3de020a527d022c0cba3b8bea">chi_unit_sim_tests</a></li>
+<li>chiSimTest92_DSA()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a4cec898658d8dcdb6f3dc46413fff266">chi_lua</a>, <a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#a6bfdc9b5ed935ad5ea51c3a82e9d88fd">chi_unit_sim_tests</a></li>
+<li>chiSimTest92b_DSA_PWLC()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a6697f0f02affc9acc9ff498276c61202">chi_lua</a>, <a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#acd2cc0349d3157ed3525072c0b25145a">chi_unit_sim_tests</a></li>
+<li>chiSimTest93_RayTracing()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a90f1bf8db9dd03373ea54a140cd446fc">chi_lua</a>, <a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#a008c82114ab2bdbce305e00ca56c1661">chi_unit_sim_tests</a></li>
+<li>chiSimTest_IP_MMS_L2error()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#a710404d85c5f13265814ad097b4f29cd">chi_lua</a>, <a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#ab1b16d8d04d5047eff5b0ac7bb46246e">chi_unit_sim_tests</a></li>
+<li>chiSolverAdvance()&#160;:&#160;<a class="el" href="dc/d4e/group___lua_solver.html#gae9893fb0a358f8fc70c0adaf25bda033">chi_lua</a></li>
+<li>chiSolverCreate()&#160;:&#160;<a class="el" href="d8/dd9/namespacechi__lua.html#ae1963661ea704c02cb729f9fbc47c1e2">chi_lua</a></li>
 <li>chiSolverExecute()&#160;:&#160;<a class="el" href="dc/d4e/group___lua_solver.html#ga28fdf6aad809b089f96c1776f699ee5c">chi_lua</a></li>
 <li>chiSolverGetFieldFunctionList()&#160;:&#160;<a class="el" href="dc/d4e/group___lua_solver.html#gafd9778eaca8f2cba9dd4b60dc9b51aa8">chi_lua</a></li>
 <li>chiSolverGetName()&#160;:&#160;<a class="el" href="dc/d4e/group___lua_solver.html#ga809364d0d36788e4674f4d669364bd39">chi_lua</a></li>
@@ -258,10 +269,12 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <li>COMPUTE_QP_DATA&#160;:&#160;<a class="el" href="d3/d84/namespacechi__math_1_1finite__element.html#a445458c6eab776b583c79f39d8e88f6ca64381e10f62f68485d9f2189b6b20b47">chi_math::finite_element</a></li>
 <li>COMPUTE_UNIT_INTEGRALS&#160;:&#160;<a class="el" href="d3/d84/namespacechi__math_1_1finite__element.html#a445458c6eab776b583c79f39d8e88f6ca2dbd9916e7104714a2effb489d7d9f5f">chi_math::finite_element</a></li>
 <li>ComputeLBF()&#160;:&#160;<a class="el" href="d0/d81/namespacechi__mesh.html#a16e8861ac0049ea5b30b57462f307491">chi_mesh</a></li>
+<li>ComputeRelativePWChange()&#160;:&#160;<a class="el" href="d0/d68/namespacechi__unit__sim__tests.html#a4ec383a71de8faee1ccf06fc95860c3a">chi_unit_sim_tests</a></li>
 <li>ConsolidateGridBlocks()&#160;:&#160;<a class="el" href="d0/d81/namespacechi__mesh.html#ac934c7d4e922881d2638f0e3c0606977">chi_mesh</a></li>
 <li>CoordinateSystemType&#160;:&#160;<a class="el" href="dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1">chi_math</a></li>
 <li>CopyGlobalVecToSTLvector()&#160;:&#160;<a class="el" href="dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">chi_math::PETScUtils</a></li>
 <li>CopyVecToSTLvector()&#160;:&#160;<a class="el" href="dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a422a92d2ae77b5a740a874c24ed48dc9">chi_math::PETScUtils</a></li>
+<li>CopyVecToSTLvectorWithGhosts()&#160;:&#160;<a class="el" href="dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a78ea9913447d96008912a4cc9f40bccb">chi_math::PETScUtils</a></li>
 <li>CreateCommonKrylovSolverSetup()&#160;:&#160;<a class="el" href="dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ab59d60d5f5daa3929e3669acdcce1b39">chi_math::PETScUtils</a></li>
 <li>CreateSquareMatrix()&#160;:&#160;<a class="el" href="dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">chi_math::PETScUtils</a></li>
 <li>CreateSweepOrder()&#160;:&#160;<a class="el" href="d7/dc7/namespacechi__mesh_1_1sweep__management.html#ad90dbc921056b0a05f15ac9cef7c068f">chi_mesh::sweep_management</a></li>
@@ -269,7 +282,7 @@ $(document).ready(function(){initNavTree('namespacemembers_c.html',''); initResi
 <li>CreateUnpartitioned2DOrthoMesh()&#160;:&#160;<a class="el" href="d0/d81/namespacechi__mesh.html#af2a8c29a2bf6594288f308cc6e68b443">chi_mesh</a></li>
 <li>CreateUnpartitioned3DOrthoMesh()&#160;:&#160;<a class="el" href="d0/d81/namespacechi__mesh.html#a8be2fe2792a86ed2e10d14229beedb5d">chi_mesh</a></li>
 <li>CreateVector()&#160;:&#160;<a class="el" href="dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ae2ebedf1cd0712f3d6e0b2047c389949">chi_math::PETScUtils</a></li>
-<li>CreateVectorWithGhosts()&#160;:&#160;<a class="el" href="dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a3431beefda260df6f2d7b723255de460">chi_math::PETScUtils</a></li>
+<li>CreateVectorWithGhosts()&#160;:&#160;<a class="el" href="dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac9e0215c641f1bb554185f50edbd1de5">chi_math::PETScUtils</a></li>
 <li>Cut3DCell()&#160;:&#160;<a class="el" href="da/d62/namespacechi__mesh_1_1mesh__cutting.html#a7ba49368e40a93b42c841f5400b6acdd">chi_mesh::mesh_cutting</a></li>
 <li>CutMeshWithPlane()&#160;:&#160;<a class="el" href="da/d62/namespacechi__mesh_1_1mesh__cutting.html#a16c4225b9bc6668530ab108a45a83811">chi_mesh::mesh_cutting</a></li>
 <li>CutPolygon()&#160;:&#160;<a class="el" href="da/d62/namespacechi__mesh_1_1mesh__cutting.html#a396e5be2e63ad7dcb85dd08148762203">chi_mesh::mesh_cutting</a></li>

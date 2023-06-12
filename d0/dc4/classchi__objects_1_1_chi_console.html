@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -84,17 +91,35 @@ $(document).ready(function(){initNavTree('d0/dc4/classchi__objects_1_1_chi_conso
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle"><div class="title">chi_objects::ChiConsole Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/daa/structchi__objects_1_1_chi_console_1_1_lua_function_registry_entry.html">LuaFunctionRegistryEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d75/structchi__objects_1_1_chi_console_1_1_lua_func_wrapper_reg_entry.html">LuaFuncWrapperRegEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ab7b5dab3007d6f56ed435c58941da419"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ab7b5dab3007d6f56ed435c58941da419">WrapperGetInParamsFunc</a> = <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a>(*)()</td></tr>
+<tr class="separator:ab7b5dab3007d6f56ed435c58941da419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3e7476709d4d03efadb639c843d4c9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a4d3e7476709d4d03efadb639c843d4c9">WrapperCallFunc</a> = <a class="el" href="../../d4/de3/classchi__objects_1_1_parameter_block.html">chi_objects::ParameterBlock</a>(*)(const <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> &amp;)</td></tr>
+<tr class="separator:a4d3e7476709d4d03efadb639c843d4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af12a0a88db77a9252e264729a1cc2239"><td class="memItemLeft" align="right" valign="top">lua_State *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#af12a0a88db77a9252e264729a1cc2239">GetConsoleState</a> ()</td></tr>
@@ -107,44 +132,126 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:addddeebd450ed7420c9bce6f4327f9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8de53cd69cbd2832b50d6ee75ce0d07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae8de53cd69cbd2832b50d6ee75ce0d07">PostMPIInfo</a> (int location_id, int number_of_processes) const</td></tr>
 <tr class="separator:ae8de53cd69cbd2832b50d6ee75ce0d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a906b47d68a0b9fbccab5e380e9459c27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a906b47d68a0b9fbccab5e380e9459c27">RegisterFunction</a> (const std::string &amp;string_name, lua_CFunction function)</td></tr>
-<tr class="separator:a906b47d68a0b9fbccab5e380e9459c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a128c47d3186e16835859e4fde3650199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a128c47d3186e16835859e4fde3650199">FlushConsole</a> ()</td></tr>
+<tr class="memdesc:a128c47d3186e16835859e4fde3650199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flushes any commands in the command buffer.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a128c47d3186e16835859e4fde3650199">More...</a><br /></td></tr>
 <tr class="separator:a128c47d3186e16835859e4fde3650199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79baa13aa82cfaa0ac463d4e01cbdfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#af79baa13aa82cfaa0ac463d4e01cbdfd">DumpRegister</a> () const</td></tr>
+<tr class="memdesc:af79baa13aa82cfaa0ac463d4e01cbdfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps the object registry to stdout.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#af79baa13aa82cfaa0ac463d4e01cbdfd">More...</a><br /></td></tr>
+<tr class="separator:af79baa13aa82cfaa0ac463d4e01cbdfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad16df9ce0d0b2427ec7159249f2ff173"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">ChiConsole</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ad16df9ce0d0b2427ec7159249f2ff173">GetInstance</a> () noexcept</td></tr>
-<tr class="separator:ad16df9ce0d0b2427ec7159249f2ff173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7510e64d1fdd71e790964748ed1db7de"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">ChiConsole</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a7510e64d1fdd71e790964748ed1db7de">GetInstance</a> () noexcept</td></tr>
+<tr class="separator:a7510e64d1fdd71e790964748ed1db7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97972d1f44ed845c524991d6b41a1cf"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae97972d1f44ed845c524991d6b41a1cf">AddFunctionToRegistryGlobalNamespace</a> (const std::string &amp;raw_name_in_lua, lua_CFunction function_ptr)</td></tr>
+<tr class="memdesc:ae97972d1f44ed845c524991d6b41a1cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a lua_CFunction to the registry.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae97972d1f44ed845c524991d6b41a1cf">More...</a><br /></td></tr>
+<tr class="separator:ae97972d1f44ed845c524991d6b41a1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203db2449e2c18dcef55aa3e122121f2"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a203db2449e2c18dcef55aa3e122121f2">AddFunctionToRegistryInNamespaceWithName</a> (lua_CFunction function_ptr, const std::string &amp;namespace_name, const std::string &amp;function_name, bool self_callable=false)</td></tr>
+<tr class="memdesc:a203db2449e2c18dcef55aa3e122121f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a lua_CFunction to the registry. With namespace-table analogy.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a203db2449e2c18dcef55aa3e122121f2">More...</a><br /></td></tr>
+<tr class="separator:a203db2449e2c18dcef55aa3e122121f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d6987d122e0b3b461ac0823530d0c9"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a30d6987d122e0b3b461ac0823530d0c9">AddWrapperToRegistryInNamespaceWithName</a> (const std::string &amp;namespace_name, const std::string &amp;name_in_lua, <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ab7b5dab3007d6f56ed435c58941da419">WrapperGetInParamsFunc</a> syntax_function, <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a4d3e7476709d4d03efadb639c843d4c9">WrapperCallFunc</a> actual_function, bool ignore_null_call_func=false)</td></tr>
+<tr class="memdesc:a30d6987d122e0b3b461ac0823530d0c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a function wrapper to the lua registry.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a30d6987d122e0b3b461ac0823530d0c9">More...</a><br /></td></tr>
+<tr class="separator:a30d6987d122e0b3b461ac0823530d0c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55ef3582af05aa78fc89b41b166d7e8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ab55ef3582af05aa78fc89b41b166d7e8">SetLuaFuncNamespaceTableStructure</a> (const std::string &amp;full_lua_name, lua_CFunction function_ptr)</td></tr>
+<tr class="memdesc:ab55ef3582af05aa78fc89b41b166d7e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a namespace structure as table.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ab55ef3582af05aa78fc89b41b166d7e8">More...</a><br /></td></tr>
+<tr class="separator:ab55ef3582af05aa78fc89b41b166d7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa972e6fc1ed2f251f958cb80156dd1fb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#aa972e6fc1ed2f251f958cb80156dd1fb">SetLuaFuncWrapperNamespaceTableStructure</a> (const std::string &amp;full_lua_name)</td></tr>
+<tr class="memdesc:aa972e6fc1ed2f251f958cb80156dd1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a namespace structure as a table, but the last entry is a function call.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#aa972e6fc1ed2f251f958cb80156dd1fb">More...</a><br /></td></tr>
+<tr class="separator:aa972e6fc1ed2f251f958cb80156dd1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ab1b0ff55aaf978e3990fdeda78626"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a22ab1b0ff55aaf978e3990fdeda78626">SetObjectNamespaceTableStructure</a> (const std::string &amp;full_lua_name)</td></tr>
+<tr class="memdesc:a22ab1b0ff55aaf978e3990fdeda78626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a namespace structure as a table, but the last entry contains a "Create" function and a type.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a22ab1b0ff55aaf978e3990fdeda78626">More...</a><br /></td></tr>
+<tr class="separator:a22ab1b0ff55aaf978e3990fdeda78626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dda6884617d1602df22f86388a1c37f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a3dda6884617d1602df22f86388a1c37f">FleshOutLuaTableStructure</a> (const std::vector&lt; std::string &gt; &amp;table_names)</td></tr>
+<tr class="memdesc:a3dda6884617d1602df22f86388a1c37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure a table structure exists for the list of table names.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a3dda6884617d1602df22f86388a1c37f">More...</a><br /></td></tr>
+<tr class="separator:a3dda6884617d1602df22f86388a1c37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9521e2aabb285d6fc1197a9dcef23fe3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a9521e2aabb285d6fc1197a9dcef23fe3">SetObjectMethodsToTable</a> (const std::string &amp;class_name, size_t handle)</td></tr>
+<tr class="memdesc:a9521e2aabb285d6fc1197a9dcef23fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches methods to a table.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a9521e2aabb285d6fc1197a9dcef23fe3">More...</a><br /></td></tr>
+<tr class="separator:a9521e2aabb285d6fc1197a9dcef23fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ca6a1d89acae42abeba138478fdf45c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/d68/structchi__objects_1_1_c_s_t_memory.html">CSTMemory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a7ca6a1d89acae42abeba138478fdf45c">GetMemoryUsage</a> ()</td></tr>
+<tr class="memdesc:a7ca6a1d89acae42abeba138478fdf45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current memory usage.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a7ca6a1d89acae42abeba138478fdf45c">More...</a><br /></td></tr>
 <tr class="separator:a7ca6a1d89acae42abeba138478fdf45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae03d74113dded872056a1dc7f81e7afb"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae03d74113dded872056a1dc7f81e7afb">GetMemoryUsageInMB</a> ()</td></tr>
+<tr class="memdesc:ae03d74113dded872056a1dc7f81e7afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current memory usage in Megabytes.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae03d74113dded872056a1dc7f81e7afb">More...</a><br /></td></tr>
 <tr class="separator:ae03d74113dded872056a1dc7f81e7afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad677f67d5f1ef5ebccdb58281f18a0d3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ad677f67d5f1ef5ebccdb58281f18a0d3">LuaWrapperCall</a> (lua_State *L)</td></tr>
+<tr class="memdesc:ad677f67d5f1ef5ebccdb58281f18a0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic entry point for wrapper calls.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ad677f67d5f1ef5ebccdb58281f18a0d3">More...</a><br /></td></tr>
+<tr class="separator:ad677f67d5f1ef5ebccdb58281f18a0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ad29abec4b79acf50ce6c0d9d10d9058d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ad29abec4b79acf50ce6c0d9d10d9058d">ChiConsole</a> () noexcept</td></tr>
 <tr class="separator:ad29abec4b79acf50ce6c0d9d10d9058d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16aba418f792e2c861a4c5c673e82a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#aa16aba418f792e2c861a4c5c673e82a0">LoadRegisteredLuaItems</a> ()</td></tr>
+<tr class="separator:aa16aba418f792e2c861a4c5c673e82a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:af2e44dc6dcf832bed37039d33bcf7361"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#af2e44dc6dcf832bed37039d33bcf7361">AddFunctionToRegistry</a> (const std::string &amp;name_in_lua, lua_CFunction function_ptr)</td></tr>
+<tr class="separator:af2e44dc6dcf832bed37039d33bcf7361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a23011bcdddf5bb5a1dbac8833320a695"><td class="memItemLeft" align="right" valign="top">lua_State *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a23011bcdddf5bb5a1dbac8833320a695">consoleState</a></td></tr>
-<tr class="memdesc:a23011bcdddf5bb5a1dbac8833320a695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to lua console state.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a23011bcdddf5bb5a1dbac8833320a695">More...</a><br /></td></tr>
-<tr class="separator:a23011bcdddf5bb5a1dbac8833320a695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f73f1fb085a7df27d5e7ac39599dbb"><td class="memItemLeft" align="right" valign="top">lua_State *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a06f73f1fb085a7df27d5e7ac39599dbb">console_state_</a></td></tr>
+<tr class="memdesc:a06f73f1fb085a7df27d5e7ac39599dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to lua console state.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a06f73f1fb085a7df27d5e7ac39599dbb">More...</a><br /></td></tr>
+<tr class="separator:a06f73f1fb085a7df27d5e7ac39599dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3e64fca6ad507bb3e2f4f6f573b3fef"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae3e64fca6ad507bb3e2f4f6f573b3fef">command_buffer_</a></td></tr>
 <tr class="memdesc:ae3e64fca6ad507bb3e2f4f6f573b3fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer of commands to execute.  <a href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ae3e64fca6ad507bb3e2f4f6f573b3fef">More...</a><br /></td></tr>
 <tr class="separator:ae3e64fca6ad507bb3e2f4f6f573b3fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a441076993d2cc832f54ccf85d6e9058e"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="../../d5/daa/structchi__objects_1_1_chi_console_1_1_lua_function_registry_entry.html">LuaFunctionRegistryEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a441076993d2cc832f54ccf85d6e9058e">lua_function_registry_</a></td></tr>
+<tr class="separator:a441076993d2cc832f54ccf85d6e9058e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabf31f3927e41d2c3ed40052f8a30479"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::vector&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#aabf31f3927e41d2c3ed40052f8a30479">class_method_registry_</a></td></tr>
+<tr class="separator:aabf31f3927e41d2c3ed40052f8a30479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79c156da1446b9ad20ebda1aba7408a0"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="../../d6/d75/structchi__objects_1_1_chi_console_1_1_lua_func_wrapper_reg_entry.html">LuaFuncWrapperRegEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a79c156da1446b9ad20ebda1aba7408a0">function_wrapper_registry_</a></td></tr>
+<tr class="separator:a79c156da1446b9ad20ebda1aba7408a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:a682bb294d5e28424de54d50346992fbc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">ChiConsole</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a682bb294d5e28424de54d50346992fbc">instance_</a></td></tr>
-<tr class="separator:a682bb294d5e28424de54d50346992fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e65f123465f43b282d4708dd8d617f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">ChiConsole</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a40e65f123465f43b282d4708dd8d617f">instance_</a></td></tr>
+<tr class="separator:a40e65f123465f43b282d4708dd8d617f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a1c90972afc822aa3ab28211f0422b5f9"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a1c90972afc822aa3ab28211f0422b5f9">::chi</a></td></tr>
+<tr class="separator:a1c90972afc822aa3ab28211f0422b5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Class for handling the console and scripting. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00019">19</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00087">87</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a4d3e7476709d4d03efadb639c843d4c9" name="a4d3e7476709d4d03efadb639c843d4c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3e7476709d4d03efadb639c843d4c9">&#9670;&nbsp;</a></span>WrapperCallFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a4d3e7476709d4d03efadb639c843d4c9">chi_objects::ChiConsole::WrapperCallFunc</a> =  <a class="el" href="../../d4/de3/classchi__objects_1_1_parameter_block.html">chi_objects::ParameterBlock</a> (*)(const <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a>&amp;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00091">91</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
+<a id="ab7b5dab3007d6f56ed435c58941da419" name="ab7b5dab3007d6f56ed435c58941da419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b5dab3007d6f56ed435c58941da419">&#9670;&nbsp;</a></span>WrapperGetInParamsFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ab7b5dab3007d6f56ed435c58941da419">chi_objects::ChiConsole::WrapperGetInParamsFunc</a> =  <a class="el" href="../../dc/dab/classchi__objects_1_1_input_parameters.html">chi_objects::InputParameters</a> (*)()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00090">90</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad29abec4b79acf50ce6c0d9d10d9058d" name="ad29abec4b79acf50ce6c0d9d10d9058d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad29abec4b79acf50ce6c0d9d10d9058d">&#9670;&nbsp;</a></span>ChiConsole()</h2>
 
@@ -169,11 +276,225 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Default constructor for the console </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d07/chi__console__constrdestr_8cpp_source.html#l00017">17</a> of file <a class="el" href="../../d6/d07/chi__console__constrdestr_8cpp_source.html">chi_console_constrdestr.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d76/chi__console__constrdestr_8cc_source.html#l00026">26</a> of file <a class="el" href="../../d2/d76/chi__console__constrdestr_8cc_source.html">chi_console_constrdestr.cc</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="af2e44dc6dcf832bed37039d33bcf7361" name="af2e44dc6dcf832bed37039d33bcf7361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e44dc6dcf832bed37039d33bcf7361">&#9670;&nbsp;</a></span>AddFunctionToRegistry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_objects::ChiConsole::AddFunctionToRegistry </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name_in_lua</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lua_CFunction&#160;</td>
+          <td class="paramname"><em>function_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Basic addition to registry. Used by the other public methods to registry a text-key to a lua function. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00064">64</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
+
+</div>
+</div>
+<a id="ae97972d1f44ed845c524991d6b41a1cf" name="ae97972d1f44ed845c524991d6b41a1cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae97972d1f44ed845c524991d6b41a1cf">&#9670;&nbsp;</a></span>AddFunctionToRegistryGlobalNamespace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char chi_objects::ChiConsole::AddFunctionToRegistryGlobalNamespace </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>raw_name_in_lua</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lua_CFunction&#160;</td>
+          <td class="paramname"><em>function_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a lua_CFunction to the registry. </p>
+<p >Adds a lua_CFunction to the registry. The registry of functions gets parsed into the lua console when <code><a class="el" href="../../d4/d35/classchi.html#a4e6b239c3512a82a18bb114f84bf22e8">chi::Initialize</a></code> is called. This particular function will strip the namespace from the the parameter <code>raw_name_in_lua</code> and cause the function to be registered in the global namespace of the lua console. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00093">93</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
+
+</div>
+</div>
+<a id="a203db2449e2c18dcef55aa3e122121f2" name="a203db2449e2c18dcef55aa3e122121f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203db2449e2c18dcef55aa3e122121f2">&#9670;&nbsp;</a></span>AddFunctionToRegistryInNamespaceWithName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char chi_objects::ChiConsole::AddFunctionToRegistryInNamespaceWithName </td>
+          <td>(</td>
+          <td class="paramtype">lua_CFunction&#160;</td>
+          <td class="paramname"><em>function_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>namespace_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>function_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>self_callable</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a lua_CFunction to the registry. With namespace-table analogy. </p>
+<p >Adds a lua_CFunction to the registry. The registry of functions gets parsed into the lua console when <code><a class="el" href="../../d4/d35/classchi.html#a4e6b239c3512a82a18bb114f84bf22e8">chi::Initialize</a></code> is called. The full path of the function will be derived from <code>namespace_name</code> + "::" + <code>function_name</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00110">110</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
+
+</div>
+</div>
+<a id="a30d6987d122e0b3b461ac0823530d0c9" name="a30d6987d122e0b3b461ac0823530d0c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30d6987d122e0b3b461ac0823530d0c9">&#9670;&nbsp;</a></span>AddWrapperToRegistryInNamespaceWithName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char chi_objects::ChiConsole::AddWrapperToRegistryInNamespaceWithName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>namespace_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name_in_lua</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#ab7b5dab3007d6f56ed435c58941da419">WrapperGetInParamsFunc</a>&#160;</td>
+          <td class="paramname"><em>syntax_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html#a4d3e7476709d4d03efadb639c843d4c9">WrapperCallFunc</a>&#160;</td>
+          <td class="paramname"><em>actual_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ignore_null_call_func</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a function wrapper to the lua registry. </p>
+<p >Wrapper functions operate with input and output parameters, essentially hiding the lua interface. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00132">132</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
+
+</div>
+</div>
+<a id="af79baa13aa82cfaa0ac463d4e01cbdfd" name="af79baa13aa82cfaa0ac463d4e01cbdfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af79baa13aa82cfaa0ac463d4e01cbdfd">&#9670;&nbsp;</a></span>DumpRegister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_objects::ChiConsole::DumpRegister </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dumps the object registry to stdout. </p>
+<p >Makes a formatted output, readible by the documentation scripts, of all the lua wrapper functions. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00354">354</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
+
+</div>
+</div>
 <a id="addddeebd450ed7420c9bce6f4327f9cd" name="addddeebd450ed7420c9bce6f4327f9cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#addddeebd450ed7420c9bce6f4327f9cd">&#9670;&nbsp;</a></span>ExecuteFile()</h2>
 
@@ -207,7 +528,39 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Executes the given file in the Lua engine. </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de7/chi__console__utilities_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../da/de7/chi__console__utilities_8cpp_source.html">chi_console_utilities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
+
+</div>
+</div>
+<a id="a3dda6884617d1602df22f86388a1c37f" name="a3dda6884617d1602df22f86388a1c37f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dda6884617d1602df22f86388a1c37f">&#9670;&nbsp;</a></span>FleshOutLuaTableStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_objects::ChiConsole::FleshOutLuaTableStructure </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>table_names</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Makes sure a table structure exists for the list of table names. </p>
+<p >Fleshes out a path in a table tree. For example, given "fee::foo::fah::koo, this routine will make sure that fee.foo.fah.koo is defined as a table tree structure. The routine will create a table structure where one is needed and leave existing ones alone.</p>
+<p >At the end of the routine the last table in the structure will be on top of the stack. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00278">278</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -225,9 +578,11 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Flushes any commands in the command buffer. </p>
 <p >This function sends the commands contained in the command_buffer to the lua state from where it is executed. These could be commands passed via the command line or loaded elsewhere. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dfd/chi__console__flushconsole_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../d2/dfd/chi__console__flushconsole_8cpp_source.html">chi_console_flushconsole.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d0b/chi__console__flushconsole_8cc_source.html#l00009">9</a> of file <a class="el" href="../../d5/d0b/chi__console__flushconsole_8cc_source.html">chi_console_flushconsole.cc</a>.</p>
 
 </div>
 </div>
@@ -254,7 +609,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00033">33</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00129">129</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
 
 </div>
 </div>
@@ -281,12 +636,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00032">32</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00128">128</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
 
 </div>
 </div>
-<a id="ad16df9ce0d0b2427ec7159249f2ff173" name="ad16df9ce0d0b2427ec7159249f2ff173"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad16df9ce0d0b2427ec7159249f2ff173">&#9670;&nbsp;</a></span>GetInstance()</h2>
+<a id="a7510e64d1fdd71e790964748ed1db7de" name="a7510e64d1fdd71e790964748ed1db7de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7510e64d1fdd71e790964748ed1db7de">&#9670;&nbsp;</a></span>GetInstance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,7 +650,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">ChiConsole</a> &amp; chi_objects::ChiConsole::GetInstance </td>
+          <td class="memname"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">chi_objects::ChiConsole</a> &amp; chi_objects::ChiConsole::GetInstance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -303,12 +658,13 @@ Static Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Access to the singleton </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00029">29</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d76/chi__console__constrdestr_8cc_source.html#l00018">18</a> of file <a class="el" href="../../d2/d76/chi__console__constrdestr_8cc_source.html">chi_console_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -334,9 +690,11 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get current memory usage. </p>
 <p >Gets the current memory usage. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d9b/chi__console__memory_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../dd/d9b/chi__console__memory_8cpp_source.html">chi_console_memory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/da9/chi__console__memory_8cc_source.html#l00013">13</a> of file <a class="el" href="../../da/da9/chi__console__memory_8cc_source.html">chi_console_memory.cc</a>.</p>
 
 </div>
 </div>
@@ -362,9 +720,70 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get current memory usage in Megabytes. </p>
 <p >Gets the current memory usage in megabytes. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d9b/chi__console__memory_8cpp_source.html#l00060">60</a> of file <a class="el" href="../../dd/d9b/chi__console__memory_8cpp_source.html">chi_console_memory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/da9/chi__console__memory_8cc_source.html#l00060">60</a> of file <a class="el" href="../../da/da9/chi__console__memory_8cc_source.html">chi_console_memory.cc</a>.</p>
+
+</div>
+</div>
+<a id="aa16aba418f792e2c861a4c5c673e82a0" name="aa16aba418f792e2c861a4c5c673e82a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa16aba418f792e2c861a4c5c673e82a0">&#9670;&nbsp;</a></span>LoadRegisteredLuaItems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_objects::ChiConsole::LoadRegisteredLuaItems </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Registers all lua items so that they are available in the console. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d76/chi__console__constrdestr_8cc_source.html#l00034">34</a> of file <a class="el" href="../../d2/d76/chi__console__constrdestr_8cc_source.html">chi_console_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="ad677f67d5f1ef5ebccdb58281f18a0d3" name="ad677f67d5f1ef5ebccdb58281f18a0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad677f67d5f1ef5ebccdb58281f18a0d3">&#9670;&nbsp;</a></span>LuaWrapperCall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_objects::ChiConsole::LuaWrapperCall </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&#160;</td>
+          <td class="paramname"><em>L</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generic entry point for wrapper calls. </p>
+<p >This function expects at least 1 parameter. The first parameter must be a string indicating the registered name of the function wrapper to call. All other parameters will be forwarded to the function wrapper. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d3e/chi__console__fwrapper__call_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d3/d3e/chi__console__fwrapper__call_8cc_source.html">chi_console_fwrapper_call.cc</a>.</p>
 
 </div>
 </div>
@@ -395,38 +814,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Pushes location id and number of processes to lua state. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de7/chi__console__utilities_8cpp_source.html#l00041">41</a> of file <a class="el" href="../../da/de7/chi__console__utilities_8cpp_source.html">chi_console_utilities.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a906b47d68a0b9fbccab5e380e9459c27" name="a906b47d68a0b9fbccab5e380e9459c27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a906b47d68a0b9fbccab5e380e9459c27">&#9670;&nbsp;</a></span>RegisterFunction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void chi_objects::ChiConsole::RegisterFunction </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>string_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">lua_CFunction&#160;</td>
-          <td class="paramname"><em>function</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Registers a lua function pointing to a c-function. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../da/de7/chi__console__utilities_8cpp_source.html#l00054">54</a> of file <a class="el" href="../../da/de7/chi__console__utilities_8cpp_source.html">chi_console_utilities.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00049">49</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
 
 </div>
 </div>
@@ -451,11 +839,206 @@ Static Private Attributes</h2></td></tr>
 <p >Wrapper to an MPI_Bcast call for an array of characters broadcast from location 0. This call is for non-home locations.</p>
 <p >Executes a string within the lua-console.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/da1/chi__console__loop_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../d9/da1/chi__console__loop_8cpp_source.html">chi_console_loop.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/da7/chi__console__loop_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d1/da7/chi__console__loop_8cc_source.html">chi_console_loop.cc</a>.</p>
+
+</div>
+</div>
+<a id="ab55ef3582af05aa78fc89b41b166d7e8" name="ab55ef3582af05aa78fc89b41b166d7e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab55ef3582af05aa78fc89b41b166d7e8">&#9670;&nbsp;</a></span>SetLuaFuncNamespaceTableStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_objects::ChiConsole::SetLuaFuncNamespaceTableStructure </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>full_lua_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lua_CFunction&#160;</td>
+          <td class="paramname"><em>function_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Formats a namespace structure as table. </p>
+<p >Sets/Forms a lua function in the state using a namespace structure. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00167">167</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
+
+</div>
+</div>
+<a id="aa972e6fc1ed2f251f958cb80156dd1fb" name="aa972e6fc1ed2f251f958cb80156dd1fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa972e6fc1ed2f251f958cb80156dd1fb">&#9670;&nbsp;</a></span>SetLuaFuncWrapperNamespaceTableStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_objects::ChiConsole::SetLuaFuncWrapperNamespaceTableStructure </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>full_lua_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Formats a namespace structure as a table, but the last entry is a function call. </p>
+<p >Sets/Forms a table structure that mimics the namespace structure of a string. For example the string "sing::sob::nook::Tigger" will be assigned a table structure <code>sing.sob.nook.Tigger = "sing::sob::nook::Tigger"</code>. Then finally assigns lua call to this table. </p>
+<p >Lambda for making a chunk</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00198">198</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
+
+</div>
+</div>
+<a id="a9521e2aabb285d6fc1197a9dcef23fe3" name="a9521e2aabb285d6fc1197a9dcef23fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9521e2aabb285d6fc1197a9dcef23fe3">&#9670;&nbsp;</a></span>SetObjectMethodsToTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_objects::ChiConsole::SetObjectMethodsToTable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>class_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attaches methods to a table. </p>
+<p >Assumes a table is on top of the stack, then loads the table with chunks that call registered methods of the class with the first argument being the object's handle. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00317">317</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
+
+</div>
+</div>
+<a id="a22ab1b0ff55aaf978e3990fdeda78626" name="a22ab1b0ff55aaf978e3990fdeda78626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ab1b0ff55aaf978e3990fdeda78626">&#9670;&nbsp;</a></span>SetObjectNamespaceTableStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_objects::ChiConsole::SetObjectNamespaceTableStructure </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>full_lua_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Formats a namespace structure as a table, but the last entry contains a "Create" function and a type. </p>
+<p >Sets/Forms a table structure that mimics the namespace structure of a string. For example the string "sing::sob::nook::Tigger" will be assigned a table structure <code>sing.sob.nook.Tigger = "sing::sob::nook::Tigger"</code>. </p>
+<p >Lambda for registering object type and creation function.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html#l00241">241</a> of file <a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a1c90972afc822aa3ab28211f0422b5f9" name="a1c90972afc822aa3ab28211f0422b5f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c90972afc822aa3ab28211f0422b5f9">&#9670;&nbsp;</a></span>::chi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../d4/d35/classchi.html">::chi</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00122">122</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="aabf31f3927e41d2c3ed40052f8a30479" name="aabf31f3927e41d2c3ed40052f8a30479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabf31f3927e41d2c3ed40052f8a30479">&#9670;&nbsp;</a></span>class_method_registry_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::vector&lt;std::string&gt; &gt; chi_objects::ChiConsole::class_method_registry_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00114">114</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
 <a id="ae3e64fca6ad507bb3e2f4f6f573b3fef" name="ae3e64fca6ad507bb3e2f4f6f573b3fef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3e64fca6ad507bb3e2f4f6f573b3fef">&#9670;&nbsp;</a></span>command_buffer_</h2>
 
@@ -478,12 +1061,12 @@ Static Private Attributes</h2></td></tr>
 
 <p>Buffer of commands to execute. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00024">24</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00109">109</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
 
 </div>
 </div>
-<a id="a23011bcdddf5bb5a1dbac8833320a695" name="a23011bcdddf5bb5a1dbac8833320a695"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23011bcdddf5bb5a1dbac8833320a695">&#9670;&nbsp;</a></span>consoleState</h2>
+<a id="a06f73f1fb085a7df27d5e7ac39599dbb" name="a06f73f1fb085a7df27d5e7ac39599dbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f73f1fb085a7df27d5e7ac39599dbb">&#9670;&nbsp;</a></span>console_state_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -492,7 +1075,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lua_State* chi_objects::ChiConsole::consoleState</td>
+          <td class="memname">lua_State* chi_objects::ChiConsole::console_state_</td>
         </tr>
       </table>
   </td>
@@ -504,12 +1087,12 @@ Static Private Attributes</h2></td></tr>
 
 <p>Pointer to lua console state. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00022">22</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00107">107</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
 
 </div>
 </div>
-<a id="a682bb294d5e28424de54d50346992fbc" name="a682bb294d5e28424de54d50346992fbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a682bb294d5e28424de54d50346992fbc">&#9670;&nbsp;</a></span>instance_</h2>
+<a id="a79c156da1446b9ad20ebda1aba7408a0" name="a79c156da1446b9ad20ebda1aba7408a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79c156da1446b9ad20ebda1aba7408a0">&#9670;&nbsp;</a></span>function_wrapper_registry_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -518,7 +1101,31 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">chi_objects::ChiConsole</a> chi_objects::ChiConsole::instance_</td>
+          <td class="memname">std::map&lt;std::string, <a class="el" href="../../d6/d75/structchi__objects_1_1_chi_console_1_1_lua_func_wrapper_reg_entry.html">LuaFuncWrapperRegEntry</a>&gt; chi_objects::ChiConsole::function_wrapper_registry_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00116">116</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
+<a id="a40e65f123465f43b282d4708dd8d617f" name="a40e65f123465f43b282d4708dd8d617f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e65f123465f43b282d4708dd8d617f">&#9670;&nbsp;</a></span>instance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/dc4/classchi__objects_1_1_chi_console.html">ChiConsole</a> chi_objects::ChiConsole::instance_</td>
         </tr>
       </table>
   </td>
@@ -528,18 +1135,42 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00025">25</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00110">110</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
+
+</div>
+</div>
+<a id="a441076993d2cc832f54ccf85d6e9058e" name="a441076993d2cc832f54ccf85d6e9058e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441076993d2cc832f54ccf85d6e9058e">&#9670;&nbsp;</a></span>lua_function_registry_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, <a class="el" href="../../d5/daa/structchi__objects_1_1_chi_console_1_1_lua_function_registry_entry.html">LuaFunctionRegistryEntry</a>&gt; chi_objects::ChiConsole::lua_function_registry_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d6d/chi__console_8h_source.html#l00112">112</a> of file <a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>framework/ChiConsole/<a class="el" href="../../d2/d6d/chi__console_8h_source.html">chi_console.h</a></li>
-<li>framework/<a class="el" href="../../d3/dd3/chi__runtime_8cc_source.html">chi_runtime.cc</a></li>
-<li>framework/ChiConsole/<a class="el" href="../../d6/d07/chi__console__constrdestr_8cpp_source.html">chi_console_constrdestr.cpp</a></li>
-<li>framework/ChiConsole/<a class="el" href="../../d2/dfd/chi__console__flushconsole_8cpp_source.html">chi_console_flushconsole.cpp</a></li>
-<li>framework/ChiConsole/<a class="el" href="../../d9/da1/chi__console__loop_8cpp_source.html">chi_console_loop.cpp</a></li>
-<li>framework/ChiConsole/<a class="el" href="../../dd/d9b/chi__console__memory_8cpp_source.html">chi_console_memory.cpp</a></li>
-<li>framework/ChiConsole/<a class="el" href="../../da/de7/chi__console__utilities_8cpp_source.html">chi_console_utilities.cpp</a></li>
+<li>framework/ChiConsole/<a class="el" href="../../d2/d76/chi__console__constrdestr_8cc_source.html">chi_console_constrdestr.cc</a></li>
+<li>framework/ChiConsole/<a class="el" href="../../d5/d0b/chi__console__flushconsole_8cc_source.html">chi_console_flushconsole.cc</a></li>
+<li>framework/ChiConsole/<a class="el" href="../../d3/d3e/chi__console__fwrapper__call_8cc_source.html">chi_console_fwrapper_call.cc</a></li>
+<li>framework/ChiConsole/<a class="el" href="../../d1/da7/chi__console__loop_8cc_source.html">chi_console_loop.cc</a></li>
+<li>framework/ChiConsole/<a class="el" href="../../da/da9/chi__console__memory_8cc_source.html">chi_console_memory.cc</a></li>
+<li>framework/ChiConsole/<a class="el" href="../../d0/d17/chi__console__utilities_8cc_source.html">chi_console_utilities.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -119,7 +126,7 @@ $(document).ready(function(){initNavTree('d5/d5d/ags__linear__solver_8h_source.h
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                  <span class="keywordtype">int</span> groupspan_first_id,</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                  <span class="keywordtype">int</span> groupspan_last_id,</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                  <span class="keywordtype">bool</span> verbose = <span class="keyword">true</span>) :</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_namespace" href="../../dc/d58/namespacechi__math.html">chi_math</a>::<a class="code hl_function" href="../../dd/d52/classchi__math_1_1_linear_solver.html#af02f4e492e7d27426c922e6943117274">LinearSolver</a>&lt;MatType,VecType,SolverType&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_namespace" href="../../dc/d58/namespacechi__math.html">chi_math</a>::<a class="code hl_function" href="../../dd/d52/classchi__math_1_1_linear_solver.html#af02f4e492e7d27426c922e6943117274">LinearSolver</a>&lt;MatType,VecType,<a class="code hl_enumeration" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a>&gt;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      (std::move(iterative_method),ags_context_ptr),</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_variable" href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#aead8c20fd5ac7acb7362f16403e56782">groupspan_first_id_</a>(groupspan_first_id),</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_variable" href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#ab5be774c7f715285901dd32faa99b192">groupspan_last_id_</a>(groupspan_last_id),</div>
@@ -183,8 +190,9 @@ $(document).ready(function(){initNavTree('d5/d5d/ags__linear__solver_8h_source.h
 <div class="ttc" id="aclasslbs_1_1_a_g_s_linear_solver_html_ae7725f17e29846d1faac24aaccabe6b3"><div class="ttname"><a href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#ae7725f17e29846d1faac24aaccabe6b3">lbs::AGSLinearSolver::Solve</a></div><div class="ttdeci">void Solve() override</div></div>
 <div class="ttc" id="aclasslbs_1_1_a_g_s_linear_solver_html_aead8c20fd5ac7acb7362f16403e56782"><div class="ttname"><a href="../../d9/df9/classlbs_1_1_a_g_s_linear_solver.html#aead8c20fd5ac7acb7362f16403e56782">lbs::AGSLinearSolver::groupspan_first_id_</a></div><div class="ttdeci">int groupspan_first_id_</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5d/ags__linear__solver_8h_source.html#l00017">ags_linear_solver.h:17</a></div></div>
 <div class="ttc" id="alinear__solver_8h_html"><div class="ttname"><a href="../../d2/d9f/linear__solver_8h.html">linear_solver.h</a></div></div>
-<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00043">chi_runtime.h:44</a></div></div>
-<div class="ttc" id="anamespacelbs_html"><div class="ttname"><a href="../../d9/d42/namespacelbs.html">lbs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de8/acceleration_8h_source.html#l00013">acceleration.h:14</a></div></div>
+<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00042">chi_runtime.h:43</a></div></div>
+<div class="ttc" id="anamespacelbs_html"><div class="ttname"><a href="../../d9/d42/namespacelbs.html">lbs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/acceleration_8cc_source.html#l00009">acceleration.cc:10</a></div></div>
+<div class="ttc" id="anamespacelbs_html_a73a31d32f485fe5e777601374615081e"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">lbs::SolverType</a></div><div class="ttdeci">SolverType</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00026">lbs_structs.h:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

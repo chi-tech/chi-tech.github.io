@@ -29,7 +29,7 @@ var classchi__diffusion_1_1_solver =
     [ "G_", "d6/d32/classchi__diffusion_1_1_solver.html#a6f18686f89fc989c42c6de9e6a6891d8", null ],
     [ "gi_", "d6/d32/classchi__diffusion_1_1_solver.html#a684d4d5f3733ee377fefdc140f92f3e3", null ],
     [ "global_dof_count_", "d6/d32/classchi__diffusion_1_1_solver.html#a9e6db5a72409c57a29e894c71d8e8211", null ],
-    [ "grid_", "d6/d32/classchi__diffusion_1_1_solver.html#a247eeaf5f10276795c0b08c0c606bdda", null ],
+    [ "grid_ptr_", "d6/d32/classchi__diffusion_1_1_solver.html#acaa68cd68af31a552ac5329f1311bc19", null ],
     [ "ierr_", "d6/d32/classchi__diffusion_1_1_solver.html#aa5a9f397b48612d40a12f8db0398b0df", null ],
     [ "ksp_", "d6/d32/classchi__diffusion_1_1_solver.html#a8bcd2449ee8d5766b05da81e8629fce9", null ],
     [ "local_dof_count_", "d6/d32/classchi__diffusion_1_1_solver.html#ab2e8078404950653891827fb626629dd", null ],

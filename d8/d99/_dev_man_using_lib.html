@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -122,7 +129,7 @@ Step 3 - Edit the cmake file to connect to Chi-Tech</h2>
 <div class="line">endif()</div>
 <div class="line">message(STATUS &quot;CHI_TECH_DIR set to ${CHI_TECH_DIR}<span class="stringliteral">&quot;)</span></div>
 <div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">include(&quot;</span>${CHI_TECH_DIR}/resources/Macros/Downstream.cmake<span class="stringliteral">&quot;)</span></div>
+<div class="line"><span class="stringliteral">include(&quot;</span>${CHI_TECH_DIR}/resources/CMakeMacros/Downstream.cmake<span class="stringliteral">&quot;)</span></div>
 <div class="line"><span class="stringliteral"></span> </div>
 <div class="line"><span class="stringliteral">set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY &quot;</span>${PROJECT_SOURCE_DIR}/lib<span class="stringliteral">&quot;)</span></div>
 <div class="line"><span class="stringliteral">set(CMAKE_LIBRARY_OUTPUT_DIRECTORY &quot;</span>${PROJECT_SOURCE_DIR}/lib<span class="stringliteral">&quot;)</span></div>
@@ -130,7 +137,11 @@ Step 3 - Edit the cmake file to connect to Chi-Tech</h2>
 <div class="line"><span class="stringliteral"></span> </div>
 <div class="line"><span class="stringliteral">file (GLOB_RECURSE SOURCES &quot;</span>*.cc<span class="stringliteral">&quot;)</span></div>
 <div class="line"><span class="stringliteral">add_executable(${TARGET} &quot;</span>${SOURCES}<span class="stringliteral">&quot;)</span></div>
-<div class="line"><span class="stringliteral">target_link_libraries(${TARGET} ${CHI_LIBS})</span></div>
+<div class="line"><span class="stringliteral">if(UNIX AND NOT APPLE)</span></div>
+<div class="line"><span class="stringliteral">    target_link_libraries(${TARGET} ${CHI_LIBS} -Wl,--whole-archive ChiLib -Wl,--no-whole-archive )</span></div>
+<div class="line"><span class="stringliteral">elseif(APPLE)</span></div>
+<div class="line"><span class="stringliteral">    target_link_libraries(${TARGET} ${CHI_LIBS} -Wl,-all_load ChiLib )</span></div>
+<div class="line"><span class="stringliteral">endif()</span></div>
 <div class="line"><span class="stringliteral"></span> </div>
 <div class="line"><span class="stringliteral">file(WRITE ${PROJECT_SOURCE_DIR}/Makefile &quot;</span>subsystem:\n<span class="stringliteral">&quot; &quot;</span>\t$(MAKE) -C chi_build \n\n<span class="stringliteral">&quot;</span></div>
 <div class="line"><span class="stringliteral">        &quot;</span>clean:\n\t$(MAKE) -C chi_build clean\n<span class="stringliteral">&quot;)</span></div>
@@ -156,11 +167,11 @@ Step 4 - Add the basic code to test.cc</h2>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="achi__tech__main_8cc_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/chi__tech__main_8cc_source.html#l00010">chi_tech_main.cc:10</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00027">chi_log.cc:27</a></div></div>
-<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
-<div class="ttc" id="aclasschi_html_a4e6b239c3512a82a18bb114f84bf22e8"><div class="ttname"><a href="../../d4/d35/classchi.html#a4e6b239c3512a82a18bb114f84bf22e8">chi::Initialize</a></div><div class="ttdeci">static int Initialize(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00136">chi_runtime.cc:136</a></div></div>
-<div class="ttc" id="aclasschi_html_a88720f743f80818b08e68716233d9051"><div class="ttname"><a href="../../d4/d35/classchi.html#a88720f743f80818b08e68716233d9051">chi::Finalize</a></div><div class="ttdeci">static void Finalize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00179">chi_runtime.cc:179</a></div></div>
-<div class="ttc" id="aclasschi_html_ad2e614f7b9733c863908ce0eeb4480f1"><div class="ttname"><a href="../../d4/d35/classchi.html#ad2e614f7b9733c863908ce0eeb4480f1">chi::RunBatch</a></div><div class="ttdeci">static int RunBatch(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00244">chi_runtime.cc:244</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00036">chi_log.cc:36</a></div></div>
+<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
+<div class="ttc" id="aclasschi_html_a4e6b239c3512a82a18bb114f84bf22e8"><div class="ttname"><a href="../../d4/d35/classchi.html#a4e6b239c3512a82a18bb114f84bf22e8">chi::Initialize</a></div><div class="ttdeci">static int Initialize(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00168">chi_runtime.cc:168</a></div></div>
+<div class="ttc" id="aclasschi_html_a88720f743f80818b08e68716233d9051"><div class="ttname"><a href="../../d4/d35/classchi.html#a88720f743f80818b08e68716233d9051">chi::Finalize</a></div><div class="ttdeci">static void Finalize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00211">chi_runtime.cc:211</a></div></div>
+<div class="ttc" id="aclasschi_html_ad2e614f7b9733c863908ce0eeb4480f1"><div class="ttname"><a href="../../d4/d35/classchi.html#ad2e614f7b9733c863908ce0eeb4480f1">chi::RunBatch</a></div><div class="ttdeci">static int RunBatch(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00276">chi_runtime.cc:276</a></div></div>
 </div><!-- fragment --><p >This code is the minimum needed to have everything available in Chi-Tech. The basic namespace access is provided via <code>#include "chi_runtime.h"</code></p>
 <p >MPI initialization and PETSc initialization is handled via the call to <code><a class="el" href="../../d4/d35/classchi.html#a4e6b239c3512a82a18bb114f84bf22e8">chi::Initialize()</a></code>.</p>
 <p >Finally all MPI and PETSc related items are destroyed via the call to <code><a class="el" href="../../d4/d35/classchi.html#a88720f743f80818b08e68716233d9051">chi::Finalize()</a></code>.</p>

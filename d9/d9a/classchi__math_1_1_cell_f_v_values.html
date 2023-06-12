@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -102,8 +109,8 @@ Inheritance diagram for chi_math::CellFVValues:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7c58960772431bc1954ff90f73a18c0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d9a/classchi__math_1_1_cell_f_v_values.html#a7c58960772431bc1954ff90f73a18c0f">CellFVValues</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#af12e42e01c1a83852ff51b3f52ed4c97">chi_mesh::MeshContinuumConstPtr</a> grid, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;cc, std::vector&lt; std::vector&lt; int &gt; &gt; face_node_mappings)</td></tr>
-<tr class="separator:a7c58960772431bc1954ff90f73a18c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad317bb187ad9603e44a52a713c6536cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d9a/classchi__math_1_1_cell_f_v_values.html#ad317bb187ad9603e44a52a713c6536cc">CellFVValues</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;cc, std::vector&lt; std::vector&lt; int &gt; &gt; face_node_mappings)</td></tr>
+<tr class="separator:ad317bb187ad9603e44a52a713c6536cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af30fa42042a74e562a2602a40a86ccc6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d9a/classchi__math_1_1_cell_f_v_values.html#af30fa42042a74e562a2602a40a86ccc6">ShapeValue</a> (int i, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;xyz) const override</td></tr>
 <tr class="separator:af30fa42042a74e562a2602a40a86ccc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd8747dc881aa76918e83f7c7cb2be9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d9a/classchi__math_1_1_cell_f_v_values.html#afd8747dc881aa76918e83f7c7cb2be9c">ShapeValues</a> (const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;xyz, std::vector&lt; double &gt; &amp;shape_values) const override</td></tr>
@@ -163,11 +170,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a70fc061067e4841ce10e697e75858aa6 inherit pro_types_classchi__math_1_1_cell_mapping"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;, double &amp;, std::vector&lt; double &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html#a70fc061067e4841ce10e697e75858aa6">VandAFunction</a></td></tr>
 <tr class="separator:a70fc061067e4841ce10e697e75858aa6 inherit pro_types_classchi__math_1_1_cell_mapping"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classchi__math_1_1_cell_mapping"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classchi__math_1_1_cell_mapping')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html">chi_math::CellMapping</a></td></tr>
-<tr class="memitem:ac3dfab96848b7ef9b77b28db5a6db56f inherit pro_methods_classchi__math_1_1_cell_mapping"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html#ac3dfab96848b7ef9b77b28db5a6db56f">CellMapping</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#af12e42e01c1a83852ff51b3f52ed4c97">chi_mesh::MeshContinuumConstPtr</a> in_grid, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;in_cell, size_t in_num_nodes, std::vector&lt; std::vector&lt; int &gt; &gt; in_face_node_mappings, const <a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html#a70fc061067e4841ce10e697e75858aa6">VandAFunction</a> &amp;volume_area_function)</td></tr>
-<tr class="separator:ac3dfab96848b7ef9b77b28db5a6db56f inherit pro_methods_classchi__math_1_1_cell_mapping"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa12e90716c5960afadb77b3a3614bf96 inherit pro_methods_classchi__math_1_1_cell_mapping"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html#aa12e90716c5960afadb77b3a3614bf96">CellMapping</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;in_grid, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;in_cell, size_t in_num_nodes, std::vector&lt; std::vector&lt; int &gt; &gt; in_face_node_mappings, const <a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html#a70fc061067e4841ce10e697e75858aa6">VandAFunction</a> &amp;volume_area_function)</td></tr>
+<tr class="separator:aa12e90716c5960afadb77b3a3614bf96 inherit pro_methods_classchi__math_1_1_cell_mapping"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classchi__math_1_1_cell_mapping"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classchi__math_1_1_cell_mapping')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html">chi_math::CellMapping</a></td></tr>
-<tr class="memitem:af3857dbf3a43b1aae086f9cde44463e1 inherit pro_attribs_classchi__math_1_1_cell_mapping"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d81/namespacechi__mesh.html#af12e42e01c1a83852ff51b3f52ed4c97">chi_mesh::MeshContinuumConstPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html#af3857dbf3a43b1aae086f9cde44463e1">grid_ptr_</a></td></tr>
-<tr class="separator:af3857dbf3a43b1aae086f9cde44463e1 inherit pro_attribs_classchi__math_1_1_cell_mapping"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0dfba43b989283a49238415e45bbad inherit pro_attribs_classchi__math_1_1_cell_mapping"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html#a9d0dfba43b989283a49238415e45bbad">ref_grid_</a></td></tr>
+<tr class="separator:a9d0dfba43b989283a49238415e45bbad inherit pro_attribs_classchi__math_1_1_cell_mapping"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe826aad18eb77ccb726f4f5a679a89a inherit pro_attribs_classchi__math_1_1_cell_mapping"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html#afe826aad18eb77ccb726f4f5a679a89a">cell_</a></td></tr>
 <tr class="separator:afe826aad18eb77ccb726f4f5a679a89a inherit pro_attribs_classchi__math_1_1_cell_mapping"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa196c7b4859f4162210952083e2de3b1 inherit pro_attribs_classchi__math_1_1_cell_mapping"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/classchi__math_1_1_cell_mapping.html#aa196c7b4859f4162210952083e2de3b1">num_nodes_</a></td></tr>
@@ -184,8 +191,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d64/fv__cellbase_8h_source.html#l00017">17</a> of file <a class="el" href="../../dd/d64/fv__cellbase_8h_source.html">fv_cellbase.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7c58960772431bc1954ff90f73a18c0f" name="a7c58960772431bc1954ff90f73a18c0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c58960772431bc1954ff90f73a18c0f">&#9670;&nbsp;</a></span>CellFVValues()</h2>
+<a id="ad317bb187ad9603e44a52a713c6536cc" name="ad317bb187ad9603e44a52a713c6536cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad317bb187ad9603e44a52a713c6536cc">&#9670;&nbsp;</a></span>CellFVValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +203,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">chi_math::CellFVValues::CellFVValues </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#af12e42e01c1a83852ff51b3f52ed4c97">chi_mesh::MeshContinuumConstPtr</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td>
           <td class="paramname"><em>grid</em>, </td>
         </tr>
         <tr>

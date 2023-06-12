@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -152,6 +159,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a086dbc1b62c5e5e48162aac8ff561abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af406d395edd6df0ea391f7136be721ea"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#af406d395edd6df0ea391f7136be721ea">DiffusionCoefficient</a> () const =0</td></tr>
 <tr class="separator:af406d395edd6df0ea391f7136be721ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a992d3f6686364a09e8ff0cf9458bb446"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#a992d3f6686364a09e8ff0cf9458bb446">SigmaTransport</a> () const =0</td></tr>
+<tr class="separator:a992d3f6686364a09e8ff0cf9458bb446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab55b2315f46d984386ee3fdb62054ec"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#aab55b2315f46d984386ee3fdb62054ec">SigmaRemoval</a> () const =0</td></tr>
 <tr class="separator:aab55b2315f46d984386ee3fdb62054ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0f63c0c77ab83d91f202e347e2ce16b"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classchi__physics_1_1_multi_group_x_s.html#af0f63c0c77ab83d91f202e347e2ce16b">SigmaSGtoG</a> () const =0</td></tr>
@@ -289,7 +298,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>The name of the file to save the cross sections to. </td></tr>
-    <tr><td class="paramname">fission_scaling</td><td>A factor to scale fission data to. This is generally equal to <img class="formulaInl" alt="$ 1/k_{eff} $" src="../../form_97.png" width="42" height="17"/>. Generally, this is done to create exactly critical cross sections for a transient initial condition. </td></tr>
+    <tr><td class="paramname">fission_scaling</td><td>A factor to scale fission data to. This is generally equal to \( 1/k_{eff} \). Generally, this is done to create exactly critical cross sections for a transient initial condition. </td></tr>
   </table>
   </dd>
 </dl>
@@ -759,6 +768,33 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="../../df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a2f8ecf452f27d49b49148451cf1454a7">chi_physics::AdjointMGXS</a>, and <a class="el" href="../../de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#aa17842a0d20edb0f6409c3345fdd38ff">chi_physics::SingleStateMGXS</a>.</p>
+
+</div>
+</div>
+<a id="a992d3f6686364a09e8ff0cf9458bb446" name="a992d3f6686364a09e8ff0cf9458bb446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a992d3f6686364a09e8ff0cf9458bb446">&#9670;&nbsp;</a></span>SigmaTransport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; double &gt; chi_physics::MultiGroupXS::SigmaTransport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#aac0522a02bd022271670e8835e1c8bff">chi_physics::AdjointMGXS</a>, and <a class="el" href="../../de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html#aa03af866e22e47c92ae2135eed46493a">chi_physics::SingleStateMGXS</a>.</p>
 
 </div>
 </div>

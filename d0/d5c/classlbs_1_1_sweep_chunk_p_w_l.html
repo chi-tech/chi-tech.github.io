@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -86,7 +93,6 @@ $(document).ready(function(){initNavTree('d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle"><div class="title">lbs::SweepChunkPWL Class Reference</div></div>
 </div><!--header-->
@@ -100,7 +106,6 @@ Inheritance diagram for lbs::SweepChunkPWL:</div>
   <img src="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.png" usemap="#lbs::SweepChunkPWL_map" alt=""/>
   <map id="lbs::SweepChunkPWL_map" name="lbs::SweepChunkPWL_map">
 <area href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html" alt="chi_mesh::sweep_management::SweepChunk" shape="rect" coords="0,0,264,24"/>
-<area href="../../d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html" alt="lbs_curvilinear::SweepChunkPWL" shape="rect" coords="0,112,264,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -122,14 +127,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af9ade5dacb173746afd008e53f903a95 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e2beaf44497a9a79268943a3e1323d7 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#a4e2beaf44497a9a79268943a3e1323d7">~SweepChunk</a> ()=default</td></tr>
 <tr class="separator:a4e2beaf44497a9a79268943a3e1323d7 inherit pub_methods_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr class="memitem:a10c38aad6c403db732562839834d6aca"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a10c38aad6c403db732562839834d6aca">b_</a></td></tr>
-<tr class="separator:a10c38aad6c403db732562839834d6aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classchi__mesh_1_1sweep__management_1_1_sweep_chunk')"><img src="../../closed.png" alt="-"/>&#160;Data Fields inherited from <a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a></td></tr>
-<tr class="memitem:ad9d08c6cc1500f7cb1fd30a117a4b181 inherit pub_attribs_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ac1ada200a40517e38aaaa61377ad35e4">MomentCallbackF</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ad9d08c6cc1500f7cb1fd30a117a4b181">moment_callbacks</a></td></tr>
-<tr class="separator:ad9d08c6cc1500f7cb1fd30a117a4b181 inherit pub_attribs_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -163,12 +160,17 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aeca986d0744323288e6bce853e794e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abeb3c81ec8ca251a36a15db646c8629e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#abeb3c81ec8ca251a36a15db646c8629e">source_</a></td></tr>
 <tr class="separator:abeb3c81ec8ca251a36a15db646c8629e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c38aad6c403db732562839834d6aca"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#a10c38aad6c403db732562839834d6aca">b_</a></td></tr>
+<tr class="separator:a10c38aad6c403db732562839834d6aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classchi__mesh_1_1sweep__management_1_1_sweep_chunk')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a></td></tr>
 <tr class="memitem:ac1ada200a40517e38aaaa61377ad35e4 inherit pub_types_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(<a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a> *sweeper, <a class="el" href="../../d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html">chi_mesh::sweep_management::AngleSet</a> *angle_set)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ac1ada200a40517e38aaaa61377ad35e4">MomentCallbackF</a></td></tr>
 <tr class="separator:ac1ada200a40517e38aaaa61377ad35e4 inherit pub_types_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classchi__mesh_1_1sweep__management_1_1_sweep_chunk')"><img src="../../closed.png" alt="-"/>&#160;Data Fields inherited from <a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a></td></tr>
+<tr class="memitem:ad9d08c6cc1500f7cb1fd30a117a4b181 inherit pub_attribs_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ac1ada200a40517e38aaaa61377ad35e4">MomentCallbackF</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ad9d08c6cc1500f7cb1fd30a117a4b181">moment_callbacks</a></td></tr>
+<tr class="separator:ad9d08c6cc1500f7cb1fd30a117a4b181 inherit pub_attribs_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classchi__mesh_1_1sweep__management_1_1_sweep_chunk')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a></td></tr>
 <tr class="memitem:a8bf1abfbf3d17eb47c90c5251c4e2541 inherit pro_methods_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#a8bf1abfbf3d17eb47c90c5251c4e2541">SetDestinationPhi</a> (std::vector&lt; double &gt; &amp;in_destination_phi)</td></tr>
 <tr class="separator:a8bf1abfbf3d17eb47c90c5251c4e2541 inherit pro_methods_classchi__mesh_1_1sweep__management_1_1_sweep_chunk"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,7 +192,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Sweep chunk for cartesian PWLD discretization. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00018">18</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00017">17</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac42d9e08c638effd7dd03ffd3f5aa7e9" name="ac42d9e08c638effd7dd03ffd3f5aa7e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac42d9e08c638effd7dd03ffd3f5aa7e9">&#9670;&nbsp;</a></span>SweepChunkPWL()</h2>
@@ -305,8 +307,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#af9ade5dacb173746afd008e53f903a95">chi_mesh::sweep_management::SweepChunk</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d2/df7/classlbs__curvilinear_1_1_sweep_chunk_p_w_l.html#a7d47503976375dabc8c48698de4e3b9c">lbs_curvilinear::SweepChunkPWL</a>.</p>
-
 <p class="definition">Definition at line <a class="el" href="../../d4/d3d/lbs__sweepchunk__pwl_8cc_source.html#l00077">77</a> of file <a class="el" href="../../d4/d3d/lbs__sweepchunk__pwl_8cc_source.html">lbs_sweepchunk_pwl.cc</a>.</p>
 
 </div>
@@ -332,7 +332,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00034">34</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00033">33</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -356,7 +356,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00035">35</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00034">34</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -380,7 +380,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00036">36</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00035">35</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -389,14 +389,22 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;std::vector&lt;double&gt; &gt; lbs::SweepChunkPWL::b_</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00040">40</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00037">37</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -420,7 +428,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00022">22</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00021">21</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -444,7 +452,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00024">24</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00023">23</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -468,7 +476,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00021">21</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00020">20</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -492,7 +500,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00026">26</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00025">25</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -516,7 +524,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00030">30</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00029">29</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -540,7 +548,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00029">29</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00028">28</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -564,7 +572,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00028">28</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00027">27</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -588,7 +596,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00025">25</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00024">24</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -612,7 +620,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00031">31</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00030">30</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -636,7 +644,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00037">37</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00036">36</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -660,7 +668,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00023">23</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00022">22</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
@@ -684,13 +692,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00027">27</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html#l00026">26</a> of file <a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>modules/LinearBoltzmannSolvers/B_DO_Solver/SweepChunks/<a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a></li>
-<li>modules/LinearBoltzmannSolvers/B_DO_Solver/SweepChunks/<a class="el" href="../../d4/d3d/lbs__sweepchunk__pwl_8cc_source.html">lbs_sweepchunk_pwl.cc</a></li>
+<li>modules/LinearBoltzmannSolvers/B_DiscreteOrdinatesSolver/SweepChunks/<a class="el" href="../../df/d60/lbs__sweepchunk__pwl_8h_source.html">lbs_sweepchunk_pwl.h</a></li>
+<li>modules/LinearBoltzmannSolvers/B_DiscreteOrdinatesSolver/SweepChunks/<a class="el" href="../../d4/d3d/lbs__sweepchunk__pwl_8cc_source.html">lbs_sweepchunk_pwl.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

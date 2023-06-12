@@ -22,6 +22,7 @@ var classchi__physics_1_1_multi_group_x_s =
     [ "SigmaRemoval", "df/db7/classchi__physics_1_1_multi_group_x_s.html#aab55b2315f46d984386ee3fdb62054ec", null ],
     [ "SigmaSGtoG", "df/db7/classchi__physics_1_1_multi_group_x_s.html#af0f63c0c77ab83d91f202e347e2ce16b", null ],
     [ "SigmaTotal", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a85faed3006b04247fcb069bb63f0b6d1", null ],
+    [ "SigmaTransport", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a992d3f6686364a09e8ff0cf9458bb446", null ],
     [ "TransferMatrices", "df/db7/classchi__physics_1_1_multi_group_x_s.html#ae68e3a4d4c262fe123e352915795f5e4", null ],
     [ "TransferMatrix", "df/db7/classchi__physics_1_1_multi_group_x_s.html#a0dc6606a15e8bff4caec74efca687538", null ]
 ];

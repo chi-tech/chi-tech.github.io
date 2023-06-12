@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -90,19 +97,20 @@ $(document).ready(function(){initNavTree('d6/d8e/chi__math__mpi_8h_source.html',
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CHITECH_CHI_MATH_MPI_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../d6/d8e/chi__math__mpi_8h.html#acbe69520b2db91355c5ed8d97a218b94">    5</a></span><span class="keyword">typedef</span> std::vector&lt;double&gt; <a class="code hl_typedef" href="../../d6/d8e/chi__math__mpi_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d58/namespacechi__math.html">chi_math</a></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="comment">//02 Vector operations</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#ac2f5482771b013b7fe8472023ebb13d5">Vec2NormMPI</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>&amp; x, MPI_Comm comm);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}<span class="comment">//namespace chi_math</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif </span><span class="comment">//CHITECH_CHI_MATH_MPI_H</span></div>
-<div class="ttc" id="achi__math_8h_html_acbe69520b2db91355c5ed8d97a218b94"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a></div><div class="ttdeci">std::vector&lt; double &gt; VecDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00015">chi_math.h:15</a></div></div>
-<div class="ttc" id="achi__math__mpi_8h_html_acbe69520b2db91355c5ed8d97a218b94"><div class="ttname"><a href="../../d6/d8e/chi__math__mpi_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a></div><div class="ttdeci">std::vector&lt; double &gt; VecDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8e/chi__math__mpi_8h_source.html#l00005">chi_math_mpi.h:5</a></div></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../d6/d8e/chi__math__mpi_8h.html#acbe69520b2db91355c5ed8d97a218b94">    6</a></span><span class="keyword">typedef</span> std::vector&lt;double&gt; <a class="code hl_typedef" href="../../d6/d8e/chi__math__mpi_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d58/namespacechi__math.html">chi_math</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="comment">//02 Vector operations</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#ac2f5482771b013b7fe8472023ebb13d5">Vec2NormMPI</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>&amp; x, MPI_Comm comm);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}<span class="comment">//namespace chi_math</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif </span><span class="comment">//CHITECH_CHI_MATH_MPI_H</span></div>
+<div class="ttc" id="achi__math_8h_html_acbe69520b2db91355c5ed8d97a218b94"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a></div><div class="ttdeci">std::vector&lt; double &gt; VecDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00012">chi_math.h:12</a></div></div>
+<div class="ttc" id="achi__math__mpi_8h_html_acbe69520b2db91355c5ed8d97a218b94"><div class="ttname"><a href="../../d6/d8e/chi__math__mpi_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a></div><div class="ttdeci">std::vector&lt; double &gt; VecDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8e/chi__math__mpi_8h_source.html#l00006">chi_math_mpi.h:6</a></div></div>
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
-<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00043">chi_runtime.h:44</a></div></div>
+<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00042">chi_runtime.h:43</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ac2f5482771b013b7fe8472023ebb13d5"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ac2f5482771b013b7fe8472023ebb13d5">chi_math::Vec2NormMPI</a></div><div class="ttdeci">double Vec2NormMPI(const VecDbl &amp;x, MPI_Comm comm)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d86/chi__math__mpi__03__vecops_8cc_source.html#l00009">chi_math_mpi_03_vecops.cc:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

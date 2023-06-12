@@ -15,5 +15,11 @@ var searchData=
   ['log_5fallverbose_5f1_12',['LOG_ALLVERBOSE_1',['../d8/d42/classchi__objects_1_1_chi_log.html#ab2a54ede9e1dd90cf0ff2d415bf6bf86a74380c6fc954aa0fce4f8c03a5d3726c',1,'chi_objects::ChiLog']]],
   ['log_5fallverbose_5f2_13',['LOG_ALLVERBOSE_2',['../d8/d42/classchi__objects_1_1_chi_log.html#ab2a54ede9e1dd90cf0ff2d415bf6bf86a0fefe980a45e426dc061fc26b08c2e25',1,'chi_objects::ChiLog']]],
   ['log_5fallwarning_14',['LOG_ALLWARNING',['../d8/d42/classchi__objects_1_1_chi_log.html#ab2a54ede9e1dd90cf0ff2d415bf6bf86a4dbb0139ac914d198905abb5ab54f8ed',1,'chi_objects::ChiLog']]],
-  ['logical_5fvolume_15',['LOGICAL_VOLUME',['../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aace05ff01e79f8a8df551a8782e79372b',1,'chi_mesh::ff_interpolation']]]
+  ['logical_5fvolume_15',['LOGICAL_VOLUME',['../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aace05ff01e79f8a8df551a8782e79372b',1,'chi_mesh::ff_interpolation']]],
+  ['lvboolean_16',['LVBOOLEAN',['../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a19f2ce5d3a3b8329b08ead2e0544e4ac',1,'chi_mesh']]],
+  ['lvrcc_17',['LVRCC',['../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a57ca75e65b137dbe42b6f4e83b622993',1,'chi_mesh']]],
+  ['lvrpp_18',['LVRPP',['../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a0faaafb69d8450f1f7424397c8ccb2e6',1,'chi_mesh']]],
+  ['lvsphere_19',['LVSPHERE',['../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a8c8a076c1703c9f3535a5225bd8d9317',1,'chi_mesh']]],
+  ['lvsphere_5forigin_20',['LVSPHERE_ORIGIN',['../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a1abb99eae8a5e20e2ba19dc2188c2a3d',1,'chi_mesh']]],
+  ['lvsurface_21',['LVSURFACE',['../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2afff94b8acb91013c95e1d4108724d543',1,'chi_mesh']]]
 ];

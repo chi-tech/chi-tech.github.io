@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oop_20vs_20functional_20programming_0',['OOP vs Functional Programming',['../d2/d60/_dev_man_o_o_pvs_func.html',1,'ProgrammerManual']]]
+  ['global_20variables_0',['Global variables',['../d6/dfd/_dev_man_global_vars.html',1,'ProgrammerManual']]]
 ];

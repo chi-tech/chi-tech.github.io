@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -104,7 +111,7 @@ Inheritance diagram for lbs::AGSContext&lt; MatType, VecType, SolverType &gt;:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a3737027d01941c9773c7c3cb8e636174"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../dd/d52/classchi__math_1_1_linear_solver.html">chi_math::LinearSolver</a>&lt; MatType, VecType, SolverType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a3737027d01941c9773c7c3cb8e636174">LinSolveBaseType</a></td></tr>
+<tr class="memitem:a3737027d01941c9773c7c3cb8e636174"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../dd/d52/classchi__math_1_1_linear_solver.html">chi_math::LinearSolver</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a3737027d01941c9773c7c3cb8e636174">LinSolveBaseType</a></td></tr>
 <tr class="separator:a3737027d01941c9773c7c3cb8e636174"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2798a3b555dbd3490106f02cf7b45cd0"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a3737027d01941c9773c7c3cb8e636174">LinSolveBaseType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a2798a3b555dbd3490106f02cf7b45cd0">LinSolveBaseTypePtr</a></td></tr>
 <tr class="separator:a2798a3b555dbd3490106f02cf7b45cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,7 +122,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aac167a8900c1211a5322a04fd4b8d95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ded5544320abf927b4c8e4247ff2299"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int64_t, int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a5ded5544320abf927b4c8e4247ff2299">SystemSize</a> ()</td></tr>
 <tr class="separator:a5ded5544320abf927b4c8e4247ff2299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f3bebead8856d2b527b4aeff7f29f5f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a8f3bebead8856d2b527b4aeff7f29f5f">SetPreconditioner</a> (SolverType &amp;solver)</td></tr>
+<tr class="memitem:a8f3bebead8856d2b527b4aeff7f29f5f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a8f3bebead8856d2b527b4aeff7f29f5f">SetPreconditioner</a> (<a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &amp;solver)</td></tr>
 <tr class="separator:a8f3bebead8856d2b527b4aeff7f29f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3d7f0a253eff587aaf504d364f399dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#aa3d7f0a253eff587aaf504d364f399dd">MatrixAction</a> (MatType &amp;matrix, VecType &amp;vector, VecType &amp;action) override</td></tr>
 <tr class="separator:aa3d7f0a253eff587aaf504d364f399dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,7 +155,7 @@ Data Fields</h2></td></tr>
 <tr class="separator:a0bdd644638bbfb58aeb14e6691f983d8 inherit pub_attribs_structchi__math_1_1_linear_solver_context"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class MatType, class VecType, class SolverType&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;class MatType, class VecType, class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a>&gt;<br />
 struct lbs::AGSContext&lt; MatType, VecType, SolverType &gt;</div>
 <p class="definition">Definition at line <a class="el" href="../../da/d1d/ags__context_8h_source.html#l00019">19</a> of file <a class="el" href="../../da/d1d/ags__context_8h_source.html">ags_context.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
@@ -158,10 +165,10 @@ struct lbs::AGSContext&lt; MatType, VecType, SolverType &gt;</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../dd/d52/classchi__math_1_1_linear_solver.html">chi_math::LinearSolver</a>&lt;MatType, VecType, SolverType&gt; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, SolverType &gt;::LinSolveBaseType</td>
+          <td class="memname">typedef <a class="el" href="../../dd/d52/classchi__math_1_1_linear_solver.html">chi_math::LinearSolver</a>&lt;MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a>&gt; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::LinSolveBaseType</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -176,10 +183,10 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a3737027d01941c9773c7c3cb8e636174">LinSolveBaseType</a>&gt; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, SolverType &gt;::LinSolveBaseTypePtr</td>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a3737027d01941c9773c7c3cb8e636174">LinSolveBaseType</a>&gt; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::LinSolveBaseTypePtr</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -195,13 +202,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, SolverType &gt;::AGSContext </td>
+          <td class="memname"><a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::AGSContext </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">LBSSolver</a> &amp;&#160;</td>
           <td class="paramname"><em>lbs_solver</em>, </td>
@@ -272,13 +279,13 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, SolverType &gt;::MatrixAction </td>
+          <td class="memname">int <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::MatrixAction </td>
           <td>(</td>
           <td class="paramtype">MatType &amp;&#160;</td>
           <td class="paramname"><em>matrix</em>, </td>
@@ -338,15 +345,15 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, SolverType &gt;::SetPreconditioner </td>
+          <td class="memname">virtual void <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SetPreconditioner </td>
           <td>(</td>
-          <td class="paramtype">SolverType &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &amp;&#160;</td>
           <td class="paramname"><em>solver</em></td><td>)</td>
           <td></td>
         </tr>
@@ -385,10 +392,10 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; int64_t, int64_t &gt; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, SolverType &gt;::SystemSize </td>
+          <td class="memname">std::pair&lt; int64_t, int64_t &gt; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::SystemSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -405,10 +412,10 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">LBSSolver</a>&amp; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, SolverType &gt;::lbs_solver_</td>
+          <td class="memname"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">LBSSolver</a>&amp; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::lbs_solver_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -423,10 +430,10 @@ template&lt;class MatType , class VecType , class SolverType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class MatType , class VecType , class SolverType &gt; </div>
+template&lt;class MatType , class VecType , class <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a2798a3b555dbd3490106f02cf7b45cd0">LinSolveBaseTypePtr</a>&gt; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, SolverType &gt;::sub_solvers_list_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html#a2798a3b555dbd3490106f02cf7b45cd0">LinSolveBaseTypePtr</a>&gt; <a class="el" href="../../d4/d2a/structlbs_1_1_a_g_s_context.html">lbs::AGSContext</a>&lt; MatType, VecType, <a class="el" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> &gt;::sub_solvers_list_</td>
         </tr>
       </table>
 </div><div class="memdoc">

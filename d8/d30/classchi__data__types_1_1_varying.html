@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -84,9 +91,11 @@ $(document).ready(function(){initNavTree('d8/d30/classchi__data__types_1_1_varyi
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle"><div class="title">chi_data_types::Varying Class Reference</div></div>
 </div><!--header-->
@@ -94,18 +103,56 @@ $(document).ready(function(){initNavTree('d8/d30/classchi__data__types_1_1_varyi
 
 <p><code>#include &lt;<a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d38/structchi__data__types_1_1_varying_1_1_is_bool.html">IsBool</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da9/structchi__data__types_1_1_varying_1_1_is_float.html">IsFloat</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9d/structchi__data__types_1_1_varying_1_1_is_integer.html">IsInteger</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc6/structchi__data__types_1_1_varying_1_1_is_signed_integer.html">IsSignedInteger</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2b/structchi__data__types_1_1_varying_1_1_is_string.html">IsString</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9f/structchi__data__types_1_1_varying_1_1_is_unsigned_integer.html">IsUnsignedInteger</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:adf93a6b8a70a7c2484a2e02d3c57d5bb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:adf93a6b8a70a7c2484a2e02d3c57d5bb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#adf93a6b8a70a7c2484a2e02d3c57d5bb">BoolType</a> = typename std::enable_if_t&lt; <a class="el" href="../../d4/d38/structchi__data__types_1_1_varying_1_1_is_bool.html">IsBool</a>&lt; T &gt;::value, T &gt;</td></tr>
+<tr class="separator:adf93a6b8a70a7c2484a2e02d3c57d5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72eda1e4d74f5efa87f18cdfd13ef986"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a72eda1e4d74f5efa87f18cdfd13ef986"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a72eda1e4d74f5efa87f18cdfd13ef986">FloatType</a> = typename std::enable_if_t&lt; <a class="el" href="../../db/da9/structchi__data__types_1_1_varying_1_1_is_float.html">IsFloat</a>&lt; T &gt;::value, T &gt;</td></tr>
+<tr class="separator:a72eda1e4d74f5efa87f18cdfd13ef986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455e2b1f93481d400a0232bed9a95c03"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a455e2b1f93481d400a0232bed9a95c03"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a455e2b1f93481d400a0232bed9a95c03">IntegerType</a> = typename std::enable_if_t&lt; <a class="el" href="../../d1/d9d/structchi__data__types_1_1_varying_1_1_is_integer.html">IsInteger</a>&lt; T &gt;::value, T &gt;</td></tr>
+<tr class="separator:a455e2b1f93481d400a0232bed9a95c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd0ed9335ac7c623c72d4e52f58d6fd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0cd0ed9335ac7c623c72d4e52f58d6fd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a0cd0ed9335ac7c623c72d4e52f58d6fd">StringType</a> = typename std::enable_if_t&lt; <a class="el" href="../../d9/d2b/structchi__data__types_1_1_varying_1_1_is_string.html">IsString</a>&lt; T &gt;::value, T &gt;</td></tr>
+<tr class="separator:a0cd0ed9335ac7c623c72d4e52f58d6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8258f44f29903c4bde45fac28531904e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8258f44f29903c4bde45fac28531904e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a8258f44f29903c4bde45fac28531904e">SignedIntegerType</a> = typename std::enable_if_t&lt; <a class="el" href="../../d7/dc6/structchi__data__types_1_1_varying_1_1_is_signed_integer.html">IsSignedInteger</a>&lt; T &gt;::value, T &gt;</td></tr>
+<tr class="separator:a8258f44f29903c4bde45fac28531904e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ba484d1ddd5638387d9cbe009ca308"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a74ba484d1ddd5638387d9cbe009ca308"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a74ba484d1ddd5638387d9cbe009ca308">UnsignedIntegerType</a> = typename std::enable_if_t&lt; <a class="el" href="../../da/d9f/structchi__data__types_1_1_varying_1_1_is_unsigned_integer.html">IsUnsignedInteger</a>&lt; T &gt;::value, T &gt;</td></tr>
+<tr class="separator:a74ba484d1ddd5638387d9cbe009ca308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:adde2b5676bcea5744eec497f88bb3aa9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:adde2b5676bcea5744eec497f88bb3aa9"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#adde2b5676bcea5744eec497f88bb3aa9">Varying</a> (const T &amp;value)</td></tr>
+<tr class="separator:adde2b5676bcea5744eec497f88bb3aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdf5527ca00d0afd4d390ca7dd19a93b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#abdf5527ca00d0afd4d390ca7dd19a93b">Varying</a> (const std::vector&lt; std::byte &gt; &amp;value)</td></tr>
 <tr class="separator:abdf5527ca00d0afd4d390ca7dd19a93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad80d59e66b840523d0c44006efccf4b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ad80d59e66b840523d0c44006efccf4b2">Varying</a> (const std::string &amp;value)</td></tr>
 <tr class="separator:ad80d59e66b840523d0c44006efccf4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3157b94028e47ce86500b652b1377a4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a3157b94028e47ce86500b652b1377a4e">Varying</a> (const bool &amp;value)</td></tr>
-<tr class="separator:a3157b94028e47ce86500b652b1377a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c0ee4e0712c29d837ab6a5ea14ba715"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a4c0ee4e0712c29d837ab6a5ea14ba715">Varying</a> (const int64_t &amp;value)</td></tr>
-<tr class="separator:a4c0ee4e0712c29d837ab6a5ea14ba715"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff7d6611f0bbe754dbfed54170733be9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#aff7d6611f0bbe754dbfed54170733be9">Varying</a> (const double &amp;value)</td></tr>
-<tr class="separator:aff7d6611f0bbe754dbfed54170733be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb75396b3988969fe4ae0d11cd996b81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#afb75396b3988969fe4ae0d11cd996b81">Varying</a> (const char *value)</td></tr>
+<tr class="separator:afb75396b3988969fe4ae0d11cd996b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9200d5368c92a1a702d3b0e0bae1993"><td class="memTemplParams" colspan="2">template&lt;std::size_t N&gt; </td></tr>
+<tr class="memitem:ac9200d5368c92a1a702d3b0e0bae1993"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ac9200d5368c92a1a702d3b0e0bae1993">Varying</a> (const char(&amp;value)[N])</td></tr>
+<tr class="separator:ac9200d5368c92a1a702d3b0e0bae1993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a523ee214be19f695aefc4367101bae12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a523ee214be19f695aefc4367101bae12">Varying</a> (const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;other)</td></tr>
 <tr class="separator:a523ee214be19f695aefc4367101bae12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ad1ebd757b603718d598f46b7c69bd3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a9ad1ebd757b603718d598f46b7c69bd3">Varying</a> (<a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&amp;other) noexcept</td></tr>
@@ -116,12 +163,42 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a43e29d9d3aa4e6b75fb71c7b34579811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8541a07f38b8b4474de4a6994d3ad13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ab8541a07f38b8b4474de4a6994d3ad13">operator=</a> (const std::string &amp;value)</td></tr>
 <tr class="separator:ab8541a07f38b8b4474de4a6994d3ad13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40c868366b54778f61faaab8b262cbec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a40c868366b54778f61faaab8b262cbec">operator=</a> (const bool &amp;value)</td></tr>
-<tr class="separator:a40c868366b54778f61faaab8b262cbec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae75d1fdabbadf93b770c711725c2f10e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ae75d1fdabbadf93b770c711725c2f10e">operator=</a> (const int64_t &amp;value)</td></tr>
-<tr class="separator:ae75d1fdabbadf93b770c711725c2f10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89ce0c5f995085e8e101f15bffa2c205"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a89ce0c5f995085e8e101f15bffa2c205">operator=</a> (const double &amp;value)</td></tr>
-<tr class="separator:a89ce0c5f995085e8e101f15bffa2c205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb9092d0d0414c14a2250f7d4683a92"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt; <a class="el" href="../../d4/d38/structchi__data__types_1_1_varying_1_1_is_bool.html">IsBool</a>&lt; T &gt;::value, bool &gt;  = true&gt; </td></tr>
+<tr class="memitem:a4cb9092d0d0414c14a2250f7d4683a92"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a4cb9092d0d0414c14a2250f7d4683a92">operator=</a> (const T &amp;value)</td></tr>
+<tr class="separator:a4cb9092d0d0414c14a2250f7d4683a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f63599cfd0b58f97758a7682a1a24d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a81f63599cfd0b58f97758a7682a1a24d">operator==</a> (const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;that) const</td></tr>
+<tr class="separator:a81f63599cfd0b58f97758a7682a1a24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19b986701aa398c68a559834b048907"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ad19b986701aa398c68a559834b048907">operator!=</a> (const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;that) const</td></tr>
+<tr class="separator:ad19b986701aa398c68a559834b048907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7728f44e37dbc05c446d0298828b3ffa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a7728f44e37dbc05c446d0298828b3ffa">operator&gt;</a> (const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;that) const</td></tr>
+<tr class="separator:a7728f44e37dbc05c446d0298828b3ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2e39465f56a5085a6bf9542e6e6288"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a5e2e39465f56a5085a6bf9542e6e6288">operator&gt;=</a> (const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;that) const</td></tr>
+<tr class="separator:a5e2e39465f56a5085a6bf9542e6e6288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238fe77faf90596cb0a4ec099845a8b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a238fe77faf90596cb0a4ec099845a8b7">operator&lt;</a> (const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;that) const</td></tr>
+<tr class="separator:a238fe77faf90596cb0a4ec099845a8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31fe30dccc14ea4cdeeb191b737fbad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ab31fe30dccc14ea4cdeeb191b737fbad">operator&lt;=</a> (const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;that) const</td></tr>
+<tr class="separator:ab31fe30dccc14ea4cdeeb191b737fbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb9092d0d0414c14a2250f7d4683a92"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt; <a class="el" href="../../d1/d9d/structchi__data__types_1_1_varying_1_1_is_integer.html">IsInteger</a>&lt; T &gt;::value, bool &gt;  = true&gt; </td></tr>
+<tr class="memitem:a4cb9092d0d0414c14a2250f7d4683a92"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a4cb9092d0d0414c14a2250f7d4683a92">operator=</a> (const T &amp;value)</td></tr>
+<tr class="separator:a4cb9092d0d0414c14a2250f7d4683a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb9092d0d0414c14a2250f7d4683a92"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt; <a class="el" href="../../db/da9/structchi__data__types_1_1_varying_1_1_is_float.html">IsFloat</a>&lt; T &gt;::value, bool &gt;  = true&gt; </td></tr>
+<tr class="memitem:a4cb9092d0d0414c14a2250f7d4683a92"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a4cb9092d0d0414c14a2250f7d4683a92">operator=</a> (const T &amp;value)</td></tr>
+<tr class="separator:a4cb9092d0d0414c14a2250f7d4683a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b31d797c26beba8c4c1ac3ecd6d341"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa5b31d797c26beba8c4c1ac3ecd6d341"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#adf93a6b8a70a7c2484a2e02d3c57d5bb">BoolType</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#aa5b31d797c26beba8c4c1ac3ecd6d341">GetValue</a> () const</td></tr>
+<tr class="separator:aa5b31d797c26beba8c4c1ac3ecd6d341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a796e7e43d6eb16a2a0809806be2fe03a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a796e7e43d6eb16a2a0809806be2fe03a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a72eda1e4d74f5efa87f18cdfd13ef986">FloatType</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a796e7e43d6eb16a2a0809806be2fe03a">GetValue</a> () const</td></tr>
+<tr class="separator:a796e7e43d6eb16a2a0809806be2fe03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2839012164ca7dfc413ace00a5f08bf"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa2839012164ca7dfc413ace00a5f08bf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a0cd0ed9335ac7c623c72d4e52f58d6fd">StringType</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#aa2839012164ca7dfc413ace00a5f08bf">GetValue</a> () const</td></tr>
+<tr class="separator:aa2839012164ca7dfc413ace00a5f08bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17e208b13abcd160218082c74371bf7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad17e208b13abcd160218082c74371bf7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a8258f44f29903c4bde45fac28531904e">SignedIntegerType</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ad17e208b13abcd160218082c74371bf7">GetValue</a> () const</td></tr>
+<tr class="separator:ad17e208b13abcd160218082c74371bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eca39e73d28c6a79d3e4f489b855681"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2eca39e73d28c6a79d3e4f489b855681"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a74ba484d1ddd5638387d9cbe009ca308">UnsignedIntegerType</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a2eca39e73d28c6a79d3e4f489b855681">GetValue</a> () const</td></tr>
+<tr class="separator:a2eca39e73d28c6a79d3e4f489b855681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9af779581c7f04606d52e80a427246ae"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a9af779581c7f04606d52e80a427246ae">StringValue</a> () const</td></tr>
 <tr class="separator:a9af779581c7f04606d52e80a427246ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8a22e36fe10aa2a1ab2dd19ed909bac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ae8a22e36fe10aa2a1ab2dd19ed909bac">BoolValue</a> () const</td></tr>
@@ -136,24 +213,38 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a59f2ec4fae0065e6f58cbc0763828c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb5375032a60562ab21ec765068b3357"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#afb5375032a60562ab21ec765068b3357">TypeName</a> () const</td></tr>
 <tr class="separator:afb5375032a60562ab21ec765068b3357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152ac443deb89bcfc769eee5cea83dda"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a152ac443deb89bcfc769eee5cea83dda">PrintStr</a> () const</td></tr>
+<tr class="separator:a152ac443deb89bcfc769eee5cea83dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc0fa89ea2158f27293180753f8bcd03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#adc0fa89ea2158f27293180753f8bcd03">~Varying</a> ()=default</td></tr>
 <tr class="separator:adc0fa89ea2158f27293180753f8bcd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2920ba6030d194009ed64a9e2e589f8f"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:a2920ba6030d194009ed64a9e2e589f8f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a2920ba6030d194009ed64a9e2e589f8f">PopulateRaw</a> (const std::string &amp;value)</td></tr>
 <tr class="separator:a2920ba6030d194009ed64a9e2e589f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab2a459dcfcbd8a445fab7ddfedc661e2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab2a459dcfcbd8a445fab7ddfedc661e2"><td class="memTemplItemLeft" align="right" valign="top">static T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ab2a459dcfcbd8a445fab7ddfedc661e2">DefaultValue</a> ()</td></tr>
+<tr class="separator:ab2a459dcfcbd8a445fab7ddfedc661e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a4ea491f8417c279b73d18baf6739d960"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4ea491f8417c279b73d18baf6739d960"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a4ea491f8417c279b73d18baf6739d960">PopulateRaw</a> (const T &amp;value)</td></tr>
 <tr class="separator:a4ea491f8417c279b73d18baf6739d960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17814ed868bc7dee5316bdac7921e1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ac17814ed868bc7dee5316bdac7921e1b">CheckTypeMatch</a> (<a class="el" href="../../d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542">VaryingDataType</a> type_A, <a class="el" href="../../d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542">VaryingDataType</a> type_B_required) const</td></tr>
+<tr class="separator:ac17814ed868bc7dee5316bdac7921e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ab036408389ec17e3e75eef9db9d9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a37ab036408389ec17e3e75eef9db9d9c">CheckDataInitialized</a> () const</td></tr>
 <tr class="separator:a37ab036408389ec17e3e75eef9db9d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a3f3901ddeed48816720e82286d8ff281"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a3f3901ddeed48816720e82286d8ff281">CheckTypeMatch</a> (<a class="el" href="../../d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542">VaryingDataType</a> type_A, <a class="el" href="../../d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542">VaryingDataType</a> type_B_required)</td></tr>
-<tr class="separator:a3f3901ddeed48816720e82286d8ff281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b02643a95524b52610c377cf51e4d40"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5b02643a95524b52610c377cf51e4d40"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#adf93a6b8a70a7c2484a2e02d3c57d5bb">BoolType</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a5b02643a95524b52610c377cf51e4d40">CastValue</a> (const T &amp;value)</td></tr>
+<tr class="separator:a5b02643a95524b52610c377cf51e4d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d2138af16791aa267d1bf2609e817a6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8d2138af16791aa267d1bf2609e817a6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a72eda1e4d74f5efa87f18cdfd13ef986">FloatType</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a8d2138af16791aa267d1bf2609e817a6">CastValue</a> (const T &amp;value)</td></tr>
+<tr class="separator:a8d2138af16791aa267d1bf2609e817a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad14debcc2be1efc9835d45c8fec1aa"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aaad14debcc2be1efc9835d45c8fec1aa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a455e2b1f93481d400a0232bed9a95c03">IntegerType</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#aaad14debcc2be1efc9835d45c8fec1aa">CastValue</a> (const T &amp;value)</td></tr>
+<tr class="separator:aaad14debcc2be1efc9835d45c8fec1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -163,15 +254,153 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a9fbc812aa5c390f8b801fbf0932b2888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a010040d72e53b3961003c912c588af82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542">VaryingDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a010040d72e53b3961003c912c588af82">type_</a> = <a class="el" href="../../d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542a6d0c9fc747131795e6e5d0c5119f12cb">VaryingDataType::VOID</a></td></tr>
 <tr class="separator:a010040d72e53b3961003c912c588af82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae02e5a40fad6f257c9949cd04fa02a8a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#ae02e5a40fad6f257c9949cd04fa02a8a">type_name_</a> = &quot;VOID&quot;</td></tr>
-<tr class="separator:ae02e5a40fad6f257c9949cd04fa02a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00013">13</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="adf93a6b8a70a7c2484a2e02d3c57d5bb" name="adf93a6b8a70a7c2484a2e02d3c57d5bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf93a6b8a70a7c2484a2e02d3c57d5bb">&#9670;&nbsp;</a></span>BoolType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#adf93a6b8a70a7c2484a2e02d3c57d5bb">chi_data_types::Varying::BoolType</a> =  typename std::enable_if_t&lt;<a class="el" href="../../d4/d38/structchi__data__types_1_1_varying_1_1_is_bool.html">IsBool</a>&lt;T&gt;::value, T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00072">72</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a72eda1e4d74f5efa87f18cdfd13ef986" name="a72eda1e4d74f5efa87f18cdfd13ef986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72eda1e4d74f5efa87f18cdfd13ef986">&#9670;&nbsp;</a></span>FloatType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a72eda1e4d74f5efa87f18cdfd13ef986">chi_data_types::Varying::FloatType</a> =  typename std::enable_if_t&lt;<a class="el" href="../../db/da9/structchi__data__types_1_1_varying_1_1_is_float.html">IsFloat</a>&lt;T&gt;::value, T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00074">74</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a455e2b1f93481d400a0232bed9a95c03" name="a455e2b1f93481d400a0232bed9a95c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455e2b1f93481d400a0232bed9a95c03">&#9670;&nbsp;</a></span>IntegerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a455e2b1f93481d400a0232bed9a95c03">chi_data_types::Varying::IntegerType</a> =  typename std::enable_if_t&lt;<a class="el" href="../../d1/d9d/structchi__data__types_1_1_varying_1_1_is_integer.html">IsInteger</a>&lt;T&gt;::value, T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00076">76</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a8258f44f29903c4bde45fac28531904e" name="a8258f44f29903c4bde45fac28531904e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8258f44f29903c4bde45fac28531904e">&#9670;&nbsp;</a></span>SignedIntegerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a8258f44f29903c4bde45fac28531904e">chi_data_types::Varying::SignedIntegerType</a> =  typename std::enable_if_t&lt;<a class="el" href="../../d7/dc6/structchi__data__types_1_1_varying_1_1_is_signed_integer.html">IsSignedInteger</a>&lt;T&gt;::value, T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00285">285</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a0cd0ed9335ac7c623c72d4e52f58d6fd" name="a0cd0ed9335ac7c623c72d4e52f58d6fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd0ed9335ac7c623c72d4e52f58d6fd">&#9670;&nbsp;</a></span>StringType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a0cd0ed9335ac7c623c72d4e52f58d6fd">chi_data_types::Varying::StringType</a> =  typename std::enable_if_t&lt;<a class="el" href="../../d9/d2b/structchi__data__types_1_1_varying_1_1_is_string.html">IsString</a>&lt;T&gt;::value, T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00283">283</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a74ba484d1ddd5638387d9cbe009ca308" name="a74ba484d1ddd5638387d9cbe009ca308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ba484d1ddd5638387d9cbe009ca308">&#9670;&nbsp;</a></span>UnsignedIntegerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a74ba484d1ddd5638387d9cbe009ca308">chi_data_types::Varying::UnsignedIntegerType</a> =  typename std::enable_if_t&lt;<a class="el" href="../../da/d9f/structchi__data__types_1_1_varying_1_1_is_unsigned_integer.html">IsUnsignedInteger</a>&lt;T&gt;::value, T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00288">288</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adde2b5676bcea5744eec497f88bb3aa9" name="adde2b5676bcea5744eec497f88bb3aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde2b5676bcea5744eec497f88bb3aa9">&#9670;&nbsp;</a></span>Varying() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_data_types::Varying::Varying </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Generalized constructor for bool, integral- and float-types. This constructor has been specialized for std::string and std::vector&lt;std::byte&gt;. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00103">103</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
 <a id="abdf5527ca00d0afd4d390ca7dd19a93b" name="abdf5527ca00d0afd4d390ca7dd19a93b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdf5527ca00d0afd4d390ca7dd19a93b">&#9670;&nbsp;</a></span>Varying() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abdf5527ca00d0afd4d390ca7dd19a93b">&#9670;&nbsp;</a></span>Varying() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,12 +424,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Constructor for an arbitrary sequence of bytes value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00037">37</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00068">68</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
 
 </div>
 </div>
 <a id="ad80d59e66b840523d0c44006efccf4b2" name="ad80d59e66b840523d0c44006efccf4b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad80d59e66b840523d0c44006efccf4b2">&#9670;&nbsp;</a></span>Varying() <span class="overload">[2/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad80d59e66b840523d0c44006efccf4b2">&#9670;&nbsp;</a></span>Varying() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,12 +453,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Constructor for a string value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00047">47</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00076">76</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
 
 </div>
 </div>
-<a id="a3157b94028e47ce86500b652b1377a4e" name="a3157b94028e47ce86500b652b1377a4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3157b94028e47ce86500b652b1377a4e">&#9670;&nbsp;</a></span>Varying() <span class="overload">[3/7]</span></h2>
+<a id="afb75396b3988969fe4ae0d11cd996b81" name="afb75396b3988969fe4ae0d11cd996b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb75396b3988969fe4ae0d11cd996b81">&#9670;&nbsp;</a></span>Varying() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,28 +469,30 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">chi_data_types::Varying::Varying </td>
           <td>(</td>
-          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Constructor for a bool value. </p>
+<p >Constructor for a string literal value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00054">54</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00125">125</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
-<a id="a4c0ee4e0712c29d837ab6a5ea14ba715" name="a4c0ee4e0712c29d837ab6a5ea14ba715"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c0ee4e0712c29d837ab6a5ea14ba715">&#9670;&nbsp;</a></span>Varying() <span class="overload">[4/7]</span></h2>
+<a id="ac9200d5368c92a1a702d3b0e0bae1993" name="ac9200d5368c92a1a702d3b0e0bae1993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9200d5368c92a1a702d3b0e0bae1993">&#9670;&nbsp;</a></span>Varying() <span class="overload">[5/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -269,49 +500,19 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">chi_data_types::Varying::Varying </td>
           <td>(</td>
-          <td class="paramtype">const int64_t &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">const char(&amp;)&#160;</td>
+          <td class="paramname"><em>value</em>[N]</td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Constructor for an integer value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00061">61</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
-
-</div>
-</div>
-<a id="aff7d6611f0bbe754dbfed54170733be9" name="aff7d6611f0bbe754dbfed54170733be9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff7d6611f0bbe754dbfed54170733be9">&#9670;&nbsp;</a></span>Varying() <span class="overload">[5/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">chi_data_types::Varying::Varying </td>
-          <td>(</td>
-          <td class="paramtype">const double &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Constructor for a floating point value. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00068">68</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00130">130</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
@@ -332,7 +533,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Copy constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00075">75</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00083">83</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
 
 </div>
 </div>
@@ -361,7 +562,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Move constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00084">84</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00091">91</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
 
 </div>
 </div>
@@ -407,7 +608,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the bool value if valid. Otherwise throws std::logic_error. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00188">188</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00146">146</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
 
 </div>
 </div>
@@ -427,7 +628,97 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the raw byte size associated with the type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00215">215</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00174">174</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+
+</div>
+</div>
+<a id="a5b02643a95524b52610c377cf51e4d40" name="a5b02643a95524b52610c377cf51e4d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b02643a95524b52610c377cf51e4d40">&#9670;&nbsp;</a></span>CastValue() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#adf93a6b8a70a7c2484a2e02d3c57d5bb">BoolType</a>&lt; T &gt; chi_data_types::Varying::CastValue </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00080">80</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a8d2138af16791aa267d1bf2609e817a6" name="a8d2138af16791aa267d1bf2609e817a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d2138af16791aa267d1bf2609e817a6">&#9670;&nbsp;</a></span>CastValue() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a72eda1e4d74f5efa87f18cdfd13ef986">FloatType</a>&lt; T &gt; chi_data_types::Varying::CastValue </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00086">86</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="aaad14debcc2be1efc9835d45c8fec1aa" name="aaad14debcc2be1efc9835d45c8fec1aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad14debcc2be1efc9835d45c8fec1aa">&#9670;&nbsp;</a></span>CastValue() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a455e2b1f93481d400a0232bed9a95c03">IntegerType</a>&lt; T &gt; chi_data_types::Varying::CastValue </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00092">92</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
@@ -455,12 +746,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Checks whether the data has been initialized. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00172">172</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00058">58</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
 
 </div>
 </div>
-<a id="a3f3901ddeed48816720e82286d8ff281" name="a3f3901ddeed48816720e82286d8ff281"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f3901ddeed48816720e82286d8ff281">&#9670;&nbsp;</a></span>CheckTypeMatch()</h2>
+<a id="ac17814ed868bc7dee5316bdac7921e1b" name="ac17814ed868bc7dee5316bdac7921e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17814ed868bc7dee5316bdac7921e1b">&#9670;&nbsp;</a></span>CheckTypeMatch()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -483,18 +774,48 @@ Private Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p >Checks if two VaryingDataType values match. Type A is matched against type B. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00161">161</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00047">47</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+
+</div>
+</div>
+<a id="ab2a459dcfcbd8a445fab7ddfedc661e2" name="ab2a459dcfcbd8a445fab7ddfedc661e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a459dcfcbd8a445fab7ddfedc661e2">&#9670;&nbsp;</a></span>DefaultValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T chi_data_types::Varying::DefaultValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns a default value for the type required. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00260">260</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
@@ -514,7 +835,157 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the float value if valid. Otherwise throws std::logic_error. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00206">206</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00164">164</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+
+</div>
+</div>
+<a id="aa5b31d797c26beba8c4c1ac3ecd6d341" name="aa5b31d797c26beba8c4c1ac3ecd6d341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5b31d797c26beba8c4c1ac3ecd6d341">&#9670;&nbsp;</a></span>GetValue() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#adf93a6b8a70a7c2484a2e02d3c57d5bb">BoolType</a>&lt; T &gt; chi_data_types::Varying::GetValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns values of type bool if able. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00293">293</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a796e7e43d6eb16a2a0809806be2fe03a" name="a796e7e43d6eb16a2a0809806be2fe03a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a796e7e43d6eb16a2a0809806be2fe03a">&#9670;&nbsp;</a></span>GetValue() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a72eda1e4d74f5efa87f18cdfd13ef986">FloatType</a>&lt; T &gt; chi_data_types::Varying::GetValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns floating point values if able. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00303">303</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="aa2839012164ca7dfc413ace00a5f08bf" name="aa2839012164ca7dfc413ace00a5f08bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2839012164ca7dfc413ace00a5f08bf">&#9670;&nbsp;</a></span>GetValue() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a0cd0ed9335ac7c623c72d4e52f58d6fd">StringType</a>&lt; T &gt; chi_data_types::Varying::GetValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns a string if able. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00315">315</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="ad17e208b13abcd160218082c74371bf7" name="ad17e208b13abcd160218082c74371bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad17e208b13abcd160218082c74371bf7">&#9670;&nbsp;</a></span>GetValue() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a8258f44f29903c4bde45fac28531904e">SignedIntegerType</a>&lt; T &gt; chi_data_types::Varying::GetValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns a signed integer if able. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00328">328</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a2eca39e73d28c6a79d3e4f489b855681" name="a2eca39e73d28c6a79d3e4f489b855681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eca39e73d28c6a79d3e4f489b855681">&#9670;&nbsp;</a></span>GetValue() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html#a74ba484d1ddd5638387d9cbe009ca308">UnsignedIntegerType</a>&lt; T &gt; chi_data_types::Varying::GetValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns an unsigned integer if able. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00340">340</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
@@ -534,75 +1005,99 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the integer value if valid. Otherwise throws std::logic_error. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00197">197</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00155">155</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
 
 </div>
 </div>
-<a id="a40c868366b54778f61faaab8b262cbec" name="a40c868366b54778f61faaab8b262cbec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40c868366b54778f61faaab8b262cbec">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/6]</span></h2>
+<a id="ad19b986701aa398c68a559834b048907" name="ad19b986701aa398c68a559834b048907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad19b986701aa398c68a559834b048907">&#9670;&nbsp;</a></span>operator!=()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">chi_data_types::Varying</a> &amp; chi_data_types::Varying::operator= </td>
+          <td class="memname">bool chi_data_types::Varying::operator!= </td>
           <td>(</td>
-          <td class="paramtype">const bool &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td>
+          <td class="paramname"><em>that</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p >Assigns a bool value. </p>
+<p >Inequality operator </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00128">128</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00185">185</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
-<a id="a89ce0c5f995085e8e101f15bffa2c205" name="a89ce0c5f995085e8e101f15bffa2c205"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89ce0c5f995085e8e101f15bffa2c205">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/6]</span></h2>
+<a id="a238fe77faf90596cb0a4ec099845a8b7" name="a238fe77faf90596cb0a4ec099845a8b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a238fe77faf90596cb0a4ec099845a8b7">&#9670;&nbsp;</a></span>operator&lt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">chi_data_types::Varying</a> &amp; chi_data_types::Varying::operator= </td>
+          <td class="memname">bool chi_data_types::Varying::operator&lt; </td>
           <td>(</td>
-          <td class="paramtype">const double &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td>
+          <td class="paramname"><em>that</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p >Assign a floating point value. </p>
+<p >Relation operators </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00148">148</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00213">213</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
-<a id="ae75d1fdabbadf93b770c711725c2f10e" name="ae75d1fdabbadf93b770c711725c2f10e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae75d1fdabbadf93b770c711725c2f10e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/6]</span></h2>
+<a id="ab31fe30dccc14ea4cdeeb191b737fbad" name="ab31fe30dccc14ea4cdeeb191b737fbad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31fe30dccc14ea4cdeeb191b737fbad">&#9670;&nbsp;</a></span>operator&lt;=()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">chi_data_types::Varying</a> &amp; chi_data_types::Varying::operator= </td>
+          <td class="memname">bool chi_data_types::Varying::operator&lt;= </td>
           <td>(</td>
-          <td class="paramtype">const int64_t &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td>
+          <td class="paramname"><em>that</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p >Assigns an integer value. </p>
+<p >Relation operators </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00138">138</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00233">233</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
 <a id="ab8541a07f38b8b4474de4a6994d3ad13" name="ab8541a07f38b8b4474de4a6994d3ad13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8541a07f38b8b4474de4a6994d3ad13">&#9670;&nbsp;</a></span>operator=() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8541a07f38b8b4474de4a6994d3ad13">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -618,12 +1113,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assigns a string value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00119">119</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00125">125</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
 
 </div>
 </div>
 <a id="a43e29d9d3aa4e6b75fb71c7b34579811" name="a43e29d9d3aa4e6b75fb71c7b34579811"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43e29d9d3aa4e6b75fb71c7b34579811">&#9670;&nbsp;</a></span>operator=() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e29d9d3aa4e6b75fb71c7b34579811">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -639,7 +1134,100 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assigns an arbitrary sequence of bytes value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00108">108</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00115">115</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+
+</div>
+</div>
+<a id="a4cb9092d0d0414c14a2250f7d4683a92" name="a4cb9092d0d0414c14a2250f7d4683a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb9092d0d0414c14a2250f7d4683a92">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , std::enable_if_t&lt; <a class="el" href="../../d4/d38/structchi__data__types_1_1_varying_1_1_is_bool.html">IsBool</a>&lt; T &gt;::value, bool &gt;  = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp; chi_data_types::Varying::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Assigns a bool value. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00154">154</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a4cb9092d0d0414c14a2250f7d4683a92" name="a4cb9092d0d0414c14a2250f7d4683a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb9092d0d0414c14a2250f7d4683a92">&#9670;&nbsp;</a></span>operator=() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , std::enable_if_t&lt; <a class="el" href="../../d1/d9d/structchi__data__types_1_1_varying_1_1_is_integer.html">IsInteger</a>&lt; T &gt;::value, bool &gt;  = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp; chi_data_types::Varying::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Assigns an integer value. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00240">240</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a4cb9092d0d0414c14a2250f7d4683a92" name="a4cb9092d0d0414c14a2250f7d4683a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb9092d0d0414c14a2250f7d4683a92">&#9670;&nbsp;</a></span>operator=() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , std::enable_if_t&lt; <a class="el" href="../../db/da9/structchi__data__types_1_1_varying_1_1_is_float.html">IsFloat</a>&lt; T &gt;::value, bool &gt;  = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp; chi_data_types::Varying::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Assign a floating point value. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00250">250</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
@@ -660,7 +1248,94 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assignment operator. i.e., type_A = type_B </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00093">93</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00100">100</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+
+</div>
+</div>
+<a id="a81f63599cfd0b58f97758a7682a1a24d" name="a81f63599cfd0b58f97758a7682a1a24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f63599cfd0b58f97758a7682a1a24d">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chi_data_types::Varying::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td>
+          <td class="paramname"><em>that</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Equality operator </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00163">163</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a7728f44e37dbc05c446d0298828b3ffa" name="a7728f44e37dbc05c446d0298828b3ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7728f44e37dbc05c446d0298828b3ffa">&#9670;&nbsp;</a></span>operator&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chi_data_types::Varying::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td>
+          <td class="paramname"><em>that</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Relation operators </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00188">188</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+
+</div>
+</div>
+<a id="a5e2e39465f56a5085a6bf9542e6e6288" name="a5e2e39465f56a5085a6bf9542e6e6288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e2e39465f56a5085a6bf9542e6e6288">&#9670;&nbsp;</a></span>operator&gt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chi_data_types::Varying::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d30/classchi__data__types_1_1_varying.html">Varying</a> &amp;&#160;</td>
+          <td class="paramname"><em>that</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Relation operators </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00208">208</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
@@ -683,7 +1358,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p >PopulateRaw template specialization for std::string. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00024">24</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00033">33</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
 
 </div>
 </div>
@@ -718,6 +1393,26 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a152ac443deb89bcfc769eee5cea83dda" name="a152ac443deb89bcfc769eee5cea83dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152ac443deb89bcfc769eee5cea83dda">&#9670;&nbsp;</a></span>PrintStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string chi_data_types::Varying::PrintStr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns a string value for the value. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00178">178</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+
+</div>
+</div>
 <a id="a9af779581c7f04606d52e80a427246ae" name="a9af779581c7f04606d52e80a427246ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9af779581c7f04606d52e80a427246ae">&#9670;&nbsp;</a></span>StringValue()</h2>
 
@@ -734,7 +1429,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p >Returns the string value if valid. Otherwise throws std::logic_error. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00179">179</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d57/varying_8cc_source.html#l00135">135</a> of file <a class="el" href="../../d5/d57/varying_8cc_source.html">varying.cc</a>.</p>
 
 </div>
 </div>
@@ -762,7 +1457,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p >Returns the current-type of the variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00098">98</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00368">368</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
@@ -790,7 +1485,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p >Returns the string type name of the type. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00100">100</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00370">370</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>
@@ -867,30 +1562,6 @@ template&lt;typename T &gt; </div>
 <p >Type specification </p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00021">21</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
-
-</div>
-</div>
-<a id="ae02e5a40fad6f257c9949cd04fa02a8a" name="ae02e5a40fad6f257c9949cd04fa02a8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae02e5a40fad6f257c9949cd04fa02a8a">&#9670;&nbsp;</a></span>type_name_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string chi_data_types::Varying::type_name_ = &quot;VOID&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../de/d5d/varying_8h_source.html#l00022">22</a> of file <a class="el" href="../../de/d5d/varying_8h_source.html">varying.h</a>.</p>
 
 </div>
 </div>

@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -85,11 +92,13 @@ $(document).ready(function(){initNavTree('dc/d40/chi__math__time__stepping_8h.ht
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">chi_math_time_stepping.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+</div>
 <p><a href="../../dc/d40/chi__math__time__stepping_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -99,10 +108,23 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a64a92566f482ac6f5e1fecbfedd54127"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">chi_math::SteppingMethod</a> { <a class="el" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a3465588bedb02dfcefcc726625308fb3">chi_math::BACKWARD_EULER</a> = 0
-, <a class="el" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ac8a0bea4cc96e12ed1fedd9695c99b81">chi_math::CRANK_NICHOLSON</a> = 1
+<tr class="memitem:a64a92566f482ac6f5e1fecbfedd54127"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127">chi_math::SteppingMethod</a> { <br />
+&#160;&#160;<a class="el" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ab50339a10e1de285ac99d4c3990b8693">chi_math::NONE</a> = 0
+, <a class="el" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127aa6748c4e56da087a2e6ff9f90eed769d">chi_math::EXPLICIT_EULER</a> = 1
+, <a class="el" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a0cd0003c0d1211c26f34a7bac8e4fcf4">chi_math::IMPLICIT_EULER</a> = 2
+, <a class="el" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127a689ac4e1be37d17acd845c23f1a62609">chi_math::CRANK_NICOLSON</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="../../dc/d58/namespacechi__math.html#a64a92566f482ac6f5e1fecbfedd54127ab6345f8ea30c2889b98ec2dfc3144f2d">chi_math::THETA_SCHEME</a> = 4
+<br />
  }</td></tr>
 <tr class="separator:a64a92566f482ac6f5e1fecbfedd54127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa376a9a0bc13d90c0252ff6d8cc8a23e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#aa376a9a0bc13d90c0252ff6d8cc8a23e">chi_math::SteppingMethodStringName</a> (SteppingMethod method)</td></tr>
+<tr class="separator:aa376a9a0bc13d90c0252ff6d8cc8a23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee64d8bcac438062cfbdb793fdd60c8"><td class="memItemLeft" align="right" valign="top">SteppingMethod&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a4ee64d8bcac438062cfbdb793fdd60c8">chi_math::SteppingMethodFromString</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a4ee64d8bcac438062cfbdb793fdd60c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

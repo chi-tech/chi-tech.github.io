@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -98,86 +105,91 @@ $(document).ready(function(){initNavTree('d8/d69/chi__grid__vtk__utils__04__writ
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vtkXMLUnstructuredGridWriter.h&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vtkXMLPUnstructuredGridWriter.h&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/**Uploads vertices and cells to an unstructured grid. This routine</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * also uploads cell material ids (sub-domain ids) and partition ids.*/</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d0/d81/namespacechi__mesh.html#a91ecdd287c2aa7597234e3816196e8fa">   16</a></span><a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkUnstructuredGrid&gt;</a> <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a91ecdd287c2aa7597234e3816196e8fa">chi_mesh::</a></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a91ecdd287c2aa7597234e3816196e8fa">  PrepareVtkUnstructuredGrid</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>&amp; grid)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="comment">//============================================= Instantiate VTK items</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkUnstructuredGrid&gt;</a>         ugrid;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkPoints&gt;</a>                   points;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkIntArray&gt;</a>                 material_array;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkUnsignedIntArray&gt;</a>         partition_id_array;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="comment">//============================================= Set names</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  material_array-&gt;SetName(<span class="stringliteral">&quot;Material&quot;</span>);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  partition_id_array-&gt;SetName(<span class="stringliteral">&quot;Partition&quot;</span>);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/**Uploads vertices and cells to an unstructured grid. This routine</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * also uploads cell material ids (sub-domain ids) and partition ids.*/</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d0/d81/namespacechi__mesh.html#a91ecdd287c2aa7597234e3816196e8fa">   18</a></span><a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkUnstructuredGrid&gt;</a> <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a91ecdd287c2aa7597234e3816196e8fa">chi_mesh::</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a91ecdd287c2aa7597234e3816196e8fa">  PrepareVtkUnstructuredGrid</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>&amp; grid)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">//============================================= Instantiate VTK items</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkUnstructuredGrid&gt;</a>         ugrid;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkPoints&gt;</a>                   points;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkIntArray&gt;</a>                 material_array;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkUnsignedIntArray&gt;</a>         partition_id_array;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  points-&gt;SetDataType(VTK_DOUBLE);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="comment">//############################################# Populate cell information</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  int64_t node_count=0;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid.<a class="code hl_variable" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">local_cells</a>)</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#ab106f755376d57a95d8c1e6ad2f681d7">chi_mesh::UploadCellGeometryDiscontinuous</a>(grid, cell, node_count, points, ugrid);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    material_array-&gt;InsertNextValue(cell.material_id_);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    partition_id_array-&gt;InsertNextValue(cell.partition_id_);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  }<span class="comment">//for local cells</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  ugrid-&gt;SetPoints(points);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  ugrid-&gt;GetCellData()-&gt;AddArray(material_array);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  ugrid-&gt;GetCellData()-&gt;AddArray(partition_id_array);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordflow">return</span> ugrid;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">/**Writes an unstructured grid to files (.pvtu and .vtu).*/</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f">   48</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f">chi_mesh::WritePVTUFiles</a>(<a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkUnstructuredGrid&gt;</a> &amp;ugrid,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                              <span class="keyword">const</span> std::string&amp; file_base_name)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="comment">//============================================= Construct file name</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  std::string base_filename     = std::string(file_base_name);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  std::string location_filename = base_filename +</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                  std::string(<span class="stringliteral">&quot;_&quot;</span>) +</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                                  std::to_string(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id) +</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                                  std::string(<span class="stringliteral">&quot;.vtu&quot;</span>);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">//============================================= Write master file</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id == 0)</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::string pvtu_file_name = base_filename + std::string(<span class="stringliteral">&quot;.pvtu&quot;</span>);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">auto</span> pgrid_writer = <a class="code hl_class" href="../../d5/d8c/classvtk_smart_pointer.html">vtkSmartPointer&lt;vtkXMLPUnstructuredGridWriter&gt;::New</a>();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    pgrid_writer-&gt;EncodeAppendedDataOff();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    pgrid_writer-&gt;SetFileName(pvtu_file_name.c_str());</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    pgrid_writer-&gt;SetNumberOfPieces(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.process_count);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    pgrid_writer-&gt;SetStartPiece(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    pgrid_writer-&gt;SetEndPiece(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.process_count-1);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    pgrid_writer-&gt;SetInputData(ugrid);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    pgrid_writer-&gt;Write();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  MPI_Barrier(MPI_COMM_WORLD);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="comment">//============================================= Set names</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  material_array-&gt;SetName(<span class="stringliteral">&quot;Material&quot;</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  partition_id_array-&gt;SetName(<span class="stringliteral">&quot;Partition&quot;</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="comment">//############################################# Populate cell information</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  int64_t node_count=0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid.<a class="code hl_variable" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">local_cells</a>)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#ab106f755376d57a95d8c1e6ad2f681d7">chi_mesh::UploadCellGeometryDiscontinuous</a>(grid, cell, node_count, points, ugrid);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    material_array-&gt;InsertNextValue(cell.material_id_);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    partition_id_array-&gt;InsertNextValue(cell.partition_id_);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  }<span class="comment">//for local cells</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  ugrid-&gt;SetPoints(points);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  ugrid-&gt;GetCellData()-&gt;AddArray(material_array);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  ugrid-&gt;GetCellData()-&gt;AddArray(partition_id_array);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">return</span> ugrid;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">/**Writes an unstructured grid to files (.pvtu and .vtu).*/</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f">   52</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f">chi_mesh::WritePVTUFiles</a>(<a class="code hl_class" href="../../db/ddd/classvtk_new.html">vtkNew&lt;vtkUnstructuredGrid&gt;</a> &amp;ugrid,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                              <span class="keyword">const</span> std::string&amp; file_base_name)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">//============================================= Construct file name</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  std::string base_filename     = std::string(file_base_name);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  std::string location_filename = base_filename +</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                  std::string(<span class="stringliteral">&quot;_&quot;</span>) +</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                                  std::to_string(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id) +</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                                  std::string(<span class="stringliteral">&quot;.vtu&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="comment">//============================================= Write master file</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id == 0)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::string pvtu_file_name = base_filename + std::string(<span class="stringliteral">&quot;.pvtu&quot;</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">auto</span> pgrid_writer = <a class="code hl_class" href="../../d5/d8c/classvtk_smart_pointer.html">vtkSmartPointer&lt;vtkXMLPUnstructuredGridWriter&gt;::New</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    pgrid_writer-&gt;EncodeAppendedDataOff();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    pgrid_writer-&gt;SetFileName(pvtu_file_name.c_str());</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    pgrid_writer-&gt;SetNumberOfPieces(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.process_count);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    pgrid_writer-&gt;SetStartPiece(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    pgrid_writer-&gt;SetEndPiece(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.process_count-1);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    pgrid_writer-&gt;SetInputData(ugrid);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="comment">//============================================= Serial output each piece</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keyword">auto</span> grid_writer = <a class="code hl_class" href="../../d5/d8c/classvtk_smart_pointer.html">vtkSmartPointer&lt;vtkXMLUnstructuredGridWriter&gt;::New</a>();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  grid_writer-&gt;SetInputData(ugrid);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  grid_writer-&gt;SetFileName(location_filename.c_str());</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  grid_writer-&gt;Write();</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    pgrid_writer-&gt;Write();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  MPI_Barrier(MPI_COMM_WORLD);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="comment">//============================================= Serial output each piece</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keyword">auto</span> grid_writer = <a class="code hl_class" href="../../d5/d8c/classvtk_smart_pointer.html">vtkSmartPointer&lt;vtkXMLUnstructuredGridWriter&gt;::New</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  grid_writer-&gt;SetInputData(ugrid);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  grid_writer-&gt;SetFileName(location_filename.c_str());</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  grid_writer-&gt;Write();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
 <div class="ttc" id="achi__grid__vtk__utils_8h_html"><div class="ttname"><a href="../../dd/d9b/chi__grid__vtk__utils_8h.html">chi_grid_vtk_utils.h</a></div></div>
 <div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00033">chi_meshcontinuum.h:34</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a227b26a2cc0e920fff45d31ed171e9cc"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">chi_mesh::MeshContinuum::local_cells</a></div><div class="ttdeci">LocalCellHandler local_cells</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00048">chi_meshcontinuum.h:48</a></div></div>
-<div class="ttc" id="aclasschi_html_a2457fed74471fae43ed8d6c5e91378fd"><div class="ttname"><a href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a></div><div class="ttdeci">static chi_objects::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00067">chi_runtime.h:67</a></div></div>
+<div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00034">chi_meshcontinuum.h:35</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a227b26a2cc0e920fff45d31ed171e9cc"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">chi_mesh::MeshContinuum::local_cells</a></div><div class="ttdeci">LocalCellHandler local_cells</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00049">chi_meshcontinuum.h:49</a></div></div>
+<div class="ttc" id="aclasschi_html_a2457fed74471fae43ed8d6c5e91378fd"><div class="ttname"><a href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a></div><div class="ttdeci">static chi_objects::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00072">chi_runtime.h:72</a></div></div>
 <div class="ttc" id="aclassvtk_new_html"><div class="ttname"><a href="../../db/ddd/classvtk_new.html">vtkNew</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d9b/chi__grid__vtk__utils_8h_source.html#l00010">chi_grid_vtk_utils.h:10</a></div></div>
 <div class="ttc" id="aclassvtk_smart_pointer_html"><div class="ttname"><a href="../../d5/d8c/classvtk_smart_pointer.html">vtkSmartPointer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d9b/chi__grid__vtk__utils_8h_source.html#l00014">chi_grid_vtk_utils.h:14</a></div></div>
-<div class="ttc" id="anamespacechi__mesh_html_a807675dab75b7ae6777ba6503315b65f"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f">chi_mesh::WritePVTUFiles</a></div><div class="ttdeci">void WritePVTUFiles(vtkNew&lt; vtkUnstructuredGrid &gt; &amp;ugrid, const std::string &amp;file_base_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d69/chi__grid__vtk__utils__04__writing_8cc_source.html#l00048">chi_grid_vtk_utils_04_writing.cc:48</a></div></div>
-<div class="ttc" id="anamespacechi__mesh_html_a91ecdd287c2aa7597234e3816196e8fa"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a91ecdd287c2aa7597234e3816196e8fa">chi_mesh::PrepareVtkUnstructuredGrid</a></div><div class="ttdeci">vtkNew&lt; vtkUnstructuredGrid &gt; PrepareVtkUnstructuredGrid(const chi_mesh::MeshContinuum &amp;grid)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d69/chi__grid__vtk__utils__04__writing_8cc_source.html#l00016">chi_grid_vtk_utils_04_writing.cc:17</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_a807675dab75b7ae6777ba6503315b65f"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f">chi_mesh::WritePVTUFiles</a></div><div class="ttdeci">void WritePVTUFiles(vtkNew&lt; vtkUnstructuredGrid &gt; &amp;ugrid, const std::string &amp;file_base_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d69/chi__grid__vtk__utils__04__writing_8cc_source.html#l00052">chi_grid_vtk_utils_04_writing.cc:52</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html_a91ecdd287c2aa7597234e3816196e8fa"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a91ecdd287c2aa7597234e3816196e8fa">chi_mesh::PrepareVtkUnstructuredGrid</a></div><div class="ttdeci">vtkNew&lt; vtkUnstructuredGrid &gt; PrepareVtkUnstructuredGrid(const chi_mesh::MeshContinuum &amp;grid)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d69/chi__grid__vtk__utils__04__writing_8cc_source.html#l00018">chi_grid_vtk_utils_04_writing.cc:19</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ab106f755376d57a95d8c1e6ad2f681d7"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ab106f755376d57a95d8c1e6ad2f681d7">chi_mesh::UploadCellGeometryDiscontinuous</a></div><div class="ttdeci">void UploadCellGeometryDiscontinuous(const chi_mesh::MeshContinuum &amp;grid, const chi_mesh::Cell &amp;cell, int64_t &amp;node_counter, vtkNew&lt; vtkPoints &gt; &amp;points, vtkNew&lt; vtkUnstructuredGrid &gt; &amp;ugrid)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d42/chi__grid__vtk__utils__00__celluploading_8cc_source.html#l00010">chi_grid_vtk_utils_00_celluploading.cc:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

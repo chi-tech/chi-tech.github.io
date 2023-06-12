@@ -44,6 +44,11 @@ var lbs__structs_8h =
       [ "PHI_OLD", "d9/dc3/lbs__structs_8h.html#add11e6bdb0475d616eaae76aef5dad8ea0e110f98d5740fc6704bef762626d641", null ],
       [ "PHI_NEW", "d9/dc3/lbs__structs_8h.html#add11e6bdb0475d616eaae76aef5dad8ea1bfc566f435e96f3c87f45895bd59609", null ]
     ] ],
+    [ "SolverType", "d9/dc3/lbs__structs_8h.html#a73a31d32f485fe5e777601374615081e", [
+      [ "DISCRETE_ORDINATES", "d9/dc3/lbs__structs_8h.html#a73a31d32f485fe5e777601374615081eaadcd6eda1c7078c09d418d78fcba025b", null ],
+      [ "DIFFUSION_DFEM", "d9/dc3/lbs__structs_8h.html#a73a31d32f485fe5e777601374615081eae4c7b01f9c10fa591f5035b122e57789", null ],
+      [ "DIFFUSION_CFEM", "d9/dc3/lbs__structs_8h.html#a73a31d32f485fe5e777601374615081ea157c78d18654aad4e026722cfd7e4a9f", null ]
+    ] ],
     [ "SourceFlags", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6", [
       [ "NO_FLAGS_SET", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6a3fb66029623131c9b0330ccc721fe34f", null ],
       [ "APPLY_FIXED_SOURCES", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6a65857a6d05b03635d7c5bcfbe082962e", null ],

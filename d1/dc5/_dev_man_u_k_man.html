@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -119,13 +126,13 @@ Introduction</h1>
 <img src="../../UkManVertsNodes.png" alt="" width="600px"/>
 <div class="caption">
 Figure 1: Cells, vertices and nodes.</div></div>
-<p >Where degrees-of-freedom differ from nodes is that each node can be stacked with a number of unknowns, e.g., one might have to solve a number of physical variables in a multiphysics simulation involving 2D velocity, <img class="formulaInl" alt="$ u_x $" src="../../form_316.png" width="17" height="11"/> and <img class="formulaInl" alt="$ u_y $" src="../../form_317.png" width="17" height="12"/>, a three energy group flux, <img class="formulaInl" alt="$ \phi_0, \ \phi_1, \ \phi_2 $" src="../../form_318.png" width="69" height="15"/>, and pressure, <img class="formulaInl" alt="$ p $" src="../../form_61.png" width="9" height="11"/>. One can stack these variables in any form, for example:</p><ul>
-<li>Unknown 0, a 6 component vector containing <img class="formulaInl" alt="$ u_x, \ u_y, \ \phi_0, \ \phi_1, \ \phi_2 $" src="../../form_319.png" width="126" height="17"/>, and <img class="formulaInl" alt="$ p $" src="../../form_61.png" width="9" height="11"/></li>
+<p >Where degrees-of-freedom differ from nodes is that each node can be stacked with a number of unknowns, e.g., one might have to solve a number of physical variables in a multiphysics simulation involving 2D velocity, \( u_x \) and \( u_y \), a three energy group flux, \( \phi_0, \ \phi_1, \ \phi_2 \), and pressure, \( p \). One can stack these variables in any form, for example:</p><ul>
+<li>Unknown 0, a 6 component vector containing \( u_x, \ u_y, \ \phi_0, \ \phi_1, \ \phi_2 \), and \( p \)</li>
 </ul>
 <p >or more elegantly</p><ul>
-<li>Unknown 0, a 2 component vector containing <img class="formulaInl" alt="$ u_x $" src="../../form_316.png" width="17" height="11"/> and <img class="formulaInl" alt="$ u_y $" src="../../form_317.png" width="17" height="12"/></li>
-<li>Unknown 1, a 3 component vector containing <img class="formulaInl" alt="$ \phi_0, \ \phi_1, \ \phi_2 $" src="../../form_318.png" width="69" height="15"/></li>
-<li>Unknown 2, a single scalar (1 component) containing just <img class="formulaInl" alt="$ p $" src="../../form_61.png" width="9" height="11"/></li>
+<li>Unknown 0, a 2 component vector containing \( u_x \) and \( u_y \)</li>
+<li>Unknown 1, a 3 component vector containing \( \phi_0, \ \phi_1, \ \phi_2 \)</li>
+<li>Unknown 2, a single scalar (1 component) containing just \( p \)</li>
 </ul>
 <p >The latter essentially means that each node can have a number of unknowns stacked onto it as shown in Figure 2 below.</p>
 <div class="image">
@@ -146,7 +153,7 @@ Figure 3: Mapping One DOF per Node</div></div>
 <div class="line">uk_man.<a class="code hl_function" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78">AddUnknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1da20760c37f74c5ecf95beeadd1407fbef">chi_math::UnknownType::VECTOR_2</a>);    <span class="comment">//u_x, u_y</span></div>
 <div class="line">uk_man.<a class="code hl_function" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78">AddUnknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a>, 3); <span class="comment">//phi_0 to phi_2</span></div>
 <div class="line">uk_man.<a class="code hl_function" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78">AddUnknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1da8f3d9a4b6a7b7f2c7afa61ca113d0db9">chi_math::UnknownType::SCALAR</a>);      <span class="comment">//pressure</span></div>
-<div class="ttc" id="aclasschi__math_1_1_unknown_manager_html"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00107">unknown_manager.h:108</a></div></div>
+<div class="ttc" id="aclasschi__math_1_1_unknown_manager_html"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00122">unknown_manager.h:123</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_unknown_manager_html_a07fb29a7555ba61bd0e22a584b4abb78"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78">chi_math::UnknownManager::AddUnknown</a></div><div class="ttdeci">unsigned int AddUnknown(UnknownType unk_type, unsigned int dimension=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d4c/unknown__manager_8cc_source.html#l00009">unknown_manager.cc:10</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ad4724873fa5ae74b39c4657aa4f53d1da20760c37f74c5ecf95beeadd1407fbef"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1da20760c37f74c5ecf95beeadd1407fbef">chi_math::UnknownType::VECTOR_2</a></div><div class="ttdeci">@ VECTOR_2</div></div>
 <div class="ttc" id="anamespacechi__math_html_ad4724873fa5ae74b39c4657aa4f53d1da8f3d9a4b6a7b7f2c7afa61ca113d0db9"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1da8f3d9a4b6a7b7f2c7afa61ca113d0db9">chi_math::UnknownType::SCALAR</a></div><div class="ttdeci">@ SCALAR</div></div>

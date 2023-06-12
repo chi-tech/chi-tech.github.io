@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -115,8 +122,8 @@ Functions</h2></td></tr>
 <tr class="separator:ae2ebedf1cd0712f3d6e0b2047c389949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d6fa9475bbb29adf2f37214886261ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a2d6fa9475bbb29adf2f37214886261ee">chi_math::PETScUtils::CreateVector</a> (Vec &amp;x, int64_t local_size, int64_t global_size)</td></tr>
 <tr class="separator:a2d6fa9475bbb29adf2f37214886261ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3431beefda260df6f2d7b723255de460"><td class="memItemLeft" align="right" valign="top">Vec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a3431beefda260df6f2d7b723255de460">chi_math::PETScUtils::CreateVectorWithGhosts</a> (int64_t local_size, int64_t global_size, int64_t nghosts, std::vector&lt; int64_t &gt; &amp;ghost_indices)</td></tr>
-<tr class="separator:a3431beefda260df6f2d7b723255de460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e0215c641f1bb554185f50edbd1de5"><td class="memItemLeft" align="right" valign="top">Vec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac9e0215c641f1bb554185f50edbd1de5">chi_math::PETScUtils::CreateVectorWithGhosts</a> (int64_t local_size, int64_t global_size, int64_t nghosts, const std::vector&lt; int64_t &gt; &amp;ghost_indices)</td></tr>
+<tr class="separator:ac9e0215c641f1bb554185f50edbd1de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3c389879eeafb68d9b7540887b883cd"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">chi_math::PETScUtils::CreateSquareMatrix</a> (int64_t local_size, int64_t global_size)</td></tr>
 <tr class="separator:ad3c389879eeafb68d9b7540887b883cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd2c2c48b9007d3effa0a21e05665d50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#acd2c2c48b9007d3effa0a21e05665d50">chi_math::PETScUtils::CreateSquareMatrix</a> (Mat &amp;A, int64_t local_size, int64_t global_size)</td></tr>
@@ -135,6 +142,8 @@ Functions</h2></td></tr>
 <tr class="separator:a4d23878dd79cb1325b6fb025afb68600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a422a92d2ae77b5a740a874c24ed48dc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a422a92d2ae77b5a740a874c24ed48dc9">chi_math::PETScUtils::CopyVecToSTLvector</a> (Vec x, std::vector&lt; double &gt; &amp;data, size_t N)</td></tr>
 <tr class="separator:a422a92d2ae77b5a740a874c24ed48dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ea9913447d96008912a4cc9f40bccb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a78ea9913447d96008912a4cc9f40bccb">chi_math::PETScUtils::CopyVecToSTLvectorWithGhosts</a> (Vec x, std::vector&lt; double &gt; &amp;data, size_t N)</td></tr>
+<tr class="separator:a78ea9913447d96008912a4cc9f40bccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6018f791e6dd6b11cff9c1b7cce0c277"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">chi_math::PETScUtils::CopyGlobalVecToSTLvector</a> (Vec x, const std::vector&lt; int64_t &gt; &amp;global_indices, std::vector&lt; double &gt; &amp;data)</td></tr>
 <tr class="separator:a6018f791e6dd6b11cff9c1b7cce0c277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac31111351b2bffd45dc550de08c1355a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac31111351b2bffd45dc550de08c1355a">chi_math::PETScUtils::CommunicateGhostEntries</a> (Vec x)</td></tr>

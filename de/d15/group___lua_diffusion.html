@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: Diffusion</title>
+<title>Chi-Tech: Diffusion Solver</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -86,7 +93,7 @@ $(document).ready(function(){initNavTree('de/d15/group___lua_diffusion.html','..
   <div class="summary">
 <a href="#groups">Modules</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">Diffusion<div class="ingroups"><a class="el" href="../../da/da3/group___lua_modules.html">F Code modules</a></div></div></div>
+  <div class="headertitle"><div class="title">Diffusion Solver<div class="ingroups"><a class="el" href="../../da/da3/group___lua_modules.html">F Code modules</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
@@ -123,18 +130,6 @@ Functions</h2></td></tr>
 <tr class="separator:ga979b8f3f2997daddf4ada933aaa3811e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p >Please consult the whitepaper for this solver (<a href="../../whitepages/DiffusionSolver/DiffusionSolver.pdf">Diffusion Whitepaper</a>). This solver solves the general diffusion equation of the form</p>
-<p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{equation} -\nabla D \nabla \phi + \sigma_a \phi = q. \end{equation}" src="../../form_24.png" width="323" height="17"/>
-</p>
-<p >Given a discretization method this solver will assemble the matrix <img class="formulaInl" alt="$ A $" src="../../form_25.png" width="12" height="12"/> using a system of linear equations. The solver can operate on 1D slabs, 2D polygon meshes and 3D polyhedron meshes. Currently two spatial discretization schemes are supported, Piecewise Linear Continous (PWLC) and Piecewise Linear Discontinous (PWLD) using the Modified Interior Penalty (MIP) method. The solver is fully parallel (using PETSc).</p>
-<p >Boundary conditions are specified by referencing unique boundary id's. i.e. assuming one uses the extruder mesher the template boundary would've been assigned to index 0 and this will be transfused to all the boundaries in the lateral periphery. The top and bottom boundaries are flat for extruded geometries and therefore are assigned their own id's. In the extruded case the last boundary index is always assigned to the top boundary and second-to-last boundary index is always assigned to the bottom boundary. Boundary types are specified using the ChiLua::chiDiffusionSetProperty function call, using the BOUNDARY_TYPE property index.</p>
-<p >The materials and source values are for now obtained from materials associated with cells. The default property mapping is shown below. If the property at index [1] (which is mapped to the source value q) is not available the source will default to a constant value of 1.0.</p>
-<div class="image">
-<img src="../../DiffusionMatProp.png" alt="" width="500px"/>
-</div>
-<p >To change the mapping of the properties the user needs to make a call to ChiLua::chiDiffusionSetProperty using the PROPERTY_D_MAP, PROPERTY_Q_MAP or PROPERTY_SIGMAA_MAP property index.</p>
-<p >By default the solver populates a scalar field function which is the solution <img class="formulaInl" alt="$ \phi $" src="../../form_22.png" width="9" height="15"/>. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga5331d5d64e47705f13438030332354d0" name="ga5331d5d64e47705f13438030332354d0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5331d5d64e47705f13438030332354d0">&#9670;&nbsp;</a></span>chiCFEMDiffusionSetBCProperty()</h2>
@@ -189,38 +184,45 @@ Functions</h2></td></tr>
 </div><!-- fragment --><h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
+\[ -D \hat{n}\cdot \nabla \phi = 0 \]
 </p>
 <p><br  />
 <br  />
  dirichlet<br  />
- Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_22.png" width="9" height="15"/>. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_23.png" width="38" height="15"/>
+ Constant value boundary condition. Expects to be followed by a value \( f \) associated with \( \phi \). </p><p class="formulaDsp">
+\[ \phi = f \]
 </p>
 <p><br  />
 <br  />
  neumann<br  />
- Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_19.png" width="93" height="15"/>
+ Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
+\[ -D \hat{n}\cdot \nabla \phi = f \]
 </p>
 <p><br  />
 <br  />
  vacuum<br  />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_20.png" width="129" height="32"/>
+\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
 </p>
 <p><br  />
 <br  />
  robin<br  />
  Robin boundary condition of the form </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="125" height="15"/>
+\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
 </p>
 <p><br  />
 <br  />
 </p>
-<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../d9/d29/tests__c_f_e_m__diffusion_c_diffusion_2_d_3b_analytical_coef2_lua.html">tests/CFEM_Diffusion/cDiffusion_2D_3b_analytical_coef2.lua</a> <br  />
+ <a class="el" href="../../d7/d97/tests__c_f_e_m__diffusion_c_diffusion_2_d_3a_analytical_coef_lua.html">tests/CFEM_Diffusion/cDiffusion_2D_3a_analytical_coef.lua</a> <br  />
+ <a class="el" href="../../d4/da5/tests__c_f_e_m__diffusion_c_diffusion_2_d_2b__robin_b_cs_lua.html">tests/CFEM_Diffusion/cDiffusion_2D_2b_RobinBCs.lua</a> <br  />
+ <a class="el" href="../../dd/d0f/tests__c_f_e_m__diffusion_c_diffusion_2_d_2a__dir_b_cs_lua.html">tests/CFEM_Diffusion/cDiffusion_2D_2a_DirBCs.lua</a> <br  />
+ <a class="el" href="../../dc/d76/tests__c_f_e_m__diffusion_c_diffusion_2_d_1a_linear_lua.html">tests/CFEM_Diffusion/cDiffusion_2D_1a_linear.lua</a> <br  />
+ <a class="el" href="../../d6/df5/tests__f_f_i__f_f_i__diffusion_lua.html">tests/FFI/FFI_Diffusion.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02836">2836</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04672">4672</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -239,9 +241,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Creates a CFEM Diffusion solver.</p>
-<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver.</dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../d9/d29/tests__c_f_e_m__diffusion_c_diffusion_2_d_3b_analytical_coef2_lua.html">tests/CFEM_Diffusion/cDiffusion_2D_3b_analytical_coef2.lua</a> <br  />
+ <a class="el" href="../../d7/d97/tests__c_f_e_m__diffusion_c_diffusion_2_d_3a_analytical_coef_lua.html">tests/CFEM_Diffusion/cDiffusion_2D_3a_analytical_coef.lua</a> <br  />
+ <a class="el" href="../../d4/da5/tests__c_f_e_m__diffusion_c_diffusion_2_d_2b__robin_b_cs_lua.html">tests/CFEM_Diffusion/cDiffusion_2D_2b_RobinBCs.lua</a> <br  />
+ <a class="el" href="../../dd/d0f/tests__c_f_e_m__diffusion_c_diffusion_2_d_2a__dir_b_cs_lua.html">tests/CFEM_Diffusion/cDiffusion_2D_2a_DirBCs.lua</a> <br  />
+ <a class="el" href="../../dc/d76/tests__c_f_e_m__diffusion_c_diffusion_2_d_1a_linear_lua.html">tests/CFEM_Diffusion/cDiffusion_2D_1a_linear.lua</a> <br  />
+ <a class="el" href="../../d6/df5/tests__f_f_i__f_f_i__diffusion_lua.html">tests/FFI/FFI_Diffusion.lua</a> <br  />
+ </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02786">2786</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04615">4615</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -295,36 +305,36 @@ Functions</h2></td></tr>
  Boundary type. Expects boundary index then <b>BoundaryTypeName</b> then type value.<br  />
 <br  />
  </p><div class="fragment"><div class="line"><a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#ga7146d7ff73c94bc58b05bf7e23615fa4">chiCFEMMGDiffusionSetBCProperty</a>(solver,<span class="stringliteral">&quot;boundary_type&quot;</span>,bdID,<span class="stringliteral">&quot;vacuum&quot;</span>)</div>
-<div class="ttc" id="agroup___lua_diffusion_html_ga7146d7ff73c94bc58b05bf7e23615fa4"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#ga7146d7ff73c94bc58b05bf7e23615fa4">chi_lua::chiCFEMMGDiffusionSetBCProperty</a></div><div class="ttdeci">void chiCFEMMGDiffusionSetBCProperty(int SolverHandle, string PropertyName, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02777">lua_functions.c:2777</a></div></div>
+<div class="ttc" id="agroup___lua_diffusion_html_ga7146d7ff73c94bc58b05bf7e23615fa4"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#ga7146d7ff73c94bc58b05bf7e23615fa4">chi_lua::chiCFEMMGDiffusionSetBCProperty</a></div><div class="ttdeci">void chiCFEMMGDiffusionSetBCProperty(int SolverHandle, string PropertyName, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l04599">lua_functions.c:4599</a></div></div>
 </div><!-- fragment --><h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
+\[ -D \hat{n}\cdot \nabla \phi = 0 \]
 </p>
 <p><br  />
 <br  />
  neumann<br  />
- Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_19.png" width="93" height="15"/>
+ Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
+\[ -D \hat{n}\cdot \nabla \phi = f \]
 </p>
 <p><br  />
 <br  />
  vacuum<br  />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_20.png" width="129" height="32"/>
+\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
 </p>
 <p><br  />
 <br  />
  robin<br  />
  Robin boundary condition of the form </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="125" height="15"/>
+\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
 </p>
 <p><br  />
 <br  />
 </p>
 <dl class="section author"><dt>Author</dt><dd>Jean </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02777">2777</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04599">4599</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -345,7 +355,7 @@ Functions</h2></td></tr>
 <p >Creates a Multigroup CFEM Diffusion solver.</p>
 <dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02732">2732</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04554">4554</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -402,38 +412,45 @@ Functions</h2></td></tr>
 </div><!-- fragment --><h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
+\[ -D \hat{n}\cdot \nabla \phi = 0 \]
 </p>
 <p><br  />
 <br  />
  dirichlet<br  />
- Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_22.png" width="9" height="15"/>. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_23.png" width="38" height="15"/>
+ Constant value boundary condition. Expects to be followed by a value \( f \) associated with \( \phi \). </p><p class="formulaDsp">
+\[ \phi = f \]
 </p>
 <p><br  />
 <br  />
  neumann<br  />
- Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_19.png" width="93" height="15"/>
+ Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
+\[ -D \hat{n}\cdot \nabla \phi = f \]
 </p>
 <p><br  />
 <br  />
  vacuum<br  />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_20.png" width="129" height="32"/>
+\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
 </p>
 <p><br  />
 <br  />
  robin<br  />
  Robin boundary condition of the form </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="125" height="15"/>
+\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
 </p>
 <p><br  />
 <br  />
 </p>
-<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../df/d97/tests__d_f_e_m__diffusion_d_diffusion_2_d_3a_analytical_coef_lua.html">tests/DFEM_Diffusion/dDiffusion_2D_3a_analytical_coef.lua</a> <br  />
+ <a class="el" href="../../d0/dac/tests__d_f_e_m__diffusion_d_diffusion_2_d_1a_linear_lua.html">tests/DFEM_Diffusion/dDiffusion_2D_1a_linear.lua</a> <br  />
+ <a class="el" href="../../d1/d60/tests__d_f_e_m__diffusion_d_diffusion_2_d_2a__dir_b_cs_lua.html">tests/DFEM_Diffusion/dDiffusion_2D_2a_DirBCs.lua</a> <br  />
+ <a class="el" href="../../d3/d3a/tests__d_f_e_m__diffusion_d_diffusion_2_d_2b__robin_b_cs_lua.html">tests/DFEM_Diffusion/dDiffusion_2D_2b_RobinBCs.lua</a> <br  />
+ <a class="el" href="../../d4/de4/tests__d_f_e_m__diffusion_d_diffusion_2_d_3b_analytical_coef2_lua.html">tests/DFEM_Diffusion/dDiffusion_2D_3b_analytical_coef2.lua</a> <br  />
+ <a class="el" href="../../d6/df5/tests__f_f_i__f_f_i__diffusion_lua.html">tests/FFI/FFI_Diffusion.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03018">3018</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04900">4900</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -452,9 +469,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Creates a DFEM Diffusion solver based on the interior penalty method.</p>
-<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver.</dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../df/d97/tests__d_f_e_m__diffusion_d_diffusion_2_d_3a_analytical_coef_lua.html">tests/DFEM_Diffusion/dDiffusion_2D_3a_analytical_coef.lua</a> <br  />
+ <a class="el" href="../../d0/dac/tests__d_f_e_m__diffusion_d_diffusion_2_d_1a_linear_lua.html">tests/DFEM_Diffusion/dDiffusion_2D_1a_linear.lua</a> <br  />
+ <a class="el" href="../../d1/d60/tests__d_f_e_m__diffusion_d_diffusion_2_d_2a__dir_b_cs_lua.html">tests/DFEM_Diffusion/dDiffusion_2D_2a_DirBCs.lua</a> <br  />
+ <a class="el" href="../../d3/d3a/tests__d_f_e_m__diffusion_d_diffusion_2_d_2b__robin_b_cs_lua.html">tests/DFEM_Diffusion/dDiffusion_2D_2b_RobinBCs.lua</a> <br  />
+ <a class="el" href="../../d4/de4/tests__d_f_e_m__diffusion_d_diffusion_2_d_3b_analytical_coef2_lua.html">tests/DFEM_Diffusion/dDiffusion_2D_3b_analytical_coef2.lua</a> <br  />
+ <a class="el" href="../../d6/df5/tests__f_f_i__f_f_i__diffusion_lua.html">tests/FFI/FFI_Diffusion.lua</a> <br  />
+ </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02967">2967</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04842">4842</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -474,9 +499,25 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Creates a Diffusion solver.</p>
 <dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver.</dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../da/df4/tests__mesh_i_o__read_wavefront_obj3_lua.html">tests/MeshIO/ReadWavefrontObj3.lua</a> <br  />
+ <a class="el" href="../../de/d32/tests__mesh_i_o__read_wavefront_obj3b_write_exodus_lua.html">tests/MeshIO/ReadWavefrontObj3bWriteExodus.lua</a> <br  />
+ <a class="el" href="../../d4/de7/tests__diffusion__diffusion1_d__i_p_lua.html">tests/Diffusion/Diffusion1D_IP.lua</a> <br  />
+ <a class="el" href="../../df/d02/tests__diffusion__diffusion3_d_1_poly_lua.html">tests/Diffusion/Diffusion3D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d0/d4e/tests__diffusion__diffusion3_d_3_unstructured_lua.html">tests/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
+ <a class="el" href="../../de/d68/tests__diffusion__diffusion3_d_4_v_t_u_lua.html">tests/Diffusion/Diffusion3D_4VTU.lua</a> <br  />
+ <a class="el" href="../../df/dd1/tests__diffusion__diffusion2_d_2_unstructured__i_p_lua.html">tests/Diffusion/Diffusion2D_2Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d8/db3/tests__diffusion__diffusion3_d_3_unstructured__i_p_lua.html">tests/Diffusion/Diffusion3D_3Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d5/dd1/tests__diffusion__diffusion1_d_lua.html">tests/Diffusion/Diffusion1D.lua</a> <br  />
+ <a class="el" href="../../d5/d9c/tests__diffusion__diffusion3_d_1_poly__i_p_lua.html">tests/Diffusion/Diffusion3D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../d8/d58/tests__diffusion__diffusion3_d_2_ortho_lua.html">tests/Diffusion/Diffusion3D_2Ortho.lua</a> <br  />
+ <a class="el" href="../../d9/ddf/tests__diffusion__diffusion2_d_1_poly__i_p_lua.html">tests/Diffusion/Diffusion2D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../db/d3e/tests__diffusion__diffusion2_d_1_poly_lua.html">tests/Diffusion/Diffusion2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../dd/d62/tests__diffusion__diffusion2_d_2_unstructured_lua.html">tests/Diffusion/Diffusion2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d7/dc9/tests__diffusion__diffusion1_d__k_b_a_lua.html">tests/Diffusion/Diffusion1D_KBA.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02941">2941</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04763">4763</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -503,9 +544,25 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Success bool Returns if initialization failed.</dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../da/df4/tests__mesh_i_o__read_wavefront_obj3_lua.html">tests/MeshIO/ReadWavefrontObj3.lua</a> <br  />
+ <a class="el" href="../../de/d32/tests__mesh_i_o__read_wavefront_obj3b_write_exodus_lua.html">tests/MeshIO/ReadWavefrontObj3bWriteExodus.lua</a> <br  />
+ <a class="el" href="../../d4/de7/tests__diffusion__diffusion1_d__i_p_lua.html">tests/Diffusion/Diffusion1D_IP.lua</a> <br  />
+ <a class="el" href="../../df/d02/tests__diffusion__diffusion3_d_1_poly_lua.html">tests/Diffusion/Diffusion3D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d0/d4e/tests__diffusion__diffusion3_d_3_unstructured_lua.html">tests/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
+ <a class="el" href="../../de/d68/tests__diffusion__diffusion3_d_4_v_t_u_lua.html">tests/Diffusion/Diffusion3D_4VTU.lua</a> <br  />
+ <a class="el" href="../../df/dd1/tests__diffusion__diffusion2_d_2_unstructured__i_p_lua.html">tests/Diffusion/Diffusion2D_2Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d8/db3/tests__diffusion__diffusion3_d_3_unstructured__i_p_lua.html">tests/Diffusion/Diffusion3D_3Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d5/dd1/tests__diffusion__diffusion1_d_lua.html">tests/Diffusion/Diffusion1D.lua</a> <br  />
+ <a class="el" href="../../d5/d9c/tests__diffusion__diffusion3_d_1_poly__i_p_lua.html">tests/Diffusion/Diffusion3D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../d8/d58/tests__diffusion__diffusion3_d_2_ortho_lua.html">tests/Diffusion/Diffusion3D_2Ortho.lua</a> <br  />
+ <a class="el" href="../../d9/ddf/tests__diffusion__diffusion2_d_1_poly__i_p_lua.html">tests/Diffusion/Diffusion2D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../db/d3e/tests__diffusion__diffusion2_d_1_poly_lua.html">tests/Diffusion/Diffusion2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../dd/d62/tests__diffusion__diffusion2_d_2_unstructured_lua.html">tests/Diffusion/Diffusion2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d7/dc9/tests__diffusion__diffusion1_d__k_b_a_lua.html">tests/Diffusion/Diffusion1D_KBA.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02959">2959</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04813">4813</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -532,9 +589,25 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Success bool Returns if initialization failed.</dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../da/df4/tests__mesh_i_o__read_wavefront_obj3_lua.html">tests/MeshIO/ReadWavefrontObj3.lua</a> <br  />
+ <a class="el" href="../../de/d32/tests__mesh_i_o__read_wavefront_obj3b_write_exodus_lua.html">tests/MeshIO/ReadWavefrontObj3bWriteExodus.lua</a> <br  />
+ <a class="el" href="../../d4/de7/tests__diffusion__diffusion1_d__i_p_lua.html">tests/Diffusion/Diffusion1D_IP.lua</a> <br  />
+ <a class="el" href="../../df/d02/tests__diffusion__diffusion3_d_1_poly_lua.html">tests/Diffusion/Diffusion3D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d0/d4e/tests__diffusion__diffusion3_d_3_unstructured_lua.html">tests/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
+ <a class="el" href="../../de/d68/tests__diffusion__diffusion3_d_4_v_t_u_lua.html">tests/Diffusion/Diffusion3D_4VTU.lua</a> <br  />
+ <a class="el" href="../../df/dd1/tests__diffusion__diffusion2_d_2_unstructured__i_p_lua.html">tests/Diffusion/Diffusion2D_2Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d8/db3/tests__diffusion__diffusion3_d_3_unstructured__i_p_lua.html">tests/Diffusion/Diffusion3D_3Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d5/dd1/tests__diffusion__diffusion1_d_lua.html">tests/Diffusion/Diffusion1D.lua</a> <br  />
+ <a class="el" href="../../d5/d9c/tests__diffusion__diffusion3_d_1_poly__i_p_lua.html">tests/Diffusion/Diffusion3D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../d8/d58/tests__diffusion__diffusion3_d_2_ortho_lua.html">tests/Diffusion/Diffusion3D_2Ortho.lua</a> <br  />
+ <a class="el" href="../../d9/ddf/tests__diffusion__diffusion2_d_1_poly__i_p_lua.html">tests/Diffusion/Diffusion2D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../db/d3e/tests__diffusion__diffusion2_d_1_poly_lua.html">tests/Diffusion/Diffusion2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../dd/d62/tests__diffusion__diffusion2_d_2_unstructured_lua.html">tests/Diffusion/Diffusion2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d7/dc9/tests__diffusion__diffusion1_d__k_b_a_lua.html">tests/Diffusion/Diffusion1D_KBA.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02950">2950</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04788">4788</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -588,42 +661,58 @@ Functions</h2></td></tr>
  Boundary type. Expects boundary name (string) then <b>BoundaryTypeName</b> then type value.<br  />
 <br  />
  </p><div class="fragment"><div class="line"><a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#ga6ccf8162a4fd525c1fb520f21cc02050">chiDiffusionSetProperty</a>(solver,<span class="stringliteral">&quot;boundary_type&quot;</span>,2,<span class="stringliteral">&quot;dirichlet&quot;</span>,1.0)</div>
-<div class="ttc" id="agroup___lua_diffusion_html_ga6ccf8162a4fd525c1fb520f21cc02050"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#ga6ccf8162a4fd525c1fb520f21cc02050">chi_lua::chiDiffusionSetProperty</a></div><div class="ttdeci">void chiDiffusionSetProperty(int SolverHandle, string PropertyName, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02886">lua_functions.c:2886</a></div></div>
+<div class="ttc" id="agroup___lua_diffusion_html_ga6ccf8162a4fd525c1fb520f21cc02050"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#ga6ccf8162a4fd525c1fb520f21cc02050">chi_lua::chiDiffusionSetProperty</a></div><div class="ttdeci">void chiDiffusionSetProperty(int SolverHandle, string PropertyName, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l04738">lua_functions.c:4738</a></div></div>
 </div><!-- fragment --><h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
+\[ -D \hat{n}\cdot \nabla \phi = 0 \]
 </p>
 <p><br  />
 <br  />
  dirichlet<br  />
- Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_22.png" width="9" height="15"/>. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_23.png" width="38" height="15"/>
+ Constant value boundary condition. Expects to be followed by a value \( f \) associated with \( \phi \). </p><p class="formulaDsp">
+\[ \phi = f \]
 </p>
 <p><br  />
 <br  />
  neumann<br  />
- Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_19.png" width="93" height="15"/>
+ Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
+\[ -D \hat{n}\cdot \nabla \phi = f \]
 </p>
 <p><br  />
 <br  />
  vacuum<br  />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_20.png" width="129" height="32"/>
+\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
 </p>
 <p><br  />
 <br  />
  robin<br  />
  Robin boundary condition of the form </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="125" height="15"/>
+\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
 </p>
 <p><br  />
 <br  />
 </p>
-<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../da/df4/tests__mesh_i_o__read_wavefront_obj3_lua.html">tests/MeshIO/ReadWavefrontObj3.lua</a> <br  />
+ <a class="el" href="../../de/d32/tests__mesh_i_o__read_wavefront_obj3b_write_exodus_lua.html">tests/MeshIO/ReadWavefrontObj3bWriteExodus.lua</a> <br  />
+ <a class="el" href="../../d4/de7/tests__diffusion__diffusion1_d__i_p_lua.html">tests/Diffusion/Diffusion1D_IP.lua</a> <br  />
+ <a class="el" href="../../df/d02/tests__diffusion__diffusion3_d_1_poly_lua.html">tests/Diffusion/Diffusion3D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d0/d4e/tests__diffusion__diffusion3_d_3_unstructured_lua.html">tests/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
+ <a class="el" href="../../de/d68/tests__diffusion__diffusion3_d_4_v_t_u_lua.html">tests/Diffusion/Diffusion3D_4VTU.lua</a> <br  />
+ <a class="el" href="../../df/dd1/tests__diffusion__diffusion2_d_2_unstructured__i_p_lua.html">tests/Diffusion/Diffusion2D_2Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d8/db3/tests__diffusion__diffusion3_d_3_unstructured__i_p_lua.html">tests/Diffusion/Diffusion3D_3Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d5/dd1/tests__diffusion__diffusion1_d_lua.html">tests/Diffusion/Diffusion1D.lua</a> <br  />
+ <a class="el" href="../../d5/d9c/tests__diffusion__diffusion3_d_1_poly__i_p_lua.html">tests/Diffusion/Diffusion3D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../d8/d58/tests__diffusion__diffusion3_d_2_ortho_lua.html">tests/Diffusion/Diffusion3D_2Ortho.lua</a> <br  />
+ <a class="el" href="../../d9/ddf/tests__diffusion__diffusion2_d_1_poly__i_p_lua.html">tests/Diffusion/Diffusion2D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../db/d3e/tests__diffusion__diffusion2_d_1_poly_lua.html">tests/Diffusion/Diffusion2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../dd/d62/tests__diffusion__diffusion2_d_2_unstructured_lua.html">tests/Diffusion/Diffusion2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d7/dc9/tests__diffusion__diffusion1_d__k_b_a_lua.html">tests/Diffusion/Diffusion1D_KBA.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02886">2886</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04738">4738</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -680,38 +769,40 @@ Functions</h2></td></tr>
 </div><!-- fragment --><h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
+\[ -D \hat{n}\cdot \nabla \phi = 0 \]
 </p>
 <p><br  />
 <br  />
  dirichlet<br  />
- Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_22.png" width="9" height="15"/>. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_23.png" width="38" height="15"/>
+ Constant value boundary condition. Expects to be followed by a value \( f \) associated with \( \phi \). </p><p class="formulaDsp">
+\[ \phi = f \]
 </p>
 <p><br  />
 <br  />
  neumann<br  />
- Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_19.png" width="93" height="15"/>
+ Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
+\[ -D \hat{n}\cdot \nabla \phi = f \]
 </p>
 <p><br  />
 <br  />
  vacuum<br  />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_20.png" width="129" height="32"/>
+\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
 </p>
 <p><br  />
 <br  />
  robin<br  />
  Robin boundary condition of the form </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="125" height="15"/>
+\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
 </p>
 <p><br  />
 <br  />
 </p>
-<dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../d6/df5/tests__f_f_i__f_f_i__diffusion_lua.html">tests/FFI/FFI_Diffusion.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03079">3079</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04965">4965</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -737,9 +828,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver.</dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../d6/df5/tests__f_f_i__f_f_i__diffusion_lua.html">tests/FFI/FFI_Diffusion.lua</a> <br  />
+ </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03029">3029</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l04913">4913</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

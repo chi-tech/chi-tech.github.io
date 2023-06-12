@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -331,7 +338,7 @@ Friends</h2></td></tr>
 <div class="line">std::vector&lt;chi_mesh::Vertex&gt; vertices_y = {0.0,1.0,2.0};</div>
 <div class="line"><a class="code hl_function" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a0f22f917408d10b1e5a1a6170a347ea7">chi_mesh::SurfaceMesh::CreateFromDivisions</a>(vertices_x,vertices_y);</div>
 <div class="ttc" id="aclasschi__mesh_1_1_surface_mesh_html_a0f22f917408d10b1e5a1a6170a347ea7"><div class="ttname"><a href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html#a0f22f917408d10b1e5a1a6170a347ea7">chi_mesh::SurfaceMesh::CreateFromDivisions</a></div><div class="ttdeci">static SurfaceMesh * CreateFromDivisions(std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d97/chi__surfacemesh__loadexport_8cc_source.html#l00559">chi_surfacemesh_loadexport.cc:560</a></div></div>
-</div><!-- fragment --><p >This code will create a 2x2 mesh with <img class="formulaInl" alt="$ \vec{x} \in [0,2]^2 $" src="../../form_96.png" width="65" height="18"/>. </p>
+</div><!-- fragment --><p >This code will create a 2x2 mesh with \( \vec{x} \in [0,2]^2 \). </p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d97/chi__surfacemesh__loadexport_8cc_source.html#l00559">559</a> of file <a class="el" href="../../dc/d97/chi__surfacemesh__loadexport_8cc_source.html">chi_surfacemesh_loadexport.cc</a>.</p>
 
@@ -637,7 +644,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Runs over the faces of the surfacemesh and determines neighbors. The algorithm first establishes which cells subscribe to each vertex and then loops over faces and edges. For each edge, only the subscribing faces are searched for neighbors. This routine has time complexity O(N). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d70/chi__surfacemesh__internalconn_8cc_source.html#l00017">17</a> of file <a class="el" href="../../da/d70/chi__surfacemesh__internalconn_8cc_source.html">chi_surfacemesh_internalconn.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d70/chi__surfacemesh__internalconn_8cc_source.html#l00016">16</a> of file <a class="el" href="../../da/d70/chi__surfacemesh__internalconn_8cc_source.html">chi_surfacemesh_internalconn.cc</a>.</p>
 
 </div>
 </div>

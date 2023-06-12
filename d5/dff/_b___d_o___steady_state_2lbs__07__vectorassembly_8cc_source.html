@@ -119,7 +119,7 @@ $(document).ready(function(){initNavTree('d5/dff/_b___d_o___steady_state_2lbs__0
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordtype">int</span> gss = gsf-gsi+1;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  int64_t index = -1;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;local_cells)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">ref_grid_</a>-&gt;local_cells)</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">auto</span>&amp; transport_view = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a178d6fd32bbeb3b8f0e5e5157d88e9e3">cell_transport_views_</a>[cell.local_id_];</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('d5/dff/_b___d_o___steady_state_2lbs__0
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">int</span> gss = gsf-gsi+1;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  int64_t index = -1;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid_ptr_-&gt;local_cells)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : ref_grid_-&gt;local_cells)</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  {</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">auto</span>&amp; transport_view = cell_transport_views_[cell.local_id_];</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
@@ -231,7 +231,7 @@ $(document).ready(function(){initNavTree('d5/dff/_b___d_o___steady_state_2lbs__0
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keywordtype">int</span> gsi = groupset.<a class="code hl_variable" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html#ac5ab6f89bb8f61e11f52dc0e805726af">groups_</a>.front().id_;</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keywordtype">size_t</span> gss = groupset.<a class="code hl_variable" href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html#ac5ab6f89bb8f61e11f52dc0e805726af">groups_</a>.size();</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid_ptr_-&gt;local_cells)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : ref_grid_-&gt;local_cells)</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  {</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">auto</span>&amp; transport_view = cell_transport_views_[cell.local_id_];</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
@@ -283,7 +283,7 @@ $(document).ready(function(){initNavTree('d5/dff/_b___d_o___steady_state_2lbs__0
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordtype">int</span> gsf = groupset.groups_.back().id_;</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordtype">int</span> gss = gsf-gsi+1;</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid_ptr_-&gt;local_cells)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : ref_grid_-&gt;local_cells)</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    {</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      <span class="keyword">auto</span>&amp; transport_view = cell_transport_views_[cell.local_id_];</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
@@ -343,7 +343,7 @@ $(document).ready(function(){initNavTree('d5/dff/_b___d_o___steady_state_2lbs__0
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keywordtype">int</span> gsf = groupset.groups_.back().id_;</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keywordtype">int</span> gss = gsf-gsi+1;</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid_ptr_-&gt;local_cells)</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : ref_grid_-&gt;local_cells)</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    {</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <span class="keyword">auto</span>&amp; transport_view = cell_transport_views_[cell.local_id_];</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
@@ -387,7 +387,7 @@ $(document).ready(function(){initNavTree('d5/dff/_b___d_o___steady_state_2lbs__0
 <div class="ttc" id="aclasslbs_1_1_l_b_s_groupset_html"><div class="ttname"><a href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html">lbs::LBSGroupset</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00030">lbs_groupset.h:31</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_groupset_html_ac5ab6f89bb8f61e11f52dc0e805726af"><div class="ttname"><a href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html#ac5ab6f89bb8f61e11f52dc0e805726af">lbs::LBSGroupset::groups_</a></div><div class="ttdeci">std::vector&lt; LBSGroup &gt; groups_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00036">lbs_groupset.h:36</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_groupset_html_afecdd0918d5c40d2b61beab0108a2a22"><div class="ttname"><a href="../../d2/db6/classlbs_1_1_l_b_s_groupset.html#afecdd0918d5c40d2b61beab0108a2a22">lbs::LBSGroupset::angle_agg_</a></div><div class="ttdeci">chi_mesh::sweep_management::AngleAggregation angle_agg_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__groupset_8h_source.html#l00038">lbs_groupset.h:38</a></div></div>
-<div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a1144b5d5d598050cb3687894a1b84acc"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">lbs::LBSSolver::grid_ptr_</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr grid_ptr_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00066">lbs_solver.h:66</a></div></div>
+<div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a1144b5d5d598050cb3687894a1b84acc"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">lbs::LBSSolver::ref_grid_</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr ref_grid_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00066">lbs_solver.h:66</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a178d6fd32bbeb3b8f0e5e5157d88e9e3"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a178d6fd32bbeb3b8f0e5e5157d88e9e3">lbs::LBSSolver::cell_transport_views_</a></div><div class="ttdeci">std::vector&lt; lbs::CellLBSView &gt; cell_transport_views_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00074">lbs_solver.h:74</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a3202db3188f159729aef46136b90c3d2"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a3202db3188f159729aef46136b90c3d2">lbs::LBSSolver::phi_new_local_</a></div><div class="ttdeci">std::vector&lt; double &gt; phi_new_local_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00086">lbs_solver.h:86</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a883135a0ac3994f20942ed3e94e6491d"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a883135a0ac3994f20942ed3e94e6491d">lbs::LBSSolver::phi_old_local_</a></div><div class="ttdeci">std::vector&lt; double &gt; phi_old_local_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00086">lbs_solver.h:86</a></div></div>

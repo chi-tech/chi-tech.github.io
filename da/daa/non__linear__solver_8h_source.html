@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -117,7 +124,7 @@ $(document).ready(function(){initNavTree('da/daa/non__linear__solver_8h_source.h
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#a153b1f216700335e69a438eea223213e">   29</a></span>  MatType    <a class="code hl_variable" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#a153b1f216700335e69a438eea223213e">J_</a>;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#ae9e781c646b92a47f842b077406a45b1">   30</a></span>  VecType    <a class="code hl_variable" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#ae9e781c646b92a47f842b077406a45b1">r_</a>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#a4647f487dfb481c0913ca90b7b421591">   31</a></span>  VecType    <a class="code hl_variable" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#a4647f487dfb481c0913ca90b7b421591">x_</a>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#a035f25a38c039369aa765aa629d8def2">   32</a></span>  SolverType <a class="code hl_variable" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#a035f25a38c039369aa765aa629d8def2">nl_solver_</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#a035f25a38c039369aa765aa629d8def2">   32</a></span>  <a class="code hl_enumeration" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a> <a class="code hl_variable" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#a035f25a38c039369aa765aa629d8def2">nl_solver_</a>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#afba0d4d3ec74f04286e4e4c871c09d59">   35</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#afba0d4d3ec74f04286e4e4c871c09d59">system_set_</a> = <span class="keyword">false</span>;</div>
@@ -227,7 +234,8 @@ $(document).ready(function(){initNavTree('da/daa/non__linear__solver_8h_source.h
 <div class="ttc" id="aclasschi__math_1_1_non_linear_solver_html_ae6d5a50aefdb0d00ee7065df54f810d6"><div class="ttname"><a href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#ae6d5a50aefdb0d00ee7065df54f810d6">chi_math::NonLinearSolver::SetInitialGuess</a></div><div class="ttdeci">virtual void SetInitialGuess()=0</div></div>
 <div class="ttc" id="aclasschi__math_1_1_non_linear_solver_html_ae9e781c646b92a47f842b077406a45b1"><div class="ttname"><a href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#ae9e781c646b92a47f842b077406a45b1">chi_math::NonLinearSolver::r_</a></div><div class="ttdeci">VecType r_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/daa/non__linear__solver_8h_source.html#l00030">non_linear_solver.h:30</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_non_linear_solver_html_afba0d4d3ec74f04286e4e4c871c09d59"><div class="ttname"><a href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#afba0d4d3ec74f04286e4e4c871c09d59">chi_math::NonLinearSolver::system_set_</a></div><div class="ttdeci">bool system_set_</div><div class="ttdef"><b>Definition:</b> <a href="../../da/daa/non__linear__solver_8h_source.html#l00035">non_linear_solver.h:35</a></div></div>
-<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00043">chi_runtime.h:44</a></div></div>
+<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00042">chi_runtime.h:43</a></div></div>
+<div class="ttc" id="anamespacelbs_html_a73a31d32f485fe5e777601374615081e"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">lbs::SolverType</a></div><div class="ttdeci">SolverType</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00026">lbs_structs.h:27</a></div></div>
 <div class="ttc" id="anl__solver__context_8h_html"><div class="ttname"><a href="../../d2/daf/nl__solver__context_8h.html">nl_solver_context.h</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_non_linear_solver_1_1_tolerance_options_html"><div class="ttname"><a href="../../df/dd9/structchi__math_1_1_non_linear_solver_1_1_tolerance_options.html">chi_math::NonLinearSolver::ToleranceOptions</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/daa/non__linear__solver_8h_source.html#l00041">non_linear_solver.h:42</a></div></div>
 <div class="ttc" id="astructchi__math_1_1_non_linear_solver_1_1_tolerance_options_html_a02bc70ff29a2b1c1c41412fd991295dc"><div class="ttname"><a href="../../df/dd9/structchi__math_1_1_non_linear_solver_1_1_tolerance_options.html#a02bc70ff29a2b1c1c41412fd991295dc">chi_math::NonLinearSolver::ToleranceOptions::nl_max_r_evaluations</a></div><div class="ttdeci">int nl_max_r_evaluations</div><div class="ttdef"><b>Definition:</b> <a href="../../da/daa/non__linear__solver_8h_source.html#l00047">non_linear_solver.h:47</a></div></div>

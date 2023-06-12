@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -105,7 +112,7 @@ $(document).ready(function(){initNavTree('dc/d65/nl__keigen__ags__solver_8h_sour
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#a55a70ad1923d49752181c36f939215ee">   18</a></span>  <a class="code hl_function" href="../../d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#a55a70ad1923d49752181c36f939215ee">NLKEigenvalueAGSSolver</a>(std::string nl_method,</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                         <a class="code hl_typedef" href="../../d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#a026c7626c8ef063018396b78639634d5">NLKAGSContextPtr</a> nlk_ags_context_ptr) :</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_namespace" href="../../dc/d58/namespacechi__math.html">chi_math</a>::<a class="code hl_function" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#aa1c9e2a9cc95cda7fa8832a9f66416c2">NonLinearSolver</a>&lt;MatType,VecType,SolverType&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_namespace" href="../../dc/d58/namespacechi__math.html">chi_math</a>::<a class="code hl_function" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html#aa1c9e2a9cc95cda7fa8832a9f66416c2">NonLinearSolver</a>&lt;MatType,VecType,<a class="code hl_enumeration" href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">SolverType</a>&gt;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      (std::move(nl_method),nlk_ags_context_ptr)</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  {}</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
@@ -154,8 +161,9 @@ $(document).ready(function(){initNavTree('dc/d65/nl__keigen__ags__solver_8h_sour
 <div class="ttc" id="aclasslbs_1_1_n_l_k_eigenvalue_a_g_s_solver_html_ac722f6606dfd683a58563c85e68a24f6"><div class="ttname"><a href="../../d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#ac722f6606dfd683a58563c85e68a24f6">lbs::NLKEigenvalueAGSSolver::SetMonitor</a></div><div class="ttdeci">void SetMonitor() override</div></div>
 <div class="ttc" id="aclasslbs_1_1_n_l_k_eigenvalue_a_g_s_solver_html_aca82de297254ac880baa37d01bbbbaaa"><div class="ttname"><a href="../../d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#aca82de297254ac880baa37d01bbbbaaa">lbs::NLKEigenvalueAGSSolver::SetInitialGuess</a></div><div class="ttdeci">void SetInitialGuess() override</div></div>
 <div class="ttc" id="aclasslbs_1_1_n_l_k_eigenvalue_a_g_s_solver_html_ad1241accf4e228376568a796b34b067e"><div class="ttname"><a href="../../d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#ad1241accf4e228376568a796b34b067e">lbs::NLKEigenvalueAGSSolver::SetSystemSize</a></div><div class="ttdeci">void SetSystemSize() override</div></div>
-<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00043">chi_runtime.h:44</a></div></div>
-<div class="ttc" id="anamespacelbs_html"><div class="ttname"><a href="../../d9/d42/namespacelbs.html">lbs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de8/acceleration_8h_source.html#l00013">acceleration.h:14</a></div></div>
+<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00042">chi_runtime.h:43</a></div></div>
+<div class="ttc" id="anamespacelbs_html"><div class="ttname"><a href="../../d9/d42/namespacelbs.html">lbs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/acceleration_8cc_source.html#l00009">acceleration.cc:10</a></div></div>
+<div class="ttc" id="anamespacelbs_html_a73a31d32f485fe5e777601374615081e"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a73a31d32f485fe5e777601374615081e">lbs::SolverType</a></div><div class="ttdeci">SolverType</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc3/lbs__structs_8h_source.html#l00026">lbs_structs.h:27</a></div></div>
 <div class="ttc" id="anl__keigen__ags__context_8h_html"><div class="ttname"><a href="../../db/db6/nl__keigen__ags__context_8h.html">nl_keigen_ags_context.h</a></div></div>
 <div class="ttc" id="anon__linear__solver_8h_html"><div class="ttname"><a href="../../da/daa/non__linear__solver_8h.html">non_linear_solver.h</a></div></div>
 <div class="ttc" id="astructlbs_1_1_n_l_k_eigen_a_g_s_context_html"><div class="ttname"><a href="../../dc/d17/structlbs_1_1_n_l_k_eigen_a_g_s_context.html">lbs::NLKEigenAGSContext</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/db6/nl__keigen__ags__context_8h_source.html#l00021">nl_keigen_ags_context.h:23</a></div></div>

@@ -1,0 +1,27 @@
+var classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a =
+[
+    [ "GhostInfo", "d4/daf/structlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a_1_1_ghost_info.html", "d4/daf/structlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a_1_1_ghost_info" ],
+    [ "DiffusionSolverPtr", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a439ade0057b0714486ae7e74aac841d3", null ],
+    [ "SDMPtr", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#abccba6c70018c7fccd4da50493314570", null ],
+    [ "VecGhostCommPtr", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#af386311bd76efccbd7201f0b0d9ab149", null ],
+    [ "XXPowerIterationKEigenSCDSA", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#adddba0b5bca6246fee382a68e3533a9b", null ],
+    [ "CopyOnlyPhi0", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a5d439214f5f2b0d4155af0a9d61a6fef", null ],
+    [ "Execute", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a6097e3ee1de6de8920601c5691d5b1fb", null ],
+    [ "GetInputParameters", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a3c8c46092e25822062cc727417a43f4b", null ],
+    [ "Initialize", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a0bd67694fb6fc24a11e47ce873b11792", null ],
+    [ "MakePWLDVecGhostCommInfo", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#aff896c95c9cbde1a26627a7c686e87bb", null ],
+    [ "NodallyAveragedPWLDVector", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a0e387918679a8142eb1fb1df3111e0b9", null ],
+    [ "ProjectBackPhi0", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#ad19c27cd2b5c1886c13294c5dde4efec", null ],
+    [ "accel_pi_k_tol_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a3a9c78a1d5f05ea007a664458ae8836d", null ],
+    [ "accel_pi_max_its_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a0dff5784a6c4819b29fc99bcd9dc2220", null ],
+    [ "accel_pi_verbose_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#aa9a22614989d6654c863a532df28e9ac", null ],
+    [ "continuous_sdm_ptr_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#aff149f4cdd6f5bb3584a8fcd1084ec6b", null ],
+    [ "diff_accel_diffusion_l_abs_tol_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a776894dbcaa913e9c1b5741c1832f065", null ],
+    [ "diff_accel_diffusion_max_iters_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#aed4db5c8816b448e2d4e20335e3a8104", null ],
+    [ "diff_accel_diffusion_petsc_options_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a6dcf9fea27dc0abe9c95fe256423a5b0", null ],
+    [ "diff_accel_diffusion_verbose_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a407e371dce99c2e67c0fed6be269e5c6", null ],
+    [ "diffusion_solver_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#aaa6f9b792eabbab47136a5ddba88e393", null ],
+    [ "diffusion_solver_sdm_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a81087189b0089ca157ca1b840db6461a", null ],
+    [ "lbs_pwld_ghost_info_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a13e57bcc580ff7ed6a7b834d95dbe334", null ],
+    [ "requires_ghosts_", "d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#adcc981ea16f052c53bfffba50ef430e2", null ]
+];

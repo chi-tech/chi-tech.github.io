@@ -22,6 +22,7 @@ var classchi__physics_1_1_adjoint_m_g_x_s =
     [ "SigmaRemoval", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#ad55716ab84a9c65c040a66839e0fbbe7", null ],
     [ "SigmaSGtoG", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a19573792c2b155aff926be7514fc7720", null ],
     [ "SigmaTotal", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a2f8ecf452f27d49b49148451cf1454a7", null ],
+    [ "SigmaTransport", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#aac0522a02bd022271670e8835e1c8bff", null ],
     [ "TransferMatrices", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a5d2990e5ae84e1d599d23dd108401a1d", null ],
     [ "TransferMatrix", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a24043df45e46393b744110ae01d5dcf9", null ],
     [ "transposed_production_matrices_", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a4142006ff24d6d5b8ef3a29945cd9e3b", null ],

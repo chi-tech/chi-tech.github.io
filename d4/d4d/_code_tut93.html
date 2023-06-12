@@ -16,6 +16,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -110,101 +117,101 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 </ul>
 <h1><a class="anchor" id="CodeTut93Sec1"></a>
 1 Introduction</h1>
-<p >Monte Carlo based flux estimators traditionally use a number of tracks, traced within a volume, to estimate the scalar flux. For <img class="formulaInl" alt="$ N_t $" src="../../form_242.png" width="17" height="15"/> amount of tracks traced inside a volume, <img class="formulaInl" alt="$ V $" src="../../form_243.png" width="12" height="12"/>, originating from a sample of <img class="formulaInl" alt="$ N_p $" src="../../form_244.png" width="18" height="17"/> number of particles/rays, the scalar flux, <img class="formulaInl" alt="$ \phi $" src="../../form_22.png" width="9" height="15"/>, can be estimated with </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t, \]" src="../../form_245.png" width="107" height="45"/>
+<p >Monte Carlo based flux estimators traditionally use a number of tracks, traced within a volume, to estimate the scalar flux. For \( N_t \) amount of tracks traced inside a volume, \( V \), originating from a sample of \( N_p \) number of particles/rays, the scalar flux, \( \phi \), can be estimated with </p><p class="formulaDsp">
+\[ \phi \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t, \]
 </p>
-<p> where <img class="formulaInl" alt="$ \ell_t $" src="../../form_246.png" width="12" height="15"/> is the <img class="formulaInl" alt="$ t $" src="../../form_247.png" width="6" height="11"/>-th track length. This simply means that the scalar flux is the "average track length per unit volume".</p>
-<p >The individual tracks of these particles can be assigned a weight, <img class="formulaInl" alt="$ w_t $" src="../../form_248.png" width="17" height="11"/>, enabling a multitude of features. </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t w_t, \]" src="../../form_249.png" width="122" height="45"/>
+<p> where \( \ell_t \) is the \( t \)-th track length. This simply means that the scalar flux is the "average track length per unit volume".</p>
+<p >The individual tracks of these particles can be assigned a weight, \( w_t \), enabling a multitude of features. </p><p class="formulaDsp">
+\[ \phi \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t w_t, \]
 </p>
 <p> For our purposes we are interested in three possible weightings, i) weighting by a spherical harmonic, which can be used to compute flux moments, ii) weighting by average FE shape function values, allowing the projection of flux onto a FE space, and finally iii) weighting with an exponential attenuation, allowing the computation of uncollided flux.</p>
 <h2><a class="anchor" id="CodeTut93Sec1_1"></a>
 1.1 Weighting with a spherical harmonic</h2>
-<p >Applying a weight with a spherical harmonic is conceptually simple. For the <img class="formulaInl" alt="$ t $" src="../../form_247.png" width="6" height="11"/>-th track we simply set the weight to the spherical harmonic evaluated with the direction, <img class="formulaInl" alt="$ \boldsymbol{\Omega}_t $" src="../../form_250.png" width="17" height="15"/>, of the track, </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \phi_{\ell m} \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t Y_{\ell m}( \boldsymbol{\Omega}_t), \]" src="../../form_251.png" width="176" height="45"/>
+<p >Applying a weight with a spherical harmonic is conceptually simple. For the \( t \)-th track we simply set the weight to the spherical harmonic evaluated with the direction, \( \boldsymbol{\Omega}_t \), of the track, </p><p class="formulaDsp">
+\[ \phi_{\ell m} \approx \frac{1}{N_p V} \sum_t^{N_t} \ell_t Y_{\ell m}( \boldsymbol{\Omega}_t), \]
 </p>
 <h2><a class="anchor" id="CodeTut93Sec1_2"></a>
 1.2 Weighting by average FE shape function values</h2>
-<p >For a DFEM projection of the fluxes we require nodal values, on each cell, for a given flux quantity, <img class="formulaInl" alt="$ \phi $" src="../../form_22.png" width="9" height="15"/>. Therefore we seek <img class="formulaInl" alt="$ \phi_h $" src="../../form_252.png" width="15" height="15"/> such that </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray*} \int_V b_i \phi_h dV = \int_V b_i \phi dV \end{eqnarray*}" src="../../form_253.png" width="150" height="36"/>
+<p >For a DFEM projection of the fluxes we require nodal values, on each cell, for a given flux quantity, \( \phi \). Therefore we seek \( \phi_h \) such that </p><p class="formulaDsp">
+\begin{eqnarray*} \int_V b_i \phi_h dV = \int_V b_i \phi dV \end{eqnarray*}
 </p>
-<p> and since <img class="formulaInl" alt="$ \phi_h = \sum_j b_j \phi_j $" src="../../form_254.png" width="87" height="20"/> we need to solve the cell-by-cell system defined by </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray*} \sum_j \phi_j \int_V b_i b_j dV = \int_V b_i \phi dV. \end{eqnarray*}" src="../../form_255.png" width="189" height="42"/>
+<p> and since \( \phi_h = \sum_j b_j \phi_j \) we need to solve the cell-by-cell system defined by </p><p class="formulaDsp">
+\begin{eqnarray*} \sum_j \phi_j \int_V b_i b_j dV = \int_V b_i \phi dV. \end{eqnarray*}
 </p>
-<p> In this system the entries <img class="formulaInl" alt="$ \int_V b_i b_j dV $" src="../../form_256.png" width="63" height="20"/> are simply the entries of the mass matrix, <img class="formulaInl" alt="$ M_{ij} = \int_V b_i b_j dV $" src="../../form_257.png" width="108" height="20"/>, and we still need to find the rhs-entries <img class="formulaInl" alt="$ \int_V b_i \phi dV $" src="../../form_258.png" width="60" height="20"/>. This is where we will use the track length based estimators by weighting with the shape functions b_i.</p>
+<p> In this system the entries \( \int_V b_i b_j dV \) are simply the entries of the mass matrix, \( M_{ij} = \int_V b_i b_j dV \), and we still need to find the rhs-entries \( \int_V b_i \phi dV \). This is where we will use the track length based estimators by weighting with the shape functions b_i.</p>
 <p >In this formulation we have </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{eqnarray*} \int_V b_i \phi dV \approx \frac{1}{N_p} \sum_t \ell_t w_t^{i,avg} \end{eqnarray*}" src="../../form_259.png" width="179" height="39"/>
+\begin{eqnarray*} \int_V b_i \phi dV \approx \frac{1}{N_p} \sum_t \ell_t w_t^{i,avg} \end{eqnarray*}
 </p>
 <p> where </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_t^{i,avg} = \frac{ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds } {\int_{s_a}^{s_b} ds} = \frac{ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds } {\ell_t}, \]" src="../../form_260.png" width="293" height="45"/>
+\[ w_t^{i,avg} = \frac{ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds } {\int_{s_a}^{s_b} ds} = \frac{ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds } {\ell_t}, \]
 </p>
 <p> the average basis function value along the track. For ordinary Lagrange FE shape functions, which are not defined piecewise, the integral in the numerator can be obtained exactly using a numerical quadrature. For our applications, where we use the PWLD FE shape functions we need to split this integral per segment of the basic cell crossed.</p>
-<p >For example, consider the polygon below, where a ray is traced from position <img class="formulaInl" alt="$ s_a $" src="../../form_261.png" width="14" height="11"/> to <img class="formulaInl" alt="$ s_b $" src="../../form_262.png" width="12" height="11"/>. </p><div class="image">
+<p >For example, consider the polygon below, where a ray is traced from position \( s_a \) to \( s_b \). </p><div class="image">
 <img src="../../Tut93_segments.png" alt="" width="350px"/>
 </div>
-<p >The track traced across the cell needs to be split into the segments defined by the sub-triangles of the polygon it crossed (for polyhedrons this would be the sub-tetrahedrons). Therefore the track <img class="formulaInl" alt="$ s_a \to s_b $" src="../../form_263.png" width="50" height="12"/> needs to be split into tracks <img class="formulaInl" alt="$ s_0 \to s_1 $" src="../../form_264.png" width="50" height="12"/>, <img class="formulaInl" alt="$ s_1 \to s_2 $" src="../../form_265.png" width="50" height="12"/> and <img class="formulaInl" alt="$ s_2 \to s_3 $" src="../../form_266.png" width="50" height="12"/> as per the figure. Therefore the integral becomes</p>
+<p >The track traced across the cell needs to be split into the segments defined by the sub-triangles of the polygon it crossed (for polyhedrons this would be the sub-tetrahedrons). Therefore the track \( s_a \to s_b \) needs to be split into tracks \( s_0 \to s_1 \), \( s_1 \to s_2 \) and \( s_2 \to s_3 \) as per the figure. Therefore the integral becomes</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds = \int_{s_0}^{s_1} b_i(s\mapsto \mathbf{x}) ds + \int_{s_1}^{s_2} b_i(s\mapsto \mathbf{x}) ds + \int_{s_2}^{s_3} b_i(s\mapsto \mathbf{x}) ds \]" src="../../form_267.png" width="483" height="39"/>
+\[ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds = \int_{s_0}^{s_1} b_i(s\mapsto \mathbf{x}) ds + \int_{s_1}^{s_2} b_i(s\mapsto \mathbf{x}) ds + \int_{s_2}^{s_3} b_i(s\mapsto \mathbf{x}) ds \]
 </p>
 <p> which we can evaluate analytically since it is linear on each segment.</p>
-<p ><b>Note:</b> The mapping of <img class="formulaInl" alt="$ s\mapsto \mathbf{x} $" src="../../form_268.png" width="39" height="9"/> can be quite expensive so in this particular case it would be better to evaluate the shape function at the half-way point of each segment, after which the integral becomes </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds = b_i(\frac{s_0 + s_1}{2}\mapsto \mathbf{x}) (s_1 - s_0) + b_i(\frac{s_1 + s_2}{2}\mapsto \mathbf{x}) (s_2 - s_1) + b_i(\frac{s_2 + s_3}{2}\mapsto \mathbf{x}) (s_3 - s_2) + \]" src="../../form_269.png" width="627" height="38"/>
+<p ><b>Note:</b> The mapping of \( s\mapsto \mathbf{x} \) can be quite expensive so in this particular case it would be better to evaluate the shape function at the half-way point of each segment, after which the integral becomes </p><p class="formulaDsp">
+\[ \int_{s_a}^{s_b} b_i(s\mapsto \mathbf{x}) ds = b_i(\frac{s_0 + s_1}{2}\mapsto \mathbf{x}) (s_1 - s_0) + b_i(\frac{s_1 + s_2}{2}\mapsto \mathbf{x}) (s_2 - s_1) + b_i(\frac{s_2 + s_3}{2}\mapsto \mathbf{x}) (s_3 - s_2) + \]
 </p>
 <h2><a class="anchor" id="CodeTut93Sec1_3"></a>
 1.3 Weighting with an exponential attenuation</h2>
 <p >Weighting with an exponential attenuation adds the final piece of weighting necessary to efficiently compute the uncollided flux.</p>
-<p >The exponential attenuation of the uncollided flux, <img class="formulaInl" alt="$ \psi $" src="../../form_231.png" width="11" height="15"/>, along the path of a ray with direction <img class="formulaInl" alt="$ \boldsymbol{\Omega} $" src="../../form_270.png" width="12" height="12"/> is expressed as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{d\psi}{ds} = -\sigma_t(s) \psi(s) \]" src="../../form_271.png" width="113" height="33"/>
+<p >The exponential attenuation of the uncollided flux, \( \psi \), along the path of a ray with direction \( \boldsymbol{\Omega} \) is expressed as </p><p class="formulaDsp">
+\[ \frac{d\psi}{ds} = -\sigma_t(s) \psi(s) \]
 </p>
-<p> where <img class="formulaInl" alt="$ s $" src="../../form_272.png" width="6" height="8"/> is the distance traveled and <img class="formulaInl" alt="$ \sigma_t $" src="../../form_273.png" width="12" height="11"/> is the total cross section. From this model we can compute the attenuation across a cell, with constant <img class="formulaInl" alt="$ \sigma_t $" src="../../form_273.png" width="12" height="11"/>, as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \psi(s) = \psi(s=0) e^{-\sigma_t s} \]" src="../../form_274.png" width="140" height="17"/>
+<p> where \( s \) is the distance traveled and \( \sigma_t \) is the total cross section. From this model we can compute the attenuation across a cell, with constant \( \sigma_t \), as </p><p class="formulaDsp">
+\[ \psi(s) = \psi(s=0) e^{-\sigma_t s} \]
 </p>
-<p> where <img class="formulaInl" alt="$ \psi(s=0) $" src="../../form_275.png" width="57" height="17"/> is the value of <img class="formulaInl" alt="$ \psi $" src="../../form_231.png" width="11" height="15"/> when it entered the cell.</p>
-<p >To assimilate all of this into a raytracing algorithm we start a source particle with a weight, <img class="formulaInl" alt="$ w^p = 1 $" src="../../form_276.png" width="47" height="11"/>, which acts as the proxy for <img class="formulaInl" alt="$ \psi $" src="../../form_231.png" width="11" height="15"/> (i.e., <img class="formulaInl" alt="$ w^p \equiv \psi $" src="../../form_277.png" width="50" height="15"/>). From this we can determine the nodal uncollided flux, <img class="formulaInl" alt="$ \phi^{uc} $" src="../../form_278.png" width="21" height="15"/>, in a similar fashion as we would determine the regular flux, i.e., </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \sum_j \phi_j^{uc} \int_V b_i b_j dV = \int_V b_i \phi^{uc} dV, \]" src="../../form_279.png" width="209" height="42"/>
+<p> where \( \psi(s=0) \) is the value of \( \psi \) when it entered the cell.</p>
+<p >To assimilate all of this into a raytracing algorithm we start a source particle with a weight, \( w^p = 1 \), which acts as the proxy for \( \psi \) (i.e., \( w^p \equiv \psi \)). From this we can determine the nodal uncollided flux, \( \phi^{uc} \), in a similar fashion as we would determine the regular flux, i.e., </p><p class="formulaDsp">
+\[ \sum_j \phi_j^{uc} \int_V b_i b_j dV = \int_V b_i \phi^{uc} dV, \]
 </p>
-<p> however, now we need additional treatment for the integral containing <img class="formulaInl" alt="$ \phi^{uc} $" src="../../form_278.png" width="21" height="15"/>, for which we have </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \int_V b_i \phi^{uc} dV \approx \frac{1}{N_p} \sum_t \ell_t w_t^{i,avg}, \]" src="../../form_280.png" width="197" height="39"/>
+<p> however, now we need additional treatment for the integral containing \( \phi^{uc} \), for which we have </p><p class="formulaDsp">
+\[ \int_V b_i \phi^{uc} dV \approx \frac{1}{N_p} \sum_t \ell_t w_t^{i,avg}, \]
 </p>
 <p> where, this time, </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_t^{i,avg} = \frac{ \int_{s_a}^{s_b} w^p(s) b_i(s\mapsto \mathbf{x}) ds } {\ell_t}. \]" src="../../form_281.png" width="204" height="41"/>
+\[ w_t^{i,avg} = \frac{ \int_{s_a}^{s_b} w^p(s) b_i(s\mapsto \mathbf{x}) ds } {\ell_t}. \]
 </p>
-<p> Note here that <img class="formulaInl" alt="$ w^p $" src="../../form_282.png" width="18" height="11"/> is a function of position, specifically </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w^p(s) = w^p(s=s_a) e^{-\sigma_t s} \]" src="../../form_283.png" width="162" height="17"/>
+<p> Note here that \( w^p \) is a function of position, specifically </p><p class="formulaDsp">
+\[ w^p(s) = w^p(s=s_a) e^{-\sigma_t s} \]
 </p>
-<p> and so is the basis function <img class="formulaInl" alt="$ b_i $" src="../../form_284.png" width="11" height="15"/>.</p>
+<p> and so is the basis function \( b_i \).</p>
 <p >The form of this integral needs to split into segments in the same way we did in the previous subsection. Therefore, given K amount of segments, we now have </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \ell_t w_t^{i,avg} = \sum_{k=0}^{K-1} \ell_{tk} w_{tk}^{i,avg} \]" src="../../form_285.png" width="156" height="47"/>
+\[ \ell_t w_t^{i,avg} = \sum_{k=0}^{K-1} \ell_{tk} w_{tk}^{i,avg} \]
 </p>
-<p> where <img class="formulaInl" alt="$ \ell_{tk} $" src="../../form_286.png" width="18" height="15"/> is the track length of the <img class="formulaInl" alt="$ k $" src="../../form_287.png" width="8" height="12"/>-th segment and <img class="formulaInl" alt="$ w_{tk}^{i,avg} $" src="../../form_288.png" width="39" height="20"/> is the average weight of this segment. The weight is computed with </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_{tk}^{i,avg} = \frac{ \int_{s_k}^{s_{k+1}} w^p(s) b_i(s\mapsto \mathbf{x}) ds } {\ell_{tk}}. \]" src="../../form_289.png" width="218" height="41"/>
+<p> where \( \ell_{tk} \) is the track length of the \( k \)-th segment and \( w_{tk}^{i,avg} \) is the average weight of this segment. The weight is computed with </p><p class="formulaDsp">
+\[ w_{tk}^{i,avg} = \frac{ \int_{s_k}^{s_{k+1}} w^p(s) b_i(s\mapsto \mathbf{x}) ds } {\ell_{tk}}. \]
 </p>
-<p> where <img class="formulaInl" alt="$ s_k $" src="../../form_290.png" width="14" height="11"/> and <img class="formulaInl" alt="$ s_{k+1} $" src="../../form_291.png" width="29" height="12"/> are the beginning and ending positions of segment <img class="formulaInl" alt="$ k $" src="../../form_287.png" width="8" height="12"/> respectively.</p>
-<p >Note here that, since we have an expression for <img class="formulaInl" alt="$ w^p $" src="../../form_282.png" width="18" height="11"/>, we can compute <img class="formulaInl" alt="$ w^p $" src="../../form_282.png" width="18" height="11"/> at any point along track <img class="formulaInl" alt="$ t $" src="../../form_247.png" width="6" height="11"/> including at the start of any segment. Therefore we define <img class="formulaInl" alt="$ w_k^p = w^p(s=s_k) $" src="../../form_292.png" width="110" height="18"/> which allows us to express <img class="formulaInl" alt="$ w^p $" src="../../form_282.png" width="18" height="11"/> as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w^p(s) = w_k^p e^{-\sigma_t(s-s_k)}, \quad \quad \quad s\in[s_k,s_{k+1}] \]" src="../../form_293.png" width="276" height="20"/>
+<p> where \( s_k \) and \( s_{k+1} \) are the beginning and ending positions of segment \( k \) respectively.</p>
+<p >Note here that, since we have an expression for \( w^p \), we can compute \( w^p \) at any point along track \( t \) including at the start of any segment. Therefore we define \( w_k^p = w^p(s=s_k) \) which allows us to express \( w^p \) as </p><p class="formulaDsp">
+\[ w^p(s) = w_k^p e^{-\sigma_t(s-s_k)}, \quad \quad \quad s\in[s_k,s_{k+1}] \]
 </p>
 <p >Additionally we express the basis functions on a segment, since we know the shape function is linear on the segment, as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ b_i(s) = b_{i,k} \frac{s_{k+1}-s}{s_{k+1}-s_k} + b_{i,k+1} \frac{s-s_k}{s_{k+1}-s_k} \]" src="../../form_294.png" width="257" height="32"/>
+\[ b_i(s) = b_{i,k} \frac{s_{k+1}-s}{s_{k+1}-s_k} + b_{i,k+1} \frac{s-s_k}{s_{k+1}-s_k} \]
 </p>
-<p> where <img class="formulaInl" alt="$ b_{i,k} $" src="../../form_295.png" width="21" height="17"/> and <img class="formulaInl" alt="$ b_{i,k+1} $" src="../../form_296.png" width="35" height="17"/> are the basis function values at the beginning and end of the segment, respectively. These two expressions allow us to evaluate the segment average weight as </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_{tk}^{i,avg} = \frac{1}{\ell_{tk}} \int_{s_k}^{s_{k+1}} w_k^p e^{-\sigma_t(s-s_k)} \biggr[ b_{i,k} \frac{s_{k+1}-s}{s_{k+1}-s_k} + b_{i,k+1} \frac{s-s_k}{s_{k+1}-s_k} \biggr] ds \]" src="../../form_297.png" width="449" height="39"/>
+<p> where \( b_{i,k} \) and \( b_{i,k+1} \) are the basis function values at the beginning and end of the segment, respectively. These two expressions allow us to evaluate the segment average weight as </p><p class="formulaDsp">
+\[ w_{tk}^{i,avg} = \frac{1}{\ell_{tk}} \int_{s_k}^{s_{k+1}} w_k^p e^{-\sigma_t(s-s_k)} \biggr[ b_{i,k} \frac{s_{k+1}-s}{s_{k+1}-s_k} + b_{i,k+1} \frac{s-s_k}{s_{k+1}-s_k} \biggr] ds \]
 </p>
-<p> and since <img class="formulaInl" alt="$ s_{k+1}-s_k = \ell_{tk} $" src="../../form_298.png" width="99" height="17"/> we can simplify this expression as</p>
+<p> and since \( s_{k+1}-s_k = \ell_{tk} \) we can simplify this expression as</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\begin{align*} w_{tk}^{i,avg} &amp;= \frac{1}{\ell_{tk}} \int_{0}^{\ell_{tk}} w_k^p e^{-\sigma_t s' } \biggr[ b_{i,k} \frac{\ell_{tk}-s'}{\ell_{tk}} + b_{i,k+1} \frac{s'}{\ell_{tk}} \biggr] ds' \\ &amp;= \frac{1}{\ell_{tk}^2} \int_{0}^{\ell_{tk}} w_k^p e^{-\sigma_t s' } \biggr[ b_{i,k} \ell_{tk} + (b_{i,k+1} - b_{i,k} ) s' \biggr] ds' \end{align*}" src="../../form_299.png" width="365" height="84"/>
+\begin{align*} w_{tk}^{i,avg} &amp;= \frac{1}{\ell_{tk}} \int_{0}^{\ell_{tk}} w_k^p e^{-\sigma_t s&#39; } \biggr[ b_{i,k} \frac{\ell_{tk}-s&#39;}{\ell_{tk}} + b_{i,k+1} \frac{s&#39;}{\ell_{tk}} \biggr] ds&#39; \\ &amp;= \frac{1}{\ell_{tk}^2} \int_{0}^{\ell_{tk}} w_k^p e^{-\sigma_t s&#39; } \biggr[ b_{i,k} \ell_{tk} + (b_{i,k+1} - b_{i,k} ) s&#39; \biggr] ds&#39; \end{align*}
 </p>
 <p> which is in the general form </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \int_{0}^{\ell_{tk}} e^{-\sigma_t s'} \biggr[ C_0 + C_1 s' \biggr] ds' \]" src="../../form_300.png" width="254" height="41"/>
+\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \int_{0}^{\ell_{tk}} e^{-\sigma_t s&#39;} \biggr[ C_0 + C_1 s&#39; \biggr] ds&#39; \]
 </p>
 <p> where </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ C_0 = b_{i,k} \ell_{tk} \]" src="../../form_301.png" width="77" height="17"/>
+\[ C_0 = b_{i,k} \ell_{tk} \]
 </p>
  <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ C_1 = b_{i,k+1} - b_{i,k}. \]" src="../../form_302.png" width="119" height="17"/>
+\[ C_1 = b_{i,k+1} - b_{i,k}. \]
 </p>
 <p >With these constants defined the expression can be evaluated analytically</p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \biggr[ \frac{C_0}{\sigma_t} (1-e^{-\sigma_t \ell_{tk}}) + \frac{C_1}{\sigma_t^2} \biggr( 1 - (1 + \sigma_t \ell_{tk} ) \biggr)e^{-\sigma_t \ell_{tk}} \biggr] \]" src="../../form_303.png" width="398" height="39"/>
+\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \biggr[ \frac{C_0}{\sigma_t} (1-e^{-\sigma_t \ell_{tk}}) + \frac{C_1}{\sigma_t^2} \biggr( 1 - (1 + \sigma_t \ell_{tk} ) \biggr)e^{-\sigma_t \ell_{tk}} \biggr] \]
 </p>
 <h1><a class="anchor" id="CodeTut93Sec2"></a>
 2 Program setup</h1>
@@ -217,8 +224,8 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line">                      (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246">chi_mesh::DIMENSION_2</a>)? 2 :</div>
 <div class="line">                      (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">chi_mesh::DIMENSION_3</a>)? 3 : 0;</div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_handler_html_aa87887c1a76634cb07134b5faa1e3587"><div class="ttname"><a href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">chi_mesh::MeshHandler::GetGrid</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr &amp; GetGrid() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/chi__meshhandler_8cc_source.html#l00012">chi_meshhandler.cc:12</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00027">chi_log.cc:27</a></div></div>
-<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00070">chi_runtime.h:70</a></div></div>
+<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00036">chi_log.cc:36</a></div></div>
+<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975">chi_mesh::DIMENSION_1</a></div><div class="ttdeci">@ DIMENSION_1</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00072">chi_mesh.h:72</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246">chi_mesh::DIMENSION_2</a></div><div class="ttdeci">@ DIMENSION_2</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00073">chi_mesh.h:73</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">chi_mesh::DIMENSION_3</a></div><div class="ttdeci">@ DIMENSION_3</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00074">chi_mesh.h:74</a></div></div>
@@ -248,14 +255,14 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line">      m_to_ell_em_map.emplace_back(ell,m);</div>
 </div><!-- fragment --><p> The interesting items here includes the <code>scattering_order</code> and the map from linear moment index to harmonic indices, <code>m_to_ell_em_map</code>. See the <a href="https://github.com/doctor-janv/whitepapers/blob/main/ChiTech-LBS-TheoryManual/ChiTech-LBS-TheoryManual_v_1_13.pdf">LBS Whitepaper</a> for the detail of this but in a nutshell... Only some of the harmonics are relevant in certain dimensions.</p>
 <p >Next we build the spatial discretization, which in this case would be a PWLD discretization, and we do this as normal: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
-<div class="line"><a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#aabeea5135d3586a94db69f58efe08c33">chi_math::SpatialDiscretization_PWLD::New</a>(grid_ptr);</div>
+<div class="line"><a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#a2c47f3d6e3faf4ac1d41f429f4839a0c">chi_math::SpatialDiscretization_PWLD::New</a>(grid_ptr);</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = *sdm_ptr;</div>
-<div class="ttc" id="aclasschi__math_1_1_spatial_discretization___p_w_l_d_html_aabeea5135d3586a94db69f58efe08c33"><div class="ttname"><a href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#aabeea5135d3586a94db69f58efe08c33">chi_math::SpatialDiscretization_PWLD::New</a></div><div class="ttdeci">static std::shared_ptr&lt; SpatialDiscretization_PWLD &gt; New(chi_mesh::MeshContinuumPtr &amp;in_grid, finite_element::SetupFlags setup_flags=finite_element::NO_FLAGS_SET, QuadratureOrder qorder=QuadratureOrder::SECOND, CoordinateSystemType in_cs_type=CoordinateSystemType::CARTESIAN)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dad/pwl__00__constrdestr_8cc_source.html#l00085">pwl_00_constrdestr.cc:86</a></div></div>
+<div class="ttc" id="aclasschi__math_1_1_spatial_discretization___p_w_l_d_html_a2c47f3d6e3faf4ac1d41f429f4839a0c"><div class="ttname"><a href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#a2c47f3d6e3faf4ac1d41f429f4839a0c">chi_math::SpatialDiscretization_PWLD::New</a></div><div class="ttdeci">static std::shared_ptr&lt; SpatialDiscretization_PWLD &gt; New(const chi_mesh::MeshContinuum &amp;in_grid, finite_element::SetupFlags setup_flags=finite_element::NO_FLAGS_SET, QuadratureOrder qorder=QuadratureOrder::SECOND, CoordinateSystemType in_cs_type=CoordinateSystemType::CARTESIAN)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dad/pwl__00__constrdestr_8cc_source.html#l00086">pwl_00_constrdestr.cc:86</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ab6754b3179f7dbf965932210273fead7"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a></div><div class="ttdeci">std::shared_ptr&lt; SpatialDiscretization &gt; SDMPtr</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df1/cfem__diffusion__solver_8h_source.html#l00025">cfem_diffusion_solver.h:24</a></div></div>
 </div><!-- fragment --><p >For the unknown manager and DOF-counts we build an unknown manager as follows: </p><div class="fragment"><div class="line"><a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> phi_uk_man;</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m&lt;num_moments; ++m)</div>
 <div class="line">  phi_uk_man.<a class="code hl_function" href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78">AddUnknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a>, num_groups);</div>
-<div class="ttc" id="aclasschi__math_1_1_unknown_manager_html"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00107">unknown_manager.h:108</a></div></div>
+<div class="ttc" id="aclasschi__math_1_1_unknown_manager_html"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00122">unknown_manager.h:123</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_unknown_manager_html_a07fb29a7555ba61bd0e22a584b4abb78"><div class="ttname"><a href="../../d9/da7/classchi__math_1_1_unknown_manager.html#a07fb29a7555ba61bd0e22a584b4abb78">chi_math::UnknownManager::AddUnknown</a></div><div class="ttdeci">unsigned int AddUnknown(UnknownType unk_type, unsigned int dimension=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d4c/unknown__manager_8cc_source.html#l00009">unknown_manager.cc:10</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4">chi_math::UnknownType::VECTOR_N</a></div><div class="ttdeci">@ VECTOR_N</div></div>
 </div><!-- fragment --><p >And then grab the dof-counts </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_fem_local_dofs = sdm.GetNumLocalDOFs(phi_uk_man);</div>
@@ -301,7 +308,7 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <p >In this section we define 3 utility functions in the form of c++ lambdas. i) A routine to sample a random direction. This gets used when we sample the source. ii) A routine to contribute a track to a PWLD tally. This is very complicated and will be explained. iii) A routine to approximate a given cell's size. The approximate cell sizes are used by the raytracer (which we will discuss later) to set appropriate tolerances used during the sub-routines of the raytracer.</p>
 <h2><a class="anchor" id="CodeTut93Sec4_1"></a>
 4.1 Sampling a random direction</h2>
-<p >Given a random number generator we can use two random numbers to sample the azimuthal- and polar directions. The azimuthal angle is sampled uniformly, i.e., <img class="formulaInl" alt="$ \varphi \in [0,2\pi] $" src="../../form_304.png" width="66" height="17"/> whilst the polar angle is determined by sampling the cosine of the polar angle uniformly, i.e., <img class="formulaInl" alt="$ \cos \theta = \mu \in [-1,1] $" src="../../form_305.png" width="119" height="17"/>.</p>
+<p >Given a random number generator we can use two random numbers to sample the azimuthal- and polar directions. The azimuthal angle is sampled uniformly, i.e., \( \varphi \in [0,2\pi] \) whilst the polar angle is determined by sampling the cosine of the polar angle uniformly, i.e., \( \cos \theta = \mu \in [-1,1] \).</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="../../d9/d55/classchi__math_1_1_random_number_generator.html">chi_math::RandomNumberGenerator</a> rng;</div>
 <div class="line"><span class="keyword">auto</span> SampleRandomDirection = [&amp;rng]()</div>
 <div class="line">{</div>
@@ -403,7 +410,7 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> phi_theta = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a612087e73bf9b2cd09c6fad00f8e0d4e">chi_math::OmegaToPhiThetaSafe</a>(omega);</div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> phi = phi_theta.first;</div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> theta = phi_theta.second;</div>
-</div><!-- fragment --><p> We get the cell mapping, number of nodes, and we convert the direction vector to a <img class="formulaInl" alt="$ (\varphi, \theta) $" src="../../form_306.png" width="35" height="17"/> pair. The latter will be used for the harmonic weighting.</p>
+</div><!-- fragment --><p> We get the cell mapping, number of nodes, and we convert the direction vector to a \( (\varphi, \theta) \) pair. The latter will be used for the harmonic weighting.</p>
 <p >Next we determing the segments crossed by this track. This information is populated into a vector of segment lengths, sorted according to the direction traveled by the ray, by using the routine <code><a class="el" href="../../d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50">chi_mesh::PopulateRaySegmentLengths()</a></code>. </p><div class="fragment"><div class="line">std::vector&lt;double&gt; segment_lengths;</div>
 <div class="line"><a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a3caacec44d1cd2faa8c96cc0a1c96c50">chi_mesh::PopulateRaySegmentLengths</a>(grid,             <span class="comment">//input</span></div>
 <div class="line">                                    cell,             <span class="comment">//input</span></div>
@@ -411,7 +418,7 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line">                                    positionB,        <span class="comment">//input</span></div>
 <div class="line">                                    omega,            <span class="comment">//input</span></div>
 <div class="line">                                    segment_lengths); <span class="comment">//output</span></div>
-</div><!-- fragment --><p >We then declare two vectors that will hold the shape function values at different places on the segments. We can immediately determine the shape values at <img class="formulaInl" alt="$ s_0 $" src="../../form_307.png" width="12" height="11"/> since this will be at position A. </p><div class="fragment"><div class="line">std::vector&lt;double&gt; shape_values_k;   <span class="comment">//At s_k</span></div>
+</div><!-- fragment --><p >We then declare two vectors that will hold the shape function values at different places on the segments. We can immediately determine the shape values at \( s_0 \) since this will be at position A. </p><div class="fragment"><div class="line">std::vector&lt;double&gt; shape_values_k;   <span class="comment">//At s_k</span></div>
 <div class="line">std::vector&lt;double&gt; shape_values_kp1; <span class="comment">//At s_{k+1}</span></div>
 <div class="line"> </div>
 <div class="line">cell_mapping.ShapeValues(positionA,       <span class="comment">//input</span></div>
@@ -427,7 +434,7 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp;   b_ik   = shape_values_k;</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp;   b_ikp1 = shape_values_kp1;</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; ell_k  = segment_length_k;</div>
-</div><!-- fragment --><p> We determine the end position of the segment using a running sum of the total segments traversed. We then populate the shape function values at <img class="formulaInl" alt="$ s_{k+1} $" src="../../form_291.png" width="29" height="12"/> and rename both sets of shape function values and the segment length for convenience.</p>
+</div><!-- fragment --><p> We determine the end position of the segment using a running sum of the total segments traversed. We then populate the shape function values at \( s_{k+1} \) and rename both sets of shape function values and the segment length for convenience.</p>
 <p >Next we loop over the nodes and moments. </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;num_nodes; ++i)</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span> C0 = b_ik[i] * ell_k;</div>
@@ -443,7 +450,7 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">double</span> w_harmonic = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a9c9dcd08b5ba5ae11f987a038494d6c5">chi_math::Ylm</a>(ell, em, phi, theta);</div>
 </div><!-- fragment --><p >Then we compute the exponential weighting based on the formula </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \biggr[ \frac{C_0}{\sigma_t} (1-e^{-\sigma_t \ell_{tk}}) + \frac{C_1}{\sigma_t^2} \biggr( 1 - (1 + \sigma_t \ell_{tk} ) \biggr)e^{-\sigma_t \ell_{tk}} \biggr] \]" src="../../form_303.png" width="398" height="39"/>
+\[ w_{tk}^{i,avg} = \frac{w_k^p}{\ell_{tk}^2} \biggr[ \frac{C_0}{\sigma_t} (1-e^{-\sigma_t \ell_{tk}}) + \frac{C_1}{\sigma_t^2} \biggr( 1 - (1 + \sigma_t \ell_{tk} ) \biggr)e^{-\sigma_t \ell_{tk}} \biggr] \]
 </p>
 <p> with the code </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> w_exp  = (C0 / sigma_t) * (1.0 - exp(-sigma_t * ell_k)) +</div>
 <div class="line">                (C1 / (sigma_t * sigma_t)) *</div>
@@ -452,7 +459,7 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 </div><!-- fragment --><p >Finally, the average weight is computed and the tally contribution is made </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> w_avg = w_harmonic * w_exp;</div>
 <div class="line"> </div>
 <div class="line">phi_tally[dof_map] += ell_k * w_avg ;</div>
-</div><!-- fragment --><p >At the end of each segment being processed we copy the shape function values at <img class="formulaInl" alt="$ s_{k+1} $" src="../../form_291.png" width="29" height="12"/> to <img class="formulaInl" alt="$ s_k $" src="../../form_290.png" width="14" height="11"/>, preventing us from having to compute the values at <img class="formulaInl" alt="$ s_k $" src="../../form_290.png" width="14" height="11"/> again (which can be expensive). We also apply the exponential attenuation to the particle weight over the segment. </p><div class="fragment"><div class="line">shape_values_k = shape_values_kp1;</div>
+</div><!-- fragment --><p >At the end of each segment being processed we copy the shape function values at \( s_{k+1} \) to \( s_k \), preventing us from having to compute the values at \( s_k \) again (which can be expensive). We also apply the exponential attenuation to the particle weight over the segment. </p><div class="fragment"><div class="line">shape_values_k = shape_values_kp1;</div>
 <div class="line">weight *= exp(-sigma_t * segment_length_k);</div>
 </div><!-- fragment --><h2><a class="anchor" id="CodeTut93Sec4_3"></a>
 4.3 Approximating cell size</h2>
@@ -645,8 +652,8 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line">    }<span class="comment">//for group g</span></div>
 <div class="line"> </div>
 <div class="line">}<span class="comment">//for cell</span></div>
-<div class="ttc" id="achi__math_8h_html_a80801c4491f8f4ff54ed012d63d0d48b"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a></div><div class="ttdeci">std::vector&lt; VecDbl &gt; MatDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00016">chi_math.h:16</a></div></div>
-<div class="ttc" id="achi__math_8h_html_acbe69520b2db91355c5ed8d97a218b94"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a></div><div class="ttdeci">std::vector&lt; double &gt; VecDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00015">chi_math.h:15</a></div></div>
+<div class="ttc" id="achi__math_8h_html_a80801c4491f8f4ff54ed012d63d0d48b"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a></div><div class="ttdeci">std::vector&lt; VecDbl &gt; MatDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00013">chi_math.h:13</a></div></div>
+<div class="ttc" id="achi__math_8h_html_acbe69520b2db91355c5ed8d97a218b94"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a></div><div class="ttdeci">std::vector&lt; double &gt; VecDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00012">chi_math.h:12</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_a7d48371b6d078244114ce3d3053774d8"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a7d48371b6d078244114ce3d3053774d8">chi_math::Inverse</a></div><div class="ttdeci">MatDbl Inverse(const MatDbl &amp;A)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d6a/chi__math__02__matrix__operations_8cc_source.html#l00379">chi_math_02_matrix_operations.cc:379</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_aca338ae5af880df37376a94a8276ebb8"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#aca338ae5af880df37376a94a8276ebb8">chi_math::MatMul</a></div><div class="ttdeci">MatDbl MatMul(const MatDbl &amp;A, const double c)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d6a/chi__math__02__matrix__operations_8cc_source.html#l00096">chi_math_02_matrix_operations.cc:96</a></div></div>
 </div><!-- fragment --><p >The first portion of the loop is simply housekeeping again </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid.local_cells)</div>
@@ -665,13 +672,13 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line">                   qp_data.JxW(qp);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> M_inv = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a7d48371b6d078244114ce3d3053774d8">chi_math::Inverse</a>(M);</div>
-</div><!-- fragment --><p> We get the cell mapping, quadrature point data, and we build the mass matrix. Recall that we need <img class="formulaInl" alt="$ \phi_j^{uc} $" src="../../form_308.png" width="21" height="18"/> such that </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \sum_j \phi_j^{uc} \int_V b_i b_j dV = \int_V b_i \phi^{uc} dV, \]" src="../../form_279.png" width="209" height="42"/>
+</div><!-- fragment --><p> We get the cell mapping, quadrature point data, and we build the mass matrix. Recall that we need \( \phi_j^{uc} \) such that </p><p class="formulaDsp">
+\[ \sum_j \phi_j^{uc} \int_V b_i b_j dV = \int_V b_i \phi^{uc} dV, \]
 </p>
 <p> which requires us to solve the small system </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ M \boldsymbol{\phi}^{uc} = \mathbf{T} \]" src="../../form_309.png" width="72" height="15"/>
+\[ M \boldsymbol{\phi}^{uc} = \mathbf{T} \]
 </p>
-<p> where <img class="formulaInl" alt="$ M_{ij} = \int_V b_i b_j dV $" src="../../form_257.png" width="108" height="20"/> and <img class="formulaInl" alt="$ T_i = \int_V b_i \phi^{uc} dV $" src="../../form_310.png" width="108" height="20"/>. Since the mass matrix is such a small matrix we just directly invert it to be used for all groups and moments.</p>
+<p> where \( M_{ij} = \int_V b_i b_j dV \) and \( T_i = \int_V b_i \phi^{uc} dV \). Since the mass matrix is such a small matrix we just directly invert it to be used for all groups and moments.</p>
 <p >Next we loop over all moments and groups. </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a> T(num_nodes, 0.0);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m&lt;num_moments; ++m)</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> g=0; g&lt;num_groups; ++g)</div>
@@ -690,7 +697,7 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line">      phi_tally[imap] = phi_uc[i];</div>
 <div class="line">    }</div>
 <div class="line">  }<span class="comment">//for group g</span></div>
-</div><!-- fragment --><p >Within the moment and group loop we first set the entries of <img class="formulaInl" alt="$ T $" src="../../form_311.png" width="12" height="11"/> to the normalized tally values. Thereafter we multiply <img class="formulaInl" alt="$ T $" src="../../form_311.png" width="12" height="11"/> from the left with <img class="formulaInl" alt="$ M^{-1} $" src="../../form_312.png" width="32" height="14"/> to get <img class="formulaInl" alt="$ \boldsymbol{\phi}^{uc} $" src="../../form_313.png" width="23" height="15"/>. Finally we reuse the tally data and set the nodal values of the tally to the uncollided projected flux.</p>
+</div><!-- fragment --><p >Within the moment and group loop we first set the entries of \( T \) to the normalized tally values. Thereafter we multiply \( T \) from the left with \( M^{-1} \) to get \( \boldsymbol{\phi}^{uc} \). Finally we reuse the tally data and set the nodal values of the tally to the uncollided projected flux.</p>
 <h1><a class="anchor" id="CodeTut93Sec8"></a>
 8 Exporting field functions</h1>
 <p >Creating the field functions is similar to what we did in previous tutorials </p><div class="fragment"><div class="line"><span class="comment">//============================================= Create Field Functions</span></div>
@@ -722,14 +729,12 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//============================================= Update field function</span></div>
-<div class="line"><a class="code hl_typedef" href="../../df/de9/classchi__physics_1_1_field_function.html#a5683a7a351cb9abd8e0e4fd1b0f70717">chi_physics::FieldFunction::FFList</a> const_ff_list;</div>
+<div class="line">chi_physics::FieldFunction::FFList const_ff_list;</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; ff_ptr : ff_list)</div>
 <div class="line">  const_ff_list.push_back(ff_ptr);</div>
-<div class="line"><a class="code hl_function" href="../../df/de9/classchi__physics_1_1_field_function.html#a36cfb2b349cac90f084a35061da6601c">chi_physics::FieldFunction::ExportMultipleToVTK</a>(fname,</div>
+<div class="line">chi_physics::FieldFunction::ExportMultipleToVTK(fname,</div>
 <div class="line">                                                 const_ff_list);</div>
 <div class="ttc" id="aclasschi__math_1_1_unknown_html"><div class="ttname"><a href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00031">unknown_manager.h:32</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a36cfb2b349cac90f084a35061da6601c"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a36cfb2b349cac90f084a35061da6601c">chi_physics::FieldFunction::ExportMultipleToVTK</a></div><div class="ttdeci">static void ExportMultipleToVTK(const std::string &amp;file_base_name, const FFList &amp;ff_list)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de5/fieldfunction__03b__exportvtkwithappend_8cc_source.html#l00017">fieldfunction_03b_exportvtkwithappend.cc:18</a></div></div>
-<div class="ttc" id="aclasschi__physics_1_1_field_function_html_a5683a7a351cb9abd8e0e4fd1b0f70717"><div class="ttname"><a href="../../df/de9/classchi__physics_1_1_field_function.html#a5683a7a351cb9abd8e0e4fd1b0f70717">chi_physics::FieldFunction::FFList</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; const FieldFunction &gt; &gt; FFList</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db1/fieldfunction_8h_source.html#l00079">fieldfunction.h:79</a></div></div>
 </div><!-- fragment --><p >The visualization below shows a logarithmic scale warp of the flux values for both the uncollided algorithm and a LBS simulation using a product quadrature with 96 azimuthal angles and 48 polar angles per octant (18,432 directions total).</p>
 <p >The left of the figure is the uncollided algorithm and the right is LBS. Notice the stochastic "noise" from the uncollided algorithm.</p>
 <div class="image">
@@ -752,10 +757,10 @@ The complete program</h1>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span>chi_unit_sim_tests</div>
+<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d0/d68/namespacechi__unit__sim__tests.html">chi_unit_sim_tests</a></div>
 <div class="line">{</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a90f1bf8db9dd03373ea54a140cd446fc">chiSimTest93_RayTracing</a>(lua_State* Lstate)</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="../../d0/d68/namespacechi__unit__sim__tests.html#a008c82114ab2bdbce305e00ca56c1661">chiSimTest93_RayTracing</a>(lua_State* Lstate)</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">const</span> std::string fname = <span class="stringliteral">&quot;chiSimTest93_RayTracing&quot;</span>;</div>
 <div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;chiSimTest93_RayTracing&quot;</span>;</div>
@@ -796,7 +801,7 @@ The complete program</h1>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Make SDM</span></div>
 <div class="line">  <span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
-<div class="line">  <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#aabeea5135d3586a94db69f58efe08c33">chi_math::SpatialDiscretization_PWLD::New</a>(grid_ptr);</div>
+<div class="line">  <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#a2c47f3d6e3faf4ac1d41f429f4839a0c">chi_math::SpatialDiscretization_PWLD::New</a>(grid_ptr);</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = *sdm_ptr;</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> phi_uk_man;</div>
@@ -1095,10 +1100,10 @@ The complete program</h1>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Update field function</span></div>
-<div class="line">  <a class="code hl_typedef" href="../../df/de9/classchi__physics_1_1_field_function.html#a5683a7a351cb9abd8e0e4fd1b0f70717">chi_physics::FieldFunction::FFList</a> const_ff_list;</div>
+<div class="line">  chi_physics::FieldFunction::FFList const_ff_list;</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; ff_ptr : ff_list)</div>
 <div class="line">    const_ff_list.push_back(ff_ptr);</div>
-<div class="line">  <a class="code hl_function" href="../../df/de9/classchi__physics_1_1_field_function.html#a36cfb2b349cac90f084a35061da6601c">chi_physics::FieldFunction::ExportMultipleToVTK</a>(fname,</div>
+<div class="line">  chi_physics::FieldFunction::ExportMultipleToVTK(fname,</div>
 <div class="line">                                                   const_ff_list);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
@@ -1110,7 +1115,8 @@ The complete program</h1>
 <div class="ttc" id="achi__meshhandler_8h_html"><div class="ttname"><a href="../../df/d98/chi__meshhandler_8h.html">chi_meshhandler.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="alegendrepoly_8h_html"><div class="ttname"><a href="../../d6/d81/legendrepoly_8h.html">legendrepoly.h</a></div></div>
-<div class="ttc" id="anamespacechi__lua_html_a90f1bf8db9dd03373ea54a140cd446fc"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a90f1bf8db9dd03373ea54a140cd446fc">chi_lua::chiSimTest93_RayTracing</a></div><div class="ttdeci">void chiSimTest93_RayTracing()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00025">lua_functions.c:25</a></div></div>
+<div class="ttc" id="anamespacechi__unit__sim__tests_html"><div class="ttname"><a href="../../d0/d68/namespacechi__unit__sim__tests.html">chi_unit_sim_tests</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d6f/sim___i_p___m_m_s___l2error_8cc_source.html#l00012">sim_IP_MMS_L2error.cc:13</a></div></div>
+<div class="ttc" id="anamespacechi__unit__sim__tests_html_a008c82114ab2bdbce305e00ca56c1661"><div class="ttname"><a href="../../d0/d68/namespacechi__unit__sim__tests.html#a008c82114ab2bdbce305e00ca56c1661">chi_unit_sim_tests::chiSimTest93_RayTracing</a></div><div class="ttdeci">int chiSimTest93_RayTracing(lua_State *Lstate)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d31/simtest__93__raytracing_8cc_source.html#l00019">simtest_93_raytracing.cc:19</a></div></div>
 <div class="ttc" id="apwl_8h_html"><div class="ttname"><a href="../../d4/d01/pwl_8h.html">pwl.h</a></div></div>
 <div class="ttc" id="arandom__number__generator_8h_html"><div class="ttname"><a href="../../d7/dbf/random__number__generator_8h.html">random_number_generator.h</a></div></div>
 <div class="ttc" id="araytracing_8h_html"><div class="ttname"><a href="../../d8/dc8/raytracing_8h.html">raytracing.h</a></div></div>
