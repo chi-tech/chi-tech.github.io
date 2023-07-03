@@ -33,7 +33,7 @@ var searchData=
   ['unpartitioned_20meshes_30',['Unpartitioned Meshes',['../d2/dde/group___lua_unpartitioned_mesh.html',1,'']]],
   ['unpartitioned_5fmesh_31',['UNPARTITIONED_MESH',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a0397c6d3b836f2132697065ef26bb4d5a5d7b35a7c355c1a874955eb2654c9d74',1,'chi_mesh::VolumeMesherExtruder']]],
   ['unpartitionedmesh_32',['UnpartitionedMesh',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html',1,'chi_mesh']]],
-  ['unpartitionedmesh_5fstack_33',['unpartitionedmesh_stack',['../d4/d35/classchi.html#a47b557d0bdd217181e6f5b7798cec13a',1,'chi']]],
+  ['unpartitionedmesh_5fstack_33',['unpartitionedmesh_stack',['../d7/dd7/class_chi.html#a7d4f2b722a628cfeea9dc53795d9743f',1,'Chi']]],
   ['unpartitionedmeshptr_34',['UnpartitionedMeshPtr',['../d0/d81/namespacechi__mesh.html#a5c1d91b69650c8df55b84d492b31184d',1,'chi_mesh']]],
   ['unpartmesh_5f00a_5fgeneral_2ecc_35',['unpartmesh_00a_general.cc',['../de/dca/unpartmesh__00a__general_8cc.html',1,'']]],
   ['unpartmesh_5f00b_5fconnectivity_2ecc_36',['unpartmesh_00b_connectivity.cc',['../d2/daf/unpartmesh__00b__connectivity_8cc.html',1,'']]],

@@ -38,13 +38,18 @@ var namespacechi__mesh_1_1sweep__management =
       [ "REFLECTING", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da6890fc3005a75adb9e5a84b693e8741c", null ],
       [ "INCIDENT_ANISOTROPIC_HETEROGENEOUS", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6cd9803675df8262126d71d894dde25da354f310f56a032d33d104ad8ebb36755", null ]
     ] ],
+    [ "FaceOrientation", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a8fb6d7f7772897f92cb93a637cbd7b92", [
+      [ "PARALLEL", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a8fb6d7f7772897f92cb93a637cbd7b92adf13a99b035d6f0bce4f44ab18eec8eb", null ],
+      [ "INCOMING", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a8fb6d7f7772897f92cb93a637cbd7b92afb4081bff9f77d65456ceb00b153e4d4", null ],
+      [ "OUTGOING", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a8fb6d7f7772897f92cb93a637cbd7b92a1741b869c82993c62163223d8fefbba4", null ]
+    ] ],
     [ "SchedulingAlgorithm", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ab89d643f43f578f07f21038106d6817f", [
       [ "FIRST_IN_FIRST_OUT", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ab89d643f43f578f07f21038106d6817fa1379cd876fb85f4d33d47b4933814b05", null ],
       [ "DEPTH_OF_GRAPH", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ab89d643f43f578f07f21038106d6817fa51d47b2c9be19652409783fd56b64423", null ]
     ] ],
     [ "CommunicateLocationDependencies", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a2a06289a8db4ef4f00fc69b451536205", null ],
     [ "CreateSweepOrder", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ad90dbc921056b0a05f15ac9cef7c068f", null ],
-    [ "PopulateCellRelationships", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ae67306c77bdd9b263a0beac297b4e04d", null ],
+    [ "PopulateCellRelationships", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a11bc43e4946af1d091b7929c2a46de8d", null ],
     [ "PrintSweepOrdering", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a14056bd4d6583fc03ff5400466e173bd", null ],
     [ "RemoveGlobalCyclicDependencies", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ad9afacb8ef7ad0b18ef39c13db1dcc81", null ],
     [ "RemoveLocalCyclicDependencies", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a08330bb9af1d916d059a549af0982ee8", null ]

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['log_5flvl_0',['LOG_LVL',['../d8/d42/classchi__objects_1_1_chi_log.html#ab2a54ede9e1dd90cf0ff2d415bf6bf86',1,'chi_objects::ChiLog']]],
-  ['logicalvolumetype_1',['LogicalVolumeType',['../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2',1,'chi_mesh']]]
+  ['inputparametertag_0',['InputParameterTag',['../dc/d67/namespacechi.html#a9355475cc63c20acacdc1328c56ae1d4',1,'chi']]],
+  ['iterativemethod_1',['IterativeMethod',['../d9/d42/namespacelbs.html#a74e6ab7d8963411bcda1c642e3098508',1,'lbs']]]
 ];

@@ -1,6 +1,6 @@
 var classchi__mesh_1_1_mesh_continuum =
 [
-    [ "MPILocalCommSetPtr", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a09eccfba04f99bf811f941bf46b175aa", null ],
+    [ "MPILocalCommSetPtr", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#ae4a05076b0406e67dfcdb601f4e00333", null ],
     [ "MeshContinuum", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a9f0bc1e0fab76fb24debb27852300874", null ],
     [ "Attributes", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a15eed36e4da5d55ac9ad26d6a37a7a72", null ],
     [ "CheckPointInsideCell", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a041a1b72b3b93c11de28307fc6af59e4", null ],
@@ -24,7 +24,7 @@ var classchi__mesh_1_1_mesh_continuum =
     [ "MakeCellOrthoSizes", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a66224c8024c8e1e395389dd8ccd547c1", null ],
     [ "MakeGridFaceHistogram", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a17ab2488ecbb2746dd8bcbbb9ffec8e4", null ],
     [ "MakeIJKToGlobalIDMapping", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a6ff14aae03e8c78ca276c9f2884bcd98", null ],
-    [ "MakeMPILocalCommunicatorSet", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#ac78ac6d9c4cdaff45976c670e0b0d1b6", null ],
+    [ "MakeMPILocalCommunicatorSet", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a2e5ddc6ecd4723fed68a55cd8507d3e5", null ],
     [ "MapCellFace", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#acf1d5d95fe115a589d2f1a89c1077c3d", null ],
     [ "New", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a75f604e303928e5998314aae3942b71c", null ],
     [ "SetAttributes", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aa58d4df4c99fc9922addb53cac6d6fc6", null ],

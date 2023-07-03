@@ -1,7 +1,7 @@
 var classchi__mesh_1_1_r_c_c_logical_volume =
 [
-    [ "RCCLogicalVolume", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a852329da95ff2eafa76235e604156f1f", null ],
-    [ "RCCLogicalVolume", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a8d2bfe1a63acbfd77b2f4e40685a8869", null ],
+    [ "RCCLogicalVolume", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#aa6fa199921b75d455d0651dd5db76753", null ],
+    [ "GetInputParameters", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a667932d091386307325f649be44c39eb", null ],
     [ "Inside", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a61c91e02c50e9f286030573a2c8e788f", null ],
     [ "r_", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a9b2df996e7b592124822a2a0e477f77e", null ],
     [ "vx_", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a37577fa217d0f46295cc4f88cd425903", null ],

@@ -8,7 +8,7 @@ var searchData=
   ['wgdsa_5fverbose_5f_5',['wgdsa_verbose_',['../d2/db6/classlbs_1_1_l_b_s_groupset.html#a772b984bafb2f29f53a062fb89343f06',1,'lbs::LBSGroupset']]],
   ['wgs_5fsolvers_5f_6',['wgs_solvers_',['../dc/db7/classlbs_1_1_l_b_s_solver.html#ac3389eaf9deac622e7d9c71dbd52987f',1,'lbs::LBSSolver']]],
   ['whitespace_7',['WHITESPACE',['../d8/def/namespacechi__misc__utils.html#aacc87ffb07fd4007d1e02ca2c8b90867',1,'chi_misc_utils']]],
-  ['world_5fgroup_5f_8',['world_group_',['../d8/da3/classchi__objects_1_1_chi_m_p_i_communicator_set.html#af79bc0f4bf986fb72283d94aa29890f4',1,'chi_objects::ChiMPICommunicatorSet']]],
+  ['world_5fgroup_5f_8',['world_group_',['../df/de1/classchi_1_1_chi_m_p_i_communicator_set.html#aebadbe62d6cddce6b0c93123a41083fa',1,'chi::ChiMPICommunicatorSet']]],
   ['write_5frestart_5fdata_9',['write_restart_data',['../dc/dcd/structlbs_1_1_options.html#a928b20ab1128051be0edce8d465a1008',1,'lbs::Options']]],
   ['write_5frestart_5ffile_5fbase_10',['write_restart_file_base',['../dc/dcd/structlbs_1_1_options.html#a070a4952662040fb183b707c6c1e86eb',1,'lbs::Options']]],
   ['write_5frestart_5ffolder_5fname_11',['write_restart_folder_name',['../dc/dcd/structlbs_1_1_options.html#a48df77259dca3b0aa71e3d0c7c95c7e9',1,'lbs::Options']]],

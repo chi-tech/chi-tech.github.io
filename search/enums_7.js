@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['meshattributes_0',['MeshAttributes',['../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362',1,'chi_mesh']]]
+  ['log_5flvl_0',['LOG_LVL',['../df/dfa/classchi_1_1_chi_log.html#aee4c0fe9820227628292f72f1ccefcda',1,'chi::ChiLog']]]
 ];

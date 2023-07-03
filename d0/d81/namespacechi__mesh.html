@@ -151,6 +151,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">MeshHandler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/df7/classchi__mesh_1_1_mesh_modifier.html">MeshModifier</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/structchi__mesh_1_1_poly_face.html">PolyFace</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2a/classchi__mesh_1_1_ray_tracer.html">RayTracer</a></td></tr>
@@ -160,6 +162,8 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html">RCCLogicalVolume</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html">RPPLogicalVolume</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d81/classchi__mesh_1_1_snap_to_plane_mesh_modifier.html">SnapToPlaneMeshModifier</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d06/classchi__mesh_1_1_sphere_logical_volume.html">SphereLogicalVolume</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,17 +252,6 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ad98d4e91589e7fa4e04bd70274068362"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0188560b69c38277389a3b9054070fb2"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2">LogicalVolumeType</a> { <br />
-&#160;&#160;<a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a8c8a076c1703c9f3535a5225bd8d9317">LVSPHERE</a> = 1
-, <a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a1abb99eae8a5e20e2ba19dc2188c2a3d">LVSPHERE_ORIGIN</a> = 2
-, <a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a0faaafb69d8450f1f7424397c8ccb2e6">LVRPP</a> = 3
-, <a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a57ca75e65b137dbe42b6f4e83b622993">LVRCC</a> = 4
-, <br />
-&#160;&#160;<a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2afff94b8acb91013c95e1d4108724d543">LVSURFACE</a> = 9
-, <a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2a19f2ce5d3a3b8329b08ead2e0544e4ac">LVBOOLEAN</a> = 10
-<br />
- }</td></tr>
-<tr class="separator:a0188560b69c38277389a3b9054070fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86b91e648fa560486ba65712269df162"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a86b91e648fa560486ba65712269df162">SurfaceMesherType</a> { <a class="el" href="../../d0/d81/namespacechi__mesh.html#a86b91e648fa560486ba65712269df162a430be965de84ff31f0ddd73903399816">Predefined</a> = 1
  }</td></tr>
 <tr class="separator:a86b91e648fa560486ba65712269df162"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -308,6 +301,20 @@ Functions</h2></td></tr>
 <tr class="separator:af2a8c29a2bf6594288f308cc6e68b443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8be2fe2792a86ed2e10d14229beedb5d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a8be2fe2792a86ed2e10d14229beedb5d">CreateUnpartitioned3DOrthoMesh</a> (std::vector&lt; double &gt; &amp;vertices_1d_x, std::vector&lt; double &gt; &amp;vertices_1d_y, std::vector&lt; double &gt; &amp;vertices_1d_z)</td></tr>
 <tr class="separator:a8be2fe2792a86ed2e10d14229beedb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a313ec9cff6af419d3ea255992db0895f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d4d/classchi_1_1_input_parameters.html">chi::InputParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a313ec9cff6af419d3ea255992db0895f">BooleanLogicalVolumeArgumentPair</a> ()</td></tr>
+<tr class="separator:a313ec9cff6af419d3ea255992db0895f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a911bc7045c6abb7978af7d352505f60e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a911bc7045c6abb7978af7d352505f60e">RegisterChiObject</a> (chi_mesh, <a class="el" href="../../da/dca/classchi__mesh_1_1_boolean_logical_volume.html">BooleanLogicalVolume</a>)</td></tr>
+<tr class="separator:a911bc7045c6abb7978af7d352505f60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c07ef9552e956fca0e29b1c680a6f5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a5c07ef9552e956fca0e29b1c680a6f5c">RegisterSyntaxBlock</a> (chi_mesh, <a class="el" href="../../d0/d81/namespacechi__mesh.html#a313ec9cff6af419d3ea255992db0895f">BooleanLogicalVolumeArgumentPair</a>, <a class="el" href="../../d0/d81/namespacechi__mesh.html#a313ec9cff6af419d3ea255992db0895f">BooleanLogicalVolumeArgumentPair</a>)</td></tr>
+<tr class="separator:a5c07ef9552e956fca0e29b1c680a6f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ce142ad0290b1eeb9ddbb6bc9701ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a22ce142ad0290b1eeb9ddbb6bc9701ae">RegisterChiObject</a> (chi_mesh, <a class="el" href="../../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html">RCCLogicalVolume</a>)</td></tr>
+<tr class="separator:a22ce142ad0290b1eeb9ddbb6bc9701ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66ae77ce9dafa77be0429a6a73e20277"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a66ae77ce9dafa77be0429a6a73e20277">RegisterChiObject</a> (chi_mesh, <a class="el" href="../../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html">RPPLogicalVolume</a>)</td></tr>
+<tr class="separator:a66ae77ce9dafa77be0429a6a73e20277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44979a5d7f59c83112fb5122fb31ffef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a44979a5d7f59c83112fb5122fb31ffef">RegisterChiObject</a> (chi_mesh, <a class="el" href="../../db/d06/classchi__mesh_1_1_sphere_logical_volume.html">SphereLogicalVolume</a>)</td></tr>
+<tr class="separator:a44979a5d7f59c83112fb5122fb31ffef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa613cb60dc7d0122c4fab4ac7a6256e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#aa613cb60dc7d0122c4fab4ac7a6256e1">RegisterChiObject</a> (chi_mesh, <a class="el" href="../../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html">SurfaceMeshLogicalVolume</a>)</td></tr>
+<tr class="separator:aa613cb60dc7d0122c4fab4ac7a6256e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab106f755376d57a95d8c1e6ad2f681d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#ab106f755376d57a95d8c1e6ad2f681d7">UploadCellGeometryDiscontinuous</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, int64_t &amp;node_counter, <a class="el" href="../../db/ddd/classvtk_new.html">vtkNew</a>&lt; vtkPoints &gt; &amp;points, <a class="el" href="../../db/ddd/classvtk_new.html">vtkNew</a>&lt; vtkUnstructuredGrid &gt; &amp;ugrid)</td></tr>
 <tr class="separator:ab106f755376d57a95d8c1e6ad2f681d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f2d9060356013e716d3c82c9ffa7e10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a7f2d9060356013e716d3c82c9ffa7e10">UploadCellGeometryContinuous</a> (const <a class="el" href="../../d8/d7c/classchi__mesh_1_1_cell.html">chi_mesh::Cell</a> &amp;cell, const std::vector&lt; uint64_t &gt; &amp;vertex_map, <a class="el" href="../../db/ddd/classvtk_new.html">vtkNew</a>&lt; vtkUnstructuredGrid &gt; &amp;ugrid)</td></tr>
@@ -316,8 +323,8 @@ Functions</h2></td></tr>
 <tr class="separator:a770edb637675bf3766b5512429b28ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8696ddc477184ec1c5d2a709d3ad89c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#ae8696ddc477184ec1c5d2a709d3ad89c">FindHighestDimension</a> (std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a946bdd1c1cf23b1c358c1d258ca06c2f">vtkUGridPtrAndName</a> &gt; &amp;ugrid_blocks)</td></tr>
 <tr class="separator:ae8696ddc477184ec1c5d2a709d3ad89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac934c7d4e922881d2638f0e3c0606977"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a8db6ad343c59b5308af7f799ecfb155f">vtkUGridPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#ac934c7d4e922881d2638f0e3c0606977">ConsolidateGridBlocks</a> (std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a946bdd1c1cf23b1c358c1d258ca06c2f">vtkUGridPtrAndName</a> &gt; &amp;ugrid_blocks)</td></tr>
-<tr class="separator:ac934c7d4e922881d2638f0e3c0606977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0280bef44b97bdbe1305ea653d1563"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a8db6ad343c59b5308af7f799ecfb155f">vtkUGridPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#abc0280bef44b97bdbe1305ea653d1563">ConsolidateGridBlocks</a> (std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a946bdd1c1cf23b1c358c1d258ca06c2f">vtkUGridPtrAndName</a> &gt; &amp;ugrid_blocks, const std::string &amp;block_id_array_name=&quot;BlockID&quot;)</td></tr>
+<tr class="separator:abc0280bef44b97bdbe1305ea653d1563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd4300f7d11c4d09c0c4ea8ad5111b42"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a946bdd1c1cf23b1c358c1d258ca06c2f">vtkUGridPtrAndName</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#afd4300f7d11c4d09c0c4ea8ad5111b42">GetBlocksOfDesiredDimension</a> (std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a946bdd1c1cf23b1c358c1d258ca06c2f">vtkUGridPtrAndName</a> &gt; &amp;ugrid_blocks, int desired_dimension)</td></tr>
 <tr class="separator:afd4300f7d11c4d09c0c4ea8ad5111b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bd83bf6e7ebadddc52f47dccdbd53c0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a6bd83bf6e7ebadddc52f47dccdbd53c0">BuildBlockCellExtents</a> (std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a946bdd1c1cf23b1c358c1d258ca06c2f">vtkUGridPtrAndName</a> &gt; &amp;ugrid_blocks, int desired_dimension)</td></tr>
@@ -326,10 +333,12 @@ Functions</h2></td></tr>
 <tr class="separator:ae7ae724d18b8558fa0843dc6c9c85da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e9806532315279b100fa3f1990136bd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a3e9806532315279b100fa3f1990136bd">BuildCellMaterialIDsFromField</a> (<a class="el" href="../../d0/d81/namespacechi__mesh.html#a8db6ad343c59b5308af7f799ecfb155f">vtkUGridPtr</a> &amp;ugrid, const std::string &amp;field_name, const std::string &amp;file_name)</td></tr>
 <tr class="separator:a3e9806532315279b100fa3f1990136bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91ecdd287c2aa7597234e3816196e8fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/ddd/classvtk_new.html">vtkNew</a>&lt; vtkUnstructuredGrid &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a91ecdd287c2aa7597234e3816196e8fa">PrepareVtkUnstructuredGrid</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid)</td></tr>
-<tr class="separator:a91ecdd287c2aa7597234e3816196e8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a077ddc34bc37800344bbb3f317005c37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/ddd/classvtk_new.html">vtkNew</a>&lt; vtkUnstructuredGrid &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a077ddc34bc37800344bbb3f317005c37">PrepareVtkUnstructuredGrid</a> (const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;grid, bool discontinuous=true)</td></tr>
+<tr class="separator:a077ddc34bc37800344bbb3f317005c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a807675dab75b7ae6777ba6503315b65f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f">WritePVTUFiles</a> (<a class="el" href="../../db/ddd/classvtk_new.html">vtkNew</a>&lt; vtkUnstructuredGrid &gt; &amp;ugrid, const std::string &amp;file_base_name)</td></tr>
 <tr class="separator:a807675dab75b7ae6777ba6503315b65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa074ce004896dcae89f186d0ea6c7ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#aaa074ce004896dcae89f186d0ea6c7ad">RegisterChiObject</a> (chi_mesh, <a class="el" href="../../dd/d81/classchi__mesh_1_1_snap_to_plane_mesh_modifier.html">SnapToPlaneMeshModifier</a>)</td></tr>
+<tr class="separator:aaa074ce004896dcae89f186d0ea6c7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a317ca996a6dc362595d62eb64a51f5a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a317ca996a6dc362595d62eb64a51f5a1">CheckPlaneLineIntersect</a> (const <a class="el" href="../../d0/d81/namespacechi__mesh.html#a7e8ffeada9f9616fe9eef023a8533a7b">chi_mesh::Normal</a> &amp;plane_normal, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;plane_point, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point_0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point_1, <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;intersection_point, std::pair&lt; double, double &gt; *weights=nullptr)</td></tr>
 <tr class="separator:a317ca996a6dc362595d62eb64a51f5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61234ac926ea64ff8dbc55e30bf0c80c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a61234ac926ea64ff8dbc55e30bf0c80c">CheckLineIntersectStrip</a> (const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;strip_point0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;strip_point1, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;strip_normal, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point0, const <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;line_point1, <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &amp;intersection_point, double *distance_to_intersection=nullptr)</td></tr>
@@ -359,7 +368,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00022">22</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00024">24</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -375,7 +384,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00023">23</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00025">25</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -391,7 +400,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00019">19</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00021">21</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -439,7 +448,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00013">13</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00015">15</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -471,7 +480,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00016">16</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00018">18</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -487,7 +496,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00026">26</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00028">28</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -503,7 +512,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00027">27</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00029">29</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -590,38 +599,6 @@ Functions</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/ddd/cell_8h_source.html#l00011">11</a> of file <a class="el" href="../../d0/ddd/cell_8h_source.html">cell.h</a>.</p>
-
-</div>
-</div>
-<a id="a0188560b69c38277389a3b9054070fb2" name="a0188560b69c38277389a3b9054070fb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0188560b69c38277389a3b9054070fb2">&#9670;&nbsp;</a></span>LogicalVolumeType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="../../d0/d81/namespacechi__mesh.html#a0188560b69c38277389a3b9054070fb2">chi_mesh::LogicalVolumeType</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0188560b69c38277389a3b9054070fb2a8c8a076c1703c9f3535a5225bd8d9317" name="a0188560b69c38277389a3b9054070fb2a8c8a076c1703c9f3535a5225bd8d9317"></a>LVSPHERE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0188560b69c38277389a3b9054070fb2a1abb99eae8a5e20e2ba19dc2188c2a3d" name="a0188560b69c38277389a3b9054070fb2a1abb99eae8a5e20e2ba19dc2188c2a3d"></a>LVSPHERE_ORIGIN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0188560b69c38277389a3b9054070fb2a0faaafb69d8450f1f7424397c8ccb2e6" name="a0188560b69c38277389a3b9054070fb2a0faaafb69d8450f1f7424397c8ccb2e6"></a>LVRPP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0188560b69c38277389a3b9054070fb2a57ca75e65b137dbe42b6f4e83b622993" name="a0188560b69c38277389a3b9054070fb2a57ca75e65b137dbe42b6f4e83b622993"></a>LVRCC&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0188560b69c38277389a3b9054070fb2afff94b8acb91013c95e1d4108724d543" name="a0188560b69c38277389a3b9054070fb2afff94b8acb91013c95e1d4108724d543"></a>LVSURFACE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0188560b69c38277389a3b9054070fb2a19f2ce5d3a3b8329b08ead2e0544e4ac" name="a0188560b69c38277389a3b9054070fb2a19f2ce5d3a3b8329b08ead2e0544e4ac"></a>LVBOOLEAN&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html#l00010">10</a> of file <a class="el" href="../../d9/df5/chi__mesh__logicalvolume_8h_source.html">chi_mesh_logicalvolume.h</a>.</p>
 
 </div>
 </div>
@@ -738,6 +715,25 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a313ec9cff6af419d3ea255992db0895f" name="a313ec9cff6af419d3ea255992db0895f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a313ec9cff6af419d3ea255992db0895f">&#9670;&nbsp;</a></span>BooleanLogicalVolumeArgumentPair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d4d/classchi_1_1_input_parameters.html">chi::InputParameters</a> chi_mesh::BooleanLogicalVolumeArgumentPair </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/dfa/_boolean_logical_volume_8cc_source.html#l00058">58</a> of file <a class="el" href="../../d3/dfa/_boolean_logical_volume_8cc_source.html">BooleanLogicalVolume.cc</a>.</p>
+
+</div>
+</div>
 <a id="a6bd83bf6e7ebadddc52f47dccdbd53c0" name="a6bd83bf6e7ebadddc52f47dccdbd53c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6bd83bf6e7ebadddc52f47dccdbd53c0">&#9670;&nbsp;</a></span>BuildBlockCellExtents()</h2>
 
@@ -802,7 +798,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Retrieves material-ids from a field. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html#l00172">172</a> of file <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html">chi_grid_vtk_utils_01_reading.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html#l00169">169</a> of file <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html">chi_grid_vtk_utils_01_reading.cc</a>.</p>
 
 </div>
 </div>
@@ -1143,8 +1139,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac934c7d4e922881d2638f0e3c0606977" name="ac934c7d4e922881d2638f0e3c0606977"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac934c7d4e922881d2638f0e3c0606977">&#9670;&nbsp;</a></span>ConsolidateGridBlocks()</h2>
+<a id="abc0280bef44b97bdbe1305ea653d1563" name="abc0280bef44b97bdbe1305ea653d1563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0280bef44b97bdbe1305ea653d1563">&#9670;&nbsp;</a></span>ConsolidateGridBlocks()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1153,8 +1149,18 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a8db6ad343c59b5308af7f799ecfb155f">chi_mesh::vtkUGridPtr</a> chi_mesh::ConsolidateGridBlocks </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; <a class="el" href="../../d0/d81/namespacechi__mesh.html#a946bdd1c1cf23b1c358c1d258ca06c2f">vtkUGridPtrAndName</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>ugrid_blocks</em></td><td>)</td>
+          <td class="paramname"><em>ugrid_blocks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>block_id_array_name</em> = <code>&quot;BlockID&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1347,7 +1353,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Provides a map of the different grids that have the requested dimension. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html#l00098">98</a> of file <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html">chi_grid_vtk_utils_01_reading.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html#l00099">99</a> of file <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html">chi_grid_vtk_utils_01_reading.cc</a>.</p>
 
 </div>
 </div>
@@ -1465,8 +1471,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a91ecdd287c2aa7597234e3816196e8fa" name="a91ecdd287c2aa7597234e3816196e8fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91ecdd287c2aa7597234e3816196e8fa">&#9670;&nbsp;</a></span>PrepareVtkUnstructuredGrid()</h2>
+<a id="a077ddc34bc37800344bbb3f317005c37" name="a077ddc34bc37800344bbb3f317005c37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a077ddc34bc37800344bbb3f317005c37">&#9670;&nbsp;</a></span>PrepareVtkUnstructuredGrid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1475,8 +1481,18 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="../../db/ddd/classvtk_new.html">vtkNew</a>&lt; vtkUnstructuredGrid &gt; chi_mesh::PrepareVtkUnstructuredGrid </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a> &amp;&#160;</td>
-          <td class="paramname"><em>grid</em></td><td>)</td>
+          <td class="paramname"><em>grid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>discontinuous</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1506,6 +1522,208 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a911bc7045c6abb7978af7d352505f60e" name="a911bc7045c6abb7978af7d352505f60e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911bc7045c6abb7978af7d352505f60e">&#9670;&nbsp;</a></span>RegisterChiObject() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_mesh::RegisterChiObject </td>
+          <td>(</td>
+          <td class="paramtype">chi_mesh&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../da/dca/classchi__mesh_1_1_boolean_logical_volume.html">BooleanLogicalVolume</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22ce142ad0290b1eeb9ddbb6bc9701ae" name="a22ce142ad0290b1eeb9ddbb6bc9701ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ce142ad0290b1eeb9ddbb6bc9701ae">&#9670;&nbsp;</a></span>RegisterChiObject() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_mesh::RegisterChiObject </td>
+          <td>(</td>
+          <td class="paramtype">chi_mesh&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html">RCCLogicalVolume</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66ae77ce9dafa77be0429a6a73e20277" name="a66ae77ce9dafa77be0429a6a73e20277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66ae77ce9dafa77be0429a6a73e20277">&#9670;&nbsp;</a></span>RegisterChiObject() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_mesh::RegisterChiObject </td>
+          <td>(</td>
+          <td class="paramtype">chi_mesh&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html">RPPLogicalVolume</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa074ce004896dcae89f186d0ea6c7ad" name="aaa074ce004896dcae89f186d0ea6c7ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa074ce004896dcae89f186d0ea6c7ad">&#9670;&nbsp;</a></span>RegisterChiObject() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_mesh::RegisterChiObject </td>
+          <td>(</td>
+          <td class="paramtype">chi_mesh&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d81/classchi__mesh_1_1_snap_to_plane_mesh_modifier.html">SnapToPlaneMeshModifier</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44979a5d7f59c83112fb5122fb31ffef" name="a44979a5d7f59c83112fb5122fb31ffef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44979a5d7f59c83112fb5122fb31ffef">&#9670;&nbsp;</a></span>RegisterChiObject() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_mesh::RegisterChiObject </td>
+          <td>(</td>
+          <td class="paramtype">chi_mesh&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d06/classchi__mesh_1_1_sphere_logical_volume.html">SphereLogicalVolume</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa613cb60dc7d0122c4fab4ac7a6256e1" name="aa613cb60dc7d0122c4fab4ac7a6256e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa613cb60dc7d0122c4fab4ac7a6256e1">&#9670;&nbsp;</a></span>RegisterChiObject() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_mesh::RegisterChiObject </td>
+          <td>(</td>
+          <td class="paramtype">chi_mesh&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html">SurfaceMeshLogicalVolume</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c07ef9552e956fca0e29b1c680a6f5c" name="a5c07ef9552e956fca0e29b1c680a6f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c07ef9552e956fca0e29b1c680a6f5c">&#9670;&nbsp;</a></span>RegisterSyntaxBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_mesh::RegisterSyntaxBlock </td>
+          <td>(</td>
+          <td class="paramtype">chi_mesh&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a313ec9cff6af419d3ea255992db0895f">BooleanLogicalVolumeArgumentPair</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a313ec9cff6af419d3ea255992db0895f">BooleanLogicalVolumeArgumentPair</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae7ae724d18b8558fa0843dc6c9c85da2" name="ae7ae724d18b8558fa0843dc6c9c85da2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7ae724d18b8558fa0843dc6c9c85da2">&#9670;&nbsp;</a></span>SetBlockIDArrays()</h2>
 
@@ -1523,7 +1741,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Given several unstructured grid blocks, each denoting a material id, this function creates a VTK cell-data array called "BlockID" that holds this information. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html#l00144">144</a> of file <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html">chi_grid_vtk_utils_01_reading.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html#l00143">143</a> of file <a class="el" href="../../d5/de8/chi__grid__vtk__utils__01__reading_8cc_source.html">chi_grid_vtk_utils_01_reading.cc</a>.</p>
 
 </div>
 </div>
@@ -1677,7 +1895,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Writes an unstructured grid to files (.pvtu and .vtu). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d69/chi__grid__vtk__utils__04__writing_8cc_source.html#l00052">52</a> of file <a class="el" href="../../d8/d69/chi__grid__vtk__utils__04__writing_8cc_source.html">chi_grid_vtk_utils_04_writing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d69/chi__grid__vtk__utils__04__writing_8cc_source.html#l00071">71</a> of file <a class="el" href="../../d8/d69/chi__grid__vtk__utils__04__writing_8cc_source.html">chi_grid_vtk_utils_04_writing.cc</a>.</p>
 
 </div>
 </div>

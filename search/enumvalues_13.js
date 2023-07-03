@@ -17,7 +17,7 @@ var searchData=
   ['thirtysixth_14',['THIRTYSIXTH',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9a93f500a0fdb5476f60501b4efd98f127',1,'chi_math']]],
   ['thirtythird_15',['THIRTYTHIRD',['../dc/d58/namespacechi__math.html#a3b6d980557c0a6bc00064598786b4fb9ae7af4bb75b1dc8a69c63514788a537f4',1,'chi_math']]],
   ['threed_5fcartesian_16',['THREED_CARTESIAN',['../d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83ad971f9ce5146b59b9b1fccd011a5e695',1,'lbs']]],
-  ['total_5fduration_17',['TOTAL_DURATION',['../d8/d42/classchi__objects_1_1_chi_log.html#a134cbf425f3ae4fd2e697f992eb8d370a01d21ab02d23d0394c9d6dcc126265cb',1,'chi_objects::ChiLog']]],
+  ['total_5fduration_17',['TOTAL_DURATION',['../df/dfa/classchi_1_1_chi_log.html#a5a7ac4846d406932164c6e63f50a2426a01d21ab02d23d0394c9d6dcc126265cb',1,'chi::ChiLog']]],
   ['total_5fpower_18',['TOTAL_POWER',['../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a849249a40f5e9f48afa175fa9438357fadd947dfa7b33e7485d6d6020ec966e1d',1,'lbs::DiscOrdTransientSolver']]],
   ['transport_5fxsections_19',['TRANSPORT_XSECTIONS',['../d6/d5f/namespacechi__physics.html#ad03b34f5fd167ff7afde2dfa96ac6312a773c84aaf15b05afd08c2b7621909c4a',1,'chi_physics']]],
   ['triangle_20',['TRIANGLE',['../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a9bcd89070cae224dce305f5011659ef4',1,'chi_mesh']]],

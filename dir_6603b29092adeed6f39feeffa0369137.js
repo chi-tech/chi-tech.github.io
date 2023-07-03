@@ -7,7 +7,7 @@ var dir_6603b29092adeed6f39feeffa0369137 =
     [ "chi_console_loop.cc", "d1/da7/chi__console__loop_8cc.html", null ],
     [ "chi_console_memory.cc", "da/da9/chi__console__memory_8cc.html", null ],
     [ "chi_console_structs.h", "d3/ded/chi__console__structs_8h.html", [
-      [ "chi_objects::CSTMemory", "dd/d68/structchi__objects_1_1_c_s_t_memory.html", "dd/d68/structchi__objects_1_1_c_s_t_memory" ]
+      [ "chi::CSTMemory", "d2/d1b/structchi_1_1_c_s_t_memory.html", "d2/d1b/structchi_1_1_c_s_t_memory" ]
     ] ],
     [ "chi_console_utilities.cc", "d0/d17/chi__console__utilities_8cc.html", "d0/d17/chi__console__utilities_8cc" ]
 ];

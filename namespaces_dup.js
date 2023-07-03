@@ -1,6 +1,7 @@
 var namespaces_dup =
 [
     [ "cfem_diffusion", "d3/d65/namespacecfem__diffusion.html", "d3/d65/namespacecfem__diffusion" ],
+    [ "chi", "dc/d67/namespacechi.html", "dc/d67/namespacechi" ],
     [ "chi_data_types", "d5/d1b/namespacechi__data__types.html", "d5/d1b/namespacechi__data__types" ],
     [ "chi_diffusion", "de/d73/namespacechi__diffusion.html", "de/d73/namespacechi__diffusion" ],
     [ "chi_graph", "d3/d00/namespacechi__graph.html", "d3/d00/namespacechi__graph" ],
@@ -88,7 +89,7 @@ var namespaces_dup =
       [ "chiLocallyRefineSLDFESQAngularQuadrature", "de/d7d/group___lua_s_l_d_f_e_s_q.html#ga2c034031bf7968f07b31b34e4ae749e1", null ],
       [ "chiLog", "d4/d87/group___lua_logging.html#ga8139e633fb74f8d739bcfd6badd80376", null ],
       [ "chiLogicalVolumeCreate", "d9/d32/group___lua_logic_volumes.html#gac362f65e2642b15efd6abf99d2224d54", null ],
-      [ "chiLogicalVolumePointSense", "d8/dd9/namespacechi__lua.html#a1e128899eecf4cbc9de08c42178c2801", null ],
+      [ "chiLogicalVolumePointSense", "d9/d32/group___lua_logic_volumes.html#ga1e128899eecf4cbc9de08c42178c2801", null ],
       [ "chiLogSetVerbosity", "d4/d87/group___lua_logging.html#gac4c23d141fddd0557829e6b5471262ce", null ],
       [ "chiLuaTest", "d8/dd9/namespacechi__lua.html#a1b25d34f221bf2b4c6bdc879c703345d", null ],
       [ "chiMakeObject", "d8/dd9/namespacechi__lua.html#a7fd9fab441fd017ee9e3a67e50369d90", null ],
@@ -185,9 +186,8 @@ var namespaces_dup =
       [ "WHITESPACE", "d8/def/namespacechi__misc__utils.html#aacc87ffb07fd4007d1e02ca2c8b90867", null ]
     ] ],
     [ "chi_mpi_utils", "dc/d8f/namespacechi__mpi__utils.html", [
-      [ "MapAllToAll", "dc/d8f/namespacechi__mpi__utils.html#a71a5406382807e86a921b463ca2ae923", null ]
+      [ "MapAllToAll", "dc/d8f/namespacechi__mpi__utils.html#adf11378ae7b9cd163b9075b83dba5331", null ]
     ] ],
-    [ "chi_objects", "d1/d96/namespacechi__objects.html", "d1/d96/namespacechi__objects" ],
     [ "chi_physics", "d6/d5f/namespacechi__physics.html", "d6/d5f/namespacechi__physics" ],
     [ "chi_unit_sim_tests", "d0/d68/namespacechi__unit__sim__tests.html", [
       [ "YlmIndices", "d0/d68/namespacechi__unit__sim__tests.html#ad7eea7395f66a2af289712cdaeaabb02", null ],

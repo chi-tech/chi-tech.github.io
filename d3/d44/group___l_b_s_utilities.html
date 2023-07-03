@@ -158,7 +158,7 @@ Modules</h2></td></tr>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> psi</div>
 <div class="line">end</div>
-</div><!-- fragment -->An example of a very intricate use of this functionality can be seen in the test <a class="el" href="../../df/d4b/tests__transport__steady__transport2_d_5_poly_a__ani_hetero_bndry_lua.html">tests/Transport_Steady/Transport2D_5PolyA_AniHeteroBndry.lua</a> </div>
+</div><!-- fragment -->An example of a very intricate use of this functionality can be seen in the test tests_Transport_Steady_Transport2D_5PolyA_AniHeteroBndry_lua </div>
 
 <h3><a id="LBSFieldFunctions" name="LBSFieldFunctions"></a>Field Functions</h3><div class="textblock">LBS solvers create a number of field functions. Here is the logic for it:</p><ul>
 <li>Field functions are by default named <code>phi_gXXX_mYYY</code> where <code>XXX</code> is a zero padded 3 digit number for the group number. <code>YYY</code> is a zero padded 3 digit number for the moment number. Numbers spanning beyond the 3 digits will have no zero padding and will be represented normally (the 3 digit padding just helps in visualization cases). Example: Suppose this is a 3D simulation, 2 groups, scattering order of 1 (resulting in 4 moments) <div class="fragment"><div class="line">phys1 = chiLBSCreateSolver()</div>
@@ -173,8 +173,8 @@ Modules</h2></td></tr>
 <div class="line">chiLBSExecute(phys1)</div>
 <div class="line">--</div>
 <div class="line">fflist,count = <a class="code hl_function" href="../../d8/d19/group___l_b_s_lua_functions.html#gaf96d1d72d1274c36390436edabb1b0f9">chiLBSGetScalarFieldFunctionList</a>(phys1)</div>
-<div class="ttc" id="agroup___l_b_s_lua_functions_html_ga56ba50206c4125503807c5889416b66a"><div class="ttname"><a href="../../d8/d19/group___l_b_s_lua_functions.html#ga56ba50206c4125503807c5889416b66a">chi_lua::chiLBSSetProperty</a></div><div class="ttdeci">void chiLBSSetProperty(int SolverIndex, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l03614">lua_functions.c:3614</a></div></div>
-<div class="ttc" id="agroup___l_b_s_lua_functions_html_gaf96d1d72d1274c36390436edabb1b0f9"><div class="ttname"><a href="../../d8/d19/group___l_b_s_lua_functions.html#gaf96d1d72d1274c36390436edabb1b0f9">chi_lua::chiLBSGetScalarFieldFunctionList</a></div><div class="ttdeci">Pair chiLBSGetScalarFieldFunctionList(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l04383">lua_functions.c:4383</a></div></div>
+<div class="ttc" id="agroup___l_b_s_lua_functions_html_ga56ba50206c4125503807c5889416b66a"><div class="ttname"><a href="../../d8/d19/group___l_b_s_lua_functions.html#ga56ba50206c4125503807c5889416b66a">chi_lua::chiLBSSetProperty</a></div><div class="ttdeci">void chiLBSSetProperty(int SolverIndex, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l03433">lua_functions.c:3433</a></div></div>
+<div class="ttc" id="agroup___l_b_s_lua_functions_html_gaf96d1d72d1274c36390436edabb1b0f9"><div class="ttname"><a href="../../d8/d19/group___l_b_s_lua_functions.html#gaf96d1d72d1274c36390436edabb1b0f9">chi_lua::chiLBSGetScalarFieldFunctionList</a></div><div class="ttdeci">Pair chiLBSGetScalarFieldFunctionList(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l04159">lua_functions.c:4159</a></div></div>
 </div><!-- fragment --></li>
 </ul>
 will create field functions </p><div class="fragment"><div class="line">phi_g000_m000</div>

@@ -96,10 +96,10 @@ $(document).ready(function(){initNavTree('d6/dfd/_dev_man_global_vars.html','../
 <div class="textblock"><h1><a class="anchor" id="devman2_sec0"></a>
 Global variables available</h1>
 <p >All global entities for the ChiTech library are contained within the static <code>chi</code> class. This class has the name <code>chi</code> and an instance of it cannot be created. Within this class, all of its members are statically declared. Several singleton objects are defined in <code>chi</code>, they are:</p><ul>
-<li><a class="el" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a> A handler for parallel related items.</li>
-<li><a class="el" href="../../d4/d35/classchi.html#ab5d0585bd45f9397540817433d194647">chi::program_timer</a> The primary program timer.</li>
-<li><a class="el" href="../../d4/d35/classchi.html#afaf99163b7a54f59d6372e94cfc32dea">chi::console</a> The link to the lua scripting engine.</li>
-<li><a class="el" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a> A handler for parallel logging events and verbosity.</li>
+<li>chi::mpi A handler for parallel related items.</li>
+<li>chi::program_timer The primary program timer.</li>
+<li>chi::console The link to the lua scripting engine.</li>
+<li>chi::log A handler for parallel logging events and verbosity.</li>
 </ul>
 <p >A number of stacks are also declared. They are basically arrays of shared pointers (i.e., <code>std::shared_ptr</code>)</p>
 <p >There are also a number of secondary global variables that assist developers with coding. They are:</p><ul>
@@ -117,75 +117,63 @@ Connecting to the global data block</h2>
 <div class="line"><span class="keywordtype">void</span> SomeFunction()</div>
 <div class="line">{</div>
 <div class="line">  <span class="keywordtype">int</span> handle = 2;</div>
-<div class="line">  <span class="keyword">auto</span>&amp; chi::GetStackItem&lt;chi_mesh::SurfaceMeshPtr&gt;(<a class="code hl_variable" href="../../d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae">chi::surface_mesh_stack</a>,</div>
+<div class="line">  <span class="keyword">auto</span>&amp; chi::GetStackItem&lt;chi_mesh::SurfaceMeshPtr&gt;(chi::surface_mesh_stack,</div>
 <div class="line">                                                    handle);</div>
 <div class="line">  <span class="comment">//or</span></div>
-<div class="line">  <span class="keyword">auto</span> chi::GetStackItemPtr&lt;chi_mesh::SurfaceMeshPtr&gt;(<a class="code hl_variable" href="../../d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae">chi::surface_mesh_stack</a>,</div>
+<div class="line">  <span class="keyword">auto</span> chi::GetStackItemPtr&lt;chi_mesh::SurfaceMeshPtr&gt;(chi::surface_mesh_stack,</div>
 <div class="line">                                                      handle);</div>
 <div class="line">}</div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="achi__surfacemesh_8h_html"><div class="ttname"><a href="../../d2/d98/chi__surfacemesh_8h.html">chi_surfacemesh.h</a></div></div>
-<div class="ttc" id="aclasschi_html_af077bfe7a264e17599151d4bea2dd9ae"><div class="ttname"><a href="../../d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae">chi::surface_mesh_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::SurfaceMeshPtr &gt; surface_mesh_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00080">chi_runtime.h:80</a></div></div>
-</div><!-- fragment --><p >There are multiple stacks, currently (which might not be still accurate): </p><div class="fragment"><div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a5bc87832f51e2196e2a230a5deb75838">chi::meshhandler_stack</a>;</div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#af077bfe7a264e17599151d4bea2dd9ae">chi::surface_mesh_stack</a>;</div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a22aa55302a909b4e4d9d64fbfedd9b5e">chi::logicvolume_stack</a>;</div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#ac49e26b99e533dfe75f9818201de79d0">chi::field_func_interpolation_stack</a>;</div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a47b557d0bdd217181e6f5b7798cec13a">chi::unpartitionedmesh_stack</a>;</div>
+</div><!-- fragment --><p >There are multiple stacks, currently (which might not be still accurate): </p><div class="fragment"><div class="line">chi::meshhandler_stack;</div>
+<div class="line">chi::surface_mesh_stack;</div>
+<div class="line">chi::logicvolume_stack;</div>
+<div class="line">chi::field_func_interpolation_stack;</div>
+<div class="line">chi::unpartitionedmesh_stack;</div>
 <div class="line">chi::solver_stack;</div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d">chi::material_stack</a>;</div>
+<div class="line">chi::material_stack;</div>
 <div class="line">chi::trnsprt_xs_stack;</div>
 <div class="line">chi::fieldfunc_stack;</div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#af95e663696f1bb453de942ae30e765e7">chi::quadrature_stack</a>;</div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a5b93d2f569533bb5354f4eb19b96e10c">chi::angular_quadrature_stack</a>;</div>
-<div class="ttc" id="aclasschi_html_a22aa55302a909b4e4d9d64fbfedd9b5e"><div class="ttname"><a href="../../d4/d35/classchi.html#a22aa55302a909b4e4d9d64fbfedd9b5e">chi::logicvolume_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::LogicalVolumePtr &gt; logicvolume_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00081">chi_runtime.h:81</a></div></div>
-<div class="ttc" id="aclasschi_html_a47b557d0bdd217181e6f5b7798cec13a"><div class="ttname"><a href="../../d4/d35/classchi.html#a47b557d0bdd217181e6f5b7798cec13a">chi::unpartitionedmesh_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::UnpartMeshPtr &gt; unpartitionedmesh_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00083">chi_runtime.h:83</a></div></div>
-<div class="ttc" id="aclasschi_html_a5b93d2f569533bb5354f4eb19b96e10c"><div class="ttname"><a href="../../d4/d35/classchi.html#a5b93d2f569533bb5354f4eb19b96e10c">chi::angular_quadrature_stack</a></div><div class="ttdeci">static std::vector&lt; chi_math::AngularQuadraturePtr &gt; angular_quadrature_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00090">chi_runtime.h:90</a></div></div>
-<div class="ttc" id="aclasschi_html_a5bc87832f51e2196e2a230a5deb75838"><div class="ttname"><a href="../../d4/d35/classchi.html#a5bc87832f51e2196e2a230a5deb75838">chi::meshhandler_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::MeshHandlerPtr &gt; meshhandler_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00077">chi_runtime.h:77</a></div></div>
-<div class="ttc" id="aclasschi_html_aa99611570d864cef55872bc180e0862d"><div class="ttname"><a href="../../d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d">chi::material_stack</a></div><div class="ttdeci">static std::vector&lt; chi_physics::MaterialPtr &gt; material_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00085">chi_runtime.h:85</a></div></div>
-<div class="ttc" id="aclasschi_html_ac49e26b99e533dfe75f9818201de79d0"><div class="ttname"><a href="../../d4/d35/classchi.html#ac49e26b99e533dfe75f9818201de79d0">chi::field_func_interpolation_stack</a></div><div class="ttdeci">static std::vector&lt; chi_mesh::FFInterpPtr &gt; field_func_interpolation_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00082">chi_runtime.h:82</a></div></div>
-<div class="ttc" id="aclasschi_html_af95e663696f1bb453de942ae30e765e7"><div class="ttname"><a href="../../d4/d35/classchi.html#af95e663696f1bb453de942ae30e765e7">chi::quadrature_stack</a></div><div class="ttdeci">static std::vector&lt; chi_math::QuadraturePtr &gt; quadrature_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00089">chi_runtime.h:89</a></div></div>
+<div class="line">chi::quadrature_stack;</div>
+<div class="line">chi::angular_quadrature_stack;</div>
 </div><!-- fragment --><h2><a class="anchor" id="devman2_sec0_4"></a>
 Connecting to MPI</h2>
 <p >General MPI information like the current location id and the total amount of parallel processes is contained in CHI_MPI:</p><ul>
-<li><a class="el" href="../../d2/d8e/classchi__objects_1_1_m_p_i___info.html#a54f1fff8b57b767e27ff93e3da0e3efc" title="Current process rank.">chi_objects::MPI_Info::location_id</a></li>
-<li><a class="el" href="../../d2/d8e/classchi__objects_1_1_m_p_i___info.html#a3e7cf26fd15423a1552479ec4026cc10" title="Total number of processes.">chi_objects::MPI_Info::process_count</a></li>
+<li>chi_objects::MPI_Info::location_id</li>
+<li>chi_objects::MPI_Info::process_count</li>
 </ul>
 <p >Additionally, by including the headers for chi_mpi, developers have access to all the classic mpi headers.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id == 1)</div>
+<div class="line"><span class="keywordflow">if</span> (chi::mpi.location_id == 1)</div>
 <div class="line"> printf(<span class="stringliteral">&quot;This is process 1, Dab!&quot;</span>);</div>
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
-<div class="ttc" id="aclasschi_html_a2457fed74471fae43ed8d6c5e91378fd"><div class="ttname"><a href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a></div><div class="ttdeci">static chi_objects::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00072">chi_runtime.h:72</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="devman2_sec0_5"></a>
 Connecting to the parallel logging utility</h2>
 <p >Printing information in a parallel environment can be a very involved process. One can't simply use <code>std::cout &lt;&lt;</code> on every process otherwise the output to the log will be chaotic. For this reason we employ a common logging utility which returns an output string-stream using the function call ChiLog::Log.</p>
-<p >Connecting to <a class="el" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a> is done as follows </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
+<p >Connecting to chi::log is done as follows </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> Function()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Hello from location 0&quot;</span>;</div>
-<div class="line">    <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a1e75e1551e2f59ed418fb0da21971877">LogAll</a>() &lt;&lt; <span class="stringliteral">&quot;Hello from all locations&quot;</span>;</div>
+<div class="line">    chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Hello from location 0&quot;</span>;</div>
+<div class="line">    chi::log.LogAll() &lt;&lt; <span class="stringliteral">&quot;Hello from all locations&quot;</span>;</div>
 <div class="line">}</div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_a1e75e1551e2f59ed418fb0da21971877"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#a1e75e1551e2f59ed418fb0da21971877">chi_objects::ChiLog::LogAll</a></div><div class="ttdeci">LogStream LogAll()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00226">chi_log.h:226</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00036">chi_log.cc:36</a></div></div>
-<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
 </div><!-- fragment --><p >The logger has calls of differing verbosity:</p><ul>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a45e7575218a8b603e8b44ad681d58285">chi_objects::ChiLog::Log0()</a></code>, Used only for location 0</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a30339b31f520423a4086e00e62bb5b98">chi_objects::ChiLog::Log0Warning()</a></code>, Warning only for location 0</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a5b78f521dcc7b9fb0ab49754f91d3b93">chi_objects::ChiLog::Log0Error()</a></code>, Error only for location 0</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a99d58a541093f905815e7981572110a3">chi_objects::ChiLog::Log0Verbose0()</a></code>, Default verbosity level</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a473ab4a211782a780fdd267f864dc5f9">chi_objects::ChiLog::Log0Verbose1()</a></code>, Used only if verbosity level equals 1</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a5f0fae4c5d38694c690af00c3862c591">chi_objects::ChiLog::Log0Verbose2()</a></code>, Used only if verbosity level equals 2</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a1e75e1551e2f59ed418fb0da21971877">chi_objects::ChiLog::LogAll()</a></code>, Verbose level 0 all locations</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa89ba9649ba7592393f7c861dfa0f168">chi_objects::ChiLog::LogAllWarning()</a></code>, Warning for any location</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aa2ef960ad98b005e26e49f7030537c44">chi_objects::ChiLog::LogAllError()</a></code>, Error for any location</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aab481464bac536595c15d5cc7efda5e7">chi_objects::ChiLog::LogAllVerbose0()</a></code>, Default verbosity level</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#a2348d77cdba74d43bf1c9ed29389ef7e">chi_objects::ChiLog::LogAllVerbose1()</a></code>, Used only if verbosity level equals 1</li>
-<li><code><a class="el" href="../../d8/d42/classchi__objects_1_1_chi_log.html#aae0635f53d8cbb800808e9d76884f0ba">chi_objects::ChiLog::LogAllVerbose2()</a></code>, Used only if verbosity level equals 2</li>
+<li><code>chi_objects::ChiLog::Log0()</code>, Used only for location 0</li>
+<li><code>chi_objects::ChiLog::Log0Warning()</code>, Warning only for location 0</li>
+<li><code>chi_objects::ChiLog::Log0Error()</code>, Error only for location 0</li>
+<li><code>chi_objects::ChiLog::Log0Verbose0()</code>, Default verbosity level</li>
+<li><code>chi_objects::ChiLog::Log0Verbose1()</code>, Used only if verbosity level equals 1</li>
+<li><code>chi_objects::ChiLog::Log0Verbose2()</code>, Used only if verbosity level equals 2</li>
+<li><code>chi_objects::ChiLog::LogAll()</code>, Verbose level 0 all locations</li>
+<li><code>chi_objects::ChiLog::LogAllWarning()</code>, Warning for any location</li>
+<li><code>chi_objects::ChiLog::LogAllError()</code>, Error for any location</li>
+<li><code>chi_objects::ChiLog::LogAllVerbose0()</code>, Default verbosity level</li>
+<li><code>chi_objects::ChiLog::LogAllVerbose1()</code>, Used only if verbosity level equals 1</li>
+<li><code>chi_objects::ChiLog::LogAllVerbose2()</code>, Used only if verbosity level equals 2</li>
 </ul>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">Todo:</a></b></dt><dd>Commandline parameter documentation</dd></dl>
 </div></div><!-- contents -->

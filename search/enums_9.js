@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['operation_0',['Operation',['../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a207ad6cc312218de51e8b227bd339030',1,'chi_mesh::ff_interpolation']]],
-  ['operationtype_1',['OperationType',['../d6/d5f/namespacechi__physics.html#aa9f842582232bc49de66e407de4b7e95',1,'chi_physics']]]
+  ['normalizationmethod_0',['NormalizationMethod',['../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a849249a40f5e9f48afa175fa9438357f',1,'lbs::DiscOrdTransientSolver']]]
 ];

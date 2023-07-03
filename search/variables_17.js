@@ -1,7 +1,7 @@
 var searchData=
 [
   ['x_0',['x',['../dd/d54/structchi__mesh_1_1_vector3.html#a3e75a0cebaa0134cdd89724f6c101472',1,'chi_mesh::Vector3']]],
-  ['x0_5f_1',['x0_',['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#a1f425e9e4260ebfc02ab315f8e62ccc8',1,'chi_mesh::SphereLogicalVolume::x0_()'],['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a603d31b0c170633be4f63331c6ce0a8a',1,'chi_mesh::RCCLogicalVolume::x0_()']]],
+  ['x0_5f_1',['x0_',['../dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html#a603d31b0c170633be4f63331c6ce0a8a',1,'chi_mesh::RCCLogicalVolume::x0_()'],['../db/d06/classchi__mesh_1_1_sphere_logical_volume.html#a1f425e9e4260ebfc02ab315f8e62ccc8',1,'chi_mesh::SphereLogicalVolume::x0_()']]],
   ['x_5f_2',['x_',['../dd/d52/classchi__math_1_1_linear_solver.html#a6e9e87c3b2ad265872482f07d83af332',1,'chi_math::LinearSolver::x_()'],['../dd/deb/classchi__math_1_1_non_linear_solver.html#a4647f487dfb481c0913ca90b7b421591',1,'chi_math::NonLinearSolver::x_()'],['../de/dba/classcfem__diffusion_1_1_solver.html#a502468121bc93600cc74b0f09f729563',1,'cfem_diffusion::Solver::x_()'],['../df/ddc/classdfem__diffusion_1_1_solver.html#a21c36cf8b07cd5137e3b23f72bfd72df',1,'dfem_diffusion::Solver::x_()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a916eead141055a47f4bdc251ba65da77',1,'chi_diffusion::Solver::x_()'],['../d1/dd1/classfv__diffusion_1_1_solver.html#a326a6c61ee875015746e7f91d08d9d0d',1,'fv_diffusion::Solver::x_()'],['../d4/d4c/classmg__diffusion_1_1_solver.html#a58ca380e6ae81193b0d80cadd3102fad',1,'mg_diffusion::Solver::x_()']]],
   ['x_5flocalized_3',['x_localized',['../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a10ae77e73afee4a62bbc8ab8753d3a12',1,'chi_math::PETScUtils::GhostVecLocalRaw']]],
   ['x_5flocalized_5fraw_4',['x_localized_raw',['../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html#a397cac73443cf56da7c2e09a4b50030c',1,'chi_math::PETScUtils::GhostVecLocalRaw']]],
@@ -9,7 +9,7 @@ var searchData=
   ['x_5ft_5f_6',['x_t_',['../de/d01/classprk_1_1_transient_solver.html#ac7ba8d87b77ddd10e957a5242fbc6fa6',1,'prk::TransientSolver']]],
   ['x_5ftp1_5f_7',['x_tp1_',['../de/d01/classprk_1_1_transient_solver.html#abcf50e410a803ed61263e656499bbe76',1,'prk::TransientSolver']]],
   ['x_5fvalues_5f_8',['x_values_',['../d6/d90/classchi__math_1_1functions_1_1_piecewise_linear1_d.html#a8c32d3cbe2e71a14321c49301518922d',1,'chi_math::functions::PiecewiseLinear1D']]],
-  ['xbounds_5f_9',['xbounds_',['../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html#ad5cc98793ef225e192fe695a6879097a',1,'chi_mesh::SurfaceMeshLogicalVolume']]],
+  ['xbounds_5f_9',['xbounds_',['../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html#a74c652a7e5d5f2539c3eaf62ee03e012',1,'chi_mesh::SurfaceMeshLogicalVolume']]],
   ['xcuts_10',['xcuts',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a8cbfd020647fad92dd0d373e4a1b4a50',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS']]],
   ['xcuts_5f_11',['xcuts_',['../df/d7e/classchi__mesh_1_1_surface_mesher.html#aaca466cfc726860f14bc081b106e6991',1,'chi_mesh::SurfaceMesher']]],
   ['xmax_12',['xmax',['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#ad6e82a41929aa8b13c21ea88f9ad8c8e',1,'chi_mesh::UnpartitionedMesh::BoundBox']]],

@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('d6/d0b/chi__ffinter__slice__exportpyth
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  std::ofstream ofile;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  std::string fileName = base_name;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  fileName = fileName + std::to_string(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  fileName = fileName + std::to_string(<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  fileName = fileName + std::string(<span class="stringliteral">&quot;.py&quot;</span>);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  ofile.open(fileName);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
@@ -135,12 +135,12 @@ $(document).ready(function(){initNavTree('d6/d0b/chi__ffinter__slice__exportpyth
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>     <span class="stringliteral">&quot;    self.c = []\n\n&quot;</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  std::string offset;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id == 0)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id == 0)</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    std::string submod_name = base_name;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    submod_name = submod_name + std::to_string(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id+1);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    submod_name = submod_name + std::to_string(<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id+1);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.process_count&gt;1)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.process_count&gt;1)</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      ofile &lt;&lt; <span class="stringliteral">&quot;import &quot;</span> &lt;&lt; submod_name &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
@@ -153,13 +153,13 @@ $(document).ready(function(){initNavTree('d6/d0b/chi__ffinter__slice__exportpyth
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    offset = std::string(<span class="stringliteral">&quot;    &quot;</span>);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.process_count&gt;1)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.process_count&gt;1)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id != (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.process_count-1))</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id != (<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.process_count-1))</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      std::string submod_name = base_name;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      submod_name = submod_name + std::to_string(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id+1);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      submod_name = submod_name + std::to_string(<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id+1);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      ofile &lt;&lt; <span class="stringliteral">&quot;import &quot;</span> &lt;&lt; submod_name &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
@@ -213,22 +213,22 @@ $(document).ready(function(){initNavTree('d6/d0b/chi__ffinter__slice__exportpyth
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    &lt;&lt; offset &lt;&lt; <span class="stringliteral">&quot;data_object.append(new_cell_data)\n&quot;</span>;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  }</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id != (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.process_count-1))</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id != (<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.process_count-1))</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  {</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    std::string submod_name = base_name;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    submod_name = submod_name + std::to_string(<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id+1);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    submod_name = submod_name + std::to_string(<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id+1);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    ofile</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    &lt;&lt; offset &lt;&lt; <span class="stringliteral">&quot;data_object = &quot;</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    &lt;&lt; submod_name &lt;&lt; <span class="stringliteral">&quot;.AddData(data_object)\n\n&quot;</span>;</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id&gt;0)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id&gt;0)</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  {</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    ofile</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    &lt;&lt; offset &lt;&lt; <span class="stringliteral">&quot;return data_object\n&quot;</span>;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  }</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a>.location_id==0)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id==0)</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  {</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    ofile</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    &lt;&lt; <span class="stringliteral">&quot;data = BaseDataClass()\n&quot;</span></div>
@@ -303,7 +303,7 @@ $(document).ready(function(){initNavTree('d6/d0b/chi__ffinter__slice__exportpyth
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  ofile.close();</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>()</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a>.<a class="code hl_function" href="../../df/dfa/classchi_1_1_chi_log.html#aebdb78c9c0fddcc0799c4fc570ff1919">Log</a>()</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    &lt;&lt; <span class="stringliteral">&quot;Exported Python files for field func \&quot;&quot;</span></div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    &lt;&lt; <a class="code hl_variable" href="../../d5/dd4/classchi__mesh_1_1_field_function_interpolation.html#a370357a8a421df7e189392b6dd82bfa9">field_functions_</a>[0]-&gt;TextName()</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    &lt;&lt; <span class="stringliteral">&quot;\&quot; to base name \&quot;&quot;</span></div>
@@ -315,12 +315,12 @@ $(document).ready(function(){initNavTree('d6/d0b/chi__ffinter__slice__exportpyth
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
+<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00076">chi_runtime.h:76</a></div></div>
+<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00073">chi_runtime.h:73</a></div></div>
+<div class="ttc" id="aclasschi_1_1_chi_log_html_aebdb78c9c0fddcc0799c4fc570ff1919"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#aebdb78c9c0fddcc0799c4fc570ff1919">chi::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00035">chi_log.cc:35</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_field_function_interpolation_html_a370357a8a421df7e189392b6dd82bfa9"><div class="ttname"><a href="../../d5/dd4/classchi__mesh_1_1_field_function_interpolation.html#a370357a8a421df7e189392b6dd82bfa9">chi_mesh::FieldFunctionInterpolation::field_functions_</a></div><div class="ttdeci">std::vector&lt; chi_physics::FieldFunctionGridBasedPtr &gt; field_functions_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00063">chi_ffinterpolation.h:63</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_field_function_interpolation_slice_html_a190dc410452a80cef02aa6550c851018"><div class="ttname"><a href="../../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html#a190dc410452a80cef02aa6550c851018">chi_mesh::FieldFunctionInterpolationSlice::cell_intersections_</a></div><div class="ttdeci">std::vector&lt; FFICellIntersection &gt; cell_intersections_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d12/chi__ffinter__slice_8h_source.html#l00046">chi_ffinter_slice.h:46</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_field_function_interpolation_slice_html_aac316e37cb67201ba1971e42f8869ad5"><div class="ttname"><a href="../../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html#aac316e37cb67201ba1971e42f8869ad5">chi_mesh::FieldFunctionInterpolationSlice::ExportPython</a></div><div class="ttdeci">void ExportPython(std::string base_name) override</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0b/chi__ffinter__slice__exportpython_8cc_source.html#l00012">chi_ffinter_slice_exportpython.cc:12</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00036">chi_log.cc:36</a></div></div>
-<div class="ttc" id="aclasschi_html_a2457fed74471fae43ed8d6c5e91378fd"><div class="ttname"><a href="../../d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd">chi::mpi</a></div><div class="ttdeci">static chi_objects::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00072">chi_runtime.h:72</a></div></div>
-<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
 <div class="ttc" id="afieldfunction__gridbased_8h_html"><div class="ttname"><a href="../../d8/d72/fieldfunction__gridbased_8h.html">fieldfunction_gridbased.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

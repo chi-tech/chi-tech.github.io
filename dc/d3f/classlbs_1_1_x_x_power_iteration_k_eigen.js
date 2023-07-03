@@ -1,8 +1,8 @@
 var classlbs_1_1_x_x_power_iteration_k_eigen =
 [
-    [ "XXPowerIterationKEigen", "dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#a470e488118b21843d5cc8bf8b5579c7e", null ],
+    [ "XXPowerIterationKEigen", "dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#a2aee5c53631995bf4f2b68deb703f56c", null ],
     [ "Execute", "dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#a51fe867ffa53798782bf0c480cd4fab7", null ],
-    [ "GetInputParameters", "dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#a2822ca72fbbde10b646ca6f83b5bd095", null ],
+    [ "GetInputParameters", "dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#a92689e27123ad4e527869e27a6a980f1", null ],
     [ "Initialize", "dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#abd1822a2ed9a9220128194dc20875d39", null ],
     [ "SetLBSFissionSource", "dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#adf1a60b64850b1c26703a6026249ab71", null ],
     [ "SetLBSScatterSource", "dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#ac3ba1d8a189cf3914030f14cd1194da1", null ],

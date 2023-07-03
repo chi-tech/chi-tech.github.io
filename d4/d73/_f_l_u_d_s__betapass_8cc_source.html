@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('d4/d73/_f_l_u_d_s__betapass_8cc_source
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d06/_s_p_d_s_8h.html">ChiMesh/SweepUtilities/SPDS/SPDS.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a>&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
@@ -141,7 +141,7 @@ $(document).ready(function(){initNavTree('d4/d73/_f_l_u_d_s__betapass_8cc_source
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    MPI_Isend(multi_face_indices[deplocI].data(),</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>              multi_face_indices[deplocI].size(),</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>              MPI_INT,locJ,101+tag_index,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>              MPI_COMM_WORLD,&amp;send_requests[deplocI]);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>              <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.comm,&amp;send_requests[deplocI]);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">//TODO: Watch eager limits on sent data</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
@@ -159,7 +159,7 @@ $(document).ready(function(){initNavTree('d4/d73/_f_l_u_d_s__betapass_8cc_source
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">int</span> locJ = spds.<a class="code hl_variable" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#af9ac69f6779155114376826fe6fb4852">delayed_location_dependencies</a>[prelocI];</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    MPI_Status probe_status;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    MPI_Probe(locJ,101+tag_index,MPI_COMM_WORLD,&amp;probe_status);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    MPI_Probe(locJ,101+tag_index,<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.comm,&amp;probe_status);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">int</span> amount_to_receive=0;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    MPI_Get_count(&amp;probe_status, MPI_INT, &amp;amount_to_receive );</div>
@@ -168,7 +168,7 @@ $(document).ready(function(){initNavTree('d4/d73/_f_l_u_d_s__betapass_8cc_source
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    face_indices.resize(amount_to_receive,0);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    MPI_Recv(face_indices.data(),amount_to_receive,MPI_INT,</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>             locJ,101+tag_index,MPI_COMM_WORLD,MPI_STATUS_IGNORE);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>             locJ,101+tag_index,<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.<a class="code hl_variable" href="../../d1/d0b/classchi_1_1_m_p_i___info.html#a246e0d9709f848fdc330317ff1fb595a">comm</a>,MPI_STATUS_IGNORE);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a25fe02fdbd089b8f556e19d5b502ae06">DeSerializeCellInfo</a>(<a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a2cb1e2523acd0f7d55ec06b7d81d32ea">delayed_prelocI_cell_views</a>[prelocI], &amp;face_indices,</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                        <a class="code hl_variable" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ad69a85a8fd3d89c7f801eac15ac4f961">delayed_prelocI_face_dof_count</a>[prelocI]);</div>
@@ -190,7 +190,7 @@ $(document).ready(function(){initNavTree('d4/d73/_f_l_u_d_s__betapass_8cc_source
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">int</span> locJ = spds.<a class="code hl_variable" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html#aeef00fb30430e13eb7ca901a6783f791">location_dependencies</a>[prelocI];</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    MPI_Status probe_status;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    MPI_Probe(locJ,101+tag_index,MPI_COMM_WORLD,&amp;probe_status);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    MPI_Probe(locJ,101+tag_index,<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.comm,&amp;probe_status);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">int</span> amount_to_receive=0;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    MPI_Get_count(&amp;probe_status, MPI_INT, &amp;amount_to_receive );</div>
@@ -202,7 +202,7 @@ $(document).ready(function(){initNavTree('d4/d73/_f_l_u_d_s__betapass_8cc_source
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>             amount_to_receive,</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>             MPI_INT,</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>             locJ,101+tag_index,</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>             MPI_COMM_WORLD,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>             <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.<a class="code hl_variable" href="../../d1/d0b/classchi_1_1_m_p_i___info.html#a246e0d9709f848fdc330317ff1fb595a">comm</a>,</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>             MPI_STATUS_IGNORE);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_function" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a25fe02fdbd089b8f556e19d5b502ae06">DeSerializeCellInfo</a>(<a class="code hl_variable" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a396f804d788e312c09c5ab3adef1577d">prelocI_cell_views</a>[prelocI], &amp;face_indices,</div>
@@ -229,7 +229,7 @@ $(document).ready(function(){initNavTree('d4/d73/_f_l_u_d_s__betapass_8cc_source
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    MPI_Isend(multi_face_indices[deplocI].data(),</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>              multi_face_indices[deplocI].size(),</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>              MPI_INT,locJ,101+tag_index,</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>              MPI_COMM_WORLD,&amp;send_requests[deplocI]);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>              <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.comm,&amp;send_requests[deplocI]);</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="comment">//TODO: Watch eager limits on sent data</span></div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
@@ -377,7 +377,9 @@ $(document).ready(function(){initNavTree('d4/d73/_f_l_u_d_s__betapass_8cc_source
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>}</div>
 <div class="ttc" id="a_f_l_u_d_s_8h_html"><div class="ttname"><a href="../../d8/d81/_f_l_u_d_s_8h.html">FLUDS.h</a></div></div>
 <div class="ttc" id="a_s_p_d_s_8h_html"><div class="ttname"><a href="../../db/d06/_s_p_d_s_8h.html">SPDS.h</a></div></div>
-<div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
+<div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
+<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00073">chi_runtime.h:73</a></div></div>
+<div class="ttc" id="aclasschi_1_1_m_p_i___info_html_a246e0d9709f848fdc330317ff1fb595a"><div class="ttname"><a href="../../d1/d0b/classchi_1_1_m_p_i___info.html#a246e0d9709f848fdc330317ff1fb595a">chi::MPI_Info::comm</a></div><div class="ttdeci">const MPI_Comm &amp; comm</div><div class="ttdoc">MPI communicator.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d91/mpi__info_8h_source.html#l00028">mpi_info.h:28</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_f_l_u_d_s_html_a8a764a67e5b55a9449c4b2cf2decada4"><div class="ttname"><a href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a8a764a67e5b55a9449c4b2cf2decada4">chi_mesh::sweep_management::FLUDS::deplocI_face_dof_count</a></div><div class="ttdeci">std::vector&lt; int &gt; deplocI_face_dof_count</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00048">FLUDS.h:48</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_f_l_u_d_s_html_ad69a85a8fd3d89c7f801eac15ac4f961"><div class="ttname"><a href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ad69a85a8fd3d89c7f801eac15ac4f961">chi_mesh::sweep_management::FLUDS::delayed_prelocI_face_dof_count</a></div><div class="ttdeci">std::vector&lt; int &gt; delayed_prelocI_face_dof_count</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00058">FLUDS.h:58</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_f_l_u_d_s_html_af68baacf4886b68cc6bb93c84f672297"><div class="ttname"><a href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#af68baacf4886b68cc6bb93c84f672297">chi_mesh::sweep_management::FLUDS::prelocI_face_dof_count</a></div><div class="ttdeci">std::vector&lt; int &gt; prelocI_face_dof_count</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00056">FLUDS.h:56</a></div></div>

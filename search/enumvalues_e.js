@@ -10,6 +10,7 @@ var searchData=
   ['op_5fsum_7',['OP_SUM',['../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a207ad6cc312218de51e8b227bd339030aff2e92d6142f5285227563d220db74db',1,'chi_mesh::ff_interpolation']]],
   ['op_5fsum_5flua_8',['OP_SUM_LUA',['../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a207ad6cc312218de51e8b227bd339030a0f5b3579e87c28379fd204c871cf67a2',1,'chi_mesh::ff_interpolation']]],
   ['operation_9',['OPERATION',['../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aad6a0beecbcc46b64a23307ffc084ed36',1,'chi_mesh::ff_interpolation']]],
-  ['optional_10',['OPTIONAL',['../d1/d96/namespacechi__objects.html#aeb8249b66222b72530001aed6ec8af25a7951811e4b085cf68ed3dc3191f36405',1,'chi_objects']]],
-  ['orthogonal_11',['ORTHOGONAL',['../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ad70e9f702fc25558616c238440c8429b',1,'chi_mesh']]]
+  ['optional_10',['OPTIONAL',['../dc/d67/namespacechi.html#a9355475cc63c20acacdc1328c56ae1d4a7951811e4b085cf68ed3dc3191f36405',1,'chi']]],
+  ['orthogonal_11',['ORTHOGONAL',['../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ad70e9f702fc25558616c238440c8429b',1,'chi_mesh']]],
+  ['outgoing_12',['OUTGOING',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a8fb6d7f7772897f92cb93a637cbd7b92a1741b869c82993c62163223d8fefbba4',1,'chi_mesh::sweep_management']]]
 ];

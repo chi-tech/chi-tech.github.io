@@ -240,9 +240,9 @@ $(document).ready(function(){initNavTree('d2/d4c/devman__01__06__parameters_8h_s
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">control object construction parameters (more on this later). Additionally,</span></div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment">we do not want developers to come up with unique dummy variable names, i.e.,</span></div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">`static int abc12345` or `static int abc12346`, to make use of the</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">`ChiObjectMaker`.</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">`ChiObjectFactory`.</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment"></span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">In order to register an object within the `ChiObjectMaker` we created a macro</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">In order to register an object within the `ChiObjectFactory` we created a macro</span></div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">called `RegisterChiObject(namespace_name, obj_name)`. The arguments to this</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">macro, `namespace_name` and `obj_name`, then get used to construct the following</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment">\code</span></div>
@@ -251,7 +251,7 @@ $(document).ready(function(){initNavTree('d2/d4c/devman__01__06__parameters_8h_s
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">// becomes:</span></div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">//</span></div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment">static char unique_var_name_object_ObjectName_0 =</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">  ChiObjectMaker::AddObjectToRegistry&lt;ObjectName, ChiObject&gt;(&quot;namespace_name&quot;,</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">  ChiObjectFactory::AddObjectToRegistry&lt;ObjectName, ChiObject&gt;(&quot;namespace_name&quot;,</span></div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">                                                             &quot;ObjectName&quot;)</span></div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">\endcode</span></div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">which allows us to abuse static initialization to register the object with</span></div>

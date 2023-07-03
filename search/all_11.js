@@ -36,7 +36,7 @@ var searchData=
   ['quadrature_5fquadrilateral_2ecc_33',['quadrature_quadrilateral.cc',['../d9/d06/quadrature__quadrilateral_8cc.html',1,'']]],
   ['quadrature_5fquadrilateral_2eh_34',['quadrature_quadrilateral.h',['../d8/d20/quadrature__quadrilateral_8h.html',1,'']]],
   ['quadrature_5fspds_5fmap_5f_35',['quadrature_spds_map_',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#adbc4642f2a20a567c7cfe67e5d47ffc4',1,'lbs::DiscreteOrdinatesSolver']]],
-  ['quadrature_5fstack_36',['quadrature_stack',['../d4/d35/classchi.html#af95e663696f1bb453de942ae30e765e7',1,'chi']]],
+  ['quadrature_5fstack_36',['quadrature_stack',['../d7/dd7/class_chi.html#a0561d6de5f1d2237ab2cb01afcd44d66',1,'Chi']]],
   ['quadrature_5ftetrahedron_2ecc_37',['quadrature_tetrahedron.cc',['../d9/d96/quadrature__tetrahedron_8cc.html',1,'']]],
   ['quadrature_5ftetrahedron_2eh_38',['quadrature_tetrahedron.h',['../d6/da3/quadrature__tetrahedron_8h.html',1,'']]],
   ['quadrature_5ftriangle_2ecc_39',['quadrature_triangle.cc',['../dc/d00/quadrature__triangle_8cc.html',1,'']]],

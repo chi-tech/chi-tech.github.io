@@ -1,6 +1,28 @@
 var dir_7815e1d8f72fdc1ebf842e821a7e1a42 =
 [
     [ "doc", "dir_594abc163d27c2cd2b4e437544c445be.html", "dir_594abc163d27c2cd2b4e437544c445be" ],
-    [ "chi_mesh_logicalvolume.h", "d9/df5/chi__mesh__logicalvolume_8h.html", "d9/df5/chi__mesh__logicalvolume_8h" ],
-    [ "chi_mesh_logicalvolume_surfmesh.cc", "d2/d18/chi__mesh__logicalvolume__surfmesh_8cc.html", null ]
+    [ "BooleanLogicalVolume.cc", "d3/dfa/_boolean_logical_volume_8cc.html", "d3/dfa/_boolean_logical_volume_8cc" ],
+    [ "BooleanLogicalVolume.h", "d6/dd2/_boolean_logical_volume_8h.html", [
+      [ "chi_mesh::BooleanLogicalVolume", "da/dca/classchi__mesh_1_1_boolean_logical_volume.html", "da/dca/classchi__mesh_1_1_boolean_logical_volume" ]
+    ] ],
+    [ "LogicalVolume.cc", "da/dc9/_logical_volume_8cc.html", null ],
+    [ "LogicalVolume.h", "de/de9/_logical_volume_8h.html", [
+      [ "chi_mesh::LogicalVolume", "d0/d1e/classchi__mesh_1_1_logical_volume.html", "d0/d1e/classchi__mesh_1_1_logical_volume" ]
+    ] ],
+    [ "RCCLogicalVolume.cc", "d1/d5c/_r_c_c_logical_volume_8cc.html", "d1/d5c/_r_c_c_logical_volume_8cc" ],
+    [ "RCCLogicalVolume.h", "d0/da6/_r_c_c_logical_volume_8h.html", [
+      [ "chi_mesh::RCCLogicalVolume", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume" ]
+    ] ],
+    [ "RPPLogicalVolume.cc", "da/dcd/_r_p_p_logical_volume_8cc.html", "da/dcd/_r_p_p_logical_volume_8cc" ],
+    [ "RPPLogicalVolume.h", "d4/d71/_r_p_p_logical_volume_8h.html", [
+      [ "chi_mesh::RPPLogicalVolume", "d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html", "d4/dea/classchi__mesh_1_1_r_p_p_logical_volume" ]
+    ] ],
+    [ "SphereLogicalVolume.cc", "dd/dc1/_sphere_logical_volume_8cc.html", "dd/dc1/_sphere_logical_volume_8cc" ],
+    [ "SphereLogicalVolume.h", "db/db6/_sphere_logical_volume_8h.html", [
+      [ "chi_mesh::SphereLogicalVolume", "db/d06/classchi__mesh_1_1_sphere_logical_volume.html", "db/d06/classchi__mesh_1_1_sphere_logical_volume" ]
+    ] ],
+    [ "SurfaceMeshLogicalVolume.cc", "d6/d70/_surface_mesh_logical_volume_8cc.html", "d6/d70/_surface_mesh_logical_volume_8cc" ],
+    [ "SurfaceMeshLogicalVolume.h", "d7/df6/_surface_mesh_logical_volume_8h.html", [
+      [ "chi_mesh::SurfaceMeshLogicalVolume", "dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html", "dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume" ]
+    ] ]
 ];

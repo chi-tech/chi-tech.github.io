@@ -10,8 +10,8 @@ var searchData=
   ['linearsolvercontext_7',['LinearSolverContext',['../d0/dfb/structchi__math_1_1_linear_solver_context.html',1,'chi_math']]],
   ['localcellhandler_8',['LocalCellHandler',['../d7/d36/classchi__mesh_1_1_local_cell_handler.html',1,'chi_mesh']]],
   ['logicalvolume_9',['LogicalVolume',['../d0/d1e/classchi__mesh_1_1_logical_volume.html',1,'chi_mesh']]],
-  ['logstream_10',['LogStream',['../dc/d75/classchi__objects_1_1_log_stream.html',1,'chi_objects']]],
+  ['logstream_10',['LogStream',['../d8/d75/classchi_1_1_log_stream.html',1,'chi']]],
   ['luadimatodimb_11',['LuaDimAToDimB',['../dd/dec/classchi__math_1_1functions_1_1_lua_dim_a_to_dim_b.html',1,'chi_math::functions']]],
-  ['luafunctionregistryentry_12',['LuaFunctionRegistryEntry',['../d5/daa/structchi__objects_1_1_chi_console_1_1_lua_function_registry_entry.html',1,'chi_objects::ChiConsole']]],
-  ['luafuncwrapperregentry_13',['LuaFuncWrapperRegEntry',['../d6/d75/structchi__objects_1_1_chi_console_1_1_lua_func_wrapper_reg_entry.html',1,'chi_objects::ChiConsole']]]
+  ['luafunctionregistryentry_12',['LuaFunctionRegistryEntry',['../dc/d64/structchi_1_1_chi_console_1_1_lua_function_registry_entry.html',1,'chi::ChiConsole']]],
+  ['luafuncwrapperregentry_13',['LuaFuncWrapperRegEntry',['../dc/d31/structchi_1_1_chi_console_1_1_lua_func_wrapper_reg_entry.html',1,'chi::ChiConsole']]]
 ];

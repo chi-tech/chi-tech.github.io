@@ -192,7 +192,7 @@ $(document).ready(function(){initNavTree('d3/d74/_code_tut2_8h_source.html','../
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">chi_math::VectorGhostCommunicator vgc(num_local_dofs,</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">                                      num_globl_dofs,</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">                                      ghost_ids,</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">                                      MPI_COMM_WORLD);</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">                                      Chi::mpi.comm);</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">std::vector&lt;double&gt; field_wg = vgc.MakeGhostedVector(field);</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment"></span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">vgc.CommunicateGhostEntries(field_wg);</span></div>
@@ -540,7 +540,7 @@ $(document).ready(function(){initNavTree('d3/d74/_code_tut2_8h_source.html','../
 <div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span><span class="comment">  chi_math::VectorGhostCommunicator vgc(num_local_dofs,</span></div>
 <div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span><span class="comment">                                        num_globl_dofs,</span></div>
 <div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span><span class="comment">                                        ghost_ids,</span></div>
-<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span><span class="comment">                                        MPI_COMM_WORLD);</span></div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span><span class="comment">                                        Chi::mpi.comm);</span></div>
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span><span class="comment">  std::vector&lt;double&gt; field_wg = vgc.MakeGhostedVector(field);</span></div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span><span class="comment"></span> </div>
 <div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span><span class="comment">  vgc.CommunicateGhostEntries(field_wg);</span></div>

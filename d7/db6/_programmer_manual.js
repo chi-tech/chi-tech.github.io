@@ -71,6 +71,21 @@ var _programmer_manual =
         [ "FAQ6 Constrained ranges", "d0/d6f/_dev_man_static_registration.html#DevManParametersSecFAQ6", null ]
       ] ]
     ] ],
+    [ "The Test System", "d7/d2a/_dev_man_test_system.html", [
+      [ "1 Compiling the tests", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec1", null ],
+      [ "2 What is a test?", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec2", [
+        [ "2.1 Test-blocks documentation", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec2_1", null ],
+        [ "2.2 Checks documentation", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec2_2", [
+          [ "2.2.1 KeyValuePairCheck", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec2_2_1", null ],
+          [ "2.2.2 StrCompareCheck", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec2_2_2", null ],
+          [ "2.2.3 FloatCompareCheck", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec2_2_3", null ],
+          [ "2.2.4 IntCompareCheck", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec2_2_4", null ],
+          [ "2.2.5 ErrorCodeCheck", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec2_2_5", null ],
+          [ "2.2.6 GoldFileCheck", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec2_2_6", null ]
+        ] ]
+      ] ],
+      [ "3 Running the test system", "d7/d2a/_dev_man_test_system.html#DevManTestSystem_sec3", null ]
+    ] ],
     [ "Coding Tutorial 1 - Poisson's problem with Finite Volume", "dc/da4/_code_tut1.html", [
       [ "1 Poisson's equation", "dc/da4/_code_tut1.html#CodeTut1Sec1", [
         [ "1.1 Our specific problem", "dc/da4/_code_tut1.html#CodeTut1Sec1_1", null ],

@@ -25,7 +25,6 @@ var classlbs_1_1_l_b_s_sweep_chunk =
     [ "direction_data_callbacks_and_kernels_", "d2/d88/classlbs_1_1_l_b_s_sweep_chunk.html#ac46d331212cfbfd447f03ef79324c312", null ],
     [ "direction_num_", "d2/d88/classlbs_1_1_l_b_s_sweep_chunk.html#a4fad55b76a489c3a595d995cd2465a60", null ],
     [ "direction_qweight_", "d2/d88/classlbs_1_1_l_b_s_sweep_chunk.html#a95cb7e0c92e9ab9e21bde975525b9e40", null ],
-    [ "face_incident_flags_", "d2/d88/classlbs_1_1_l_b_s_sweep_chunk.html#a6a6070be31622984f80f8a3d4e418e4f", null ],
     [ "face_mu_values_", "d2/d88/classlbs_1_1_l_b_s_sweep_chunk.html#a4dfa9709a38866ef31e6a481b5c71aa8", null ],
     [ "flux_update_kernels_", "d2/d88/classlbs_1_1_l_b_s_sweep_chunk.html#a409b1cdf158a21fef2fa8043b5ac56fe", null ],
     [ "G_", "d2/d88/classlbs_1_1_l_b_s_sweep_chunk.html#a568633b12922a0229845c92dbd44facc", null ],

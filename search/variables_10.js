@@ -14,6 +14,6 @@ var searchData=
   ['quadrature_5ffluds_5ftemplates_5fmap_5f_11',['quadrature_fluds_templates_map_',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ae2592058db32a0f5d12b2f681d1180ef',1,'lbs::DiscreteOrdinatesSolver']]],
   ['quadrature_5fpoint_5findices_5f_12',['quadrature_point_indices_',['../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#af7bd2b975590202236cde0e09f7b4c95',1,'chi_math::finite_element::InternalQuadraturePointData']]],
   ['quadrature_5fspds_5fmap_5f_13',['quadrature_spds_map_',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#adbc4642f2a20a567c7cfe67e5d47ffc4',1,'lbs::DiscreteOrdinatesSolver']]],
-  ['quadrature_5fstack_14',['quadrature_stack',['../d4/d35/classchi.html#af95e663696f1bb453de942ae30e765e7',1,'chi']]],
+  ['quadrature_5fstack_14',['quadrature_stack',['../d7/dd7/class_chi.html#a0561d6de5f1d2237ab2cb01afcd44d66',1,'Chi']]],
   ['quadrature_5funq_5fso_5fgrouping_5fmap_5f_15',['quadrature_unq_so_grouping_map_',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ac812203996fcd7ffb261244d0e0bc049',1,'lbs::DiscreteOrdinatesSolver']]]
 ];

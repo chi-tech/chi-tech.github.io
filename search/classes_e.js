@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['parameterblock_0',['ParameterBlock',['../d4/de3/classchi__objects_1_1_parameter_block.html',1,'chi_objects']]],
+  ['parameterblock_0',['ParameterBlock',['../d5/d1c/classchi_1_1_parameter_block.html',1,'chi']]],
   ['petscsolversetup_1',['PETScSolverSetup',['../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html',1,'chi_math::PETScUtils']]],
   ['piecewiselinear1d_2',['PiecewiseLinear1D',['../d6/d90/classchi__math_1_1functions_1_1_piecewise_linear1_d.html',1,'chi_math::functions']]],
   ['pointsource_3',['PointSource',['../dc/d4f/classlbs_1_1_point_source.html',1,'lbs']]],

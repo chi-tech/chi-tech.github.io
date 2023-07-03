@@ -1,7 +1,7 @@
 var searchData=
 [
   ['object_5fregistry_5f_0',['object_registry_',['../d9/d3b/class_chi_object_maker.html#a463d174a7665c67ad322d7995fef8e04',1,'ChiObjectMaker']]],
-  ['object_5fstack_1',['object_stack',['../d4/d35/classchi.html#ab943224840354fdebc84ee218e70afb7',1,'chi']]],
+  ['object_5fstack_1',['object_stack',['../d7/dd7/class_chi.html#a8ed25422d8eb407bb9432aeabff2cf20',1,'Chi']]],
   ['octant_5fmodifier_2',['octant_modifier',['../d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html#aa7f6dbfdf5be2f5f521aab537e9ae008',1,'chi_math::SimplifiedLDFESQ::SphericalQuadrilateral']]],
   ['offset_3',['offset',['../d8/db6/structchi__math_1_1_c_d_f_sampler_1_1_sub_intvl.html#a252fa26f8fd975a1d0cc60c655e2e7ac',1,'chi_math::CDFSampler::SubIntvl']]],
   ['offset_5f_4',['offset_',['../d5/d5b/classchi__data__types_1_1_byte_array.html#a5ad8168f0cd7a73556c318e2ca3fbced',1,'chi_data_types::ByteArray']]],

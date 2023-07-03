@@ -218,14 +218,12 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <p >We start by getting the grid as usual: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> grid_ptr = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>().<a class="code hl_function" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">GetGrid</a>();</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = *grid_ptr;</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Global num cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
+<div class="line">chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Global num cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> dimension = (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975">chi_mesh::DIMENSION_1</a>)? 1 :</div>
 <div class="line">                      (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246">chi_mesh::DIMENSION_2</a>)? 2 :</div>
 <div class="line">                      (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">chi_mesh::DIMENSION_3</a>)? 3 : 0;</div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_handler_html_aa87887c1a76634cb07134b5faa1e3587"><div class="ttname"><a href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">chi_mesh::MeshHandler::GetGrid</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr &amp; GetGrid() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/chi__meshhandler_8cc_source.html#l00012">chi_meshhandler.cc:12</a></div></div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00036">chi_log.cc:36</a></div></div>
-<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975">chi_mesh::DIMENSION_1</a></div><div class="ttdeci">@ DIMENSION_1</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00072">chi_mesh.h:72</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246">chi_mesh::DIMENSION_2</a></div><div class="ttdeci">@ DIMENSION_2</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00073">chi_mesh.h:73</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">chi_mesh::DIMENSION_3</a></div><div class="ttdeci">@ DIMENSION_3</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/chi__mesh_8h_source.html#l00074">chi_mesh.h:74</a></div></div>
@@ -268,8 +266,8 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 </div><!-- fragment --><p >And then grab the dof-counts </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_fem_local_dofs = sdm.GetNumLocalDOFs(phi_uk_man);</div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_fem_globl_dofs = sdm.GetNumGlobalDOFs(phi_uk_man);</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num local FEM DOFs: &quot;</span> &lt;&lt; num_fem_local_dofs;</div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num globl FEM DOFs: &quot;</span> &lt;&lt; num_fem_globl_dofs;</div>
+<div class="line">chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Num local FEM DOFs: &quot;</span> &lt;&lt; num_fem_local_dofs;</div>
+<div class="line">chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Num globl FEM DOFs: &quot;</span> &lt;&lt; num_fem_globl_dofs;</div>
 </div><!-- fragment --><p >This allows us to define the business end, which is the flux tally vector: </p><div class="fragment"><div class="line">std::vector&lt;double&gt; phi_tally(num_fem_local_dofs, 0.0);</div>
 </div><!-- fragment --><h1><a class="anchor" id="CodeTut93Sec3"></a>
 3 The particle/ray data structure</h1>
@@ -763,13 +761,13 @@ The complete program</h1>
 <div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="../../d0/d68/namespacechi__unit__sim__tests.html#a008c82114ab2bdbce305e00ca56c1661">chiSimTest93_RayTracing</a>(lua_State* Lstate)</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">const</span> std::string fname = <span class="stringliteral">&quot;chiSimTest93_RayTracing&quot;</span>;</div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;chiSimTest93_RayTracing&quot;</span>;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;chiSimTest93_RayTracing&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Get grid</span></div>
 <div class="line">  <span class="keyword">auto</span> grid_ptr = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>().<a class="code hl_function" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">GetGrid</a>();</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = *grid_ptr;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Global num cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Global num cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> dimension = (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362a73bd95bf58ed2c1cd1ef2f4257fc3975">chi_mesh::DIMENSION_1</a>)? 1 :</div>
 <div class="line">                        (grid.Attributes() &amp; <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362ac5d5534358879a033391a7c43407a246">chi_mesh::DIMENSION_2</a>)? 2 :</div>
@@ -811,8 +809,8 @@ The complete program</h1>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_fem_local_dofs = sdm.GetNumLocalDOFs(phi_uk_man);</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_fem_globl_dofs = sdm.GetNumGlobalDOFs(phi_uk_man);</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num local FEM DOFs: &quot;</span> &lt;&lt; num_fem_local_dofs;</div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num globl FEM DOFs: &quot;</span> &lt;&lt; num_fem_globl_dofs;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Num local FEM DOFs: &quot;</span> &lt;&lt; num_fem_local_dofs;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Num globl FEM DOFs: &quot;</span> &lt;&lt; num_fem_globl_dofs;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Define tallies</span></div>
 <div class="line">  std::vector&lt;double&gt; phi_tally(num_fem_local_dofs, 0.0);</div>

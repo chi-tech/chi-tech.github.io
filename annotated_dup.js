@@ -4,6 +4,21 @@ var annotated_dup =
       [ "Boundary", "d6/dc1/classcfem__diffusion_1_1_boundary.html", "d6/dc1/classcfem__diffusion_1_1_boundary" ],
       [ "Solver", "de/dba/classcfem__diffusion_1_1_solver.html", "de/dba/classcfem__diffusion_1_1_solver" ]
     ] ],
+    [ "chi", "dc/d67/namespacechi.html", [
+      [ "ChiConsole", "db/d8c/classchi_1_1_chi_console.html", "db/d8c/classchi_1_1_chi_console" ],
+      [ "ChiLog", "df/dfa/classchi_1_1_chi_log.html", "df/dfa/classchi_1_1_chi_log" ],
+      [ "ChiMPICommunicatorSet", "df/de1/classchi_1_1_chi_m_p_i_communicator_set.html", "df/de1/classchi_1_1_chi_m_p_i_communicator_set" ],
+      [ "ChiTimer", "d7/dc1/classchi_1_1_chi_timer.html", "d7/dc1/classchi_1_1_chi_timer" ],
+      [ "CSTMemory", "d2/d1b/structchi_1_1_c_s_t_memory.html", "d2/d1b/structchi_1_1_c_s_t_memory" ],
+      [ "DummyStream", "dd/d10/structchi_1_1_dummy_stream.html", "dd/d10/structchi_1_1_dummy_stream" ],
+      [ "InputParameters", "d8/d4d/classchi_1_1_input_parameters.html", "d8/d4d/classchi_1_1_input_parameters" ],
+      [ "LogStream", "d8/d75/classchi_1_1_log_stream.html", "d8/d75/classchi_1_1_log_stream" ],
+      [ "Material", "df/dbe/classchi_1_1_material.html", "df/dbe/classchi_1_1_material" ],
+      [ "MaterialProperty", "d0/d06/classchi_1_1_material_property.html", "d0/d06/classchi_1_1_material_property" ],
+      [ "MaterialPropertyScalarFuncXYZTV", "da/dd5/classchi_1_1_material_property_scalar_func_x_y_z_t_v.html", "da/dd5/classchi_1_1_material_property_scalar_func_x_y_z_t_v" ],
+      [ "MPI_Info", "d1/d0b/classchi_1_1_m_p_i___info.html", "d1/d0b/classchi_1_1_m_p_i___info" ],
+      [ "ParameterBlock", "d5/d1c/classchi_1_1_parameter_block.html", "d5/d1c/classchi_1_1_parameter_block" ]
+    ] ],
     [ "chi_data_types", "d5/d1b/namespacechi__data__types.html", [
       [ "AllowableRange", "d2/d18/classchi__data__types_1_1_allowable_range.html", "d2/d18/classchi__data__types_1_1_allowable_range" ],
       [ "AllowableRangeHighLimit", "d4/d8e/classchi__data__types_1_1_allowable_range_high_limit.html", "d4/d8e/classchi__data__types_1_1_allowable_range_high_limit" ],
@@ -151,11 +166,13 @@ var annotated_dup =
       [ "Matrix3x3", "d0/dec/structchi__mesh_1_1_matrix3x3.html", "d0/dec/structchi__mesh_1_1_matrix3x3" ],
       [ "MeshContinuum", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html", "d3/d1c/classchi__mesh_1_1_mesh_continuum" ],
       [ "MeshHandler", "d2/d10/classchi__mesh_1_1_mesh_handler.html", "d2/d10/classchi__mesh_1_1_mesh_handler" ],
+      [ "MeshModifier", "dc/df7/classchi__mesh_1_1_mesh_modifier.html", "dc/df7/classchi__mesh_1_1_mesh_modifier" ],
       [ "PolyFace", "d4/ddb/structchi__mesh_1_1_poly_face.html", "d4/ddb/structchi__mesh_1_1_poly_face" ],
       [ "RayTracer", "dd/d2a/classchi__mesh_1_1_ray_tracer.html", "dd/d2a/classchi__mesh_1_1_ray_tracer" ],
       [ "RayTracerOutputInformation", "da/d07/structchi__mesh_1_1_ray_tracer_output_information.html", "da/d07/structchi__mesh_1_1_ray_tracer_output_information" ],
       [ "RCCLogicalVolume", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume" ],
       [ "RPPLogicalVolume", "d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html", "d4/dea/classchi__mesh_1_1_r_p_p_logical_volume" ],
+      [ "SnapToPlaneMeshModifier", "dd/d81/classchi__mesh_1_1_snap_to_plane_mesh_modifier.html", "dd/d81/classchi__mesh_1_1_snap_to_plane_mesh_modifier" ],
       [ "SphereLogicalVolume", "db/d06/classchi__mesh_1_1_sphere_logical_volume.html", "db/d06/classchi__mesh_1_1_sphere_logical_volume" ],
       [ "SurfaceMesh", "dd/d43/classchi__mesh_1_1_surface_mesh.html", "dd/d43/classchi__mesh_1_1_surface_mesh" ],
       [ "SurfaceMesher", "df/d7e/classchi__mesh_1_1_surface_mesher.html", "df/d7e/classchi__mesh_1_1_surface_mesher" ],
@@ -169,21 +186,6 @@ var annotated_dup =
       [ "VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", "de/df0/classchi__mesh_1_1_volume_mesher" ],
       [ "VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", "de/d89/classchi__mesh_1_1_volume_mesher_extruder" ],
       [ "VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned" ]
-    ] ],
-    [ "chi_objects", "d1/d96/namespacechi__objects.html", [
-      [ "ChiConsole", "d0/dc4/classchi__objects_1_1_chi_console.html", "d0/dc4/classchi__objects_1_1_chi_console" ],
-      [ "ChiLog", "d8/d42/classchi__objects_1_1_chi_log.html", "d8/d42/classchi__objects_1_1_chi_log" ],
-      [ "ChiMPICommunicatorSet", "d8/da3/classchi__objects_1_1_chi_m_p_i_communicator_set.html", "d8/da3/classchi__objects_1_1_chi_m_p_i_communicator_set" ],
-      [ "ChiTimer", "d1/d87/classchi__objects_1_1_chi_timer.html", "d1/d87/classchi__objects_1_1_chi_timer" ],
-      [ "CSTMemory", "dd/d68/structchi__objects_1_1_c_s_t_memory.html", "dd/d68/structchi__objects_1_1_c_s_t_memory" ],
-      [ "DummyStream", "d7/d40/structchi__objects_1_1_dummy_stream.html", "d7/d40/structchi__objects_1_1_dummy_stream" ],
-      [ "InputParameters", "dc/dab/classchi__objects_1_1_input_parameters.html", "dc/dab/classchi__objects_1_1_input_parameters" ],
-      [ "LogStream", "dc/d75/classchi__objects_1_1_log_stream.html", "dc/d75/classchi__objects_1_1_log_stream" ],
-      [ "Material", "d8/d45/classchi__objects_1_1_material.html", "d8/d45/classchi__objects_1_1_material" ],
-      [ "MaterialProperty", "d6/d55/classchi__objects_1_1_material_property.html", "d6/d55/classchi__objects_1_1_material_property" ],
-      [ "MaterialPropertyScalarFuncXYZTV", "d8/d1c/classchi__objects_1_1_material_property_scalar_func_x_y_z_t_v.html", "d8/d1c/classchi__objects_1_1_material_property_scalar_func_x_y_z_t_v" ],
-      [ "MPI_Info", "d2/d8e/classchi__objects_1_1_m_p_i___info.html", "d2/d8e/classchi__objects_1_1_m_p_i___info" ],
-      [ "ParameterBlock", "d4/de3/classchi__objects_1_1_parameter_block.html", "d4/de3/classchi__objects_1_1_parameter_block" ]
     ] ],
     [ "chi_physics", "d6/d5f/namespacechi__physics.html", [
       [ "field_operations", "db/dd3/namespacechi__physics_1_1field__operations.html", [
@@ -277,7 +279,7 @@ var annotated_dup =
     [ "prk", "d4/d2d/namespaceprk.html", [
       [ "TransientSolver", "de/d01/classprk_1_1_transient_solver.html", "de/d01/classprk_1_1_transient_solver" ]
     ] ],
-    [ "chi", "d4/d35/classchi.html", "d4/d35/classchi" ],
+    [ "Chi", "d7/dd7/class_chi.html", "d7/dd7/class_chi" ],
     [ "ChiObject", "d6/d15/class_chi_object.html", "d6/d15/class_chi_object" ],
     [ "ChiObjectMaker", "d9/d3b/class_chi_object_maker.html", "d9/d3b/class_chi_object_maker" ],
     [ "vtkNew", "db/ddd/classvtk_new.html", null ],

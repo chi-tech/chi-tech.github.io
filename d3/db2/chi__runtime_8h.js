@@ -1,8 +1,8 @@
 var chi__runtime_8h =
 [
-    [ "chi", "d4/d35/classchi.html", "d4/d35/classchi" ],
-    [ "chi::run_time", "d2/d6e/classchi_1_1run__time.html", "d2/d6e/classchi_1_1run__time" ],
-    [ "chi::RecoverableException", "da/d39/classchi_1_1_recoverable_exception.html", "da/d39/classchi_1_1_recoverable_exception" ],
+    [ "Chi", "d7/dd7/class_chi.html", "d7/dd7/class_chi" ],
+    [ "Chi::run_time", "d8/dd8/class_chi_1_1run__time.html", "d8/dd8/class_chi_1_1run__time" ],
+    [ "Chi::RecoverableException", "d6/dd6/class_chi_1_1_recoverable_exception.html", "d6/dd6/class_chi_1_1_recoverable_exception" ],
     [ "AngularQuadraturePtr", "d3/db2/chi__runtime_8h.html#a637714681be11402efe6c55193c7af1f", null ],
     [ "ChiObjectPtr", "d3/db2/chi__runtime_8h.html#a9619f15f05ad9d25349bba47f8028491", null ],
     [ "FFInterp", "d3/db2/chi__runtime_8h.html#a2a70ac114540ccc7733e4763ff1e919e", null ],

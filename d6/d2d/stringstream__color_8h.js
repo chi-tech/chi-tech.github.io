@@ -1,19 +1,19 @@
 var stringstream__color_8h =
 [
-    [ "StringSteamColorCode", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99c", [
-      [ "RESET", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca417079bc7c7b422e45ccc3faba7f4b0b", null ],
-      [ "FG_BOLD", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca487ce0fad96590a6253b9348131a78f9", null ],
-      [ "FG_UNDERLINE", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca0d6229de534e61a508dfabb437e3caef", null ],
-      [ "FG_BOLD_OFF", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca28e68cb1d097de88fb92db05e7d1b088", null ],
-      [ "FG_UNDERLINE_OFF", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99cab0293a6c2dd85365a7ca0416b56bffc3", null ],
-      [ "FG_RED", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99cae0e11d4bae51182c297e7c6387b1a6c5", null ],
-      [ "FG_GREEN", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca7048641196f815d528c4029b384eb964", null ],
-      [ "FG_YELLOW", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca4f201bf239e688609885cfb8053927ca", null ],
-      [ "FG_BLUE", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca84a180a419423ea908756f0035a705df", null ],
-      [ "FG_MAGENTA", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca1be7b6166ddfaffa3c646169e53966ba", null ],
-      [ "FG_CYAN", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca44305532a96d50f9ac6ee68b8a1089e0", null ],
-      [ "FG_WHITE", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca2f069e02c5a0000531c3237be153f93b", null ],
-      [ "FG_DEFAULT", "d6/d2d/stringstream__color_8h.html#ab94a88e6e8384a15a4ba2a4b52eec99ca19d746fedf8cd2e9c20201ca53121c15", null ]
+    [ "StringSteamColorCode", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297cec", [
+      [ "RESET", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297ceca4c6454493504689ec1e4a8377872518d", null ],
+      [ "FG_BOLD", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297cecac686ceb7e8627c3b585d0c6eee589167", null ],
+      [ "FG_UNDERLINE", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297ceca9e3a337e5cc0e180278cbb0f3f0da519", null ],
+      [ "FG_BOLD_OFF", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297ceca12371095473b3f902572a4643356e33b", null ],
+      [ "FG_UNDERLINE_OFF", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297ceca1d7d05184c2d17657daa74085e3f40f6", null ],
+      [ "FG_RED", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297ceca0a9d1f82e01127f34d6a841e3cc5bebe", null ],
+      [ "FG_GREEN", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297ceca8a8741ddf8157f62789da6e64c840f0c", null ],
+      [ "FG_YELLOW", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297ceca7b2ff3960125840545bdbc698c847a94", null ],
+      [ "FG_BLUE", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297cecace74f0e1f194792d853627e5b4afabdc", null ],
+      [ "FG_MAGENTA", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297ceca167582faa04e6b387733080157e3dd21", null ],
+      [ "FG_CYAN", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297ceca96d5967ce6fc85a61f83de3ff542ebc6", null ],
+      [ "FG_WHITE", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297cecad0b19151cdb608857097324537c0b06b", null ],
+      [ "FG_DEFAULT", "d6/d2d/stringstream__color_8h.html#ad18e96a1e9be7b1612c55fa705297ceca6846f5d70710154fa911e3ce6dfda86f", null ]
     ] ],
-    [ "StringStreamColor", "d6/d2d/stringstream__color_8h.html#a099f352830889e444ebead536b7adc17", null ]
+    [ "StringStreamColor", "d6/d2d/stringstream__color_8h.html#ac72a94e7042b413617898038e39c62c6", null ]
 ];

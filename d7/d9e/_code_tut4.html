@@ -106,8 +106,7 @@ $(document).ready(function(){initNavTree('d7/d9e/_code_tut4.html','../../'); ini
 <p >To implement a manufactured solution in our PWLC solver from <a class="el" href="../../d1/d74/_code_tut3.html">Coding Tutorial 3 - Poisson's problem with PWLC</a> we are required to call a lua-function with spatial coordinates x,y,z. In order to use the lua-console, specifically the lua state, we have to include the headers </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">ChiConsole/chi_console.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;ChiLua/chi_lua.h&quot;</span></div>
 <div class="ttc" id="achi__console_8h_html"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html">chi_console.h</a></div></div>
-</div><!-- fragment --><p >When then have to grab the console state from the runtime environment. To do this we add the following code, in the beginning of the program, just below <code><a class="el" href="../../d4/d35/classchi.html#ad2e614f7b9733c863908ce0eeb4480f1">chi::RunBatch</a></code> </p><div class="fragment"><div class="line"><span class="keyword">auto</span> L = <a class="code hl_variable" href="../../d4/d35/classchi.html#afaf99163b7a54f59d6372e94cfc32dea">chi::console</a>.consoleState;</div>
-<div class="ttc" id="aclasschi_html_afaf99163b7a54f59d6372e94cfc32dea"><div class="ttname"><a href="../../d4/d35/classchi.html#afaf99163b7a54f59d6372e94cfc32dea">chi::console</a></div><div class="ttdeci">static chi_objects::ChiConsole &amp; console</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00074">chi_runtime.h:74</a></div></div>
+</div><!-- fragment --><p >When then have to grab the console state from the runtime environment. To do this we add the following code, in the beginning of the program, just below <code>chi::RunBatch</code> </p><div class="fragment"><div class="line"><span class="keyword">auto</span> L = chi::console.consoleState;</div>
 </div><!-- fragment --><p >Next we have to tell the c++ code exactly how to call a lua-function. To this end we define a wrapper using a c++ lambda as shown below. You can define this function where ever you like as long as it can capture the lua state, <code>L</code>. For this tutorial we defined it just before the matrix assembly. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> CallLuaXYZFunction = [&amp;L](<span class="keyword">const</span> std::string&amp; lua_func_name,</div>
 <div class="line">                               <span class="keyword">const</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>&amp; xyz)</div>
 <div class="line">{</div>
@@ -204,14 +203,13 @@ $(document).ready(function(){initNavTree('d7/d9e/_code_tut4.html','../../'); ini
 <div class="line">              &amp;global_error,    <span class="comment">//recvbuf</span></div>
 <div class="line">              1, MPI_DOUBLE,    <span class="comment">//count+datatype</span></div>
 <div class="line">              MPI_SUM,          <span class="comment">//operation</span></div>
-<div class="line">              MPI_COMM_WORLD);  <span class="comment">//communicator</span></div>
+<div class="line">              <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.comm);  <span class="comment">//communicator</span></div>
 <div class="line"> </div>
 <div class="line">global_error = std::sqrt(global_error);</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; std::scientific &lt;&lt; global_error</div>
+<div class="line">chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; std::scientific &lt;&lt; global_error</div>
 <div class="line">               &lt;&lt; <span class="stringliteral">&quot; Num-cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
-<div class="ttc" id="aclasschi__objects_1_1_chi_log_html_abed9782beaeca9b7e5f08c1faa8f28a1"><div class="ttname"><a href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">chi_objects::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00036">chi_log.cc:36</a></div></div>
-<div class="ttc" id="aclasschi_html_a2dedda8a44a89f39b4038becaa9f304a"><div class="ttname"><a href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a></div><div class="ttdeci">static chi_objects::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
+<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00073">chi_runtime.h:73</a></div></div>
 </div><!-- fragment --><p> Notice that we grab the nodal values of \( \phi_{FEM} \) before we loop over quadrature points. We then use these nodal values within the quadrature-point loop to construct \( \phi_{FEM}(\tilde{\mathbf{x}}_n) \) as </p><p class="formulaDsp">
 \[ \phi_{FEM}(\tilde{\mathbf{x}}_n) = \sum_j \phi_j b_j(\tilde{\mathbf{x}}_n) \]
 </p>
@@ -222,7 +220,7 @@ $(document).ready(function(){initNavTree('d7/d9e/_code_tut4.html','../../'); ini
 <div class="line">              &amp;global_error,    <span class="comment">//recvbuf</span></div>
 <div class="line">              1, MPI_DOUBLE,    <span class="comment">//count+datatype</span></div>
 <div class="line">              MPI_SUM,          <span class="comment">//operation</span></div>
-<div class="line">              MPI_COMM_WORLD);  <span class="comment">//communicator</span></div>
+<div class="line">              <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.comm);  <span class="comment">//communicator</span></div>
 <div class="line"> </div>
 <div class="line">global_error = std::sqrt(global_error);</div>
 </div><!-- fragment --><p >With this code in-place we can run the program several times with a different amount of cells, which provides us with the data below:</p>
@@ -246,16 +244,16 @@ The complete program</h1>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line">{</div>
-<div class="line">  <a class="code hl_function" href="../../d4/d35/classchi.html#a4e6b239c3512a82a18bb114f84bf22e8">chi::Initialize</a>(argc,argv);</div>
-<div class="line">  <a class="code hl_function" href="../../d4/d35/classchi.html#ad2e614f7b9733c863908ce0eeb4480f1">chi::RunBatch</a>(argc, argv);</div>
+<div class="line">  chi::Initialize(argc,argv);</div>
+<div class="line">  chi::RunBatch(argc, argv);</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Coding Tutorial 4&quot;</span>;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Coding Tutorial 4&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Get grid</span></div>
 <div class="line">  <span class="keyword">auto</span> grid_ptr = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a>().<a class="code hl_function" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">GetGrid</a>();</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = *grid_ptr;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Global num cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Global num cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Make SDM</span></div>
 <div class="line">  <span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
@@ -267,8 +265,8 @@ The complete program</h1>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_local_dofs = sdm.GetNumLocalDOFs(OneDofPerNode);</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_globl_dofs = sdm.GetNumGlobalDOFs(OneDofPerNode);</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num local DOFs: &quot;</span> &lt;&lt; num_local_dofs;</div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Num globl DOFs: &quot;</span> &lt;&lt; num_globl_dofs;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Num local DOFs: &quot;</span> &lt;&lt; num_local_dofs;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Num globl DOFs: &quot;</span> &lt;&lt; num_globl_dofs;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Initializes Mats and Vecs</span></div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> n = <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(num_local_dofs);</div>
@@ -325,7 +323,7 @@ The complete program</h1>
 <div class="line">  };</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Assemble the system</span></div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Assembling system: &quot;</span>;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Assembling system: &quot;</span>;</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : grid.local_cells)</div>
 <div class="line">  {</div>
 <div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_mapping = sdm.GetCellMapping(cell);</div>
@@ -401,17 +399,17 @@ The complete program</h1>
 <div class="line">    }<span class="comment">//for i</span></div>
 <div class="line">  }<span class="comment">//for cell</span></div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Global assembly&quot;</span>;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Global assembly&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">  MatAssemblyBegin(A, MAT_FINAL_ASSEMBLY);</div>
 <div class="line">  MatAssemblyEnd(A, MAT_FINAL_ASSEMBLY);</div>
 <div class="line">  VecAssemblyBegin(b);</div>
 <div class="line">  VecAssemblyEnd(b);</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Done global assembly&quot;</span>;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Done global assembly&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Create Krylov Solver</span></div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Solving: &quot;</span>;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Solving: &quot;</span>;</div>
 <div class="line">  <span class="keyword">auto</span> petsc_solver =</div>
 <div class="line">    <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ab59d60d5f5daa3929e3669acdcce1b39">chi_math::PETScUtils::CreateCommonKrylovSolverSetup</a>(</div>
 <div class="line">      A,               <span class="comment">//Matrix</span></div>
@@ -424,7 +422,7 @@ The complete program</h1>
 <div class="line">  <span class="comment">//============================================= Solve</span></div>
 <div class="line">  KSPSolve(petsc_solver.ksp,b,x);</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Done solving&quot;</span>;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Done solving&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Extract PETSc vector</span></div>
 <div class="line">  std::vector&lt;double&gt; field;</div>
@@ -437,7 +435,7 @@ The complete program</h1>
 <div class="line">  VecDestroy(&amp;b);</div>
 <div class="line">  MatDestroy(&amp;A);</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Done cleanup&quot;</span>;</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Done cleanup&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Create Field Function</span></div>
 <div class="line">  <span class="keyword">auto</span> ff = std::make_shared&lt;chi_physics::FieldFunction&gt;(</div>
@@ -487,14 +485,14 @@ The complete program</h1>
 <div class="line">                &amp;global_error,    <span class="comment">//recvbuf</span></div>
 <div class="line">                1, MPI_DOUBLE,    <span class="comment">//count+datatype</span></div>
 <div class="line">                MPI_SUM,          <span class="comment">//operation</span></div>
-<div class="line">                MPI_COMM_WORLD);  <span class="comment">//communicator</span></div>
+<div class="line">                <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.comm);  <span class="comment">//communicator</span></div>
 <div class="line"> </div>
 <div class="line">  global_error = std::sqrt(global_error);</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_variable" href="../../d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a">chi::log</a>.<a class="code hl_function" href="../../d8/d42/classchi__objects_1_1_chi_log.html#abed9782beaeca9b7e5f08c1faa8f28a1">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; std::scientific &lt;&lt; global_error</div>
+<div class="line">  chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; std::scientific &lt;&lt; global_error</div>
 <div class="line">                 &lt;&lt; <span class="stringliteral">&quot; Num-cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_function" href="../../d4/d35/classchi.html#a88720f743f80818b08e68716233d9051">chi::Finalize</a>();</div>
+<div class="line">  chi::Finalize();</div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
@@ -506,9 +504,6 @@ The complete program</h1>
 <div class="ttc" id="aclasschi__math_1_1_spatial_discretization___p_w_l_c_html_ac5c32d8c870a1b456c9b7486dc581276"><div class="ttname"><a href="../../d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#ac5c32d8c870a1b456c9b7486dc581276">chi_math::SpatialDiscretization_PWLC::New</a></div><div class="ttdeci">static std::shared_ptr&lt; SpatialDiscretization_PWLC &gt; New(const chi_mesh::MeshContinuum &amp;in_grid, finite_element::SetupFlags setup_flags=finite_element::NO_FLAGS_SET, QuadratureOrder qorder=QuadratureOrder::SECOND, CoordinateSystemType in_cs_type=CoordinateSystemType::CARTESIAN)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da8/pwlc__00__constrdestr_8cc_source.html#l00085">pwlc_00_constrdestr.cc:85</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_unknown_html"><div class="ttname"><a href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00031">unknown_manager.h:32</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_handler_html_aa87887c1a76634cb07134b5faa1e3587"><div class="ttname"><a href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">chi_mesh::MeshHandler::GetGrid</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr &amp; GetGrid() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/chi__meshhandler_8cc_source.html#l00012">chi_meshhandler.cc:12</a></div></div>
-<div class="ttc" id="aclasschi_html_a4e6b239c3512a82a18bb114f84bf22e8"><div class="ttname"><a href="../../d4/d35/classchi.html#a4e6b239c3512a82a18bb114f84bf22e8">chi::Initialize</a></div><div class="ttdeci">static int Initialize(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00168">chi_runtime.cc:168</a></div></div>
-<div class="ttc" id="aclasschi_html_a88720f743f80818b08e68716233d9051"><div class="ttname"><a href="../../d4/d35/classchi.html#a88720f743f80818b08e68716233d9051">chi::Finalize</a></div><div class="ttdeci">static void Finalize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00211">chi_runtime.cc:211</a></div></div>
-<div class="ttc" id="aclasschi_html_ad2e614f7b9733c863908ce0eeb4480f1"><div class="ttname"><a href="../../d4/d35/classchi.html#ad2e614f7b9733c863908ce0eeb4480f1">chi::RunBatch</a></div><div class="ttdeci">static int RunBatch(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00276">chi_runtime.cc:276</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a1baca8287da5a48e6d56ba3da4c39bab"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a1baca8287da5a48e6d56ba3da4c39bab">chi_math::PETScUtils::InitMatrixSparsity</a></div><div class="ttdeci">void InitMatrixSparsity(Mat &amp;A, const std::vector&lt; int64_t &gt; &amp;nodal_nnz_in_diag, const std::vector&lt; int64_t &gt; &amp;nodal_nnz_off_diag)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d70/petsc__utils__02__create_mat_8cc_source.html#l00084">petsc_utils_02_createMat.cc:84</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ab59d60d5f5daa3929e3669acdcce1b39"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ab59d60d5f5daa3929e3669acdcce1b39">chi_math::PETScUtils::CreateCommonKrylovSolverSetup</a></div><div class="ttdeci">PETScSolverSetup CreateCommonKrylovSolverSetup(Mat ref_matrix, const std::string &amp;in_solver_name=&quot;KSPSolver&quot;, const std::string &amp;in_solver_type=KSPGMRES, const std::string &amp;in_preconditioner_type=PCNONE, double in_relative_residual_tolerance=1.0e-6, int64_t in_maximum_iterations=100)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00035">petsc_utils_03_createKSP.cc:35</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ad3c389879eeafb68d9b7540887b883cd"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">chi_math::PETScUtils::CreateSquareMatrix</a></div><div class="ttdeci">Mat CreateSquareMatrix(int64_t local_size, int64_t global_size)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d70/petsc__utils__02__create_mat_8cc_source.html#l00025">petsc_utils_02_createMat.cc:25</a></div></div>

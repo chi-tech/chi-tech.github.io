@@ -8,5 +8,6 @@ var dir_46a2ad64bf179ecc65018dbb75cbabbd =
     [ "devman_01_04_globalvars.h", "d6/d3a/devman__01__04__globalvars_8h.html", null ],
     [ "devman_01_05_addinglua.h", "d2/dac/devman__01__05__addinglua_8h.html", null ],
     [ "devman_01_06_StaticRegistration.h", "d2/d3f/devman__01__06___static_registration_8h.html", null ],
+    [ "devman_01_07_TestSystem.h", "d3/d14/devman__01__07___test_system_8h.html", null ],
     [ "ProgrammersManual.h", "d1/dd6/_programmers_manual_8h.html", null ]
 ];

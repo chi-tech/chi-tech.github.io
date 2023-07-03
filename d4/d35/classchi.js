@@ -20,7 +20,6 @@ var classchi =
     [ "field_func_interpolation_stack", "d4/d35/classchi.html#ac49e26b99e533dfe75f9818201de79d0", null ],
     [ "field_function_stack", "d4/d35/classchi.html#afba79ac38d3410b337bdb6f52c1fa28c", null ],
     [ "log", "d4/d35/classchi.html#a2dedda8a44a89f39b4038becaa9f304a", null ],
-    [ "logicvolume_stack", "d4/d35/classchi.html#a22aa55302a909b4e4d9d64fbfedd9b5e", null ],
     [ "material_stack", "d4/d35/classchi.html#aa99611570d864cef55872bc180e0862d", null ],
     [ "meshhandler_stack", "d4/d35/classchi.html#a5bc87832f51e2196e2a230a5deb75838", null ],
     [ "mpi", "d4/d35/classchi.html#a2457fed74471fae43ed8d6c5e91378fd", null ],

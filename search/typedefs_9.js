@@ -11,6 +11,6 @@ var searchData=
   ['mgxsptr_8',['MGXSPtr',['../d8/d43/namespacelbs_1_1acceleration.html#a1f216c0cb94ba45b6c88e9074346fe6a',1,'lbs::acceleration']]],
   ['mipsolverptr_9',['MIPSolverPtr',['../df/dd4/classlbs_1_1_diffusion_d_f_e_m_solver.html#a730804310a8c8a98035d6101f38f137c',1,'lbs::DiffusionDFEMSolver']]],
   ['momentcallbackf_10',['MomentCallbackF',['../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html#ac1ada200a40517e38aaaa61377ad35e4',1,'chi_mesh::sweep_management::SweepChunk']]],
-  ['mpilocalcommsetptr_11',['MPILocalCommSetPtr',['../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a09eccfba04f99bf811f941bf46b175aa',1,'chi_mesh::MeshContinuum::MPILocalCommSetPtr()'],['../d9/d53/lbs__solver_8h.html#ab64e27a75536a6791b90b6e0c5eaaeb0',1,'MPILocalCommSetPtr():&#160;lbs_solver.h']]],
+  ['mpilocalcommsetptr_11',['MPILocalCommSetPtr',['../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#ae4a05076b0406e67dfcdb601f4e00333',1,'chi_mesh::MeshContinuum::MPILocalCommSetPtr()'],['../d9/d53/lbs__solver_8h.html#ac4028b159d177ae47072f818202b162d',1,'MPILocalCommSetPtr():&#160;lbs_solver.h']]],
   ['multigroupxsptr_12',['MultiGroupXSPtr',['../d6/d5f/namespacechi__physics.html#a48d2013a0766df0786d80512694b1661',1,'chi_physics']]]
 ];

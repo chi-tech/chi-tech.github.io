@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['geometrytype_0',['GeometryType',['../d9/d42/namespacelbs.html#af80cef3c8aeb4f3e39ef1e18cb27fd83',1,'lbs']]]
+  ['faceorientation_0',['FaceOrientation',['../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a8fb6d7f7772897f92cb93a637cbd7b92',1,'chi_mesh::sweep_management']]]
 ];

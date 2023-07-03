@@ -97,9 +97,9 @@ var menudata={children:[
 {text:"b",url:"namespacemembers_enum.html#index_b"},
 {text:"c",url:"namespacemembers_enum.html#index_c"},
 {text:"e",url:"namespacemembers_enum.html#index_e"},
+{text:"f",url:"namespacemembers_enum.html#index_f"},
 {text:"g",url:"namespacemembers_enum.html#index_g"},
 {text:"i",url:"namespacemembers_enum.html#index_i"},
-{text:"l",url:"namespacemembers_enum.html#index_l"},
 {text:"m",url:"namespacemembers_enum.html#index_m"},
 {text:"o",url:"namespacemembers_enum.html#index_o"},
 {text:"p",url:"namespacemembers_enum.html#index_p"},
@@ -253,7 +253,10 @@ var menudata={children:[
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"},
 {text:"u",url:"globals.html#index_u"},
-{text:"v",url:"globals.html#index_v"}]},
+{text:"v",url:"globals.html#index_v"},
+{text:"x",url:"globals.html#index_x"},
+{text:"y",url:"globals.html#index_y"},
+{text:"z",url:"globals.html#index_z"}]},
 {text:"Functions",url:"globals_func.html"},
 {text:"Typedefs",url:"globals_type.html"},
 {text:"Macros",url:"globals_defs.html",children:[
@@ -270,4 +273,7 @@ var menudata={children:[
 {text:"r",url:"globals_defs.html#index_r"},
 {text:"s",url:"globals_defs.html#index_s"},
 {text:"t",url:"globals_defs.html#index_t"},
-{text:"u",url:"globals_defs.html#index_u"}]}]}]}]}
+{text:"u",url:"globals_defs.html#index_u"},
+{text:"x",url:"globals_defs.html#index_x"},
+{text:"y",url:"globals_defs.html#index_y"},
+{text:"z",url:"globals_defs.html#index_z"}]}]}]}]}

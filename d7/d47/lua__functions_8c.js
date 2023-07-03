@@ -83,7 +83,7 @@ var lua__functions_8c =
     [ "chiLocallyRefineSLDFESQAngularQuadrature", "d7/d47/lua__functions_8c.html#ga2c034031bf7968f07b31b34e4ae749e1", null ],
     [ "chiLog", "d7/d47/lua__functions_8c.html#ga8139e633fb74f8d739bcfd6badd80376", null ],
     [ "chiLogicalVolumeCreate", "d7/d47/lua__functions_8c.html#gac362f65e2642b15efd6abf99d2224d54", null ],
-    [ "chiLogicalVolumePointSense", "d7/d47/lua__functions_8c.html#a1e128899eecf4cbc9de08c42178c2801", null ],
+    [ "chiLogicalVolumePointSense", "d7/d47/lua__functions_8c.html#ga1e128899eecf4cbc9de08c42178c2801", null ],
     [ "chiLogSetVerbosity", "d7/d47/lua__functions_8c.html#gac4c23d141fddd0557829e6b5471262ce", null ],
     [ "chiLuaTest", "d7/d47/lua__functions_8c.html#a1b25d34f221bf2b4c6bdc879c703345d", null ],
     [ "chiMakeObject", "d7/d47/lua__functions_8c.html#a7fd9fab441fd017ee9e3a67e50369d90", null ],
