@@ -5,19 +5,23 @@ var annotated_dup =
       [ "Solver", "de/dba/classcfem__diffusion_1_1_solver.html", "de/dba/classcfem__diffusion_1_1_solver" ]
     ] ],
     [ "chi", "dc/d67/namespacechi.html", [
-      [ "ChiConsole", "db/d8c/classchi_1_1_chi_console.html", "db/d8c/classchi_1_1_chi_console" ],
       [ "ChiLog", "df/dfa/classchi_1_1_chi_log.html", "df/dfa/classchi_1_1_chi_log" ],
       [ "ChiMPICommunicatorSet", "df/de1/classchi_1_1_chi_m_p_i_communicator_set.html", "df/de1/classchi_1_1_chi_m_p_i_communicator_set" ],
-      [ "ChiTimer", "d7/dc1/classchi_1_1_chi_timer.html", "d7/dc1/classchi_1_1_chi_timer" ],
+      [ "Console", "d9/d52/classchi_1_1_console.html", "d9/d52/classchi_1_1_console" ],
       [ "CSTMemory", "d2/d1b/structchi_1_1_c_s_t_memory.html", "d2/d1b/structchi_1_1_c_s_t_memory" ],
+      [ "DirectedGraph", "d3/dcf/classchi_1_1_directed_graph.html", "d3/dcf/classchi_1_1_directed_graph" ],
       [ "DummyStream", "dd/d10/structchi_1_1_dummy_stream.html", "dd/d10/structchi_1_1_dummy_stream" ],
+      [ "GraphVertex", "d6/d39/structchi_1_1_graph_vertex.html", "d6/d39/structchi_1_1_graph_vertex" ],
       [ "InputParameters", "d8/d4d/classchi_1_1_input_parameters.html", "d8/d4d/classchi_1_1_input_parameters" ],
       [ "LogStream", "d8/d75/classchi_1_1_log_stream.html", "d8/d75/classchi_1_1_log_stream" ],
       [ "Material", "df/dbe/classchi_1_1_material.html", "df/dbe/classchi_1_1_material" ],
       [ "MaterialProperty", "d0/d06/classchi_1_1_material_property.html", "d0/d06/classchi_1_1_material_property" ],
       [ "MaterialPropertyScalarFuncXYZTV", "da/dd5/classchi_1_1_material_property_scalar_func_x_y_z_t_v.html", "da/dd5/classchi_1_1_material_property_scalar_func_x_y_z_t_v" ],
       [ "MPI_Info", "d1/d0b/classchi_1_1_m_p_i___info.html", "d1/d0b/classchi_1_1_m_p_i___info" ],
-      [ "ParameterBlock", "d5/d1c/classchi_1_1_parameter_block.html", "d5/d1c/classchi_1_1_parameter_block" ]
+      [ "ParameterBlock", "d5/d1c/classchi_1_1_parameter_block.html", "d5/d1c/classchi_1_1_parameter_block" ],
+      [ "Plugin", "de/de1/classchi_1_1_plugin.html", "de/de1/classchi_1_1_plugin" ],
+      [ "RegistryStatuses", "d6/d73/structchi_1_1_registry_statuses.html", "d6/d73/structchi_1_1_registry_statuses" ],
+      [ "Timer", "dc/dea/classchi_1_1_timer.html", "dc/dea/classchi_1_1_timer" ]
     ] ],
     [ "chi_data_types", "d5/d1b/namespacechi__data__types.html", [
       [ "AllowableRange", "d2/d18/classchi__data__types_1_1_allowable_range.html", "d2/d18/classchi__data__types_1_1_allowable_range" ],
@@ -35,10 +39,6 @@ var annotated_dup =
       [ "BoundaryReflecting", "d1/d0c/classchi__diffusion_1_1_boundary_reflecting.html", "d1/d0c/classchi__diffusion_1_1_boundary_reflecting" ],
       [ "BoundaryRobin", "d6/d58/classchi__diffusion_1_1_boundary_robin.html", "d6/d58/classchi__diffusion_1_1_boundary_robin" ],
       [ "Solver", "d6/d32/classchi__diffusion_1_1_solver.html", "d6/d32/classchi__diffusion_1_1_solver" ]
-    ] ],
-    [ "chi_graph", "d3/d00/namespacechi__graph.html", [
-      [ "DirectedGraph", "dc/d15/classchi__graph_1_1_directed_graph.html", "dc/d15/classchi__graph_1_1_directed_graph" ],
-      [ "GraphVertex", "da/d1d/structchi__graph_1_1_graph_vertex.html", "da/d1d/structchi__graph_1_1_graph_vertex" ]
     ] ],
     [ "chi_math", "dc/d58/namespacechi__math.html", [
       [ "finite_element", "d3/d84/namespacechi__math_1_1finite__element.html", [
@@ -206,11 +206,6 @@ var annotated_dup =
       [ "SingleStateMGXS", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s" ],
       [ "Solver", "d9/d3a/classchi__physics_1_1_solver.html", "d9/d3a/classchi__physics_1_1_solver" ]
     ] ],
-    [ "chi_unit_tests", "dd/dbc/namespacechi__unit__tests.html", [
-      [ "ChildTestObject", "d2/d0d/classchi__unit__tests_1_1_child_test_object.html", "d2/d0d/classchi__unit__tests_1_1_child_test_object" ],
-      [ "TestObject", "db/dfd/classchi__unit__tests_1_1_test_object.html", "db/dfd/classchi__unit__tests_1_1_test_object" ],
-      [ "TestSubObject", "dd/d1f/classchi__unit__tests_1_1_test_sub_object.html", "dd/d1f/classchi__unit__tests_1_1_test_sub_object" ]
-    ] ],
     [ "dfem_diffusion", "dc/dbe/namespacedfem__diffusion.html", [
       [ "Boundary", "dd/d4b/classdfem__diffusion_1_1_boundary.html", "dd/d4b/classdfem__diffusion_1_1_boundary" ],
       [ "Solver", "df/ddc/classdfem__diffusion_1_1_solver.html", "df/ddc/classdfem__diffusion_1_1_solver" ]
@@ -281,7 +276,7 @@ var annotated_dup =
     ] ],
     [ "Chi", "d7/dd7/class_chi.html", "d7/dd7/class_chi" ],
     [ "ChiObject", "d6/d15/class_chi_object.html", "d6/d15/class_chi_object" ],
-    [ "ChiObjectMaker", "d9/d3b/class_chi_object_maker.html", "d9/d3b/class_chi_object_maker" ],
+    [ "ChiObjectFactory", "d4/dbb/class_chi_object_factory.html", "d4/dbb/class_chi_object_factory" ],
     [ "vtkNew", "db/ddd/classvtk_new.html", null ],
     [ "vtkSmartPointer", "d5/d8c/classvtk_smart_pointer.html", null ]
 ];

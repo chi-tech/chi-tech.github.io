@@ -1,9 +1,9 @@
 var searchData=
 [
   ['t_0',['t',['../d8/d2c/structchi__mesh_1_1_tensor_rank2_dim3.html#aa8516fe7f6583936413f6c8b29d51546',1,'chi_mesh::TensorRank2Dim3']]],
-  ['t_5fassembly_5f_1',['t_assembly_',['../d6/d32/classchi__diffusion_1_1_solver.html#a2c1a1851b88f675001d7af523006bc64',1,'chi_diffusion::Solver']]],
+  ['t_5fassembly_5f_1',['t_assembly_',['../d6/d32/classchi__diffusion_1_1_solver.html#a318b296f7353e89c954e472298816c25',1,'chi_diffusion::Solver']]],
   ['t_5ffinal_2',['t_final',['../d4/d3b/structlbs_1_1_disc_ord_transient_solver_1_1_options.html#ac56332c2b75c1beb25041773cd7039fe',1,'lbs::DiscOrdTransientSolver::Options']]],
-  ['t_5fsolve_5f_3',['t_solve_',['../d6/d32/classchi__diffusion_1_1_solver.html#ac61f1f7f8edf3c4504ce87ff139f19dd',1,'chi_diffusion::Solver']]],
+  ['t_5fsolve_5f_3',['t_solve_',['../d6/d32/classchi__diffusion_1_1_solver.html#a623a8a7833338d30d0083397878f72d6',1,'chi_diffusion::Solver']]],
   ['takers_5flocal_5fids_5f_4',['takers_local_ids_',['../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a8416b52627a60156df30ced0013ff5dc',1,'chi_math::VectorGhostCommunicator']]],
   ['tangent_5f_5',['tangent_',['../d4/d6b/classchi__mesh_1_1_field_function_interpolation_slice.html#a282e540b86e76c69e1b213f2ff9c294f',1,'chi_mesh::FieldFunctionInterpolationSlice']]],
   ['template_5ftype_5f_6',['template_type_',['../de/d89/classchi__mesh_1_1_volume_mesher_extruder.html#a097a169c428f5461cee12da0d6eb2f24',1,'chi_mesh::VolumeMesherExtruder']]],

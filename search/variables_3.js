@@ -71,12 +71,13 @@ var searchData=
   ['distance_5fto_5fsurface_68',['distance_to_surface',['../da/d07/structchi__mesh_1_1_ray_tracer_output_information.html#a38ed2c50c4776f7b6e9012fd784f3f9b',1,'chi_mesh::RayTracerOutputInformation']]],
   ['distribution_5f_69',['distribution_',['../d9/d55/classchi__math_1_1_random_number_generator.html#a795dec2152dcadab5d01b717f764310d',1,'chi_math::RandomNumberGenerator']]],
   ['do_5ftwo_5fgrid_5f_70',['do_two_grid_',['../d4/d4c/classmg__diffusion_1_1_solver.html#a33d65e01d70336f88a17ee90bd53cb38',1,'mg_diffusion::Solver']]],
-  ['dof_5fstorage_5ftype_5f_71',['dof_storage_type_',['../d9/da7/classchi__math_1_1_unknown_manager.html#ace7effdb02ddf2cb5300eac90e472469',1,'chi_math::UnknownManager']]],
-  ['done_5fsending_72',['done_sending',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#a64f9729cf9bee28ae8dce5f3f2b79eb2',1,'chi_mesh::sweep_management::SweepBuffer']]],
-  ['ds_5fedge_73',['ds_edge',['../da/d1d/structchi__graph_1_1_graph_vertex.html#a1149da1b9a92474e8e23536186b6b62d',1,'chi_graph::GraphVertex']]],
-  ['ds_5fweights_74',['ds_weights',['../da/d1d/structchi__graph_1_1_graph_vertex.html#aaca46f0cab10efd80fea636e6af10fd2',1,'chi_graph::GraphVertex']]],
-  ['dt_5f_75',['dt_',['../dc/d71/classlbs_1_1_transient_source_function.html#a516baff937d066476fd72c101326731c',1,'lbs::TransientSourceFunction::dt_()'],['../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a7d2167a11ea1e1f6b49fef4742582f80',1,'lbs::DiscOrdTransientSolver::dt_()'],['../d8/da5/classlbs_1_1_sweep_chunk_p_w_l_transient_theta.html#a64921920460eec635cbe7edb1679f61e',1,'lbs::SweepChunkPWLTransientTheta::dt_()'],['../de/d01/classprk_1_1_transient_solver.html#aadea66108a0a97b58758b468df3684b0',1,'prk::TransientSolver::dt_()']]],
-  ['dummy_5f_76',['dummy_',['../d8/d75/classchi_1_1_log_stream.html#ace4e9c4f0dd840cb8cc671553e1775d8',1,'chi::LogStream']]],
-  ['dummy_5fstream_5f_77',['dummy_stream_',['../df/dfa/classchi_1_1_chi_log.html#a2b500820370a87df14c66144b34882ba',1,'chi::ChiLog']]],
-  ['dump_5fregistry_5f_78',['dump_registry_',['../d8/dd8/class_chi_1_1run__time.html#a849f13532fa57a394909bfe47c4ae6b3',1,'Chi::run_time']]]
+  ['doc_5fgroup_5f_71',['doc_group_',['../d8/d4d/classchi_1_1_input_parameters.html#a51d5ccfd07dca2ba0cf02e6f6a3836b3',1,'chi::InputParameters']]],
+  ['dof_5fstorage_5ftype_5f_72',['dof_storage_type_',['../d9/da7/classchi__math_1_1_unknown_manager.html#ace7effdb02ddf2cb5300eac90e472469',1,'chi_math::UnknownManager']]],
+  ['done_5fsending_73',['done_sending',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#a64f9729cf9bee28ae8dce5f3f2b79eb2',1,'chi_mesh::sweep_management::SweepBuffer']]],
+  ['ds_5fedge_74',['ds_edge',['../d6/d39/structchi_1_1_graph_vertex.html#a058cb3d364b5f210649d561e79733bd5',1,'chi::GraphVertex']]],
+  ['ds_5fweights_75',['ds_weights',['../d6/d39/structchi_1_1_graph_vertex.html#a969db32776151e68bc547920294f6736',1,'chi::GraphVertex']]],
+  ['dt_5f_76',['dt_',['../dc/d71/classlbs_1_1_transient_source_function.html#a516baff937d066476fd72c101326731c',1,'lbs::TransientSourceFunction::dt_()'],['../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a7d2167a11ea1e1f6b49fef4742582f80',1,'lbs::DiscOrdTransientSolver::dt_()'],['../d8/da5/classlbs_1_1_sweep_chunk_p_w_l_transient_theta.html#a64921920460eec635cbe7edb1679f61e',1,'lbs::SweepChunkPWLTransientTheta::dt_()'],['../de/d01/classprk_1_1_transient_solver.html#aadea66108a0a97b58758b468df3684b0',1,'prk::TransientSolver::dt_()']]],
+  ['dummy_5f_77',['dummy_',['../d8/d75/classchi_1_1_log_stream.html#ace4e9c4f0dd840cb8cc671553e1775d8',1,'chi::LogStream']]],
+  ['dummy_5fstream_5f_78',['dummy_stream_',['../df/dfa/classchi_1_1_chi_log.html#a2b500820370a87df14c66144b34882ba',1,'chi::ChiLog']]],
+  ['dump_5fregistry_5f_79',['dump_registry_',['../d8/dd8/class_chi_1_1run__time.html#a849f13532fa57a394909bfe47c4ae6b3',1,'Chi::run_time']]]
 ];

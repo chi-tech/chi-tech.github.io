@@ -338,10 +338,10 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 </div><!-- fragment --><h1><a class="anchor" id="CodeTut6Sec6"></a>
 6 Defining a cell-by-cell sweep chunk</h1>
 <div class="fragment"><div class="line"><span class="comment">//============================================= Define sweep chunk</span></div>
-<div class="line"><span class="keyword">typedef</span> <a class="code hl_class" href="../../d2/d5d/classchi__data__types_1_1_n_d_array.html">chi_data_types::NDArray&lt;double&gt;</a> <a class="code hl_typedef" href="../../dd/dbc/namespacechi__unit__tests.html#a0f4c88de2a2904b2e2891be50c163d8e">IJKArrayDbl</a>;</div>
-<div class="line"><a class="code hl_typedef" href="../../dd/dbc/namespacechi__unit__tests.html#a0f4c88de2a2904b2e2891be50c163d8e">IJKArrayDbl</a> psi_ds_x(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
-<div class="line"><a class="code hl_typedef" href="../../dd/dbc/namespacechi__unit__tests.html#a0f4c88de2a2904b2e2891be50c163d8e">IJKArrayDbl</a> psi_ds_y(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
-<div class="line"><a class="code hl_typedef" href="../../dd/dbc/namespacechi__unit__tests.html#a0f4c88de2a2904b2e2891be50c163d8e">IJKArrayDbl</a> psi_ds_z(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
+<div class="line"><span class="keyword">typedef</span> <a class="code hl_class" href="../../d2/d5d/classchi__data__types_1_1_n_d_array.html">chi_data_types::NDArray&lt;double&gt;</a> IJKArrayDbl;</div>
+<div class="line">IJKArrayDbl psi_ds_x(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
+<div class="line">IJKArrayDbl psi_ds_y(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
+<div class="line">IJKArrayDbl psi_ds_z(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">typedef</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> Vec3;</div>
 <div class="line"><span class="keyword">auto</span> <a class="code hl_class" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">SweepChunk</a> = [&amp;ijk_info, &amp;ijk_mapping, &amp;cell_ortho_sizes, <span class="comment">//ortho-quantities</span></div>
@@ -422,7 +422,6 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">};</div>
 <div class="ttc" id="aclasschi__data__types_1_1_n_d_array_html"><div class="ttname"><a href="../../d2/d5d/classchi__data__types_1_1_n_d_array.html">chi_data_types::NDArray</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d01/ndarray_8h_source.html#l00015">ndarray.h:16</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1sweep__management_1_1_sweep_chunk_html"><div class="ttname"><a href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">chi_mesh::sweep_management::SweepChunk</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dc1/sweepchunk__base_8h_source.html#l00010">sweepchunk_base.h:11</a></div></div>
-<div class="ttc" id="anamespacechi__unit__tests_html_a0f4c88de2a2904b2e2891be50c163d8e"><div class="ttname"><a href="../../dd/dbc/namespacechi__unit__tests.html#a0f4c88de2a2904b2e2891be50c163d8e">chi_unit_tests::IJKArrayDbl</a></div><div class="ttdeci">chi_data_types::NDArray&lt; double &gt; IJKArrayDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d88/test__02a__wdd__ijk__sweep_8cc_source.html#l00016">test_02a_wdd_ijk_sweep.cc:16</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00018">chi_meshvector.h:19</a></div></div>
 </div><!-- fragment --><p >The first portion of the chunk is obtaining all the relevant cell information </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>   cell_global_id = ijk_mapping.MapNDtoLin(ijk[1],ijk[0],ijk[2]);</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp;  cell           = grid.cells[cell_global_id];</div>
@@ -525,11 +524,11 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">{</div>
 <div class="line">  phi_new.assign(phi_new.size(), 0.0);</div>
 <div class="line">  <span class="comment">//Build rhs</span></div>
-<div class="line">  source_moments = <a class="code hl_function" href="../../d0/d68/namespacechi__unit__sim__tests.html#a15826c4853d6ae31074cfd0901702d69">SetSource</a>(grid,sdm,phi_uk_man,</div>
+<div class="line">  source_moments = SetSource(grid,sdm,phi_uk_man,</div>
 <div class="line">                             q_source,phi_old,xs,m_ell_em_map);</div>
 <div class="line">  Sweep();</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span> rel_change = <a class="code hl_function" href="../../d0/d68/namespacechi__unit__sim__tests.html#a4ec383a71de8faee1ccf06fc95860c3a">ComputeRelativePWChange</a>(grid,sdm,phi_uk_man,</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span> rel_change = ComputeRelativePWChange(grid,sdm,phi_uk_man,</div>
 <div class="line">                                                    phi_new, phi_old);</div>
 <div class="line"> </div>
 <div class="line">  std::stringstream outstr;</div>
@@ -547,9 +546,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="line">  <span class="keywordflow">if</span> (rel_change &lt; 1.0e-6 and iter &gt; 0)</div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}<span class="comment">//for iteration</span></div>
-<div class="ttc" id="anamespacechi__unit__sim__tests_html_a15826c4853d6ae31074cfd0901702d69"><div class="ttname"><a href="../../d0/d68/namespacechi__unit__sim__tests.html#a15826c4853d6ae31074cfd0901702d69">chi_unit_sim_tests::SetSource</a></div><div class="ttdeci">std::vector&lt; double &gt; SetSource(const chi_mesh::MeshContinuum &amp;grid, const chi_math::SpatialDiscretization &amp;sdm, const chi_math::UnknownManager &amp;phi_uk_man, const std::vector&lt; double &gt; &amp;q_source, const std::vector&lt; double &gt; &amp;phi_old, const chi_physics::SingleStateMGXS &amp;xs, const std::vector&lt; YlmIndices &gt; &amp;m_ell_em_map)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc0/simtest__06__wdd_8cc_source.html#l00394">simtest_06_wdd.cc:394</a></div></div>
-<div class="ttc" id="anamespacechi__unit__sim__tests_html_a4ec383a71de8faee1ccf06fc95860c3a"><div class="ttname"><a href="../../d0/d68/namespacechi__unit__sim__tests.html#a4ec383a71de8faee1ccf06fc95860c3a">chi_unit_sim_tests::ComputeRelativePWChange</a></div><div class="ttdeci">double ComputeRelativePWChange(const chi_mesh::MeshContinuum &amp;grid, const chi_math::SpatialDiscretization &amp;sdm, const chi_math::UnknownManager &amp;phi_uk_man, const std::vector&lt; double &gt; &amp;in_phi_new, const std::vector&lt; double &gt; &amp;in_phi_old)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dc0/simtest__06__wdd_8cc_source.html#l00339">simtest_06_wdd.cc:339</a></div></div>
-</div><!-- fragment --><p >Notice here we have defined two routines: </p><div class="fragment"><div class="line">std::vector&lt;double&gt; <a class="code hl_function" href="../../d0/d68/namespacechi__unit__sim__tests.html#a15826c4853d6ae31074cfd0901702d69">SetSource</a>(</div>
+</div><!-- fragment --><p >Notice here we have defined two routines: </p><div class="fragment"><div class="line">std::vector&lt;double&gt; SetSource(</div>
 <div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>&amp; grid,</div>
 <div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a>&amp; sdm,</div>
 <div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a>&amp; phi_uk_man,</div>
@@ -605,7 +602,7 @@ $(document).ready(function(){initNavTree('d4/dec/_code_tut6.html','../../'); ini
 <div class="ttc" id="aclasschi__math_1_1_spatial_discretization_html_ab1c21223f44661906bc3223676b6cd84"><div class="ttname"><a href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#ab1c21223f44661906bc3223676b6cd84">chi_math::SpatialDiscretization::MapDOFLocal</a></div><div class="ttdeci">virtual int64_t MapDOFLocal(const chi_mesh::Cell &amp;cell, unsigned int node, const UnknownManager &amp;unknown_manager, unsigned int unknown_id, unsigned int component) const =0</div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00034">chi_meshcontinuum.h:35</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a227b26a2cc0e920fff45d31ed171e9cc"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a227b26a2cc0e920fff45d31ed171e9cc">chi_mesh::MeshContinuum::local_cells</a></div><div class="ttdeci">LocalCellHandler local_cells</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00049">chi_meshcontinuum.h:49</a></div></div>
-</div><!-- fragment --><p> and </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> <a class="code hl_function" href="../../d0/d68/namespacechi__unit__sim__tests.html#a4ec383a71de8faee1ccf06fc95860c3a">ComputeRelativePWChange</a>(</div>
+</div><!-- fragment --><p> and </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> ComputeRelativePWChange(</div>
 <div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html">chi_mesh::MeshContinuum</a>&amp; grid,</div>
 <div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a>&amp; sdm,</div>
 <div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a>&amp; phi_uk_man,</div>
@@ -695,18 +692,18 @@ The complete program</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d98/chi__meshhandler_8h.html">ChiMesh/MeshHandler/chi_meshhandler.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">ChiMesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d98/chi__meshhandler_8h.html">mesh/MeshHandler/chi_meshhandler.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">mesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../de/d50/fv_8h.html">ChiMath/SpatialDiscretization/FiniteVolume/fv.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d5/d27/angular__quadrature__base_8h.html">ChiMath/Quadratures/angular_quadrature_base.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../da/daf/angular__product__quadrature_8h.html">ChiMath/Quadratures/angular_product_quadrature.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d1c/chi__math__range_8h.html">ChiMath/chi_math_range.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../de/d50/fv_8h.html">math/SpatialDiscretization/FiniteVolume/fv.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d5/d27/angular__quadrature__base_8h.html">math/Quadratures/angular_quadrature_base.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../da/daf/angular__product__quadrature_8h.html">math/Quadratures/angular_product_quadrature.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d1c/chi__math__range_8h.html">math/chi_math_range.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;ChiPhysics/FieldFunction/fieldfunction2.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;ChiPhysics/PhysicsMaterial/transportxsections/material_property_transportxsections.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;physics/FieldFunction/fieldfunction2.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;physics/PhysicsMaterial/transportxsections/material_property_transportxsections.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../de/d01/ndarray_8h.html">ChiDataTypes/ndarray.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../de/d01/ndarray_8h.html">data_types/ndarray.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line">{</div>
@@ -836,10 +833,10 @@ The complete program</h1>
 <div class="line">  }<span class="comment">//for cell</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Define sweep chunk</span></div>
-<div class="line">  <span class="keyword">typedef</span> <a class="code hl_class" href="../../d2/d5d/classchi__data__types_1_1_n_d_array.html">chi_data_types::NDArray&lt;double&gt;</a> <a class="code hl_typedef" href="../../dd/dbc/namespacechi__unit__tests.html#a0f4c88de2a2904b2e2891be50c163d8e">IJKArrayDbl</a>;</div>
-<div class="line">  <a class="code hl_typedef" href="../../dd/dbc/namespacechi__unit__tests.html#a0f4c88de2a2904b2e2891be50c163d8e">IJKArrayDbl</a> psi_ds_x(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
-<div class="line">  <a class="code hl_typedef" href="../../dd/dbc/namespacechi__unit__tests.html#a0f4c88de2a2904b2e2891be50c163d8e">IJKArrayDbl</a> psi_ds_y(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
-<div class="line">  <a class="code hl_typedef" href="../../dd/dbc/namespacechi__unit__tests.html#a0f4c88de2a2904b2e2891be50c163d8e">IJKArrayDbl</a> psi_ds_z(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code hl_class" href="../../d2/d5d/classchi__data__types_1_1_n_d_array.html">chi_data_types::NDArray&lt;double&gt;</a> IJKArrayDbl;</div>
+<div class="line">  IJKArrayDbl psi_ds_x(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
+<div class="line">  IJKArrayDbl psi_ds_y(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
+<div class="line">  IJKArrayDbl psi_ds_z(std::array&lt;int64_t,4&gt;{Nx,Ny,Nz,num_groups});</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">typedef</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> Vec3;</div>
 <div class="line">  <span class="keyword">auto</span> <a class="code hl_class" href="../../d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html">SweepChunk</a> = [&amp;ijk_info, &amp;ijk_mapping, &amp;cell_ortho_sizes, <span class="comment">//ortho-quantities</span></div>
@@ -949,11 +946,11 @@ The complete program</h1>
 <div class="line">  {</div>
 <div class="line">    phi_new.assign(phi_new.size(), 0.0);</div>
 <div class="line">    <span class="comment">//Build rhs</span></div>
-<div class="line">    source_moments = <a class="code hl_function" href="../../d0/d68/namespacechi__unit__sim__tests.html#a15826c4853d6ae31074cfd0901702d69">SetSource</a>(grid, sdm, phi_uk_man,</div>
+<div class="line">    source_moments = SetSource(grid, sdm, phi_uk_man,</div>
 <div class="line">                               q_source, phi_old, xs, m_ell_em_map);</div>
 <div class="line">    Sweep();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span> rel_change = <a class="code hl_function" href="../../d0/d68/namespacechi__unit__sim__tests.html#a4ec383a71de8faee1ccf06fc95860c3a">ComputeRelativePWChange</a>(grid, sdm, phi_uk_man,</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span> rel_change = ComputeRelativePWChange(grid, sdm, phi_uk_man,</div>
 <div class="line">                                                      phi_new, phi_old);</div>
 <div class="line"> </div>
 <div class="line">    std::stringstream outstr;</div>
@@ -1011,7 +1008,7 @@ The complete program</h1>
 <div class="ttc" id="achi__tech__main_8cc_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/chi__tech__main_8cc_source.html#l00010">chi_tech_main.cc:10</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_spatial_discretization___f_v_html_aef2abe8e2064b84e29d87a2b2b2f984d"><div class="ttname"><a href="../../d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html#aef2abe8e2064b84e29d87a2b2b2f984d">chi_math::SpatialDiscretization_FV::New</a></div><div class="ttdeci">static std::shared_ptr&lt; SpatialDiscretization_FV &gt; New(const chi_mesh::MeshContinuum &amp;in_grid, CoordinateSystemType in_cs_type=CoordinateSystemType::CARTESIAN)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d77/fv__00__constrdestr_8cc_source.html#l00021">fv_00_constrdestr.cc:21</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_spatial_discretization_html_a04c0c7022de9c74ac6a807398afec030"><div class="ttname"><a href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#a04c0c7022de9c74ac6a807398afec030">chi_math::SpatialDiscretization::GetNumGlobalDOFs</a></div><div class="ttdeci">virtual size_t GetNumGlobalDOFs(const UnknownManager &amp;unknown_manager) const =0</div></div>
-<div class="ttc" id="aclasschi__math_1_1_spatial_discretization_html_ab44301c258e4b6921f7afad19e355746"><div class="ttname"><a href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#ab44301c258e4b6921f7afad19e355746">chi_math::SpatialDiscretization::UNITARY_UNKNOWN_MANAGER</a></div><div class="ttdeci">const UnknownManager UNITARY_UNKNOWN_MANAGER</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d28/spatial__discretization_8h_source.html#l00026">spatial_discretization.h:26</a></div></div>
+<div class="ttc" id="aclasschi__math_1_1_spatial_discretization_html_ab44301c258e4b6921f7afad19e355746"><div class="ttname"><a href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#ab44301c258e4b6921f7afad19e355746">chi_math::SpatialDiscretization::UNITARY_UNKNOWN_MANAGER</a></div><div class="ttdeci">const UnknownManager UNITARY_UNKNOWN_MANAGER</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d28/spatial__discretization_8h_source.html#l00021">spatial_discretization.h:21</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a15eed36e4da5d55ac9ad26d6a37a7a72"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a15eed36e4da5d55ac9ad26d6a37a7a72">chi_mesh::MeshContinuum::Attributes</a></div><div class="ttdeci">MeshAttributes Attributes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00134">chi_meshcontinuum.h:134</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a5cb74fab0769b9fda964b5429623d04a"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a5cb74fab0769b9fda964b5429623d04a">chi_mesh::MeshContinuum::GetIJKInfo</a></div><div class="ttdeci">std::array&lt; size_t, 3 &gt; GetIJKInfo() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00396">chi_meshcontinuum_utilities.cc:396</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a66224c8024c8e1e395389dd8ccd547c1"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a66224c8024c8e1e395389dd8ccd547c1">chi_mesh::MeshContinuum::MakeCellOrthoSizes</a></div><div class="ttdeci">std::vector&lt; chi_mesh::Vector3 &gt; MakeCellOrthoSizes() const</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc_source.html#l00433">chi_meshcontinuum_utilities.cc:433</a></div></div>

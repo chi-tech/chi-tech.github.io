@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: framework/ChiMesh/SweepUtilities/remove_local_cyclicdep.cc Source File</title>
+<title>Chi-Tech: framework/mesh/SweepUtilities/remove_local_cyclicdep.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -95,9 +95,9 @@ $(document).ready(function(){initNavTree('d7/d45/remove__local__cyclicdep_8cc_so
 <div class="contents">
 <a href="../../d7/d45/remove__local__cyclicdep_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;../chi_mesh.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d37/sweep__namespace_8h.html">ChiMesh/SweepUtilities/sweep_namespace.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d06/_s_p_d_s_8h.html">ChiMesh/SweepUtilities/SPDS/SPDS.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d90/chi__directed__graph_8h.html">ChiGraph/chi_directed_graph.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d37/sweep__namespace_8h.html">mesh/SweepUtilities/sweep_namespace.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d06/_s_p_d_s_8h.html">mesh/SweepUtilities/SPDS/SPDS.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d90/chi__directed__graph_8h.html">graphs/chi_directed_graph.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
@@ -107,34 +107,33 @@ $(document).ready(function(){initNavTree('d7/d45/remove__local__cyclicdep_8cc_so
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/**Removes local cyclic dependencies.*/</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a08330bb9af1d916d059a549af0982ee8">   15</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a08330bb9af1d916d059a549af0982ee8">chi_mesh::sweep_management::</a></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_function" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a08330bb9af1d916d059a549af0982ee8">  RemoveLocalCyclicDependencies</a>(std::shared_ptr&lt;SPDS&gt; sweep_order,</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                                <a class="code hl_class" href="../../dc/d15/classchi__graph_1_1_directed_graph.html">chi_graph::DirectedGraph</a> &amp;local_DG)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">auto</span> edges_to_remove = local_DG.<a class="code hl_function" href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a229d7be9e10e9a92d4309fea8a6a030d">RemoveCyclicDependencies</a>();</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; edge_to_remove : edges_to_remove)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    sweep_order-&gt;local_cyclic_dependencies.emplace_back(</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      edge_to_remove.first,</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      edge_to_remove.second);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a42f867627bdb105c098fedf0ba5c15f2">   15</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a42f867627bdb105c098fedf0ba5c15f2">chi_mesh::sweep_management::</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_function" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a42f867627bdb105c098fedf0ba5c15f2">  RemoveLocalCyclicDependencies</a>(std::shared_ptr&lt;SPDS&gt; sweep_order, <a class="code hl_class" href="../../d3/dcf/classchi_1_1_directed_graph.html">chi::DirectedGraph</a> &amp;local_DG)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">auto</span> edges_to_remove = local_DG.<a class="code hl_function" href="../../d3/dcf/classchi_1_1_directed_graph.html#a39e580007ac3c40f7a287bbaf3387499">RemoveCyclicDependencies</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; edge_to_remove : edges_to_remove)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    sweep_order-&gt;local_cyclic_dependencies.emplace_back(</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      edge_to_remove.first,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      edge_to_remove.second);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 <div class="ttc" id="a_s_p_d_s_8h_html"><div class="ttname"><a href="../../db/d06/_s_p_d_s_8h.html">SPDS.h</a></div></div>
 <div class="ttc" id="achi__directed__graph_8h_html"><div class="ttname"><a href="../../d4/d90/chi__directed__graph_8h.html">chi_directed_graph.h</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html">chi_graph::DirectedGraph</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d90/chi__directed__graph_8h_source.html#l00011">chi_directed_graph.h:12</a></div></div>
-<div class="ttc" id="aclasschi__graph_1_1_directed_graph_html_a229d7be9e10e9a92d4309fea8a6a030d"><div class="ttname"><a href="../../dc/d15/classchi__graph_1_1_directed_graph.html#a229d7be9e10e9a92d4309fea8a6a030d">chi_graph::DirectedGraph::RemoveCyclicDependencies</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; size_t, size_t &gt; &gt; RemoveCyclicDependencies()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00435">chi_directed_graph.cc:435</a></div></div>
-<div class="ttc" id="anamespacechi__mesh_1_1sweep__management_html_a08330bb9af1d916d059a549af0982ee8"><div class="ttname"><a href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a08330bb9af1d916d059a549af0982ee8">chi_mesh::sweep_management::RemoveLocalCyclicDependencies</a></div><div class="ttdeci">void RemoveLocalCyclicDependencies(std::shared_ptr&lt; SPDS &gt; sweep_order, chi_graph::DirectedGraph &amp;local_DG)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d45/remove__local__cyclicdep_8cc_source.html#l00015">remove_local_cyclicdep.cc:16</a></div></div>
+<div class="ttc" id="aclasschi_1_1_directed_graph_html"><div class="ttname"><a href="../../d3/dcf/classchi_1_1_directed_graph.html">chi::DirectedGraph</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d90/chi__directed__graph_8h_source.html#l00011">chi_directed_graph.h:12</a></div></div>
+<div class="ttc" id="aclasschi_1_1_directed_graph_html_a39e580007ac3c40f7a287bbaf3387499"><div class="ttname"><a href="../../d3/dcf/classchi_1_1_directed_graph.html#a39e580007ac3c40f7a287bbaf3387499">chi::DirectedGraph::RemoveCyclicDependencies</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; size_t, size_t &gt; &gt; RemoveCyclicDependencies()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/chi__directed__graph_8cc_source.html#l00436">chi_directed_graph.cc:436</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_1_1sweep__management_html_a42f867627bdb105c098fedf0ba5c15f2"><div class="ttname"><a href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a42f867627bdb105c098fedf0ba5c15f2">chi_mesh::sweep_management::RemoveLocalCyclicDependencies</a></div><div class="ttdeci">void RemoveLocalCyclicDependencies(std::shared_ptr&lt; SPDS &gt; sweep_order, chi::DirectedGraph &amp;local_DG)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d45/remove__local__cyclicdep_8cc_source.html#l00015">remove_local_cyclicdep.cc:16</a></div></div>
 <div class="ttc" id="asweep__namespace_8h_html"><div class="ttname"><a href="../../d1/d37/sweep__namespace_8h.html">sweep_namespace.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_c96a5df0caba4cf0e1c155d2b2c84ff3.html">ChiMesh</a></li><li class="navelem"><a class="el" href="../../dir_9722f752220bfbbb431ea28d4da6d5e5.html">SweepUtilities</a></li><li class="navelem"><a class="el" href="../../d7/d45/remove__local__cyclicdep_8cc.html">remove_local_cyclicdep.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_ddc3b5f3d6a507843de0af684742139c.html">mesh</a></li><li class="navelem"><a class="el" href="../../dir_73b1d8cb0af2bcf7dea0bea14e7b79d7.html">SweepUtilities</a></li><li class="navelem"><a class="el" href="../../d7/d45/remove__local__cyclicdep_8cc.html">remove_local_cyclicdep.cc</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

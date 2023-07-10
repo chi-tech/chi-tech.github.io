@@ -103,41 +103,42 @@ $(document).ready(function(){initNavTree('d7/d9e/_code_tut4.html','../../'); ini
 </ul>
 <h1><a class="anchor" id="CodeTut4Sec1"></a>
 1 Defining a wrapper to call a lua function</h1>
-<p >To implement a manufactured solution in our PWLC solver from <a class="el" href="../../d1/d74/_code_tut3.html">Coding Tutorial 3 - Poisson's problem with PWLC</a> we are required to call a lua-function with spatial coordinates x,y,z. In order to use the lua-console, specifically the lua state, we have to include the headers </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">ChiConsole/chi_console.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;ChiLua/chi_lua.h&quot;</span></div>
+<p >To implement a manufactured solution in our PWLC solver from <a class="el" href="../../d1/d74/_code_tut3.html">Coding Tutorial 3 - Poisson's problem with PWLC</a> we are required to call a lua-function with spatial coordinates x,y,z. In order to use the lua-console, specifically the lua state, we have to include the headers </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">console/chi_console.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;chi_lua.h&quot;</span></div>
 <div class="ttc" id="achi__console_8h_html"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html">chi_console.h</a></div></div>
-</div><!-- fragment --><p >When then have to grab the console state from the runtime environment. To do this we add the following code, in the beginning of the program, just below <code>chi::RunBatch</code> </p><div class="fragment"><div class="line"><span class="keyword">auto</span> L = chi::console.consoleState;</div>
-</div><!-- fragment --><p >Next we have to tell the c++ code exactly how to call a lua-function. To this end we define a wrapper using a c++ lambda as shown below. You can define this function where ever you like as long as it can capture the lua state, <code>L</code>. For this tutorial we defined it just before the matrix assembly. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> CallLuaXYZFunction = [&amp;L](<span class="keyword">const</span> std::string&amp; lua_func_name,</div>
+</div><!-- fragment --><p >When then have to grab the console state from the runtime environment. To do this we add the following code, in the beginning of the program, just below <code>chi::RunBatch</code> </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a> = chi::console.consoleState;</div>
+<div class="ttc" id="anamespacechi__lua_html_a6e3d009455d0e5113e4ffbc28269e724"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">chi_lua::L</a></div><div class="ttdeci">void L</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02222">lua_functions.c:2222</a></div></div>
+</div><!-- fragment --><p >Next we have to tell the c++ code exactly how to call a lua-function. To this end we define a wrapper using a c++ lambda as shown below. You can define this function where ever you like as long as it can capture the lua state, <code>L</code>. For this tutorial we defined it just before the matrix assembly. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> CallLuaXYZFunction = [&amp;<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>](<span class="keyword">const</span> std::string&amp; lua_func_name,</div>
 <div class="line">                               <span class="keyword">const</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>&amp; xyz)</div>
 <div class="line">{</div>
 <div class="line">  <span class="comment">//============= Load lua function</span></div>
-<div class="line">  lua_getglobal(L, lua_func_name.c_str());</div>
+<div class="line">  lua_getglobal(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, lua_func_name.c_str());</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============= Error check lua function</span></div>
-<div class="line">  <span class="keywordflow">if</span> (not lua_isfunction(L, -1))</div>
+<div class="line">  <span class="keywordflow">if</span> (not lua_isfunction(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, -1))</div>
 <div class="line">    <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;CallLuaXYZFunction attempted to access lua-function, &quot;</span> +</div>
 <div class="line">                           lua_func_name + <span class="stringliteral">&quot;, but it seems the function&quot;</span></div>
 <div class="line">                                           <span class="stringliteral">&quot; could not be retrieved.&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============= Push arguments</span></div>
-<div class="line">  lua_pushnumber(L, xyz.x);</div>
-<div class="line">  lua_pushnumber(L, xyz.y);</div>
-<div class="line">  lua_pushnumber(L, xyz.z);</div>
+<div class="line">  lua_pushnumber(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, xyz.x);</div>
+<div class="line">  lua_pushnumber(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, xyz.y);</div>
+<div class="line">  lua_pushnumber(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, xyz.z);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============= Call lua function</span></div>
 <div class="line">  <span class="comment">//3 arguments, 1 result (double), 0=original error object</span></div>
 <div class="line">  <span class="keywordtype">double</span> lua_return = 0.0;</div>
-<div class="line">  <span class="keywordflow">if</span> (lua_pcall(L,3,1,0) == 0)</div>
+<div class="line">  <span class="keywordflow">if</span> (lua_pcall(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>,3,1,0) == 0)</div>
 <div class="line">  {</div>
-<div class="line">    LuaCheckNumberValue(<span class="stringliteral">&quot;CallLuaXYZFunction&quot;</span>, L, -1);</div>
-<div class="line">    lua_return = lua_tonumber(L,-1);</div>
+<div class="line">    LuaCheckNumberValue(<span class="stringliteral">&quot;CallLuaXYZFunction&quot;</span>, <a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, -1);</div>
+<div class="line">    lua_return = lua_tonumber(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>,-1);</div>
 <div class="line">  }</div>
 <div class="line">  <span class="keywordflow">else</span></div>
 <div class="line">    <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;CallLuaXYZFunction attempted to call lua-function, &quot;</span> +</div>
 <div class="line">                           lua_func_name + <span class="stringliteral">&quot;, but the call failed.&quot;</span> +</div>
 <div class="line">                           xyz.PrintStr());</div>
 <div class="line"> </div>
-<div class="line">  lua_pop(L,1); <span class="comment">//pop the double, or error code</span></div>
+<div class="line">  lua_pop(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>,1); <span class="comment">//pop the double, or error code</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> lua_return;</div>
 <div class="line">};</div>
@@ -156,7 +157,7 @@ $(document).ready(function(){initNavTree('d7/d9e/_code_tut4.html','../../'); ini
 <h1><a class="anchor" id="CodeTut4Sec3"></a>
 3 Getting guadrature-point real world XYZ</h1>
 <p >Quadrautre-point real-world positions are stored when the <code>qp_data</code> structure is created. They are accessed with the call <code><a class="el" href="../../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#ad9935574d332f19a9863886d1f2079ca">chi_math::finite_element::InternalQuadraturePointData::QPointXYZ</a></code>, taking the quadrature point index as a parameter. </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> qp : qp_data.QuadraturePointIndices())</div>
-<div class="line">  cell_rhs[i] += CallLuaXYZFunction(qp_data.QPointXYZ(qp),<span class="stringliteral">&quot;MMS_q&quot;</span>, L) *</div>
+<div class="line">  cell_rhs[i] += CallLuaXYZFunction(qp_data.QPointXYZ(qp),<span class="stringliteral">&quot;MMS_q&quot;</span>, <a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>) *</div>
 <div class="line">                 qp_data.ShapeValue(i, qp) * qp_data.JxW(qp);</div>
 </div><!-- fragment --><h1><a class="anchor" id="CodeTut4Sec4"></a>
 4 Convergence study</h1>
@@ -209,7 +210,7 @@ $(document).ready(function(){initNavTree('d7/d9e/_code_tut4.html','../../'); ini
 <div class="line"> </div>
 <div class="line">chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; std::scientific &lt;&lt; global_error</div>
 <div class="line">               &lt;&lt; <span class="stringliteral">&quot; Num-cells: &quot;</span> &lt;&lt; grid.GetGlobalNumberOfCells();</div>
-<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00073">chi_runtime.h:73</a></div></div>
+<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
 </div><!-- fragment --><p> Notice that we grab the nodal values of \( \phi_{FEM} \) before we loop over quadrature points. We then use these nodal values within the quadrature-point loop to construct \( \phi_{FEM}(\tilde{\mathbf{x}}_n) \) as </p><p class="formulaDsp">
 \[ \phi_{FEM}(\tilde{\mathbf{x}}_n) = \sum_j \phi_j b_j(\tilde{\mathbf{x}}_n) \]
 </p>
@@ -232,15 +233,15 @@ The complete program</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d98/chi__meshhandler_8h.html">ChiMesh/MeshHandler/chi_meshhandler.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d98/chi__meshhandler_8h.html">mesh/MeshHandler/chi_meshhandler.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/dfa/pwlc_8h.html">ChiMath/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwlc.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../da/d0e/petsc__utils_8h.html">ChiMath/PETScUtils/petsc_utils.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/dfa/pwlc_8h.html">math/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwlc.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../da/d0e/petsc__utils_8h.html">math/PETScUtils/petsc_utils.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;ChiPhysics/FieldFunction/fieldfunction2.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;physics/FieldFunction/fieldfunction2.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">ChiConsole/chi_console.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;ChiLua/chi_lua.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">console/chi_console.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;chi_lua.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line">{</div>
@@ -287,37 +288,37 @@ The complete program</h1>
 <div class="line">                                           nodal_nnz_off_diag);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Source lambda</span></div>
-<div class="line">  <span class="keyword">auto</span> CallLuaXYZFunction = [&amp;L](<span class="keyword">const</span> std::string&amp; lua_func_name,</div>
+<div class="line">  <span class="keyword">auto</span> CallLuaXYZFunction = [&amp;<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>](<span class="keyword">const</span> std::string&amp; lua_func_name,</div>
 <div class="line">                                 <span class="keyword">const</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>&amp; xyz)</div>
 <div class="line">  {</div>
 <div class="line">    <span class="comment">//============= Load lua function</span></div>
-<div class="line">    lua_getglobal(L, lua_func_name.c_str());</div>
+<div class="line">    lua_getglobal(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, lua_func_name.c_str());</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">//============= Error check lua function</span></div>
-<div class="line">    <span class="keywordflow">if</span> (not lua_isfunction(L, -1))</div>
+<div class="line">    <span class="keywordflow">if</span> (not lua_isfunction(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, -1))</div>
 <div class="line">      <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;CallLuaXYZFunction attempted to access lua-function, &quot;</span> +</div>
 <div class="line">                             lua_func_name + <span class="stringliteral">&quot;, but it seems the function&quot;</span></div>
 <div class="line">                                             <span class="stringliteral">&quot; could not be retrieved.&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">//============= Push arguments</span></div>
-<div class="line">    lua_pushnumber(L, xyz.x);</div>
-<div class="line">    lua_pushnumber(L, xyz.y);</div>
-<div class="line">    lua_pushnumber(L, xyz.z);</div>
+<div class="line">    lua_pushnumber(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, xyz.x);</div>
+<div class="line">    lua_pushnumber(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, xyz.y);</div>
+<div class="line">    lua_pushnumber(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, xyz.z);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">//============= Call lua function</span></div>
 <div class="line">    <span class="comment">//3 arguments, 1 result (double), 0=original error object</span></div>
 <div class="line">    <span class="keywordtype">double</span> lua_return = 0.0;</div>
-<div class="line">    <span class="keywordflow">if</span> (lua_pcall(L,3,1,0) == 0)</div>
+<div class="line">    <span class="keywordflow">if</span> (lua_pcall(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>,3,1,0) == 0)</div>
 <div class="line">    {</div>
-<div class="line">      LuaCheckNumberValue(<span class="stringliteral">&quot;CallLuaXYZFunction&quot;</span>, L, -1);</div>
-<div class="line">      lua_return = lua_tonumber(L,-1);</div>
+<div class="line">      LuaCheckNumberValue(<span class="stringliteral">&quot;CallLuaXYZFunction&quot;</span>, <a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>, -1);</div>
+<div class="line">      lua_return = lua_tonumber(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>,-1);</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">else</span></div>
 <div class="line">      <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;CallLuaXYZFunction attempted to call lua-function, &quot;</span> +</div>
 <div class="line">                             lua_func_name + <span class="stringliteral">&quot;, but the call failed.&quot;</span> +</div>
 <div class="line">                             xyz.PrintStr());</div>
 <div class="line"> </div>
-<div class="line">    lua_pop(L,1); <span class="comment">//pop the double, or error code</span></div>
+<div class="line">    lua_pop(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>,1); <span class="comment">//pop the double, or error code</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> lua_return;</div>
 <div class="line">  };</div>
@@ -363,7 +364,7 @@ The complete program</h1>
 <div class="line">      <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_face_nodes = face.vertex_ids.size();</div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> fi=0; fi&lt;num_face_nodes; ++fi)</div>
 <div class="line">      {</div>
-<div class="line">        <span class="keyword">const</span> uint i = cell_mapping.MapFaceNode(f,fi);</div>
+<div class="line">        <span class="keyword">const</span> <a class="code hl_define" href="../../d4/d44/quadrature__gausschebyshev_8cc.html#ad46b2ebcd4c426b06cda147ddc1001e7">uint</a> i = cell_mapping.MapFaceNode(f,fi);</div>
 <div class="line">        node_boundary_flag[i] = <span class="keyword">true</span>;</div>
 <div class="line">      }<span class="comment">//for fi</span></div>
 <div class="line">    }<span class="comment">//for face f</span></div>
@@ -513,6 +514,7 @@ The complete program</h1>
 <div class="ttc" id="anamespacechi__mesh_html_addcd6899961d4c527b02c33708a7941f"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler &amp; GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00013">chi_mesh_meshhandler_utils.cc:13</a></div></div>
 <div class="ttc" id="apetsc__utils_8h_html"><div class="ttname"><a href="../../da/d0e/petsc__utils_8h.html">petsc_utils.h</a></div></div>
 <div class="ttc" id="apwlc_8h_html"><div class="ttname"><a href="../../d3/dfa/pwlc_8h.html">pwlc.h</a></div></div>
+<div class="ttc" id="aquadrature__gausschebyshev_8cc_html_ad46b2ebcd4c426b06cda147ddc1001e7"><div class="ttname"><a href="../../d4/d44/quadrature__gausschebyshev_8cc.html#ad46b2ebcd4c426b06cda147ddc1001e7">uint</a></div><div class="ttdeci">#define uint</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d44/quadrature__gausschebyshev_8cc_source.html#l00009">quadrature_gausschebyshev.cc:9</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['rcclogicalvolume_0',['RCCLogicalVolume',['../d1/d32/group__chi__mesh_____r_c_c_logical_volume.html',1,'']]],
-  ['rpplogicalvolume_1',['RPPLogicalVolume',['../d2/d99/group__chi__mesh_____r_p_p_logical_volume.html',1,'']]]
+  ['simplified_20ldfesq_0',['Simplified LDFESQ',['../de/d7d/group___lua_s_l_d_f_e_s_q.html',1,'']]],
+  ['solvers_1',['Solvers',['../dc/d4e/group___lua_solver.html',1,'']]],
+  ['surface_20meshes_2',['Surface Meshes',['../db/dc8/group___lua_surface_mesh.html',1,'']]],
+  ['surface_20re_2dmeshers_3',['Surface Re-meshers',['../d1/d9b/group___lua_surface_mesher.html',1,'']]]
 ];

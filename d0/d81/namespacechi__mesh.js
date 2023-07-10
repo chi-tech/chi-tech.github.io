@@ -75,7 +75,6 @@ var namespacechi__mesh =
     [ "VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned" ],
     [ "FFInterp", "d0/d81/namespacechi__mesh.html#a2a70ac114540ccc7733e4763ff1e919e", null ],
     [ "FFInterpPtr", "d0/d81/namespacechi__mesh.html#a6dc6fd8aec715501e71d3968a0bd8511", null ],
-    [ "LogicalVolumePtr", "d0/d81/namespacechi__mesh.html#ad6aa3407e6f6990dacf9c53200c1aace", null ],
     [ "MeshContinuumConstPtr", "d0/d81/namespacechi__mesh.html#af12e42e01c1a83852ff51b3f52ed4c97", null ],
     [ "MeshContinuumPtr", "d0/d81/namespacechi__mesh.html#a60cc7e5348a115cf4edcfd4ade799a51", null ],
     [ "MeshHandlerPtr", "d0/d81/namespacechi__mesh.html#a23d926104939fae47ba5663103c28f2c", null ],

@@ -12,8 +12,8 @@ var searchData=
   ['unpartitionedmesh_5fstack_9',['unpartitionedmesh_stack',['../d7/dd7/class_chi.html#a7d4f2b722a628cfeea9dc53795d9743f',1,'Chi']]],
   ['upstream_5fdata_5finitialized_10',['upstream_data_initialized',['../dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html#ae3a6d4d2acbd11640f9994936b080662',1,'chi_mesh::sweep_management::SweepBuffer']]],
   ['upwind_5fdof_5fmapping_11',['upwind_dof_mapping',['../d8/daf/structchi__mesh_1_1sweep__management_1_1_i_n_c_o_m_i_n_g___f_a_c_e___i_n_f_o.html#a17e9c47f7966834dc14f39997c01b06a',1,'chi_mesh::sweep_management::INCOMING_FACE_INFO']]],
-  ['us_5fedge_12',['us_edge',['../da/d1d/structchi__graph_1_1_graph_vertex.html#a507fc24d43a4acf07edd1c5426c0fd08',1,'chi_graph::GraphVertex']]],
-  ['us_5fweights_13',['us_weights',['../da/d1d/structchi__graph_1_1_graph_vertex.html#a4986d0414eab737490fff5692e46273e',1,'chi_graph::GraphVertex']]],
+  ['us_5fedge_12',['us_edge',['../d6/d39/structchi_1_1_graph_vertex.html#acd8ce30170eb5053d31c5f1f57415ac1',1,'chi::GraphVertex']]],
+  ['us_5fweights_13',['us_weights',['../d6/d39/structchi_1_1_graph_vertex.html#ae6c5febc62a5accdd9bf016038023c37',1,'chi::GraphVertex']]],
   ['use_5fprecursors_14',['use_precursors',['../dc/dcd/structlbs_1_1_options.html#ac31e06eb959155210668a82b4def6abc',1,'lbs::Options']]],
   ['use_5fsrc_5fmoments_15',['use_src_moments',['../dc/dcd/structlbs_1_1_options.html#a18b0a5d5b18946c42cce655a453fdab8',1,'lbs::Options']]]
 ];

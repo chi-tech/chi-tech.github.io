@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: framework/ChiLog/chi_log.cc Source File</title>
+<title>Chi-Tech: framework/logging/chi_log.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('dd/d1c/chi__log_8cc_source.html','../.
 <a href="../../dd/d1c/chi__log_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/de5/chi__timer_8h.html">ChiTimer/chi_timer.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/de5/chi__timer_8h.html">utils/chi_timer.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d2d/stringstream__color_8h.html">stringstream_color.h</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('dd/d1c/chi__log_8cc_source.html','../.
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <a class="code hl_class" href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html">RepeatingEvent</a>&amp; ref_rep_event = repeating_events.back();</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  ref_rep_event.<a class="code hl_variable" href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html#aaf51388faaaa33090f7ee4f2456eb775">events</a>.emplace_back(<a class="code hl_variable" href="../../d7/dd7/class_chi.html#a62a4923bbb6b922b3afc5565b3cfd146">Chi::program_timer</a>.GetTime(),</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  ref_rep_event.<a class="code hl_variable" href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html#aaf51388faaaa33090f7ee4f2456eb775">events</a>.emplace_back(<a class="code hl_variable" href="../../d7/dd7/class_chi.html#a6401c0c0e895561e38caecff1addbb6d">Chi::program_timer</a>.GetTime(),</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    EventType::EVENT_CREATED,</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    std::make_shared&lt;EventInfo&gt;());</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
@@ -278,7 +278,7 @@ $(document).ready(function(){initNavTree('dd/d1c/chi__log_8cc_source.html','../.
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <a class="code hl_class" href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html">RepeatingEvent</a>&amp; ref_rep_event = repeating_events.back();</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  ref_rep_event.<a class="code hl_variable" href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html#aaf51388faaaa33090f7ee4f2456eb775">events</a>.emplace_back(<a class="code hl_variable" href="../../d7/dd7/class_chi.html#a62a4923bbb6b922b3afc5565b3cfd146">Chi::program_timer</a>.GetTime(),</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  ref_rep_event.<a class="code hl_variable" href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html#aaf51388faaaa33090f7ee4f2456eb775">events</a>.emplace_back(<a class="code hl_variable" href="../../d7/dd7/class_chi.html#a6401c0c0e895561e38caecff1addbb6d">Chi::program_timer</a>.GetTime(),</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    EventType::EVENT_CREATED,</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    std::make_shared&lt;EventInfo&gt;());</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
@@ -297,7 +297,7 @@ $(document).ready(function(){initNavTree('dd/d1c/chi__log_8cc_source.html','../.
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <a class="code hl_class" href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html">RepeatingEvent</a>&amp; ref_rep_event = repeating_events[ev_tag];</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  ref_rep_event.<a class="code hl_variable" href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html#aaf51388faaaa33090f7ee4f2456eb775">events</a>.emplace_back(</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <a class="code hl_variable" href="../../d7/dd7/class_chi.html#a62a4923bbb6b922b3afc5565b3cfd146">Chi::program_timer</a>.GetTime(),</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <a class="code hl_variable" href="../../d7/dd7/class_chi.html#a6401c0c0e895561e38caecff1addbb6d">Chi::program_timer</a>.GetTime(),</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    ev_type,</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    ev_info);</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>}</div>
@@ -313,7 +313,7 @@ $(document).ready(function(){initNavTree('dd/d1c/chi__log_8cc_source.html','../.
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <a class="code hl_class" href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html">RepeatingEvent</a>&amp; ref_rep_event = repeating_events[ev_tag];</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  ref_rep_event.<a class="code hl_variable" href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html#aaf51388faaaa33090f7ee4f2456eb775">events</a>.emplace_back(</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <a class="code hl_variable" href="../../d7/dd7/class_chi.html#a62a4923bbb6b922b3afc5565b3cfd146">Chi::program_timer</a>.GetTime(),</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <a class="code hl_variable" href="../../d7/dd7/class_chi.html#a6401c0c0e895561e38caecff1addbb6d">Chi::program_timer</a>.GetTime(),</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    ev_type,</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>}</div>
@@ -464,8 +464,8 @@ $(document).ready(function(){initNavTree('dd/d1c/chi__log_8cc_source.html','../.
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="achi__timer_8h_html"><div class="ttname"><a href="../../da/de5/chi__timer_8h.html">chi_timer.h</a></div></div>
-<div class="ttc" id="aclass_chi_html_a62a4923bbb6b922b3afc5565b3cfd146"><div class="ttname"><a href="../../d7/dd7/class_chi.html#a62a4923bbb6b922b3afc5565b3cfd146">Chi::program_timer</a></div><div class="ttdeci">static chi::ChiTimer program_timer</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00074">chi_runtime.h:74</a></div></div>
-<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00073">chi_runtime.h:73</a></div></div>
+<div class="ttc" id="aclass_chi_html_a6401c0c0e895561e38caecff1addbb6d"><div class="ttname"><a href="../../d7/dd7/class_chi.html#a6401c0c0e895561e38caecff1addbb6d">Chi::program_timer</a></div><div class="ttdeci">static chi::Timer program_timer</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00076">chi_runtime.h:76</a></div></div>
+<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
 <div class="ttc" id="aclasschi_1_1_chi_log_1_1_repeating_event_html"><div class="ttname"><a href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html">chi::ChiLog::RepeatingEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00315">chi_log.h:316</a></div></div>
 <div class="ttc" id="aclasschi_1_1_chi_log_1_1_repeating_event_html_aaf51388faaaa33090f7ee4f2456eb775"><div class="ttname"><a href="../../d2/da0/classchi_1_1_chi_log_1_1_repeating_event.html#aaf51388faaaa33090f7ee4f2456eb775">chi::ChiLog::RepeatingEvent::events</a></div><div class="ttdeci">std::vector&lt; Event &gt; events</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00319">chi_log.h:319</a></div></div>
 <div class="ttc" id="aclasschi_1_1_chi_log_html"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html">chi::ChiLog</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00186">chi_log.h:187</a></div></div>
@@ -494,7 +494,7 @@ $(document).ready(function(){initNavTree('dd/d1c/chi__log_8cc_source.html','../.
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_354221738c66b7e8bb259b6b1043c818.html">ChiLog</a></li><li class="navelem"><a class="el" href="../../dd/d1c/chi__log_8cc.html">chi_log.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_6e29be0e1ca57cca114fac1c397f3487.html">logging</a></li><li class="navelem"><a class="el" href="../../dd/d1c/chi__log_8cc.html">chi_log.cc</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

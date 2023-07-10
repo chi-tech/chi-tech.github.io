@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: framework/ChiMesh/MeshContinuum/chi_meshcontinuum_utilities.cc Source File</title>
+<title>Chi-Tech: framework/mesh/MeshContinuum/chi_meshcontinuum_utilities.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -94,12 +94,12 @@ $(document).ready(function(){initNavTree('dd/d61/chi__meshcontinuum__utilities_8
 </div><!--header-->
 <div class="contents">
 <a href="../../dd/d61/chi__meshcontinuum__utilities_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/ddd/cell_8h.html">ChiMesh/Cell/cell.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/ddd/cell_8h.html">mesh/Cell/cell.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../de/de9/_logical_volume_8h.html">ChiMesh/LogicalVolume/LogicalVolume.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d40/chi__grid__face__histogram_8h.html">ChiMesh/MeshContinuum/chi_grid_face_histogram.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../de/de9/_logical_volume_8h.html">mesh/LogicalVolume/LogicalVolume.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d40/chi__grid__face__histogram_8h.html">mesh/MeshContinuum/chi_grid_face_histogram.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../de/d01/ndarray_8h.html">ChiDataTypes/ndarray.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../de/d01/ndarray_8h.html">data_types/ndarray.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
@@ -616,9 +616,9 @@ $(document).ready(function(){initNavTree('dd/d61/chi__meshcontinuum__utilities_8
 <div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
 <div class="ttc" id="achi__mpi_8h_html"><div class="ttname"><a href="../../d6/d57/chi__mpi_8h.html">chi_mpi.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclass_chi_html_a874bf6cc8b4a40683a192dd8105346a4"><div class="ttname"><a href="../../d7/dd7/class_chi.html#a874bf6cc8b4a40683a192dd8105346a4">Chi::Exit</a></div><div class="ttdeci">static void Exit(int error_code)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00328">chi_runtime.cc:328</a></div></div>
-<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00076">chi_runtime.h:76</a></div></div>
-<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00073">chi_runtime.h:73</a></div></div>
+<div class="ttc" id="aclass_chi_html_a874bf6cc8b4a40683a192dd8105346a4"><div class="ttname"><a href="../../d7/dd7/class_chi.html#a874bf6cc8b4a40683a192dd8105346a4">Chi::Exit</a></div><div class="ttdeci">static void Exit(int error_code)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd3/chi__runtime_8cc_source.html#l00327">chi_runtime.cc:327</a></div></div>
+<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00078">chi_runtime.h:78</a></div></div>
+<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
 <div class="ttc" id="aclasschi_1_1_chi_log_html_a1b8b6a4529f8cbf5aeb6450eeb4dd632"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#a1b8b6a4529f8cbf5aeb6450eeb4dd632">chi::ChiLog::LogAllError</a></div><div class="ttdeci">LogStream LogAllError()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00228">chi_log.h:228</a></div></div>
 <div class="ttc" id="aclasschi_1_1_chi_log_html_ad48a94904bcac1f9df7d4dc186ee34dc"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#ad48a94904bcac1f9df7d4dc186ee34dc">chi::ChiLog::LogAllVerbose2</a></div><div class="ttdeci">LogStream LogAllVerbose2()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00231">chi_log.h:231</a></div></div>
 <div class="ttc" id="aclasschi__data__types_1_1_n_d_array_html"><div class="ttname"><a href="../../d2/d5d/classchi__data__types_1_1_n_d_array.html">chi_data_types::NDArray</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d01/ndarray_8h_source.html#l00015">ndarray.h:16</a></div></div>
@@ -678,7 +678,7 @@ $(document).ready(function(){initNavTree('dd/d61/chi__meshcontinuum__utilities_8
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_c96a5df0caba4cf0e1c155d2b2c84ff3.html">ChiMesh</a></li><li class="navelem"><a class="el" href="../../dir_5471c16954e36930459c1e579b80ddf9.html">MeshContinuum</a></li><li class="navelem"><a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc.html">chi_meshcontinuum_utilities.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_ddc3b5f3d6a507843de0af684742139c.html">mesh</a></li><li class="navelem"><a class="el" href="../../dir_0b9576c1d24032c5a71f261e79e18a8b.html">MeshContinuum</a></li><li class="navelem"><a class="el" href="../../dd/d61/chi__meshcontinuum__utilities_8cc.html">chi_meshcontinuum_utilities.cc</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

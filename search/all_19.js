@@ -7,11 +7,10 @@ var searchData=
   ['ycuts_4',['ycuts',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#af3e2b3f942221bc52081bebbe33f64a4',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS']]],
   ['ycuts_5f_5',['ycuts_',['../df/d7e/classchi__mesh_1_1_surface_mesher.html#a1ed4bbfeb13f7494240a627ff1b61c56',1,'chi_mesh::SurfaceMesher']]],
   ['ylm_6',['Ylm',['../dc/d58/namespacechi__math.html#a9c9dcd08b5ba5ae11f987a038494d6c5',1,'chi_math']]],
-  ['ylmindices_7',['YlmIndices',['../d0/d68/namespacechi__unit__sim__tests.html#ad7eea7395f66a2af289712cdaeaabb02',1,'chi_unit_sim_tests']]],
-  ['ymax_8',['ymax',['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#acf069e314cf0e7ff13d047e8836ecd14',1,'chi_mesh::UnpartitionedMesh::BoundBox']]],
-  ['ymax_9',['YMAX',['../da/dcd/_r_p_p_logical_volume_8cc.html#a610d6ad95b18966b70b6845de2a9c56b',1,'RPPLogicalVolume.cc']]],
-  ['ymax_5f_10',['ymax_',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#a32cd4817fc8b2dd708915b6ecb4b4837',1,'chi_mesh::RPPLogicalVolume']]],
-  ['ymin_11',['ymin',['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abac16fd3161e5380153a454ff94bc146',1,'chi_mesh::UnpartitionedMesh::BoundBox']]],
-  ['ymin_12',['YMIN',['../da/dcd/_r_p_p_logical_volume_8cc.html#aa025181dff552575490c5148a493ff65',1,'RPPLogicalVolume.cc']]],
-  ['ymin_5f_13',['ymin_',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#aeed92742bb05bc5a4872e44fdf9b0f2e',1,'chi_mesh::RPPLogicalVolume']]]
+  ['ymax_7',['ymax',['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#acf069e314cf0e7ff13d047e8836ecd14',1,'chi_mesh::UnpartitionedMesh::BoundBox']]],
+  ['ymax_8',['YMAX',['../da/dcd/_r_p_p_logical_volume_8cc.html#a610d6ad95b18966b70b6845de2a9c56b',1,'RPPLogicalVolume.cc']]],
+  ['ymax_5f_9',['ymax_',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#a32cd4817fc8b2dd708915b6ecb4b4837',1,'chi_mesh::RPPLogicalVolume']]],
+  ['ymin_10',['ymin',['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#abac16fd3161e5380153a454ff94bc146',1,'chi_mesh::UnpartitionedMesh::BoundBox']]],
+  ['ymin_11',['YMIN',['../da/dcd/_r_p_p_logical_volume_8cc.html#aa025181dff552575490c5148a493ff65',1,'RPPLogicalVolume.cc']]],
+  ['ymin_5f_12',['ymin_',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#aeed92742bb05bc5a4872e44fdf9b0f2e',1,'chi_mesh::RPPLogicalVolume']]]
 ];

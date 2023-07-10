@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: framework/ChiPhysics/FieldFunction/ff_gridbased_03b_exportvtkwithappend.cc Source File</title>
+<title>Chi-Tech: framework/physics/FieldFunction/ff_gridbased_03b_exportvtkwithappend.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -98,10 +98,10 @@ $(document).ready(function(){initNavTree('d7/db3/ff__gridbased__03b__exportvtkwi
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">ChiMesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/d9b/chi__grid__vtk__utils_8h.html">ChiMesh/MeshContinuum/chi_grid_vtk_utils.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">mesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/d9b/chi__grid__vtk__utils_8h.html">mesh/MeshContinuum/chi_grid_vtk_utils.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d28/spatial__discretization_8h.html">ChiMath/SpatialDiscretization/spatial_discretization.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d28/spatial__discretization_8h.html">math/SpatialDiscretization/spatial_discretization.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vtkCellData.h&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vtkPointData.h&gt;</span></div>
@@ -128,12 +128,12 @@ $(document).ready(function(){initNavTree('d7/db3/ff__gridbased__03b__exportvtkwi
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; ff_ptr : ff_list)</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">if</span> (ff_ptr != master_ff_ptr)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keywordflow">if</span> (&amp;ff_ptr-&gt;sdm_-&gt;ref_grid_ != &amp;master_ff_ptr-&gt;sdm_-&gt;ref_grid_)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keywordflow">if</span> (&amp;ff_ptr-&gt;sdm_-&gt;Grid() != &amp;master_ff_ptr-&gt;sdm_-&gt;Grid())</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">throw</span> std::logic_error(fname +</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="stringliteral">&quot;: Cannot be used with field functions based on different grids.&quot;</span>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="comment">//============================================= Get grid</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = master_ff.sdm_-&gt;ref_grid_;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = master_ff.sdm_-&gt;Grid();</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">auto</span> ugrid = <a class="code hl_function" href="../../d0/d81/namespacechi__mesh.html#a077ddc34bc37800344bbb3f317005c37">chi_mesh::PrepareVtkUnstructuredGrid</a>(grid);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
@@ -149,7 +149,7 @@ $(document).ready(function(){initNavTree('d7/db3/ff__gridbased__03b__exportvtkwi
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = ff_ptr-&gt;sdm_;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_comps = unknown.NumComponents();</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">for</span> (uint c=0; c&lt;num_comps; ++c)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">for</span> (<a class="code hl_define" href="../../d4/d44/quadrature__gausschebyshev_8cc.html#ad46b2ebcd4c426b06cda147ddc1001e7">uint</a> c=0; c&lt;num_comps; ++c)</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      std::string component_name = ff_ptr-&gt;TextName() +</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                                         unknown.text_name_;</div>
@@ -215,20 +215,21 @@ $(document).ready(function(){initNavTree('d7/db3/ff__gridbased__03b__exportvtkwi
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00076">chi_runtime.h:76</a></div></div>
+<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00078">chi_runtime.h:78</a></div></div>
 <div class="ttc" id="aclasschi_1_1_chi_log_html_aebdb78c9c0fddcc0799c4fc570ff1919"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#aebdb78c9c0fddcc0799c4fc570ff1919">chi::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00035">chi_log.cc:35</a></div></div>
 <div class="ttc" id="aclasschi__physics_1_1_field_function_grid_based_html_a7adb5199f2d3cada3fbc376e17753bc7"><div class="ttname"><a href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a7adb5199f2d3cada3fbc376e17753bc7">chi_physics::FieldFunctionGridBased::ExportMultipleToVTK</a></div><div class="ttdeci">static void ExportMultipleToVTK(const std::string &amp;file_base_name, const FFList &amp;ff_list)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db3/ff__gridbased__03b__exportvtkwithappend_8cc_source.html#l00017">ff_gridbased_03b_exportvtkwithappend.cc:18</a></div></div>
 <div class="ttc" id="aclassvtk_new_html"><div class="ttname"><a href="../../db/ddd/classvtk_new.html">vtkNew</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d9b/chi__grid__vtk__utils_8h_source.html#l00010">chi_grid_vtk_utils.h:10</a></div></div>
 <div class="ttc" id="afieldfunction__gridbased_8h_html"><div class="ttname"><a href="../../d8/d72/fieldfunction__gridbased_8h.html">fieldfunction_gridbased.h</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_a077ddc34bc37800344bbb3f317005c37"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a077ddc34bc37800344bbb3f317005c37">chi_mesh::PrepareVtkUnstructuredGrid</a></div><div class="ttdeci">vtkNew&lt; vtkUnstructuredGrid &gt; PrepareVtkUnstructuredGrid(const chi_mesh::MeshContinuum &amp;grid, bool discontinuous=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d69/chi__grid__vtk__utils__04__writing_8cc_source.html#l00018">chi_grid_vtk_utils_04_writing.cc:19</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_a807675dab75b7ae6777ba6503315b65f"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f">chi_mesh::WritePVTUFiles</a></div><div class="ttdeci">void WritePVTUFiles(vtkNew&lt; vtkUnstructuredGrid &gt; &amp;ugrid, const std::string &amp;file_base_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d69/chi__grid__vtk__utils__04__writing_8cc_source.html#l00071">chi_grid_vtk_utils_04_writing.cc:71</a></div></div>
+<div class="ttc" id="aquadrature__gausschebyshev_8cc_html_ad46b2ebcd4c426b06cda147ddc1001e7"><div class="ttname"><a href="../../d4/d44/quadrature__gausschebyshev_8cc.html#ad46b2ebcd4c426b06cda147ddc1001e7">uint</a></div><div class="ttdeci">#define uint</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d44/quadrature__gausschebyshev_8cc_source.html#l00009">quadrature_gausschebyshev.cc:9</a></div></div>
 <div class="ttc" id="aspatial__discretization_8h_html"><div class="ttname"><a href="../../d6/d28/spatial__discretization_8h.html">spatial_discretization.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_3540ceb2fb222fe1dfafbc0c717f255d.html">ChiPhysics</a></li><li class="navelem"><a class="el" href="../../dir_41c80f95f12a0f49cc3699b3f520ba8c.html">FieldFunction</a></li><li class="navelem"><a class="el" href="../../d7/db3/ff__gridbased__03b__exportvtkwithappend_8cc.html">ff_gridbased_03b_exportvtkwithappend.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_23df29fa212a9a4436a10cf4354a63e7.html">physics</a></li><li class="navelem"><a class="el" href="../../dir_63e9e01c6546b731795a2e5e691e42de.html">FieldFunction</a></li><li class="navelem"><a class="el" href="../../d7/db3/ff__gridbased__03b__exportvtkwithappend_8cc.html">ff_gridbased_03b_exportvtkwithappend.cc</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

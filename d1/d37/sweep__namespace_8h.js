@@ -20,6 +20,6 @@ var sweep__namespace_8h =
     [ "CreateSweepOrder", "d1/d37/sweep__namespace_8h.html#ad90dbc921056b0a05f15ac9cef7c068f", null ],
     [ "PopulateCellRelationships", "d1/d37/sweep__namespace_8h.html#a11bc43e4946af1d091b7929c2a46de8d", null ],
     [ "PrintSweepOrdering", "d1/d37/sweep__namespace_8h.html#a14056bd4d6583fc03ff5400466e173bd", null ],
-    [ "RemoveGlobalCyclicDependencies", "d1/d37/sweep__namespace_8h.html#ad9afacb8ef7ad0b18ef39c13db1dcc81", null ],
-    [ "RemoveLocalCyclicDependencies", "d1/d37/sweep__namespace_8h.html#a08330bb9af1d916d059a549af0982ee8", null ]
+    [ "RemoveGlobalCyclicDependencies", "d1/d37/sweep__namespace_8h.html#a2ec064ccacb45aca5198eb12e9c13a9e", null ],
+    [ "RemoveLocalCyclicDependencies", "d1/d37/sweep__namespace_8h.html#a42f867627bdb105c098fedf0ba5c15f2", null ]
 ];

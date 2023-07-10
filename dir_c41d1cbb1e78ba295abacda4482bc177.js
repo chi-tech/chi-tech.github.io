@@ -1,9 +1,13 @@
 var dir_c41d1cbb1e78ba295abacda4482bc177 =
 [
+    [ "chi__Plugin.h", "d4/d70/chi_____plugin_8h.html", null ],
     [ "chi_math__CrankNicolsonTimeIntegration.h", "d0/d84/chi__math_____crank_nicolson_time_integration_8h.html", null ],
     [ "chi_math__functions__LuaDimAToDimB.h", "da/dd4/chi__math____functions_____lua_dim_a_to_dim_b_8h.html", null ],
     [ "chi_math__functions__PiecewiseLinear1D.h", "dd/d72/chi__math____functions_____piecewise_linear1_d_8h.html", null ],
+    [ "chi_math__Get1DQuadratureData.h", "d2/dfd/chi__math_____get1_d_quadrature_data_8h.html", null ],
     [ "chi_math__ImplicitEulerTimeIntegration.h", "d2/de2/chi__math_____implicit_euler_time_integration_8h.html", null ],
+    [ "chi_math__QuadratureGaussChebyshev.h", "d9/d80/chi__math_____quadrature_gauss_chebyshev_8h.html", null ],
+    [ "chi_math__QuadratureGaussLegendre.h", "d4/dd9/chi__math_____quadrature_gauss_legendre_8h.html", null ],
     [ "chi_math__ThetaSchemeTimeIntegration.h", "dd/d96/chi__math_____theta_scheme_time_integration_8h.html", null ],
     [ "chi_mesh__BooleanLogicalVolume.h", "d6/d8e/chi__mesh_____boolean_logical_volume_8h.html", null ],
     [ "chi_mesh__BooleanLogicalVolumeArgumentPair.h", "d5/d38/chi__mesh_____boolean_logical_volume_argument_pair_8h.html", null ],
@@ -19,9 +23,6 @@ var dir_c41d1cbb1e78ba295abacda4482bc177 =
     [ "chi_physics__field_operations__FieldCopyOperation.h", "d3/de3/chi__physics____field__operations_____field_copy_operation_8h.html", null ],
     [ "chi_physics__field_operations__MultiFieldOperation.h", "d7/d07/chi__physics____field__operations_____multi_field_operation_8h.html", null ],
     [ "chi_physics__FieldFunctionGridBased.h", "db/d04/chi__physics_____field_function_grid_based_8h.html", null ],
-    [ "chi_unit_tests__ChildTestObject.h", "d1/dd8/chi__unit__tests_____child_test_object_8h.html", null ],
-    [ "chi_unit_tests__TestObject.h", "de/df1/chi__unit__tests_____test_object_8h.html", null ],
-    [ "chi_unit_tests__TestSubObject.h", "d5/d90/chi__unit__tests_____test_sub_object_8h.html", null ],
     [ "lbs__BoundaryOptionsBlock.h", "d7/de1/lbs_____boundary_options_block_8h.html", null ],
     [ "lbs__DiffusionDFEMSolver.h", "d6/d58/lbs_____diffusion_d_f_e_m_solver_8h.html", null ],
     [ "lbs__DiscreteOrdinatesAdjointSolver.h", "d4/db7/lbs_____discrete_ordinates_adjoint_solver_8h.html", null ],

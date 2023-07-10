@@ -3,12 +3,13 @@ var namespacechi =
     [ "lua_utils", "d5/d54/namespacechi_1_1lua__utils.html", [
       [ "chiMakeObject", "d5/d54/namespacechi_1_1lua__utils.html#addb2a9b67e9801ffd256da906888e5f2", null ]
     ] ],
-    [ "ChiConsole", "db/d8c/classchi_1_1_chi_console.html", "db/d8c/classchi_1_1_chi_console" ],
     [ "ChiLog", "df/dfa/classchi_1_1_chi_log.html", "df/dfa/classchi_1_1_chi_log" ],
     [ "ChiMPICommunicatorSet", "df/de1/classchi_1_1_chi_m_p_i_communicator_set.html", "df/de1/classchi_1_1_chi_m_p_i_communicator_set" ],
-    [ "ChiTimer", "d7/dc1/classchi_1_1_chi_timer.html", "d7/dc1/classchi_1_1_chi_timer" ],
+    [ "Console", "d9/d52/classchi_1_1_console.html", "d9/d52/classchi_1_1_console" ],
     [ "CSTMemory", "d2/d1b/structchi_1_1_c_s_t_memory.html", "d2/d1b/structchi_1_1_c_s_t_memory" ],
+    [ "DirectedGraph", "d3/dcf/classchi_1_1_directed_graph.html", "d3/dcf/classchi_1_1_directed_graph" ],
     [ "DummyStream", "dd/d10/structchi_1_1_dummy_stream.html", "dd/d10/structchi_1_1_dummy_stream" ],
+    [ "GraphVertex", "d6/d39/structchi_1_1_graph_vertex.html", "d6/d39/structchi_1_1_graph_vertex" ],
     [ "InputParameters", "d8/d4d/classchi_1_1_input_parameters.html", "d8/d4d/classchi_1_1_input_parameters" ],
     [ "LogStream", "d8/d75/classchi_1_1_log_stream.html", "d8/d75/classchi_1_1_log_stream" ],
     [ "Material", "df/dbe/classchi_1_1_material.html", "df/dbe/classchi_1_1_material" ],
@@ -16,6 +17,9 @@ var namespacechi =
     [ "MaterialPropertyScalarFuncXYZTV", "da/dd5/classchi_1_1_material_property_scalar_func_x_y_z_t_v.html", "da/dd5/classchi_1_1_material_property_scalar_func_x_y_z_t_v" ],
     [ "MPI_Info", "d1/d0b/classchi_1_1_m_p_i___info.html", "d1/d0b/classchi_1_1_m_p_i___info" ],
     [ "ParameterBlock", "d5/d1c/classchi_1_1_parameter_block.html", "d5/d1c/classchi_1_1_parameter_block" ],
+    [ "Plugin", "de/de1/classchi_1_1_plugin.html", "de/de1/classchi_1_1_plugin" ],
+    [ "RegistryStatuses", "d6/d73/structchi_1_1_registry_statuses.html", "d6/d73/structchi_1_1_registry_statuses" ],
+    [ "Timer", "dc/dea/classchi_1_1_timer.html", "dc/dea/classchi_1_1_timer" ],
     [ "SFXYZV", "dc/d67/namespacechi.html#a35dc06af782b51dc38157c208514178b", null ],
     [ "InputParameterTag", "dc/d67/namespacechi.html#a9355475cc63c20acacdc1328c56ae1d4", [
       [ "NONE", "dc/d67/namespacechi.html#a9355475cc63c20acacdc1328c56ae1d4ab50339a10e1de285ac99d4c3990b8693", null ],
@@ -45,10 +49,19 @@ var namespacechi =
       [ "FG_WHITE", "dc/d67/namespacechi.html#ad18e96a1e9be7b1612c55fa705297cecad0b19151cdb608857097324537c0b06b", null ],
       [ "FG_DEFAULT", "dc/d67/namespacechi.html#ad18e96a1e9be7b1612c55fa705297ceca6846f5d70710154fa911e3ce6dfda86f", null ]
     ] ],
+    [ "AssertReadibleFile", "dc/d67/namespacechi.html#a92ca8165fbb2261304b32d387b2a9031", null ],
     [ "ParameterBlockTypeName", "dc/d67/namespacechi.html#a8acba8c7242efe8cc66ac529f0bcba05", null ],
+    [ "PrintIterationProgress", "dc/d67/namespacechi.html#a70490a378cc0a0c2a95b7446a262bc7d", null ],
+    [ "RegisterChiObject", "dc/d67/namespacechi.html#aa5ae2ae3d43530e36b243a043210ba63", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#ac43f2a379c6f0a386a6d22cf698299e9", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#a501f853f6f8f9b7bca6d19174ff518ad", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#a9db089eeb2b89965016f630f9c94c3c5", null ],
-    [ "RegisterLuaFunction", "dc/d67/namespacechi.html#a2969347f9529d90aef87371238c3438b", null ],
-    [ "StringStreamColor", "dc/d67/namespacechi.html#ac72a94e7042b413617898038e39c62c6", null ]
+    [ "RegisterLuaFunction", "dc/d67/namespacechi.html#a427ae5955440fb74c9da535def8b12ec", null ],
+    [ "StringLTrim", "dc/d67/namespacechi.html#aa6cf7680f830a2854f447c2630e6c811", null ],
+    [ "StringRTrim", "dc/d67/namespacechi.html#aeda8c2eb2770d1543c822715d735eb61", null ],
+    [ "StringSplit", "dc/d67/namespacechi.html#aaf0ea3aa60fef66e754f0101050a5f71", null ],
+    [ "StringStreamColor", "dc/d67/namespacechi.html#ac72a94e7042b413617898038e39c62c6", null ],
+    [ "StringTrim", "dc/d67/namespacechi.html#aee7b8228cd67512806649040558a5767", null ],
+    [ "StringUpToFirstReverse", "dc/d67/namespacechi.html#a1a2b9ab3ec4633dc3b163df85dfc11c8", null ],
+    [ "WHITESPACE", "dc/d67/namespacechi.html#a75b6d031b71ff8c8bb8b8828e642e6d9", null ]
 ];

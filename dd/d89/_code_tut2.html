@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('dd/d89/_code_tut2.html','../../'); ini
 <h1><a class="anchor" id="CodeTut2Sec3"></a>
 3 Making a ghosted vector and communicating ghosted data</h1>
 <p >Ghost value communication is handled via a <code><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html">chi_math::VectorGhostCommunicator</a></code> object. These objects require quite a bit of MPI communication during initializing but thereafter can be re-used efficiently on different vectors (as long as they share the intended structure of the ghost-communicator).</p>
-<p >In order to gain access to <code><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html">chi_math::VectorGhostCommunicator</a></code> we first include the header </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d7b/vector__ghost__communicator_8h.html">ChiMath/VectorGhostCommunicator/vector_ghost_communicator.h</a>&quot;</span></div>
+<p >In order to gain access to <code><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html">chi_math::VectorGhostCommunicator</a></code> we first include the header </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d7b/vector__ghost__communicator_8h.html">math/VectorGhostCommunicator/vector_ghost_communicator.h</a>&quot;</span></div>
 <div class="ttc" id="avector__ghost__communicator_8h_html"><div class="ttname"><a href="../../df/d7b/vector__ghost__communicator_8h.html">vector_ghost_communicator.h</a></div></div>
 </div><!-- fragment --><p >Next we add the following code: </p><div class="fragment"><div class="line"><span class="comment">//============================================= Make ghosted vectors</span></div>
 <div class="line">std::vector&lt;int64_t&gt; ghost_ids = sdm.GetGhostDOFIndices(OneDofPerNode);</div>
@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('dd/d89/_code_tut2.html','../../'); ini
 <div class="line">std::vector&lt;double&gt; field_wg = vgc.MakeGhostedVector(field);</div>
 <div class="line"> </div>
 <div class="line">vgc.CommunicateGhostEntries(field_wg);</div>
-<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00073">chi_runtime.h:73</a></div></div>
+<div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00075">chi_runtime.h:75</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_vector_ghost_communicator_html"><div class="ttname"><a href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html">chi_math::VectorGhostCommunicator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00014">vector_ghost_communicator.h:15</a></div></div>
 </div><!-- fragment --><p> The first item on the agenda is "what ghost data to include in a local vector?". To obtain the relevant ghost DOF-ids we ask the SD to provide us with the necessary information with a call to <code><a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#a0582b126ad52631de0a67e3378867dde">chi_math::SpatialDiscretization::GetGhostDOFIndices</a></code>. Note this routine requires as a parameter a structure of unknowns, which is why we supply the configuration <code>OneDofPerNode</code>.</p>
 <p >Next we construct the <code><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html">chi_math::VectorGhostCommunicator</a></code>. The constructor of this object requires the number of local DOFs, the number of global DOFs, and the global-ids of the ghosted data. Finally a communicator specification is required. The construction of this object initializes data structures that will make repeated communications very efficient.</p>
@@ -246,15 +246,15 @@ The complete program</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d98/chi__meshhandler_8h.html">ChiMesh/MeshHandler/chi_meshhandler.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">ChiMesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d98/chi__meshhandler_8h.html">mesh/MeshHandler/chi_meshhandler.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">mesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../de/d50/fv_8h.html">ChiMath/SpatialDiscretization/FiniteVolume/fv.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../da/d0e/petsc__utils_8h.html">ChiMath/PETScUtils/petsc_utils.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../de/d50/fv_8h.html">math/SpatialDiscretization/FiniteVolume/fv.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../da/d0e/petsc__utils_8h.html">math/PETScUtils/petsc_utils.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;ChiPhysics/FieldFunction/fieldfunction2.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;physics/FieldFunction/fieldfunction2.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d7b/vector__ghost__communicator_8h.html">ChiMath/VectorGhostCommunicator/vector_ghost_communicator.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d7b/vector__ghost__communicator_8h.html">math/VectorGhostCommunicator/vector_ghost_communicator.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line">{</div>

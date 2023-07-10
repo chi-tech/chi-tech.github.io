@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['objectconstructorfunc_0',['ObjectConstructorFunc',['../d9/d3b/class_chi_object_maker.html#a0007b99a6e40593ff884a454104ed012',1,'ChiObjectMaker']]],
-  ['objectgetinparamsfunc_1',['ObjectGetInParamsFunc',['../d9/d3b/class_chi_object_maker.html#ac9289e4dc5c00af6e0e9450fe18a5faa',1,'ChiObjectMaker']]],
-  ['objectptr_2',['ObjectPtr',['../d9/d3b/class_chi_object_maker.html#a96a2942294f50587d9569a7be34e4b32',1,'ChiObjectMaker']]]
+  ['objectconstructorfunc_0',['ObjectConstructorFunc',['../d4/dbb/class_chi_object_factory.html#ae1ff4750a4bdd277e5cf4b4ea41e01c9',1,'ChiObjectFactory']]],
+  ['objectgetinparamsfunc_1',['ObjectGetInParamsFunc',['../d4/dbb/class_chi_object_factory.html#a0bac4252fdf085421acd2161b6c07d4f',1,'ChiObjectFactory']]],
+  ['objectptr_2',['ObjectPtr',['../d4/dbb/class_chi_object_factory.html#aaaeea984badb785f94ab910cb312ecce',1,'ChiObjectFactory']]]
 ];

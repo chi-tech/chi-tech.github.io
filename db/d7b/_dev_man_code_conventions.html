@@ -112,7 +112,7 @@ File names</h2>
 <li>In general, make your filenames very specific. For example, use <code>http_server_logs.h</code> rather than <code>logs.h</code>. A very common case is to have a pair of files called, e.g., <code>foo_bar.h</code> and <code>foo_bar.cc</code>, defining a class called <code>FooBar</code></li>
 <li>Header files have a <code>.h</code> extension, c/c++ code files have a <code>.cc</code> extension.</li>
 <li>Classes and Categorical functions should be contained in their own folder unless they are simple.</li>
-<li>Folder depth shall be kept to a minimum and not exceed a depth of 3 sub-levels unless very well justified, i.e. <code>ChiMath/Discretization/PWL</code></li>
+<li>Folder depth shall be kept to a minimum and not exceed a depth of 3 sub-levels unless very well justified, i.e. <code>math/Discretization/PWL</code></li>
 <li>Within a class folder the class declaration must be contained in its own header file. Exceptions to this are allowed for templates and in-line functions</li>
 <li>When the member methods/functions become very large, consider functionally splitting them. I.e. use:<ul>
 <li>classname_00_constrdestr.cc for the constructor and destructor</li>
@@ -207,7 +207,7 @@ Constants and Enumerators</h2>
 </div><!-- fragment --><h2><a class="anchor" id="devman1_sec0_5"></a>
 Comments</h2>
 <p >Be consistent in using comments. Comments should be clear and concise and convey the algorithm. Every class, structure or function should be supplied with doxygen comment styles at the top of the item.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;ChiLua/chi_lua.h&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;chi_lua.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;../Solver/diffusion_solver.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
@@ -220,9 +220,9 @@ Comments</h2>
 <div class="line"><span class="comment">\return Success bool Returns if initialization failed.</span></div>
 <div class="line"><span class="comment">\ingroup LuaDiffusion</span></div>
 <div class="line"><span class="comment">\author Jan*/</span></div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#gaafc0819e34c8bdad070c5b3dcbf25e46">chiDiffusionExecute</a>(lua_State *L)</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#aafc0819e34c8bdad070c5b3dcbf25e46">chiDiffusionExecute</a>(lua_State *<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>)</div>
 <div class="line">{</div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> solver_index = lua_tonumber(L,1);</div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> solver_index = lua_tonumber(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>,1);</div>
 <div class="line">  <span class="keyword">auto</span>&amp; solver = Chi::GetStackItem&lt;chi_diffusion::Solver&gt;(</div>
 <div class="line">    <a class="code hl_variable" href="../../d7/dd7/class_chi.html#a8ed25422d8eb407bb9432aeabff2cf20">Chi::object_stack</a>,</div>
 <div class="line">                                       solver_index, __FUNCTION__);</div>
@@ -232,11 +232,12 @@ Comments</h2>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclass_chi_html_a8ed25422d8eb407bb9432aeabff2cf20"><div class="ttname"><a href="../../d7/dd7/class_chi.html#a8ed25422d8eb407bb9432aeabff2cf20">Chi::object_stack</a></div><div class="ttdeci">static std::vector&lt; ChiObjectPtr &gt; object_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00092">chi_runtime.h:92</a></div></div>
-<div class="ttc" id="agroup___lua_diffusion_html_gaafc0819e34c8bdad070c5b3dcbf25e46"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#gaafc0819e34c8bdad070c5b3dcbf25e46">chi_lua::chiDiffusionExecute</a></div><div class="ttdeci">Success chiDiffusionExecute(int SolverHandle)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l04579">lua_functions.c:4579</a></div></div>
+<div class="ttc" id="aclass_chi_html_a8ed25422d8eb407bb9432aeabff2cf20"><div class="ttname"><a href="../../d7/dd7/class_chi.html#a8ed25422d8eb407bb9432aeabff2cf20">Chi::object_stack</a></div><div class="ttdeci">static std::vector&lt; ChiObjectPtr &gt; object_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00093">chi_runtime.h:93</a></div></div>
+<div class="ttc" id="anamespacechi__lua_html_a6e3d009455d0e5113e4ffbc28269e724"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">chi_lua::L</a></div><div class="ttdeci">void L</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02222">lua_functions.c:2222</a></div></div>
+<div class="ttc" id="anamespacechi__lua_html_aafc0819e34c8bdad070c5b3dcbf25e46"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#aafc0819e34c8bdad070c5b3dcbf25e46">chi_lua::chiDiffusionExecute</a></div><div class="ttdeci">Success chiDiffusionExecute(int SolverHandle)</div></div>
 </div><!-- fragment --><h2>Annotating Class-declerations:</h2>
 <p ><b>MAXIMIZE SCOPE MINIMIZE SPACE</b>. Class declerations must always happen within header files and should aim to provide the maximum amount of scope <b>within the minimum amount of vertical space.</b> Member variables/structures should be on the top portion of the class decleration and methods should be on the bottom.</p>
-<div class="fragment"></div><!-- fragment --><h1><a class="anchor" id="devman1_sec1"></a>
+<h1><a class="anchor" id="devman1_sec1"></a>
 Header files</h1>
 <ul>
 <li>Avoid using header files for code definition. Use only for struct/class/function declaration</li>

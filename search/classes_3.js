@@ -4,7 +4,7 @@ var searchData=
   ['diffusionmipsolver_1',['DiffusionMIPSolver',['../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html',1,'lbs::acceleration']]],
   ['diffusionpwlcsolver_2',['DiffusionPWLCSolver',['../df/dff/classlbs_1_1acceleration_1_1_diffusion_p_w_l_c_solver.html',1,'lbs::acceleration']]],
   ['diffusionsolver_3',['DiffusionSolver',['../d2/d51/classlbs_1_1acceleration_1_1_diffusion_solver.html',1,'lbs::acceleration']]],
-  ['directedgraph_4',['DirectedGraph',['../dc/d15/classchi__graph_1_1_directed_graph.html',1,'chi_graph']]],
+  ['directedgraph_4',['DirectedGraph',['../d3/dcf/classchi_1_1_directed_graph.html',1,'chi']]],
   ['discordtransientsolver_5',['DiscOrdTransientSolver',['../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html',1,'lbs']]],
   ['discreteordinatesadjointsolver_6',['DiscreteOrdinatesAdjointSolver',['../dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html',1,'lbs']]],
   ['discreteordinatescurvilinearsolver_7',['DiscreteOrdinatesCurvilinearSolver',['../d6/d33/classlbs_1_1_discrete_ordinates_curvilinear_solver.html',1,'lbs']]],

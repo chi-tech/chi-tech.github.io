@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: framework/ChiMesh/FieldFunctionInterpolation/Line/chi_ffinter_line_initialize.cc Source File</title>
+<title>Chi-Tech: framework/mesh/FieldFunctionInterpolation/Line/chi_ffinter_line_initialize.cc Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -95,11 +95,11 @@ $(document).ready(function(){initNavTree('df/dcc/chi__ffinter__line__initialize_
 <div class="contents">
 <a href="../../df/dcc/chi__ffinter__line__initialize_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d72/chi__ffinter__line_8h.html">chi_ffinter_line.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/ddd/cell_8h.html">ChiMesh/Cell/cell.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/ddd/cell_8h.html">mesh/Cell/cell.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/d72/fieldfunction__gridbased_8h.html">ChiPhysics/FieldFunction/fieldfunction_gridbased.h</a>&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d28/spatial__discretization_8h.html">ChiMath/SpatialDiscretization/spatial_discretization.h</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">ChiMesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/d72/fieldfunction__gridbased_8h.html">physics/FieldFunction/fieldfunction_gridbased.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d28/spatial__discretization_8h.html">math/SpatialDiscretization/spatial_discretization.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">mesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('df/dcc/chi__ffinter__line__initialize_
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    ff_context.ref_ff = <a class="code hl_variable" href="../../d5/dd4/classchi__mesh_1_1_field_function_interpolation.html#a370357a8a421df7e189392b6dd82bfa9">field_functions_</a>[ff];</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = ff_context.ref_ff-&gt;SDM();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = sdm.ref_grid_;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = sdm.Grid();</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    ff_context.interpolation_points_ass_cell.assign(<a class="code hl_variable" href="../../d5/d14/classchi__mesh_1_1_field_function_interpolation_line.html#ae9c324f22e214897bc54a0afce2e79ed">number_of_points_</a>, 0);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    ff_context.interpolation_points_has_ass_cell.assign(<a class="code hl_variable" href="../../d5/d14/classchi__mesh_1_1_field_function_interpolation_line.html#ae9c324f22e214897bc54a0afce2e79ed">number_of_points_</a>, <span class="keyword">false</span>);</div>
@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('df/dcc/chi__ffinter__line__initialize_
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00076">chi_runtime.h:76</a></div></div>
+<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00078">chi_runtime.h:78</a></div></div>
 <div class="ttc" id="aclasschi_1_1_chi_log_html_af6279a3e5e14a0801d1f7dd27616be1c"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#af6279a3e5e14a0801d1f7dd27616be1c">chi::ChiLog::Log0Verbose1</a></div><div class="ttdeci">LogStream Log0Verbose1()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00223">chi_log.h:223</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_field_function_interpolation_html_a370357a8a421df7e189392b6dd82bfa9"><div class="ttname"><a href="../../d5/dd4/classchi__mesh_1_1_field_function_interpolation.html#a370357a8a421df7e189392b6dd82bfa9">chi_mesh::FieldFunctionInterpolation::field_functions_</a></div><div class="ttdeci">std::vector&lt; chi_physics::FieldFunctionGridBasedPtr &gt; field_functions_</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d18/chi__ffinterpolation_8h_source.html#l00063">chi_ffinterpolation.h:63</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_field_function_interpolation_line_html_a4618bc86704b1f6c0c427bdb5b652931"><div class="ttname"><a href="../../d5/d14/classchi__mesh_1_1_field_function_interpolation_line.html#a4618bc86704b1f6c0c427bdb5b652931">chi_mesh::FieldFunctionInterpolationLine::delta_d_</a></div><div class="ttdeci">double delta_d_</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d72/chi__ffinter__line_8h_source.html#l00035">chi_ffinter_line.h:35</a></div></div>
@@ -183,7 +183,7 @@ $(document).ready(function(){initNavTree('df/dcc/chi__ffinter__line__initialize_
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_c96a5df0caba4cf0e1c155d2b2c84ff3.html">ChiMesh</a></li><li class="navelem"><a class="el" href="../../dir_a72f26602bc41b3df9b9e9ae80910712.html">FieldFunctionInterpolation</a></li><li class="navelem"><a class="el" href="../../dir_5b88ba6540333b061c41bb4754115082.html">Line</a></li><li class="navelem"><a class="el" href="../../df/dcc/chi__ffinter__line__initialize_8cc.html">chi_ffinter_line_initialize.cc</a></li>
+    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_ddc3b5f3d6a507843de0af684742139c.html">mesh</a></li><li class="navelem"><a class="el" href="../../dir_ecc5dde3455a77167b18ba731c1e98c8.html">FieldFunctionInterpolation</a></li><li class="navelem"><a class="el" href="../../dir_4ae85498520f5fe45c403f7776f6b53a.html">Line</a></li><li class="navelem"><a class="el" href="../../df/dcc/chi__ffinter__line__initialize_8cc.html">chi_ffinter_line_initialize.cc</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

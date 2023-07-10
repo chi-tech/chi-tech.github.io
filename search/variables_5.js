@@ -48,8 +48,8 @@ var searchData=
   ['front_5fwgs_5fsolver_5f_45',['front_wgs_solver_',['../dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#aee39a29d15354f35e42baf24acee6def',1,'lbs::XXPowerIterationKEigen']]],
   ['function_5f_46',['function_',['../da/dd5/classchi_1_1_material_property_scalar_func_x_y_z_t_v.html#a6e98fe7538f4dbb4f8ab703fa60d23fa',1,'chi::MaterialPropertyScalarFuncXYZTV']]],
   ['function_5fhandle_5f_47',['function_handle_',['../de/d28/classchi__physics_1_1field__operations_1_1_multi_field_operation.html#aa5023610c9d7df165d6bd423a567fa17',1,'chi_physics::field_operations::MultiFieldOperation']]],
-  ['function_5fptr_48',['function_ptr',['../dc/d64/structchi_1_1_chi_console_1_1_lua_function_registry_entry.html#a3dc7eb348075e9663c53f037c8505ccf',1,'chi::ChiConsole::LuaFunctionRegistryEntry']]],
+  ['function_5fptr_48',['function_ptr',['../d8/dbc/structchi_1_1_console_1_1_lua_function_registry_entry.html#a592fc8f8ea078140c0abfc3834ff68c7',1,'chi::Console::LuaFunctionRegistryEntry']]],
   ['function_5fptr_5f_49',['function_ptr_',['../de/d28/classchi__physics_1_1field__operations_1_1_multi_field_operation.html#a927d2751e75547fe73352130bdb2482d',1,'chi_physics::field_operations::MultiFieldOperation']]],
-  ['function_5fraw_5fname_50',['function_raw_name',['../dc/d64/structchi_1_1_chi_console_1_1_lua_function_registry_entry.html#a9f0029c786b764fec4cca10acb47e341',1,'chi::ChiConsole::LuaFunctionRegistryEntry']]],
-  ['function_5fwrapper_5fregistry_5f_51',['function_wrapper_registry_',['../db/d8c/classchi_1_1_chi_console.html#a80fd1018393e866c9a8c9c6de63faaf2',1,'chi::ChiConsole']]]
+  ['function_5fraw_5fname_50',['function_raw_name',['../d8/dbc/structchi_1_1_console_1_1_lua_function_registry_entry.html#ac2cfb1f6b82f6e1f13e9fe392ebb789e',1,'chi::Console::LuaFunctionRegistryEntry']]],
+  ['function_5fwrapper_5fregistry_5f_51',['function_wrapper_registry_',['../d9/d52/classchi_1_1_console.html#a3e8c89450a7cb41ae266c6603ae606c7',1,'chi::Console']]]
 ];

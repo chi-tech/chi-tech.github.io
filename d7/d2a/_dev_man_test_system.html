@@ -147,17 +147,17 @@ $(document).ready(function(){initNavTree('d7/d2a/_dev_man_test_system.html','../
 <div class="line">├── example_test.cc</div>
 <div class="line">└── YTests.json</div>
 </div><!-- fragment --><p> Here we have <code>example_test.lua</code> that contains only a single line: </p><div class="fragment"><div class="line">chi_unit_tests.ExampleTest()</div>
-</div><!-- fragment --><p> which executes a wrapped function defined in <code>example_test.cc</code> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">ChiConsole/chi_console.h</a>&quot;</span></div>
+</div><!-- fragment --><p> which executes a wrapped function defined in <code>example_test.cc</code> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d6d/chi__console_8h.html">console/chi_console.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dd/dbc/namespacechi__unit__tests.html">chi_unit_tests</a></div>
+<div class="line"><span class="keyword">namespace </span>chi_unit_tests</div>
 <div class="line">{</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_class" href="../../d5/d1c/classchi_1_1_parameter_block.html">chi::ParameterBlock</a> ExampleTest(<span class="keyword">const</span> <a class="code hl_class" href="../../d8/d4d/classchi_1_1_input_parameters.html">chi::InputParameters</a>&amp;);</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_define" href="../../d2/d6d/chi__console_8h.html#ae20c3ee4abcf6989e135ef1628b23e54">RegisterWrapperFunction</a>(<span class="comment">/*namespace_name=*/</span><a class="code hl_namespace" href="../../dd/dbc/namespacechi__unit__tests.html">chi_unit_tests</a>,</div>
+<div class="line"><a class="code hl_define" href="../../d2/d6d/chi__console_8h.html#ae20c3ee4abcf6989e135ef1628b23e54">RegisterWrapperFunction</a>(<span class="comment">/*namespace_name=*/</span>chi_unit_tests,</div>
 <div class="line">                        <span class="comment">/*name_in_lua=*/</span>ExampleTest,</div>
 <div class="line">                        <span class="comment">/*syntax_function=*/</span><span class="keyword">nullptr</span>,</div>
 <div class="line">                        <span class="comment">/*actual_function=*/</span>ExampleTest);</div>
@@ -174,11 +174,10 @@ $(document).ready(function(){initNavTree('d7/d2a/_dev_man_test_system.html','../
 <div class="ttc" id="achi__console_8h_html_ae20c3ee4abcf6989e135ef1628b23e54"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html#ae20c3ee4abcf6989e135ef1628b23e54">RegisterWrapperFunction</a></div><div class="ttdeci">#define RegisterWrapperFunction( namespace_name, name_in_lua, syntax_function, actual_function)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00069">chi_console.h:69</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00076">chi_runtime.h:76</a></div></div>
+<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00078">chi_runtime.h:78</a></div></div>
 <div class="ttc" id="aclasschi_1_1_chi_log_html_aebdb78c9c0fddcc0799c4fc570ff1919"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#aebdb78c9c0fddcc0799c4fc570ff1919">chi::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00035">chi_log.cc:35</a></div></div>
 <div class="ttc" id="aclasschi_1_1_input_parameters_html"><div class="ttname"><a href="../../d8/d4d/classchi_1_1_input_parameters.html">chi::InputParameters</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d24/input__parameters_8h_source.html#l00022">input_parameters.h:23</a></div></div>
 <div class="ttc" id="aclasschi_1_1_parameter_block_html"><div class="ttname"><a href="../../d5/d1c/classchi_1_1_parameter_block.html">chi::ParameterBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd2/parameter__block_8h_source.html#l00038">parameter_block.h:39</a></div></div>
-<div class="ttc" id="anamespacechi__unit__tests_html"><div class="ttname"><a href="../../dd/dbc/namespacechi__unit__tests.html">chi_unit_tests</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d4e/test__00__chi__math_8cc_source.html#l00010">test_00_chi_math.cc:11</a></div></div>
 </div><!-- fragment --><p >The <code>YTests.json</code> has the following syntax: </p><div class="fragment"><div class="line">[</div>
 <div class="line">  {</div>
 <div class="line">    &quot;comment&quot; : &quot;Example test configuration&quot;,</div>
@@ -287,7 +286,7 @@ Parameters:</p><ul>
 <div class="line">                      then copy Input.lua.out from the out/ directory and use that as the gold.</div>
 <div class="line">[Python error] = A python error occurred. Run with -v 1 to see the error.</div>
 <div class="line"> </div>
-<div class="line">[ 1]test/framework/<a class="code hl_namespace" href="../../d8/def/namespacechi__misc__utils.html">chi_misc_utils</a>/chi_misc_utils_test_00.lua......................................................Passed</div>
+<div class="line">[ 1]test/framework/chi_misc_utils/chi_misc_utils_test_00.lua......................................................Passed</div>
 <div class="line">[ 1]test/framework/parameters/params_test_00.lua..................................................................Passed</div>
 <div class="line">[ 1]test/framework/parameters/params_test_01a.lua.................................................................Passed</div>
 <div class="line">[ 1]test/framework/parameters/params_test_01b.lua.................................................................Passed</div>
@@ -301,9 +300,8 @@ Parameters:</p><ul>
 <div class="line">[ 4]test/framework/tutorials/pwlc_test1.lua.......................................................................Passed</div>
 <div class="line">[ 1]test/framework/<a class="code hl_namespace" href="../../dc/d58/namespacechi__math.html">chi_math</a>/chi_math_test_00.lua..................................................................Passed</div>
 <div class="ttc" id="anamespacechi__data__types_html"><div class="ttname"><a href="../../d5/d1b/namespacechi__data__types.html">chi_data_types</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/allowable__range_8h_source.html#l00010">allowable_range.h:11</a></div></div>
-<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00044">chi_runtime.h:45</a></div></div>
+<div class="ttc" id="anamespacechi__math_html"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html">chi_math</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00041">chi_runtime.h:42</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00012">chi_runtime.h:13</a></div></div>
-<div class="ttc" id="anamespacechi__misc__utils_html"><div class="ttname"><a href="../../d8/def/namespacechi__misc__utils.html">chi_misc_utils</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d38/chi__misc__utils_8cc_source.html#l00003">chi_misc_utils.cc:4</a></div></div>
 </div><!-- fragment --><p> The <code>run_tests</code> script can be executed on any folder within the <code>test</code> directory. This is a really great feature, it means that you can restrict your testing to specific areas of the code. For example, if you know you only made changes to a specific module then there is no need to rerun the framework tests.</p>
 <p >The <code>run_tests</code> has a number of useful arguments: </p><pre class="fragment">options:
   -h, --help            show this help message and exit

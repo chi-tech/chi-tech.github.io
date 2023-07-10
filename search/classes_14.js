@@ -6,7 +6,7 @@ var searchData=
   ['vector3_3',['Vector3',['../dd/d54/structchi__mesh_1_1_vector3.html',1,'chi_mesh']]],
   ['vectorghostcommunicator_4',['VectorGhostCommunicator',['../d1/db0/classchi__math_1_1_vector_ghost_communicator.html',1,'chi_math']]],
   ['vectornx_5',['VectorNX',['../d5/d8e/structchi__math_1_1_vector_n_x.html',1,'chi_math']]],
-  ['vertexaccessor_6',['VertexAccessor',['../df/d1e/classchi__graph_1_1_directed_graph_1_1_vertex_accessor.html',1,'chi_graph::DirectedGraph']]],
+  ['vertexaccessor_6',['VertexAccessor',['../d2/d77/classchi_1_1_directed_graph_1_1_vertex_accessor.html',1,'chi::DirectedGraph']]],
   ['vertexhandler_7',['VertexHandler',['../d1/d59/classchi__mesh_1_1_vertex_handler.html',1,'chi_mesh']]],
   ['volume_5fmesher_5foptions_8',['VOLUME_MESHER_OPTIONS',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html',1,'chi_mesh::VolumeMesher']]],
   ['volumemesher_9',['VolumeMesher',['../de/df0/classchi__mesh_1_1_volume_mesher.html',1,'chi_mesh']]],
