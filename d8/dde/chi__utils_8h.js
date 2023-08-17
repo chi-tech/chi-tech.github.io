@@ -7,5 +7,6 @@ var chi__utils_8h =
     [ "StringSplit", "d8/dde/chi__utils_8h.html#aaf0ea3aa60fef66e754f0101050a5f71", null ],
     [ "StringTrim", "d8/dde/chi__utils_8h.html#aee7b8228cd67512806649040558a5767", null ],
     [ "StringUpToFirstReverse", "d8/dde/chi__utils_8h.html#a1a2b9ab3ec4633dc3b163df85dfc11c8", null ],
+    [ "VectorListHas", "d8/dde/chi__utils_8h.html#ab637b96af60c5711b7e6b4ec0ca38e83", null ],
     [ "WHITESPACE", "d8/dde/chi__utils_8h.html#a75b6d031b71ff8c8bb8b8828e642e6d9", null ]
 ];

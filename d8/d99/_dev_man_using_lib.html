@@ -196,7 +196,7 @@ Step 2 - Create a source file</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;chi_lua.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;chi::log.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> chiPrintStatus(lua_State *<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>)</div>
+<div class="line"><span class="keywordtype">int</span> chiPrintStatus(lua_State *L)</div>
 <div class="line">{</div>
 <div class="line">    ChiLog&amp; log = ChiLog::GetInstance();</div>
 <div class="line"> </div>
@@ -204,7 +204,6 @@ Step 2 - Create a source file</h2>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacechi__lua_html_a6e3d009455d0e5113e4ffbc28269e724"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">chi_lua::L</a></div><div class="ttdeci">void L</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02222">lua_functions.c:2222</a></div></div>
 </div><!-- fragment --><h2>_</h2>
 <h2><a class="anchor" id="devman01_03_03a"></a>
 Step 3 - Modify the CMakeLists.txt file to compile this code</h2>
@@ -240,7 +239,7 @@ Step 4 - Modify test.cc to register the lua function</h2>
 <div class="line"> </div>
 <div class="line">    ChiConsole&amp; console = ChiConsole::GetInstance();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> <a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a> = console.consoleState;</div>
+<div class="line">    <span class="keyword">auto</span> L = console.consoleState;</div>
 <div class="line"><span class="preprocessor">    #include &quot;ChiMacros/lua_register_macro.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line">    RegisterFunction(chiPrintStatus);</div>
@@ -254,7 +253,7 @@ Step 4 - Modify test.cc to register the lua function</h2>
 </div><!-- fragment --><p >Next we obtained a reference to the console through</p>
 <div class="fragment"><div class="line">ChiConsole&amp; console = ChiConsole::GetInstance();</div>
 </div><!-- fragment --><p >We then setup the variable <code>L</code>, which is needed by the macro file <code>ChiMacros/lua_register_macro.h</code>.</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a> = console.consoleState;</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> L = console.consoleState;</div>
 <div class="line"><span class="preprocessor">#include &quot;ChiMacros/lua_register_macro.h&quot;</span></div>
 </div><!-- fragment --><p >This macro file exposes numerous lua macros, one of which is the <code>RegisterFunction(x)</code> macro where we will supply the <code>x</code> as the function call we defined earlier:</p>
 <div class="fragment"><div class="line">RegisterFunction(chiPrintStatus);</div>

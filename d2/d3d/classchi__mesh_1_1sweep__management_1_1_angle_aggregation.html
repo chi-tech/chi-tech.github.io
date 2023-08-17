@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('d2/d3d/classchi__mesh_1_1sweep__manage
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a905012a0575c46c672d8bd9f852bdd04"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../d1/df2/angleset_8h.html#a66cfad4bf0e864e6fea723efe64d5d0b">SweepBndry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a905012a0575c46c672d8bd9f852bdd04">SweepBndryPtr</a></td></tr>
+<tr class="memitem:a905012a0575c46c672d8bd9f852bdd04"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../dc/d47/_angle_set_8h.html#a66cfad4bf0e864e6fea723efe64d5d0b">SweepBndry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a905012a0575c46c672d8bd9f852bdd04">SweepBndryPtr</a></td></tr>
 <tr class="separator:a905012a0575c46c672d8bd9f852bdd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -167,7 +167,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Angle aggregation has to cater for running the 8 corners of a 3D partitioning, the 4 corners of a 2D partitioning (the latter 2 both being polar angle aggregation) as well as single angle aggregation.</p>
-<p >At the most fundamental level this manifests as a number of angle indices that share a <a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a>, however <a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> do not have to be unique which allows the notion of polar angle sets. For single angle aggregation each <a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> is associated with a single angle index. For polar angle aggregation a single <a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> can have multiple indices associated with the same azimuthal angle but different polar angles. We call this manifestation a "AngleSet".</p>
+<p >At the most fundamental level this manifests as a number of angle indices that share a <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a>, however <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> do not have to be unique which allows the notion of polar angle sets. For single angle aggregation each <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> is associated with a single angle index. For polar angle aggregation a single <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> can have multiple indices associated with the same azimuthal angle but different polar angles. We call this manifestation a "AngleSet".</p>
 <p >The octant based separation is achieved via the notion of "AngleSetGroup" which will group angle sets for each quadrant or octant (depending on 2D or 3D). </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d7a/angleaggregation_8h_source.html#l00028">28</a> of file <a class="el" href="../../d1/d7a/angleaggregation_8h_source.html">angleaggregation.h</a>.</p>
@@ -179,7 +179,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../d1/df2/angleset_8h.html#a66cfad4bf0e864e6fea723efe64d5d0b">SweepBndry</a>&gt; <a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a905012a0575c46c672d8bd9f852bdd04">chi_mesh::sweep_management::AngleAggregation::SweepBndryPtr</a></td>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../dc/d47/_angle_set_8h.html#a66cfad4bf0e864e6fea723efe64d5d0b">SweepBndry</a>&gt; <a class="el" href="../../d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html#a905012a0575c46c672d8bd9f852bdd04">chi_mesh::sweep_management::AngleAggregation::SweepBndryPtr</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -234,7 +234,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Sets up the angle-aggregation object. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00018">18</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00020">20</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -266,7 +266,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles angular unknowns into the reference vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00303">303</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00300">300</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -297,7 +297,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles angular unknowns into the reference vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00340">340</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00346">346</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -317,7 +317,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets the current values of the angular unknowns as an STL vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00451">451</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00484">484</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns a pair of numbers containing the number of delayed angular unknowns both locally and globally, respectively. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00247">247</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00248">248</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -357,7 +357,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets the current values of the angular unknowns as an STL vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00540">540</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00575">575</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -377,7 +377,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Initializes reflecting boundary conditions. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00092">92</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00091">91</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -424,7 +424,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Copies the new delayed angular fluxes to the old. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00659">659</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00696">696</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -444,7 +444,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Copies the old delayed angular fluxes to the new. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00629">629</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00666">666</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -475,7 +475,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles angular unknowns into the reference vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00414">414</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00438">438</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -496,7 +496,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets the current values of the angular unknowns as an STL vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00495">495</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00528">528</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -527,7 +527,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Assembles angular unknowns into the reference vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00377">377</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00392">392</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -548,7 +548,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets the current values of the angular unknowns as an STL vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00584">584</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00619">619</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -568,7 +568,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Resets all the incoming intra-location and inter-location cyclic interfaces. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00056">56</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00057">57</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>
@@ -588,7 +588,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Resets all the outgoing intra-location and inter-location cyclic interfaces. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00041">41</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html#l00042">42</a> of file <a class="el" href="../../dd/d94/angleaggregation_8cc_source.html">angleaggregation.cc</a>.</p>
 
 </div>
 </div>

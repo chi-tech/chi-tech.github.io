@@ -63,5 +63,6 @@ var namespacechi =
     [ "StringStreamColor", "dc/d67/namespacechi.html#ac72a94e7042b413617898038e39c62c6", null ],
     [ "StringTrim", "dc/d67/namespacechi.html#aee7b8228cd67512806649040558a5767", null ],
     [ "StringUpToFirstReverse", "dc/d67/namespacechi.html#a1a2b9ab3ec4633dc3b163df85dfc11c8", null ],
+    [ "VectorListHas", "dc/d67/namespacechi.html#ab637b96af60c5711b7e6b4ec0ca38e83", null ],
     [ "WHITESPACE", "dc/d67/namespacechi.html#a75b6d031b71ff8c8bb8b8828e642e6d9", null ]
 ];

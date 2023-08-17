@@ -15,15 +15,16 @@ var classchi__mesh_1_1sweep__management_1_1_sweep_scheduler =
     [ "SetDestinationPhi", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a019cd65b6a68f7bd77f2bee69fea0a32", null ],
     [ "SetDestinationPsi", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a5aa8e225938c8f33fc76f5de4176999a", null ],
     [ "Sweep", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#af69ffaab9e2968c6324a0b905eb1d578", null ],
+    [ "SweepEventTag", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a6f6f9f9251c7329b2b7a46a3f2b5cffd", null ],
     [ "ZeroDestinationPhi", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a56d61cddf47a0102d12183316230031b", null ],
     [ "ZeroDestinationPsi", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a315e4ebf5b8c985b39e81c24900b2397", null ],
     [ "ZeroIncomingDelayedPsi", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a4b6a8fdf8cd192f2a1ef1557d6210ac1", null ],
     [ "ZeroOutgoingDelayedPsi", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a4c44df43e73023d7a62d3e9a8eb0c90a", null ],
     [ "ZeroOutputFluxDataStructures", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a6bba67c3e7a83356c7e2bd9a428c8458", null ],
-    [ "angle_agg", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#adfdbca021d15754365ec0db23e40191b", null ],
-    [ "m_sweep_chunk", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#af4d27606eeceb9ba95f909be1d112045", null ],
-    [ "rule_values", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a788d1c54c3d664558a6dcd1c95dc6e81", null ],
-    [ "scheduler_type", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a6a201688a4940b49bf8d3f115249005c", null ],
-    [ "sweep_event_tag", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a94ee46f078fffee93894dbcec3bea2a3", null ],
-    [ "sweep_timing_events_tag", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a906e91d7b002dd5851215a7a95f85d79", null ]
+    [ "angle_agg_", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#ac09423fbc6eb1cc2100d42aa88d08452", null ],
+    [ "rule_values_", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a9d5f86af77e8436d71ea990d8aefbbb5", null ],
+    [ "scheduler_type_", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a25e223bce4b514b534d06d9987256c3d", null ],
+    [ "sweep_chunk_", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a6ba80885e048cb0eb90a58abe12de1cd", null ],
+    [ "sweep_event_tag_", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a36ad87d51dfa2a827a7f42a5aa818426", null ],
+    [ "sweep_timing_events_tag_", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html#a9d077da04202085a0e94daf37c5a04d7", null ]
 ];

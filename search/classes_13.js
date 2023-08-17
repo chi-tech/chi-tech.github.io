@@ -5,5 +5,5 @@ var searchData=
   ['unknown_2',['Unknown',['../d8/df3/classchi__math_1_1_unknown.html',1,'chi_math']]],
   ['unknownmanager_3',['UnknownManager',['../d9/da7/classchi__math_1_1_unknown_manager.html',1,'chi_math']]],
   ['unpartitionedmesh_4',['UnpartitionedMesh',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html',1,'chi_mesh']]],
-  ['upwinder_5',['Upwinder',['../da/d55/structlbs_1_1_sweep_chunk_p_w_l_1_1_upwinder.html',1,'lbs::SweepChunkPWL::Upwinder'],['../d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html',1,'lbs::SweepChunkPWLTransientTheta::Upwinder']]]
+  ['upwinder_5',['Upwinder',['../d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html',1,'lbs::SweepChunkPWLTransientTheta']]]
 ];

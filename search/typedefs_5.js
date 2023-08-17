@@ -10,7 +10,7 @@ var searchData=
   ['fieldfunctionptr_7',['FieldFunctionPtr',['../d6/d5f/namespacechi__physics.html#a3877c47a24c665e3b562a978ecbbb3fb',1,'chi_physics']]],
   ['floatstoragetype_8',['FloatStorageType',['../d8/d30/classchi__data__types_1_1_varying.html#a412434b530944f6d01df1786ffe026c8',1,'chi_data_types::Varying']]],
   ['floattype_9',['FloatType',['../d8/d30/classchi__data__types_1_1_varying.html#a72eda1e4d74f5efa87f18cdfd13ef986',1,'chi_data_types::Varying']]],
-  ['fludstemplate_10',['FLUDSTemplate',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a5476eb1abab4c52f91b45850ccedd5f3',1,'lbs::DiscreteOrdinatesSolver']]],
-  ['fludstemplateptr_11',['FLUDSTemplatePtr',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a38ed9c25b4b6318974e11a8cbc4332db',1,'lbs::DiscreteOrdinatesSolver']]],
-  ['fludstemplateptrs_12',['FLUDSTemplatePtrs',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ad20e2e02c909ee01799741fea39850c5',1,'lbs::DiscreteOrdinatesSolver']]]
+  ['fludscommondata_10',['FLUDSCommonData',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a431fce9e6ab76f020cdf11122720a30d',1,'lbs::DiscreteOrdinatesSolver']]],
+  ['fludscommondataptr_11',['FLUDSCommonDataPtr',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a99a10275652f181a62ccb6845c4a28c6',1,'lbs::DiscreteOrdinatesSolver']]],
+  ['fludscommondataptrs_12',['FLUDSCommonDataPtrs',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#af49e5c85c17c8502d91096360363de0c',1,'lbs::DiscreteOrdinatesSolver']]]
 ];

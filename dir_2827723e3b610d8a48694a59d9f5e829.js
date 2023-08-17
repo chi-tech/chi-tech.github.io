@@ -9,6 +9,8 @@ var dir_2827723e3b610d8a48694a59d9f5e829 =
     ] ],
     [ "lbsadj_solver_00_constrdestr.cc", "db/d39/lbsadj__solver__00__constrdestr_8cc.html", "db/d39/lbsadj__solver__00__constrdestr_8cc" ],
     [ "lbsadj_solver_01_main_initialize.cc", "d1/d75/lbsadj__solver__01__main__initialize_8cc.html", null ],
+    [ "lbsadj_solver_01a_make_adjointXS.cc", "dc/daa/lbsadj__solver__01a__make__adjoint_x_s_8cc.html", null ],
+    [ "lbsadj_solver_01b_initQOIs.cc", "dc/d0e/lbsadj__solver__01b__init_q_o_is_8cc.html", null ],
     [ "lbsadj_solver_02_main_execute.cc", "d5/d56/lbsadj__solver__02__main__execute_8cc.html", null ],
     [ "lbsadj_solver_04_qoi.cc", "d8/d29/lbsadj__solver__04__qoi_8cc.html", null ],
     [ "lbsadj_solver_05a_export_imp.cc", "d7/d7f/lbsadj__solver__05a__export__imp_8cc.html", null ]

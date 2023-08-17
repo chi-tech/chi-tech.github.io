@@ -10,9 +10,7 @@ var searchData=
   ['raytracing_2eh_7',['raytracing.h',['../d8/dc8/raytracing_8h.html',1,'']]],
   ['rcclogicalvolume_2ecc_8',['RCCLogicalVolume.cc',['../d1/d5c/_r_c_c_logical_volume_8cc.html',1,'']]],
   ['rcclogicalvolume_2eh_9',['RCCLogicalVolume.h',['../d0/da6/_r_c_c_logical_volume_8h.html',1,'']]],
-  ['remove_5fglobal_5fcyclicdep_2ecc_10',['remove_global_cyclicdep.cc',['../dd/d82/remove__global__cyclicdep_8cc.html',1,'']]],
-  ['remove_5flocal_5fcyclicdep_2ecc_11',['remove_local_cyclicdep.cc',['../d7/d45/remove__local__cyclicdep_8cc.html',1,'']]],
-  ['rpk_5fdoc_2eh_12',['rpk_doc.h',['../df/d76/rpk__doc_8h.html',1,'']]],
-  ['rpplogicalvolume_2ecc_13',['RPPLogicalVolume.cc',['../da/dcd/_r_p_p_logical_volume_8cc.html',1,'']]],
-  ['rpplogicalvolume_2eh_14',['RPPLogicalVolume.h',['../d4/d71/_r_p_p_logical_volume_8h.html',1,'']]]
+  ['rpk_5fdoc_2eh_10',['rpk_doc.h',['../df/d76/rpk__doc_8h.html',1,'']]],
+  ['rpplogicalvolume_2ecc_11',['RPPLogicalVolume.cc',['../da/dcd/_r_p_p_logical_volume_8cc.html',1,'']]],
+  ['rpplogicalvolume_2eh_12',['RPPLogicalVolume.h',['../d4/d71/_r_p_p_logical_volume_8h.html',1,'']]]
 ];

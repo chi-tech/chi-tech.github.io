@@ -1,9 +1,13 @@
 var namespacechi__mesh_1_1sweep__management =
 [
+    [ "AAH_AngleSet", "da/db0/classchi__mesh_1_1sweep__management_1_1_a_a_h___angle_set.html", "da/db0/classchi__mesh_1_1sweep__management_1_1_a_a_h___angle_set" ],
+    [ "AAH_ASynchronousCommunicator", "d1/d1d/classchi__mesh_1_1sweep__management_1_1_a_a_h___a_synchronous_communicator.html", "d1/d1d/classchi__mesh_1_1sweep__management_1_1_a_a_h___a_synchronous_communicator" ],
+    [ "AAH_FLUDS", "d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html", "d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s" ],
+    [ "AAH_FLUDSCommonData", "d0/da3/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s_common_data.html", "d0/da3/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s_common_data" ],
     [ "AngleAggregation", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation.html", "d2/d3d/classchi__mesh_1_1sweep__management_1_1_angle_aggregation" ],
     [ "AngleSet", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set.html", "d1/de8/classchi__mesh_1_1sweep__management_1_1_angle_set" ],
     [ "AngleSetGroup", "df/db6/classchi__mesh_1_1sweep__management_1_1_angle_set_group.html", "df/db6/classchi__mesh_1_1sweep__management_1_1_angle_set_group" ],
-    [ "AUX_FLUDS", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html", "d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s" ],
+    [ "AsynchronousCommunicator", "d6/df5/classchi__mesh_1_1sweep__management_1_1_asynchronous_communicator.html", "d6/df5/classchi__mesh_1_1sweep__management_1_1_asynchronous_communicator" ],
     [ "BoundaryFunction", "d3/d51/classchi__mesh_1_1sweep__management_1_1_boundary_function.html", "d3/d51/classchi__mesh_1_1sweep__management_1_1_boundary_function" ],
     [ "BoundaryIncidentHeterogeneous", "d8/da9/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogeneous.html", "d8/da9/classchi__mesh_1_1sweep__management_1_1_boundary_incident_heterogeneous" ],
     [ "BoundaryIsotropicHomogenous", "d0/dbe/classchi__mesh_1_1sweep__management_1_1_boundary_isotropic_homogenous.html", "d0/dbe/classchi__mesh_1_1sweep__management_1_1_boundary_isotropic_homogenous" ],
@@ -11,16 +15,18 @@ var namespacechi__mesh_1_1sweep__management =
     [ "BoundaryVaccuum", "d1/de0/classchi__mesh_1_1sweep__management_1_1_boundary_vaccuum.html", "d1/de0/classchi__mesh_1_1sweep__management_1_1_boundary_vaccuum" ],
     [ "FaceNodalMapping", "d7/d1f/structchi__mesh_1_1sweep__management_1_1_face_nodal_mapping.html", "d7/d1f/structchi__mesh_1_1sweep__management_1_1_face_nodal_mapping" ],
     [ "FLUDS", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html", "de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s" ],
-    [ "INCOMING_FACE_INFO", "d8/daf/structchi__mesh_1_1sweep__management_1_1_i_n_c_o_m_i_n_g___f_a_c_e___i_n_f_o.html", "d8/daf/structchi__mesh_1_1sweep__management_1_1_i_n_c_o_m_i_n_g___f_a_c_e___i_n_f_o" ],
-    [ "PRIMARY_FLUDS", "d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html", "d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s" ],
-    [ "SPDS", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html", "dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s" ],
+    [ "FLUDSCommonData", "d5/d88/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s_common_data.html", "d5/d88/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s_common_data" ],
+    [ "SPDS", "dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html", "dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s" ],
+    [ "SPDS_AdamsAdamsHawkins", "dd/d4f/classchi__mesh_1_1sweep__management_1_1_s_p_d_s___adams_adams_hawkins.html", "dd/d4f/classchi__mesh_1_1sweep__management_1_1_s_p_d_s___adams_adams_hawkins" ],
     [ "SPLS", "d5/d51/structchi__mesh_1_1sweep__management_1_1_s_p_l_s.html", "d5/d51/structchi__mesh_1_1sweep__management_1_1_s_p_l_s" ],
     [ "STDG", "df/dda/structchi__mesh_1_1sweep__management_1_1_s_t_d_g.html", "df/dda/structchi__mesh_1_1sweep__management_1_1_s_t_d_g" ],
     [ "SweepBoundary", "d9/d83/classchi__mesh_1_1sweep__management_1_1_sweep_boundary.html", "d9/d83/classchi__mesh_1_1sweep__management_1_1_sweep_boundary" ],
-    [ "SweepBuffer", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer.html", "dc/d15/classchi__mesh_1_1sweep__management_1_1_sweep_buffer" ],
     [ "SweepChunk", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk.html", "d3/dfd/classchi__mesh_1_1sweep__management_1_1_sweep_chunk" ],
     [ "SweepScheduler", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler.html", "d1/d27/classchi__mesh_1_1sweep__management_1_1_sweep_scheduler" ],
+    [ "Task", "de/d35/structchi__mesh_1_1sweep__management_1_1_task.html", "de/d35/structchi__mesh_1_1sweep__management_1_1_task" ],
     [ "CellFaceNodalMapping", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a1d5e21843d8b4412ce5ad3f5c12dde42", null ],
+    [ "CompactCellView", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a9d58157de928e59f7a5df81850815b52", null ],
+    [ "CompactFaceView", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a0eefbd204dc41b1acd5f1c99ddbf7b7f", null ],
     [ "ExecutionPermission", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#acfa57bd987462ac915139416fd63d84d", null ],
     [ "AngleSetStatus", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6f35c94844603249789b4e4ae4ece8c1", [
       [ "NOT_FINISHED", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a6f35c94844603249789b4e4ae4ece8c1a6fedf13483ec820962d5b88967564dae", null ],
@@ -48,9 +54,5 @@ var namespacechi__mesh_1_1sweep__management =
       [ "DEPTH_OF_GRAPH", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ab89d643f43f578f07f21038106d6817fa51d47b2c9be19652409783fd56b64423", null ]
     ] ],
     [ "CommunicateLocationDependencies", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a2a06289a8db4ef4f00fc69b451536205", null ],
-    [ "CreateSweepOrder", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#ad90dbc921056b0a05f15ac9cef7c068f", null ],
-    [ "PopulateCellRelationships", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a11bc43e4946af1d091b7929c2a46de8d", null ],
-    [ "PrintSweepOrdering", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a14056bd4d6583fc03ff5400466e173bd", null ],
-    [ "RemoveGlobalCyclicDependencies", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a2ec064ccacb45aca5198eb12e9c13a9e", null ],
-    [ "RemoveLocalCyclicDependencies", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a42f867627bdb105c098fedf0ba5c15f2", null ]
+    [ "PrintSweepOrdering", "d7/dc7/namespacechi__mesh_1_1sweep__management.html#a14056bd4d6583fc03ff5400466e173bd", null ]
 ];

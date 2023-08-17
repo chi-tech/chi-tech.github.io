@@ -7,5 +7,6 @@ var classlbs_1_1_x_x_non_linear_k_eigen =
     [ "lbs_solver_", "d4/def/classlbs_1_1_x_x_non_linear_k_eigen.html#a162c30f4b2eedf9dc1b9dec44a33f43f", null ],
     [ "nl_context_", "d4/def/classlbs_1_1_x_x_non_linear_k_eigen.html#aa87f966eb353f50caee4f461e9f5ffdf", null ],
     [ "nl_solver_", "d4/def/classlbs_1_1_x_x_non_linear_k_eigen.html#a8e251d4f500a569bb3e834cff036eeb5", null ],
+    [ "num_free_power_its_", "d4/def/classlbs_1_1_x_x_non_linear_k_eigen.html#a8d337a50ad8ac7f937a6a0bf62e8c09b", null ],
     [ "reinit_phi_1_", "d4/def/classlbs_1_1_x_x_non_linear_k_eigen.html#ad3aa2910f21088a460213f3fe6e980d5", null ]
 ];

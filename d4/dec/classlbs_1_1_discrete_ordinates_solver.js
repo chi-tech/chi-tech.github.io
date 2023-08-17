@@ -1,9 +1,9 @@
 var classlbs_1_1_discrete_ordinates_solver =
 [
     [ "AngQuadPtr", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#afc0f8abf1ea184a3ac766182772f2c60", null ],
-    [ "FLUDSTemplate", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a5476eb1abab4c52f91b45850ccedd5f3", null ],
-    [ "FLUDSTemplatePtr", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a38ed9c25b4b6318974e11a8cbc4332db", null ],
-    [ "FLUDSTemplatePtrs", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ad20e2e02c909ee01799741fea39850c5", null ],
+    [ "FLUDSCommonData", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a431fce9e6ab76f020cdf11122720a30d", null ],
+    [ "FLUDSCommonDataPtr", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a99a10275652f181a62ccb6845c4a28c6", null ],
+    [ "FLUDSCommonDataPtrs", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#af49e5c85c17c8502d91096360363de0c", null ],
     [ "SPDS_ptr", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a5d4090868538bceabae8e392fc9c63ff", null ],
     [ "SPDS_ptrs", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a2a8baa5b8092b4c6a7967fc84df236dc", null ],
     [ "SweepChunk", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#aed7eb20842f5cf56d941efde3f04cf3b", null ],
@@ -28,8 +28,11 @@ var classlbs_1_1_discrete_ordinates_solver =
     [ "SetPrimarySTLvectorFromGSPETScVec", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a9454458d3fc5287436f8427c1b41fdba", null ],
     [ "SetPrimarySTLvectorFromMultiGSPETScVecFrom", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ad1d3c2fe1834faeedebbf0c8f2bf2533", null ],
     [ "SetSweepChunk", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ace8876a7e34c141aadedc745c05f335f", null ],
+    [ "SweepType", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a5bbebd2f3532beca7332f1a1e20e0910", null ],
     [ "ZeroOutflowBalanceVars", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ab85e6d2bb96768e5aba8f2cdb570423b", null ],
-    [ "quadrature_fluds_templates_map_", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ae2592058db32a0f5d12b2f681d1180ef", null ],
+    [ "quadrature_fluds_commondata_map_", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a7590ac64eda9358517ed4216823c8fca", null ],
     [ "quadrature_spds_map_", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#adbc4642f2a20a567c7cfe67e5d47ffc4", null ],
-    [ "quadrature_unq_so_grouping_map_", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ac812203996fcd7ffb261244d0e0bc049", null ]
+    [ "quadrature_unq_so_grouping_map_", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ac812203996fcd7ffb261244d0e0bc049", null ],
+    [ "sweep_type_", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a1360795ac14b1b1c2df79946d513770e", null ],
+    [ "verbose_sweep_angles_", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a21c0e31226e060a6b67e132954e29566", null ]
 ];

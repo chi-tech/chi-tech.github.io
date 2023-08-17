@@ -1,7 +1,7 @@
 var searchData=
 [
   ['wedge_0',['WEDGE',['../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a42bd365c1ecdb0302894b3ff434de056',1,'chi_mesh']]],
-  ['weights_5f_1',['weights_',['../d8/dd9/classchi__math_1_1_angular_quadrature.html#a237e0c76508139ffabd0c920eb70c107',1,'chi_math::AngularQuadrature::weights_()'],['../d3/dbf/classchi__math_1_1_quadrature.html#af40a173545aff43b4c9606264b370eab',1,'chi_math::Quadrature::weights_()']]],
+  ['weights_5f_1',['weights_',['../d3/dbf/classchi__math_1_1_quadrature.html#af40a173545aff43b4c9606264b370eab',1,'chi_math::Quadrature::weights_()'],['../d8/dd9/classchi__math_1_1_angular_quadrature.html#a237e0c76508139ffabd0c920eb70c107',1,'chi_math::AngularQuadrature::weights_()']]],
   ['wgdsa_5fmax_5fiters_5f_2',['wgdsa_max_iters_',['../d2/db6/classlbs_1_1_l_b_s_groupset.html#a4d0a1263b11133d3c8589ba72fef788c',1,'lbs::LBSGroupset']]],
   ['wgdsa_5fsolver_5f_3',['wgdsa_solver_',['../d2/db6/classlbs_1_1_l_b_s_groupset.html#a07ea391ed8e5881e0ee9ad0438ceb81c',1,'lbs::LBSGroupset']]],
   ['wgdsa_5fstring_5f_4',['wgdsa_string_',['../d2/db6/classlbs_1_1_l_b_s_groupset.html#a1b45a4674b76d3778958a2919fe8a40c',1,'lbs::LBSGroupset']]],

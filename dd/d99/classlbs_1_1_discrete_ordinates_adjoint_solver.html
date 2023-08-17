@@ -130,6 +130,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aad0ebf4874a0f79b5c9810263fec9876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3f47ff6fa57306f430ed5f16441e451"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#ae3f47ff6fa57306f430ed5f16441e451">Initialize</a> () override</td></tr>
 <tr class="separator:ae3f47ff6fa57306f430ed5f16441e451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e84109c569972da7607a378822f0d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#a02e84109c569972da7607a378822f0d7">MakeAdjointXSs</a> ()</td></tr>
+<tr class="separator:a02e84109c569972da7607a378822f0d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51d953918c4b669172e29f43bd73b2b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#a51d953918c4b669172e29f43bd73b2b0">InitQOIs</a> ()</td></tr>
+<tr class="separator:a51d953918c4b669172e29f43bd73b2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ee44887532fc1a1a42fc27ea2172701"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#a5ee44887532fc1a1a42fc27ea2172701">Execute</a> () override</td></tr>
 <tr class="separator:a5ee44887532fc1a1a42fc27ea2172701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dd4a51075b73b4eec3f22d3772529a3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#a4dd4a51075b73b4eec3f22d3772529a3">AddResponseFunction</a> (const std::string &amp;qoi_name, std::shared_ptr&lt; <a class="el" href="../../d0/d1e/classchi__mesh_1_1_logical_volume.html">chi_mesh::LogicalVolume</a> &gt; logical_volume, const std::string &amp;lua_function_name)</td></tr>
@@ -139,6 +143,8 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_classlbs_1_1_discrete_ordinates_solver"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classlbs_1_1_discrete_ordinates_solver')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html">lbs::DiscreteOrdinatesSolver</a></td></tr>
 <tr class="memitem:a7d12119d194fc3dba84b15aceba3b51c inherit pub_methods_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a7d12119d194fc3dba84b15aceba3b51c">DiscreteOrdinatesSolver</a> (const <a class="el" href="../../d8/d4d/classchi_1_1_input_parameters.html">chi::InputParameters</a> &amp;params)</td></tr>
 <tr class="separator:a7d12119d194fc3dba84b15aceba3b51c inherit pub_methods_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbebd2f3532beca7332f1a1e20e0910 inherit pub_methods_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a5bbebd2f3532beca7332f1a1e20e0910">SweepType</a> () const</td></tr>
+<tr class="separator:a5bbebd2f3532beca7332f1a1e20e0910 inherit pub_methods_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a251e4f028940ab90975ef70726165794 inherit pub_methods_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a251e4f028940ab90975ef70726165794">~DiscreteOrdinatesSolver</a> () override</td></tr>
 <tr class="separator:a251e4f028940ab90975ef70726165794 inherit pub_methods_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a487521b0b1e3af2dedae4a3618e1c03c inherit pub_methods_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">std::pair&lt; size_t, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a487521b0b1e3af2dedae4a3618e1c03c">GetNumPhiIterativeUnknowns</a> () override</td></tr>
@@ -256,7 +262,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5efd1de2244d239af200f7c0df56f7b8 inherit pub_methods_classlbs_1_1_l_b_s_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27ba35e391ab9d871e5b5e157b0d5441 inherit pub_methods_classlbs_1_1_l_b_s_solver"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="../../d9/d42/namespacelbs.html#af08418093f4b92c33c17e60fbecb9bc9">VecDbl</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a27ba35e391ab9d871e5b5e157b0d5441">PsiNewLocal</a> () const</td></tr>
 <tr class="separator:a27ba35e391ab9d871e5b5e157b0d5441 inherit pub_methods_classlbs_1_1_l_b_s_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a705b793269df5d6ffe65af56fdf6d63b inherit pub_methods_classlbs_1_1_l_b_s_solver"><td class="memItemLeft" align="right" valign="top">const std::map&lt; uint64_t, std::shared_ptr&lt; <a class="el" href="../../d1/df2/angleset_8h.html#a66cfad4bf0e864e6fea723efe64d5d0b">SweepBndry</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a705b793269df5d6ffe65af56fdf6d63b">SweepBoundaries</a> () const</td></tr>
+<tr class="memitem:a705b793269df5d6ffe65af56fdf6d63b inherit pub_methods_classlbs_1_1_l_b_s_solver"><td class="memItemLeft" align="right" valign="top">const std::map&lt; uint64_t, std::shared_ptr&lt; <a class="el" href="../../dc/d47/_angle_set_8h.html#a66cfad4bf0e864e6fea723efe64d5d0b">SweepBndry</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a705b793269df5d6ffe65af56fdf6d63b">SweepBoundaries</a> () const</td></tr>
 <tr class="separator:a705b793269df5d6ffe65af56fdf6d63b inherit pub_methods_classlbs_1_1_l_b_s_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a430e855de8684c18a983747d9972eaf8 inherit pub_methods_classlbs_1_1_l_b_s_solver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d42/namespacelbs.html#aeebda41bfec934de30892227f2156397">SetSourceFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a430e855de8684c18a983747d9972eaf8">GetActiveSetSourceFunction</a> () const</td></tr>
 <tr class="separator:a430e855de8684c18a983747d9972eaf8 inherit pub_methods_classlbs_1_1_l_b_s_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -416,16 +422,16 @@ Protected Types</h2></td></tr>
 <tr class="separator:afc0f8abf1ea184a3ac766182772f2c60 inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92f51d3cacbbb1e901a9e0ef51082272 inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; <a class="el" href="../../d9/d42/namespacelbs.html#aee2e09cc47baec60805b625cc87351d5">UniqueSOGroupings</a>, <a class="el" href="../../d9/d42/namespacelbs.html#a9db37f34e0e653f8feada39ab7b8d394">DirIDToSOMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a92f51d3cacbbb1e901a9e0ef51082272">SwpOrderGroupingInfo</a></td></tr>
 <tr class="separator:a92f51d3cacbbb1e901a9e0ef51082272 inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d4090868538bceabae8e392fc9c63ff inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">chi_mesh::sweep_management::SPDS</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a5d4090868538bceabae8e392fc9c63ff">SPDS_ptr</a></td></tr>
+<tr class="memitem:a5d4090868538bceabae8e392fc9c63ff inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">chi_mesh::sweep_management::SPDS</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a5d4090868538bceabae8e392fc9c63ff">SPDS_ptr</a></td></tr>
 <tr class="separator:a5d4090868538bceabae8e392fc9c63ff inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a8baa5b8092b4c6a7967fc84df236dc inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a5d4090868538bceabae8e392fc9c63ff">SPDS_ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a2a8baa5b8092b4c6a7967fc84df236dc">SPDS_ptrs</a></td></tr>
 <tr class="separator:a2a8baa5b8092b4c6a7967fc84df236dc inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5476eb1abab4c52f91b45850ccedd5f3 inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html">chi_mesh::sweep_management::PRIMARY_FLUDS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a5476eb1abab4c52f91b45850ccedd5f3">FLUDSTemplate</a></td></tr>
-<tr class="separator:a5476eb1abab4c52f91b45850ccedd5f3 inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38ed9c25b4b6318974e11a8cbc4332db inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a5476eb1abab4c52f91b45850ccedd5f3">FLUDSTemplate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a38ed9c25b4b6318974e11a8cbc4332db">FLUDSTemplatePtr</a></td></tr>
-<tr class="separator:a38ed9c25b4b6318974e11a8cbc4332db inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad20e2e02c909ee01799741fea39850c5 inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a38ed9c25b4b6318974e11a8cbc4332db">FLUDSTemplatePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ad20e2e02c909ee01799741fea39850c5">FLUDSTemplatePtrs</a></td></tr>
-<tr class="separator:ad20e2e02c909ee01799741fea39850c5 inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a431fce9e6ab76f020cdf11122720a30d inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d5/d88/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s_common_data.html">chi_mesh::sweep_management::FLUDSCommonData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a431fce9e6ab76f020cdf11122720a30d">FLUDSCommonData</a></td></tr>
+<tr class="separator:a431fce9e6ab76f020cdf11122720a30d inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a10275652f181a62ccb6845c4a28c6 inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">typedef std::unique_ptr&lt; <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a431fce9e6ab76f020cdf11122720a30d">FLUDSCommonData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a99a10275652f181a62ccb6845c4a28c6">FLUDSCommonDataPtr</a></td></tr>
+<tr class="separator:a99a10275652f181a62ccb6845c4a28c6 inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49e5c85c17c8502d91096360363de0c inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a99a10275652f181a62ccb6845c4a28c6">FLUDSCommonDataPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#af49e5c85c17c8502d91096360363de0c">FLUDSCommonDataPtrs</a></td></tr>
+<tr class="separator:af49e5c85c17c8502d91096360363de0c inherit pro_types_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_types_classlbs_1_1_l_b_s_solver"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classlbs_1_1_l_b_s_solver')"><img src="../../closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">lbs::LBSSolver</a></td></tr>
 <tr class="memitem:a736286da4f1f9eaedbbd770258127475 inherit pro_types_classlbs_1_1_l_b_s_solver"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a1d5e21843d8b4412ce5ad3f5c12dde42">chi_mesh::sweep_management::CellFaceNodalMapping</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a736286da4f1f9eaedbbd770258127475">CellFaceNodalMapping</a></td></tr>
 <tr class="separator:a736286da4f1f9eaedbbd770258127475 inherit pro_types_classlbs_1_1_l_b_s_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -439,8 +445,12 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ac812203996fcd7ffb261244d0e0bc049 inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc4642f2a20a567c7cfe67e5d47ffc4 inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#afc0f8abf1ea184a3ac766182772f2c60">AngQuadPtr</a>, <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a2a8baa5b8092b4c6a7967fc84df236dc">SPDS_ptrs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#adbc4642f2a20a567c7cfe67e5d47ffc4">quadrature_spds_map_</a></td></tr>
 <tr class="separator:adbc4642f2a20a567c7cfe67e5d47ffc4 inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2592058db32a0f5d12b2f681d1180ef inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#afc0f8abf1ea184a3ac766182772f2c60">AngQuadPtr</a>, <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ad20e2e02c909ee01799741fea39850c5">FLUDSTemplatePtrs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ae2592058db32a0f5d12b2f681d1180ef">quadrature_fluds_templates_map_</a></td></tr>
-<tr class="separator:ae2592058db32a0f5d12b2f681d1180ef inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7590ac64eda9358517ed4216823c8fca inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#afc0f8abf1ea184a3ac766182772f2c60">AngQuadPtr</a>, <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#af49e5c85c17c8502d91096360363de0c">FLUDSCommonDataPtrs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a7590ac64eda9358517ed4216823c8fca">quadrature_fluds_commondata_map_</a></td></tr>
+<tr class="separator:a7590ac64eda9358517ed4216823c8fca inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21c0e31226e060a6b67e132954e29566 inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a21c0e31226e060a6b67e132954e29566">verbose_sweep_angles_</a></td></tr>
+<tr class="separator:a21c0e31226e060a6b67e132954e29566 inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1360795ac14b1b1c2df79946d513770e inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a1360795ac14b1b1c2df79946d513770e">sweep_type_</a></td></tr>
+<tr class="separator:a1360795ac14b1b1c2df79946d513770e inherit pro_attribs_classlbs_1_1_discrete_ordinates_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classlbs_1_1_l_b_s_solver"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classlbs_1_1_l_b_s_solver')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html">lbs::LBSSolver</a></td></tr>
 <tr class="memitem:a95612dc8cee34dd9cb917691efc43739 inherit pro_attribs_classlbs_1_1_l_b_s_solver"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a95612dc8cee34dd9cb917691efc43739">source_event_tag_</a> = 0</td></tr>
 <tr class="separator:a95612dc8cee34dd9cb917691efc43739 inherit pro_attribs_classlbs_1_1_l_b_s_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -484,7 +494,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a178d6fd32bbeb3b8f0e5e5157d88e9e3 inherit pro_attribs_classlbs_1_1_l_b_s_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cf4ab728af173a7dead63b12843692d inherit pro_attribs_classlbs_1_1_l_b_s_solver"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, <a class="el" href="../../d4/d8e/structlbs_1_1_boundary_preference.html">BoundaryPreference</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a5cf4ab728af173a7dead63b12843692d">boundary_preferences_</a></td></tr>
 <tr class="separator:a5cf4ab728af173a7dead63b12843692d inherit pro_attribs_classlbs_1_1_l_b_s_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f35d78dba253369a155d392c10a477e inherit pro_attribs_classlbs_1_1_l_b_s_solver"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, std::shared_ptr&lt; <a class="el" href="../../d1/df2/angleset_8h.html#a66cfad4bf0e864e6fea723efe64d5d0b">SweepBndry</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a3f35d78dba253369a155d392c10a477e">sweep_boundaries_</a></td></tr>
+<tr class="memitem:a3f35d78dba253369a155d392c10a477e inherit pro_attribs_classlbs_1_1_l_b_s_solver"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, std::shared_ptr&lt; <a class="el" href="../../dc/d47/_angle_set_8h.html#a66cfad4bf0e864e6fea723efe64d5d0b">SweepBndry</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a3f35d78dba253369a155d392c10a477e">sweep_boundaries_</a></td></tr>
 <tr class="separator:a3f35d78dba253369a155d392c10a477e inherit pro_attribs_classlbs_1_1_l_b_s_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54a9bad4d3b0e43ad0e732f8b0381759 inherit pro_attribs_classlbs_1_1_l_b_s_solver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a54a9bad4d3b0e43ad0e732f8b0381759">flux_moments_uk_man_</a></td></tr>
 <tr class="separator:a54a9bad4d3b0e43ad0e732f8b0381759 inherit pro_attribs_classlbs_1_1_l_b_s_solver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -771,7 +781,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p >Computes the inner product of the flux and the material source. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d0a/lbsadj__innerproduct_8cc_source.html#l00007">7</a> of file <a class="el" href="../../dc/d0a/lbsadj__innerproduct_8cc_source.html">lbsadj_innerproduct.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d0a/lbsadj__innerproduct_8cc_source.html#l00008">8</a> of file <a class="el" href="../../dc/d0a/lbsadj__innerproduct_8cc_source.html">lbsadj_innerproduct.cc</a>.</p>
 
 </div>
 </div>
@@ -801,7 +811,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html#aa416dcd9ba22712272ebd0ec4414046d">chi_physics::Solver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d56/lbsadj__solver__02__main__execute_8cc_source.html#l00009">9</a> of file <a class="el" href="../../d5/d56/lbsadj__solver__02__main__execute_8cc_source.html">lbsadj_solver_02_main_execute.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d56/lbsadj__solver__02__main__execute_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d5/d56/lbsadj__solver__02__main__execute_8cc_source.html">lbsadj_solver_02_main_execute.cc</a>.</p>
 
 </div>
 </div>
@@ -822,7 +832,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p >Exports an importance map in binary format. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d7f/lbsadj__solver__05a__export__imp_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d7/d7f/lbsadj__solver__05a__export__imp_8cc_source.html">lbsadj_solver_05a_export_imp.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d7f/lbsadj__solver__05a__export__imp_8cc_source.html#l00018">18</a> of file <a class="el" href="../../d7/d7f/lbsadj__solver__05a__export__imp_8cc_source.html">lbsadj_solver_05a_export_imp.cc</a>.</p>
 
 </div>
 </div>
@@ -900,7 +910,45 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ac90bfb658e05a541dabbcfb03179c469">lbs::DiscreteOrdinatesSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d75/lbsadj__solver__01__main__initialize_8cc_source.html#l00011">11</a> of file <a class="el" href="../../d1/d75/lbsadj__solver__01__main__initialize_8cc_source.html">lbsadj_solver_01_main_initialize.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d75/lbsadj__solver__01__main__initialize_8cc_source.html#l00008">8</a> of file <a class="el" href="../../d1/d75/lbsadj__solver__01__main__initialize_8cc_source.html">lbsadj_solver_01_main_initialize.cc</a>.</p>
+
+</div>
+</div>
+<a id="a51d953918c4b669172e29f43bd73b2b0" name="a51d953918c4b669172e29f43bd73b2b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51d953918c4b669172e29f43bd73b2b0">&#9670;&nbsp;</a></span>InitQOIs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lbs::DiscreteOrdinatesAdjointSolver::InitQOIs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d0e/lbsadj__solver__01b__init_q_o_is_8cc_source.html#l00012">12</a> of file <a class="el" href="../../dc/d0e/lbsadj__solver__01b__init_q_o_is_8cc_source.html">lbsadj_solver_01b_initQOIs.cc</a>.</p>
+
+</div>
+</div>
+<a id="a02e84109c569972da7607a378822f0d7" name="a02e84109c569972da7607a378822f0d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e84109c569972da7607a378822f0d7">&#9670;&nbsp;</a></span>MakeAdjointXSs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lbs::DiscreteOrdinatesAdjointSolver::MakeAdjointXSs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/daa/lbsadj__solver__01a__make__adjoint_x_s_8cc_source.html#l00009">9</a> of file <a class="el" href="../../dc/daa/lbsadj__solver__01a__make__adjoint_x_s_8cc_source.html">lbsadj_solver_01a_make_adjointXS.cc</a>.</p>
 
 </div>
 </div>
@@ -976,6 +1024,8 @@ Additional Inherited Members</h2></td></tr>
 <li>modules/LinearBoltzmannSolvers/C_DiscreteOrdinatesAdjointSolver/<a class="el" href="../../dc/d0a/lbsadj__innerproduct_8cc_source.html">lbsadj_innerproduct.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/C_DiscreteOrdinatesAdjointSolver/<a class="el" href="../../db/d39/lbsadj__solver__00__constrdestr_8cc_source.html">lbsadj_solver_00_constrdestr.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/C_DiscreteOrdinatesAdjointSolver/<a class="el" href="../../d1/d75/lbsadj__solver__01__main__initialize_8cc_source.html">lbsadj_solver_01_main_initialize.cc</a></li>
+<li>modules/LinearBoltzmannSolvers/C_DiscreteOrdinatesAdjointSolver/<a class="el" href="../../dc/daa/lbsadj__solver__01a__make__adjoint_x_s_8cc_source.html">lbsadj_solver_01a_make_adjointXS.cc</a></li>
+<li>modules/LinearBoltzmannSolvers/C_DiscreteOrdinatesAdjointSolver/<a class="el" href="../../dc/d0e/lbsadj__solver__01b__init_q_o_is_8cc_source.html">lbsadj_solver_01b_initQOIs.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/C_DiscreteOrdinatesAdjointSolver/<a class="el" href="../../d5/d56/lbsadj__solver__02__main__execute_8cc_source.html">lbsadj_solver_02_main_execute.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/C_DiscreteOrdinatesAdjointSolver/<a class="el" href="../../d8/d29/lbsadj__solver__04__qoi_8cc_source.html">lbsadj_solver_04_qoi.cc</a></li>
 <li>modules/LinearBoltzmannSolvers/C_DiscreteOrdinatesAdjointSolver/<a class="el" href="../../d7/d7f/lbsadj__solver__05a__export__imp_8cc_source.html">lbsadj_solver_05a_export_imp.cc</a></li>

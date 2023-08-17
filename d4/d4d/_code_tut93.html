@@ -231,11 +231,11 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 </div><!-- fragment --><p> Note here that we grab the <code>dimension</code>.</p>
 <p >Next we set a number of parameters important to the simulation: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_groups = 1;</div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> scattering_order = 1;</div>
-<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a> = scattering_order;</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; L = scattering_order;</div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_moments =</div>
-<div class="line">  (dimension == 1)? <a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a> + 1 :</div>
-<div class="line">  (dimension == 2)? (<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>+1)*(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>+2)/2 :</div>
-<div class="line">  (dimension == 3)? (<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>+1)*(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>+1) : 0;</div>
+<div class="line">  (dimension == 1)? L + 1 :</div>
+<div class="line">  (dimension == 2)? (L+1)*(L+2)/2 :</div>
+<div class="line">  (dimension == 3)? (L+1)*(L+1) : 0;</div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> sigma_t = 0.27;</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build harmonic map</span></div>
@@ -251,7 +251,6 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ell=0; ell&lt;=scattering_order; ell++)</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m=-ell; m&lt;=ell; m++)</div>
 <div class="line">      m_to_ell_em_map.emplace_back(ell,m);</div>
-<div class="ttc" id="anamespacechi__lua_html_a6e3d009455d0e5113e4ffbc28269e724"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">chi_lua::L</a></div><div class="ttdeci">void L</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02222">lua_functions.c:2222</a></div></div>
 </div><!-- fragment --><p> The interesting items here includes the <code>scattering_order</code> and the map from linear moment index to harmonic indices, <code>m_to_ell_em_map</code>. See the <a href="https://github.com/doctor-janv/whitepapers/blob/main/ChiTech-LBS-TheoryManual/ChiTech-LBS-TheoryManual_v_1_13.pdf">LBS Whitepaper</a> for the detail of this but in a nutshell... Only some of the harmonics are relevant in certain dimensions.</p>
 <p >Next we build the spatial discretization, which in this case would be a PWLD discretization, and we do this as normal: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
 <div class="line"><a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#a2c47f3d6e3faf4ac1d41f429f4839a0c">chi_math::SpatialDiscretization_PWLD::New</a>(grid_ptr);</div>
@@ -777,11 +776,11 @@ The complete program</h1>
 <div class="line">  <span class="comment">//============================================= Set parameters</span></div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_groups = 1;</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> scattering_order = 1;</div>
-<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a> = scattering_order;</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; L = scattering_order;</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_moments =</div>
-<div class="line">    (dimension == 1)? <a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a> + 1 :</div>
-<div class="line">    (dimension == 2)? (<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>+1)*(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>+2)/2 :</div>
-<div class="line">    (dimension == 3)? (<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>+1)*(<a class="code hl_variable" href="../../d8/dd9/namespacechi__lua.html#a6e3d009455d0e5113e4ffbc28269e724">L</a>+1) : 0;</div>
+<div class="line">    (dimension == 1)? L + 1 :</div>
+<div class="line">    (dimension == 2)? (L+1)*(L+2)/2 :</div>
+<div class="line">    (dimension == 3)? (L+1)*(L+1) : 0;</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">double</span> sigma_t = 0.27;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Build harmonic map</span></div>

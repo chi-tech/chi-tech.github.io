@@ -426,47 +426,73 @@ $(document).ready(function(){initNavTree('db/df6/lbs_____x_x_non_linear_k_eigen_
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="comment">padding-top: 4px;</span></div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="comment">padding-bottom: 0px;</span></div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="comment">&quot;</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="comment">&gt;&lt;span class=&quot;arrow&quot; style=&quot;padding-left: 0px;&quot;&gt;►&lt;/span&gt;&lt;TT&gt;&lt;B&gt;reinit_phi_1&lt;/B&gt;&lt;/TT&gt;&lt;span style=&quot;color: #c4c1c0;&quot;&gt;&amp;nbsp &amp;nbsp &amp;nbsp &amp;nbspIf true, reinitializes scalar phi fluxes to 1&lt;/span&gt;&lt;/button&gt;</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="comment">&gt;&lt;span class=&quot;arrow&quot; style=&quot;padding-left: 0px;&quot;&gt;►&lt;/span&gt;&lt;TT&gt;&lt;B&gt;num_free_power_iterations&lt;/B&gt;&lt;/TT&gt;&lt;span style=&quot;color: #c4c1c0;&quot;&gt;&amp;nbsp &amp;nbsp &amp;nbsp &amp;nbspThe number of free power iterations to execute before entering the non-linear algorithm&lt;/span&gt;&lt;/button&gt;</span></div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="comment">&lt;div class=&quot;content&quot; style=&quot;display: none;&quot;&gt;</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="comment">  &lt;p&gt;&lt;I&gt;type=&lt;/I&gt;&lt;span style=&quot;color: blue;&quot;&gt;&lt;TT&gt;BOOLEAN&lt;/TT&gt;&lt;/span&gt;. If true, reinitializes scalar phi fluxes to 1</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="comment">  &lt;p&gt;&lt;I&gt;type=&lt;/I&gt;&lt;span style=&quot;color: blue;&quot;&gt;&lt;TT&gt;INTEGER&lt;/TT&gt;&lt;/span&gt;. The number of free power iterations to execute before entering the non-linear algorithm</span></div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="comment">&lt;/p&gt;</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="comment">  &lt;p&gt;Default value: &lt;TT style=&quot;color:grey&quot;&gt;true&lt;/TT&gt;&lt;/p&gt;</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="comment">  &lt;p&gt;Default value: &lt;TT style=&quot;color:grey&quot;&gt;0&lt;/TT&gt;&lt;/p&gt;</span></div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="comment">&lt;/div&gt;</span></div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="comment"></span> </div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="comment">&lt;/div&gt;</span></div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="comment">\endhtmlonly</span></div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="comment"></span> </div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="comment">\htmlonly</span></div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="comment"></span> </div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="comment">&lt;script&gt;</span></div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="comment"></span> </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="comment">{</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">    var coll = document.getElementsByClassName(&quot;droppy2&quot;);</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="comment">    var i;</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="comment">    </span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="comment">    for (i = 0; i &lt; coll.length; i++) {</span></div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="comment">      coll[i].addEventListener(&quot;click&quot;, function() {</span></div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="comment">        this.classList.toggle(&quot;active&quot;);</span></div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="comment">        var content = this.nextElementSibling;</span></div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="comment">        if (content.style.display === &quot;block&quot;) {</span></div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="comment">          content.style.display = &quot;none&quot;;</span></div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="comment">          this.childNodes[0].innerText = &quot;►&quot;</span></div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="comment">        } else {</span></div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="comment">          content.style.display = &quot;block&quot;;</span></div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="comment">          this.children[0].innerText = &quot;▼&quot;</span></div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="comment">        }</span></div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="comment">      });</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="comment">    }</span></div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="comment">}&lt;/script&gt;</span></div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="comment"></span> </div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="comment">\endhtmlonly</span></div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="comment"></span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="comment">### Usage Examples:</span></div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="comment">\ref test_modules_LinearBoltzmannSolvers_MGDiffusion_KEigen_KEigenvalueMIP2D_1b_QBlock_lua  </span></div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="comment">\ref test_modules_LinearBoltzmannSolvers_MGDiffusion_KEigen_KEigenvalueMIP1D_1G_lua  </span></div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="comment">\ref test_modules_LinearBoltzmannSolvers_Transport_Keigen_KEigenvalueTransport1D_1G_lua  </span></div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="comment">\ref test_modules_LinearBoltzmannSolvers_Transport_Keigen_KEigenvalueTransport2D_1b_QBlock_lua  </span></div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="comment">&lt;button type=&quot;button&quot; class=&quot;droppy2&quot; style=</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="comment">&quot;</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="comment">background-color: #edf0f5;</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="comment">color: #9373A5;</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="comment">cursor: pointer;</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="comment">border: none;</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="comment">text-align: left;</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="comment">outline: none;</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">font-size: 15px;</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="comment">margin: 2px 2px;</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="comment">border: 2px solid #687372;</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="comment">display: block;</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="comment">width: 100%;</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="comment">vertical-align: middle;</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="comment">padding-top: 4px;</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="comment">padding-bottom: 0px;</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="comment">&quot;</span></div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="comment">&gt;&lt;span class=&quot;arrow&quot; style=&quot;padding-left: 0px;&quot;&gt;►&lt;/span&gt;&lt;TT&gt;&lt;B&gt;reinit_phi_1&lt;/B&gt;&lt;/TT&gt;&lt;span style=&quot;color: #c4c1c0;&quot;&gt;&amp;nbsp &amp;nbsp &amp;nbsp &amp;nbspIf true, reinitializes scalar phi fluxes to 1&lt;/span&gt;&lt;/button&gt;</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="comment">&lt;div class=&quot;content&quot; style=&quot;display: none;&quot;&gt;</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="comment">  &lt;p&gt;&lt;I&gt;type=&lt;/I&gt;&lt;span style=&quot;color: blue;&quot;&gt;&lt;TT&gt;BOOLEAN&lt;/TT&gt;&lt;/span&gt;. If true, reinitializes scalar phi fluxes to 1</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="comment">&lt;/p&gt;</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="comment">  &lt;p&gt;Default value: &lt;TT style=&quot;color:grey&quot;&gt;true&lt;/TT&gt;&lt;/p&gt;</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="comment">&lt;/div&gt;</span></div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="comment"></span> </div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="comment">&lt;/div&gt;</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="comment">\endhtmlonly</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="comment"></span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="comment">\htmlonly</span></div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="comment"></span> </div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="comment">&lt;script&gt;</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="comment"></span> </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="comment">{</span></div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="comment">    var coll = document.getElementsByClassName(&quot;droppy2&quot;);</span></div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="comment">    var i;</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="comment">    </span></div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="comment">    for (i = 0; i &lt; coll.length; i++) {</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="comment">      coll[i].addEventListener(&quot;click&quot;, function() {</span></div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="comment">        this.classList.toggle(&quot;active&quot;);</span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="comment">        var content = this.nextElementSibling;</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="comment">        if (content.style.display === &quot;block&quot;) {</span></div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="comment">          content.style.display = &quot;none&quot;;</span></div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="comment">          this.childNodes[0].innerText = &quot;►&quot;</span></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="comment">        } else {</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="comment">          content.style.display = &quot;block&quot;;</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="comment">          this.children[0].innerText = &quot;▼&quot;</span></div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="comment">        }</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="comment">      });</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span><span class="comment">}&lt;/script&gt;</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="comment"></span> </div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="comment">\endhtmlonly</span></div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span><span class="comment"></span> </div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><span class="comment">### Usage Examples:</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span><span class="comment">\ref test_modules_LinearBoltzmannSolvers_MGDiffusion_KEigen_KEigenvalueMIP2D_1b_QBlock_lua  </span></div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="comment">\ref test_modules_LinearBoltzmannSolvers_MGDiffusion_KEigen_KEigenvalueMIP1D_1G_lua  </span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="comment">\ref test_modules_LinearBoltzmannSolvers_Transport_Keigen_KEigenvalueTransport1D_1G_CBC_lua  </span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="comment">\ref test_modules_LinearBoltzmannSolvers_Transport_Keigen_KEigenvalueTransport2D_1b_QBlock_lua  </span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="comment">\ref test_modules_LinearBoltzmannSolvers_Transport_Keigen_KEigenvalueTransport2D_1b_QBlock_CBC_lua  </span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="comment">\ref test_modules_LinearBoltzmannSolvers_Transport_Keigen_KEigenvalueTransport1D_1G_lua  </span></div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="comment">*/</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

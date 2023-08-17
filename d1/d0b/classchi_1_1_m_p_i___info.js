@@ -3,6 +3,7 @@ var classchi_1_1_m_p_i___info =
     [ "MPI_Info", "d1/d0b/classchi_1_1_m_p_i___info.html#a128ff648b77ace1e74949bffd9bb4d85", null ],
     [ "MPI_Info", "d1/d0b/classchi_1_1_m_p_i___info.html#ad542c366154616a548e0610ba73ea3fa", null ],
     [ "Barrier", "d1/d0b/classchi_1_1_m_p_i___info.html#a2ad5c5369b27cfb9043b6509a0a5537d", null ],
+    [ "Call", "d1/d0b/classchi_1_1_m_p_i___info.html#a81d200022348fa7dc1d7b4b77b9dace6", null ],
     [ "GetInstance", "d1/d0b/classchi_1_1_m_p_i___info.html#a4b53329bd64ead191f2b70e5081750f5", null ],
     [ "operator=", "d1/d0b/classchi_1_1_m_p_i___info.html#a09a6fdaeab8f34400d65dbcccc27ccfb", null ],
     [ "SetCommunicator", "d1/d0b/classchi_1_1_m_p_i___info.html#a84efab607efb902d0c9a0306bf0a7f34", null ],

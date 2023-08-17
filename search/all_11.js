@@ -1,8 +1,8 @@
 var searchData=
 [
   ['q_5f_0',['q_',['../de/d01/classprk_1_1_transient_solver.html#ab6ed9aba38983d632a475bdd6286187b',1,'prk::TransientSolver']]],
-  ['q_5fmoments_5f_1',['q_moments_',['../d8/da5/classlbs_1_1_sweep_chunk_p_w_l_transient_theta.html#ab264b06dcdd9a0b46427e80821a2c05e',1,'lbs::SweepChunkPWLTransientTheta::q_moments_()'],['../d0/d5c/classlbs_1_1_sweep_chunk_p_w_l.html#aa651108fffdad9a3e32eb1c63bbb3e4f',1,'lbs::SweepChunkPWL::q_moments_()'],['../d2/d88/classlbs_1_1_l_b_s_sweep_chunk.html#a0a0ca5d640fbb907327f6c6c57ae3f8c',1,'lbs::LBSSweepChunk::q_moments_()']]],
-  ['q_5fmoments_5flocal_5f_2',['q_moments_local_',['../dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#ad307f28766d0f0d8c952142c05b3f473',1,'lbs::XXPowerIterationKEigen::q_moments_local_()'],['../dc/db7/classlbs_1_1_l_b_s_solver.html#a6ef1cc05e2ed75f286c1bbb804e13a19',1,'lbs::LBSSolver::q_moments_local_()']]],
+  ['q_5fmoments_5f_1',['q_moments_',['../d6/d19/classlbs_1_1_sweep_chunk.html#a7e2be4b350bcc95440cb836bfd4d2a9d',1,'lbs::SweepChunk::q_moments_()'],['../d8/da5/classlbs_1_1_sweep_chunk_p_w_l_transient_theta.html#ab264b06dcdd9a0b46427e80821a2c05e',1,'lbs::SweepChunkPWLTransientTheta::q_moments_()']]],
+  ['q_5fmoments_5flocal_5f_2',['q_moments_local_',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a6ef1cc05e2ed75f286c1bbb804e13a19',1,'lbs::LBSSolver::q_moments_local_()'],['../dc/d3f/classlbs_1_1_x_x_power_iteration_k_eigen.html#ad307f28766d0f0d8c952142c05b3f473',1,'lbs::XXPowerIterationKEigen::q_moments_local_()']]],
   ['q_5forder_5f_3',['q_order_',['../d5/d3e/classchi__math_1_1_spatial_discretization___f_e.html#abccd1c3dfb0566077dad8e7a5cbbd720',1,'chi_math::SpatialDiscretization_FE']]],
   ['qmomentslocal_4',['QMomentsLocal',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a278a2eb01d497ebef86570e9eccc5fcb',1,'lbs::LBSSolver::QMomentsLocal()'],['../dc/db7/classlbs_1_1_l_b_s_solver.html#a87e1d7dff468d6aaaa269e8870e37e0d',1,'lbs::LBSSolver::QMomentsLocal() const']]],
   ['qp_5fdata_5finitialized_5f_5',['qp_data_initialized_',['../d5/d3e/classchi__math_1_1_spatial_discretization___f_e.html#a1d97c19c6d4f0cb7098e7d031135fd9b',1,'chi_math::SpatialDiscretization_FE']]],
@@ -22,7 +22,7 @@ var searchData=
   ['quadrature_5f_19',['quadrature_',['../d2/db6/classlbs_1_1_l_b_s_groupset.html#a5c5294e713617f0377df6536ae9543b4',1,'lbs::LBSGroupset']]],
   ['quadrature_5fconical_2ecc_20',['quadrature_conical.cc',['../da/d53/quadrature__conical_8cc.html',1,'']]],
   ['quadrature_5fconical_2eh_21',['quadrature_conical.h',['../da/d13/quadrature__conical_8h.html',1,'']]],
-  ['quadrature_5ffluds_5ftemplates_5fmap_5f_22',['quadrature_fluds_templates_map_',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#ae2592058db32a0f5d12b2f681d1180ef',1,'lbs::DiscreteOrdinatesSolver']]],
+  ['quadrature_5ffluds_5fcommondata_5fmap_5f_22',['quadrature_fluds_commondata_map_',['../d4/dec/classlbs_1_1_discrete_ordinates_solver.html#a7590ac64eda9358517ed4216823c8fca',1,'lbs::DiscreteOrdinatesSolver']]],
   ['quadrature_5fgausschebyshev_2ecc_23',['quadrature_gausschebyshev.cc',['../d4/d44/quadrature__gausschebyshev_8cc.html',1,'']]],
   ['quadrature_5fgausschebyshev_2eh_24',['quadrature_gausschebyshev.h',['../d0/d18/quadrature__gausschebyshev_8h.html',1,'']]],
   ['quadrature_5fgausslegendre_2ecc_25',['quadrature_gausslegendre.cc',['../dd/dda/quadrature__gausslegendre_8cc.html',1,'']]],

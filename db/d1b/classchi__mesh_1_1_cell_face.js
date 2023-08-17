@@ -3,7 +3,7 @@ var classchi__mesh_1_1_cell_face =
     [ "ComputeFaceArea", "db/d1b/classchi__mesh_1_1_cell_face.html#ab1d8ab52606fce185105e616b572f86d", null ],
     [ "DeSerialize", "db/d1b/classchi__mesh_1_1_cell_face.html#adb9ac890f87a7b7f89b4015de0c7925b", null ],
     [ "GetNeighborAssociatedFace", "db/d1b/classchi__mesh_1_1_cell_face.html#ae2e90e8ff1f8db7fa699bef71c5ad253", null ],
-    [ "GetNeighborLocalID", "db/d1b/classchi__mesh_1_1_cell_face.html#a622eac8c37292c708716ece2fd84ed47", null ],
+    [ "GetNeighborLocalID", "db/d1b/classchi__mesh_1_1_cell_face.html#ae2bf36166577651c868793f03c5eb6bc", null ],
     [ "GetNeighborPartitionID", "db/d1b/classchi__mesh_1_1_cell_face.html#a24534befab7d7a45f9db0fae9b876c29", null ],
     [ "IsNeighborLocal", "db/d1b/classchi__mesh_1_1_cell_face.html#aae86693b8479a20254079920a32a3188", null ],
     [ "RecomputeCentroid", "db/d1b/classchi__mesh_1_1_cell_face.html#aa23916ced49cdd081fbc0d5fa14183d4", null ],

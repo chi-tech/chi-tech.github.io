@@ -166,15 +166,15 @@ Modules</h2></td></tr>
 <div class="line">--</div>
 <div class="line">-- Add Groupset construction here</div>
 <div class="line">--</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a56ba50206c4125503807c5889416b66a">chiLBSSetProperty</a>(phys1,DISCRETIZATION_METHOD,PWLD)</div>
-<div class="line"><a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#a56ba50206c4125503807c5889416b66a">chiLBSSetProperty</a>(phys1,SCATTERING_ORDER,1)</div>
+<div class="line"><a class="code hl_function" href="../../d8/d19/group___l_b_s_lua_functions.html#ga56ba50206c4125503807c5889416b66a">chiLBSSetProperty</a>(phys1,DISCRETIZATION_METHOD,PWLD)</div>
+<div class="line"><a class="code hl_function" href="../../d8/d19/group___l_b_s_lua_functions.html#ga56ba50206c4125503807c5889416b66a">chiLBSSetProperty</a>(phys1,SCATTERING_ORDER,1)</div>
 <div class="line">--</div>
 <div class="line">chiLBSInitialize(phys1)</div>
 <div class="line">chiLBSExecute(phys1)</div>
 <div class="line">--</div>
-<div class="line">fflist,count = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#af96d1d72d1274c36390436edabb1b0f9">chiLBSGetScalarFieldFunctionList</a>(phys1)</div>
-<div class="ttc" id="anamespacechi__lua_html_a56ba50206c4125503807c5889416b66a"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#a56ba50206c4125503807c5889416b66a">chi_lua::chiLBSSetProperty</a></div><div class="ttdeci">void chiLBSSetProperty(int SolverIndex, int PropertyIndex)</div></div>
-<div class="ttc" id="anamespacechi__lua_html_af96d1d72d1274c36390436edabb1b0f9"><div class="ttname"><a href="../../d8/dd9/namespacechi__lua.html#af96d1d72d1274c36390436edabb1b0f9">chi_lua::chiLBSGetScalarFieldFunctionList</a></div><div class="ttdeci">Pair chiLBSGetScalarFieldFunctionList(int SolverIndex)</div></div>
+<div class="line">fflist,count = <a class="code hl_function" href="../../d8/d19/group___l_b_s_lua_functions.html#gaf96d1d72d1274c36390436edabb1b0f9">chiLBSGetScalarFieldFunctionList</a>(phys1)</div>
+<div class="ttc" id="agroup___l_b_s_lua_functions_html_ga56ba50206c4125503807c5889416b66a"><div class="ttname"><a href="../../d8/d19/group___l_b_s_lua_functions.html#ga56ba50206c4125503807c5889416b66a">chi_lua::chiLBSSetProperty</a></div><div class="ttdeci">void chiLBSSetProperty(int SolverIndex, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l03851">lua_functions.c:3851</a></div></div>
+<div class="ttc" id="agroup___l_b_s_lua_functions_html_gaf96d1d72d1274c36390436edabb1b0f9"><div class="ttname"><a href="../../d8/d19/group___l_b_s_lua_functions.html#gaf96d1d72d1274c36390436edabb1b0f9">chi_lua::chiLBSGetScalarFieldFunctionList</a></div><div class="ttdeci">Pair chiLBSGetScalarFieldFunctionList(int SolverIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l03897">lua_functions.c:3897</a></div></div>
 </div><!-- fragment --></li>
 </ul>
 will create field functions </p><div class="fragment"><div class="line">phi_g000_m000</div>
@@ -185,7 +185,7 @@ will create field functions </p><div class="fragment"><div class="line">phi_g000
 <div class="line">phi_g001_m001</div>
 <div class="line">phi_g001_m002</div>
 <div class="line">phi_g001_m003</div>
-</div><!-- fragment -->We can get the scalar field functions with a call to <code>chiLBSGetScalarFieldFunctionList</code> which will return a table with the field function handles of only the scalar fields. E.g., </p><div class="fragment"><div class="line">fflist = <a class="code hl_function" href="../../d8/dd9/namespacechi__lua.html#af96d1d72d1274c36390436edabb1b0f9">chiLBSGetScalarFieldFunctionList</a>(phys1)</div>
+</div><!-- fragment -->We can get the scalar field functions with a call to <code>chiLBSGetScalarFieldFunctionList</code> which will return a table with the field function handles of only the scalar fields. E.g., </p><div class="fragment"><div class="line">fflist = <a class="code hl_function" href="../../d8/d19/group___l_b_s_lua_functions.html#gaf96d1d72d1274c36390436edabb1b0f9">chiLBSGetScalarFieldFunctionList</a>(phys1)</div>
 </div><!-- fragment --><p> with <code>fflist</code> containing handles to </p><div class="fragment"><div class="line">phi_g000_m000</div>
 <div class="line">phi_g001_m000</div>
 </div><!-- fragment -->Additionally, LBS can create a power generation field function with the default name <code>power_generation</code>. </p><div class="fragment"><div class="line">chiLBSSetOptions(phys1,</div>

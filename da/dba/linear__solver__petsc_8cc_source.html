@@ -202,11 +202,12 @@ $(document).ready(function(){initNavTree('da/dba/linear__solver__petsc_8cc_sourc
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  this-&gt;SetInitialGuess();</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  this-&gt;SetRHS();</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  KSPSolve(solver_, b_, x_);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  this-&gt;PostSolveCallback();</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}<span class="comment">//namespace chi_math</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="keywordflow">if</span> (not suppress_kspsolve_)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    KSPSolve(solver_, b_, x_);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  this-&gt;PostSolveCallback();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}<span class="comment">//namespace chi_math</span></div>
 <div class="ttc" id="aclasschi__math_1_1_linear_solver_html_a1a63c87e2c9e4858f1a51b7f180c48c8"><div class="ttname"><a href="../../dd/d52/classchi__math_1_1_linear_solver.html#a1a63c87e2c9e4858f1a51b7f180c48c8">chi_math::LinearSolver::PreSetupCallback</a></div><div class="ttdeci">virtual void PreSetupCallback()</div></div>
 <div class="ttc" id="aclasschi__math_1_1_linear_solver_html_a1ee5fde605bc9d06345780517c3b1510"><div class="ttname"><a href="../../dd/d52/classchi__math_1_1_linear_solver.html#a1ee5fde605bc9d06345780517c3b1510">chi_math::LinearSolver::~LinearSolver</a></div><div class="ttdeci">virtual ~LinearSolver()</div></div>
 <div class="ttc" id="aclasschi__math_1_1_linear_solver_html_a37c0003a92dacd2979637d5aec90db56"><div class="ttname"><a href="../../dd/d52/classchi__math_1_1_linear_solver.html#a37c0003a92dacd2979637d5aec90db56">chi_math::LinearSolver::PreSolveCallback</a></div><div class="ttdeci">virtual void PreSolveCallback()</div></div>

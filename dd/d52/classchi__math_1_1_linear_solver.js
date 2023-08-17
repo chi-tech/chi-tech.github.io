@@ -1,7 +1,7 @@
 var classchi__math_1_1_linear_solver =
 [
     [ "ToleranceOptions", "db/d8f/structchi__math_1_1_linear_solver_1_1_tolerance_options.html", "db/d8f/structchi__math_1_1_linear_solver_1_1_tolerance_options" ],
-    [ "LinSolveContext", "dd/d52/classchi__math_1_1_linear_solver.html#a28f23e17140794a71fe5c54a7f4b64ea", null ],
+    [ "LinSolveContext", "dd/d52/classchi__math_1_1_linear_solver.html#abe51395b2c6fabc0e5f249b0a869d4ed", null ],
     [ "LinSolveContextPtr", "dd/d52/classchi__math_1_1_linear_solver.html#ac00b84a9b4ab4baa7e149412b70fb3f2", null ],
     [ "LinearSolver", "dd/d52/classchi__math_1_1_linear_solver.html#af02f4e492e7d27426c922e6943117274", null ],
     [ "LinearSolver", "dd/d52/classchi__math_1_1_linear_solver.html#ac79240ce32f1a9be643a8a43c2b2083d", null ],
@@ -10,6 +10,7 @@ var classchi__math_1_1_linear_solver =
     [ "ApplyToleranceOptions", "dd/d52/classchi__math_1_1_linear_solver.html#a77fb831161d04aefeae6514e53fd65ef", null ],
     [ "ApplyToleranceOptions", "dd/d52/classchi__math_1_1_linear_solver.html#a761f77fab7ebe26262a7d45f347d072e", null ],
     [ "GetContext", "dd/d52/classchi__math_1_1_linear_solver.html#a6a7c2e4f8f88f0d54555d50c0bb2817a", null ],
+    [ "GetKSPSolveSuppressionFlag", "dd/d52/classchi__math_1_1_linear_solver.html#a0fc3807451a4bafd7aee082bac1a4d9f", null ],
     [ "IsSystemSet", "dd/d52/classchi__math_1_1_linear_solver.html#a93f98f88aa4e3db24bb5757bcb022494", null ],
     [ "PostSetupCallback", "dd/d52/classchi__math_1_1_linear_solver.html#ab6e93b7fc8af388e949d0ffb657eb1f6", null ],
     [ "PostSetupCallback", "dd/d52/classchi__math_1_1_linear_solver.html#a2480f8d9a0d686f7b459607e7cfffd91", null ],
@@ -22,6 +23,7 @@ var classchi__math_1_1_linear_solver =
     [ "SetConvergenceTest", "dd/d52/classchi__math_1_1_linear_solver.html#aa7a858fd5a4f52aed423e8a93a47c934", null ],
     [ "SetConvergenceTest", "dd/d52/classchi__math_1_1_linear_solver.html#a3ecff9af17679a38065681c8e0334835", null ],
     [ "SetInitialGuess", "dd/d52/classchi__math_1_1_linear_solver.html#a1a808892fcef912cb7edca1f0ef89995", null ],
+    [ "SetKSPSolveSuppressionFlag", "dd/d52/classchi__math_1_1_linear_solver.html#a1e3f451b1814f58507e04f4086afa616", null ],
     [ "SetMonitor", "dd/d52/classchi__math_1_1_linear_solver.html#aeabce11d509354a15a620d3b111792e8", null ],
     [ "SetMonitor", "dd/d52/classchi__math_1_1_linear_solver.html#a99b4a6bdd09bcdc965104a2d32fd09f9", null ],
     [ "SetOptions", "dd/d52/classchi__math_1_1_linear_solver.html#a5a5ffdb709d4b03a114ad1415b95eed4", null ],
@@ -46,6 +48,7 @@ var classchi__math_1_1_linear_solver =
     [ "num_local_dofs_", "dd/d52/classchi__math_1_1_linear_solver.html#ab8a8eb00d96acc4e8392b87450481b73", null ],
     [ "solver_", "dd/d52/classchi__math_1_1_linear_solver.html#a287b517f2c872f33cfd1fc2c95082cef", null ],
     [ "solver_name_", "dd/d52/classchi__math_1_1_linear_solver.html#a931fd5346cffb103a20c2663829855f5", null ],
+    [ "suppress_kspsolve_", "dd/d52/classchi__math_1_1_linear_solver.html#aad2a81f339ea2712f718022ca7f86b68", null ],
     [ "system_set_", "dd/d52/classchi__math_1_1_linear_solver.html#ab397a0c1b8100afb07078c211780a908", null ],
     [ "tolerance_options_", "dd/d52/classchi__math_1_1_linear_solver.html#ac27600413aaa7c6f36d24d96ec5595b7", null ],
     [ "x_", "dd/d52/classchi__math_1_1_linear_solver.html#a6e9e87c3b2ad265872482f07d83af332", null ]

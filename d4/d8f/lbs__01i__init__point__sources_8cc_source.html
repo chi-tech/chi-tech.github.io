@@ -95,102 +95,105 @@ $(document).ready(function(){initNavTree('d4/d8f/lbs__01i__init__point__sources_
 <div class="contents">
 <a href="../../d4/d8f/lbs__01i__init__point__sources_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d9/d53/lbs__solver_8h.html">lbs_solver.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"></span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/**Intializes all point sources.*/</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a8d8a4f1e4f92692c1446b5a09b02e71a">    7</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a8d8a4f1e4f92692c1446b5a09b02e71a">lbs::LBSSolver::InitializePointSources</a>()</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keyword">const</span> std::string fname = <span class="stringliteral">&quot;InitializePointSources&quot;</span>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="comment">//============================================= Loop over point sources</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; point_source : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a0f2f89fa0528c80135bcdd6bf47f3551">point_sources_</a>)</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordflow">if</span> (point_source.Strength().size() != <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a71b221051ca5c464e09d277e6177cd84">num_groups_</a>)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      <span class="keywordflow">throw</span> std::logic_error(</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        fname + <span class="stringliteral">&quot;: Point source multigroup strength vector &quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <span class="stringliteral">&quot;is not compatible with the number of &quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="stringliteral">&quot;groups in the simulation. Expected &quot;</span> +</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        std::to_string(<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a71b221051ca5c464e09d277e6177cd84">num_groups_</a>) + <span class="stringliteral">&quot; found &quot;</span> +</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        std::to_string(point_source.Strength().size()));</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; p = point_source.Location();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">double</span> v_total = 0.0; <span class="comment">//Total volume of all cells sharing</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                          <span class="comment">// this source</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::vector&lt;PointSource::ContainingCellInfo&gt; temp_list;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;local_cells)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;CheckPointInsideCell(cell, p))</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_view = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1293b67c0e81350c7d2ed844b181ae7a">discretization_</a>-&gt;GetCellMapping(cell);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_matrices = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a20c78eb51d060d9b90af8f240004995d">unit_cell_matrices_</a>[cell.local_id_];</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; M = cell_matrices.M_matrix;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; I = cell_matrices.Vi_vectors;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        std::vector&lt;double&gt; shape_values;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        cell_view.ShapeValues(point_source.Location(),</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                              shape_values<span class="comment">/**ByRef*/</span>);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">const</span> <span class="keyword">auto</span> M_inv = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a7d48371b6d078244114ce3d3053774d8">chi_math::Inverse</a>(M);</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">mesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"></span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/**Intializes all point sources.*/</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a8d8a4f1e4f92692c1446b5a09b02e71a">    9</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a8d8a4f1e4f92692c1446b5a09b02e71a">lbs::LBSSolver::InitializePointSources</a>()</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keyword">const</span> std::string fname = <span class="stringliteral">&quot;InitializePointSources&quot;</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="comment">//============================================= Loop over point sources</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; point_source : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a0f2f89fa0528c80135bcdd6bf47f3551">point_sources_</a>)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">if</span> (point_source.Strength().size() != <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a71b221051ca5c464e09d277e6177cd84">num_groups_</a>)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      <span class="keywordflow">throw</span> std::logic_error(</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        fname + <span class="stringliteral">&quot;: Point source multigroup strength vector &quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="stringliteral">&quot;is not compatible with the number of &quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                <span class="stringliteral">&quot;groups in the simulation. Expected &quot;</span> +</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        std::to_string(<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a71b221051ca5c464e09d277e6177cd84">num_groups_</a>) + <span class="stringliteral">&quot; found &quot;</span> +</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        std::to_string(point_source.Strength().size()));</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; p = point_source.Location();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">double</span> v_total = 0.0; <span class="comment">//Total volume of all cells sharing</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                          <span class="comment">// this source</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;PointSource::ContainingCellInfo&gt; temp_list;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell : <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;local_cells)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;CheckPointInsideCell(cell, p))</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_view = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1293b67c0e81350c7d2ed844b181ae7a">discretization_</a>-&gt;GetCellMapping(cell);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_matrices = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a20c78eb51d060d9b90af8f240004995d">unit_cell_matrices_</a>[cell.local_id_];</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; M = cell_matrices.M_matrix;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; I = cell_matrices.Vi_vectors;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        std::vector&lt;double&gt; shape_values;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        cell_view.ShapeValues(point_source.Location(),</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                              shape_values<span class="comment">/**ByRef*/</span>);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">const</span> <span class="keyword">auto</span> q_p_weights = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aca338ae5af880df37376a94a8276ebb8">chi_math::MatMul</a>(M_inv, shape_values);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">const</span> <span class="keyword">auto</span> M_inv = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a7d48371b6d078244114ce3d3053774d8">chi_math::Inverse</a>(M);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">double</span> v_cell = 0.0;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">for</span> (<span class="keywordtype">double</span> val : I) v_cell += val;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        v_total += v_cell;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        temp_list.push_back(</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>          <a class="code hl_struct" href="../../da/da1/structlbs_1_1_point_source_1_1_containing_cell_info.html">PointSource::ContainingCellInfo</a>{v_cell,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                                          cell.local_id_,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                                          shape_values,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                                          q_p_weights});</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      }<span class="comment">//if inside</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }<span class="comment">//for local cell</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">auto</span> ghost_global_ids = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;cells.GetGhostGlobalIDs();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">for</span> (uint64_t ghost_global_id : ghost_global_ids)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; neighbor_cell = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;cells[ghost_global_id];</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;CheckPointInsideCell(neighbor_cell, p))</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_matrices =</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>          <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#abf7bfec20e4a1fa62ee9b042f82b3065">unit_ghost_cell_matrices_</a>[neighbor_cell.global_id_];</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">for</span> (<span class="keywordtype">double</span> val : cell_matrices.Vi_vectors)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>          v_total += val;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      }<span class="comment">//if point inside</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }<span class="comment">//for ghost cell</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    point_source.ClearInitializedInfo();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; info : temp_list)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      point_source.AddContainingCellInfo(info.volume_weight/v_total,</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                                         info.cell_local_id,</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                                         info.shape_values,</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                                         info.node_weights);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;local_cells[info.cell_local_id];</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="comment">//Output message</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        std::stringstream output;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        output &lt;&lt; <span class="stringliteral">&quot;Point source at &quot;</span> &lt;&lt; p.PrintStr() &lt;&lt; <span class="stringliteral">&quot; assigned to cell &quot;</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>               &lt;&lt; cell.global_id_ &lt;&lt; <span class="stringliteral">&quot; with shape values &quot;</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">for</span> (<span class="keywordtype">double</span> val : info.shape_values) output &lt;&lt; val &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        output &lt;&lt; <span class="stringliteral">&quot;volume_weight=&quot;</span> &lt;&lt; info.volume_weight/v_total;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a>.<a class="code hl_function" href="../../df/dfa/classchi_1_1_chi_log.html#abddb4e99d42c5ffd548ca9dea3e0201d">LogAll</a>() &lt;&lt; output.str();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }<span class="comment">//for info in temp list</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  }<span class="comment">//for point_source</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">const</span> <span class="keyword">auto</span> q_p_weights = <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#aca338ae5af880df37376a94a8276ebb8">chi_math::MatMul</a>(M_inv, shape_values);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">double</span> v_cell = 0.0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">for</span> (<span class="keywordtype">double</span> val : I) v_cell += val;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        v_total += v_cell;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        temp_list.push_back(</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>          <a class="code hl_struct" href="../../da/da1/structlbs_1_1_point_source_1_1_containing_cell_info.html">PointSource::ContainingCellInfo</a>{v_cell,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                                          cell.local_id_,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                          shape_values,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                          q_p_weights});</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      }<span class="comment">//if inside</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }<span class="comment">//for local cell</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">auto</span> ghost_global_ids = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;cells.GetGhostGlobalIDs();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">for</span> (uint64_t ghost_global_id : ghost_global_ids)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; neighbor_cell = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;cells[ghost_global_id];</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;CheckPointInsideCell(neighbor_cell, p))</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_matrices =</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>          <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#abf7bfec20e4a1fa62ee9b042f82b3065">unit_ghost_cell_matrices_</a>[neighbor_cell.global_id_];</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">for</span> (<span class="keywordtype">double</span> val : cell_matrices.Vi_vectors)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>          v_total += val;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      }<span class="comment">//if point inside</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }<span class="comment">//for ghost cell</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    point_source.ClearInitializedInfo();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; info : temp_list)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      point_source.AddContainingCellInfo(info.volume_weight/v_total,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                                         info.cell_local_id,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                                         info.shape_values,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                                         info.node_weights);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell = <a class="code hl_variable" href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">grid_ptr_</a>-&gt;local_cells[info.cell_local_id];</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="comment">//Output message</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        std::stringstream output;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        output &lt;&lt; <span class="stringliteral">&quot;Point source at &quot;</span> &lt;&lt; p.PrintStr() &lt;&lt; <span class="stringliteral">&quot; assigned to cell &quot;</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>               &lt;&lt; cell.global_id_ &lt;&lt; <span class="stringliteral">&quot; with shape values &quot;</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">for</span> (<span class="keywordtype">double</span> val : info.shape_values) output &lt;&lt; val &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        output &lt;&lt; <span class="stringliteral">&quot;volume_weight=&quot;</span> &lt;&lt; info.volume_weight/v_total;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a>.<a class="code hl_function" href="../../df/dfa/classchi_1_1_chi_log.html#abddb4e99d42c5ffd548ca9dea3e0201d">LogAll</a>() &lt;&lt; output.str();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }<span class="comment">//for info in temp list</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  }<span class="comment">//for point_source</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
+<div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00078">chi_runtime.h:78</a></div></div>
-<div class="ttc" id="aclasschi_1_1_chi_log_html_abddb4e99d42c5ffd548ca9dea3e0201d"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#abddb4e99d42c5ffd548ca9dea3e0201d">chi::ChiLog::LogAll</a></div><div class="ttdeci">LogStream LogAll()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00226">chi_log.h:226</a></div></div>
+<div class="ttc" id="aclasschi_1_1_chi_log_html_abddb4e99d42c5ffd548ca9dea3e0201d"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#abddb4e99d42c5ffd548ca9dea3e0201d">chi::ChiLog::LogAll</a></div><div class="ttdeci">LogStream LogAll()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00236">chi_log.h:236</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a0f2f89fa0528c80135bcdd6bf47f3551"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a0f2f89fa0528c80135bcdd6bf47f3551">lbs::LBSSolver::point_sources_</a></div><div class="ttdeci">std::vector&lt; PointSource &gt; point_sources_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00069">lbs_solver.h:69</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a1144b5d5d598050cb3687894a1b84acc"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1144b5d5d598050cb3687894a1b84acc">lbs::LBSSolver::grid_ptr_</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr grid_ptr_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00075">lbs_solver.h:75</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a1293b67c0e81350c7d2ed844b181ae7a"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a1293b67c0e81350c7d2ed844b181ae7a">lbs::LBSSolver::discretization_</a></div><div class="ttdeci">std::shared_ptr&lt; chi_math::SpatialDiscretization &gt; discretization_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00074">lbs_solver.h:74</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a20c78eb51d060d9b90af8f240004995d"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a20c78eb51d060d9b90af8f240004995d">lbs::LBSSolver::unit_cell_matrices_</a></div><div class="ttdeci">std::vector&lt; UnitCellMatrices &gt; unit_cell_matrices_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00081">lbs_solver.h:81</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a71b221051ca5c464e09d277e6177cd84"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a71b221051ca5c464e09d277e6177cd84">lbs::LBSSolver::num_groups_</a></div><div class="ttdeci">size_t num_groups_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00063">lbs_solver.h:63</a></div></div>
-<div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a8d8a4f1e4f92692c1446b5a09b02e71a"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a8d8a4f1e4f92692c1446b5a09b02e71a">lbs::LBSSolver::InitializePointSources</a></div><div class="ttdeci">void InitializePointSources()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html#l00007">lbs_01i_init_point_sources.cc:7</a></div></div>
+<div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_a8d8a4f1e4f92692c1446b5a09b02e71a"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#a8d8a4f1e4f92692c1446b5a09b02e71a">lbs::LBSSolver::InitializePointSources</a></div><div class="ttdeci">void InitializePointSources()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8f/lbs__01i__init__point__sources_8cc_source.html#l00009">lbs_01i_init_point_sources.cc:9</a></div></div>
 <div class="ttc" id="aclasslbs_1_1_l_b_s_solver_html_abf7bfec20e4a1fa62ee9b042f82b3065"><div class="ttname"><a href="../../dc/db7/classlbs_1_1_l_b_s_solver.html#abf7bfec20e4a1fa62ee9b042f82b3065">lbs::LBSSolver::unit_ghost_cell_matrices_</a></div><div class="ttdeci">std::map&lt; uint64_t, UnitCellMatrices &gt; unit_ghost_cell_matrices_</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d53/lbs__solver_8h_source.html#l00082">lbs_solver.h:82</a></div></div>
 <div class="ttc" id="albs__solver_8h_html"><div class="ttname"><a href="../../d9/d53/lbs__solver_8h.html">lbs_solver.h</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_a7d48371b6d078244114ce3d3053774d8"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a7d48371b6d078244114ce3d3053774d8">chi_math::Inverse</a></div><div class="ttdeci">MatDbl Inverse(const MatDbl &amp;A)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d6a/chi__math__02__matrix__operations_8cc_source.html#l00379">chi_math_02_matrix_operations.cc:379</a></div></div>

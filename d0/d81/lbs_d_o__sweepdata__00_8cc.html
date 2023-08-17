@@ -102,6 +102,11 @@ $(document).ready(function(){initNavTree('d0/d81/lbs_d_o__sweepdata__00_8cc.html
 <code>#include &quot;<a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/d75/chi__log_8h_source.html">chi_log.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/de5/chi__timer_8h_source.html">utils/chi_timer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/dde/chi__utils_8h_source.html">utils/chi_utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d41/_s_p_d_s___adams_adams_hawkins_8h_source.html">mesh/SweepUtilities/SPDS/SPDS_AdamsAdamsHawkins.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/d7b/_a_a_h___f_l_u_d_s_8h_source.html">mesh/SweepUtilities/FLUDS/AAH_FLUDS.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/db8/_c_b_c___s_p_d_s_8h_source.html">Sweepers/CBC_SPDS.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d6a/_c_b_c___f_l_u_d_s_common_data_8h_source.html">Sweepers/CBC_FLUDSCommonData.h</a>&quot;</code><br />
 </div>
 <p><a href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -114,9 +119,9 @@ Namespaces</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a4d318d9e59077ef9d28f2305a8677eed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc.html#a4d318d9e59077ef9d28f2305a8677eed">ParallelParmetisNeedsCycles</a></td></tr>
 <tr class="separator:a4d318d9e59077ef9d28f2305a8677eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a377d3ae30abb32627ae6f118a23ab02f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc.html#a377d3ae30abb32627ae6f118a23ab02f">IsParallel</a>&#160;&#160;&#160;Chi::mpi.process_count&gt;1</td></tr>
+<tr class="memitem:a377d3ae30abb32627ae6f118a23ab02f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc.html#a377d3ae30abb32627ae6f118a23ab02f">IsParallel</a>&#160;&#160;&#160;Chi::mpi.process_count &gt; 1</td></tr>
 <tr class="separator:a377d3ae30abb32627ae6f118a23ab02f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a6abd8445e5ce8249cdb42b691148ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc.html#a5a6abd8445e5ce8249cdb42b691148ed">IsPartitionTypeParmetis</a>&#160;&#160;&#160;mesher.options.partition_type == <a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3aed0554f9a725850503d18f232ea9c50f">chi_mesh::VolumeMesher::PartitionType::PARMETIS</a></td></tr>
+<tr class="memitem:a5a6abd8445e5ce8249cdb42b691148ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc.html#a5a6abd8445e5ce8249cdb42b691148ed">IsPartitionTypeParmetis</a></td></tr>
 <tr class="separator:a5a6abd8445e5ce8249cdb42b691148ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -127,12 +132,12 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define IsParallel&#160;&#160;&#160;Chi::mpi.process_count&gt;1</td>
+          <td class="memname">#define IsParallel&#160;&#160;&#160;Chi::mpi.process_count &gt; 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html#l00014">14</a> of file <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html">lbsDO_sweepdata_00.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html#l00021">21</a> of file <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html">lbsDO_sweepdata_00.cc</a>.</p>
 
 </div>
 </div>
@@ -143,12 +148,14 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define IsPartitionTypeParmetis&#160;&#160;&#160;mesher.options.partition_type == <a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3aed0554f9a725850503d18f232ea9c50f">chi_mesh::VolumeMesher::PartitionType::PARMETIS</a></td>
+          <td class="memname">#define IsPartitionTypeParmetis</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html#l00016">16</a> of file <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html">lbsDO_sweepdata_00.cc</a>.</p>
+<b>Value:</b><div class="fragment"><div class="line">  mesher.options.partition_type ==                                             \</div>
+<div class="line">    chi_mesh::VolumeMesher::PartitionType::PARMETIS</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html#l00023">23</a> of file <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html">lbsDO_sweepdata_00.cc</a>.</p>
 
 </div>
 </div>
@@ -163,10 +170,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="stringliteral">&quot;When using PARMETIS type partitioning then groupset iterative method&quot;</span> \</div>
-<div class="line"><span class="stringliteral">&quot; must be NPT_CLASSICRICHARDSON_CYCLES or NPT_GMRES_CYCLES&quot;</span></div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="stringliteral">&quot;When using PARMETIS type partitioning then groupset iterative method&quot;</span>       \</div>
+<div class="line">  <span class="stringliteral">&quot; must be NPT_CLASSICRICHARDSON_CYCLES or NPT_GMRES_CYCLES&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html#l00010">10</a> of file <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html">lbsDO_sweepdata_00.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d0/d81/lbs_d_o__sweepdata__00_8cc_source.html">lbsDO_sweepdata_00.cc</a>.</p>
 
 </div>
 </div>

@@ -92,26 +92,21 @@ $(document).ready(function(){initNavTree('d8/d81/_f_l_u_d_s_8h.html','../../'); 
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle"><div class="title">FLUDS.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../d0/db3/chi__meshcontinuum_8h_source.html">mesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d0/ddd/cell_8h_source.html">mesh/Cell/cell.h</a>&quot;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/d45/_f_l_u_d_s_common_data_8h_source.html">FLUDSCommonData.h</a>&quot;</code><br />
 </div>
 <p><a href="../../d8/d81/_f_l_u_d_s_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1f/structchi__mesh_1_1sweep__management_1_1_face_nodal_mapping.html">chi_mesh::sweep_management::FaceNodalMapping</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html">chi_mesh::sweep_management::FLUDS</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/daf/structchi__mesh_1_1sweep__management_1_1_i_n_c_o_m_i_n_g___f_a_c_e___i_n_f_o.html">chi_mesh::sweep_management::INCOMING_FACE_INFO</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html">chi_mesh::sweep_management::PRIMARY_FLUDS</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -120,49 +115,7 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d7/dc7/namespacechi__mesh_1_1sweep__management"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html">chi_mesh::sweep_management</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:af151653675f8a275659033fdfbd83ef8"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; int, std::vector&lt; uint64_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d81/_f_l_u_d_s_8h.html#af151653675f8a275659033fdfbd83ef8">CompactFaceView</a></td></tr>
-<tr class="separator:af151653675f8a275659033fdfbd83ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8ba9d20a37c37fac398afe043e3660f"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; int, std::vector&lt; <a class="el" href="../../d8/d81/_f_l_u_d_s_8h.html#af151653675f8a275659033fdfbd83ef8">CompactFaceView</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d81/_f_l_u_d_s_8h.html#ac8ba9d20a37c37fac398afe043e3660f">CompactCellView</a></td></tr>
-<tr class="separator:ac8ba9d20a37c37fac398afe043e3660f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d5e21843d8b4412ce5ad3f5c12dde42"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; FaceNodalMapping &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc7/namespacechi__mesh_1_1sweep__management.html#a1d5e21843d8b4412ce5ad3f5c12dde42">chi_mesh::sweep_management::CellFaceNodalMapping</a></td></tr>
-<tr class="separator:a1d5e21843d8b4412ce5ad3f5c12dde42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="ac8ba9d20a37c37fac398afe043e3660f" name="ac8ba9d20a37c37fac398afe043e3660f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8ba9d20a37c37fac398afe043e3660f">&#9670;&nbsp;</a></span>CompactCellView</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::pair&lt;int,std::vector&lt;<a class="el" href="../../d8/d81/_f_l_u_d_s_8h.html#af151653675f8a275659033fdfbd83ef8">CompactFaceView</a>&gt; &gt; <a class="el" href="../../d8/d81/_f_l_u_d_s_8h.html#ac8ba9d20a37c37fac398afe043e3660f">CompactCellView</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00018">18</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
-
-</div>
-</div>
-<a id="af151653675f8a275659033fdfbd83ef8" name="af151653675f8a275659033fdfbd83ef8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af151653675f8a275659033fdfbd83ef8">&#9670;&nbsp;</a></span>CompactFaceView</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::pair&lt;int,std::vector&lt;uint64_t&gt; &gt; <a class="el" href="../../d8/d81/_f_l_u_d_s_8h.html#af151653675f8a275659033fdfbd83ef8">CompactFaceView</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00015">15</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('de/da5/classchi__mesh_1_1sweep__manage
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a>  </div>
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle"><div class="title">chi_mesh::sweep_management::FLUDS Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
@@ -104,53 +104,105 @@ Inheritance diagram for chi_mesh::sweep_management::FLUDS:</div>
  <div class="center">
   <img src="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.png" usemap="#chi_5Fmesh::sweep_5Fmanagement::FLUDS_map" alt=""/>
   <map id="chi_5Fmesh::sweep_5Fmanagement::FLUDS_map" name="chi_5Fmesh::sweep_5Fmanagement::FLUDS_map">
-<area href="../../d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html" alt="chi_mesh::sweep_management::AUX_FLUDS" shape="rect" coords="0,56,293,80"/>
-<area href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html" alt="chi_mesh::sweep_management::PRIMARY_FLUDS" shape="rect" coords="303,56,596,80"/>
+<area href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html" alt="chi_mesh::sweep_management::AAH_FLUDS" shape="rect" coords="0,56,264,80"/>
+<area href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html" alt="lbs::CBC_FLUDS" shape="rect" coords="274,56,538,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a13959c72a505b6141751c0abe2128779"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a13959c72a505b6141751c0abe2128779">SetReferencePsi</a> (std::vector&lt; std::vector&lt; double &gt; &gt; *local_psi, std::vector&lt; double &gt; *delayed_local_psi, std::vector&lt; double &gt; *delayed_local_psi_old, std::vector&lt; std::vector&lt; double &gt; &gt; *deplocI_outgoing_psi, std::vector&lt; std::vector&lt; double &gt; &gt; *prelocI_outgoing_psi, std::vector&lt; std::vector&lt; double &gt; &gt; *boundryI_incoming_psi, std::vector&lt; std::vector&lt; double &gt; &gt; *delayed_prelocI_outgoing_psi, std::vector&lt; std::vector&lt; double &gt; &gt; *delayed_prelocI_outgoing_psi_old)=0</td></tr>
-<tr class="separator:a13959c72a505b6141751c0abe2128779"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4e8bca2e7b6d3f1582ddcfe631745d4"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ac4e8bca2e7b6d3f1582ddcfe631745d4">OutgoingPsi</a> (int cell_so_index, int outb_face_counter, int face_dof, int n)=0</td></tr>
-<tr class="separator:ac4e8bca2e7b6d3f1582ddcfe631745d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a110e6e1a423065a07fbf6589d62e13fc"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a110e6e1a423065a07fbf6589d62e13fc">UpwindPsi</a> (int cell_so_index, int inc_face_counter, int face_dof, int g, int n)=0</td></tr>
-<tr class="separator:a110e6e1a423065a07fbf6589d62e13fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d8978e88e90a3c3deae6f4ec4626f47"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a3d8978e88e90a3c3deae6f4ec4626f47">NLOutgoingPsi</a> (int nonl_outb_face_counter, int face_dof, int n)=0</td></tr>
-<tr class="separator:a3d8978e88e90a3c3deae6f4ec4626f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2836c75d43a21bd8b2cd54cf43e2e6d9"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a2836c75d43a21bd8b2cd54cf43e2e6d9">NLUpwindPsi</a> (int nonl_inc_face_counter, int face_dof, int g, int n)=0</td></tr>
-<tr class="separator:a2836c75d43a21bd8b2cd54cf43e2e6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafe6bce56512131b0364c24351ae4d5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#aafe6bce56512131b0364c24351ae4d5e">FLUDS</a> (size_t num_groups, size_t num_angles, const <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> &amp;spds)</td></tr>
+<tr class="separator:aafe6bce56512131b0364c24351ae4d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb8cf009182f84cc6d7f9407e3c3e3db"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#afb8cf009182f84cc6d7f9407e3c3e3db">GetSPDS</a> () const</td></tr>
+<tr class="separator:afb8cf009182f84cc6d7f9407e3c3e3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e0b81697990127e35097ef6b616f91"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a03e0b81697990127e35097ef6b616f91">ClearLocalAndReceivePsi</a> ()</td></tr>
+<tr class="separator:a03e0b81697990127e35097ef6b616f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec0fa6fc18f2dfb1d917f82c12cf012"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a9ec0fa6fc18f2dfb1d917f82c12cf012">ClearSendPsi</a> ()</td></tr>
+<tr class="separator:a9ec0fa6fc18f2dfb1d917f82c12cf012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5efbdc586afec76dbb0b6c72dd2699af"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a5efbdc586afec76dbb0b6c72dd2699af">AllocateInternalLocalPsi</a> (size_t num_grps, size_t num_angles)</td></tr>
+<tr class="separator:a5efbdc586afec76dbb0b6c72dd2699af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba0f1059283d8c38195c67794cb52fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#adba0f1059283d8c38195c67794cb52fd">AllocateOutgoingPsi</a> (size_t num_grps, size_t num_angles, size_t num_loc_sucs)</td></tr>
+<tr class="separator:adba0f1059283d8c38195c67794cb52fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3d79966f69cf97eeac5cb0ad8a5f7d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#aeb3d79966f69cf97eeac5cb0ad8a5f7d">AllocateDelayedLocalPsi</a> (size_t num_grps, size_t num_angles)</td></tr>
+<tr class="separator:aeb3d79966f69cf97eeac5cb0ad8a5f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ccc45e3fb0edd3c4466dcecfdce5ab9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a0ccc45e3fb0edd3c4466dcecfdce5ab9">AllocatePrelocIOutgoingPsi</a> (size_t num_grps, size_t num_angles, size_t num_loc_deps)</td></tr>
+<tr class="separator:a0ccc45e3fb0edd3c4466dcecfdce5ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e3219d4137d78c7c9f2b497469a655"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a44e3219d4137d78c7c9f2b497469a655">AllocateDelayedPrelocIOutgoingPsi</a> (size_t num_grps, size_t num_angles, size_t num_loc_deps)</td></tr>
+<tr class="separator:a44e3219d4137d78c7c9f2b497469a655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0832636324ab766b2c1d7c1c99afd6c7"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a0832636324ab766b2c1d7c1c99afd6c7">DelayedLocalPsi</a> ()=0</td></tr>
+<tr class="separator:a0832636324ab766b2c1d7c1c99afd6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d25968640bf71d2974f246d9204ab4"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a38d25968640bf71d2974f246d9204ab4">DelayedLocalPsiOld</a> ()=0</td></tr>
+<tr class="separator:a38d25968640bf71d2974f246d9204ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4de8f70a834ccce49c19ef3a23cbe10"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::vector&lt; double &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#aa4de8f70a834ccce49c19ef3a23cbe10">DeplocIOutgoingPsi</a> ()=0</td></tr>
+<tr class="separator:aa4de8f70a834ccce49c19ef3a23cbe10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f0f56b76594bda80afe8606bb65ed3"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::vector&lt; double &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a47f0f56b76594bda80afe8606bb65ed3">PrelocIOutgoingPsi</a> ()=0</td></tr>
+<tr class="separator:a47f0f56b76594bda80afe8606bb65ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f667cc496cbf9155b73f2bb807c03d2"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::vector&lt; double &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a6f667cc496cbf9155b73f2bb807c03d2">DelayedPrelocIOutgoingPsi</a> ()=0</td></tr>
+<tr class="separator:a6f667cc496cbf9155b73f2bb807c03d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743f253652c36a80dcea93476a95f26f"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::vector&lt; double &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a743f253652c36a80dcea93476a95f26f">DelayedPrelocIOutgoingPsiOld</a> ()=0</td></tr>
+<tr class="separator:a743f253652c36a80dcea93476a95f26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6eeabb9c42cb0d613451bb1c5d45f0b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ab6eeabb9c42cb0d613451bb1c5d45f0b">~FLUDS</a> ()=default</td></tr>
 <tr class="separator:ab6eeabb9c42cb0d613451bb1c5d45f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr class="memitem:afe3db25fe3f4a65984a1528810510704"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#afe3db25fe3f4a65984a1528810510704">num_face_categories</a> =0</td></tr>
-<tr class="separator:afe3db25fe3f4a65984a1528810510704"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a489e71e25ac2d9ca0565b9ebdaa64b29"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a489e71e25ac2d9ca0565b9ebdaa64b29">local_psi_stride</a></td></tr>
-<tr class="separator:a489e71e25ac2d9ca0565b9ebdaa64b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc65d437f12ade74d40869754dab77f7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#abc65d437f12ade74d40869754dab77f7">local_psi_max_elements</a></td></tr>
-<tr class="separator:abc65d437f12ade74d40869754dab77f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab207982f7703faabc1b1e5768c77a135"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ab207982f7703faabc1b1e5768c77a135">delayed_local_psi_stride</a> =0</td></tr>
-<tr class="separator:ab207982f7703faabc1b1e5768c77a135"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5343524e9d1477863302d01324436ea3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a5343524e9d1477863302d01324436ea3">delayed_local_psi_max_elements</a> =0</td></tr>
-<tr class="separator:a5343524e9d1477863302d01324436ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a148d9450b00bc5ab2dadcfe6645684c4"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a148d9450b00bc5ab2dadcfe6645684c4">spds_</a></td></tr>
-<tr class="separator:a148d9450b00bc5ab2dadcfe6645684c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a764a67e5b55a9449c4b2cf2decada4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a8a764a67e5b55a9449c4b2cf2decada4">deplocI_face_dof_count</a></td></tr>
-<tr class="separator:a8a764a67e5b55a9449c4b2cf2decada4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaf8ad9e4c3b071da2c864e38977735d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#aaaf8ad9e4c3b071da2c864e38977735d">boundary_dependencies</a></td></tr>
-<tr class="separator:aaaf8ad9e4c3b071da2c864e38977735d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af68baacf4886b68cc6bb93c84f672297"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#af68baacf4886b68cc6bb93c84f672297">prelocI_face_dof_count</a></td></tr>
-<tr class="separator:af68baacf4886b68cc6bb93c84f672297"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad69a85a8fd3d89c7f801eac15ac4f961"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ad69a85a8fd3d89c7f801eac15ac4f961">delayed_prelocI_face_dof_count</a></td></tr>
-<tr class="separator:ad69a85a8fd3d89c7f801eac15ac4f961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:af04edb5a84333eb6cab61a1c71730cc5"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#af04edb5a84333eb6cab61a1c71730cc5">num_groups_</a></td></tr>
+<tr class="separator:af04edb5a84333eb6cab61a1c71730cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac436435a21fdb8c1d734a8c67ddd8794"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#ac436435a21fdb8c1d734a8c67ddd8794">num_angles_</a></td></tr>
+<tr class="separator:ac436435a21fdb8c1d734a8c67ddd8794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a887bd722c878a34836000f793e6eb4"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a5a887bd722c878a34836000f793e6eb4">num_groups_and_angles_</a></td></tr>
+<tr class="separator:a5a887bd722c878a34836000f793e6eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa890fbab910ba8b1ff7128d1a946f2ff"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#aa890fbab910ba8b1ff7128d1a946f2ff">spds_</a></td></tr>
+<tr class="separator:aa890fbab910ba8b1ff7128d1a946f2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00034">34</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00022">22</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aafe6bce56512131b0364c24351ae4d5e" name="aafe6bce56512131b0364c24351ae4d5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe6bce56512131b0364c24351ae4d5e">&#9670;&nbsp;</a></span>FLUDS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">chi_mesh::sweep_management::FLUDS::FLUDS </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_groups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_angles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> &amp;&#160;</td>
+          <td class="paramname"><em>spds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00025">25</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+
+</div>
+</div>
 <a id="ab6eeabb9c42cb0d613451bb1c5d45f0b" name="ab6eeabb9c42cb0d613451bb1c5d45f0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6eeabb9c42cb0d613451bb1c5d45f0b">&#9670;&nbsp;</a></span>~FLUDS()</h2>
 
@@ -177,8 +229,8 @@ Data Fields</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3d8978e88e90a3c3deae6f4ec4626f47" name="a3d8978e88e90a3c3deae6f4ec4626f47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d8978e88e90a3c3deae6f4ec4626f47">&#9670;&nbsp;</a></span>NLOutgoingPsi()</h2>
+<a id="aeb3d79966f69cf97eeac5cb0ad8a5f7d" name="aeb3d79966f69cf97eeac5cb0ad8a5f7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3d79966f69cf97eeac5cb0ad8a5f7d">&#9670;&nbsp;</a></span>AllocateDelayedLocalPsi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,22 +239,16 @@ Data Fields</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double * chi_mesh::sweep_management::FLUDS::NLOutgoingPsi </td>
+          <td class="memname">virtual void chi_mesh::sweep_management::FLUDS::AllocateDelayedLocalPsi </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nonl_outb_face_counter</em>, </td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_grps</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>face_dof</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_angles</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -212,403 +258,536 @@ Data Fields</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a97b5b89322dad9bf9afa9577025c6018">chi_mesh::sweep_management::AUX_FLUDS</a>, and <a class="el" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a19bcb789f6175dfd78d69f19cd99ca40">chi_mesh::sweep_management::PRIMARY_FLUDS</a>.</p>
-
-</div>
-</div>
-<a id="a2836c75d43a21bd8b2cd54cf43e2e6d9" name="a2836c75d43a21bd8b2cd54cf43e2e6d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2836c75d43a21bd8b2cd54cf43e2e6d9">&#9670;&nbsp;</a></span>NLUpwindPsi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double * chi_mesh::sweep_management::FLUDS::NLUpwindPsi </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nonl_inc_face_counter</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>face_dof</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="../../d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#ad666a23685d0fa2d56fc1131b6c45791">chi_mesh::sweep_management::AUX_FLUDS</a>, and <a class="el" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ad60980a417b1904d281e1d43a1a21e67">chi_mesh::sweep_management::PRIMARY_FLUDS</a>.</p>
-
-</div>
-</div>
-<a id="ac4e8bca2e7b6d3f1582ddcfe631745d4" name="ac4e8bca2e7b6d3f1582ddcfe631745d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4e8bca2e7b6d3f1582ddcfe631745d4">&#9670;&nbsp;</a></span>OutgoingPsi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double * chi_mesh::sweep_management::FLUDS::OutgoingPsi </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_so_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>outb_face_counter</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>face_dof</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="../../d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#a2d41bd9e1531f5e6384d03d5ece26d0d">chi_mesh::sweep_management::AUX_FLUDS</a>, and <a class="el" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#ab2fc51d89c685ca93b745bfc8dd04c35">chi_mesh::sweep_management::PRIMARY_FLUDS</a>.</p>
-
-</div>
-</div>
-<a id="a13959c72a505b6141751c0abe2128779" name="a13959c72a505b6141751c0abe2128779"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13959c72a505b6141751c0abe2128779">&#9670;&nbsp;</a></span>SetReferencePsi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void chi_mesh::sweep_management::FLUDS::SetReferencePsi </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt; &gt; *&#160;</td>
-          <td class="paramname"><em>local_psi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; double &gt; *&#160;</td>
-          <td class="paramname"><em>delayed_local_psi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; double &gt; *&#160;</td>
-          <td class="paramname"><em>delayed_local_psi_old</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt; &gt; *&#160;</td>
-          <td class="paramname"><em>deplocI_outgoing_psi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt; &gt; *&#160;</td>
-          <td class="paramname"><em>prelocI_outgoing_psi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt; &gt; *&#160;</td>
-          <td class="paramname"><em>boundryI_incoming_psi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt; &gt; *&#160;</td>
-          <td class="paramname"><em>delayed_prelocI_outgoing_psi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt; &gt; *&#160;</td>
-          <td class="paramname"><em>delayed_prelocI_outgoing_psi_old</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="../../d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#adb28e799af046b7303cf59f29dc44350">chi_mesh::sweep_management::AUX_FLUDS</a>, and <a class="el" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a85d4d02b6df9c4a980c8114e882b3dd5">chi_mesh::sweep_management::PRIMARY_FLUDS</a>.</p>
-
-</div>
-</div>
-<a id="a110e6e1a423065a07fbf6589d62e13fc" name="a110e6e1a423065a07fbf6589d62e13fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a110e6e1a423065a07fbf6589d62e13fc">&#9670;&nbsp;</a></span>UpwindPsi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double * chi_mesh::sweep_management::FLUDS::UpwindPsi </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cell_so_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>inc_face_counter</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>face_dof</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="../../d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#ad7fe3a6b76788d99668b6e265232c073">chi_mesh::sweep_management::AUX_FLUDS</a>, and <a class="el" href="../../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0d3910679f35ca3e4b1fc29c844e07f3">chi_mesh::sweep_management::PRIMARY_FLUDS</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Field Documentation</h2>
-<a id="aaaf8ad9e4c3b071da2c864e38977735d" name="aaaf8ad9e4c3b071da2c864e38977735d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaf8ad9e4c3b071da2c864e38977735d">&#9670;&nbsp;</a></span>boundary_dependencies</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;int&gt; chi_mesh::sweep_management::FLUDS::boundary_dependencies</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00051">51</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
-
-</div>
-</div>
-<a id="a5343524e9d1477863302d01324436ea3" name="a5343524e9d1477863302d01324436ea3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5343524e9d1477863302d01324436ea3">&#9670;&nbsp;</a></span>delayed_local_psi_max_elements</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t chi_mesh::sweep_management::FLUDS::delayed_local_psi_max_elements =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Reimplemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#a3409d74a0f4541e96a2cd2eaf09b13fc">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#a88c67816345167a22d5da7e6668b0fbc">lbs::CBC_FLUDS</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00041">41</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
 
 </div>
 </div>
-<a id="ab207982f7703faabc1b1e5768c77a135" name="ab207982f7703faabc1b1e5768c77a135"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab207982f7703faabc1b1e5768c77a135">&#9670;&nbsp;</a></span>delayed_local_psi_stride</h2>
+<a id="a44e3219d4137d78c7c9f2b497469a655" name="a44e3219d4137d78c7c9f2b497469a655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e3219d4137d78c7c9f2b497469a655">&#9670;&nbsp;</a></span>AllocateDelayedPrelocIOutgoingPsi()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t chi_mesh::sweep_management::FLUDS::delayed_local_psi_stride =0</td>
+          <td class="memname">virtual void chi_mesh::sweep_management::FLUDS::AllocateDelayedPrelocIOutgoingPsi </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_grps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_angles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_loc_deps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00040">40</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#a16872de63b0c2544198ffb762c55091e">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#a6e89d839b365409e3e6f146c1cf69036">lbs::CBC_FLUDS</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00047">47</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
 
 </div>
 </div>
-<a id="ad69a85a8fd3d89c7f801eac15ac4f961" name="ad69a85a8fd3d89c7f801eac15ac4f961"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad69a85a8fd3d89c7f801eac15ac4f961">&#9670;&nbsp;</a></span>delayed_prelocI_face_dof_count</h2>
+<a id="a5efbdc586afec76dbb0b6c72dd2699af" name="a5efbdc586afec76dbb0b6c72dd2699af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5efbdc586afec76dbb0b6c72dd2699af">&#9670;&nbsp;</a></span>AllocateInternalLocalPsi()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; chi_mesh::sweep_management::FLUDS::delayed_prelocI_face_dof_count</td>
+          <td class="memname">virtual void chi_mesh::sweep_management::FLUDS::AllocateInternalLocalPsi </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_grps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_angles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00058">58</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#ae406c51853f979809d45a39b37debb24">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#a8a6bb5bf7929818d8413e8cba7047b4d">lbs::CBC_FLUDS</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00035">35</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
 
 </div>
 </div>
-<a id="a8a764a67e5b55a9449c4b2cf2decada4" name="a8a764a67e5b55a9449c4b2cf2decada4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a764a67e5b55a9449c4b2cf2decada4">&#9670;&nbsp;</a></span>deplocI_face_dof_count</h2>
+<a id="adba0f1059283d8c38195c67794cb52fd" name="adba0f1059283d8c38195c67794cb52fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba0f1059283d8c38195c67794cb52fd">&#9670;&nbsp;</a></span>AllocateOutgoingPsi()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; chi_mesh::sweep_management::FLUDS::deplocI_face_dof_count</td>
+          <td class="memname">virtual void chi_mesh::sweep_management::FLUDS::AllocateOutgoingPsi </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_grps</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00048">48</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
-
-</div>
-</div>
-<a id="abc65d437f12ade74d40869754dab77f7" name="abc65d437f12ade74d40869754dab77f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc65d437f12ade74d40869754dab77f7">&#9670;&nbsp;</a></span>local_psi_max_elements</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;size_t&gt; chi_mesh::sweep_management::FLUDS::local_psi_max_elements</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_angles</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00039">39</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
-
-</div>
-</div>
-<a id="a489e71e25ac2d9ca0565b9ebdaa64b29" name="a489e71e25ac2d9ca0565b9ebdaa64b29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a489e71e25ac2d9ca0565b9ebdaa64b29">&#9670;&nbsp;</a></span>local_psi_stride</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;size_t&gt; chi_mesh::sweep_management::FLUDS::local_psi_stride</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_loc_sucs</em>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00038">38</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
-
-</div>
-</div>
-<a id="afe3db25fe3f4a65984a1528810510704" name="afe3db25fe3f4a65984a1528810510704"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe3db25fe3f4a65984a1528810510704">&#9670;&nbsp;</a></span>num_face_categories</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">size_t chi_mesh::sweep_management::FLUDS::num_face_categories =0</td>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#aa489b064fdf9a0980822c650c1c99675">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#a7079547fc2aafd794b94091e26a15599">lbs::CBC_FLUDS</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00037">37</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
 
 </div>
 </div>
-<a id="af68baacf4886b68cc6bb93c84f672297" name="af68baacf4886b68cc6bb93c84f672297"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af68baacf4886b68cc6bb93c84f672297">&#9670;&nbsp;</a></span>prelocI_face_dof_count</h2>
+<a id="a0ccc45e3fb0edd3c4466dcecfdce5ab9" name="a0ccc45e3fb0edd3c4466dcecfdce5ab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ccc45e3fb0edd3c4466dcecfdce5ab9">&#9670;&nbsp;</a></span>AllocatePrelocIOutgoingPsi()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; chi_mesh::sweep_management::FLUDS::prelocI_face_dof_count</td>
+          <td class="memname">virtual void chi_mesh::sweep_management::FLUDS::AllocatePrelocIOutgoingPsi </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_grps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_angles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_loc_deps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00056">56</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#a38acf9ed09ef9ef10d299b888caae290">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#a5701da5e3ce9d0ec11d1dd59d4c64254">lbs::CBC_FLUDS</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00042">42</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
 
 </div>
 </div>
-<a id="a148d9450b00bc5ab2dadcfe6645684c4" name="a148d9450b00bc5ab2dadcfe6645684c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a148d9450b00bc5ab2dadcfe6645684c4">&#9670;&nbsp;</a></span>spds_</h2>
+<a id="a03e0b81697990127e35097ef6b616f91" name="a03e0b81697990127e35097ef6b616f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e0b81697990127e35097ef6b616f91">&#9670;&nbsp;</a></span>ClearLocalAndReceivePsi()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../dc/d7b/structchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a>&gt; chi_mesh::sweep_management::FLUDS::spds_</td>
+          <td class="memname">virtual void chi_mesh::sweep_management::FLUDS::ClearLocalAndReceivePsi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00043">43</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#a950f3304c1cdd29fc91be036fd9f5a4c">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#ac4423b08139a29098ef6cf7c6dea2dac">lbs::CBC_FLUDS</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00033">33</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+
+</div>
+</div>
+<a id="a9ec0fa6fc18f2dfb1d917f82c12cf012" name="a9ec0fa6fc18f2dfb1d917f82c12cf012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec0fa6fc18f2dfb1d917f82c12cf012">&#9670;&nbsp;</a></span>ClearSendPsi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_mesh::sweep_management::FLUDS::ClearSendPsi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#a678e6a302f30eee2935e60cf1836796c">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#a4a228b28f97737f1152d25d61a21a7dc">lbs::CBC_FLUDS</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00034">34</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+
+</div>
+</div>
+<a id="a0832636324ab766b2c1d7c1c99afd6c7" name="a0832636324ab766b2c1d7c1c99afd6c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0832636324ab766b2c1d7c1c99afd6c7">&#9670;&nbsp;</a></span>DelayedLocalPsi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; double &gt; &amp; chi_mesh::sweep_management::FLUDS::DelayedLocalPsi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#aaa8ab4cdf8680fc15aa7ac81c8c959ef">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#afe0d325997893686f2f704ceec7e66d8">lbs::CBC_FLUDS</a>.</p>
+
+</div>
+</div>
+<a id="a38d25968640bf71d2974f246d9204ab4" name="a38d25968640bf71d2974f246d9204ab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38d25968640bf71d2974f246d9204ab4">&#9670;&nbsp;</a></span>DelayedLocalPsiOld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; double &gt; &amp; chi_mesh::sweep_management::FLUDS::DelayedLocalPsiOld </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#a4433116e2e48ff480630a018e8f97d0c">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#a512ee42ed44a1534e3b4b3023f40b06c">lbs::CBC_FLUDS</a>.</p>
+
+</div>
+</div>
+<a id="a6f667cc496cbf9155b73f2bb807c03d2" name="a6f667cc496cbf9155b73f2bb807c03d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f667cc496cbf9155b73f2bb807c03d2">&#9670;&nbsp;</a></span>DelayedPrelocIOutgoingPsi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; std::vector&lt; double &gt; &gt; &amp; chi_mesh::sweep_management::FLUDS::DelayedPrelocIOutgoingPsi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#a722fd0f1e6a7d50a813e80b2e795abdc">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#a54106f8c7698ef6778ef4f6806f86a6b">lbs::CBC_FLUDS</a>.</p>
+
+</div>
+</div>
+<a id="a743f253652c36a80dcea93476a95f26f" name="a743f253652c36a80dcea93476a95f26f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a743f253652c36a80dcea93476a95f26f">&#9670;&nbsp;</a></span>DelayedPrelocIOutgoingPsiOld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; std::vector&lt; double &gt; &gt; &amp; chi_mesh::sweep_management::FLUDS::DelayedPrelocIOutgoingPsiOld </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#a67e92d60102efe1ddbe115b9abdadebe">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#abb8533e5cd09ea403aaea9bde9751810">lbs::CBC_FLUDS</a>.</p>
+
+</div>
+</div>
+<a id="aa4de8f70a834ccce49c19ef3a23cbe10" name="aa4de8f70a834ccce49c19ef3a23cbe10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4de8f70a834ccce49c19ef3a23cbe10">&#9670;&nbsp;</a></span>DeplocIOutgoingPsi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; std::vector&lt; double &gt; &gt; &amp; chi_mesh::sweep_management::FLUDS::DeplocIOutgoingPsi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#aff832f0d730e16971e8668d1ca846de5">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#a037fa685c45a831574c8b1e0c776f8f7">lbs::CBC_FLUDS</a>.</p>
+
+</div>
+</div>
+<a id="afb8cf009182f84cc6d7f9407e3c3e3db" name="afb8cf009182f84cc6d7f9407e3c3e3db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb8cf009182f84cc6d7f9407e3c3e3db">&#9670;&nbsp;</a></span>GetSPDS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a> &amp; chi_mesh::sweep_management::FLUDS::GetSPDS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00031">31</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+
+</div>
+</div>
+<a id="a47f0f56b76594bda80afe8606bb65ed3" name="a47f0f56b76594bda80afe8606bb65ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f0f56b76594bda80afe8606bb65ed3">&#9670;&nbsp;</a></span>PrelocIOutgoingPsi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; std::vector&lt; double &gt; &gt; &amp; chi_mesh::sweep_management::FLUDS::PrelocIOutgoingPsi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#ae30dafb6a369bd28f1de23c84a0de3e5">chi_mesh::sweep_management::AAH_FLUDS</a>, and <a class="el" href="../../dd/d92/classlbs_1_1_c_b_c___f_l_u_d_s.html#a5882c7518f7eafa928ad3fd4b723dbf8">lbs::CBC_FLUDS</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="ac436435a21fdb8c1d734a8c67ddd8794" name="ac436435a21fdb8c1d734a8c67ddd8794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac436435a21fdb8c1d734a8c67ddd8794">&#9670;&nbsp;</a></span>num_angles_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t chi_mesh::sweep_management::FLUDS::num_angles_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00068">68</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+
+</div>
+</div>
+<a id="af04edb5a84333eb6cab61a1c71730cc5" name="af04edb5a84333eb6cab61a1c71730cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af04edb5a84333eb6cab61a1c71730cc5">&#9670;&nbsp;</a></span>num_groups_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t chi_mesh::sweep_management::FLUDS::num_groups_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00067">67</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+
+</div>
+</div>
+<a id="a5a887bd722c878a34836000f793e6eb4" name="a5a887bd722c878a34836000f793e6eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a887bd722c878a34836000f793e6eb4">&#9670;&nbsp;</a></span>num_groups_and_angles_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t chi_mesh::sweep_management::FLUDS::num_groups_and_angles_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00069">69</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
+
+</div>
+</div>
+<a id="aa890fbab910ba8b1ff7128d1a946f2ff" name="aa890fbab910ba8b1ff7128d1a946f2ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa890fbab910ba8b1ff7128d1a946f2ff">&#9670;&nbsp;</a></span>spds_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html">SPDS</a>&amp; chi_mesh::sweep_management::FLUDS::spds_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html#l00070">70</a> of file <a class="el" href="../../d8/d81/_f_l_u_d_s_8h_source.html">FLUDS.h</a>.</p>
 
 </div>
 </div>

@@ -1,7 +1,9 @@
 var classlbs_1_1_cell_l_b_s_view =
 [
-    [ "CellLBSView", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#a16feb84c1cc1b313b75d5554e8461a09", null ],
+    [ "CellLBSView", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#ae8b3480e1ae206c16c5520816feeb4ff", null ],
     [ "AddOutflow", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#aecbc8b95c52ac4e2aecba8a09214ef36", null ],
+    [ "FaceLocality", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#aabd0f6ab484ea7d8731eee6d67aca1f8", null ],
+    [ "FaceNeighbor", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#ab578840399b8f1b9d303efbc7a048c36", null ],
     [ "GetOutflow", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#a90145caef02580a517cdc179a34f44b2", null ],
     [ "IsFaceLocal", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#abc635892f7ea7013fd63604e9d66698b", null ],
     [ "MapDOF", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#a1ac93a20ce92d2b2453188070e80dec5", null ],
@@ -11,7 +13,9 @@ var classlbs_1_1_cell_l_b_s_view =
     [ "XS", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#a0bc9d7203d0ca390de7b027f8bc7a32f", null ],
     [ "ZeroOutflow", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#ab2da1749c2f9b50f3b3425686d835766", null ],
     [ "ZeroOutflow", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#ab0a221d15a137b1e14ba08c14d5ee7c7", null ],
-    [ "face_local_flags_", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#ab0667673adfd1dd5b036b7683e5353d1", null ],
+    [ "face_local_flags_", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#af0788c78c3d2ff000c1e24bf75e06b15", null ],
+    [ "face_locality_", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#adb516e3ec19a1d464fba475b79a96d6a", null ],
+    [ "neighbor_cell_ptrs_", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#a942624eb15246c9089e06cb3c191b268", null ],
     [ "num_groups_", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#ac1a34b07a8f2957728525299e5bd876c", null ],
     [ "num_grps_moms_", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#a1b30ead8a81939b35c3f2a08495b0abd", null ],
     [ "num_nodes_", "d4/d32/classlbs_1_1_cell_l_b_s_view.html#affc7841223c821c85bf223573c094c21", null ],

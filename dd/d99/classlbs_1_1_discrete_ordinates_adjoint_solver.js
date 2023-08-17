@@ -12,6 +12,8 @@ var classlbs_1_1_discrete_ordinates_adjoint_solver =
     [ "GetInputParameters", "dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#a16713bff85f5328efb6b017dc959d936", null ],
     [ "GetResponseFunctions", "dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#aad0ebf4874a0f79b5c9810263fec9876", null ],
     [ "Initialize", "dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#ae3f47ff6fa57306f430ed5f16441e451", null ],
+    [ "InitQOIs", "dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#a51d953918c4b669172e29f43bd73b2b0", null ],
+    [ "MakeAdjointXSs", "dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#a02e84109c569972da7607a378822f0d7", null ],
     [ "operator=", "dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#ae1e9adc2c88717ea3139fea717c69e88", null ],
     [ "m_moment_buffers_", "dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#a1ead6b770b68ce205e961c9eea8d2a89", null ],
     [ "response_functions_", "dd/d99/classlbs_1_1_discrete_ordinates_adjoint_solver.html#a771eb674070035bd498af0d9a531c5be", null ]

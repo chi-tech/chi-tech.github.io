@@ -56,7 +56,8 @@ var lbs__structs_8h =
       [ "APPLY_AGS_SCATTER_SOURCES", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6afe083af20720153ae9553a01473586b9", null ],
       [ "APPLY_WGS_FISSION_SOURCES", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6a5570f0f65ee2779f599a563a6ecba204", null ],
       [ "APPLY_AGS_FISSION_SOURCES", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6a2b270786e3408c459026e45f5fe50f0b", null ],
-      [ "SUPPRESS_WG_SCATTER", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6a747ae7094df6e242dc859a6aec9a203f", null ]
+      [ "SUPPRESS_WG_SCATTER", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6a747ae7094df6e242dc859a6aec9a203f", null ],
+      [ "ZERO_INCOMING_DELAYED_PSI", "d9/dc3/lbs__structs_8h.html#a82d24dab89dfe291850d6d18cf1338c6a1937ab9d5c3913c8331323b81cb38aa6", null ]
     ] ],
     [ "MapGeometryTypeToCoordSys", "d9/dc3/lbs__structs_8h.html#a5801535b388e4f0376b900117c30fdf9", null ],
     [ "operator|", "d9/dc3/lbs__structs_8h.html#ad7e658e9bc7ac9918bb87500278c9e7b", null ]

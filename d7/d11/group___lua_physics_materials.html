@@ -90,9 +90,459 @@ $(document).ready(function(){initNavTree('d7/d11/group___lua_physics_materials.h
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Materials<div class="ingroups"><a class="el" href="../../d3/d5a/group___lua_physics.html">C Physics</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gaa19753665bde67f4e125fd204848c342"><td class="memItemLeft" align="right" valign="top">MaterialHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d11/group___lua_physics_materials.html#gaa19753665bde67f4e125fd204848c342">chi_lua::chiPhysicsAddMaterial</a> (char Name)</td></tr>
+<tr class="separator:gaa19753665bde67f4e125fd204848c342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad2a1538276adff6c1d723a7a26131f08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d11/group___lua_physics_materials.html#gad2a1538276adff6c1d723a7a26131f08">chi_lua::chiPhysicsMaterialAddProperty</a> (int MaterialHandle, int PropertyIndex)</td></tr>
+<tr class="separator:gad2a1538276adff6c1d723a7a26131f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc1f3164b69c49a99040dab87b827ed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d11/group___lua_physics_materials.html#gafc1f3164b69c49a99040dab87b827ed7">chi_lua::chiPhysicsMaterialSetProperty</a> (int MaterialHandle, int PropertyIndex, int OperationIndex, varying Information)</td></tr>
+<tr class="separator:gafc1f3164b69c49a99040dab87b827ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc17967cd72687d326d2f59017e90636"><td class="memItemLeft" align="right" valign="top">Lua&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d11/group___lua_physics_materials.html#gafc17967cd72687d326d2f59017e90636">chi_lua::chiPhysicsMaterialGetProperty</a> (int MaterialHandle, int PropertyIndex)</td></tr>
+<tr class="separator:gafc17967cd72687d326d2f59017e90636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaa19753665bde67f4e125fd204848c342" name="gaa19753665bde67f4e125fd204848c342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa19753665bde67f4e125fd204848c342">&#9670;&nbsp;</a></span>chiPhysicsAddMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MaterialHandle chi_lua::chiPhysicsAddMaterial </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>Name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Adds a material to the problem. Materials are added to the global physics handler and is therefore accessible across all meshes and solvers.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Name</td><td>char (Optional) Material name.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>MaterialHandle int Handle to the created material.</dd></dl>
+<h2>_</h2>
+<h3>Example\n</h3>
+<p >Example lua code: </p><div class="fragment"><div class="line">materials = {}</div>
+<div class="line">materials[1] = <a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gaa19753665bde67f4e125fd204848c342">chiPhysicsAddMaterial</a>(<span class="stringliteral">&quot;Test Material&quot;</span>);</div>
+<div class="ttc" id="agroup___lua_physics_materials_html_gaa19753665bde67f4e125fd204848c342"><div class="ttname"><a href="../../d7/d11/group___lua_physics_materials.html#gaa19753665bde67f4e125fd204848c342">chi_lua::chiPhysicsAddMaterial</a></div><div class="ttdeci">MaterialHandle chiPhysicsAddMaterial(char Name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00331">lua_functions.c:331</a></div></div>
+</div><!-- fragment --><h3>Usage Examples:</h3>
+<p ><a class="el" href="../../d4/dc1/test_framework_tutorials_tutorial_93_raytracing_lua.html">test/framework/tutorials/tutorial_93_raytracing.lua</a> <br  />
+ <a class="el" href="../../d7/d6e/test_modules__diffusion__diffusion1_d__i_p_lua.html">test/modules/Diffusion/Diffusion1D_IP.lua</a> <br  />
+ <a class="el" href="../../d1/d20/test_modules__diffusion__diffusion1_d_lua.html">test/modules/Diffusion/Diffusion1D.lua</a> <br  />
+ <a class="el" href="../../da/d53/test_modules__diffusion__diffusion3_d_1_poly__i_p_lua.html">test/modules/Diffusion/Diffusion3D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../dd/d0d/test_modules__diffusion__diffusion3_d_2_ortho_lua.html">test/modules/Diffusion/Diffusion3D_2Ortho.lua</a> <br  />
+ <a class="el" href="../../d7/d5f/test_modules__diffusion__diffusion3_d_3_unstructured__i_p_lua.html">test/modules/Diffusion/Diffusion3D_3Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../dd/d83/test_modules__diffusion__diffusion3_d_1_poly_lua.html">test/modules/Diffusion/Diffusion3D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d9/dd8/test_modules__diffusion__diffusion2_d_1_poly_lua.html">test/modules/Diffusion/Diffusion2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../de/d9e/test_modules__diffusion__diffusion2_d_1_poly__i_p_lua.html">test/modules/Diffusion/Diffusion2D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../d3/d97/test_modules__diffusion__diffusion3_d_4_v_t_u_lua.html">test/modules/Diffusion/Diffusion3D_4VTU.lua</a> <br  />
+ <a class="el" href="../../d7/d87/test_modules__diffusion__diffusion2_d_2_unstructured_lua.html">test/modules/Diffusion/Diffusion2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d0/d13/test_modules__diffusion__diffusion1_d__k_b_a_lua.html">test/modules/Diffusion/Diffusion1D_KBA.lua</a> <br  />
+ <a class="el" href="../../de/d06/test_modules__diffusion__diffusion2_d_2_unstructured__i_p_lua.html">test/modules/Diffusion/Diffusion2D_2Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d9/d90/test_modules__diffusion__diffusion3_d_3_unstructured_lua.html">test/modules/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
+ <a class="el" href="../../df/deb/test_modules__linear_boltzmann_solvers__transport__steady__cyl__transport2_d_cyl_1_monoenergetic_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady_Cyl/Transport2DCyl_1Monoenergetic.lua</a> <br  />
+ <a class="el" href="../../de/d7e/test_modules__linear_boltzmann_solvers__transport__steady__cyl__transport2_d_cyl_2_multigroup_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady_Cyl/Transport2DCyl_2Multigroup.lua</a> <br  />
+ <a class="el" href="../../d8/dfc/test_modules__linear_boltzmann_solvers__m_g_diffusion__k_eigen__k_eigenvalue_m_i_p1_d_1_g_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_KEigen/KEigenvalueMIP1D_1G.lua</a> <br  />
+ <a class="el" href="../../df/de5/test_modules__linear_boltzmann_solvers__m_g_diffusion__k_eigen_utils__q_block_materials_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_KEigen/utils/QBlock_materials.lua</a> <br  />
+ <a class="el" href="../../dd/df9/test_modules__linear_boltzmann_solvers__transport__steady_c_b_c__transport2_d_1_poly_lua.html">test/modules/LinearBoltzmannSolvers/Transport_SteadyCBC/Transport2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d9/d8a/test_modules__linear_boltzmann_solvers__transport__steady_c_b_c__transport1_d_1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_SteadyCBC/Transport1D_1.lua</a> <br  />
+ <a class="el" href="../../d8/de0/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_3c_response_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_3c_response.lua</a> <br  />
+ <a class="el" href="../../db/d8e/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_1a_forward_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_1a_forward.lua</a> <br  />
+ <a class="el" href="../../db/db8/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_2a_forward_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_2a_forward.lua</a> <br  />
+ <a class="el" href="../../dd/d8a/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_2b_adjoint_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_2b_adjoint.lua</a> <br  />
+ <a class="el" href="../../d1/d0b/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_1b_adjoint_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_1b_adjoint.lua</a> <br  />
+ <a class="el" href="../../d9/d8b/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_2c_response_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_2c_response.lua</a> <br  />
+ <a class="el" href="../../dc/de9/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_3a_forward_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_3a_forward.lua</a> <br  />
+ <a class="el" href="../../df/d0c/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_3b_adjoint_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_3b_adjoint.lua</a> <br  />
+ <a class="el" href="../../df/d8a/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_1c_response_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_1c_response.lua</a> <br  />
+ <a class="el" href="../../df/daf/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport1_d_1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport1D_1.lua</a> <br  />
+ <a class="el" href="../../d8/d9f/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport1_d_3_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport1D_3.lua</a> <br  />
+ <a class="el" href="../../d7/df1/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport2_d_3_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport2D_3.lua</a> <br  />
+ <a class="el" href="../../dc/dd6/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport2_d_2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport2D_2.lua</a> <br  />
+ <a class="el" href="../../da/d84/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport1_d_2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport1D_2.lua</a> <br  />
+ <a class="el" href="../../d9/dcd/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_3_poly_quad_mod_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_3Poly_quad_mod.lua</a> <br  />
+ <a class="el" href="../../da/dfc/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_5_poly_a__ani_hetero_bndry_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_5PolyA_AniHeteroBndry.lua</a> <br  />
+ <a class="el" href="../../d6/dc5/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_1_poly__balance_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_1Poly_Balance.lua</a> <br  />
+ <a class="el" href="../../df/dd4/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_5_cycles2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_5Cycles2.lua</a> <br  />
+ <a class="el" href="../../d8/d46/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_4b__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_4b_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../dc/d6b/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_1_poly__balance_m_g_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_1Poly_BalanceMG.lua</a> <br  />
+ <a class="el" href="../../d5/d27/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_1_poly_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d5/d85/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1a__extruder_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1a_Extruder.lua</a> <br  />
+ <a class="el" href="../../d4/d18/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_4a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_4a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../d5/d2d/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_3a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../dd/dd7/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1_poly_qmom_part1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1Poly_qmom_part1.lua</a> <br  />
+ <a class="el" href="../../db/dd7/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_2_unstructured_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d8/da7/test_modules__linear_boltzmann_solvers__transport__steady__transport1_d_1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport1D_1.lua</a> <br  />
+ <a class="el" href="../../d4/dab/test_modules__linear_boltzmann_solvers__transport__steady__transport1_d_3a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport1D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../da/d92/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1_poly_qmom_part2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1Poly_qmom_part2.lua</a> <br  />
+ <a class="el" href="../../dd/d3e/test_modules__linear_boltzmann_solvers__transport__steady__transport1_d_4__d_s_a_ortho_inf_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport1D_4_DSA_ortho_inf.lua</a> <br  />
+ <a class="el" href="../../da/d4c/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_4_cycles1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_4Cycles1.lua</a> <br  />
+ <a class="el" href="../../d7/dcb/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1b__ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1b_Ortho.lua</a> <br  />
+ <a class="el" href="../../dd/d15/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_2_unstructured_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d5/d54/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1_poly_parmetis_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1Poly_parmetis.lua</a> <br  />
+ <a class="el" href="../../df/d3f/test_modules__linear_boltzmann_solvers__transport__keigen__k_eigenvalue_transport1_d_1_g__c_b_c_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Keigen/KEigenvalueTransport1D_1G_CBC.lua</a> <br  />
+ <a class="el" href="../../de/d1e/test_modules__linear_boltzmann_solvers__transport__keigen__k_eigenvalue_transport1_d_1_g_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Keigen/KEigenvalueTransport1D_1G.lua</a> <br  />
+ <a class="el" href="../../d8/d81/test_modules__linear_boltzmann_solvers__transport__keigen_utils__q_block_materials_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Keigen/utils/QBlock_materials.lua</a> <br  />
+ <a class="el" href="../../d1/d5b/test_modules__linear_boltzmann_solvers__m_g_diffusion__steady__m_i_p_diffusion3_d_3a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_Steady/MIPDiffusion3D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../d0/d0d/test_modules__linear_boltzmann_solvers__m_g_diffusion__steady__m_i_p_diffusion3_d_1b__ortho_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_Steady/MIPDiffusion3D_1b_Ortho.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00331">331</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="gad2a1538276adff6c1d723a7a26131f08" name="gad2a1538276adff6c1d723a7a26131f08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2a1538276adff6c1d723a7a26131f08">&#9670;&nbsp;</a></span>chiPhysicsMaterialAddProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_lua::chiPhysicsMaterialAddProperty </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MaterialHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>PropertyIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Adds a material property to a material.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">MaterialHandle</td><td>int Index to the reference material. </td></tr>
+    <tr><td class="paramname">PropertyIndex</td><td>int Property index.</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>_</h2>
+<h3>PropertyIndex\n</h3>
+<p >SCALAR_VALUE<br  />
+ Simple scalar value property.<br  />
+<br  />
+ TRANSPORT_XSECTIONS<br  />
+ Multi-group transport cross-section supporting numerous features.<br  />
+<br  />
+ ISOTROPIC_MG_SOURCE<br  />
+ Isotropic Multigroup Source.<br  />
+<br  />
+ </p><h3>Developer Info</h3>
+<p >Checklist for adding a new material property:</p><ul>
+<li>Create your property class in its own header file. i.e. "physics/PhysicsMaterial/property_xx_myproperty.h"</li>
+<li>Add the property to the physics namespace ("physics/chi_physics_namespace.h"). Make sure to derive from the base class.</li>
+<li>Go define the integer to be associated with your new property in <a class="el" href="../../d4/d82/chi__physicsmaterial_8h.html">chi_physicsmaterial.h</a></li>
+<li>Include the header file for your property in this file (i.e. at the top).</li>
+<li>Add this property integer in the lua register (ChiLua/chi_lua_register.h). For testing you can just use the integer value but eventually you'd want to supply an easier way for users to enter it.</li>
+<li>Add another else-if for your property. Just have a look at how the others were done, it should be intuitive enough.</li>
+</ul>
+<h2>_</h2>
+<h3>Example\n</h3>
+<p >Example lua code: </p><div class="fragment"><div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gad2a1538276adff6c1d723a7a26131f08">chiPhysicsMaterialAddProperty</a>(materials[i],TRANSPORT_XSECTIONS)</div>
+<div class="ttc" id="agroup___lua_physics_materials_html_gad2a1538276adff6c1d723a7a26131f08"><div class="ttname"><a href="../../d7/d11/group___lua_physics_materials.html#gad2a1538276adff6c1d723a7a26131f08">chi_lua::chiPhysicsMaterialAddProperty</a></div><div class="ttdeci">void chiPhysicsMaterialAddProperty(int MaterialHandle, int PropertyIndex)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00437">lua_functions.c:437</a></div></div>
+</div><!-- fragment --><h3>Usage Examples:</h3>
+<p ><a class="el" href="../../d4/dc1/test_framework_tutorials_tutorial_93_raytracing_lua.html">test/framework/tutorials/tutorial_93_raytracing.lua</a> <br  />
+ <a class="el" href="../../d7/d6e/test_modules__diffusion__diffusion1_d__i_p_lua.html">test/modules/Diffusion/Diffusion1D_IP.lua</a> <br  />
+ <a class="el" href="../../d1/d20/test_modules__diffusion__diffusion1_d_lua.html">test/modules/Diffusion/Diffusion1D.lua</a> <br  />
+ <a class="el" href="../../da/d53/test_modules__diffusion__diffusion3_d_1_poly__i_p_lua.html">test/modules/Diffusion/Diffusion3D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../dd/d0d/test_modules__diffusion__diffusion3_d_2_ortho_lua.html">test/modules/Diffusion/Diffusion3D_2Ortho.lua</a> <br  />
+ <a class="el" href="../../d7/d5f/test_modules__diffusion__diffusion3_d_3_unstructured__i_p_lua.html">test/modules/Diffusion/Diffusion3D_3Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../dd/d83/test_modules__diffusion__diffusion3_d_1_poly_lua.html">test/modules/Diffusion/Diffusion3D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d9/dd8/test_modules__diffusion__diffusion2_d_1_poly_lua.html">test/modules/Diffusion/Diffusion2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../de/d9e/test_modules__diffusion__diffusion2_d_1_poly__i_p_lua.html">test/modules/Diffusion/Diffusion2D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../d3/d97/test_modules__diffusion__diffusion3_d_4_v_t_u_lua.html">test/modules/Diffusion/Diffusion3D_4VTU.lua</a> <br  />
+ <a class="el" href="../../d7/d87/test_modules__diffusion__diffusion2_d_2_unstructured_lua.html">test/modules/Diffusion/Diffusion2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d0/d13/test_modules__diffusion__diffusion1_d__k_b_a_lua.html">test/modules/Diffusion/Diffusion1D_KBA.lua</a> <br  />
+ <a class="el" href="../../de/d06/test_modules__diffusion__diffusion2_d_2_unstructured__i_p_lua.html">test/modules/Diffusion/Diffusion2D_2Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d9/d90/test_modules__diffusion__diffusion3_d_3_unstructured_lua.html">test/modules/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
+ <a class="el" href="../../df/deb/test_modules__linear_boltzmann_solvers__transport__steady__cyl__transport2_d_cyl_1_monoenergetic_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady_Cyl/Transport2DCyl_1Monoenergetic.lua</a> <br  />
+ <a class="el" href="../../de/d7e/test_modules__linear_boltzmann_solvers__transport__steady__cyl__transport2_d_cyl_2_multigroup_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady_Cyl/Transport2DCyl_2Multigroup.lua</a> <br  />
+ <a class="el" href="../../d8/dfc/test_modules__linear_boltzmann_solvers__m_g_diffusion__k_eigen__k_eigenvalue_m_i_p1_d_1_g_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_KEigen/KEigenvalueMIP1D_1G.lua</a> <br  />
+ <a class="el" href="../../df/de5/test_modules__linear_boltzmann_solvers__m_g_diffusion__k_eigen_utils__q_block_materials_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_KEigen/utils/QBlock_materials.lua</a> <br  />
+ <a class="el" href="../../dd/df9/test_modules__linear_boltzmann_solvers__transport__steady_c_b_c__transport2_d_1_poly_lua.html">test/modules/LinearBoltzmannSolvers/Transport_SteadyCBC/Transport2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d9/d8a/test_modules__linear_boltzmann_solvers__transport__steady_c_b_c__transport1_d_1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_SteadyCBC/Transport1D_1.lua</a> <br  />
+ <a class="el" href="../../d8/de0/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_3c_response_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_3c_response.lua</a> <br  />
+ <a class="el" href="../../db/d8e/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_1a_forward_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_1a_forward.lua</a> <br  />
+ <a class="el" href="../../db/db8/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_2a_forward_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_2a_forward.lua</a> <br  />
+ <a class="el" href="../../dd/d8a/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_2b_adjoint_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_2b_adjoint.lua</a> <br  />
+ <a class="el" href="../../d1/d0b/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_1b_adjoint_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_1b_adjoint.lua</a> <br  />
+ <a class="el" href="../../d9/d8b/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_2c_response_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_2c_response.lua</a> <br  />
+ <a class="el" href="../../dc/de9/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_3a_forward_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_3a_forward.lua</a> <br  />
+ <a class="el" href="../../df/d0c/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_3b_adjoint_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_3b_adjoint.lua</a> <br  />
+ <a class="el" href="../../df/d8a/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_1c_response_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_1c_response.lua</a> <br  />
+ <a class="el" href="../../df/daf/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport1_d_1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport1D_1.lua</a> <br  />
+ <a class="el" href="../../d8/d9f/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport1_d_3_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport1D_3.lua</a> <br  />
+ <a class="el" href="../../d7/df1/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport2_d_3_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport2D_3.lua</a> <br  />
+ <a class="el" href="../../dc/dd6/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport2_d_2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport2D_2.lua</a> <br  />
+ <a class="el" href="../../da/d84/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport1_d_2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport1D_2.lua</a> <br  />
+ <a class="el" href="../../d9/dcd/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_3_poly_quad_mod_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_3Poly_quad_mod.lua</a> <br  />
+ <a class="el" href="../../da/dfc/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_5_poly_a__ani_hetero_bndry_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_5PolyA_AniHeteroBndry.lua</a> <br  />
+ <a class="el" href="../../d6/dc5/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_1_poly__balance_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_1Poly_Balance.lua</a> <br  />
+ <a class="el" href="../../df/dd4/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_5_cycles2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_5Cycles2.lua</a> <br  />
+ <a class="el" href="../../d8/d46/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_4b__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_4b_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../dc/d6b/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_1_poly__balance_m_g_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_1Poly_BalanceMG.lua</a> <br  />
+ <a class="el" href="../../d5/d27/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_1_poly_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d5/d85/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1a__extruder_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1a_Extruder.lua</a> <br  />
+ <a class="el" href="../../d4/d18/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_4a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_4a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../d5/d2d/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_3a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../dd/dd7/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1_poly_qmom_part1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1Poly_qmom_part1.lua</a> <br  />
+ <a class="el" href="../../db/dd7/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_2_unstructured_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d8/da7/test_modules__linear_boltzmann_solvers__transport__steady__transport1_d_1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport1D_1.lua</a> <br  />
+ <a class="el" href="../../d4/dab/test_modules__linear_boltzmann_solvers__transport__steady__transport1_d_3a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport1D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../da/d92/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1_poly_qmom_part2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1Poly_qmom_part2.lua</a> <br  />
+ <a class="el" href="../../dd/d3e/test_modules__linear_boltzmann_solvers__transport__steady__transport1_d_4__d_s_a_ortho_inf_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport1D_4_DSA_ortho_inf.lua</a> <br  />
+ <a class="el" href="../../da/d4c/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_4_cycles1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_4Cycles1.lua</a> <br  />
+ <a class="el" href="../../d7/dcb/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1b__ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1b_Ortho.lua</a> <br  />
+ <a class="el" href="../../dd/d15/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_2_unstructured_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d5/d54/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1_poly_parmetis_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1Poly_parmetis.lua</a> <br  />
+ <a class="el" href="../../df/d3f/test_modules__linear_boltzmann_solvers__transport__keigen__k_eigenvalue_transport1_d_1_g__c_b_c_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Keigen/KEigenvalueTransport1D_1G_CBC.lua</a> <br  />
+ <a class="el" href="../../de/d1e/test_modules__linear_boltzmann_solvers__transport__keigen__k_eigenvalue_transport1_d_1_g_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Keigen/KEigenvalueTransport1D_1G.lua</a> <br  />
+ <a class="el" href="../../d8/d81/test_modules__linear_boltzmann_solvers__transport__keigen_utils__q_block_materials_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Keigen/utils/QBlock_materials.lua</a> <br  />
+ <a class="el" href="../../d1/d5b/test_modules__linear_boltzmann_solvers__m_g_diffusion__steady__m_i_p_diffusion3_d_3a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_Steady/MIPDiffusion3D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../d0/d0d/test_modules__linear_boltzmann_solvers__m_g_diffusion__steady__m_i_p_diffusion3_d_1b__ortho_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_Steady/MIPDiffusion3D_1b_Ortho.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00437">437</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="gafc17967cd72687d326d2f59017e90636" name="gafc17967cd72687d326d2f59017e90636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc17967cd72687d326d2f59017e90636">&#9670;&nbsp;</a></span>chiPhysicsMaterialGetProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Lua chi_lua::chiPhysicsMaterialGetProperty </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MaterialHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>PropertyIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns a rich lua data-structure of the required property.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">MaterialHandle</td><td>int Index to the reference material. </td></tr>
+    <tr><td class="paramname">PropertyIndex</td><td>int Property index. Or name of property.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Lua table of the desired property.</dd></dl>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../de/d9e/test_modules__diffusion__diffusion2_d_1_poly__i_p_lua.html">test/modules/Diffusion/Diffusion2D_1Poly_IP.lua</a> <br  />
+ </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00614">614</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="gafc1f3164b69c49a99040dab87b827ed7" name="gafc1f3164b69c49a99040dab87b827ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc1f3164b69c49a99040dab87b827ed7">&#9670;&nbsp;</a></span>chiPhysicsMaterialSetProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_lua::chiPhysicsMaterialSetProperty </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MaterialHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>PropertyIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>OperationIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">varying&#160;</td>
+          <td class="paramname"><em>Information</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets a material property for a given material.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">MaterialHandle</td><td>int Index to the reference material. </td></tr>
+    <tr><td class="paramname">PropertyIndex</td><td>int Property index. Or name of property. </td></tr>
+    <tr><td class="paramname">OperationIndex</td><td>int Method used for setting the material property. </td></tr>
+    <tr><td class="paramname">Information</td><td>varying Varying information depending on the operation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2>_</h2>
+<h3>PropertyIndex\n</h3>
+<p >SCALAR_VALUE = Basic Scalar value property.<br  />
+TRANSPORT_XSECTIONS = Multi-group transport cross-section supporting numerous features.<br  />
+ISOTROPIC_MG_SOURCE = Isotropic Multigroup Source.<br  />
+ </p><h3>OperationIndex\n</h3>
+<p >SINGLE_VALUE<br  />
+Sets the property based on a single value. Requires a single value as additional information. As a simple example consider the case where the user would like to set a single constant thermal conductivity. This can be achieved with <br  />
+FROM_ARRAY<br  />
+Sets a property based on a Lua array indexed from 1 to N. Internally will be converted to 0 to N-1. This method can be used to set mutligroup cross-sections or sources. <br  />
+SIMPLEXS0<br  />
+Makes a simple material with no transfer matrix just \(\sigma_t \). Expects two values: <br  />
+</p><ul>
+<li>int number of groups \(G \),</li>
+<li>float \(\sigma_t \).</li>
+</ul>
+<h4>_</h4>
+<p >SIMPLEXS1<br  />
+Makes a simple material with isotropic transfer matrix (L=0) and mostly down scattering but with a few of the last groups subject to up-scattering. Expects three values values: <br  />
+</p><ul>
+<li>int number of groups ( \(G \)),</li>
+<li>float \(\sigma_t \),</li>
+<li>float scattering to total ratio ( \(c \))</li>
+</ul>
+<h4>_</h4>
+<p >CHI_XSFILE<br  />
+Loads transport cross-sections from CHI type cross-section files. Expects to be followed by a filepath specifying the xs-file.</p>
+<h4>_</h4>
+<p >EXISTING<br  />
+Supply handle to an existing cross-section and simply swap them out.</p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gafc1f3164b69c49a99040dab87b827ed7">chiPhysicsMaterialSetProperty</a>(materials[1],</div>
+<div class="line">                              TRANSPORT_XSECTIONS,</div>
+<div class="line">                              CHI_XSFILE,</div>
+<div class="line">                              <span class="stringliteral">&quot;xs_3_170.cxs&quot;</span>,</div>
+<div class="line">                              <span class="stringliteral">&quot;2518&quot;</span>)</div>
+<div class="ttc" id="agroup___lua_physics_materials_html_gafc1f3164b69c49a99040dab87b827ed7"><div class="ttname"><a href="../../d7/d11/group___lua_physics_materials.html#gafc1f3164b69c49a99040dab87b827ed7">chi_lua::chiPhysicsMaterialSetProperty</a></div><div class="ttdeci">void chiPhysicsMaterialSetProperty(int MaterialHandle, int PropertyIndex, int OperationIndex, varying Information)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l00601">lua_functions.c:601</a></div></div>
+</div><!-- fragment --><h2>_</h2>
+<h3>Example 1</h3>
+<p >Simple temperature independent thermal conductivity: </p><div class="fragment"><div class="line">materials = {}</div>
+<div class="line">materials[1] = <a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gaa19753665bde67f4e125fd204848c342">chiPhysicsAddMaterial</a>(<span class="stringliteral">&quot;Test Material&quot;</span>);</div>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gad2a1538276adff6c1d723a7a26131f08">chiPhysicsMaterialAddProperty</a>(materials[0],THERMAL_CONDUCTIVITY)</div>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gafc1f3164b69c49a99040dab87b827ed7">chiPhysicsMaterialSetProperty</a>(materials[0],THERMAL_CONDUCTIVITY,SINGLE_VALUE,13.7)</div>
+</div><!-- fragment --><p >where the thermal conductivity has been set to 13.7.<br  />
+ </p><h3>Example 2</h3>
+<p >Isotropic Multigroup source set from a lua table/array (12 groups): </p><div class="fragment"><div class="line">materials = {}</div>
+<div class="line">materials[1] = <a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gaa19753665bde67f4e125fd204848c342">chiPhysicsAddMaterial</a>(<span class="stringliteral">&quot;Test Material&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gad2a1538276adff6c1d723a7a26131f08">chiPhysicsMaterialAddProperty</a>(materials[1],ISOTROPIC_MG_SOURCE)</div>
+<div class="line"> </div>
+<div class="line">num_groups = 12</div>
+<div class="line">src={}</div>
+<div class="line"><span class="keywordflow">for</span> g=1,num_groups <span class="keywordflow">do</span></div>
+<div class="line">    src[g] = 0.0</div>
+<div class="line">end</div>
+<div class="line"><a class="code hl_function" href="../../d7/d11/group___lua_physics_materials.html#gafc1f3164b69c49a99040dab87b827ed7">chiPhysicsMaterialSetProperty</a>(materials[1],ISOTROPIC_MG_SOURCE,FROM_ARRAY,src)</div>
+</div><!-- fragment --><h3>Developer Info</h3>
+<p >Checklist for adding a new material property:</p><ul>
+<li>Make sure you followed the steps depicted in the developer info section for the ChiLua::chiPhysicsMaterialAddProperty function.</li>
+<li>Now under the "If user supplied name then find property index"-section add the appropriate code for setting the property index.</li>
+<li>Add an else-if block for your property similar to the others. It should be intuitive if you look at the others.</li>
+<li>Remember to add the filtering section if you need to support multiple type properties.</li>
+</ul>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../d4/dc1/test_framework_tutorials_tutorial_93_raytracing_lua.html">test/framework/tutorials/tutorial_93_raytracing.lua</a> <br  />
+ <a class="el" href="../../d7/d6e/test_modules__diffusion__diffusion1_d__i_p_lua.html">test/modules/Diffusion/Diffusion1D_IP.lua</a> <br  />
+ <a class="el" href="../../d1/d20/test_modules__diffusion__diffusion1_d_lua.html">test/modules/Diffusion/Diffusion1D.lua</a> <br  />
+ <a class="el" href="../../da/d53/test_modules__diffusion__diffusion3_d_1_poly__i_p_lua.html">test/modules/Diffusion/Diffusion3D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../dd/d0d/test_modules__diffusion__diffusion3_d_2_ortho_lua.html">test/modules/Diffusion/Diffusion3D_2Ortho.lua</a> <br  />
+ <a class="el" href="../../d7/d5f/test_modules__diffusion__diffusion3_d_3_unstructured__i_p_lua.html">test/modules/Diffusion/Diffusion3D_3Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../dd/d83/test_modules__diffusion__diffusion3_d_1_poly_lua.html">test/modules/Diffusion/Diffusion3D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d9/dd8/test_modules__diffusion__diffusion2_d_1_poly_lua.html">test/modules/Diffusion/Diffusion2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../de/d9e/test_modules__diffusion__diffusion2_d_1_poly__i_p_lua.html">test/modules/Diffusion/Diffusion2D_1Poly_IP.lua</a> <br  />
+ <a class="el" href="../../d3/d97/test_modules__diffusion__diffusion3_d_4_v_t_u_lua.html">test/modules/Diffusion/Diffusion3D_4VTU.lua</a> <br  />
+ <a class="el" href="../../d7/d87/test_modules__diffusion__diffusion2_d_2_unstructured_lua.html">test/modules/Diffusion/Diffusion2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d0/d13/test_modules__diffusion__diffusion1_d__k_b_a_lua.html">test/modules/Diffusion/Diffusion1D_KBA.lua</a> <br  />
+ <a class="el" href="../../de/d06/test_modules__diffusion__diffusion2_d_2_unstructured__i_p_lua.html">test/modules/Diffusion/Diffusion2D_2Unstructured_IP.lua</a> <br  />
+ <a class="el" href="../../d9/d90/test_modules__diffusion__diffusion3_d_3_unstructured_lua.html">test/modules/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
+ <a class="el" href="../../df/deb/test_modules__linear_boltzmann_solvers__transport__steady__cyl__transport2_d_cyl_1_monoenergetic_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady_Cyl/Transport2DCyl_1Monoenergetic.lua</a> <br  />
+ <a class="el" href="../../de/d7e/test_modules__linear_boltzmann_solvers__transport__steady__cyl__transport2_d_cyl_2_multigroup_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady_Cyl/Transport2DCyl_2Multigroup.lua</a> <br  />
+ <a class="el" href="../../d8/dfc/test_modules__linear_boltzmann_solvers__m_g_diffusion__k_eigen__k_eigenvalue_m_i_p1_d_1_g_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_KEigen/KEigenvalueMIP1D_1G.lua</a> <br  />
+ <a class="el" href="../../df/de5/test_modules__linear_boltzmann_solvers__m_g_diffusion__k_eigen_utils__q_block_materials_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_KEigen/utils/QBlock_materials.lua</a> <br  />
+ <a class="el" href="../../dd/df9/test_modules__linear_boltzmann_solvers__transport__steady_c_b_c__transport2_d_1_poly_lua.html">test/modules/LinearBoltzmannSolvers/Transport_SteadyCBC/Transport2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d9/d8a/test_modules__linear_boltzmann_solvers__transport__steady_c_b_c__transport1_d_1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_SteadyCBC/Transport1D_1.lua</a> <br  />
+ <a class="el" href="../../d8/de0/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_3c_response_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_3c_response.lua</a> <br  />
+ <a class="el" href="../../db/d8e/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_1a_forward_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_1a_forward.lua</a> <br  />
+ <a class="el" href="../../db/db8/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_2a_forward_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_2a_forward.lua</a> <br  />
+ <a class="el" href="../../dd/d8a/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_2b_adjoint_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_2b_adjoint.lua</a> <br  />
+ <a class="el" href="../../d1/d0b/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_1b_adjoint_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_1b_adjoint.lua</a> <br  />
+ <a class="el" href="../../d9/d8b/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_2c_response_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_2c_response.lua</a> <br  />
+ <a class="el" href="../../dc/de9/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_3a_forward_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_3a_forward.lua</a> <br  />
+ <a class="el" href="../../df/d0c/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_3b_adjoint_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_3b_adjoint.lua</a> <br  />
+ <a class="el" href="../../df/d8a/test_modules__linear_boltzmann_solvers__transport__adjoint__adjoint2_d_1c_response_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Adjoint/Adjoint2D_1c_response.lua</a> <br  />
+ <a class="el" href="../../df/daf/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport1_d_1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport1D_1.lua</a> <br  />
+ <a class="el" href="../../d8/d9f/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport1_d_3_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport1D_3.lua</a> <br  />
+ <a class="el" href="../../d7/df1/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport2_d_3_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport2D_3.lua</a> <br  />
+ <a class="el" href="../../dc/dd6/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport2_d_2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport2D_2.lua</a> <br  />
+ <a class="el" href="../../da/d84/test_modules__linear_boltzmann_solvers__transport__transient__transient_transport1_d_2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Transient/TransientTransport1D_2.lua</a> <br  />
+ <a class="el" href="../../d9/dcd/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_3_poly_quad_mod_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_3Poly_quad_mod.lua</a> <br  />
+ <a class="el" href="../../da/dfc/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_5_poly_a__ani_hetero_bndry_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_5PolyA_AniHeteroBndry.lua</a> <br  />
+ <a class="el" href="../../d6/dc5/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_1_poly__balance_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_1Poly_Balance.lua</a> <br  />
+ <a class="el" href="../../df/dd4/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_5_cycles2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_5Cycles2.lua</a> <br  />
+ <a class="el" href="../../d8/d46/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_4b__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_4b_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../dc/d6b/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_1_poly__balance_m_g_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_1Poly_BalanceMG.lua</a> <br  />
+ <a class="el" href="../../d5/d27/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_1_poly_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_1Poly.lua</a> <br  />
+ <a class="el" href="../../d5/d85/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1a__extruder_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1a_Extruder.lua</a> <br  />
+ <a class="el" href="../../d4/d18/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_4a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_4a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../d5/d2d/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_3a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../dd/dd7/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1_poly_qmom_part1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1Poly_qmom_part1.lua</a> <br  />
+ <a class="el" href="../../db/dd7/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_2_unstructured_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d8/da7/test_modules__linear_boltzmann_solvers__transport__steady__transport1_d_1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport1D_1.lua</a> <br  />
+ <a class="el" href="../../d4/dab/test_modules__linear_boltzmann_solvers__transport__steady__transport1_d_3a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport1D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../da/d92/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1_poly_qmom_part2_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1Poly_qmom_part2.lua</a> <br  />
+ <a class="el" href="../../dd/d3e/test_modules__linear_boltzmann_solvers__transport__steady__transport1_d_4__d_s_a_ortho_inf_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport1D_4_DSA_ortho_inf.lua</a> <br  />
+ <a class="el" href="../../da/d4c/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_4_cycles1_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_4Cycles1.lua</a> <br  />
+ <a class="el" href="../../d7/dcb/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1b__ortho_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1b_Ortho.lua</a> <br  />
+ <a class="el" href="../../dd/d15/test_modules__linear_boltzmann_solvers__transport__steady__transport2_d_2_unstructured_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport2D_2Unstructured.lua</a> <br  />
+ <a class="el" href="../../d5/d54/test_modules__linear_boltzmann_solvers__transport__steady__transport3_d_1_poly_parmetis_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Steady/Transport3D_1Poly_parmetis.lua</a> <br  />
+ <a class="el" href="../../df/d3f/test_modules__linear_boltzmann_solvers__transport__keigen__k_eigenvalue_transport1_d_1_g__c_b_c_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Keigen/KEigenvalueTransport1D_1G_CBC.lua</a> <br  />
+ <a class="el" href="../../de/d1e/test_modules__linear_boltzmann_solvers__transport__keigen__k_eigenvalue_transport1_d_1_g_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Keigen/KEigenvalueTransport1D_1G.lua</a> <br  />
+ <a class="el" href="../../d8/d81/test_modules__linear_boltzmann_solvers__transport__keigen_utils__q_block_materials_lua.html">test/modules/LinearBoltzmannSolvers/Transport_Keigen/utils/QBlock_materials.lua</a> <br  />
+ <a class="el" href="../../d1/d5b/test_modules__linear_boltzmann_solvers__m_g_diffusion__steady__m_i_p_diffusion3_d_3a__d_s_a_ortho_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_Steady/MIPDiffusion3D_3a_DSA_ortho.lua</a> <br  />
+ <a class="el" href="../../d0/d0d/test_modules__linear_boltzmann_solvers__m_g_diffusion__steady__m_i_p_diffusion3_d_1b__ortho_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_Steady/MIPDiffusion3D_1b_Ortho.lua</a> <br  />
+ </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l00601">601</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

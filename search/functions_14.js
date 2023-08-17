@@ -13,5 +13,5 @@ var searchData=
   ['uploadcellgeometrycontinuous_10',['UploadCellGeometryContinuous',['../d0/d81/namespacechi__mesh.html#a7f2d9060356013e716d3c82c9ffa7e10',1,'chi_mesh']]],
   ['uploadcellgeometrydiscontinuous_11',['UploadCellGeometryDiscontinuous',['../d0/d81/namespacechi__mesh.html#ab106f755376d57a95d8c1e6ad2f681d7',1,'chi_mesh']]],
   ['uploadfacegeometry_12',['UploadFaceGeometry',['../d0/d81/namespacechi__mesh.html#a770edb637675bf3766b5512429b28ebe',1,'chi_mesh']]],
-  ['upwindpsi_13',['UpwindPsi',['../d8/d3e/classchi__mesh_1_1sweep__management_1_1_a_u_x___f_l_u_d_s.html#ad7fe3a6b76788d99668b6e265232c073',1,'chi_mesh::sweep_management::AUX_FLUDS::UpwindPsi()'],['../de/da5/classchi__mesh_1_1sweep__management_1_1_f_l_u_d_s.html#a110e6e1a423065a07fbf6589d62e13fc',1,'chi_mesh::sweep_management::FLUDS::UpwindPsi()'],['../d9/d22/classchi__mesh_1_1sweep__management_1_1_p_r_i_m_a_r_y___f_l_u_d_s.html#a0d3910679f35ca3e4b1fc29c844e07f3',1,'chi_mesh::sweep_management::PRIMARY_FLUDS::UpwindPsi()']]]
+  ['upwindpsi_13',['UpwindPsi',['../d5/d5b/classchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s.html#a93350ff51e6b1d61ee6370ce9bab76c1',1,'chi_mesh::sweep_management::AAH_FLUDS']]]
 ];

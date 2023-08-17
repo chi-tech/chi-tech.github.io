@@ -10,5 +10,5 @@ var group___lua_quadrature =
     [ "chi_lua::chiCreateProductQuadrature", "de/d37/group___lua_quadrature.html#ga310caeec08395d1fa35d319489fc08f2", null ],
     [ "chi_lua::chiCreateSphericalProductQuadrature", "de/d37/group___lua_quadrature.html#ga0ac0fae966762acafa0b1fd69bf1f927", null ],
     [ "chi_lua::chiGetProductQuadrature", "de/d37/group___lua_quadrature.html#ga8037d84cbcdf5f20b06868d87579985d", null ],
-    [ "chi_lua::chiOptimizeAngularQuadratureForPolarSymmetry", "de/d37/group___lua_quadrature.html#ga8c4e64918adaadfcd5bcfa03d515143a", null ]
+    [ "chi_lua::chiOptimizeAngularQuadratureForPolarSymmetry", "de/d37/group___lua_quadrature.html#ga33e3e01c7d0cc61f8ba28985eecd639b", null ]
 ];

@@ -17,5 +17,6 @@ var searchData=
   ['boundaryrobin_14',['BoundaryRobin',['../d6/d58/classchi__diffusion_1_1_boundary_robin.html',1,'chi_diffusion']]],
   ['boundaryvaccuum_15',['BoundaryVaccuum',['../d1/de0/classchi__mesh_1_1sweep__management_1_1_boundary_vaccuum.html',1,'chi_mesh::sweep_management']]],
   ['boundbox_16',['BoundBox',['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html',1,'chi_mesh::UnpartitionedMesh']]],
-  ['bytearray_17',['ByteArray',['../d5/d5b/classchi__data__types_1_1_byte_array.html',1,'chi_data_types']]]
+  ['bufferitem_17',['BufferItem',['../dc/db5/structlbs_1_1_c_b_c___a_synchronous_communicator_1_1_buffer_item.html',1,'lbs::CBC_ASynchronousCommunicator']]],
+  ['bytearray_18',['ByteArray',['../d5/d5b/classchi__data__types_1_1_byte_array.html',1,'chi_data_types']]]
 ];

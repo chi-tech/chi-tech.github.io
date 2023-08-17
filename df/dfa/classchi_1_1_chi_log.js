@@ -34,6 +34,7 @@ var classchi_1_1_chi_log =
       [ "MAX_MEMORY_USAGE", "df/dfa/classchi_1_1_chi_log.html#a3e6d5c485432686aa49ea2aa02eba39faee92564064b7c9fb6bae03228adc6809", null ]
     ] ],
     [ "ChiLog", "df/dfa/classchi_1_1_chi_log.html#a734b63bddb6dd01a7afd82a2156d9c00", null ],
+    [ "GetExistingRepeatingEventTag", "df/dfa/classchi_1_1_chi_log.html#a8398fcbb0768250e18347e334ae7ed11", null ],
     [ "GetInstance", "df/dfa/classchi_1_1_chi_log.html#ab8e4674551583a65ef278c64da3023f9", null ],
     [ "GetRepeatingEventTag", "df/dfa/classchi_1_1_chi_log.html#aed938495d4a3ffe4c20d15d5498103aa", null ],
     [ "GetVerbosity", "df/dfa/classchi_1_1_chi_log.html#a3899fe2cba226b5ec91fc72e7d70b04b", null ],

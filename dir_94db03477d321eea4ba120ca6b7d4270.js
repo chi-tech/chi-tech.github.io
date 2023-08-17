@@ -2,6 +2,7 @@ var dir_94db03477d321eea4ba120ca6b7d4270 =
 [
     [ "IterativeMethods", "dir_a05b0786fa1535d91f1d08fa79af0bdd.html", "dir_a05b0786fa1535d91f1d08fa79af0bdd" ],
     [ "SweepChunks", "dir_b14fe340cdd0a468b80df9bd6a1f59d2.html", "dir_b14fe340cdd0a468b80df9bd6a1f59d2" ],
+    [ "Sweepers", "dir_e011ada6a3ca71e30d6184e804c344fe.html", "dir_e011ada6a3ca71e30d6184e804c344fe" ],
     [ "lbs_discrete_ordinates_solver.h", "de/d53/lbs__discrete__ordinates__solver_8h.html", [
       [ "lbs::DiscreteOrdinatesSolver", "d4/dec/classlbs_1_1_discrete_ordinates_solver.html", "d4/dec/classlbs_1_1_discrete_ordinates_solver" ]
     ] ],
