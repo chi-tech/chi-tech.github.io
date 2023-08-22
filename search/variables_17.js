@@ -11,7 +11,7 @@ var searchData=
   ['x_5fvalues_5f_8',['x_values_',['../d6/d90/classchi__math_1_1functions_1_1_piecewise_linear1_d.html#a8c32d3cbe2e71a14321c49301518922d',1,'chi_math::functions::PiecewiseLinear1D']]],
   ['xbounds_5f_9',['xbounds_',['../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html#a74c652a7e5d5f2539c3eaf62ee03e012',1,'chi_mesh::SurfaceMeshLogicalVolume']]],
   ['xcuts_10',['xcuts',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#a8cbfd020647fad92dd0d373e4a1b4a50',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS']]],
-  ['xcuts_5f_11',['xcuts_',['../df/d7e/classchi__mesh_1_1_surface_mesher.html#aaca466cfc726860f14bc081b106e6991',1,'chi_mesh::SurfaceMesher']]],
+  ['xcuts_5f_11',['xcuts_',['../dc/d87/classchi_1_1_k_b_a_graph_partitioner.html#ad401af9b7d2ff3c9a1ce727223e62d8c',1,'chi::KBAGraphPartitioner::xcuts_()'],['../df/d7e/classchi__mesh_1_1_surface_mesher.html#aaca466cfc726860f14bc081b106e6991',1,'chi_mesh::SurfaceMesher::xcuts_()']]],
   ['xmax_12',['xmax',['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#ad6e82a41929aa8b13c21ea88f9ad8c8e',1,'chi_mesh::UnpartitionedMesh::BoundBox']]],
   ['xmax_5f_13',['xmax_',['../d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html#a4d56e391489dfd4dfa162f96545729e8',1,'chi_mesh::RPPLogicalVolume']]],
   ['xmin_14',['xmin',['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#a5c016b281fc6d0377409c96624f12d8a',1,'chi_mesh::UnpartitionedMesh::BoundBox']]],

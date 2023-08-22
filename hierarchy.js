@@ -73,6 +73,11 @@ var hierarchy =
     [ "chi::ChiLog", "df/dfa/classchi_1_1_chi_log.html", null ],
     [ "chi::ChiMPICommunicatorSet", "df/de1/classchi_1_1_chi_m_p_i_communicator_set.html", null ],
     [ "ChiObject", "d6/d15/class_chi_object.html", [
+      [ "chi::GraphPartitioner", "d1/da7/classchi_1_1_graph_partitioner.html", [
+        [ "chi::KBAGraphPartitioner", "dc/d87/classchi_1_1_k_b_a_graph_partitioner.html", null ],
+        [ "chi::LinearGraphPartitioner", "df/da9/classchi_1_1_linear_graph_partitioner.html", null ],
+        [ "chi::PETScGraphPartitioner", "d2/dcb/classchi_1_1_p_e_t_sc_graph_partitioner.html", null ]
+      ] ],
       [ "chi::Material", "df/dbe/classchi_1_1_material.html", null ],
       [ "chi::MaterialProperty", "d0/d06/classchi_1_1_material_property.html", [
         [ "chi::MaterialPropertyScalarFuncXYZTV", "da/dd5/classchi_1_1_material_property_scalar_func_x_y_z_t_v.html", null ]
@@ -106,6 +111,11 @@ var hierarchy =
         [ "chi_mesh::RPPLogicalVolume", "d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html", null ],
         [ "chi_mesh::SphereLogicalVolume", "db/d06/classchi__mesh_1_1_sphere_logical_volume.html", null ],
         [ "chi_mesh::SurfaceMeshLogicalVolume", "dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html", null ]
+      ] ],
+      [ "chi_mesh::MeshGenerator", "de/d1a/classchi__mesh_1_1_mesh_generator.html", [
+        [ "chi_mesh::ExtruderMeshGenerator", "de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html", null ],
+        [ "chi_mesh::FromFileMeshGenerator", "da/d77/classchi__mesh_1_1_from_file_mesh_generator.html", null ],
+        [ "chi_mesh::OrthogonalMeshGenerator", "d7/d1e/classchi__mesh_1_1_orthogonal_mesh_generator.html", null ]
       ] ],
       [ "chi_mesh::MeshModifier", "dc/df7/classchi__mesh_1_1_mesh_modifier.html", [
         [ "chi_mesh::SnapToPlaneMeshModifier", "dd/d81/classchi__mesh_1_1_snap_to_plane_mesh_modifier.html", null ]
@@ -142,11 +152,13 @@ var hierarchy =
     ] ],
     [ "ChiObjectFactory", "d4/dbb/class_chi_object_factory.html", null ],
     [ "chi::Console", "d9/d52/classchi_1_1_console.html", null ],
+    [ "chi::ParameterBlock::const_iterator", "df/ddd/classchi_1_1_parameter_block_1_1const__iterator.html", null ],
     [ "chi_mesh::LocalCellHandler::const_iterator", "d3/dda/classchi__mesh_1_1_local_cell_handler_1_1const__iterator.html", null ],
     [ "chi_math::SparseMatrix::ConstEntryReference", "dd/dd3/structchi__math_1_1_sparse_matrix_1_1_const_entry_reference.html", null ],
     [ "chi_math::SparseMatrix::ConstRowIteratorContext::ConstRowIterator", "d8/d06/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context_1_1_const_row_iterator.html", null ],
     [ "chi_math::SparseMatrix::ConstRowIteratorContext", "dd/dda/classchi__math_1_1_sparse_matrix_1_1_const_row_iterator_context.html", null ],
     [ "lbs::PointSource::ContainingCellInfo", "da/da1/structlbs_1_1_point_source_1_1_containing_cell_info.html", null ],
+    [ "chi::KBAGraphPartitioner::CoordinateInfo", "d1/db5/structchi_1_1_k_b_a_graph_partitioner_1_1_coordinate_info.html", null ],
     [ "chi::CSTMemory", "d2/d1b/structchi_1_1_c_s_t_memory.html", null ],
     [ "lbs::acceleration::DiffusionSolver", "d2/d51/classlbs_1_1acceleration_1_1_diffusion_solver.html", [
       [ "lbs::acceleration::DiffusionMIPSolver", "d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html", null ],
@@ -166,6 +178,7 @@ var hierarchy =
     [ "chi_math::SparseMatrix::EntryReference", "d9/dc6/structchi__math_1_1_sparse_matrix_1_1_entry_reference.html", null ],
     [ "chi::ChiLog::Event", "dd/dde/structchi_1_1_chi_log_1_1_event.html", null ],
     [ "chi::ChiLog::EventInfo", "da/d3b/structchi_1_1_chi_log_1_1_event_info.html", null ],
+    [ "chi_mesh::ExtrusionLayer", "d6/df6/structchi__mesh_1_1_extrusion_layer.html", null ],
     [ "chi_mesh::Face", "d4/dd2/structchi__mesh_1_1_face.html", null ],
     [ "chi_mesh::sweep_management::FaceNodalMapping", "d7/d1f/structchi__mesh_1_1sweep__management_1_1_face_nodal_mapping.html", null ],
     [ "chi_math::PolyhedronMappingFE_PWL::FEface_data", "d5/d6a/structchi__math_1_1_polyhedron_mapping_f_e___p_w_l_1_1_f_eface__data.html", null ],
@@ -215,6 +228,7 @@ var hierarchy =
     [ "chi_data_types::Varying::IsString< T >", "d9/d2b/structchi__data__types_1_1_varying_1_1_is_string.html", null ],
     [ "chi_data_types::Varying::IsUnsignedInteger< T >", "da/d9f/structchi__data__types_1_1_varying_1_1_is_unsigned_integer.html", null ],
     [ "chi::DirectedGraph::VertexAccessor::iterator", "db/d01/classchi_1_1_directed_graph_1_1_vertex_accessor_1_1iterator.html", null ],
+    [ "chi::ParameterBlock::iterator", "d3/d67/classchi_1_1_parameter_block_1_1iterator.html", null ],
     [ "chi_mesh::LocalCellHandler::iterator", "d2/dd3/classchi__mesh_1_1_local_cell_handler_1_1iterator.html", null ],
     [ "lbs::KResidualFunctionContext", "d7/d94/structlbs_1_1_k_residual_function_context.html", null ],
     [ "mg_diffusion::KSPAppContext", "dc/da1/structmg__diffusion_1_1_k_s_p_app_context.html", null ],
@@ -324,7 +338,7 @@ var hierarchy =
       [ "chi::LogStream", "d8/d75/classchi_1_1_log_stream.html", null ]
     ] ],
     [ "chi_math::CDFSampler::SubIntvl", "d8/db6/structchi__math_1_1_c_d_f_sampler_1_1_sub_intvl.html", null ],
-    [ "lbs::SubSetInfo", "da/d31/structlbs_1_1_sub_set_info.html", null ],
+    [ "chi::SubSetInfo", "d9/dcc/structchi_1_1_sub_set_info.html", null ],
     [ "chi_mesh::SurfaceMesh", "dd/d43/classchi__mesh_1_1_surface_mesh.html", null ],
     [ "chi_mesh::SurfaceMesher", "df/d7e/classchi__mesh_1_1_surface_mesher.html", [
       [ "chi_mesh::SurfaceMesherPassthrough", "d3/d2d/classchi__mesh_1_1_surface_mesher_passthrough.html", null ],

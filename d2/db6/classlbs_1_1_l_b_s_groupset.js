@@ -18,7 +18,7 @@ var classlbs_1_1_l_b_s_groupset =
     [ "dir_id_to_so_map_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a8c3e765bbda75a6d94008873d638e4bc", null ],
     [ "gmres_restart_intvl_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a87a08b3f1623238226ec3bda86b65110", null ],
     [ "groups_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#ac5ab6f89bb8f61e11f52dc0e805726af", null ],
-    [ "grp_subset_infos_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a0f55a1b156fbd9cfea5ebf4688a6b158", null ],
+    [ "grp_subset_infos_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a3450a98b96983e13a91caa66f7517ca2", null ],
     [ "id_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a03a9d72151021f3cf28fc8b666041e2d", null ],
     [ "iterative_method_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#af5ee954d12d648b08f4a3d9734c2c3db", null ],
     [ "log_sweep_events_", "d2/db6/classlbs_1_1_l_b_s_groupset.html#a9a4681164ce24ac4ff5920c5e9c65605", null ],

@@ -98,6 +98,7 @@ var namespaces_dup =
       [ "chiMeshCreateUnpartitioned1DOrthoMesh", "d9/db8/group___lua_mesh_macros.html#gabcd0e135b1081c3b9eb6661d44fb21d7", null ],
       [ "chiMeshCreateUnpartitioned2DOrthoMesh", "d9/db8/group___lua_mesh_macros.html#ga83d9d3e4a7ae7060391faefe17c1076a", null ],
       [ "chiMeshCreateUnpartitioned3DOrthoMesh", "d9/db8/group___lua_mesh_macros.html#ga12dcd80ee2ab6104ba6e7142d7885221", null ],
+      [ "chiMeshGeneratorExecute", "d8/dd9/namespacechi__lua.html#aeb1d8bd96cee23e55f41d98706a899ff", null ],
       [ "chiMeshHandlerCreate", "da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a", null ],
       [ "chiMeshHandlerExportMeshToExodus", "da/d92/group___lua_mesh_handler.html#gaa96304d30ee9edcdbeb7362b9dcdebc3", null ],
       [ "chiMeshHandlerExportMeshToObj", "da/d92/group___lua_mesh_handler.html#ga6045293a83e8b97b548860df3911d2c4", null ],

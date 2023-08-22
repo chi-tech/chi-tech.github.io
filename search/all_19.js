@@ -5,7 +5,7 @@ var searchData=
   ['y_5fvalues_5f_2',['y_values_',['../d6/d90/classchi__math_1_1functions_1_1_piecewise_linear1_d.html#ac4c5a110569ab96fe614ecd16bd8f17a',1,'chi_math::functions::PiecewiseLinear1D']]],
   ['ybounds_5f_3',['ybounds_',['../dd/ddb/classchi__mesh_1_1_surface_mesh_logical_volume.html#a97bd98a4a77958928dac3889c70e56d9',1,'chi_mesh::SurfaceMeshLogicalVolume']]],
   ['ycuts_4',['ycuts',['../d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html#af3e2b3f942221bc52081bebbe33f64a4',1,'chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS']]],
-  ['ycuts_5f_5',['ycuts_',['../df/d7e/classchi__mesh_1_1_surface_mesher.html#a1ed4bbfeb13f7494240a627ff1b61c56',1,'chi_mesh::SurfaceMesher']]],
+  ['ycuts_5f_5',['ycuts_',['../dc/d87/classchi_1_1_k_b_a_graph_partitioner.html#aeb92b513ac9d046a6eb729dc383bde30',1,'chi::KBAGraphPartitioner::ycuts_()'],['../df/d7e/classchi__mesh_1_1_surface_mesher.html#a1ed4bbfeb13f7494240a627ff1b61c56',1,'chi_mesh::SurfaceMesher::ycuts_()']]],
   ['ylm_6',['Ylm',['../dc/d58/namespacechi__math.html#a9c9dcd08b5ba5ae11f987a038494d6c5',1,'chi_math']]],
   ['ymax_7',['ymax',['../d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html#acf069e314cf0e7ff13d047e8836ecd14',1,'chi_mesh::UnpartitionedMesh::BoundBox']]],
   ['ymax_8',['YMAX',['../da/dcd/_r_p_p_logical_volume_8cc.html#a610d6ad95b18966b70b6845de2a9c56b',1,'RPPLogicalVolume.cc']]],

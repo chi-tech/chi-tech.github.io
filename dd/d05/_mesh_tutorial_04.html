@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -100,7 +93,7 @@ $(document).ready(function(){initNavTree('dd/d05/_mesh_tutorial_04.html','../../
 Figure 1 - Mesh spanning from [-1,-1] to [1,1]</div></div>
 <p >The first step in this process is to create a <a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html">chi_mesh::MeshHandler</a> for all subsequent meshing operations. This will also serve as a global subspace for other meshing objects that will be added.</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chiMeshHandlerCreate</a>()</div>
-<div class="ttc" id="agroup___lua_mesh_handler_html_ga3be36a5ecf5469ad0980dd5aa4097a2a"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">Handle chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01144">lua_functions.c:1144</a></div></div>
+<div class="ttc" id="agroup___lua_mesh_handler_html_ga3be36a5ecf5469ad0980dd5aa4097a2a"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">Handle chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01149">lua_functions.c:1149</a></div></div>
 </div><!-- fragment --><p >We next import a surface mesh (<a class="el" href="../../dd/d43/classchi__mesh_1_1_surface_mesh.html">chi_mesh::SurfaceMesh</a>) that will define our problem. <b>Solvers will directly operate on predefined meshes</b>.</p>
 <div class="fragment"><div class="line">newSurfMesh = <a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga22ead80a73c8ed10395140965d049291">chiSurfaceMeshCreate</a>();</div>
 <div class="line"><a class="code hl_function" href="../../db/dc8/group___lua_surface_mesh.html#ga28a733ace3696288d92b7755a1704e8c">chiSurfaceMeshImportFromOBJFile</a>(newSurfMesh,<span class="stringliteral">&quot;CHI_RESOURCES/TestObjects/SquareMesh2x2.obj&quot;</span>)</div>
@@ -130,10 +123,10 @@ Figure 1 - Mesh spanning from [-1,-1] to [1,1]</div></div>
 <div class="line">--</div>
 <div class="line"><a class="code hl_function" href="../../d1/d9b/group___lua_surface_mesher.html#gafa49ea05b8a7ca38d50ea324b39fb219">chiSurfaceMesherExecute</a>();</div>
 <div class="line"><a class="code hl_function" href="../../d4/d3a/group___lua_volume_mesher.html#gad031f7f22f9a1b4d7ea535f04c56ae1f">chiVolumeMesherExecute</a>()</div>
-<div class="ttc" id="agroup___lua_surface_mesher_html_ga093aea22f7d29fe5ab8d6977dd22395c"><div class="ttname"><a href="../../d1/d9b/group___lua_surface_mesher.html#ga093aea22f7d29fe5ab8d6977dd22395c">chi_lua::chiSurfaceMesherCreate</a></div><div class="ttdeci">void chiSurfaceMesherCreate(int SurfaceMesherType)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02108">lua_functions.c:2108</a></div></div>
-<div class="ttc" id="agroup___lua_surface_mesher_html_gafa49ea05b8a7ca38d50ea324b39fb219"><div class="ttname"><a href="../../d1/d9b/group___lua_surface_mesher.html#gafa49ea05b8a7ca38d50ea324b39fb219">chi_lua::chiSurfaceMesherExecute</a></div><div class="ttdeci">void chiSurfaceMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02058">lua_functions.c:2058</a></div></div>
-<div class="ttc" id="agroup___lua_volume_mesher_html_ga97061ff17454d77b1f4359690c624299"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#ga97061ff17454d77b1f4359690c624299">chi_lua::chiVolumeMesherCreate</a></div><div class="ttdeci">void chiVolumeMesherCreate(int Type, varying OtherArgs)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01709">lua_functions.c:1709</a></div></div>
-<div class="ttc" id="agroup___lua_volume_mesher_html_gad031f7f22f9a1b4d7ea535f04c56ae1f"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#gad031f7f22f9a1b4d7ea535f04c56ae1f">chi_lua::chiVolumeMesherExecute</a></div><div class="ttdeci">void chiVolumeMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02034">lua_functions.c:2034</a></div></div>
+<div class="ttc" id="agroup___lua_surface_mesher_html_ga093aea22f7d29fe5ab8d6977dd22395c"><div class="ttname"><a href="../../d1/d9b/group___lua_surface_mesher.html#ga093aea22f7d29fe5ab8d6977dd22395c">chi_lua::chiSurfaceMesherCreate</a></div><div class="ttdeci">void chiSurfaceMesherCreate(int SurfaceMesherType)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02113">lua_functions.c:2113</a></div></div>
+<div class="ttc" id="agroup___lua_surface_mesher_html_gafa49ea05b8a7ca38d50ea324b39fb219"><div class="ttname"><a href="../../d1/d9b/group___lua_surface_mesher.html#gafa49ea05b8a7ca38d50ea324b39fb219">chi_lua::chiSurfaceMesherExecute</a></div><div class="ttdeci">void chiSurfaceMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02063">lua_functions.c:2063</a></div></div>
+<div class="ttc" id="agroup___lua_volume_mesher_html_ga97061ff17454d77b1f4359690c624299"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#ga97061ff17454d77b1f4359690c624299">chi_lua::chiVolumeMesherCreate</a></div><div class="ttdeci">void chiVolumeMesherCreate(int Type, varying OtherArgs)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01714">lua_functions.c:1714</a></div></div>
+<div class="ttc" id="agroup___lua_volume_mesher_html_gad031f7f22f9a1b4d7ea535f04c56ae1f"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#gad031f7f22f9a1b4d7ea535f04c56ae1f">chi_lua::chiVolumeMesherExecute</a></div><div class="ttdeci">void chiVolumeMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02039">lua_functions.c:2039</a></div></div>
 </div><!-- fragment --><p >The <em>SURFACEMESHER_PREDEFINED</em> is just a pass-through mesher, in contrast to the SURFACEMESHER_DELAUNAY* type which will re-mesh surfaces. The VOLUMEMESHER_PREDEFINED2D* similarly does not create new mesh elements but at least this instantiates the notion of nodes and cells.</p>
 <h3>Complete code segment</h3>
 <div class="fragment"><div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chiMeshHandlerCreate</a>()</div>

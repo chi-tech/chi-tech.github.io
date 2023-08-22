@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -113,23 +106,23 @@ $(document).ready(function(){initNavTree('dd/d89/_code_tut2.html','../../'); ini
 <h1><a class="anchor" id="CodeTut2Sec2"></a>
 2 Computing the gradient of a Finite Volume Scalar</h1>
 <p >In the finite volume SD scheme the computation of the gradient of a scalar quantity can often be required. We will use <a class="el" href="../../dc/da4/_code_tut1.html">Coding Tutorial 1 - Poisson's problem with Finite Volume</a> as a reference for this tutorial and assume that we are adding code to this tutorial.</p>
-<p >Given that we want \( \boldsymbol{\nabla} \phi \), how do we do this in ChiTech for the Finite Volume SD? Well the first thing to do is to note that, from Gauss's Divergence Theorem, </p><p class="formulaDsp">
-\[ \int_V \boldsymbol{\nabla} \phi dV = \int_S \mathbf{n} \phi dA \]
+<p >Given that we want <img class="formulaInl" alt="$ \boldsymbol{\nabla} \phi $" src="../../form_120.png" width="23" height="15"/>, how do we do this in ChiTech for the Finite Volume SD? Well the first thing to do is to note that, from Gauss's Divergence Theorem, </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \int_V \boldsymbol{\nabla} \phi dV = \int_S \mathbf{n} \phi dA \]" src="../../form_148.png" width="141" height="36"/>
 </p>
-<p> Now, if the storage of \( \boldsymbol{\nabla} \phi \) also follows the Finite Volume SD, then \( \boldsymbol{\nabla} \phi \) will be constant on cell \( P \), therefore </p><p class="formulaDsp">
-\[ \int_S \mathbf{n} \phi dA = V_P \biggr( \boldsymbol{\nabla} \phi \biggr)_P \]
+<p> Now, if the storage of <img class="formulaInl" alt="$ \boldsymbol{\nabla} \phi $" src="../../form_120.png" width="23" height="15"/> also follows the Finite Volume SD, then <img class="formulaInl" alt="$ \boldsymbol{\nabla} \phi $" src="../../form_120.png" width="23" height="15"/> will be constant on cell <img class="formulaInl" alt="$ P $" src="../../form_127.png" width="12" height="12"/>, therefore </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \int_S \mathbf{n} \phi dA = V_P \biggr( \boldsymbol{\nabla} \phi \biggr)_P \]" src="../../form_149.png" width="150" height="39"/>
 </p>
 <p> from which we can discretize the surface integral to get </p><p class="formulaDsp">
-\[ \biggr( \boldsymbol{\nabla} \phi \biggr)_P = \frac{1}{V_P} \sum_f A_f \mathbf{n}_f \phi_f \]
+<img class="formulaDsp" alt="\[ \biggr( \boldsymbol{\nabla} \phi \biggr)_P = \frac{1}{V_P} \sum_f A_f \mathbf{n}_f \phi_f \]" src="../../form_150.png" width="174" height="44"/>
 </p>
-<p> Now our first problem is to find \( \phi_f \), considering additionally that we might not have an equally spaced mesh. Consider the diagram below</p>
+<p> Now our first problem is to find <img class="formulaInl" alt="$ \phi_f $" src="../../form_151.png" width="15" height="17"/>, considering additionally that we might not have an equally spaced mesh. Consider the diagram below</p>
 <div class="image">
 <img src="../../SqueezedHexes.png" alt="" width="150px"/>
 </div>
-<p >we can now define \( \phi_f \) as a geometrically weighted average of \( \phi_N \) and \( \phi_P \) by using the face centroid, \( \mathbf{x}_f \). Therefore, </p><p class="formulaDsp">
-\[ \phi_f = \frac{1}{|| \mathbf{x}_N - \mathbf{x}_P ||} \biggr( (|| \mathbf{x}_N - \mathbf{x}_f ||) \phi_P + (|| \mathbf{x}_f - \mathbf{x}_P ||) \phi_N \biggr) \]
+<p >we can now define <img class="formulaInl" alt="$ \phi_f $" src="../../form_151.png" width="15" height="17"/> as a geometrically weighted average of <img class="formulaInl" alt="$ \phi_N $" src="../../form_144.png" width="20" height="15"/> and <img class="formulaInl" alt="$ \phi_P $" src="../../form_143.png" width="18" height="15"/> by using the face centroid, <img class="formulaInl" alt="$ \mathbf{x}_f $" src="../../form_146.png" width="17" height="12"/>. Therefore, </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \phi_f = \frac{1}{|| \mathbf{x}_N - \mathbf{x}_P ||} \biggr( (|| \mathbf{x}_N - \mathbf{x}_f ||) \phi_P + (|| \mathbf{x}_f - \mathbf{x}_P ||) \phi_N \biggr) \]" src="../../form_152.png" width="357" height="38"/>
 </p>
-<p >Here we can see that we would have a problem if \( \phi_N \) is not locally available, i.e., it is a ghost value. Therefore we need a means to obtain this value.</p>
+<p >Here we can see that we would have a problem if <img class="formulaInl" alt="$ \phi_N $" src="../../form_144.png" width="20" height="15"/> is not locally available, i.e., it is a ghost value. Therefore we need a means to obtain this value.</p>
 <h1><a class="anchor" id="CodeTut2Sec3"></a>
 3 Making a ghosted vector and communicating ghosted data</h1>
 <p >Ghost value communication is handled via a <code><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html">chi_math::VectorGhostCommunicator</a></code> object. These objects require quite a bit of MPI communication during initializing but thereafter can be re-used efficiently on different vectors (as long as they share the intended structure of the ghost-communicator).</p>
@@ -154,7 +147,7 @@ $(document).ready(function(){initNavTree('dd/d89/_code_tut2.html','../../'); ini
 <h1><a class="anchor" id="CodeTut2Sec4"></a>
 4 Accessing ghosted data</h1>
 <p >As a reminder, consider that a call to <code><a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#a6b8904300ab5bb7624c0521b11828272">chi_math::SpatialDiscretization::MapDOF</a></code> provides the <b>global-id</b> of a DOF whereas <code><a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#ab1c21223f44661906bc3223676b6cd84">chi_math::SpatialDiscretization::MapDOFLocal</a></code> provides the <b>local-id</b> of a DOF. Ghost data is, by its nature, not normally a local quantity. Therefore, one would assume that a call to <code>MapDOFLocal</code> would provide an invalid address for ghost-DOFs, however, there is a catch. The id provided by <code>MapDOFLocal</code> maps to a location aligned with the call to <code>GetGhostDOFIndices</code>. For example, consider there are 100 local-DOFs, and 15 ghost-DOFs on a given processor. A call to <code>GetGhostDOFIndices</code> would return 15 indices. Now lets say we want the local-id of the 9-th ghost-DOF. In this case a call to <code>MapDOFLocal</code> will return 100+8, because the 9-th ghost-DOF has an index of 8 in the list of ghost-ids.</p>
-<p >We will now use this concept in the computation of the gradient of \( \phi \).</p>
+<p >We will now use this concept in the computation of the gradient of <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/>.</p>
 <p >First we create a vector that can store the x, y and z components of the gradient. The size of this vector, as well as mappings into it, will be provided by the SD and therefore we need to make a <code><a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a></code> to dictate the structure of the unknowns. Therefore we do the following: </p><div class="fragment"><div class="line"><a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> grad_uk_man(</div>
 <div class="line">    {<a class="code hl_class" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a>(<a class="code hl_enumvalue" href="../../dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1da28d37be09a3d36f452147d018301ee87">chi_math::UnknownType::VECTOR_3</a>)});</div>
 <div class="ttc" id="aclasschi__math_1_1_unknown_html"><div class="ttname"><a href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00031">unknown_manager.h:32</a></div></div>
@@ -207,13 +200,13 @@ $(document).ready(function(){initNavTree('dd/d89/_code_tut2.html','../../'); ini
 <div class="line">  grad_phi[zmap] = grad_phi_P.z;</div>
 <div class="line">}<span class="comment">//for cell</span></div>
 <div class="ttc" id="anamespacechi__math_html_ae9d5df571cd219e6731bcd6d74c85af4"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ae9d5df571cd219e6731bcd6d74c85af4">chi_math::Vector3</a></div><div class="ttdeci">VectorN&lt; 3 &gt; Vector3</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d77/chi__math__vector_n_x_8h_source.html#l00474">chi_math_vectorNX.h:474</a></div></div>
-</div><!-- fragment --><p> As per usual we loop over the local cells. Once we have a cell reference we obtain a cell-mapping. We then immediately grab the present cell's \( \phi_P \) value by first mapping its address (reminder, the second paramater of <code>MapDOFLocal</code> is the node-number, which is zero for the Finite Volume SD), then accessing the ghosted field vector, <code>field_wg</code>.</p>
-<p >We then initialize an, initially zero, three-component vector representing the gradient for cell \( P \). Next we proceed to loop over the faces of the cell where we obtain the neighboring cell's \( \phi_N \) value (provided that <code>face.has_neighbor</code>, otherwise defaulting to the boundary condition of zero) with the code </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; adj_cell = grid.cells[face.neighbor_id];</div>
+</div><!-- fragment --><p> As per usual we loop over the local cells. Once we have a cell reference we obtain a cell-mapping. We then immediately grab the present cell's <img class="formulaInl" alt="$ \phi_P $" src="../../form_143.png" width="18" height="15"/> value by first mapping its address (reminder, the second paramater of <code>MapDOFLocal</code> is the node-number, which is zero for the Finite Volume SD), then accessing the ghosted field vector, <code>field_wg</code>.</p>
+<p >We then initialize an, initially zero, three-component vector representing the gradient for cell <img class="formulaInl" alt="$ P $" src="../../form_127.png" width="12" height="12"/>. Next we proceed to loop over the faces of the cell where we obtain the neighboring cell's <img class="formulaInl" alt="$ \phi_N $" src="../../form_144.png" width="20" height="15"/> value (provided that <code>face.has_neighbor</code>, otherwise defaulting to the boundary condition of zero) with the code </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; adj_cell = grid.cells[face.neighbor_id];</div>
 <div class="line"><span class="keyword">const</span> int64_t nmap = sdm.MapDOFLocal(adj_cell, 0);</div>
 <div class="line">phi_N = field_wg[nmap];</div>
 </div><!-- fragment --><p> Notice here the use of <code>MapDOFLocal</code>. This only works because <code>field_wg</code> will have a value for the case when <code>MapDOFLocal</code> is asked to map a ghosted DOF.</p>
 <p >Finally we compute the gradient from the formula </p><p class="formulaDsp">
-\[ \phi_f = \frac{1}{|| \mathbf{x}_N - \mathbf{x}_P ||} \biggr( (|| \mathbf{x}_N - \mathbf{x}_f ||) \phi_P + (|| \mathbf{x}_f - \mathbf{x}_P ||) \phi_N \biggr) \]
+<img class="formulaDsp" alt="\[ \phi_f = \frac{1}{|| \mathbf{x}_N - \mathbf{x}_P ||} \biggr( (|| \mathbf{x}_N - \mathbf{x}_f ||) \phi_P + (|| \mathbf{x}_f - \mathbf{x}_P ||) \phi_N \biggr) \]" src="../../form_152.png" width="357" height="38"/>
 </p>
 <p> with the code </p><div class="fragment"><div class="line">grad_phi_P += Af * ((xn-xf).Norm()*phi_P + (xf-xp).Norm()*phi_N)/</div>
 <div class="line">                    (xn-xp).Norm();</div>

@@ -7,6 +7,8 @@ var classchi__mesh_1_1_mesh_handler =
     [ "GetSurfaceMesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#aaf029a9d50e4d2d155270f19d774ff8f", null ],
     [ "GetVolumeMesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#add31cabd90b04db518b5af50fb51d63d", null ],
     [ "GetVolumeMesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a50c05ea715b393b1ae14ef57853e0c3d", null ],
+    [ "HasSurfaceMesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#aa9146df158add269f11b1cd596a68d20", null ],
+    [ "HasVolumeMesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a510756e8b18bd7b3f9849128eb35f1d2", null ],
     [ "operator=", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a35b0427a99db00a2777fe5b91e3674d9", null ],
     [ "SetSurfaceMesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#ab06d963452f72e209b3224e8e845748d", null ],
     [ "SetVolumeMesher", "d2/d10/classchi__mesh_1_1_mesh_handler.html#a29c6fa6981056d0d8d13fa207a614144", null ],

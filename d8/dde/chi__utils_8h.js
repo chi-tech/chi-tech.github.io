@@ -1,6 +1,8 @@
 var chi__utils_8h =
 [
+    [ "chi::SubSetInfo", "d9/dcc/structchi_1_1_sub_set_info.html", "d9/dcc/structchi_1_1_sub_set_info" ],
     [ "AssertReadibleFile", "d8/dde/chi__utils_8h.html#a92ca8165fbb2261304b32d387b2a9031", null ],
+    [ "MakeSubSets", "d8/dde/chi__utils_8h.html#a7af38a8d9b45b5e898886b6b8b9c9600", null ],
     [ "PrintIterationProgress", "d8/dde/chi__utils_8h.html#a70490a378cc0a0c2a95b7446a262bc7d", null ],
     [ "StringLTrim", "d8/dde/chi__utils_8h.html#aa6cf7680f830a2854f447c2630e6c811", null ],
     [ "StringRTrim", "d8/dde/chi__utils_8h.html#aeda8c2eb2770d1543c822715d735eb61", null ],

@@ -1,5 +1,8 @@
 var dir_c41d1cbb1e78ba295abacda4482bc177 =
 [
+    [ "chi__KBAGraphPartitioner.h", "de/d3b/chi_____k_b_a_graph_partitioner_8h.html", null ],
+    [ "chi__LinearGraphPartitioner.h", "dd/d64/chi_____linear_graph_partitioner_8h.html", null ],
+    [ "chi__PETScGraphPartitioner.h", "df/da5/chi_____p_e_t_sc_graph_partitioner_8h.html", null ],
     [ "chi__Plugin.h", "d4/d70/chi_____plugin_8h.html", null ],
     [ "chi_math__CrankNicolsonTimeIntegration.h", "d0/d84/chi__math_____crank_nicolson_time_integration_8h.html", null ],
     [ "chi_math__functions__LuaDimAToDimB.h", "da/dd4/chi__math____functions_____lua_dim_a_to_dim_b_8h.html", null ],
@@ -11,7 +14,12 @@ var dir_c41d1cbb1e78ba295abacda4482bc177 =
     [ "chi_math__ThetaSchemeTimeIntegration.h", "dd/d96/chi__math_____theta_scheme_time_integration_8h.html", null ],
     [ "chi_mesh__BooleanLogicalVolume.h", "d6/d8e/chi__mesh_____boolean_logical_volume_8h.html", null ],
     [ "chi_mesh__BooleanLogicalVolumeArgumentPair.h", "d5/d38/chi__mesh_____boolean_logical_volume_argument_pair_8h.html", null ],
+    [ "chi_mesh__ExtruderMeshGenerator.h", "dc/daa/chi__mesh_____extruder_mesh_generator_8h.html", null ],
+    [ "chi_mesh__ExtrusionLayer.h", "dd/d9d/chi__mesh_____extrusion_layer_8h.html", null ],
+    [ "chi_mesh__FromFileMeshGenerator.h", "d8/de9/chi__mesh_____from_file_mesh_generator_8h.html", null ],
+    [ "chi_mesh__MeshGenerator.h", "db/d5e/chi__mesh_____mesh_generator_8h.html", null ],
     [ "chi_mesh__MeshModifiersApply.h", "da/ddc/chi__mesh_____mesh_modifiers_apply_8h.html", null ],
+    [ "chi_mesh__OrthogonalMeshGenerator.h", "df/df1/chi__mesh_____orthogonal_mesh_generator_8h.html", null ],
     [ "chi_mesh__RCCLogicalVolume.h", "d6/d87/chi__mesh_____r_c_c_logical_volume_8h.html", null ],
     [ "chi_mesh__RPPLogicalVolume.h", "d7/d4f/chi__mesh_____r_p_p_logical_volume_8h.html", null ],
     [ "chi_mesh__SnapToPlaneMeshModifier.h", "d4/d6e/chi__mesh_____snap_to_plane_mesh_modifier_8h.html", null ],

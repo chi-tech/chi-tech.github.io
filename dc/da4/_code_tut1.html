@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -111,13 +104,13 @@ $(document).ready(function(){initNavTree('dc/da4/_code_tut1.html','../../'); ini
 </ul>
 <h1><a class="anchor" id="CodeTut1Sec1"></a>
 1 Poisson's equation</h1>
-<p ><a href="https://en.wikipedia.org/wiki/Poisson%27s_equation">The Poisson's equation</a> states the following, for \( \phi, q \in \mathcal{R} \), </p><p class="formulaDsp">
-\begin{eqnarray*} -\boldsymbol{\nabla} \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr) = q(\mathbf{x}), \quad \quad \quad (\mathbf{x})\in\mathcal{D} \\ \phi(\mathbf{x}) = 0, \quad \quad \quad \mathbf{x}\in \partial \mathcal{D} \end{eqnarray*}
+<p ><a href="https://en.wikipedia.org/wiki/Poisson%27s_equation">The Poisson's equation</a> states the following, for <img class="formulaInl" alt="$ \phi, q \in \mathcal{R} $" src="../../form_116.png" width="54" height="15"/>, </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\begin{eqnarray*} -\boldsymbol{\nabla} \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr) = q(\mathbf{x}), \quad \quad \quad (\mathbf{x})\in\mathcal{D} \\ \phi(\mathbf{x}) = 0, \quad \quad \quad \mathbf{x}\in \partial \mathcal{D} \end{eqnarray*}" src="../../form_117.png" width="237" height="41"/>
 </p>
-<p> where \( \boldsymbol{\nabla} \cdot \bigr( \bigr) \) denotes the divergence-operator and \( \boldsymbol{\nabla} \) denotes the gradient-operator, i.e. \( \boldsymbol{\nabla} \phi \) denotes the gradient of \( \phi \). The boundary conditions here state that \( \phi=0 \) on the boundary.</p>
+<p> where <img class="formulaInl" alt="$ \boldsymbol{\nabla} \cdot \bigr( \bigr) $" src="../../form_118.png" width="30" height="20"/> denotes the divergence-operator and <img class="formulaInl" alt="$ \boldsymbol{\nabla} $" src="../../form_119.png" width="14" height="14"/> denotes the gradient-operator, i.e. <img class="formulaInl" alt="$ \boldsymbol{\nabla} \phi $" src="../../form_120.png" width="23" height="15"/> denotes the gradient of <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/>. The boundary conditions here state that <img class="formulaInl" alt="$ \phi=0 $" src="../../form_121.png" width="36" height="15"/> on the boundary.</p>
 <h2><a class="anchor" id="CodeTut1Sec1_1"></a>
 1.1 Our specific problem</h2>
-<p >For our specific problem we will choose \( q(\mathbf{x})=1 \) and \( \mathcal{D} \) a cartesian domain, either 1D, 2D or 3D, with each dimension always between \( -1,+1 \). We can generate the mesh for this problem using an input file </p><div class="fragment"><div class="line">--############################################### Setup mesh</div>
+<p >For our specific problem we will choose <img class="formulaInl" alt="$ q(\mathbf{x})=1 $" src="../../form_122.png" width="54" height="17"/> and <img class="formulaInl" alt="$ \mathcal{D} $" src="../../form_123.png" width="14" height="12"/> a cartesian domain, either 1D, 2D or 3D, with each dimension always between <img class="formulaInl" alt="$ -1,+1 $" src="../../form_124.png" width="44" height="14"/>. We can generate the mesh for this problem using an input file </p><div class="fragment"><div class="line">--############################################### Setup mesh</div>
 <div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chiMeshHandlerCreate</a>()</div>
 <div class="line"> </div>
 <div class="line">mesh={}</div>
@@ -137,12 +130,12 @@ $(document).ready(function(){initNavTree('dc/da4/_code_tut1.html','../../'); ini
 <div class="line"> </div>
 <div class="line">--############################################### <a class="code hl_function" href="../../dc/d58/namespacechi__math.html#a75948cb3d263fe5216470bae075742ea">Set</a> Material IDs</div>
 <div class="line"><a class="code hl_function" href="../../d4/d3a/group___lua_volume_mesher.html#ga88fb27136bed385ee1ec665d8d2e9e63">chiVolumeMesherSetMatIDToAll</a>(0)</div>
-<div class="ttc" id="agroup___lua_mesh_handler_html_ga3be36a5ecf5469ad0980dd5aa4097a2a"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">Handle chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01144">lua_functions.c:1144</a></div></div>
-<div class="ttc" id="agroup___lua_mesh_macros_html_ga12dcd80ee2ab6104ba6e7142d7885221"><div class="ttname"><a href="../../d9/db8/group___lua_mesh_macros.html#ga12dcd80ee2ab6104ba6e7142d7885221">chi_lua::chiMeshCreateUnpartitioned3DOrthoMesh</a></div><div class="ttdeci">Two chiMeshCreateUnpartitioned3DOrthoMesh(array_float x_nodes, array_float y_nodes, array_float z_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02621">lua_functions.c:2621</a></div></div>
-<div class="ttc" id="agroup___lua_mesh_macros_html_ga83d9d3e4a7ae7060391faefe17c1076a"><div class="ttname"><a href="../../d9/db8/group___lua_mesh_macros.html#ga83d9d3e4a7ae7060391faefe17c1076a">chi_lua::chiMeshCreateUnpartitioned2DOrthoMesh</a></div><div class="ttdeci">Two chiMeshCreateUnpartitioned2DOrthoMesh(array_float x_nodes, array_float y_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02572">lua_functions.c:2572</a></div></div>
-<div class="ttc" id="agroup___lua_mesh_macros_html_gabcd0e135b1081c3b9eb6661d44fb21d7"><div class="ttname"><a href="../../d9/db8/group___lua_mesh_macros.html#gabcd0e135b1081c3b9eb6661d44fb21d7">chi_lua::chiMeshCreateUnpartitioned1DOrthoMesh</a></div><div class="ttdeci">Two chiMeshCreateUnpartitioned1DOrthoMesh(array_float x_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02498">lua_functions.c:2498</a></div></div>
-<div class="ttc" id="agroup___lua_volume_mesher_html_ga88fb27136bed385ee1ec665d8d2e9e63"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#ga88fb27136bed385ee1ec665d8d2e9e63">chi_lua::chiVolumeMesherSetMatIDToAll</a></div><div class="ttdeci">void chiVolumeMesherSetMatIDToAll(int material_id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01946">lua_functions.c:1946</a></div></div>
-<div class="ttc" id="agroup___lua_volume_mesher_html_gad031f7f22f9a1b4d7ea535f04c56ae1f"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#gad031f7f22f9a1b4d7ea535f04c56ae1f">chi_lua::chiVolumeMesherExecute</a></div><div class="ttdeci">void chiVolumeMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02034">lua_functions.c:2034</a></div></div>
+<div class="ttc" id="agroup___lua_mesh_handler_html_ga3be36a5ecf5469ad0980dd5aa4097a2a"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">Handle chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01149">lua_functions.c:1149</a></div></div>
+<div class="ttc" id="agroup___lua_mesh_macros_html_ga12dcd80ee2ab6104ba6e7142d7885221"><div class="ttname"><a href="../../d9/db8/group___lua_mesh_macros.html#ga12dcd80ee2ab6104ba6e7142d7885221">chi_lua::chiMeshCreateUnpartitioned3DOrthoMesh</a></div><div class="ttdeci">Two chiMeshCreateUnpartitioned3DOrthoMesh(array_float x_nodes, array_float y_nodes, array_float z_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02626">lua_functions.c:2626</a></div></div>
+<div class="ttc" id="agroup___lua_mesh_macros_html_ga83d9d3e4a7ae7060391faefe17c1076a"><div class="ttname"><a href="../../d9/db8/group___lua_mesh_macros.html#ga83d9d3e4a7ae7060391faefe17c1076a">chi_lua::chiMeshCreateUnpartitioned2DOrthoMesh</a></div><div class="ttdeci">Two chiMeshCreateUnpartitioned2DOrthoMesh(array_float x_nodes, array_float y_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02577">lua_functions.c:2577</a></div></div>
+<div class="ttc" id="agroup___lua_mesh_macros_html_gabcd0e135b1081c3b9eb6661d44fb21d7"><div class="ttname"><a href="../../d9/db8/group___lua_mesh_macros.html#gabcd0e135b1081c3b9eb6661d44fb21d7">chi_lua::chiMeshCreateUnpartitioned1DOrthoMesh</a></div><div class="ttdeci">Two chiMeshCreateUnpartitioned1DOrthoMesh(array_float x_nodes)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02503">lua_functions.c:2503</a></div></div>
+<div class="ttc" id="agroup___lua_volume_mesher_html_ga88fb27136bed385ee1ec665d8d2e9e63"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#ga88fb27136bed385ee1ec665d8d2e9e63">chi_lua::chiVolumeMesherSetMatIDToAll</a></div><div class="ttdeci">void chiVolumeMesherSetMatIDToAll(int material_id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01951">lua_functions.c:1951</a></div></div>
+<div class="ttc" id="agroup___lua_volume_mesher_html_gad031f7f22f9a1b4d7ea535f04c56ae1f"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#gad031f7f22f9a1b4d7ea535f04c56ae1f">chi_lua::chiVolumeMesherExecute</a></div><div class="ttdeci">void chiVolumeMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02039">lua_functions.c:2039</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_a75948cb3d263fe5216470bae075742ea"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#a75948cb3d263fe5216470bae075742ea">chi_math::Set</a></div><div class="ttdeci">void Set(VecDbl &amp;x, const double &amp;val)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d89/chi__math__03__vector__operations_8cc_source.html#l00023">chi_math_03_vector_operations.cc:23</a></div></div>
 </div><!-- fragment --><p> This code can be used to generate any of the following meshes, </p><div class="image">
 <img src="../../OrthoMesh_1D_2D_3D.png" alt="" width="1200px"/>
@@ -151,30 +144,30 @@ $(document).ready(function(){initNavTree('dc/da4/_code_tut1.html','../../'); ini
 <h2><a class="anchor" id="CodeTut1Sec1_2"></a>
 1.2 The Finite Volume spatial discretization</h2>
 <p >To apply the Finite Volume spatial discretization we integrate Poisson's equation over the volume of the cell </p><p class="formulaDsp">
-\begin{eqnarray*} -\int_V \boldsymbol{\nabla} \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr) dV = \int_V q(\mathbf{x}) dV \end{eqnarray*}
+<img class="formulaDsp" alt="\begin{eqnarray*} -\int_V \boldsymbol{\nabla} \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr) dV = \int_V q(\mathbf{x}) dV \end{eqnarray*}" src="../../form_125.png" width="219" height="36"/>
 </p>
-<p> Next we apply the approximation that both \( \phi \) and \( q \) are constant over a cell. Therefore, for cell \( P \), we have the source term </p><p class="formulaDsp">
-\begin{eqnarray*} \int_V q(\mathbf{x}) dV = q_P V_P. \end{eqnarray*}
+<p> Next we apply the approximation that both <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/> and <img class="formulaInl" alt="$ q $" src="../../form_126.png" width="8" height="11"/> are constant over a cell. Therefore, for cell <img class="formulaInl" alt="$ P $" src="../../form_127.png" width="12" height="12"/>, we have the source term </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\begin{eqnarray*} \int_V q(\mathbf{x}) dV = q_P V_P. \end{eqnarray*}" src="../../form_128.png" width="128" height="36"/>
 </p>
 <p> For the left-hand side we first apply Gauss Divergence Theorem, </p><p class="formulaDsp">
-\begin{eqnarray*} \int_V \boldsymbol{\nabla} \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr) dV = \int_S \mathbf{n} \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr) dA \end{eqnarray*}
+<img class="formulaDsp" alt="\begin{eqnarray*} \int_V \boldsymbol{\nabla} \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr) dV = \int_S \mathbf{n} \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr) dA \end{eqnarray*}" src="../../form_129.png" width="248" height="36"/>
 </p>
 <p> and for a discrete cell this surface integral can be discretized as the sum over all the faces </p><p class="formulaDsp">
-\begin{eqnarray*} \int_S \mathbf{n} \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr) dA = \sum_f A_f \mathbf{n}_f \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr)_f. \end{eqnarray*}
+<img class="formulaDsp" alt="\begin{eqnarray*} \int_S \mathbf{n} \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr) dA = \sum_f A_f \mathbf{n}_f \cdot \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr)_f. \end{eqnarray*}" src="../../form_130.png" width="263" height="42"/>
 </p>
-<p> We now still have to resolve \( \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr)_f \). To comprehend the approximation we are about to make, consider the figure below. We observe a cell \( P \), the present cell, and its neighbor, cell \( N \), at face \( f \). The cell centroids are \( \mathbf{x}_P \) and \( \mathbf{x}_N \) respectively.</p>
+<p> We now still have to resolve <img class="formulaInl" alt="$ \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr)_f $" src="../../form_131.png" width="63" height="23"/>. To comprehend the approximation we are about to make, consider the figure below. We observe a cell <img class="formulaInl" alt="$ P $" src="../../form_127.png" width="12" height="12"/>, the present cell, and its neighbor, cell <img class="formulaInl" alt="$ N $" src="../../form_132.png" width="14" height="12"/>, at face <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/>. The cell centroids are <img class="formulaInl" alt="$ \mathbf{x}_P $" src="../../form_133.png" width="20" height="11"/> and <img class="formulaInl" alt="$ \mathbf{x}_N $" src="../../form_134.png" width="21" height="11"/> respectively.</p>
 <div class="image">
 <img src="../../NeighborXPN.png" alt="" width="250px"/>
 </div>
-<p >We next form \( \mathbf{x}_{PN} \), as in the diagram, after which we approximate the gradient of \( \phi \) at face \( f \) as </p><p class="formulaDsp">
-\begin{eqnarray*} \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr)_f = \biggr( \frac{\phi_N - \phi_P}{||\mathbf{x}_{PN}||} \biggr) \ \frac{\mathbf{x}_{PN}}{||\mathbf{x}_{PN}||}. \end{eqnarray*}
+<p >We next form <img class="formulaInl" alt="$ \mathbf{x}_{PN} $" src="../../form_135.png" width="30" height="11"/>, as in the diagram, after which we approximate the gradient of <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/> at face <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> as </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\begin{eqnarray*} \bigr(\boldsymbol{\nabla} \phi(\mathbf{x})\bigr)_f = \biggr( \frac{\phi_N - \phi_P}{||\mathbf{x}_{PN}||} \biggr) \ \frac{\mathbf{x}_{PN}}{||\mathbf{x}_{PN}||}. \end{eqnarray*}" src="../../form_136.png" width="222" height="38"/>
 </p>
-<p> Note that this is essentially a scalar component \( \frac{df}{ds} = \frac{\phi_N - \phi_P}{||\mathbf{x}_{PN}||}\) after which we give it a direction by normalizing \( \mathbf{x}_{PN} \) as \( \frac{\mathbf{x}_{PN}}{||\mathbf{x}_{PN}||} \).</p>
+<p> Note that this is essentially a scalar component <img class="formulaInl" alt="$ \frac{df}{ds} = \frac{\phi_N - \phi_P}{||\mathbf{x}_{PN}||}$" src="../../form_137.png" width="80" height="23"/> after which we give it a direction by normalizing <img class="formulaInl" alt="$ \mathbf{x}_{PN} $" src="../../form_135.png" width="30" height="11"/> as <img class="formulaInl" alt="$ \frac{\mathbf{x}_{PN}}{||\mathbf{x}_{PN}||} $" src="../../form_138.png" width="41" height="20"/>.</p>
 <p >Our discretized equations now become</p>
 <p class="formulaDsp">
-\begin{align*} \sum_f c_f \phi_P - \sum_f c_f \phi_N &amp;= q_P V_P \\ c_f &amp;= \biggr[ \mathbf{A}_f \boldsymbol{\cdot} \frac{\mathbf{x}_{PN}}{||\mathbf{x}_{PN}||^2} \biggr]_f \end{align*}
+<img class="formulaDsp" alt="\begin{align*} \sum_f c_f \phi_P - \sum_f c_f \phi_N &amp;= q_P V_P \\ c_f &amp;= \biggr[ \mathbf{A}_f \boldsymbol{\cdot} \frac{\mathbf{x}_{PN}}{||\mathbf{x}_{PN}||^2} \biggr]_f \end{align*}" src="../../form_139.png" width="261" height="81"/>
 </p>
-<p> where \( \mathbf{A}_f \) is the area-vector of the face, i.e. \( A_f \mathbf{n}_f \) and \( \phi_P=0 \) when face \( f \) is on a boundary (enforcing the Dirichlet boundary condition).</p>
+<p> where <img class="formulaInl" alt="$ \mathbf{A}_f $" src="../../form_140.png" width="21" height="17"/> is the area-vector of the face, i.e. <img class="formulaInl" alt="$ A_f \mathbf{n}_f $" src="../../form_141.png" width="36" height="17"/> and <img class="formulaInl" alt="$ \phi_P=0 $" src="../../form_142.png" width="47" height="15"/> when face <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> is on a boundary (enforcing the Dirichlet boundary condition).</p>
 <h1><a class="anchor" id="CodeTut1Sec2"></a>
 2 Setting up the problem</h1>
 <p >In order to implement the code, we must first follow the steps in <a class="el" href="../../d8/d99/_dev_man_using_lib.html">Using Chi-Tech as a library</a>. Before proceeding, make sure you are fully acquinted with this step.</p>
@@ -428,7 +421,7 @@ Abort trap: 6
 <div class="line">chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Done global assembly&quot;</span>;</div>
 </div><!-- fragment --><p> The first item to note is the loop over local cells. ChiTech can only loop over local cells, for more information on this see <a class="el" href="../../dd/d1a/_dev_man_meshes.html#devman_meshes_sec_1">More detail on Mesh data structures</a>.</p>
 <p >Once we have a reference to a local-cell we can now obtain the SD's mapping of that cell using </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_mapping = sdm.GetCellMapping(cell);</div>
-</div><!-- fragment --><p> We can also immediately map the cell's \( \phi_P \) global location in the parallel matrix/vector by making a call to <code><a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#a6b8904300ab5bb7624c0521b11828272">chi_math::SpatialDiscretization::MapDOF</a></code>. </p><div class="fragment"><div class="line"><span class="keyword">const</span> int64_t imap = sdm.MapDOF(cell,0);</div>
+</div><!-- fragment --><p> We can also immediately map the cell's <img class="formulaInl" alt="$ \phi_P $" src="../../form_143.png" width="18" height="15"/> global location in the parallel matrix/vector by making a call to <code><a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html#a6b8904300ab5bb7624c0521b11828272">chi_math::SpatialDiscretization::MapDOF</a></code>. </p><div class="fragment"><div class="line"><span class="keyword">const</span> int64_t imap = sdm.MapDOF(cell,0);</div>
 </div><!-- fragment --><p> The syntax of this function is #1 A cell reference, and #2 the node number which, for Finite Volume, will always be zero.</p>
 <p >Finally, before looping over the faces, we grab the cell centroid and volume.</p>
 <p >The loop over faces is split into two cases, one for internal faces and one for boundary faces. Both cases need the face area-vector there we construct that first </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; face : cell.faces)</div>
@@ -436,19 +429,19 @@ Abort trap: 6
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> Af = face.normal * cell_mapping.FaceArea(f);</div>
 <div class="line">  <span class="comment">//etc.</span></div>
 </div><!-- fragment --><p >For internal faces, whether that face is internal, i.e., has a neighboring cell, is indicated by the member <code>has_neighbor</code>. Additionally the neighbor's global-id will be stored in the member <code>neighbor_id</code>. If the face does not have a neighbor then <code>neighbor_id</code> doubles as the boundary-id if boundary-ids are used. All cells that at minimum share a vertex with local cells are classified as <code>Ghost</code>-cells in ChiTech. And since a neighbor can be either a local- or ghost-cell we opt here to get a reference to the neighbor cell using its global-id for which we use <code>grid.cells</code>, instead of <code>grid.local_cells</code> which only uses local-ids. </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; adj_cell = grid.cells[face.neighbor_id];</div>
-</div><!-- fragment --><p> Once we have a reference to the adjacent cell we can now map the address of its unknown \( \phi_N \) as </p><div class="fragment"><div class="line"><span class="keyword">const</span> int64_t jnmap = sdm.MapDOF(adj_cell,0);</div>
+</div><!-- fragment --><p> Once we have a reference to the adjacent cell we can now map the address of its unknown <img class="formulaInl" alt="$ \phi_N $" src="../../form_144.png" width="20" height="15"/> as </p><div class="fragment"><div class="line"><span class="keyword">const</span> int64_t jnmap = sdm.MapDOF(adj_cell,0);</div>
 </div><!-- fragment --><p> We then compute </p><p class="formulaDsp">
-\begin{align*} c_f = \biggr[ \mathbf{A}_f \boldsymbol{\cdot} \frac{\mathbf{x}_{PN}}{||\mathbf{x}_{PN}||^2} \biggr]_f \end{align*}
+<img class="formulaDsp" alt="\begin{align*} c_f = \biggr[ \mathbf{A}_f \boldsymbol{\cdot} \frac{\mathbf{x}_{PN}}{||\mathbf{x}_{PN}||^2} \biggr]_f \end{align*}" src="../../form_145.png" width="143" height="41"/>
 </p>
 <p> with the code </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; xn = adj_cell.centroid;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> xpn = xn - xp;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> cf = Af.Dot(xpn) / xpn.NormSquare();</div>
-</div><!-- fragment --><p> after that we set the matrix entries associated with \( \phi_P \) and \( \phi_N \) using the PETSc commands </p><div class="fragment"><div class="line">MatSetValue(A, imap, imap ,  cf, ADD_VALUES);</div>
+</div><!-- fragment --><p> after that we set the matrix entries associated with <img class="formulaInl" alt="$ \phi_P $" src="../../form_143.png" width="18" height="15"/> and <img class="formulaInl" alt="$ \phi_N $" src="../../form_144.png" width="20" height="15"/> using the PETSc commands </p><div class="fragment"><div class="line">MatSetValue(A, imap, imap ,  cf, ADD_VALUES);</div>
 <div class="line">MatSetValue(A, imap, jnmap, -cf, ADD_VALUES);</div>
-</div><!-- fragment --><p >For boundary faces, we essentially do the same, however, we do not have an adjacent cell or \( \mathbf{x}_N \). Therefore we extrapolate a virtual boundary cell-centroid using the face-centroid, \( \mathbf{x}_f \), as </p><p class="formulaDsp">
-\[ \mathbf{x}_N = \mathbf{x}_P + 2 ( \mathbf{x}_f - \mathbf{x}_P ) \]
+</div><!-- fragment --><p >For boundary faces, we essentially do the same, however, we do not have an adjacent cell or <img class="formulaInl" alt="$ \mathbf{x}_N $" src="../../form_134.png" width="21" height="11"/>. Therefore we extrapolate a virtual boundary cell-centroid using the face-centroid, <img class="formulaInl" alt="$ \mathbf{x}_f $" src="../../form_146.png" width="17" height="12"/>, as </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \mathbf{x}_N = \mathbf{x}_P + 2 ( \mathbf{x}_f - \mathbf{x}_P ) \]" src="../../form_147.png" width="150" height="17"/>
 </p>
 <p> and then </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; xn = xp + 2.0*(face.centroid - xp);</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> xpn = xn - xp;</div>
@@ -456,7 +449,7 @@ Abort trap: 6
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> cf = Af.Dot(xpn) / xpn.NormSquare();</div>
 </div><!-- fragment --><p >Finally, since there is no neighbor cell entry, we only have a diagonal entry </p><div class="fragment"><div class="line">MatSetValue(A, imap, imap , cf, ADD_VALUES);</div>
 </div><!-- fragment --><p >After the face loops we then set the right-hand side using </p><div class="fragment"><div class="line">VecSetValue(b, imap, 1.0*V, ADD_VALUES);</div>
-</div><!-- fragment --><p> where the <code>1.0</code> represents \( q(\mathbf{x})=1 \).</p>
+</div><!-- fragment --><p> where the <code>1.0</code> represents <img class="formulaInl" alt="$ q(\mathbf{x})=1 $" src="../../form_122.png" width="54" height="17"/>.</p>
 <p >We finish parallel assembly with the following calls </p><div class="fragment"><div class="line">MatAssemblyBegin(A, MAT_FINAL_ASSEMBLY);</div>
 <div class="line">MatAssemblyEnd(A, MAT_FINAL_ASSEMBLY);</div>
 <div class="line">VecAssemblyBegin(b);</div>

@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -103,6 +96,10 @@ $(document).ready(function(){initNavTree('d2/d10/classchi__mesh_1_1_mesh_handler
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa87887c1a76634cb07134b5faa1e3587"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d81/namespacechi__mesh.html#a60cc7e5348a115cf4edcfd4ade799a51">chi_mesh::MeshContinuumPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">GetGrid</a> () const</td></tr>
 <tr class="separator:aa87887c1a76634cb07134b5faa1e3587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9146df158add269f11b1cd596a68d20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa9146df158add269f11b1cd596a68d20">HasSurfaceMesher</a> () const</td></tr>
+<tr class="separator:aa9146df158add269f11b1cd596a68d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510756e8b18bd7b3f9849128eb35f1d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#a510756e8b18bd7b3f9849128eb35f1d2">HasVolumeMesher</a> () const</td></tr>
+<tr class="separator:a510756e8b18bd7b3f9849128eb35f1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3856a30bc0d8b67261991f03159e114b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d7e/classchi__mesh_1_1_surface_mesher.html">chi_mesh::SurfaceMesher</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#a3856a30bc0d8b67261991f03159e114b">GetSurfaceMesher</a> ()</td></tr>
 <tr class="separator:a3856a30bc0d8b67261991f03159e114b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add31cabd90b04db518b5af50fb51d63d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/df0/classchi__mesh_1_1_volume_mesher.html">chi_mesh::VolumeMesher</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#add31cabd90b04db518b5af50fb51d63d">GetVolumeMesher</a> ()</td></tr>
@@ -156,6 +153,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Defaulted constructor. </p>
 
 </div>
 </div>
@@ -200,6 +198,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Obtains the grid from the volume mesher.</p>
 <p >Obtains a pointer to the last created grid. This method will get a smart-pointer to a grid object. If a volume-mesher has not been created, or if a grid is not available, this method will throw <code>std::logic_error</code>. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d65/chi__meshhandler_8cc_source.html#l00012">12</a> of file <a class="el" href="../../d7/d65/chi__meshhandler_8cc_source.html">chi_meshhandler.cc</a>.</p>
@@ -220,6 +219,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Obtains a reference to the surface mesher. If not set, will throw <code>std::logic_error</code>.</p>
 <p >Obtains a reference to the surface mesher. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d65/chi__meshhandler_8cc_source.html#l00032">32</a> of file <a class="el" href="../../d7/d65/chi__meshhandler_8cc_source.html">chi_meshhandler.cc</a>.</p>
@@ -240,6 +240,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Obtains a const reference to the surface mesher. If not set, will throw <code>std::logic_error</code>.</p>
 <p >Obtains a reference to the surface mesher. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d65/chi__meshhandler_8cc_source.html#l00056">56</a> of file <a class="el" href="../../d7/d65/chi__meshhandler_8cc_source.html">chi_meshhandler.cc</a>.</p>
@@ -260,6 +261,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Obtains a reference to the volume mesher. If not set, will throw <code>std::logic_error</code>.</p>
 <p >Obtains a reference to the surface mesher. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d65/chi__meshhandler_8cc_source.html#l00044">44</a> of file <a class="el" href="../../d7/d65/chi__meshhandler_8cc_source.html">chi_meshhandler.cc</a>.</p>
@@ -280,9 +282,66 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Obtains a const reference to the volume mesher. If not set, will throw <code>std::logic_error</code>.</p>
 <p >Obtains a reference to the surface mesher. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d65/chi__meshhandler_8cc_source.html#l00067">67</a> of file <a class="el" href="../../d7/d65/chi__meshhandler_8cc_source.html">chi_meshhandler.cc</a>.</p>
+
+</div>
+</div>
+<a id="aa9146df158add269f11b1cd596a68d20" name="aa9146df158add269f11b1cd596a68d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9146df158add269f11b1cd596a68d20">&#9670;&nbsp;</a></span>HasSurfaceMesher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chi_mesh::MeshHandler::HasSurfaceMesher </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns true if the surface mesher has been set. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html#l00023">23</a> of file <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html">chi_meshhandler.h</a>.</p>
+
+</div>
+</div>
+<a id="a510756e8b18bd7b3f9849128eb35f1d2" name="a510756e8b18bd7b3f9849128eb35f1d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510756e8b18bd7b3f9849128eb35f1d2">&#9670;&nbsp;</a></span>HasVolumeMesher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chi_mesh::MeshHandler::HasVolumeMesher </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns true if the volume mesher has been set. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html#l00026">26</a> of file <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html">chi_meshhandler.h</a>.</p>
 
 </div>
 </div>
@@ -335,8 +394,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Sets the active surface mesher. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html#l00024">24</a> of file <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html">chi_meshhandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html#l00045">45</a> of file <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html">chi_meshhandler.h</a>.</p>
 
 </div>
 </div>
@@ -363,8 +423,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Sets the active volume mesher. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html#l00026">26</a> of file <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html">chi_meshhandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html#l00049">49</a> of file <a class="el" href="../../df/d98/chi__meshhandler_8h_source.html">chi_meshhandler.h</a>.</p>
 
 </div>
 </div>

@@ -93,6 +93,7 @@ var lua__namespace_8h =
     [ "chiMeshCreateUnpartitioned1DOrthoMesh", "d3/d8a/lua__namespace_8h.html#gabcd0e135b1081c3b9eb6661d44fb21d7", null ],
     [ "chiMeshCreateUnpartitioned2DOrthoMesh", "d3/d8a/lua__namespace_8h.html#ga83d9d3e4a7ae7060391faefe17c1076a", null ],
     [ "chiMeshCreateUnpartitioned3DOrthoMesh", "d3/d8a/lua__namespace_8h.html#ga12dcd80ee2ab6104ba6e7142d7885221", null ],
+    [ "chiMeshGeneratorExecute", "d3/d8a/lua__namespace_8h.html#aeb1d8bd96cee23e55f41d98706a899ff", null ],
     [ "chiMeshHandlerCreate", "d3/d8a/lua__namespace_8h.html#ga3be36a5ecf5469ad0980dd5aa4097a2a", null ],
     [ "chiMeshHandlerExportMeshToExodus", "d3/d8a/lua__namespace_8h.html#gaa96304d30ee9edcdbeb7362b9dcdebc3", null ],
     [ "chiMeshHandlerExportMeshToObj", "d3/d8a/lua__namespace_8h.html#ga6045293a83e8b97b548860df3911d2c4", null ],

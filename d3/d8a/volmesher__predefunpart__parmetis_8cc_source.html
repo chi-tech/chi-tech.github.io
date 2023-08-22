@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -116,7 +109,7 @@ $(document).ready(function(){initNavTree('d3/d8a/volmesher__predefunpart__parmet
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">//                                                   per cell</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_raw_cells = umesh.<a class="code hl_function" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a9a29adeb6ec4b09b59b82e5e2fb9bbba">GetNumberOfCells</a>();</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordtype">size_t</span> num_raw_faces = 0;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : umesh.<a class="code hl_function" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ad085d828c1b7709007fd4610c6c65c16">GetRawCells</a>())</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; cell : umesh.<a class="code hl_function" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a850b12b04e537d816bb993c68590091d">GetRawCells</a>())</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    num_raw_faces += cell-&gt;faces.size();</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordtype">size_t</span> avg_num_face_per_cell =</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::ceil(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(num_raw_faces)/</div>
@@ -135,7 +128,7 @@ $(document).ready(function(){initNavTree('d3/d8a/volmesher__predefunpart__parmet
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        int64_t i=0;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        int64_t icount = 0;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> cell : umesh.<a class="code hl_function" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ad085d828c1b7709007fd4610c6c65c16">GetRawCells</a>())</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> cell : umesh.<a class="code hl_function" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a850b12b04e537d816bb993c68590091d">GetRawCells</a>())</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>          i_indices[i] = icount;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
@@ -220,9 +213,9 @@ $(document).ready(function(){initNavTree('d3/d8a/volmesher__predefunpart__parmet
 <div class="ttc" id="aclasschi_1_1_chi_log_html_aebdb78c9c0fddcc0799c4fc570ff1919"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#aebdb78c9c0fddcc0799c4fc570ff1919">chi::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00035">chi_log.cc:35</a></div></div>
 <div class="ttc" id="aclasschi_1_1_chi_log_html_af6279a3e5e14a0801d1f7dd27616be1c"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#af6279a3e5e14a0801d1f7dd27616be1c">chi::ChiLog::Log0Verbose1</a></div><div class="ttdeci">LogStream Log0Verbose1()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d75/chi__log_8h_source.html#l00233">chi_log.h:233</a></div></div>
 <div class="ttc" id="aclasschi_1_1_m_p_i___info_html_a246e0d9709f848fdc330317ff1fb595a"><div class="ttname"><a href="../../d1/d0b/classchi_1_1_m_p_i___info.html#a246e0d9709f848fdc330317ff1fb595a">chi::MPI_Info::comm</a></div><div class="ttdeci">const MPI_Comm &amp; comm</div><div class="ttdoc">MPI communicator.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d91/mpi__info_8h_source.html#l00028">mpi_info.h:28</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html">chi_mesh::UnpartitionedMesh</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00017">chi_unpartitioned_mesh.h:18</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a9a29adeb6ec4b09b59b82e5e2fb9bbba"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a9a29adeb6ec4b09b59b82e5e2fb9bbba">chi_mesh::UnpartitionedMesh::GetNumberOfCells</a></div><div class="ttdeci">size_t GetNumberOfCells() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00107">chi_unpartitioned_mesh.h:107</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_ad085d828c1b7709007fd4610c6c65c16"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ad085d828c1b7709007fd4610c6c65c16">chi_mesh::UnpartitionedMesh::GetRawCells</a></div><div class="ttdeci">const std::vector&lt; LightWeightCell * &gt; &amp; GetRawCells() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00109">chi_unpartitioned_mesh.h:109</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html">chi_mesh::UnpartitionedMesh</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00018">chi_unpartitioned_mesh.h:19</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a850b12b04e537d816bb993c68590091d"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a850b12b04e537d816bb993c68590091d">chi_mesh::UnpartitionedMesh::GetRawCells</a></div><div class="ttdeci">std::vector&lt; LightWeightCell * &gt; &amp; GetRawCells()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00109">chi_unpartitioned_mesh.h:109</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_unpartitioned_mesh_html_a9a29adeb6ec4b09b59b82e5e2fb9bbba"><div class="ttname"><a href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a9a29adeb6ec4b09b59b82e5e2fb9bbba">chi_mesh::UnpartitionedMesh::GetNumberOfCells</a></div><div class="ttdeci">size_t GetNumberOfCells() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00108">chi_unpartitioned_mesh.h:108</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_volume_mesher_html_ac4e88e2d2f236291b9a6b1e5d12cbea3aed0554f9a725850503d18f232ea9c50f"><div class="ttname"><a href="../../de/df0/classchi__mesh_1_1_volume_mesher.html#ac4e88e2d2f236291b9a6b1e5d12cbea3aed0554f9a725850503d18f232ea9c50f">chi_mesh::VolumeMesher::PARMETIS</a></div><div class="ttdeci">@ PARMETIS</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dcb/chi__volumemesher_8h_source.html#l00050">chi_volumemesher.h:49</a></div></div>
 <div class="ttc" id="avolmesher__predefunpart_8h_html"><div class="ttname"><a href="../../d5/d20/volmesher__predefunpart_8h.html">volmesher_predefunpart.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

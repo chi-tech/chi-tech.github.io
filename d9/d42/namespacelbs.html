@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -172,8 +165,6 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d64/classlbs_1_1_source_function.html">SourceFunction</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d1c/classlbs_1_1_steady_state_solver.html">SteadyStateSolver</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d31/structlbs_1_1_sub_set_info.html">SubSetInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d19/classlbs_1_1_sweep_chunk.html">SweepChunk</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -330,8 +321,6 @@ Functions</h2></td></tr>
 <tr class="separator:a5fe2ad9773109128b389845b045e5367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad62cb56f26cc4637665fcca322597b92"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#ad62cb56f26cc4637665fcca322597b92">MIP_TGDSA_PreConditionerMult</a> (PC pc, Vec phi_input, Vec pc_output)</td></tr>
 <tr class="separator:ad62cb56f26cc4637665fcca322597b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bae66dfc98c36f55ee6f3a484a1be66"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../da/d31/structlbs_1_1_sub_set_info.html">SubSetInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#a9bae66dfc98c36f55ee6f3a484a1be66">MakeSubSets</a> (const size_t num_items, const size_t desired_num_subsets)</td></tr>
-<tr class="separator:a9bae66dfc98c36f55ee6f3a484a1be66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81408e02933a956514a6a6d842e7a382"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#a81408e02933a956514a6a6d842e7a382">RegisterChiObject</a> (lbs, <a class="el" href="../../df/dd4/classlbs_1_1_diffusion_d_f_e_m_solver.html">DiffusionDFEMSolver</a>)</td></tr>
 <tr class="separator:a81408e02933a956514a6a6d842e7a382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3392deca63fe7acf1e6fa9dea77fde1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d42/namespacelbs.html#a3392deca63fe7acf1e6fa9dea77fde1e">RegisterChiObject</a> (lbs, <a class="el" href="../../d4/dec/classlbs_1_1_discrete_ordinates_solver.html">DiscreteOrdinatesSolver</a>)</td></tr>
@@ -965,37 +954,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9bae66dfc98c36f55ee6f3a484a1be66" name="a9bae66dfc98c36f55ee6f3a484a1be66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bae66dfc98c36f55ee6f3a484a1be66">&#9670;&nbsp;</a></span>MakeSubSets()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="../../da/d31/structlbs_1_1_sub_set_info.html">SubSetInfo</a> &gt; lbs::MakeSubSets </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>num_items</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>desired_num_subsets</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Routine that neatly contains the logic for creating a number of subsets from a given set. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../df/d1c/lbs__make__subset_8cc_source.html#l00010">10</a> of file <a class="el" href="../../df/d1c/lbs__make__subset_8cc_source.html">lbs_make_subset.cc</a>.</p>
-
-</div>
-</div>
 <a id="a5801535b388e4f0376b900117c30fdf9" name="a5801535b388e4f0376b900117c30fdf9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5801535b388e4f0376b900117c30fdf9">&#9670;&nbsp;</a></span>MapGeometryTypeToCoordSys()</h2>
 
@@ -1098,7 +1056,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function evaluates the flux moments based k-eigenvalue transport residual of the form \( r(\phi) = DL^{-1} (\frac{1}{k} F\phi + MS \phi) - \phi \). </p>
+<p >This function evaluates the flux moments based k-eigenvalue transport residual of the form <img class="formulaInl" alt="$ r(\phi) = DL^{-1} (\frac{1}{k} F\phi + MS \phi) - \phi $" src="../../form_330.png" width="212" height="20"/>. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/da8/nl__keigen__ags__residual__func_8cc_source.html#l00014">14</a> of file <a class="el" href="../../df/da8/nl__keigen__ags__residual__func_8cc_source.html">nl_keigen_ags_residual_func.cc</a>.</p>
 

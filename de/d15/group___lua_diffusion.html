@@ -16,13 +16,6 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -184,31 +177,31 @@ Functions</h2></td></tr>
 </div><!-- fragment --><h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
 </p>
 <p><br  />
 <br  />
  dirichlet<br  />
- Constant value boundary condition. Expects to be followed by a value \( f \) associated with \( \phi \). </p><p class="formulaDsp">
-\[ \phi = f \]
+ Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/>. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_20.png" width="38" height="15"/>
 </p>
 <p><br  />
 <br  />
  neumann<br  />
- Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = f \]
+ Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="93" height="15"/>
 </p>
 <p><br  />
 <br  />
  vacuum<br  />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_22.png" width="129" height="32"/>
 </p>
 <p><br  />
 <br  />
  robin<br  />
  Robin boundary condition of the form </p><p class="formulaDsp">
-\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
+<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_23.png" width="125" height="15"/>
 </p>
 <p><br  />
 <br  />
@@ -221,7 +214,7 @@ Functions</h2></td></tr>
  <a class="el" href="../../d7/d87/test_modules__c_f_e_m__diffusion_c_diffusion_2_d_1a_linear_lua.html">test/modules/CFEM_Diffusion/cDiffusion_2D_1a_linear.lua</a> <br  />
  </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03375">3375</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03383">3383</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -249,7 +242,7 @@ Functions</h2></td></tr>
  <a class="el" href="../../d7/d87/test_modules__c_f_e_m__diffusion_c_diffusion_2_d_1a_linear_lua.html">test/modules/CFEM_Diffusion/cDiffusion_2D_1a_linear.lua</a> <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03318">3318</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03326">3326</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -303,36 +296,36 @@ Functions</h2></td></tr>
  Boundary type. Expects boundary index then <b>BoundaryTypeName</b> then type value.<br  />
 <br  />
  </p><div class="fragment"><div class="line"><a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#ga7146d7ff73c94bc58b05bf7e23615fa4">chiCFEMMGDiffusionSetBCProperty</a>(solver,<span class="stringliteral">&quot;boundary_type&quot;</span>,bdID,<span class="stringliteral">&quot;vacuum&quot;</span>)</div>
-<div class="ttc" id="agroup___lua_diffusion_html_ga7146d7ff73c94bc58b05bf7e23615fa4"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#ga7146d7ff73c94bc58b05bf7e23615fa4">chi_lua::chiCFEMMGDiffusionSetBCProperty</a></div><div class="ttdeci">void chiCFEMMGDiffusionSetBCProperty(int SolverHandle, string PropertyName, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l03290">lua_functions.c:3290</a></div></div>
+<div class="ttc" id="agroup___lua_diffusion_html_ga7146d7ff73c94bc58b05bf7e23615fa4"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#ga7146d7ff73c94bc58b05bf7e23615fa4">chi_lua::chiCFEMMGDiffusionSetBCProperty</a></div><div class="ttdeci">void chiCFEMMGDiffusionSetBCProperty(int SolverHandle, string PropertyName, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l03298">lua_functions.c:3298</a></div></div>
 </div><!-- fragment --><h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
 </p>
 <p><br  />
 <br  />
  neumann<br  />
- Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = f \]
+ Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="93" height="15"/>
 </p>
 <p><br  />
 <br  />
  vacuum<br  />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_22.png" width="129" height="32"/>
 </p>
 <p><br  />
 <br  />
  robin<br  />
  Robin boundary condition of the form </p><p class="formulaDsp">
-\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
+<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_23.png" width="125" height="15"/>
 </p>
 <p><br  />
 <br  />
 </p>
 <dl class="section author"><dt>Author</dt><dd>Jean </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03290">3290</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03298">3298</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -353,7 +346,7 @@ Functions</h2></td></tr>
 <p >Creates a Multigroup CFEM Diffusion solver.</p>
 <dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03245">3245</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03253">3253</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -410,31 +403,31 @@ Functions</h2></td></tr>
 </div><!-- fragment --><h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
 </p>
 <p><br  />
 <br  />
  dirichlet<br  />
- Constant value boundary condition. Expects to be followed by a value \( f \) associated with \( \phi \). </p><p class="formulaDsp">
-\[ \phi = f \]
+ Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/>. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_20.png" width="38" height="15"/>
 </p>
 <p><br  />
 <br  />
  neumann<br  />
- Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = f \]
+ Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="93" height="15"/>
 </p>
 <p><br  />
 <br  />
  vacuum<br  />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_22.png" width="129" height="32"/>
 </p>
 <p><br  />
 <br  />
  robin<br  />
  Robin boundary condition of the form </p><p class="formulaDsp">
-\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
+<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_23.png" width="125" height="15"/>
 </p>
 <p><br  />
 <br  />
@@ -447,7 +440,7 @@ Functions</h2></td></tr>
  <a class="el" href="../../d1/d3a/test_modules__d_f_e_m__diffusion_d_diffusion_2_d_1a_linear_lua.html">test/modules/DFEM_Diffusion/dDiffusion_2D_1a_linear.lua</a> <br  />
  </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03578">3578</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03586">3586</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -475,7 +468,7 @@ Functions</h2></td></tr>
  <a class="el" href="../../d1/d3a/test_modules__d_f_e_m__diffusion_d_diffusion_2_d_1a_linear_lua.html">test/modules/DFEM_Diffusion/dDiffusion_2D_1a_linear.lua</a> <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03521">3521</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03529">3529</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -511,7 +504,7 @@ Functions</h2></td></tr>
  <a class="el" href="../../d9/d90/test_modules__diffusion__diffusion3_d_3_unstructured_lua.html">test/modules/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
  </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03396">3396</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03404">3404</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -554,7 +547,7 @@ Functions</h2></td></tr>
  <a class="el" href="../../d9/d90/test_modules__diffusion__diffusion3_d_3_unstructured_lua.html">test/modules/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
  </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03483">3483</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03491">3491</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -597,7 +590,7 @@ Functions</h2></td></tr>
  <a class="el" href="../../d9/d90/test_modules__diffusion__diffusion3_d_3_unstructured_lua.html">test/modules/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
  </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03507">3507</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03515">3515</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -651,35 +644,35 @@ Functions</h2></td></tr>
  Boundary type. Expects boundary name (string) then <b>BoundaryTypeName</b> then type value.<br  />
 <br  />
  </p><div class="fragment"><div class="line"><a class="code hl_function" href="../../de/d15/group___lua_diffusion.html#ga6ccf8162a4fd525c1fb520f21cc02050">chiDiffusionSetProperty</a>(solver,<span class="stringliteral">&quot;boundary_type&quot;</span>,2,<span class="stringliteral">&quot;dirichlet&quot;</span>,1.0)</div>
-<div class="ttc" id="agroup___lua_diffusion_html_ga6ccf8162a4fd525c1fb520f21cc02050"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#ga6ccf8162a4fd525c1fb520f21cc02050">chi_lua::chiDiffusionSetProperty</a></div><div class="ttdeci">void chiDiffusionSetProperty(int SolverHandle, string PropertyName, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l03460">lua_functions.c:3460</a></div></div>
+<div class="ttc" id="agroup___lua_diffusion_html_ga6ccf8162a4fd525c1fb520f21cc02050"><div class="ttname"><a href="../../de/d15/group___lua_diffusion.html#ga6ccf8162a4fd525c1fb520f21cc02050">chi_lua::chiDiffusionSetProperty</a></div><div class="ttdeci">void chiDiffusionSetProperty(int SolverHandle, string PropertyName, varying Values)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l03468">lua_functions.c:3468</a></div></div>
 </div><!-- fragment --><h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
 </p>
 <p><br  />
 <br  />
  dirichlet<br  />
- Constant value boundary condition. Expects to be followed by a value \( f \) associated with \( \phi \). </p><p class="formulaDsp">
-\[ \phi = f \]
+ Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/>. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_20.png" width="38" height="15"/>
 </p>
 <p><br  />
 <br  />
  neumann<br  />
- Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = f \]
+ Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="93" height="15"/>
 </p>
 <p><br  />
 <br  />
  vacuum<br  />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_22.png" width="129" height="32"/>
 </p>
 <p><br  />
 <br  />
  robin<br  />
  Robin boundary condition of the form </p><p class="formulaDsp">
-\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
+<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_23.png" width="125" height="15"/>
 </p>
 <p><br  />
 <br  />
@@ -700,7 +693,7 @@ Functions</h2></td></tr>
  <a class="el" href="../../d9/d90/test_modules__diffusion__diffusion3_d_3_unstructured_lua.html">test/modules/Diffusion/Diffusion3D_3Unstructured.lua</a> <br  />
  </p><dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03460">3460</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03468">3468</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -757,38 +750,38 @@ Functions</h2></td></tr>
 </div><!-- fragment --><h3>BoundaryTypeName</h3>
 <p >reflecting<br  />
  Reflecting boundary conditions. Synonymous with Neumann with a derivative of 0.0. </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_17.png" width="93" height="15"/>
 </p>
 <p><br  />
 <br  />
  dirichlet<br  />
- Constant value boundary condition. Expects to be followed by a value \( f \) associated with \( \phi \). </p><p class="formulaDsp">
-\[ \phi = f \]
+ Constant value boundary condition. Expects to be followed by a value <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> associated with <img class="formulaInl" alt="$ \phi $" src="../../form_19.png" width="9" height="15"/>. </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \phi = f \]" src="../../form_20.png" width="38" height="15"/>
 </p>
 <p><br  />
 <br  />
  neumann<br  />
- Constant derivative boundary condition. Expects to be followed by a constant \( f \) representing </p><p class="formulaDsp">
-\[ -D \hat{n}\cdot \nabla \phi = f \]
+ Constant derivative boundary condition. Expects to be followed by a constant <img class="formulaInl" alt="$ f $" src="../../form_18.png" width="9" height="15"/> representing </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ -D \hat{n}\cdot \nabla \phi = f \]" src="../../form_21.png" width="93" height="15"/>
 </p>
 <p><br  />
 <br  />
  vacuum<br  />
  Vacuum boundary conditions. More appropriate to neutron diffusion. </p><p class="formulaDsp">
-\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]
+<img class="formulaDsp" alt="\[ \frac{1}{4}\phi + \frac{1}{2} D \hat{n}\cdot \nabla \phi = 0 \]" src="../../form_22.png" width="129" height="32"/>
 </p>
 <p><br  />
 <br  />
  robin<br  />
  Robin boundary condition of the form </p><p class="formulaDsp">
-\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]
+<img class="formulaDsp" alt="\[ a \phi + b D \hat{n}\cdot \nabla \phi = f \]" src="../../form_23.png" width="125" height="15"/>
 </p>
 <p><br  />
 <br  />
 </p>
 <dl class="section author"><dt>Author</dt><dd>Jan </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03237">3237</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03245">3245</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>
@@ -816,7 +809,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Handle int Handle to the created solver. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03186">3186</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l03194">3194</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

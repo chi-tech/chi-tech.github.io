@@ -24,7 +24,7 @@ var searchData=
   ['stdg_21',['STDG',['../df/dda/structchi__mesh_1_1sweep__management_1_1_s_t_d_g.html',1,'chi_mesh::sweep_management']]],
   ['steadystatesolver_22',['SteadyStateSolver',['../d5/d1c/classlbs_1_1_steady_state_solver.html',1,'lbs']]],
   ['subintvl_23',['SubIntvl',['../d8/db6/structchi__math_1_1_c_d_f_sampler_1_1_sub_intvl.html',1,'chi_math::CDFSampler']]],
-  ['subsetinfo_24',['SubSetInfo',['../da/d31/structlbs_1_1_sub_set_info.html',1,'lbs']]],
+  ['subsetinfo_24',['SubSetInfo',['../d9/dcc/structchi_1_1_sub_set_info.html',1,'chi']]],
   ['surfacemesh_25',['SurfaceMesh',['../dd/d43/classchi__mesh_1_1_surface_mesh.html',1,'chi_mesh']]],
   ['surfacemesher_26',['SurfaceMesher',['../df/d7e/classchi__mesh_1_1_surface_mesher.html',1,'chi_mesh']]],
   ['surfacemesherpassthrough_27',['SurfaceMesherPassthrough',['../d3/d2d/classchi__mesh_1_1_surface_mesher_passthrough.html',1,'chi_mesh']]],
