@@ -20,6 +20,7 @@ var namespacechi__math =
     [ "DynamicMatrix", "df/d4b/classchi__math_1_1_dynamic_matrix.html", "df/d4b/classchi__math_1_1_dynamic_matrix" ],
     [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html", "db/d08/classchi__math_1_1_dynamic_vector" ],
     [ "FunctionDimAToDimB", "d4/d29/classchi__math_1_1_function_dim_a_to_dim_b.html", "d4/d29/classchi__math_1_1_function_dim_a_to_dim_b" ],
+    [ "GhostedParallelVector", "d9/d03/classchi__math_1_1_ghosted_parallel_vector.html", "d9/d03/classchi__math_1_1_ghosted_parallel_vector" ],
     [ "GolubFischer", "d7/d89/classchi__math_1_1_golub_fischer.html", "d7/d89/classchi__math_1_1_golub_fischer" ],
     [ "ImplicitEulerTimeIntegration", "da/d13/classchi__math_1_1_implicit_euler_time_integration.html", "da/d13/classchi__math_1_1_implicit_euler_time_integration" ],
     [ "LinearSolver", "dd/d52/classchi__math_1_1_linear_solver.html", "dd/d52/classchi__math_1_1_linear_solver" ],
@@ -27,6 +28,7 @@ var namespacechi__math =
     [ "NonLinearFunction", "d6/dc4/classchi__math_1_1_non_linear_function.html", "d6/dc4/classchi__math_1_1_non_linear_function" ],
     [ "NonLinearSolver", "dd/deb/classchi__math_1_1_non_linear_solver.html", "dd/deb/classchi__math_1_1_non_linear_solver" ],
     [ "NonLinearSolverContext", "d2/d14/structchi__math_1_1_non_linear_solver_context.html", "d2/d14/structchi__math_1_1_non_linear_solver_context" ],
+    [ "ParallelVector", "d0/dcb/classchi__math_1_1_parallel_vector.html", "d0/dcb/classchi__math_1_1_parallel_vector" ],
     [ "PolygonMappingFE_PWL", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l" ],
     [ "PolygonMappingFE_PWL_Cylindrical", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical.html", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical" ],
     [ "PolyhedronMappingFE_PWL", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l" ],
@@ -170,6 +172,10 @@ var namespacechi__math =
       [ "VECTOR_3", "dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1da28d37be09a3d36f452147d018301ee87", null ],
       [ "VECTOR_N", "dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dad7dc5b5f08aa4bc980c2f7e92a9046d4", null ],
       [ "TENSOR", "dc/d58/namespacechi__math.html#ad4724873fa5ae74b39c4657aa4f53d1dace2f94540fa9914e8fe6f0de9817717b", null ]
+    ] ],
+    [ "VecOpType", "dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555", [
+      [ "SET_VALUE", "dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555a84a3da303b867b2c0ed20d77db8117e1", null ],
+      [ "ADD_VALUE", "dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555ae67cbd9ebd7d8b18f868044ef3225adf", null ]
     ] ],
     [ "AssocLegendre", "dc/d58/namespacechi__math.html#ad55a1a5b25c9fb6ea889c7c73c5c5bfd", null ],
     [ "d2Legendredx2", "dc/d58/namespacechi__math.html#a0c4232d3fad7d0f76ce176cd5bd7d6b7", null ],

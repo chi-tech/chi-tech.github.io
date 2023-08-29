@@ -287,6 +287,9 @@ var hierarchy =
     [ "std::ostream", null, [
       [ "chi::DummyStream", "dd/d10/structchi_1_1_dummy_stream.html", null ]
     ] ],
+    [ "chi_math::ParallelVector", "d0/dcb/classchi__math_1_1_parallel_vector.html", [
+      [ "chi_math::GhostedParallelVector", "d9/d03/classchi__math_1_1_ghosted_parallel_vector.html", null ]
+    ] ],
     [ "chi::ParameterBlock", "d5/d1c/classchi_1_1_parameter_block.html", [
       [ "chi::InputParameters", "d8/d4d/classchi_1_1_input_parameters.html", null ]
     ] ],

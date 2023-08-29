@@ -95,31 +95,43 @@ $(document).ready(function(){initNavTree('d1/db0/classchi__math_1_1_vector_ghost
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6394cb247021dcde7f83c0537a43042f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a6394cb247021dcde7f83c0537a43042f">VectorGhostCommunicator</a> (uint64_t local_size, uint64_t global_size, std::vector&lt; int64_t &gt; ghost_indices, MPI_Comm communicator)</td></tr>
-<tr class="separator:a6394cb247021dcde7f83c0537a43042f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a010313029a9a9e458a8d0df08346bc42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a010313029a9a9e458a8d0df08346bc42">CommunicateGhostEntries</a> (std::vector&lt; double &gt; &amp;local_vector) const</td></tr>
-<tr class="separator:a010313029a9a9e458a8d0df08346bc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb4dc8a0d9ebf3c16dd2ace976b80f1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#adb4dc8a0d9ebf3c16dd2ace976b80f1e">VectorGhostCommunicator</a> (const uint64_t local_size, const uint64_t global_size, const std::vector&lt; int64_t &gt; &amp;ghost_ids, const MPI_Comm communicator)</td></tr>
+<tr class="separator:adb4dc8a0d9ebf3c16dd2ace976b80f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6184576ba9da3e6b0e8a1790139936c7"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a6184576ba9da3e6b0e8a1790139936c7">LocalSize</a> () const</td></tr>
+<tr class="separator:a6184576ba9da3e6b0e8a1790139936c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e5691fafaae0c17709bc54d84c85c30"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a4e5691fafaae0c17709bc54d84c85c30">GlobalSize</a> () const</td></tr>
+<tr class="separator:a4e5691fafaae0c17709bc54d84c85c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4840d4646fc7e2d66f36fae5702b53af"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a4840d4646fc7e2d66f36fae5702b53af">NumGhosts</a> () const</td></tr>
+<tr class="separator:a4840d4646fc7e2d66f36fae5702b53af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42eae6aa81e8ac2061443bb8829d058e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; int64_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a42eae6aa81e8ac2061443bb8829d058e">GhostIndices</a> () const</td></tr>
+<tr class="separator:a42eae6aa81e8ac2061443bb8829d058e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743ab04fae1f7dc62144055dce7c95b4"><td class="memItemLeft" align="right" valign="top">MPI_Comm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a743ab04fae1f7dc62144055dce7c95b4">Communicator</a> () const</td></tr>
+<tr class="separator:a743ab04fae1f7dc62144055dce7c95b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a624d72c8150e914956ce4148cca316"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a8a624d72c8150e914956ce4148cca316">MapGhostToLocal</a> (const int64_t ghost_id) const</td></tr>
+<tr class="separator:a8a624d72c8150e914956ce4148cca316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11f3876e0d9c699595f06ec34278036"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#aa11f3876e0d9c699595f06ec34278036">CommunicateGhostEntries</a> (std::vector&lt; double &gt; &amp;ghosted_vector) const</td></tr>
+<tr class="separator:aa11f3876e0d9c699595f06ec34278036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f86fa817a46f929551fa2ab40714676"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a3f86fa817a46f929551fa2ab40714676">MakeGhostedVector</a> () const</td></tr>
 <tr class="separator:a3f86fa817a46f929551fa2ab40714676"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59fdd7a83d454254c7376d76b9d9ea5d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a59fdd7a83d454254c7376d76b9d9ea5d">MakeGhostedVector</a> (const std::vector&lt; double &gt; &amp;unghosted_vector) const</td></tr>
-<tr class="separator:a59fdd7a83d454254c7376d76b9d9ea5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62fb7cc99265be56d04ead8dd723d633"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a62fb7cc99265be56d04ead8dd723d633">MakeGhostedVector</a> (const std::vector&lt; double &gt; &amp;local_vector) const</td></tr>
+<tr class="separator:a62fb7cc99265be56d04ead8dd723d633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a20263563d65ec838bd0400e4f6dccdbd"><td class="memItemLeft" align="right" valign="top">const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a20263563d65ec838bd0400e4f6dccdbd">local_size_</a></td></tr>
 <tr class="separator:a20263563d65ec838bd0400e4f6dccdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d0015bb5a93caf4999ba59f046d61dd"><td class="memItemLeft" align="right" valign="top">const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a8d0015bb5a93caf4999ba59f046d61dd">globl_size_</a></td></tr>
-<tr class="separator:a8d0015bb5a93caf4999ba59f046d61dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad011540878add462b0872b92c14a9d68"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#ad011540878add462b0872b92c14a9d68">ghost_indices_</a></td></tr>
-<tr class="separator:ad011540878add462b0872b92c14a9d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaadedd71b04ac41287ccc8fdd84237d"><td class="memItemLeft" align="right" valign="top">const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#afaadedd71b04ac41287ccc8fdd84237d">global_size_</a></td></tr>
+<tr class="separator:afaadedd71b04ac41287ccc8fdd84237d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe84490e8a0854824ae68a3c215b222"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a4fe84490e8a0854824ae68a3c215b222">ghost_ids_</a></td></tr>
+<tr class="separator:a4fe84490e8a0854824ae68a3c215b222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e45cc7a77a084d2e41640e186c14120"><td class="memItemLeft" align="right" valign="top">const MPI_Comm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a5e45cc7a77a084d2e41640e186c14120">comm_</a></td></tr>
 <tr class="separator:a5e45cc7a77a084d2e41640e186c14120"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3a51ab18bc7bf4eccfff5a775185b94"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#aa3a51ab18bc7bf4eccfff5a775185b94">location_id_</a> = 0</td></tr>
+<tr class="memitem:aa3a51ab18bc7bf4eccfff5a775185b94"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#aa3a51ab18bc7bf4eccfff5a775185b94">location_id_</a></td></tr>
 <tr class="separator:aa3a51ab18bc7bf4eccfff5a775185b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd025853e7fc227d31e4f6dc7130309"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a4dd025853e7fc227d31e4f6dc7130309">process_count_</a> = 0</td></tr>
+<tr class="memitem:a4dd025853e7fc227d31e4f6dc7130309"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a4dd025853e7fc227d31e4f6dc7130309">process_count_</a></td></tr>
 <tr class="separator:a4dd025853e7fc227d31e4f6dc7130309"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1de15dd7d364a7a6bce7566f04531454"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a1de15dd7d364a7a6bce7566f04531454">locI_extents_</a></td></tr>
-<tr class="separator:a1de15dd7d364a7a6bce7566f04531454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9197841ddeac30cfc914aaf75ef2a98b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a9197841ddeac30cfc914aaf75ef2a98b">extents_</a></td></tr>
+<tr class="separator:a9197841ddeac30cfc914aaf75ef2a98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02e712c22c1c6e2f392b0487252d3729"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a02e712c22c1c6e2f392b0487252d3729">sendcounts_</a></td></tr>
 <tr class="separator:a02e712c22c1c6e2f392b0487252d3729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a687a280a506fbd3268fc7d0127d88324"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a687a280a506fbd3268fc7d0127d88324">senddispls_</a></td></tr>
@@ -128,23 +140,23 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a55784cb0f1468fdd9ae03b0740cb3da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3342fe0a2157d35edee66c791f49aaad"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a3342fe0a2157d35edee66c791f49aaad">recvdispls_</a></td></tr>
 <tr class="separator:a3342fe0a2157d35edee66c791f49aaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8416b52627a60156df30ced0013ff5dc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a8416b52627a60156df30ced0013ff5dc">takers_local_ids_</a></td></tr>
-<tr class="separator:a8416b52627a60156df30ced0013ff5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15af55c3668149c6fa7c7490c68e8a97"><td class="memItemLeft" align="right" valign="top">std::map&lt; int64_t, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a15af55c3668149c6fa7c7490c68e8a97">ghost_ids_to_recv_map_</a></td></tr>
-<tr class="separator:a15af55c3668149c6fa7c7490c68e8a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a5aff4e49d29add3b208c04c80a5bc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a74a5aff4e49d29add3b208c04c80a5bc">local_ids_to_send_</a></td></tr>
+<tr class="separator:a74a5aff4e49d29add3b208c04c80a5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b1ddb0da20af58a69b57e36b56671c5"><td class="memItemLeft" align="right" valign="top">std::map&lt; int64_t, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a7b1ddb0da20af58a69b57e36b56671c5">ghost_to_recv_map_</a></td></tr>
+<tr class="separator:a7b1ddb0da20af58a69b57e36b56671c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ab7f59e9a1152cdf12f1f3897c53b6a40"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#ab7f59e9a1152cdf12f1f3897c53b6a40">FindOwnerPID</a> (uint64_t global_id) const</td></tr>
-<tr class="separator:ab7f59e9a1152cdf12f1f3897c53b6a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68e6dda6d4c3aa8948fa6ef721c420c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a68e6dda6d4c3aa8948fa6ef721c420c4">FindOwnerPID</a> (const int64_t global_id) const</td></tr>
+<tr class="separator:a68e6dda6d4c3aa8948fa6ef721c420c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Vector with allocation space for ghosts. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00014">14</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6394cb247021dcde7f83c0537a43042f" name="a6394cb247021dcde7f83c0537a43042f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6394cb247021dcde7f83c0537a43042f">&#9670;&nbsp;</a></span>VectorGhostCommunicator()</h2>
+<a id="adb4dc8a0d9ebf3c16dd2ace976b80f1e" name="adb4dc8a0d9ebf3c16dd2ace976b80f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb4dc8a0d9ebf3c16dd2ace976b80f1e">&#9670;&nbsp;</a></span>VectorGhostCommunicator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,25 +164,25 @@ Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">chi_math::VectorGhostCommunicator::VectorGhostCommunicator </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">const uint64_t&#160;</td>
           <td class="paramname"><em>local_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">const uint64_t&#160;</td>
           <td class="paramname"><em>global_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; int64_t &gt;&#160;</td>
-          <td class="paramname"><em>ghost_indices</em>, </td>
+          <td class="paramtype">const std::vector&lt; int64_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ghost_ids</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramtype">const MPI_Comm&#160;</td>
           <td class="paramname"><em>communicator</em>&#160;</td>
         </tr>
         <tr>
@@ -181,13 +193,13 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00008">8</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00016">16</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a010313029a9a9e458a8d0df08346bc42" name="a010313029a9a9e458a8d0df08346bc42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a010313029a9a9e458a8d0df08346bc42">&#9670;&nbsp;</a></span>CommunicateGhostEntries()</h2>
+<a id="aa11f3876e0d9c699595f06ec34278036" name="aa11f3876e0d9c699595f06ec34278036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa11f3876e0d9c699595f06ec34278036">&#9670;&nbsp;</a></span>CommunicateGhostEntries()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,18 +208,45 @@ Private Member Functions</h2></td></tr>
           <td class="memname">void chi_math::VectorGhostCommunicator::CommunicateGhostEntries </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>local_vector</em></td><td>)</td>
+          <td class="paramname"><em>ghosted_vector</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00164">164</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00143">143</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
 
 </div>
 </div>
-<a id="ab7f59e9a1152cdf12f1f3897c53b6a40" name="ab7f59e9a1152cdf12f1f3897c53b6a40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7f59e9a1152cdf12f1f3897c53b6a40">&#9670;&nbsp;</a></span>FindOwnerPID()</h2>
+<a id="a743ab04fae1f7dc62144055dce7c95b4" name="a743ab04fae1f7dc62144055dce7c95b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a743ab04fae1f7dc62144055dce7c95b4">&#9670;&nbsp;</a></span>Communicator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MPI_Comm chi_math::VectorGhostCommunicator::Communicator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00029">29</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+
+</div>
+</div>
+<a id="a68e6dda6d4c3aa8948fa6ef721c420c4" name="a68e6dda6d4c3aa8948fa6ef721c420c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68e6dda6d4c3aa8948fa6ef721c420c4">&#9670;&nbsp;</a></span>FindOwnerPID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +257,7 @@ Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int chi_math::VectorGhostCommunicator::FindOwnerPID </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">const int64_t&#160;</td>
           <td class="paramname"><em>global_id</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -230,7 +269,88 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00151">151</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00207">207</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
+
+</div>
+</div>
+<a id="a42eae6aa81e8ac2061443bb8829d058e" name="a42eae6aa81e8ac2061443bb8829d058e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42eae6aa81e8ac2061443bb8829d058e">&#9670;&nbsp;</a></span>GhostIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; int64_t &gt; &amp; chi_math::VectorGhostCommunicator::GhostIndices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00027">27</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+
+</div>
+</div>
+<a id="a4e5691fafaae0c17709bc54d84c85c30" name="a4e5691fafaae0c17709bc54d84c85c30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e5691fafaae0c17709bc54d84c85c30">&#9670;&nbsp;</a></span>GlobalSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t chi_math::VectorGhostCommunicator::GlobalSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00024">24</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+
+</div>
+</div>
+<a id="a6184576ba9da3e6b0e8a1790139936c7" name="a6184576ba9da3e6b0e8a1790139936c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6184576ba9da3e6b0e8a1790139936c7">&#9670;&nbsp;</a></span>LocalSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t chi_math::VectorGhostCommunicator::LocalSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00023">23</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
@@ -248,14 +368,13 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Returns a vector with enough space to hold both <code>local_size</code> entries, as specified in the VectorGhostCommunicator-constructor, and entries associated with the ghost-ids. The entries default to zero. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00209">209</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00183">183</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
 
 </div>
 </div>
-<a id="a59fdd7a83d454254c7376d76b9d9ea5d" name="a59fdd7a83d454254c7376d76b9d9ea5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59fdd7a83d454254c7376d76b9d9ea5d">&#9670;&nbsp;</a></span>MakeGhostedVector() <span class="overload">[2/2]</span></h2>
+<a id="a62fb7cc99265be56d04ead8dd723d633" name="a62fb7cc99265be56d04ead8dd723d633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62fb7cc99265be56d04ead8dd723d633">&#9670;&nbsp;</a></span>MakeGhostedVector() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,14 +383,60 @@ Private Member Functions</h2></td></tr>
           <td class="memname">std::vector&lt; double &gt; chi_math::VectorGhostCommunicator::MakeGhostedVector </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>unghosted_vector</em></td><td>)</td>
+          <td class="paramname"><em>local_vector</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Returns a vector with enough space to hold both <code>local_size</code> entries, as specified in the VectorGhostCommunicator-constructor, and entries associated with the ghost-ids. The local entries are copied from the vector supplied as an argument whilst the ghosts are defaulted to zero. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00222">222</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00191">191</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
+
+</div>
+</div>
+<a id="a8a624d72c8150e914956ce4148cca316" name="a8a624d72c8150e914956ce4148cca316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a624d72c8150e914956ce4148cca316">&#9670;&nbsp;</a></span>MapGhostToLocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t chi_math::VectorGhostCommunicator::MapGhostToLocal </td>
+          <td>(</td>
+          <td class="paramtype">const int64_t&#160;</td>
+          <td class="paramname"><em>ghost_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html#l00126">126</a> of file <a class="el" href="../../d5/dd3/vector__ghost__communicator_8cc_source.html">vector_ghost_communicator.cc</a>.</p>
+
+</div>
+</div>
+<a id="a4840d4646fc7e2d66f36fae5702b53af" name="a4840d4646fc7e2d66f36fae5702b53af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4840d4646fc7e2d66f36fae5702b53af">&#9670;&nbsp;</a></span>NumGhosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t chi_math::VectorGhostCommunicator::NumGhosts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00026">26</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
@@ -296,12 +461,12 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00020">20</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00046">46</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
-<a id="a15af55c3668149c6fa7c7490c68e8a97" name="a15af55c3668149c6fa7c7490c68e8a97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15af55c3668149c6fa7c7490c68e8a97">&#9670;&nbsp;</a></span>ghost_ids_to_recv_map_</h2>
+<a id="a9197841ddeac30cfc914aaf75ef2a98b" name="a9197841ddeac30cfc914aaf75ef2a98b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9197841ddeac30cfc914aaf75ef2a98b">&#9670;&nbsp;</a></span>extents_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +475,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;int64_t,size_t&gt; chi_math::VectorGhostCommunicator::ghost_ids_to_recv_map_</td>
+          <td class="memname">std::vector&lt;uint64_t&gt; chi_math::VectorGhostCommunicator::extents_</td>
         </tr>
       </table>
   </td>
@@ -320,12 +485,12 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00029">29</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00050">50</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
-<a id="ad011540878add462b0872b92c14a9d68" name="ad011540878add462b0872b92c14a9d68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad011540878add462b0872b92c14a9d68">&#9670;&nbsp;</a></span>ghost_indices_</h2>
+<a id="a4fe84490e8a0854824ae68a3c215b222" name="a4fe84490e8a0854824ae68a3c215b222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fe84490e8a0854824ae68a3c215b222">&#9670;&nbsp;</a></span>ghost_ids_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +499,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt;int64_t&gt; chi_math::VectorGhostCommunicator::ghost_indices_</td>
+          <td class="memname">const std::vector&lt;int64_t&gt; chi_math::VectorGhostCommunicator::ghost_ids_</td>
         </tr>
       </table>
   </td>
@@ -344,12 +509,12 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00019">19</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00045">45</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
-<a id="a8d0015bb5a93caf4999ba59f046d61dd" name="a8d0015bb5a93caf4999ba59f046d61dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d0015bb5a93caf4999ba59f046d61dd">&#9670;&nbsp;</a></span>globl_size_</h2>
+<a id="a7b1ddb0da20af58a69b57e36b56671c5" name="a7b1ddb0da20af58a69b57e36b56671c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b1ddb0da20af58a69b57e36b56671c5">&#9670;&nbsp;</a></span>ghost_to_recv_map_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -358,7 +523,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const uint64_t chi_math::VectorGhostCommunicator::globl_size_</td>
+          <td class="memname">std::map&lt;int64_t, size_t&gt; chi_math::VectorGhostCommunicator::ghost_to_recv_map_</td>
         </tr>
       </table>
   </td>
@@ -368,7 +533,55 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00018">18</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00058">58</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+
+</div>
+</div>
+<a id="afaadedd71b04ac41287ccc8fdd84237d" name="afaadedd71b04ac41287ccc8fdd84237d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaadedd71b04ac41287ccc8fdd84237d">&#9670;&nbsp;</a></span>global_size_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint64_t chi_math::VectorGhostCommunicator::global_size_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00044">44</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+
+</div>
+</div>
+<a id="a74a5aff4e49d29add3b208c04c80a5bc" name="a74a5aff4e49d29add3b208c04c80a5bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a5aff4e49d29add3b208c04c80a5bc">&#9670;&nbsp;</a></span>local_ids_to_send_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int64_t&gt; chi_math::VectorGhostCommunicator::local_ids_to_send_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00057">57</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
@@ -392,7 +605,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00017">17</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00043">43</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
@@ -406,7 +619,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_math::VectorGhostCommunicator::location_id_ = 0</td>
+          <td class="memname">int chi_math::VectorGhostCommunicator::location_id_</td>
         </tr>
       </table>
   </td>
@@ -416,31 +629,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00021">21</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
-
-</div>
-</div>
-<a id="a1de15dd7d364a7a6bce7566f04531454" name="a1de15dd7d364a7a6bce7566f04531454"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1de15dd7d364a7a6bce7566f04531454">&#9670;&nbsp;</a></span>locI_extents_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;uint64_t&gt; chi_math::VectorGhostCommunicator::locI_extents_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00023">23</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00048">48</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
@@ -454,7 +643,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_math::VectorGhostCommunicator::process_count_ = 0</td>
+          <td class="memname">int chi_math::VectorGhostCommunicator::process_count_</td>
         </tr>
       </table>
   </td>
@@ -464,7 +653,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00022">22</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00049">49</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
@@ -488,7 +677,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00026">26</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00054">54</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
@@ -512,7 +701,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00027">27</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00055">55</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
@@ -536,7 +725,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00024">24</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00052">52</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>
@@ -560,31 +749,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00025">25</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
-
-</div>
-</div>
-<a id="a8416b52627a60156df30ced0013ff5dc" name="a8416b52627a60156df30ced0013ff5dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8416b52627a60156df30ced0013ff5dc">&#9670;&nbsp;</a></span>takers_local_ids_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;int64_t&gt; chi_math::VectorGhostCommunicator::takers_local_ids_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00028">28</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html#l00053">53</a> of file <a class="el" href="../../df/d7b/vector__ghost__communicator_8h_source.html">vector_ghost_communicator.h</a>.</p>
 
 </div>
 </div>

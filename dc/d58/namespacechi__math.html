@@ -138,6 +138,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d29/classchi__math_1_1_function_dim_a_to_dim_b.html">FunctionDimAToDimB</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d03/classchi__math_1_1_ghosted_parallel_vector.html">GhostedParallelVector</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d89/classchi__math_1_1_golub_fischer.html">GolubFischer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classchi__math_1_1_implicit_euler_time_integration.html">ImplicitEulerTimeIntegration</a></td></tr>
@@ -151,6 +153,8 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/deb/classchi__math_1_1_non_linear_solver.html">NonLinearSolver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d14/structchi__math_1_1_non_linear_solver_context.html">NonLinearSolverContext</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html">PolygonMappingFE_PWL</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -286,6 +290,10 @@ Enumerations</h2></td></tr>
 , <a class="el" href="../../dc/d58/namespacechi__math.html#a4e4b5f82f9498c0502818552508dcd8fadb3fdafb24c5fe68590488dc551befd7">CUSTOM_SCALE</a> = 3
  }</td></tr>
 <tr class="separator:a4e4b5f82f9498c0502818552508dcd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c6c2a0ae6ac60e3209556eb1990555"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a> : short { <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555a84a3da303b867b2c0ed20d77db8117e1">SET_VALUE</a> = 1
+, <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555ae67cbd9ebd7d8b18f868044ef3225adf">ADD_VALUE</a> = 2
+ }</td></tr>
+<tr class="separator:a27c6c2a0ae6ac60e3209556eb1990555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc75ac743b63d66fa503282e8afa791"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791">ProductQuadratureType</a> { <br />
 &#160;&#160;<a class="el" href="../../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a> = 0
 , <a class="el" href="../../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791aedffa437abaf9cf92de7bd895cf5c986">GAUSS_LEGENDRE</a> = 1
@@ -976,6 +984,34 @@ template&lt;int N&gt; </div>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html#l00013">13</a> of file <a class="el" href="../../d6/d3b/unknown__manager_8h_source.html">unknown_manager.h</a>.</p>
+
+</div>
+</div>
+<a id="a27c6c2a0ae6ac60e3209556eb1990555" name="a27c6c2a0ae6ac60e3209556eb1990555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c6c2a0ae6ac60e3209556eb1990555">&#9670;&nbsp;</a></span>VecOpType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">chi_math::VecOpType</a> : short</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a27c6c2a0ae6ac60e3209556eb1990555a84a3da303b867b2c0ed20d77db8117e1" name="a27c6c2a0ae6ac60e3209556eb1990555a84a3da303b867b2c0ed20d77db8117e1"></a>SET_VALUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a27c6c2a0ae6ac60e3209556eb1990555ae67cbd9ebd7d8b18f868044ef3225adf" name="a27c6c2a0ae6ac60e3209556eb1990555ae67cbd9ebd7d8b18f868044ef3225adf"></a>ADD_VALUE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00016">16</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
 
 </div>
 </div>

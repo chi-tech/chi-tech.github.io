@@ -5,6 +5,7 @@ var dir_2bfd9fb65807176d4c97ac1385bc1e1a =
     [ "GolubFischer", "dir_8e4ef8ad0244142595af13f6e8116171.html", "dir_8e4ef8ad0244142595af13f6e8116171" ],
     [ "LinearSolver", "dir_d7c6b4efa7cee8c1fb17826c4f12869d.html", "dir_d7c6b4efa7cee8c1fb17826c4f12869d" ],
     [ "NonLinearSolver", "dir_56b73b3ab7b4240571842d3454dc2c97.html", "dir_56b73b3ab7b4240571842d3454dc2c97" ],
+    [ "ParallelVector", "dir_14557dc099f95ecb37347be809da4819.html", "dir_14557dc099f95ecb37347be809da4819" ],
     [ "PETScUtils", "dir_888637456babb1e9ae6482281bb8bb65.html", "dir_888637456babb1e9ae6482281bb8bb65" ],
     [ "Quadratures", "dir_576a319e73d9f65c11db5f224c13034e.html", "dir_576a319e73d9f65c11db5f224c13034e" ],
     [ "RandomNumberGeneration", "dir_8a01bdea08282fc281f66f63a6116da1.html", "dir_8a01bdea08282fc281f66f63a6116da1" ],

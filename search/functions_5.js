@@ -30,7 +30,7 @@ var searchData=
   ['findhighestdimension_27',['FindHighestDimension',['../d0/d81/namespacechi__mesh.html#ae8696ddc477184ec1c5d2a709d3ad89c',1,'chi_mesh']]],
   ['findneighborfaceindices_28',['FindNeighborFaceIndices',['../da/d62/namespacechi__mesh_1_1mesh__cutting.html#a133631a5e4035ba9c459afb0849191d5',1,'chi_mesh::mesh_cutting']]],
   ['findnonmanifoldedges_29',['FindNonManifoldEdges',['../da/d62/namespacechi__mesh_1_1mesh__cutting.html#a79e0bbeed441f7a11c1a18e2c8a9b021',1,'chi_mesh::mesh_cutting']]],
-  ['findownerpid_30',['FindOwnerPID',['../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#ab7f59e9a1152cdf12f1f3897c53b6a40',1,'chi_math::VectorGhostCommunicator']]],
+  ['findownerpid_30',['FindOwnerPID',['../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a68e6dda6d4c3aa8948fa6ef721c420c4',1,'chi_math::VectorGhostCommunicator::FindOwnerPID()'],['../d0/dcb/classchi__math_1_1_parallel_vector.html#ac3e6885862eb61dd757c807921c4ec39',1,'chi_math::ParallelVector::FindOwnerPID()']]],
   ['findroots_31',['FindRoots',['../d3/d07/classchi__math_1_1_quadrature_gauss_legendre.html#a87fa00bee9ad6010e8a38b613db94a91',1,'chi_math::QuadratureGaussLegendre']]],
   ['findstronglyconnectedcomponents_32',['FindStronglyConnectedComponents',['../d3/dcf/classchi_1_1_directed_graph.html#a823f5ece923a3e52da54bfd1376d8c55',1,'chi::DirectedGraph']]],
   ['fleshoutluatablestructure_33',['FleshOutLuaTableStructure',['../d9/d52/classchi_1_1_console.html#aeb2eebd6b996c8237f88014d22eaa912',1,'chi::Console']]],
