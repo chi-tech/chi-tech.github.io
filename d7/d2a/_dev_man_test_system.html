@@ -202,7 +202,8 @@ $(document).ready(function(){initNavTree('d7/d2a/_dev_man_test_system.html','../
 <li><code>"num_procs"</code> : The number of mpi processes to use.</li>
 <li><code>"checks"</code> : An array of checks <code>[..Checks..]</code></li>
 <li><code>"args"</code> : An array of arguments to pass to the executable</li>
-<li><code>"weight_class"</code> : An optional string, either "short" or "long" used to filter different tests length. The default is "short". "long" should be used for tests &gt;15s.</li>
+<li><code>"weight_class"</code> : An optional string, either "short", "intermediate" or "long" used to filter different tests length. The default is "short". "long" should be used for tests &gt;2min.</li>
+<li><code>"outfileprefix"</code> : Optional parameter. Will default to <code>"file"</code> but can be to change the output file name (outfileprefix+".out") so that the same input file can be used for different tests.</li>
 </ul>
 <p >All other keys are ignored so feel free to peruse something like <code>"comment"</code> to annotate the test.</p>
 <h2><a class="anchor" id="DevManTestSystem_sec2_2"></a>
@@ -223,6 +224,7 @@ Parameters:</p><ul>
 <li><code>"key"</code> : The key-string to look for</li>
 <li><code>"goldvalue"</code> : Float value</li>
 <li><code>"tol"</code> : Tolerance on the goldvalue</li>
+<li><code>"skip_lines_until"</code> : Optional. Do not check lines in the output file until this string is encountered. e.g. <code>"skip_lines_until": "LinearBoltzmann::KEigenvalueSolver execution"</code>. This is useful if a simulation is expected to have multiples of the key-string but you only want the last one.</li>
 </ul>
 <h3><a class="anchor" id="DevManTestSystem_sec2_2_2"></a>
 2.2.2 StrCompareCheck</h3>
@@ -232,6 +234,7 @@ Parameters:</p><ul>
 <li><code>"key"</code> : The key-string to look for</li>
 <li><code>"wordnum"</code> : Optional. If supplied then "gold" needs to specified.</li>
 <li><code>"gold"</code> : Golden word</li>
+<li><code>"skip_lines_until"</code> : Optional. Do not check lines in the output file until this string is encountered. e.g. <code>"skip_lines_until": "LinearBoltzmann::KEigenvalueSolver execution"</code>. This is useful if a simulation is expected to have multiples of the key-string but you only want the last one.</li>
 </ul>
 <h3><a class="anchor" id="DevManTestSystem_sec2_2_3"></a>
 2.2.3 FloatCompareCheck</h3>
@@ -242,6 +245,7 @@ Parameters:</p><ul>
 <li><code>"wordnum"</code> : The word number on the line containing the key that will be used in the check.</li>
 <li><code>"gold"</code> : Golden value (<code>float</code>)</li>
 <li><code>"tol"</code> : The floating point tolerance to use</li>
+<li><code>"skip_lines_until"</code> : Optional. Do not check lines in the output file until this string is encountered. e.g. <code>"skip_lines_until": "LinearBoltzmann::KEigenvalueSolver execution"</code>. This is useful if a simulation is expected to have multiples of the key-string but you only want the last one.</li>
 </ul>
 <h3><a class="anchor" id="DevManTestSystem_sec2_2_4"></a>
 2.2.4 IntCompareCheck</h3>
@@ -251,6 +255,7 @@ Parameters:</p><ul>
 <li><code>"key"</code> : The key-string to look for</li>
 <li><code>"wordnum"</code> : The word number on the line containing the key that will be used in the check.</li>
 <li><code>"gold"</code> : Golden value (<code>int</code>)</li>
+<li><code>"skip_lines_until"</code> : Optional. Do not check lines in the output file until this string is encountered. e.g. <code>"skip_lines_until": "LinearBoltzmann::KEigenvalueSolver execution"</code>. This is useful if a simulation is expected to have multiples of the key-string but you only want the last one.</li>
 </ul>
 <h3><a class="anchor" id="DevManTestSystem_sec2_2_5"></a>
 2.2.5 ErrorCodeCheck</h3>

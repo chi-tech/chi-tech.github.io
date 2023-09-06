@@ -117,6 +117,10 @@ var _lua_input_examples =
     [ "test/modules/LinearBoltzmannSolvers/Transport_Keigen/KEigenvalueTransport2D_1a_QBlock.lua", "d2/d29/test_modules__linear_boltzmann_solvers__transport__keigen__k_eigenvalue_transport2_d_1a__q_block_lua.html", null ],
     [ "test/modules/LinearBoltzmannSolvers/Transport_Keigen/utils/QBlock_mesh.lua", "d1/d94/test_modules__linear_boltzmann_solvers__transport__keigen_utils__q_block_mesh_lua.html", null ],
     [ "test/modules/LinearBoltzmannSolvers/Transport_Keigen/utils/QBlock_materials.lua", "d8/d81/test_modules__linear_boltzmann_solvers__transport__keigen_utils__q_block_materials_lua.html", null ],
+    [ "test/modules/LinearBoltzmannSolvers/Transport_Keigen/c5g7/c5g7.lua", "dd/dab/test_modules__linear_boltzmann_solvers__transport__keigen_c5g7_c5g7_lua.html", null ],
+    [ "test/modules/LinearBoltzmannSolvers/Transport_Keigen/c5g7/mesh/gmesh_coarse.lua", "d6/de7/test_modules__linear_boltzmann_solvers__transport__keigen_c5g7_mesh_gmesh_coarse_lua.html", null ],
+    [ "test/modules/LinearBoltzmannSolvers/Transport_Keigen/c5g7/mesh/gmesh_refined.lua", "d4/d17/test_modules__linear_boltzmann_solvers__transport__keigen_c5g7_mesh_gmesh_refined_lua.html", null ],
+    [ "test/modules/LinearBoltzmannSolvers/Transport_Keigen/c5g7/materials/materials.lua", "dc/d19/test_modules__linear_boltzmann_solvers__transport__keigen_c5g7_materials_materials_lua.html", null ],
     [ "test/modules/LinearBoltzmannSolvers/MGDiffusion_Steady/MIPDiffusion3D_3a_DSA_ortho.lua", "d1/d5b/test_modules__linear_boltzmann_solvers__m_g_diffusion__steady__m_i_p_diffusion3_d_3a__d_s_a_ortho_lua.html", null ],
     [ "test/modules/LinearBoltzmannSolvers/MGDiffusion_Steady/MIPDiffusion3D_1b_Ortho.lua", "d0/d0d/test_modules__linear_boltzmann_solvers__m_g_diffusion__steady__m_i_p_diffusion3_d_1b__ortho_lua.html", null ]
 ];
