@@ -31,6 +31,7 @@ var classchi__mesh_1_1_mesh_continuum =
     [ "New", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a75f604e303928e5998314aae3942b71c", null ],
     [ "SetAttributes", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aa58d4df4c99fc9922addb53cac6d6fc6", null ],
     [ "SetGlobalVertexCount", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#aeedb541857c6c5c515bd6083dbd1497e", null ],
+    [ "chi_mesh::MeshGenerator", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#added9576ea739a4a5d4c5aa015c325db", null ],
     [ "chi_mesh::VolumeMesher", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#ad166507faba1f726e114a687eaa515d9", null ],
     [ "attributes", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a1b4333c6dea8d0ed7c5e46f6c8fc820c", null ],
     [ "boundary_id_map_", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a7f429bc4cfc8c30874dcc90e28c9f1cd", null ],

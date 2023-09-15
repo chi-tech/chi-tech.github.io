@@ -1,13 +1,15 @@
 var NAVTREEINDEX48 =
 {
+"df/d5f/lbs__01j__init__solver__schemes_8cc_source.html":[8,0,2,5,0,20],
+"df/d60/_tutorial_regression.html":[2,5],
 "df/d60/test__modules___linear_boltzmann_solvers___transport___keigen___k_eigenvalue_transport2_d__1a___q_block__lua_8h.html":[8,0,0,0,1,2,3,4,5],
 "df/d60/test__modules___linear_boltzmann_solvers___transport___keigen___k_eigenvalue_transport2_d__1a___q_block__lua_8h_source.html":[8,0,0,0,1,2,3,4,5],
 "df/d61/wgs__linear__solver_8h.html":[8,0,2,5,0,2,22],
 "df/d61/wgs__linear__solver_8h_source.html":[8,0,2,5,0,2,22],
 "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html":[6,0,8,1],
 "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html":[7,0,6,1],
-"df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a02dcc67333d25c8e1a1cfe74a4956f67":[6,0,8,1,14],
 "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a02dcc67333d25c8e1a1cfe74a4956f67":[7,0,6,1,14],
+"df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a02dcc67333d25c8e1a1cfe74a4956f67":[6,0,8,1,14],
 "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a18138a2867ac585df2d6cf0cf4f51283":[7,0,6,1,4],
 "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a18138a2867ac585df2d6cf0cf4f51283":[6,0,8,1,4],
 "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html#a19573792c2b155aff926be7514fc7720":[7,0,6,1,20],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a0193262e19d8561bab19b87577c94984":[7,0,4,46,5],
 "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a0193262e19d8561bab19b87577c94984":[6,0,5,46,5],
 "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a01b03927324adb6dc6e82536a3b2d0dd":[6,0,5,46,0],
-"df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a01b03927324adb6dc6e82536a3b2d0dd":[7,0,4,46,0],
-"df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a083c952f867417f2e5ddc7524d3a5fe4":[6,0,5,46,9],
-"df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a083c952f867417f2e5ddc7524d3a5fe4":[7,0,4,46,9]
+"df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a01b03927324adb6dc6e82536a3b2d0dd":[7,0,4,46,0]
 };
