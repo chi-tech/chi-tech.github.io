@@ -9,6 +9,10 @@ var dir_16910b2ea3ec87ec28a7f8a7d539d98d =
     [ "LogicalVolume.h", "de/de9/_logical_volume_8h.html", [
       [ "chi_mesh::LogicalVolume", "d0/d1e/classchi__mesh_1_1_logical_volume.html", "d0/d1e/classchi__mesh_1_1_logical_volume" ]
     ] ],
+    [ "LogicalVolumeInterface.cc", "d2/d39/_logical_volume_interface_8cc.html", null ],
+    [ "LogicalVolumeInterface.h", "d4/d47/_logical_volume_interface_8h.html", [
+      [ "chi_mesh::LogicalVolumeInterface", "d2/dc8/classchi__mesh_1_1_logical_volume_interface.html", "d2/dc8/classchi__mesh_1_1_logical_volume_interface" ]
+    ] ],
     [ "RCCLogicalVolume.cc", "d1/d5c/_r_c_c_logical_volume_8cc.html", "d1/d5c/_r_c_c_logical_volume_8cc" ],
     [ "RCCLogicalVolume.h", "d0/da6/_r_c_c_logical_volume_8h.html", [
       [ "chi_mesh::RCCLogicalVolume", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume.html", "dc/d7c/classchi__mesh_1_1_r_c_c_logical_volume" ]

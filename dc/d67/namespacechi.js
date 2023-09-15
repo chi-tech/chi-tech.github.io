@@ -3,12 +3,17 @@ var namespacechi =
     [ "lua_utils", "d5/d54/namespacechi_1_1lua__utils.html", [
       [ "chiMakeObject", "d5/d54/namespacechi_1_1lua__utils.html#addb2a9b67e9801ffd256da906888e5f2", null ]
     ] ],
+    [ "AggregateNodalValuePostProcessor", "d5/dc7/classchi_1_1_aggregate_nodal_value_post_processor.html", "d5/dc7/classchi_1_1_aggregate_nodal_value_post_processor" ],
+    [ "CellVolumeIntegralPostProcessor", "d6/d4a/classchi_1_1_cell_volume_integral_post_processor.html", "d6/d4a/classchi_1_1_cell_volume_integral_post_processor" ],
     [ "ChiLog", "df/dfa/classchi_1_1_chi_log.html", "df/dfa/classchi_1_1_chi_log" ],
     [ "ChiMPICommunicatorSet", "df/de1/classchi_1_1_chi_m_p_i_communicator_set.html", "df/de1/classchi_1_1_chi_m_p_i_communicator_set" ],
     [ "Console", "d9/d52/classchi_1_1_console.html", "d9/d52/classchi_1_1_console" ],
     [ "CSTMemory", "d2/d1b/structchi_1_1_c_s_t_memory.html", "d2/d1b/structchi_1_1_c_s_t_memory" ],
     [ "DirectedGraph", "d3/dcf/classchi_1_1_directed_graph.html", "d3/dcf/classchi_1_1_directed_graph" ],
     [ "DummyStream", "dd/d10/structchi_1_1_dummy_stream.html", "dd/d10/structchi_1_1_dummy_stream" ],
+    [ "Event", "d1/d7e/classchi_1_1_event.html", "d1/d7e/classchi_1_1_event" ],
+    [ "EventPublisher", "d0/d30/classchi_1_1_event_publisher.html", "d0/d30/classchi_1_1_event_publisher" ],
+    [ "EventSubscriber", "dc/d34/classchi_1_1_event_subscriber.html", "dc/d34/classchi_1_1_event_subscriber" ],
     [ "GraphPartitioner", "d1/da7/classchi_1_1_graph_partitioner.html", "d1/da7/classchi_1_1_graph_partitioner" ],
     [ "GraphVertex", "d6/d39/structchi_1_1_graph_vertex.html", "d6/d39/structchi_1_1_graph_vertex" ],
     [ "InputParameters", "d8/d4d/classchi_1_1_input_parameters.html", "d8/d4d/classchi_1_1_input_parameters" ],
@@ -22,9 +27,15 @@ var namespacechi =
     [ "ParameterBlock", "d5/d1c/classchi_1_1_parameter_block.html", "d5/d1c/classchi_1_1_parameter_block" ],
     [ "PETScGraphPartitioner", "d2/dcb/classchi_1_1_p_e_t_sc_graph_partitioner.html", "d2/dcb/classchi_1_1_p_e_t_sc_graph_partitioner" ],
     [ "Plugin", "de/de1/classchi_1_1_plugin.html", "de/de1/classchi_1_1_plugin" ],
+    [ "PostProcessor", "d4/d21/classchi_1_1_post_processor.html", "d4/d21/classchi_1_1_post_processor" ],
+    [ "PostProcessorPrinter", "d4/d26/classchi_1_1_post_processor_printer.html", "d4/d26/classchi_1_1_post_processor_printer" ],
+    [ "PPPrinterSubscribeHelper", "db/dca/classchi_1_1_p_p_printer_subscribe_helper.html", "db/dca/classchi_1_1_p_p_printer_subscribe_helper" ],
     [ "RegistryStatuses", "d6/d73/structchi_1_1_registry_statuses.html", "d6/d73/structchi_1_1_registry_statuses" ],
+    [ "SolverInfoPostProcessor", "d5/dc8/classchi_1_1_solver_info_post_processor.html", "d5/dc8/classchi_1_1_solver_info_post_processor" ],
     [ "SubSetInfo", "d9/dcc/structchi_1_1_sub_set_info.html", "d9/dcc/structchi_1_1_sub_set_info" ],
+    [ "SystemWideEventPublisher", "da/d14/classchi_1_1_system_wide_event_publisher.html", "da/d14/classchi_1_1_system_wide_event_publisher" ],
     [ "Timer", "dc/dea/classchi_1_1_timer.html", "dc/dea/classchi_1_1_timer" ],
+    [ "PostProcessorPtr", "dc/d67/namespacechi.html#a6b2abbd1e241f9a7884cd56c227a4f21", null ],
     [ "SFXYZV", "dc/d67/namespacechi.html#a35dc06af782b51dc38157c208514178b", null ],
     [ "InputParameterTag", "dc/d67/namespacechi.html#a9355475cc63c20acacdc1328c56ae1d4", [
       [ "NONE", "dc/d67/namespacechi.html#a9355475cc63c20acacdc1328c56ae1d4ab50339a10e1de285ac99d4c3990b8693", null ],
@@ -32,12 +43,29 @@ var namespacechi =
       [ "REQUIRED", "dc/d67/namespacechi.html#a9355475cc63c20acacdc1328c56ae1d4aebdf9721be38d1fc1cd6db8c737d1be0", null ]
     ] ],
     [ "ParameterBlockType", "dc/d67/namespacechi.html#a94865f8b5b778e6ed8d7258b5e7fb132", [
+      [ "INVALID_VALUE", "dc/d67/namespacechi.html#a94865f8b5b778e6ed8d7258b5e7fb132ad8f24f388e990b9ccf8905b7993b99ae", null ],
       [ "BOOLEAN", "dc/d67/namespacechi.html#a94865f8b5b778e6ed8d7258b5e7fb132ac48d5da12d702e73d6966069f2687376", null ],
       [ "FLOAT", "dc/d67/namespacechi.html#a94865f8b5b778e6ed8d7258b5e7fb132ae738c26bf4ce1037fa81b039a915cbf6", null ],
       [ "STRING", "dc/d67/namespacechi.html#a94865f8b5b778e6ed8d7258b5e7fb132a63b588d5559f64f89a416e656880b949", null ],
       [ "INTEGER", "dc/d67/namespacechi.html#a94865f8b5b778e6ed8d7258b5e7fb132a5d5cd46919fa987731fb2edefe0f2a0c", null ],
       [ "ARRAY", "dc/d67/namespacechi.html#a94865f8b5b778e6ed8d7258b5e7fb132acb4fb1757fb37c43cded35d3eb857c43", null ],
       [ "BLOCK", "dc/d67/namespacechi.html#a94865f8b5b778e6ed8d7258b5e7fb132a4d34f53389ed7f28ca91fc31ea360a66", null ]
+    ] ],
+    [ "PPNumericFormat", "dc/d67/namespacechi.html#a20d35df3fbcdfcf92f3a10528c5356d1", [
+      [ "FIXED", "dc/d67/namespacechi.html#a20d35df3fbcdfcf92f3a10528c5356d1ac6e6dc18b53b4c2681394b9d8aefcec7", null ],
+      [ "FLOATING_POINT", "dc/d67/namespacechi.html#a20d35df3fbcdfcf92f3a10528c5356d1a30ccd51223e55d0a8ce2bd253733f579", null ],
+      [ "SCIENTIFIC", "dc/d67/namespacechi.html#a20d35df3fbcdfcf92f3a10528c5356d1aba3fc8d7ed55e1aeae64e5a01ffa1454", null ],
+      [ "GENERAL", "dc/d67/namespacechi.html#a20d35df3fbcdfcf92f3a10528c5356d1ab61773b9b3968a9988d765d728985862", null ]
+    ] ],
+    [ "PPType", "dc/d67/namespacechi.html#a9fd759eecc6dc5f770cd2b1d85300a82", [
+      [ "NO_VALUE", "dc/d67/namespacechi.html#a9fd759eecc6dc5f770cd2b1d85300a82a40e006699bb0f012104a8bd7110a9dc9", null ],
+      [ "SCALAR", "dc/d67/namespacechi.html#a9fd759eecc6dc5f770cd2b1d85300a82a8f3d9a4b6a7b7f2c7afa61ca113d0db9", null ],
+      [ "VECTOR", "dc/d67/namespacechi.html#a9fd759eecc6dc5f770cd2b1d85300a82a87752381b583740610f1dfeb07fdad7e", null ],
+      [ "ARBITRARY", "dc/d67/namespacechi.html#a9fd759eecc6dc5f770cd2b1d85300a82a936fcdfeb660189dfb3e7907cc099f10", null ]
+    ] ],
+    [ "ScalarPPTableFormat", "dc/d67/namespacechi.html#ad3edc845f0354d5bb0341032da785218", [
+      [ "VERTICAL", "dc/d67/namespacechi.html#ad3edc845f0354d5bb0341032da785218a3e1b74251c07310c5f1b968145bf00dc", null ],
+      [ "HORIZONTAL", "dc/d67/namespacechi.html#ad3edc845f0354d5bb0341032da785218a86e5d0d8407ce71f7e2004ef3949894e", null ]
     ] ],
     [ "StringSteamColorCode", "dc/d67/namespacechi.html#ad18e96a1e9be7b1612c55fa705297cec", [
       [ "RESET", "dc/d67/namespacechi.html#ad18e96a1e9be7b1612c55fa705297ceca4c6454493504689ec1e4a8377872518d", null ],
@@ -55,16 +83,23 @@ var namespacechi =
       [ "FG_DEFAULT", "dc/d67/namespacechi.html#ad18e96a1e9be7b1612c55fa705297ceca6846f5d70710154fa911e3ce6dfda86f", null ]
     ] ],
     [ "AssertReadibleFile", "dc/d67/namespacechi.html#a92ca8165fbb2261304b32d387b2a9031", null ],
+    [ "GetStandardEventCode", "dc/d67/namespacechi.html#ae9436b63b4c36912e20b1bafaa61f777", null ],
+    [ "hash_djb2a", "dc/d67/namespacechi.html#a41ab892aea6e60790e11a38e24c73b38", null ],
     [ "MakeSubSets", "dc/d67/namespacechi.html#a7af38a8d9b45b5e898886b6b8b9c9600", null ],
+    [ "operator\"\"_hash", "dc/d67/namespacechi.html#aed166a4bb5e7d62ad222bbd5089bd62a", null ],
     [ "ParameterBlockTypeName", "dc/d67/namespacechi.html#a8acba8c7242efe8cc66ac529f0bcba05", null ],
     [ "PrintIterationProgress", "dc/d67/namespacechi.html#a70490a378cc0a0c2a95b7446a262bc7d", null ],
+    [ "RegisterChiObject", "dc/d67/namespacechi.html#ab60ce40d0099d0d710b8afeeffbc5783", null ],
+    [ "RegisterChiObject", "dc/d67/namespacechi.html#a64908ab453f956f36d9e77acef985d49", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#ae7992d2f9d57fcfcb6093e8c3f9e4465", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#a1d2888aa1d5791cbf84b14d98be81518", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#a01c719551dde9b64370685d32acba79f", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#aa5ae2ae3d43530e36b243a043210ba63", null ],
+    [ "RegisterChiObject", "dc/d67/namespacechi.html#a800ff95192ea6f1170c5fe2d2df6f121", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#ac43f2a379c6f0a386a6d22cf698299e9", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#a501f853f6f8f9b7bca6d19174ff518ad", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#a9db089eeb2b89965016f630f9c94c3c5", null ],
+    [ "RegisterChiObjectParametersOnly", "dc/d67/namespacechi.html#aff7f5e3b16b3480f33a1afc0a354c53a", null ],
     [ "RegisterLuaFunction", "dc/d67/namespacechi.html#a427ae5955440fb74c9da535def8b12ec", null ],
     [ "StringLTrim", "dc/d67/namespacechi.html#aa6cf7680f830a2854f447c2630e6c811", null ],
     [ "StringRTrim", "dc/d67/namespacechi.html#aeda8c2eb2770d1543c822715d735eb61", null ],

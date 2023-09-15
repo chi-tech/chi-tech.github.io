@@ -7,6 +7,8 @@ var modules =
     [ "E MPI Utilities", "dd/d5c/group__chi_m_p_i.html", "dd/d5c/group__chi_m_p_i" ],
     [ "F Interfaces", "d5/d87/group___doc_interfaces.html", "d5/d87/group___doc_interfaces" ],
     [ "G Graphs", "d6/d21/group___graphs.html", "d6/d21/group___graphs" ],
+    [ "H Post-Processors", "d9/d81/group__doc___post_processors.html", "d9/d81/group__doc___post_processors" ],
+    [ "I Event System", "de/ddb/group__doc___event_system.html", null ],
     [ "X Code modules", "da/da3/group___lua_modules.html", "da/da3/group___lua_modules" ],
     [ "Z Experimental", "da/dfa/group___doc_experimental.html", "da/dfa/group___doc_experimental" ]
 ];

@@ -26,6 +26,7 @@ var class_chi =
     [ "mpi", "d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c", null ],
     [ "multigroup_xs_stack", "d7/dd7/class_chi.html#a64edcf974ff5a5a964ed7080b934e4d8", null ],
     [ "object_stack", "d7/dd7/class_chi.html#a8ed25422d8eb407bb9432aeabff2cf20", null ],
+    [ "postprocessor_stack", "d7/dd7/class_chi.html#afa54946932bc969c081687cda92b5bcb", null ],
     [ "program_timer", "d7/dd7/class_chi.html#a6401c0c0e895561e38caecff1addbb6d", null ],
     [ "sdm_stack", "d7/dd7/class_chi.html#ae15c587aea6fea3bc8f93c01ecd7e3a3", null ],
     [ "SIZE_T_INVALID", "d7/dd7/class_chi.html#aa75ec2556304eac9b224b73103366eb0", null ],

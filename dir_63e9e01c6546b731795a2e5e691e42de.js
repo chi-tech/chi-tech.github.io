@@ -10,5 +10,13 @@ var dir_63e9e01c6546b731795a2e5e691e42de =
     [ "fieldfunction.h", "d1/db1/fieldfunction_8h.html", [
       [ "chi_physics::FieldFunction", "df/de9/classchi__physics_1_1_field_function.html", "df/de9/classchi__physics_1_1_field_function" ]
     ] ],
-    [ "fieldfunction_gridbased.h", "d8/d72/fieldfunction__gridbased_8h.html", "d8/d72/fieldfunction__gridbased_8h" ]
+    [ "fieldfunction_gridbased.h", "d8/d72/fieldfunction__gridbased_8h.html", "d8/d72/fieldfunction__gridbased_8h" ],
+    [ "FieldFunctionInterface.cc", "d7/d38/_field_function_interface_8cc.html", null ],
+    [ "FieldFunctionInterface.h", "d0/d1b/_field_function_interface_8h.html", [
+      [ "chi_physics::FieldFunctionInterface", "d9/ddd/classchi__physics_1_1_field_function_interface.html", "d9/ddd/classchi__physics_1_1_field_function_interface" ]
+    ] ],
+    [ "GridBasedFieldFunctionInterface.cc", "d6/d51/_grid_based_field_function_interface_8cc.html", null ],
+    [ "GridBasedFieldFunctionInterface.h", "d0/d66/_grid_based_field_function_interface_8h.html", [
+      [ "chi_physics::GridBasedFieldFunctionInterface", "dc/dbf/classchi__physics_1_1_grid_based_field_function_interface.html", "dc/dbf/classchi__physics_1_1_grid_based_field_function_interface" ]
+    ] ]
 ];

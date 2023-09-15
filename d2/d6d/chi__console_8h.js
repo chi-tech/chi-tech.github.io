@@ -9,6 +9,5 @@ var chi__console_8h =
     [ "RegisterLuaConstantAsIs", "d2/d6d/chi__console_8h.html#af7d6fff4acfe9dd8307411dfa9947cab", null ],
     [ "RegisterLuaFunction", "d2/d6d/chi__console_8h.html#ac055fb1c9ec26c73ebc99f96f5394a49", null ],
     [ "RegisterLuaFunctionAsIs", "d2/d6d/chi__console_8h.html#a3d91eaff84af8886277bcc86fa486d7d", null ],
-    [ "RegisterLuaFunctionMethod", "d2/d6d/chi__console_8h.html#a7c05d35606e96aa7115024ceae3e588f", null ],
     [ "RegisterWrapperFunction", "d2/d6d/chi__console_8h.html#ae20c3ee4abcf6989e135ef1628b23e54", null ]
 ];

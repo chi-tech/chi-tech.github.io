@@ -123,6 +123,7 @@ var namespaces_dup =
       [ "chiSolverCreate", "d8/dd9/namespacechi__lua.html#acb26bb0e9189adb9d46a92e715570a13", null ],
       [ "chiSolverExecute", "dc/d4e/group___lua_solver.html#ga28fdf6aad809b089f96c1776f699ee5c", null ],
       [ "chiSolverGetFieldFunctionList", "dc/d4e/group___lua_solver.html#gafd9778eaca8f2cba9dd4b60dc9b51aa8", null ],
+      [ "chiSolverGetInfo", "dc/d4e/group___lua_solver.html#ga0852b2528652f300ef65b3d1a3078f7a", null ],
       [ "chiSolverGetName", "dc/d4e/group___lua_solver.html#ga809364d0d36788e4674f4d669364bd39", null ],
       [ "chiSolverInitialize", "dc/d4e/group___lua_solver.html#gab828b1bcee57fed19f7dda9befc5846b", null ],
       [ "chiSolverSetBasicOption", "dc/d4e/group___lua_solver.html#ga2522341caaf1b9ae3f18451542d1956b", null ],

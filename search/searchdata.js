@@ -10,8 +10,8 @@ var indexSectionsWithContent =
   7: "abcefgilmnopqrstuv",
   8: "abcdefghijklmnopqrstuvwz",
   9: ":acfmos",
-  10: "acdegilmnprstuxyz",
-  11: "abcdefglmpqstuvxz",
+  10: "acdegijlmnprstuxyz",
+  11: "abcdefghilmpqstuvxz",
   12: "abcdfglmostu"
 };
 

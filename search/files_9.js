@@ -108,6 +108,8 @@ var searchData=
   ['lineargraphpartitioner_2eh_105',['LinearGraphPartitioner.h',['../df/d22/_linear_graph_partitioner_8h.html',1,'']]],
   ['logicalvolume_2ecc_106',['LogicalVolume.cc',['../da/dc9/_logical_volume_8cc.html',1,'']]],
   ['logicalvolume_2eh_107',['LogicalVolume.h',['../de/de9/_logical_volume_8h.html',1,'']]],
-  ['lua_5ffunctions_2ec_108',['lua_functions.c',['../d7/d47/lua__functions_8c.html',1,'']]],
-  ['lua_5fnamespace_2eh_109',['lua_namespace.h',['../d3/d8a/lua__namespace_8h.html',1,'']]]
+  ['logicalvolumeinterface_2ecc_108',['LogicalVolumeInterface.cc',['../d2/d39/_logical_volume_interface_8cc.html',1,'']]],
+  ['logicalvolumeinterface_2eh_109',['LogicalVolumeInterface.h',['../d4/d47/_logical_volume_interface_8h.html',1,'']]],
+  ['lua_5ffunctions_2ec_110',['lua_functions.c',['../d7/d47/lua__functions_8c.html',1,'']]],
+  ['lua_5fnamespace_2eh_111',['lua_namespace.h',['../d3/d8a/lua__namespace_8h.html',1,'']]]
 ];

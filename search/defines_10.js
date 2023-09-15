@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['zmax_0',['ZMAX',['../da/dcd/_r_p_p_logical_volume_8cc.html#a131010b0d7e64a592f782aec28c6a4d8',1,'RPPLogicalVolume.cc']]],
-  ['zmin_1',['ZMIN',['../da/dcd/_r_p_p_logical_volume_8cc.html#aea4c8e7fa16752c56ffad3be5e533de5',1,'RPPLogicalVolume.cc']]]
+  ['ymax_0',['YMAX',['../da/dcd/_r_p_p_logical_volume_8cc.html#a610d6ad95b18966b70b6845de2a9c56b',1,'RPPLogicalVolume.cc']]],
+  ['ymin_1',['YMIN',['../da/dcd/_r_p_p_logical_volume_8cc.html#aa025181dff552575490c5148a493ff65',1,'RPPLogicalVolume.cc']]]
 ];

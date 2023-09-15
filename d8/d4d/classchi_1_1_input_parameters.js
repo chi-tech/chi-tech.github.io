@@ -26,6 +26,7 @@ var classchi_1_1_input_parameters =
     [ "MarkParamaterDeprecatedWarning", "d8/d4d/classchi_1_1_input_parameters.html#afbfe97b95aee6221299f6083a8e4829b", null ],
     [ "MarkParamaterRenamed", "d8/d4d/classchi_1_1_input_parameters.html#a708b06625ab58ac3f2e68389353f9b42", null ],
     [ "ObjectType", "d8/d4d/classchi_1_1_input_parameters.html#aa90fb690c487faf88b59baa4ebb1fa6d", null ],
+    [ "operator+=", "d8/d4d/classchi_1_1_input_parameters.html#a7a3a8aff55dfdc18a33de10351bbd1af", null ],
     [ "ParametersAtAssignment", "d8/d4d/classchi_1_1_input_parameters.html#a59ede5a23abadce360bbba48b114b8f6", null ],
     [ "SetClassName", "d8/d4d/classchi_1_1_input_parameters.html#ae585b572762c00a6438a5058508c87c0", null ],
     [ "SetDocGroup", "d8/d4d/classchi_1_1_input_parameters.html#a0a281e4d55bf9365efa9f4aa5c85a634", null ],

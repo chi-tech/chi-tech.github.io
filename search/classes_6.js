@@ -7,5 +7,6 @@ var searchData=
   ['golubfischer_4',['GolubFischer',['../d7/d89/classchi__math_1_1_golub_fischer.html',1,'chi_math']]],
   ['graphpartitioner_5',['GraphPartitioner',['../d1/da7/classchi_1_1_graph_partitioner.html',1,'chi']]],
   ['graphvertex_6',['GraphVertex',['../d6/d39/structchi_1_1_graph_vertex.html',1,'chi']]],
-  ['gridfacehistogram_7',['GridFaceHistogram',['../d1/df6/classchi__mesh_1_1_grid_face_histogram.html',1,'chi_mesh']]]
+  ['gridbasedfieldfunctioninterface_7',['GridBasedFieldFunctionInterface',['../dc/dbf/classchi__physics_1_1_grid_based_field_function_interface.html',1,'chi_physics']]],
+  ['gridfacehistogram_8',['GridFaceHistogram',['../d1/df6/classchi__mesh_1_1_grid_face_histogram.html',1,'chi_mesh']]]
 ];

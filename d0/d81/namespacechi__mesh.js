@@ -53,6 +53,7 @@ var namespacechi__mesh =
     [ "GridFaceHistogram", "d1/df6/classchi__mesh_1_1_grid_face_histogram.html", "d1/df6/classchi__mesh_1_1_grid_face_histogram" ],
     [ "LocalCellHandler", "d7/d36/classchi__mesh_1_1_local_cell_handler.html", "d7/d36/classchi__mesh_1_1_local_cell_handler" ],
     [ "LogicalVolume", "d0/d1e/classchi__mesh_1_1_logical_volume.html", "d0/d1e/classchi__mesh_1_1_logical_volume" ],
+    [ "LogicalVolumeInterface", "d2/dc8/classchi__mesh_1_1_logical_volume_interface.html", "d2/dc8/classchi__mesh_1_1_logical_volume_interface" ],
     [ "Matrix3x3", "d0/dec/structchi__mesh_1_1_matrix3x3.html", "d0/dec/structchi__mesh_1_1_matrix3x3" ],
     [ "MeshContinuum", "d3/d1c/classchi__mesh_1_1_mesh_continuum.html", "d3/d1c/classchi__mesh_1_1_mesh_continuum" ],
     [ "MeshGenerator", "de/d1a/classchi__mesh_1_1_mesh_generator.html", "de/d1a/classchi__mesh_1_1_mesh_generator" ],

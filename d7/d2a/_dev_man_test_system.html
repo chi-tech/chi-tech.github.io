@@ -164,13 +164,13 @@ $(document).ready(function(){initNavTree('d7/d2a/_dev_man_test_system.html','../
 <div class="line"> </div>
 <div class="line">} <span class="comment">// namespace chi_unit_tests</span></div>
 <div class="ttc" id="achi__console_8h_html"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html">chi_console.h</a></div></div>
-<div class="ttc" id="achi__console_8h_html_ae20c3ee4abcf6989e135ef1628b23e54"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html#ae20c3ee4abcf6989e135ef1628b23e54">RegisterWrapperFunction</a></div><div class="ttdeci">#define RegisterWrapperFunction( namespace_name, name_in_lua, syntax_function, actual_function)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00069">chi_console.h:69</a></div></div>
+<div class="ttc" id="achi__console_8h_html_ae20c3ee4abcf6989e135ef1628b23e54"><div class="ttname"><a href="../../d2/d6d/chi__console_8h.html#ae20c3ee4abcf6989e135ef1628b23e54">RegisterWrapperFunction</a></div><div class="ttdeci">#define RegisterWrapperFunction( namespace_name, name_in_lua, syntax_function, actual_function)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6d/chi__console_8h_source.html#l00056">chi_console.h:56</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
-<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00078">chi_runtime.h:78</a></div></div>
+<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00081">chi_runtime.h:81</a></div></div>
 <div class="ttc" id="aclasschi_1_1_chi_log_html_aebdb78c9c0fddcc0799c4fc570ff1919"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#aebdb78c9c0fddcc0799c4fc570ff1919">chi::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00035">chi_log.cc:35</a></div></div>
 <div class="ttc" id="aclasschi_1_1_input_parameters_html"><div class="ttname"><a href="../../d8/d4d/classchi_1_1_input_parameters.html">chi::InputParameters</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d24/input__parameters_8h_source.html#l00022">input_parameters.h:23</a></div></div>
-<div class="ttc" id="aclasschi_1_1_parameter_block_html"><div class="ttname"><a href="../../d5/d1c/classchi_1_1_parameter_block.html">chi::ParameterBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd2/parameter__block_8h_source.html#l00038">parameter_block.h:39</a></div></div>
+<div class="ttc" id="aclasschi_1_1_parameter_block_html"><div class="ttname"><a href="../../d5/d1c/classchi_1_1_parameter_block.html">chi::ParameterBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd2/parameter__block_8h_source.html#l00039">parameter_block.h:40</a></div></div>
 </div><!-- fragment --><p >The <code>YTests.json</code> has the following syntax: </p><div class="fragment"><div class="line">[</div>
 <div class="line">  {</div>
 <div class="line">    &quot;comment&quot; : &quot;Example test configuration&quot;,</div>
@@ -204,6 +204,7 @@ $(document).ready(function(){initNavTree('d7/d2a/_dev_man_test_system.html','../
 <li><code>"args"</code> : An array of arguments to pass to the executable</li>
 <li><code>"weight_class"</code> : An optional string, either "short", "intermediate" or "long" used to filter different tests length. The default is "short". "long" should be used for tests &gt;2min.</li>
 <li><code>"outfileprefix"</code> : Optional parameter. Will default to <code>"file"</code> but can be to change the output file name (outfileprefix+".out") so that the same input file can be used for different tests.</li>
+<li><code>"skip"</code> : Optional parameter. Must be non-empty string stating the reason the test was skipped. The presence of this string causes the test to be skipped.</li>
 </ul>
 <p >All other keys are ignored so feel free to peruse something like <code>"comment"</code> to annotate the test.</p>
 <h2><a class="anchor" id="DevManTestSystem_sec2_2"></a>
@@ -270,6 +271,8 @@ Parameters:</p><ul>
 Parameters:</p><ul>
 <li><code>"type"</code> : "GoldFile"</li>
 <li><code>"scope_keyword"</code> : Optional. Restrict the gold comparison to within a section of the respective gold/output file that are between the keywords <code>&lt;scope_keyword&gt;_BEGIN</code> and <code>&lt;scope_keyword&gt;_END</code>.</li>
+<li><code>"candidate_filename"</code> : Optional. If supplied, this check will use this file rather than the test's output file. For example if <code>zorba.csv</code> is provided then <code>zorba.csv</code> will be compared against <code>zorba.csv.gold</code>.</li>
+<li><code>"skiplines_top"</code>: Number of lines at the top of both the gold and comparison file to skip in the comparison check.</li>
 </ul>
 <h1><a class="anchor" id="DevManTestSystem_sec3"></a>
 3 Running the test system</h1>

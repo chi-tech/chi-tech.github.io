@@ -12,6 +12,7 @@ var chi__runtime_8h =
     [ "MaterialPtr", "d3/db2/chi__runtime_8h.html#ab6460275cc07ff17d5c0ccfab1c08a60", null ],
     [ "MeshHandlerPtr", "d3/db2/chi__runtime_8h.html#a23d926104939fae47ba5663103c28f2c", null ],
     [ "MultiGroupXSPtr", "d3/db2/chi__runtime_8h.html#a48d2013a0766df0786d80512694b1661", null ],
+    [ "PostProcessorPtr", "d3/db2/chi__runtime_8h.html#a6b2abbd1e241f9a7884cd56c227a4f21", null ],
     [ "SpatialDiscretizationPtr", "d3/db2/chi__runtime_8h.html#aed18279f80ae4b3fc28796abe3da97f4", null ],
     [ "SurfaceMeshPtr", "d3/db2/chi__runtime_8h.html#a89629945f407e6db4517fd160b5e08ad", null ],
     [ "UnpartitionedMeshPtr", "d3/db2/chi__runtime_8h.html#a5c1d91b69650c8df55b84d492b31184d", null ],

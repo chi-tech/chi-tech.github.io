@@ -58,7 +58,7 @@ var searchData=
   ['log_5fstream_5f_55',['log_stream_',['../d8/d75/classchi_1_1_log_stream.html#a2ffcbc51a56462d863f713d05267c13d',1,'chi::LogStream']]],
   ['log_5fsweep_5fevents_5f_56',['log_sweep_events_',['../d2/db6/classlbs_1_1_l_b_s_groupset.html#a9a4681164ce24ac4ff5920c5e9c65605',1,'lbs::LBSGroupset']]],
   ['logical_5fvolume_57',['logical_volume',['../d6/d34/structlbs_1_1_response_function_designation.html#a1a268a24300cb35491805519c0b122e9',1,'lbs::ResponseFunctionDesignation']]],
-  ['logical_5fvolume_5f_58',['logical_volume_',['../db/dd5/classchi__mesh_1_1_field_function_interpolation_volume.html#ae2cff10748ae45f829b879885c6a235d',1,'chi_mesh::FieldFunctionInterpolationVolume']]],
+  ['logical_5fvolume_5f_58',['logical_volume_',['../db/dd5/classchi__mesh_1_1_field_function_interpolation_volume.html#ae2cff10748ae45f829b879885c6a235d',1,'chi_mesh::FieldFunctionInterpolationVolume::logical_volume_()'],['../d2/dc8/classchi__mesh_1_1_logical_volume_interface.html#adfca374430e529f1087ae3bf8305cdbd',1,'chi_mesh::LogicalVolumeInterface::logical_volume_()']]],
   ['lost_5fparticle_5finfo_59',['lost_particle_info',['../da/d07/structchi__mesh_1_1_ray_tracer_output_information.html#af8dccd29ff2fee26ca285d0d65a92fef',1,'chi_mesh::RayTracerOutputInformation']]],
   ['low_5fclosed_5f_60',['low_closed_',['../d4/d3c/classchi__data__types_1_1_allowable_range_low_limit.html#a26657e151302443a1831ac7fb81aac3a',1,'chi_data_types::AllowableRangeLowLimit']]],
   ['low_5flimit_5f_61',['low_limit_',['../d4/d3c/classchi__data__types_1_1_allowable_range_low_limit.html#a29bcafc69cffb6adc15f708adeb2bb95',1,'chi_data_types::AllowableRangeLowLimit']]],

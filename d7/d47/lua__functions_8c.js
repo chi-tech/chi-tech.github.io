@@ -118,6 +118,7 @@ var lua__functions_8c =
     [ "chiSolverCreate", "d7/d47/lua__functions_8c.html#acb26bb0e9189adb9d46a92e715570a13", null ],
     [ "chiSolverExecute", "d7/d47/lua__functions_8c.html#ga28fdf6aad809b089f96c1776f699ee5c", null ],
     [ "chiSolverGetFieldFunctionList", "d7/d47/lua__functions_8c.html#gafd9778eaca8f2cba9dd4b60dc9b51aa8", null ],
+    [ "chiSolverGetInfo", "d7/d47/lua__functions_8c.html#ga0852b2528652f300ef65b3d1a3078f7a", null ],
     [ "chiSolverGetName", "d7/d47/lua__functions_8c.html#ga809364d0d36788e4674f4d669364bd39", null ],
     [ "chiSolverInitialize", "d7/d47/lua__functions_8c.html#gab828b1bcee57fed19f7dda9befc5846b", null ],
     [ "chiSolverSetBasicOption", "d7/d47/lua__functions_8c.html#ga2522341caaf1b9ae3f18451542d1956b", null ],
