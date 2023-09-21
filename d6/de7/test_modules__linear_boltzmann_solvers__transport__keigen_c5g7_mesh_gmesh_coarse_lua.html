@@ -87,23 +87,22 @@ $(document).ready(function(){initNavTree('d6/de7/test_modules__linear_boltzmann_
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><div class="fragment"><div class="line">--############################################### Setup mesh</div>
-<div class="line"><a class="code hl_function" href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chiMeshHandlerCreate</a>()</div>
 <div class="line"> </div>
-<div class="line">umesh = <a class="code hl_function" href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga3feeabcd6b9ab6d60d66b6a3426e81da">chiUnpartitionedMeshFromMshFormat</a>(&quot;mesh/2D_c5g7_coarse.msh&quot;,true)</div>
-<div class="line"> </div>
-<div class="line">--<span class="preprocessor">############################################### Create meshers</span></div>
-<div class="line"><a class="code hl_function" href="../../d1/d9b/group___lua_surface_mesher.html#ga093aea22f7d29fe5ab8d6977dd22395c">chiSurfaceMesherCreate</a>(SURFACEMESHER_PREDEFINED);</div>
-<div class="line"><a class="code hl_function" href="../../d4/d3a/group___lua_volume_mesher.html#ga97061ff17454d77b1f4359690c624299">chiVolumeMesherCreate</a>(VOLUMEMESHER_UNPARTITIONED,umesh);</div>
-<div class="line"> </div>
-<div class="line">--############################################### Execute meshing</div>
-<div class="line"><a class="code hl_function" href="../../d1/d9b/group___lua_surface_mesher.html#gafa49ea05b8a7ca38d50ea324b39fb219">chiSurfaceMesherExecute</a>();</div>
-<div class="line"><a class="code hl_function" href="../../d4/d3a/group___lua_volume_mesher.html#gad031f7f22f9a1b4d7ea535f04c56ae1f">chiVolumeMesherExecute</a>();</div>
-<div class="ttc" id="agroup___lua_mesh_handler_html_ga3be36a5ecf5469ad0980dd5aa4097a2a"><div class="ttname"><a href="../../da/d92/group___lua_mesh_handler.html#ga3be36a5ecf5469ad0980dd5aa4097a2a">chi_lua::chiMeshHandlerCreate</a></div><div class="ttdeci">Handle chiMeshHandlerCreate()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01180">lua_functions.c:1180</a></div></div>
-<div class="ttc" id="agroup___lua_surface_mesher_html_ga093aea22f7d29fe5ab8d6977dd22395c"><div class="ttname"><a href="../../d1/d9b/group___lua_surface_mesher.html#ga093aea22f7d29fe5ab8d6977dd22395c">chi_lua::chiSurfaceMesherCreate</a></div><div class="ttdeci">void chiSurfaceMesherCreate(int SurfaceMesherType)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02131">lua_functions.c:2131</a></div></div>
-<div class="ttc" id="agroup___lua_surface_mesher_html_gafa49ea05b8a7ca38d50ea324b39fb219"><div class="ttname"><a href="../../d1/d9b/group___lua_surface_mesher.html#gafa49ea05b8a7ca38d50ea324b39fb219">chi_lua::chiSurfaceMesherExecute</a></div><div class="ttdeci">void chiSurfaceMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02079">lua_functions.c:2079</a></div></div>
-<div class="ttc" id="agroup___lua_unpartitioned_mesh_html_ga3feeabcd6b9ab6d60d66b6a3426e81da"><div class="ttname"><a href="../../d2/dde/group___lua_unpartitioned_mesh.html#ga3feeabcd6b9ab6d60d66b6a3426e81da">chi_lua::chiUnpartitionedMeshFromMshFormat</a></div><div class="ttdeci">Handle chiUnpartitionedMeshFromMshFormat(char file_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02451">lua_functions.c:2451</a></div></div>
-<div class="ttc" id="agroup___lua_volume_mesher_html_ga97061ff17454d77b1f4359690c624299"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#ga97061ff17454d77b1f4359690c624299">chi_lua::chiVolumeMesherCreate</a></div><div class="ttdeci">void chiVolumeMesherCreate(int Type, varying OtherArgs)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l01726">lua_functions.c:1726</a></div></div>
-<div class="ttc" id="agroup___lua_volume_mesher_html_gad031f7f22f9a1b4d7ea535f04c56ae1f"><div class="ttname"><a href="../../d4/d3a/group___lua_volume_mesher.html#gad031f7f22f9a1b4d7ea535f04c56ae1f">chi_lua::chiVolumeMesherExecute</a></div><div class="ttdeci">void chiVolumeMesherExecute()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d47/lua__functions_8c_source.html#l02053">lua_functions.c:2053</a></div></div>
+<div class="line">meshgen1 = <a class="code hl_namespace" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a>.<a class="code hl_class" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html">MeshGenerator</a>.Create</div>
+<div class="line">({</div>
+<div class="line">  inputs =</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code hl_namespace" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a>.<a class="code hl_class" href="../../da/d77/classchi__mesh_1_1_from_file_mesh_generator.html">FromFileMeshGenerator</a>.Create</div>
+<div class="line">    ({</div>
+<div class="line">      filename = <span class="stringliteral">&quot;mesh/2D_c5g7_coarse.msh&quot;</span></div>
+<div class="line">    })</div>
+<div class="line">  }</div>
+<div class="line">})</div>
+<div class="line"><a class="code hl_namespace" href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a>.<a class="code hl_class" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html">MeshGenerator</a>.<a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a0c1056b6f8b26eda7554244781554959">Execute</a>(meshgen1)</div>
+<div class="ttc" id="aclasschi__mesh_1_1_from_file_mesh_generator_html"><div class="ttname"><a href="../../da/d77/classchi__mesh_1_1_from_file_mesh_generator.html">chi_mesh::FromFileMeshGenerator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc9/_from_file_mesh_generator_8h_source.html#l00009">FromFileMeshGenerator.h:10</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html">chi_mesh::MeshGenerator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0d/_mesh_generator_8h_source.html#l00034">MeshGenerator.h:35</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html_a0c1056b6f8b26eda7554244781554959"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a0c1056b6f8b26eda7554244781554959">chi_mesh::MeshGenerator::Execute</a></div><div class="ttdeci">virtual void Execute()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/da8/_mesh_generator_8cc_source.html#l00087">MeshGenerator.cc:87</a></div></div>
+<div class="ttc" id="anamespacechi__mesh_html"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00012">chi_runtime.h:13</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
