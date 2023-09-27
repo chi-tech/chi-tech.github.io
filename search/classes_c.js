@@ -10,5 +10,6 @@ var searchData=
   ['nonlinearsolver_7',['NonLinearSolver',['../dd/deb/classchi__math_1_1_non_linear_solver.html',1,'chi_math']]],
   ['nonlinearsolver_3c_20mat_2c_20vec_2c_20snes_20_3e_8',['NonLinearSolver&lt; Mat, Vec, SNES &gt;',['../dd/deb/classchi__math_1_1_non_linear_solver.html',1,'chi_math']]],
   ['nonlinearsolvercontext_9',['NonLinearSolverContext',['../d2/d14/structchi__math_1_1_non_linear_solver_context.html',1,'chi_math']]],
-  ['nonlinearsolvercontext_3c_20vec_2c_20snes_20_3e_10',['NonLinearSolverContext&lt; Vec, SNES &gt;',['../d2/d14/structchi__math_1_1_non_linear_solver_context.html',1,'chi_math']]]
+  ['nonlinearsolvercontext_3c_20vec_2c_20snes_20_3e_10',['NonLinearSolverContext&lt; Vec, SNES &gt;',['../d2/d14/structchi__math_1_1_non_linear_solver_context.html',1,'chi_math']]],
+  ['nonlinearsolveroptions_11',['NonLinearSolverOptions',['../dd/d3c/classchi__math_1_1_non_linear_solver_options.html',1,'chi_math']]]
 ];

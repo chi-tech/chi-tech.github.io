@@ -19,7 +19,7 @@ var searchData=
   ['locallyrefine_16',['LocallyRefine',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a12e9c009c10b6c504cc634a295c9909e',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],
   ['localnodecount_17',['LocalNodeCount',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a4e337787620484af65e89fd23f4542b7',1,'lbs::LBSSolver']]],
   ['localsize_18',['LocalSize',['../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a6184576ba9da3e6b0e8a1790139936c7',1,'chi_math::VectorGhostCommunicator::LocalSize()'],['../d0/dcb/classchi__math_1_1_parallel_vector.html#ae62f41bbbe23c76cb6b112031260ed45',1,'chi_math::ParallelVector::LocalSize()']]],
-  ['localsizewithghosts_19',['LocalSizeWithGhosts',['../d9/d03/classchi__math_1_1_ghosted_parallel_vector.html#ad6237ceca35b87d1c6f2b68f4e0e1936',1,'chi_math::GhostedParallelVector']]],
+  ['localsizewithghosts_19',['LocalSizeWithGhosts',['../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html#af3b3536378463046d1f4e65e8f40b88a',1,'chi_math::GhostedParallelSTLVector']]],
   ['location_20',['Location',['../dc/d4f/classlbs_1_1_point_source.html#a9d2eaf47a7d770153e807d706f60efeb',1,'lbs::PointSource']]],
   ['locicommunicator_21',['LocICommunicator',['../df/de1/classchi_1_1_chi_m_p_i_communicator_set.html#a76b5255fd9fb7d35497d63f2c3a55d6d',1,'chi::ChiMPICommunicatorSet']]],
   ['log_22',['Log',['../df/dfa/classchi_1_1_chi_log.html#aebdb78c9c0fddcc0799c4fc570ff1919',1,'chi::ChiLog']]],

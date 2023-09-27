@@ -20,7 +20,7 @@ var namespacechi__math =
     [ "DynamicMatrix", "df/d4b/classchi__math_1_1_dynamic_matrix.html", "df/d4b/classchi__math_1_1_dynamic_matrix" ],
     [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html", "db/d08/classchi__math_1_1_dynamic_vector" ],
     [ "FunctionDimAToDimB", "d4/d29/classchi__math_1_1_function_dim_a_to_dim_b.html", "d4/d29/classchi__math_1_1_function_dim_a_to_dim_b" ],
-    [ "GhostedParallelVector", "d9/d03/classchi__math_1_1_ghosted_parallel_vector.html", "d9/d03/classchi__math_1_1_ghosted_parallel_vector" ],
+    [ "GhostedParallelSTLVector", "d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html", "d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector" ],
     [ "GolubFischer", "d7/d89/classchi__math_1_1_golub_fischer.html", "d7/d89/classchi__math_1_1_golub_fischer" ],
     [ "ImplicitEulerTimeIntegration", "da/d13/classchi__math_1_1_implicit_euler_time_integration.html", "da/d13/classchi__math_1_1_implicit_euler_time_integration" ],
     [ "LinearSolver", "dd/d52/classchi__math_1_1_linear_solver.html", "dd/d52/classchi__math_1_1_linear_solver" ],
@@ -28,6 +28,8 @@ var namespacechi__math =
     [ "NonLinearFunction", "d6/dc4/classchi__math_1_1_non_linear_function.html", "d6/dc4/classchi__math_1_1_non_linear_function" ],
     [ "NonLinearSolver", "dd/deb/classchi__math_1_1_non_linear_solver.html", "dd/deb/classchi__math_1_1_non_linear_solver" ],
     [ "NonLinearSolverContext", "d2/d14/structchi__math_1_1_non_linear_solver_context.html", "d2/d14/structchi__math_1_1_non_linear_solver_context" ],
+    [ "NonLinearSolverOptions", "dd/d3c/classchi__math_1_1_non_linear_solver_options.html", "dd/d3c/classchi__math_1_1_non_linear_solver_options" ],
+    [ "ParallelSTLVector", "d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html", "d3/de3/classchi__math_1_1_parallel_s_t_l_vector" ],
     [ "ParallelVector", "d0/dcb/classchi__math_1_1_parallel_vector.html", "d0/dcb/classchi__math_1_1_parallel_vector" ],
     [ "PolygonMappingFE_PWL", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l" ],
     [ "PolygonMappingFE_PWL_Cylindrical", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical.html", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical" ],
@@ -66,6 +68,7 @@ var namespacechi__math =
     [ "VectorGhostCommunicator", "d1/db0/classchi__math_1_1_vector_ghost_communicator.html", "d1/db0/classchi__math_1_1_vector_ghost_communicator" ],
     [ "VectorNX", "d5/d8e/structchi__math_1_1_vector_n_x.html", "d5/d8e/structchi__math_1_1_vector_n_x" ],
     [ "AngularQuadraturePtr", "dc/d58/namespacechi__math.html#a637714681be11402efe6c55193c7af1f", null ],
+    [ "NonLinearSolverPETSc", "dc/d58/namespacechi__math.html#acb5c88ad845037b70db309711e9cf836", null ],
     [ "QuadraturePointXYZ", "dc/d58/namespacechi__math.html#aad0a5ec86fc2a3bdb8bb158c05935e5c", null ],
     [ "SDMPtr", "dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7", null ],
     [ "SMDPtr", "dc/d58/namespacechi__math.html#adebeff65d5db71418d1b0e5d21de44dd", null ],
@@ -85,6 +88,11 @@ var namespacechi__math =
       [ "CARTESIAN", "dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1ac02304094f2866a43251b12946a9a21b", null ],
       [ "CYLINDRICAL", "dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1af6840fd287b44b1616267bd19305909a", null ],
       [ "SPHERICAL", "dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1a7f7d7e3a21bf7decf99d6fd26848772d", null ]
+    ] ],
+    [ "NormType", "dc/d58/namespacechi__math.html#a76861eaf9507dd58430c460e814289c1", [
+      [ "L1_NORM", "dc/d58/namespacechi__math.html#a76861eaf9507dd58430c460e814289c1a68616ae21712c00705b962f4eff06eaa", null ],
+      [ "L2_NORM", "dc/d58/namespacechi__math.html#a76861eaf9507dd58430c460e814289c1a80485e54c7a3c93a0f74637c6b918ce5", null ],
+      [ "LINF_NORM", "dc/d58/namespacechi__math.html#a76861eaf9507dd58430c460e814289c1a888ba88e94f86b6b428f4a355a5d28b8", null ]
     ] ],
     [ "ProductQuadratureType", "dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791", [
       [ "UNKNOWN", "dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791a696b031073e74bf2cb98e5ef201d4aa3", null ],
@@ -211,6 +219,7 @@ var namespacechi__math =
     [ "RegisterChiObject", "dc/d58/namespacechi__math.html#ad39447351cf38ac9b7774452e67d4c1d", null ],
     [ "RegisterChiObject", "dc/d58/namespacechi__math.html#a6a1ccf63f7899880d181a73404626733", null ],
     [ "RegisterChiObject", "dc/d58/namespacechi__math.html#a76c56fc8dc8ecc5aab5af473681b0e5c", null ],
+    [ "RegisterChiObjectParametersOnly", "dc/d58/namespacechi__math.html#aae8f3104d2cb3d48ae064906522e576a", null ],
     [ "RegisterWrapperFunction", "dc/d58/namespacechi__math.html#ae6f9eb9b9b8218b8bff74f7c747f3a5f", null ],
     [ "SampleCDF", "dc/d58/namespacechi__math.html#a46211d1897a690eb5828d7041b77d387", null ],
     [ "Scale", "dc/d58/namespacechi__math.html#a1eec94fde137265a429b5082d2302c87", null ],

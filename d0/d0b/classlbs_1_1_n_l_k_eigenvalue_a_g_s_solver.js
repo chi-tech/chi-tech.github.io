@@ -2,7 +2,7 @@ var classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver =
 [
     [ "NLKAGSContext", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#a6e98896b33322da26c0d571972d3774b", null ],
     [ "NLKAGSContextPtr", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#a026c7626c8ef063018396b78639634d5", null ],
-    [ "NLKEigenvalueAGSSolver", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#a55a70ad1923d49752181c36f939215ee", null ],
+    [ "NLKEigenvalueAGSSolver", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#a17f5706a231313989dae8c5e4af71f41", null ],
     [ "~NLKEigenvalueAGSSolver", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#a3a67bb6b529aed25d3a169b610de204d", null ],
     [ "PostSolveCallback", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#a2834d350f81678a3c13b4c903130627a", null ],
     [ "PostSolveCallback", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html#a24043e1edba806bbc1786f1edba9da30", null ],

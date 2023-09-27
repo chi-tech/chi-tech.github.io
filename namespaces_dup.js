@@ -162,6 +162,9 @@ var namespaces_dup =
     [ "chi_math", "dc/d58/namespacechi__math.html", "dc/d58/namespacechi__math" ],
     [ "chi_mesh", "d0/d81/namespacechi__mesh.html", "d0/d81/namespacechi__mesh" ],
     [ "chi_mpi_utils", "dc/d8f/namespacechi__mpi__utils.html", [
+      [ "BuildLocationExtents", "dc/d8f/namespacechi__mpi__utils.html#aa02549b4e73df2b4d5062d89a1606f6a", null ],
+      [ "GetLocationID", "dc/d8f/namespacechi__mpi__utils.html#adc15004a6c69c8f0a4933a960273f1d5", null ],
+      [ "GetProcessCount", "dc/d8f/namespacechi__mpi__utils.html#a85e2c77ad0f7a6c7d0edbb24fe09f6a6", null ],
       [ "MapAllToAll", "dc/d8f/namespacechi__mpi__utils.html#adf11378ae7b9cd163b9075b83dba5331", null ]
     ] ],
     [ "chi_physics", "d6/d5f/namespacechi__physics.html", "d6/d5f/namespacechi__physics" ],

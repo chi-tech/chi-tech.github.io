@@ -13,7 +13,10 @@ var searchData=
   ['nl_5fkeigen_5fags_5fresidual_5ffunc_2eh_10',['nl_keigen_ags_residual_func.h',['../d4/d25/nl__keigen__ags__residual__func_8h.html',1,'']]],
   ['nl_5fkeigen_5fags_5fsolver_2ecc_11',['nl_keigen_ags_solver.cc',['../de/db7/nl__keigen__ags__solver_8cc.html',1,'']]],
   ['nl_5fkeigen_5fags_5fsolver_2eh_12',['nl_keigen_ags_solver.h',['../dc/d65/nl__keigen__ags__solver_8h.html',1,'']]],
-  ['nl_5fsolver_5fcontext_2eh_13',['nl_solver_context.h',['../d2/daf/nl__solver__context_8h.html',1,'']]],
-  ['non_5flinear_5fsolver_2eh_14',['non_linear_solver.h',['../da/daa/non__linear__solver_8h.html',1,'']]],
-  ['non_5flinear_5fsolver_5fpetsc_2ecc_15',['non_linear_solver_petsc.cc',['../dd/d3b/non__linear__solver__petsc_8cc.html',1,'']]]
+  ['nonlinearsolver_2eh_13',['NonLinearSolver.h',['../dc/d2a/_non_linear_solver_8h.html',1,'']]],
+  ['nonlinearsolvercontext_2eh_14',['NonLinearSolverContext.h',['../d6/dbc/_non_linear_solver_context_8h.html',1,'']]],
+  ['nonlinearsolveroptions_2ecc_15',['NonLinearSolverOptions.cc',['../d8/d9b/_non_linear_solver_options_8cc.html',1,'']]],
+  ['nonlinearsolveroptions_2eh_16',['NonLinearSolverOptions.h',['../d5/d08/_non_linear_solver_options_8h.html',1,'']]],
+  ['nonlinearsolverpetsc_2ecc_17',['NonLinearSolverPETSc.cc',['../dd/d87/_non_linear_solver_p_e_t_sc_8cc.html',1,'']]],
+  ['nonlinearsolverpetsc_2eh_18',['NonLinearSolverPETSc.h',['../d4/d21/_non_linear_solver_p_e_t_sc_8h.html',1,'']]]
 ];

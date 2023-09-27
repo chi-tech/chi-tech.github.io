@@ -15,6 +15,7 @@ var class_chi_object_factory =
     [ "CallObjectConstructor", "d4/dbb/class_chi_object_factory.html#ae9a7ddbeb0cad17b259971c33d4cecb5", null ],
     [ "DumpRegister", "d4/dbb/class_chi_object_factory.html#a1d792b9473e135b33c434ab0837f462a", null ],
     [ "GetInstance", "d4/dbb/class_chi_object_factory.html#afa44189369e90fd036ed8da19297dd55", null ],
+    [ "GetRegisteredObjectParameters", "d4/dbb/class_chi_object_factory.html#a81f78eaf0f07fef3f76670d15c58cb28", null ],
     [ "MakeRegisteredObject", "d4/dbb/class_chi_object_factory.html#a574b86139e4fc5d2310737af39f2c70e", null ],
     [ "MakeRegisteredObjectOfType", "d4/dbb/class_chi_object_factory.html#af7965c25ce90b27a8790dd3ca8edef26", null ],
     [ "operator=", "d4/dbb/class_chi_object_factory.html#afcc1d3832bef64ee757c00851ed778a0", null ],

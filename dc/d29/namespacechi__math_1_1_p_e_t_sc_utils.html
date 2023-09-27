@@ -121,10 +121,12 @@ Functions</h2></td></tr>
 <tr class="separator:ac0a45299ec491833a2d1f9df3c401e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d23878dd79cb1325b6fb025afb68600"><td class="memItemLeft" align="right" valign="top">PetscErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a4d23878dd79cb1325b6fb025afb68600">KSPMonitorStraight</a> (KSP ksp, PetscInt n, PetscReal rnorm, void *)</td></tr>
 <tr class="separator:a4d23878dd79cb1325b6fb025afb68600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a422a92d2ae77b5a740a874c24ed48dc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a422a92d2ae77b5a740a874c24ed48dc9">CopyVecToSTLvector</a> (Vec x, std::vector&lt; double &gt; &amp;data, size_t N)</td></tr>
-<tr class="separator:a422a92d2ae77b5a740a874c24ed48dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78ea9913447d96008912a4cc9f40bccb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a78ea9913447d96008912a4cc9f40bccb">CopyVecToSTLvectorWithGhosts</a> (Vec x, std::vector&lt; double &gt; &amp;data, size_t N)</td></tr>
-<tr class="separator:a78ea9913447d96008912a4cc9f40bccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab85f7bb28446f6846b2dfe1f6ba45f09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ab85f7bb28446f6846b2dfe1f6ba45f09">CopyVecToSTLvector</a> (Vec x, std::vector&lt; double &gt; &amp;data, size_t N, bool resize_STL=true)</td></tr>
+<tr class="separator:ab85f7bb28446f6846b2dfe1f6ba45f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258d9873ec6cca45b87620581d973c25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a258d9873ec6cca45b87620581d973c25">CopyVecToSTLvectorWithGhosts</a> (Vec x, std::vector&lt; double &gt; &amp;data, size_t N, bool resize_STL=true)</td></tr>
+<tr class="separator:a258d9873ec6cca45b87620581d973c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad16be762b55b9e5e8fcf560a1cfb041f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad16be762b55b9e5e8fcf560a1cfb041f">CopySTLvectorToVec</a> (const std::vector&lt; double &gt; &amp;data, Vec x, size_t N)</td></tr>
+<tr class="separator:ad16be762b55b9e5e8fcf560a1cfb041f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6018f791e6dd6b11cff9c1b7cce0c277"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">CopyGlobalVecToSTLvector</a> (Vec x, const std::vector&lt; int64_t &gt; &amp;global_indices, std::vector&lt; double &gt; &amp;data)</td></tr>
 <tr class="separator:a6018f791e6dd6b11cff9c1b7cce0c277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac31111351b2bffd45dc550de08c1355a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac31111351b2bffd45dc550de08c1355a">CommunicateGhostEntries</a> (Vec x)</td></tr>
@@ -152,7 +154,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Communicates ghost entries of a ghost vector. This operation is suitable when only a single vector is communicated. When more than vector is communicated it would be more efficient to "Begin" all the vectors followed by and "End" of each vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00100">100</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00122">122</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>
@@ -189,12 +191,48 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Copies global values from a PETSc vector to a STL vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00044">44</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00069">69</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>
-<a id="a422a92d2ae77b5a740a874c24ed48dc9" name="a422a92d2ae77b5a740a874c24ed48dc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a422a92d2ae77b5a740a874c24ed48dc9">&#9670;&nbsp;</a></span>CopyVecToSTLvector()</h2>
+<a id="ad16be762b55b9e5e8fcf560a1cfb041f" name="ad16be762b55b9e5e8fcf560a1cfb041f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad16be762b55b9e5e8fcf560a1cfb041f">&#9670;&nbsp;</a></span>CopySTLvectorToVec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_math::PETScUtils::CopySTLvectorToVec </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vec&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00055">55</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+
+</div>
+</div>
+<a id="ab85f7bb28446f6846b2dfe1f6ba45f09" name="ab85f7bb28446f6846b2dfe1f6ba45f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab85f7bb28446f6846b2dfe1f6ba45f09">&#9670;&nbsp;</a></span>CopyVecToSTLvector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +253,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>N</em>&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>resize_STL</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -230,8 +274,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a78ea9913447d96008912a4cc9f40bccb" name="a78ea9913447d96008912a4cc9f40bccb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78ea9913447d96008912a4cc9f40bccb">&#9670;&nbsp;</a></span>CopyVecToSTLvectorWithGhosts()</h2>
+<a id="a258d9873ec6cca45b87620581d973c25" name="a258d9873ec6cca45b87620581d973c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a258d9873ec6cca45b87620581d973c25">&#9670;&nbsp;</a></span>CopyVecToSTLvectorWithGhosts()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,7 +296,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>N</em>&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>resize_STL</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -263,7 +313,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Copies a PETSc vector to a STL vector. Only the local portion is copied. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00025">25</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00034">34</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>
@@ -586,7 +636,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets a local raw view of a ghost vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00109">109</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00131">131</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>
@@ -839,7 +889,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets a local raw view of a ghost vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00126">126</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00148">148</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>

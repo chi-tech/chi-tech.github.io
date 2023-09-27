@@ -52,6 +52,7 @@ var hierarchy =
     [ "chi_mesh::UnpartitionedMesh::BoundBox", "d3/d38/structchi__mesh_1_1_unpartitioned_mesh_1_1_bound_box.html", null ],
     [ "lbs::CBC_ASynchronousCommunicator::BufferItem", "dc/db5/structlbs_1_1_c_b_c___a_synchronous_communicator_1_1_buffer_item.html", null ],
     [ "chi_data_types::ByteArray", "d5/d5b/classchi__data__types_1_1_byte_array.html", null ],
+    [ "chi_math::VectorGhostCommunicator::CachedParallelData", "d1/d9e/structchi__math_1_1_vector_ghost_communicator_1_1_cached_parallel_data.html", null ],
     [ "chi_math::CDFSampler", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html", null ],
     [ "chi_mesh::Cell", "d8/d7c/classchi__mesh_1_1_cell.html", null ],
     [ "chi_mesh::CellFace", "db/d1b/classchi__mesh_1_1_cell_face.html", null ],
@@ -92,6 +93,7 @@ var hierarchy =
         [ "chi_math::functions::LuaDimAToDimB", "dd/dec/classchi__math_1_1functions_1_1_lua_dim_a_to_dim_b.html", null ],
         [ "chi_math::functions::PiecewiseLinear1D", "d6/d90/classchi__math_1_1functions_1_1_piecewise_linear1_d.html", null ]
       ] ],
+      [ "chi_math::NonLinearSolverOptions", "dd/d3c/classchi__math_1_1_non_linear_solver_options.html", null ],
       [ "chi_math::Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html", [
         [ "chi_math::QuadratureConical", "da/d37/classchi__math_1_1_quadrature_conical.html", null ],
         [ "chi_math::QuadratureGaussChebyshev", "d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev.html", null ],
@@ -149,8 +151,8 @@ var hierarchy =
         [ "mg_diffusion::Solver", "d4/d4c/classmg__diffusion_1_1_solver.html", null ],
         [ "prk::TransientSolver", "de/d01/classprk_1_1_transient_solver.html", null ]
       ] ],
-      [ "chi_physics::TimeStepController", "d4/d81/classchi__physics_1_1_time_step_controller.html", [
-        [ "chi_physics::ConstantTimeStepController", "d1/d00/classchi__physics_1_1_constant_time_step_controller.html", null ]
+      [ "chi_physics::TimeStepper", "d0/d98/classchi__physics_1_1_time_stepper.html", [
+        [ "chi_physics::ConstantTimeStepper", "da/dc3/classchi__physics_1_1_constant_time_stepper.html", null ]
       ] ],
       [ "chi_physics::field_operations::FieldOperation", "d9/d9f/classchi__physics_1_1field__operations_1_1_field_operation.html", [
         [ "chi_physics::field_operations::FieldCopyOperation", "de/d11/classchi__physics_1_1field__operations_1_1_field_copy_operation.html", null ],
@@ -315,7 +317,9 @@ var hierarchy =
       [ "chi::DummyStream", "dd/d10/structchi_1_1_dummy_stream.html", null ]
     ] ],
     [ "chi_math::ParallelVector", "d0/dcb/classchi__math_1_1_parallel_vector.html", [
-      [ "chi_math::GhostedParallelVector", "d9/d03/classchi__math_1_1_ghosted_parallel_vector.html", null ]
+      [ "chi_math::ParallelSTLVector", "d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html", [
+        [ "chi_math::GhostedParallelSTLVector", "d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html", null ]
+      ] ]
     ] ],
     [ "chi::ParameterBlock", "d5/d1c/classchi_1_1_parameter_block.html", [
       [ "chi::InputParameters", "d8/d4d/classchi_1_1_input_parameters.html", null ]
@@ -402,7 +406,6 @@ var hierarchy =
     [ "chi::PostProcessor::TimeHistoryEntry", "df/d43/structchi_1_1_post_processor_1_1_time_history_entry.html", null ],
     [ "chi::Timer", "dc/dea/classchi_1_1_timer.html", null ],
     [ "chi_math::LinearSolver< MatType, VecType, SolverType >::ToleranceOptions", "db/d8f/structchi__math_1_1_linear_solver_1_1_tolerance_options.html", null ],
-    [ "chi_math::NonLinearSolver< MatType, VecType, SolverType >::ToleranceOptions", "df/dd9/structchi__math_1_1_non_linear_solver_1_1_tolerance_options.html", null ],
     [ "lbs::LBSGroupset::TwoGridAccelerationInfo", "de/d52/structlbs_1_1_l_b_s_groupset_1_1_two_grid_acceleration_info.html", null ],
     [ "lbs::acceleration::TwoGridCollapsedInfo", "db/d99/structlbs_1_1acceleration_1_1_two_grid_collapsed_info.html", null ],
     [ "mg_diffusion::TwoGridCollapsedInfo", "d6/d5b/structmg__diffusion_1_1_two_grid_collapsed_info.html", null ],

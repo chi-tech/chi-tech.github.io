@@ -1,9 +1,13 @@
 var dir_14557dc099f95ecb37347be809da4819 =
 [
-    [ "ghosted_parallel_vector.cc", "da/d7b/ghosted__parallel__vector_8cc.html", null ],
-    [ "ghosted_parallel_vector.h", "df/dc3/ghosted__parallel__vector_8h.html", [
-      [ "chi_math::GhostedParallelVector", "d9/d03/classchi__math_1_1_ghosted_parallel_vector.html", "d9/d03/classchi__math_1_1_ghosted_parallel_vector" ]
+    [ "GhostedParallelSTLVector.cc", "d4/d8a/_ghosted_parallel_s_t_l_vector_8cc.html", null ],
+    [ "GhostedParallelSTLVector.h", "d6/d2a/_ghosted_parallel_s_t_l_vector_8h.html", [
+      [ "chi_math::GhostedParallelSTLVector", "d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html", "d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector" ]
     ] ],
-    [ "parallel_vector.cc", "d7/d18/parallel__vector_8cc.html", null ],
-    [ "parallel_vector.h", "d4/d96/parallel__vector_8h.html", "d4/d96/parallel__vector_8h" ]
+    [ "ParallelSTLVector.cc", "d8/d1c/_parallel_s_t_l_vector_8cc.html", "d8/d1c/_parallel_s_t_l_vector_8cc" ],
+    [ "ParallelSTLVector.h", "da/d14/_parallel_s_t_l_vector_8h.html", [
+      [ "chi_math::ParallelSTLVector", "d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html", "d3/de3/classchi__math_1_1_parallel_s_t_l_vector" ]
+    ] ],
+    [ "ParallelVector.cc", "de/de6/_parallel_vector_8cc.html", null ],
+    [ "ParallelVector.h", "da/dba/_parallel_vector_8h.html", "da/dba/_parallel_vector_8h" ]
 ];

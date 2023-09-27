@@ -16,6 +16,7 @@ var classchi__math_1_1_spatial_discretization =
     [ "Grid", "dd/d1d/classchi__math_1_1_spatial_discretization.html#a63b5210a869a14580db832339536cf92", null ],
     [ "LocalizePETScVector", "dd/d1d/classchi__math_1_1_spatial_discretization.html#ac3326c4b1bcebab5ce5c85f5b252aa62", null ],
     [ "LocalizePETScVectorWithGhosts", "dd/d1d/classchi__math_1_1_spatial_discretization.html#aba629cc6a5b17e7c8f96708c0bfcb945", null ],
+    [ "MakeCellInternalAndBndryNodeIDs", "dd/d1d/classchi__math_1_1_spatial_discretization.html#ab01068be108dccb3b81b1ca24816a17d", null ],
     [ "MakeInternalFaceNodeMappings", "dd/d1d/classchi__math_1_1_spatial_discretization.html#ad53ebd84ae7f8853b02afda543c8429a", null ],
     [ "MapDOF", "dd/d1d/classchi__math_1_1_spatial_discretization.html#a3ea7db67670a5a1b2d3efd13d0e318c4", null ],
     [ "MapDOF", "dd/d1d/classchi__math_1_1_spatial_discretization.html#a6b8904300ab5bb7624c0521b11828272", null ],

@@ -91,11 +91,90 @@ $(document).ready(function(){initNavTree('dc/d8f/namespacechi__mpi__utils.html',
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:adc15004a6c69c8f0a4933a960273f1d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8f/namespacechi__mpi__utils.html#adc15004a6c69c8f0a4933a960273f1d5">GetLocationID</a> (MPI_Comm mpi_comm)</td></tr>
+<tr class="separator:adc15004a6c69c8f0a4933a960273f1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e2c77ad0f7a6c7d0edbb24fe09f6a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8f/namespacechi__mpi__utils.html#a85e2c77ad0f7a6c7d0edbb24fe09f6a6">GetProcessCount</a> (MPI_Comm mpi_comm)</td></tr>
+<tr class="separator:a85e2c77ad0f7a6c7d0edbb24fe09f6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02549b4e73df2b4d5062d89a1606f6a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d8f/namespacechi__mpi__utils.html#aa02549b4e73df2b4d5062d89a1606f6a">BuildLocationExtents</a> (uint64_t local_size, MPI_Comm comm)</td></tr>
+<tr class="separator:aa02549b4e73df2b4d5062d89a1606f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf11378ae7b9cd163b9075b83dba5331"><td class="memTemplParams" colspan="2">template&lt;typename K , class T &gt; </td></tr>
 <tr class="memitem:adf11378ae7b9cd163b9075b83dba5331"><td class="memTemplItemLeft" align="right" valign="top">std::map&lt; K, std::vector&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d8f/namespacechi__mpi__utils.html#adf11378ae7b9cd163b9075b83dba5331">MapAllToAll</a> (const std::map&lt; K, std::vector&lt; T &gt; &gt; &amp;pid_data_pairs, const MPI_Datatype data_mpi_type, const MPI_Comm communicator=Chi::mpi.comm)</td></tr>
 <tr class="separator:adf11378ae7b9cd163b9075b83dba5331"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aa02549b4e73df2b4d5062d89a1606f6a" name="aa02549b4e73df2b4d5062d89a1606f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02549b4e73df2b4d5062d89a1606f6a">&#9670;&nbsp;</a></span>BuildLocationExtents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint64_t &gt; chi_mpi_utils::BuildLocationExtents </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>local_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>comm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Given each location's local size (of items), builds a vector (dimension comm-size plus 1) of where each location's global indices start and end. Example: location i starts at extents[i] and ends at extents[i+1] </p>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db0/chi__mpi__utils_8cc_source.html#l00027">27</a> of file <a class="el" href="../../df/db0/chi__mpi__utils_8cc_source.html">chi_mpi_utils.cc</a>.</p>
+
+</div>
+</div>
+<a id="adc15004a6c69c8f0a4933a960273f1d5" name="adc15004a6c69c8f0a4933a960273f1d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc15004a6c69c8f0a4933a960273f1d5">&#9670;&nbsp;</a></span>GetLocationID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_mpi_utils::GetLocationID </td>
+          <td>(</td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>mpi_comm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns the current rank on the specified communicator. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db0/chi__mpi__utils_8cc_source.html#l00007">7</a> of file <a class="el" href="../../df/db0/chi__mpi__utils_8cc_source.html">chi_mpi_utils.cc</a>.</p>
+
+</div>
+</div>
+<a id="a85e2c77ad0f7a6c7d0edbb24fe09f6a6" name="a85e2c77ad0f7a6c7d0edbb24fe09f6a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e2c77ad0f7a6c7d0edbb24fe09f6a6">&#9670;&nbsp;</a></span>GetProcessCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chi_mpi_utils::GetProcessCount </td>
+          <td>(</td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>mpi_comm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns the total number of ranks on the specified communicator. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../df/db0/chi__mpi__utils_8cc_source.html#l00016">16</a> of file <a class="el" href="../../df/db0/chi__mpi__utils_8cc_source.html">chi_mpi_utils.cc</a>.</p>
+
+</div>
+</div>
 <a id="adf11378ae7b9cd163b9075b83dba5331" name="adf11378ae7b9cd163b9075b83dba5331"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf11378ae7b9cd163b9075b83dba5331">&#9670;&nbsp;</a></span>MapAllToAll()</h2>
 

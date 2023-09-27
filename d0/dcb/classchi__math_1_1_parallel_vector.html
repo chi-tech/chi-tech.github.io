@@ -85,70 +85,87 @@ $(document).ready(function(){initNavTree('d0/dcb/classchi__math_1_1_parallel_vec
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-types">Protected Types</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
-  <div class="headertitle"><div class="title">chi_math::ParallelVector Class Reference</div></div>
+  <div class="headertitle"><div class="title">chi_math::ParallelVector Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for chi_math::ParallelVector:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="../../d0/dcb/classchi__math_1_1_parallel_vector.png" usemap="#chi_5Fmath::ParallelVector_map" alt=""/>
   <map id="chi_5Fmath::ParallelVector_map" name="chi_5Fmath::ParallelVector_map">
-<area href="../../d9/d03/classchi__math_1_1_ghosted_parallel_vector.html" alt="chi_math::GhostedParallelVector" shape="rect" coords="0,56,195,80"/>
+<area href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html" alt="chi_math::ParallelSTLVector" shape="rect" coords="0,56,217,80"/>
+<area href="../../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html" alt="chi_math::GhostedParallelSTLVector" shape="rect" coords="0,112,217,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae45b65b56bd7181b8f68d17b2f536f65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae45b65b56bd7181b8f68d17b2f536f65">ParallelVector</a> (const uint64_t local_size, const uint64_t global_size, const MPI_Comm communicator=MPI_COMM_WORLD)</td></tr>
-<tr class="separator:ae45b65b56bd7181b8f68d17b2f536f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857befb27f5430f0e7f65af62d70abb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a857befb27f5430f0e7f65af62d70abb9">ParallelVector</a> (uint64_t local_size, uint64_t global_size, MPI_Comm communicator)</td></tr>
+<tr class="separator:a857befb27f5430f0e7f65af62d70abb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9041cc8b9def98ec30af313a3efc50e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a9041cc8b9def98ec30af313a3efc50e1">ParallelVector</a> (const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;other)</td></tr>
 <tr class="separator:a9041cc8b9def98ec30af313a3efc50e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af92d52cc977fa7ff85ce300bdb7a72f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#af92d52cc977fa7ff85ce300bdb7a72f5">ParallelVector</a> (<a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;&amp;other)</td></tr>
-<tr class="separator:af92d52cc977fa7ff85ce300bdb7a72f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9015baa1ab05a79a674eb1a8e4002703"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a9015baa1ab05a79a674eb1a8e4002703">ParallelVector</a> (<a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a9015baa1ab05a79a674eb1a8e4002703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1017998c2226bf984bf6396c6eb73f2"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ad1017998c2226bf984bf6396c6eb73f2">MakeCopy</a> () const =0</td></tr>
+<tr class="separator:ad1017998c2226bf984bf6396c6eb73f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71dcb83c86594924804ee1fac48cce9"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae71dcb83c86594924804ee1fac48cce9">MakeClone</a> () const =0</td></tr>
+<tr class="separator:ae71dcb83c86594924804ee1fac48cce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49bc3f83b754f9863b43248d2d96b45a"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a49bc3f83b754f9863b43248d2d96b45a">Data</a> ()=0</td></tr>
+<tr class="separator:a49bc3f83b754f9863b43248d2d96b45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bae377ab21d075a224696eec70e1bbe"><td class="memItemLeft" align="right" valign="top">virtual const double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a1bae377ab21d075a224696eec70e1bbe">Data</a> () const =0</td></tr>
+<tr class="separator:a1bae377ab21d075a224696eec70e1bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae62f41bbbe23c76cb6b112031260ed45"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae62f41bbbe23c76cb6b112031260ed45">LocalSize</a> () const</td></tr>
 <tr class="memdesc:ae62f41bbbe23c76cb6b112031260ed45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the locally owned portion of the parallel vector.  <a href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae62f41bbbe23c76cb6b112031260ed45">More...</a><br /></td></tr>
 <tr class="separator:ae62f41bbbe23c76cb6b112031260ed45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0c0464337a51cbdcac88c71dc24e7cd"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ad0c0464337a51cbdcac88c71dc24e7cd">GlobalSize</a> () const</td></tr>
 <tr class="memdesc:ad0c0464337a51cbdcac88c71dc24e7cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the global size of the parallel vector.  <a href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ad0c0464337a51cbdcac88c71dc24e7cd">More...</a><br /></td></tr>
 <tr class="separator:ad0c0464337a51cbdcac88c71dc24e7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade1f566c81e613bdf79d332fb1fd760d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ade1f566c81e613bdf79d332fb1fd760d">operator[]</a> (const int64_t local_id) const</td></tr>
-<tr class="separator:ade1f566c81e613bdf79d332fb1fd760d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3b77a99847e1ffa39f80afcc4dd87d1"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ac3b77a99847e1ffa39f80afcc4dd87d1">operator[]</a> (const int64_t local_id)</td></tr>
-<tr class="separator:ac3b77a99847e1ffa39f80afcc4dd87d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5cb2ea24bc5310186d51e7473f7cdce"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ad5cb2ea24bc5310186d51e7473f7cdce">MakeLocalVector</a> ()</td></tr>
-<tr class="memdesc:ad5cb2ea24bc5310186d51e7473f7cdce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a vector containing the locally owned data.  <a href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ad5cb2ea24bc5310186d51e7473f7cdce">More...</a><br /></td></tr>
-<tr class="separator:ad5cb2ea24bc5310186d51e7473f7cdce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac22fa087e7a7baf5633d76231709e505"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ac22fa087e7a7baf5633d76231709e505">Set</a> (const double value)</td></tr>
-<tr class="separator:ac22fa087e7a7baf5633d76231709e505"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa18744b24026fec250c9b8e52c00849d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#aa18744b24026fec250c9b8e52c00849d">Set</a> (const std::vector&lt; double &gt; &amp;local_vector)</td></tr>
-<tr class="separator:aa18744b24026fec250c9b8e52c00849d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41080baafb9d1905c22f415845a2449c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a41080baafb9d1905c22f415845a2449c">SetValue</a> (const int64_t global_id, const double value, const <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a> op_type)</td></tr>
-<tr class="separator:a41080baafb9d1905c22f415845a2449c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae88fa8414c7d4baac3edc4f0f21aece7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae88fa8414c7d4baac3edc4f0f21aece7">SetValues</a> (const std::vector&lt; int64_t &gt; &amp;global_ids, const std::vector&lt; double &gt; &amp;values, const <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a> op_type)</td></tr>
-<tr class="separator:ae88fa8414c7d4baac3edc4f0f21aece7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab874af1051a1623e2fed14e146ed36db"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ab874af1051a1623e2fed14e146ed36db">Assemble</a> ()</td></tr>
-<tr class="separator:ab874af1051a1623e2fed14e146ed36db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca98572fc62af64620b6e68c894c9681"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#aca98572fc62af64620b6e68c894c9681">PrintStr</a> () const</td></tr>
-<tr class="memdesc:aca98572fc62af64620b6e68c894c9681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the local vectors to stings.  <a href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#aca98572fc62af64620b6e68c894c9681">More...</a><br /></td></tr>
-<tr class="separator:aca98572fc62af64620b6e68c894c9681"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
-Protected Types</h2></td></tr>
-<tr class="memitem:ae229451b9f073b0218d8d9a51ad9dff2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae229451b9f073b0218d8d9a51ad9dff2">Operation</a> = std::pair&lt; int64_t, double &gt;</td></tr>
-<tr class="separator:ae229451b9f073b0218d8d9a51ad9dff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:aa59da5af37fe0885558d31d281c790ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#aa59da5af37fe0885558d31d281c790ee">DefineParallelStructure</a> ()</td></tr>
-<tr class="separator:aa59da5af37fe0885558d31d281c790ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3e6885862eb61dd757c807921c4ec39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ac3e6885862eb61dd757c807921c4ec39">FindOwnerPID</a> (const uint64_t global_id) const</td></tr>
-<tr class="separator:ac3e6885862eb61dd757c807921c4ec39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353ed7f093e6a34ee2cb3075246d159b"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a353ed7f093e6a34ee2cb3075246d159b">operator[]</a> (int64_t local_id) const =0</td></tr>
+<tr class="separator:a353ed7f093e6a34ee2cb3075246d159b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608714e2bacd8b33228968d485224df0"><td class="memItemLeft" align="right" valign="top">virtual double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a608714e2bacd8b33228968d485224df0">operator[]</a> (int64_t local_id)=0</td></tr>
+<tr class="separator:a608714e2bacd8b33228968d485224df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8513bb3775b83e2e775bb8d3f52cf4b7"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a8513bb3775b83e2e775bb8d3f52cf4b7">MakeLocalVector</a> ()=0</td></tr>
+<tr class="memdesc:a8513bb3775b83e2e775bb8d3f52cf4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a vector containing the locally owned data.  <a href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a8513bb3775b83e2e775bb8d3f52cf4b7">More...</a><br /></td></tr>
+<tr class="separator:a8513bb3775b83e2e775bb8d3f52cf4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a29beca1dd5ba828a954e5d709cea2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ac4a29beca1dd5ba828a954e5d709cea2">Set</a> (double value)=0</td></tr>
+<tr class="separator:ac4a29beca1dd5ba828a954e5d709cea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2604e553c13d50967844b04ac7d6e9ff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a2604e553c13d50967844b04ac7d6e9ff">Set</a> (const std::vector&lt; double &gt; &amp;local_vector)=0</td></tr>
+<tr class="separator:a2604e553c13d50967844b04ac7d6e9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc94356e6f0d04a1f074a80b2b45a88e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#adc94356e6f0d04a1f074a80b2b45a88e">BlockSet</a> (const std::vector&lt; double &gt; &amp;y, int64_t local_offset, int64_t num_values)=0</td></tr>
+<tr class="separator:adc94356e6f0d04a1f074a80b2b45a88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3850ca5faf727961d5d2fc6f1498cc9c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a3850ca5faf727961d5d2fc6f1498cc9c">CopyLocalValues</a> (const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;y)=0</td></tr>
+<tr class="separator:a3850ca5faf727961d5d2fc6f1498cc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd87a0d7e13f57c761955e67bb66c8ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#afd87a0d7e13f57c761955e67bb66c8ba">BlockCopyLocalValues</a> (const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;y, int64_t y_offset, int64_t local_offset, int64_t num_values)=0</td></tr>
+<tr class="separator:afd87a0d7e13f57c761955e67bb66c8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83afcb70e410240c062f9432568cded"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#af83afcb70e410240c062f9432568cded">SetValue</a> (int64_t global_id, double value, <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a> op_type)=0</td></tr>
+<tr class="separator:af83afcb70e410240c062f9432568cded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cdb36362ad19323c5b5736907f49074"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a8cdb36362ad19323c5b5736907f49074">SetValues</a> (const std::vector&lt; int64_t &gt; &amp;global_ids, const std::vector&lt; double &gt; &amp;values, <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a> op_type)=0</td></tr>
+<tr class="separator:a8cdb36362ad19323c5b5736907f49074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b7ba9c8de90ecd2de30efef7b3fecc5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a9b7ba9c8de90ecd2de30efef7b3fecc5">operator+=</a> (const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;y)=0</td></tr>
+<tr class="separator:a9b7ba9c8de90ecd2de30efef7b3fecc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82db61fc738cf394c76277abf6369057"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a82db61fc738cf394c76277abf6369057">PlusAY</a> (const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;y, double a)=0</td></tr>
+<tr class="separator:a82db61fc738cf394c76277abf6369057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785c91dcaf87692969c0f99e345eab0c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a785c91dcaf87692969c0f99e345eab0c">AXPlusY</a> (double a, const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;y)=0</td></tr>
+<tr class="separator:a785c91dcaf87692969c0f99e345eab0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a729d2a36c3eddf86e5f015035ed43910"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a729d2a36c3eddf86e5f015035ed43910">Scale</a> (double a)=0</td></tr>
+<tr class="separator:a729d2a36c3eddf86e5f015035ed43910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47ddf16f54df584df7bb61d40a5b61b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ac47ddf16f54df584df7bb61d40a5b61b">Shift</a> (double a)=0</td></tr>
+<tr class="separator:ac47ddf16f54df584df7bb61d40a5b61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636d3bda8851ba29f66210f705074d61"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a636d3bda8851ba29f66210f705074d61">ComputeNorm</a> (<a class="el" href="../../dc/d58/namespacechi__math.html#a76861eaf9507dd58430c460e814289c1">chi_math::NormType</a> norm_type) const =0</td></tr>
+<tr class="separator:a636d3bda8851ba29f66210f705074d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc088f8f7fa4e7573addae8494d5e077"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#abc088f8f7fa4e7573addae8494d5e077">Assemble</a> ()=0</td></tr>
+<tr class="separator:abc088f8f7fa4e7573addae8494d5e077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14cf21295f4e9a4763a1731b7766a69"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae14cf21295f4e9a4763a1731b7766a69">PrintStr</a> () const =0</td></tr>
+<tr class="memdesc:ae14cf21295f4e9a4763a1731b7766a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the local vectors to stings.  <a href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae14cf21295f4e9a4763a1731b7766a69">More...</a><br /></td></tr>
+<tr class="separator:ae14cf21295f4e9a4763a1731b7766a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7d7420a0c5f2f1b5d1592ba8b79c39"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a7a7d7420a0c5f2f1b5d1592ba8b79c39">CommunicateGhostEntries</a> ()</td></tr>
+<tr class="separator:a7a7d7420a0c5f2f1b5d1592ba8b79c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b54da477ffdcf1a8c8f7a6e4f308ad"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a95b54da477ffdcf1a8c8f7a6e4f308ad">~ParallelVector</a> ()=default</td></tr>
+<tr class="separator:a95b54da477ffdcf1a8c8f7a6e4f308ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -156,53 +173,20 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aca3b5b9eb3dee4e4570fbc07beebaf60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b3e42e7fcd42008b843596d8017742d"><td class="memItemLeft" align="right" valign="top">const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a0b3e42e7fcd42008b843596d8017742d">global_size_</a></td></tr>
 <tr class="separator:a0b3e42e7fcd42008b843596d8017742d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2578565a0b7e6cce711f6681da9c12fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a2578565a0b7e6cce711f6681da9c12fa">location_id_</a></td></tr>
-<tr class="separator:a2578565a0b7e6cce711f6681da9c12fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafa74326692c5eba6da96683cf755dee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#aafa74326692c5eba6da96683cf755dee">process_count_</a></td></tr>
-<tr class="separator:aafa74326692c5eba6da96683cf755dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92706ef725b41cfe2bae42a7cef77fa2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a92706ef725b41cfe2bae42a7cef77fa2">extents_</a></td></tr>
-<tr class="separator:a92706ef725b41cfe2bae42a7cef77fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8776dfdf584fd2014ad29aeff5119a98"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a8776dfdf584fd2014ad29aeff5119a98">values_</a></td></tr>
-<tr class="separator:a8776dfdf584fd2014ad29aeff5119a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4c9c0e8b1ded7d784eb1647fa1ec3a8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae229451b9f073b0218d8d9a51ad9dff2">Operation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ab4c9c0e8b1ded7d784eb1647fa1ec3a8">set_cache_</a></td></tr>
-<tr class="separator:ab4c9c0e8b1ded7d784eb1647fa1ec3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abca09bc90031c20fbddce3c6612900c9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae229451b9f073b0218d8d9a51ad9dff2">Operation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#abca09bc90031c20fbddce3c6612900c9">add_cache_</a></td></tr>
-<tr class="separator:abca09bc90031c20fbddce3c6612900c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59087611ec6bab62949ae9d31c44e724"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a59087611ec6bab62949ae9d31c44e724">location_id_</a></td></tr>
+<tr class="separator:a59087611ec6bab62949ae9d31c44e724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f5bc475b7020cf13d2dcac9b974ba2"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a35f5bc475b7020cf13d2dcac9b974ba2">process_count_</a></td></tr>
+<tr class="separator:a35f5bc475b7020cf13d2dcac9b974ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d5eb3858ad197b7e512cb8e360658d4"><td class="memItemLeft" align="right" valign="top">const MPI_Comm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a5d5eb3858ad197b7e512cb8e360658d4">comm_</a></td></tr>
 <tr class="separator:a5d5eb3858ad197b7e512cb8e360658d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >An implementation of a parallel vector. </p>
+<div class="textblock"><p >An abstract implementation of a parallel vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00026">26</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae229451b9f073b0218d8d9a51ad9dff2" name="ae229451b9f073b0218d8d9a51ad9dff2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae229451b9f073b0218d8d9a51ad9dff2">&#9670;&nbsp;</a></span>Operation</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae229451b9f073b0218d8d9a51ad9dff2">chi_math::ParallelVector::Operation</a> =  std::pair&lt;int64_t, double&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00143">143</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae45b65b56bd7181b8f68d17b2f536f65" name="ae45b65b56bd7181b8f68d17b2f536f65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae45b65b56bd7181b8f68d17b2f536f65">&#9670;&nbsp;</a></span>ParallelVector() <span class="overload">[1/3]</span></h2>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00020">20</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a857befb27f5430f0e7f65af62d70abb9" name="a857befb27f5430f0e7f65af62d70abb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a857befb27f5430f0e7f65af62d70abb9">&#9670;&nbsp;</a></span>ParallelVector() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,20 +194,20 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">chi_math::ParallelVector::ParallelVector </td>
           <td>(</td>
-          <td class="paramtype">const uint64_t&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>local_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint64_t&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>global_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const MPI_Comm&#160;</td>
-          <td class="paramname"><em>communicator</em> = <code>MPI_COMM_WORLD</code>&#160;</td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>communicator</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -234,7 +218,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Initialize a parallel vector with the given local and global sizes with the given communicator whose entries are set to zero. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00016">16</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/de6/_parallel_vector_8cc_source.html#l00008">8</a> of file <a class="el" href="../../de/de6/_parallel_vector_8cc_source.html">ParallelVector.cc</a>.</p>
 
 </div>
 </div>
@@ -243,9 +227,6 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">chi_math::ParallelVector::ParallelVector </td>
@@ -255,19 +236,15 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p >Copy constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00037">37</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/de6/_parallel_vector_8cc_source.html#l00019">19</a> of file <a class="el" href="../../de/de6/_parallel_vector_8cc_source.html">ParallelVector.cc</a>.</p>
 
 </div>
 </div>
-<a id="af92d52cc977fa7ff85ce300bdb7a72f5" name="af92d52cc977fa7ff85ce300bdb7a72f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af92d52cc977fa7ff85ce300bdb7a72f5">&#9670;&nbsp;</a></span>ParallelVector() <span class="overload">[3/3]</span></h2>
+<a id="a9015baa1ab05a79a674eb1a8e4002703" name="a9015baa1ab05a79a674eb1a8e4002703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9015baa1ab05a79a674eb1a8e4002703">&#9670;&nbsp;</a></span>ParallelVector() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -285,18 +262,18 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Move constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00046">46</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/de6/_parallel_vector_8cc_source.html#l00028">28</a> of file <a class="el" href="../../de/de6/_parallel_vector_8cc_source.html">ParallelVector.cc</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab874af1051a1623e2fed14e146ed36db" name="ab874af1051a1623e2fed14e146ed36db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab874af1051a1623e2fed14e146ed36db">&#9670;&nbsp;</a></span>Assemble()</h2>
+<a id="a95b54da477ffdcf1a8c8f7a6e4f308ad" name="a95b54da477ffdcf1a8c8f7a6e4f308ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b54da477ffdcf1a8c8f7a6e4f308ad">&#9670;&nbsp;</a></span>~ParallelVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +282,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_math::ParallelVector::Assemble </td>
+          <td class="memname">virtual chi_math::ParallelVector::~ParallelVector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -313,19 +290,45 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abc088f8f7fa4e7573addae8494d5e077" name="abc088f8f7fa4e7573addae8494d5e077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc088f8f7fa4e7573addae8494d5e077">&#9670;&nbsp;</a></span>Assemble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::Assemble </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p >Communicate all operations stored within the operation cache to the corresponding processes that own the respective global indices, and apply the operations.</p>
 <p >This routine clears the respective operation cache once completed. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00105">105</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#afe9bcd495a20ab9c08688827582cd532">chi_math::ParallelSTLVector</a>.</p>
 
 </div>
 </div>
-<a id="aa59da5af37fe0885558d31d281c790ee" name="aa59da5af37fe0885558d31d281c790ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa59da5af37fe0885558d31d281c790ee">&#9670;&nbsp;</a></span>DefineParallelStructure()</h2>
+<a id="a785c91dcaf87692969c0f99e345eab0c" name="a785c91dcaf87692969c0f99e345eab0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785c91dcaf87692969c0f99e345eab0c">&#9670;&nbsp;</a></span>AXPlusY()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +337,142 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_math::ParallelVector::DefineParallelStructure </td>
+          <td class="memname">virtual void chi_math::ParallelVector::AXPlusY </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Performs x = a*x + y with the current vector being x. </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a4923cd2635c45576b52efa4efa907dc1">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="afd87a0d7e13f57c761955e67bb66c8ba" name="afd87a0d7e13f57c761955e67bb66c8ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd87a0d7e13f57c761955e67bb66c8ba">&#9670;&nbsp;</a></span>BlockCopyLocalValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::BlockCopyLocalValues </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>y_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>local_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>num_values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Copies a contiguous block of local data (num_values entries) from the source vector (starting at y_offset) to the current vector starting at local_offset. </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a8ea0074cb56ca222c5c2e4b4c386fb8c">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="adc94356e6f0d04a1f074a80b2b45a88e" name="adc94356e6f0d04a1f074a80b2b45a88e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc94356e6f0d04a1f074a80b2b45a88e">&#9670;&nbsp;</a></span>BlockSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::BlockSet </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>local_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>num_values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Copies a contiguous block of data from the source STL vector to the current vector starting at local_offset. The input STL vector must have exactly num_values entries. </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a31ab36643744df1d031fe6158026f105">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a7a7d7420a0c5f2f1b5d1592ba8b79c39" name="a7a7d7420a0c5f2f1b5d1592ba8b79c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7d7420a0c5f2f1b5d1592ba8b79c39">&#9670;&nbsp;</a></span>CommunicateGhostEntries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::CommunicateGhostEntries </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -342,17 +480,20 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Communicate the current ghost entries, if applicable, to all other processes to update the locally stored ghost data. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00225">225</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html#a7d2f2bcf361cd259db503f96bc71fed4">chi_math::GhostedParallelSTLVector</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00168">168</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
-<a id="ac3e6885862eb61dd757c807921c4ec39" name="ac3e6885862eb61dd757c807921c4ec39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3e6885862eb61dd757c807921c4ec39">&#9670;&nbsp;</a></span>FindOwnerPID()</h2>
+<a id="a636d3bda8851ba29f66210f705074d61" name="a636d3bda8851ba29f66210f705074d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636d3bda8851ba29f66210f705074d61">&#9670;&nbsp;</a></span>ComputeNorm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -361,21 +502,107 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_math::ParallelVector::FindOwnerPID </td>
+          <td class="memname">virtual double chi_math::ParallelVector::ComputeNorm </td>
           <td>(</td>
-          <td class="paramtype">const uint64_t&#160;</td>
-          <td class="paramname"><em>global_id</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#a76861eaf9507dd58430c460e814289c1">chi_math::NormType</a>&#160;</td>
+          <td class="paramname"><em>norm_type</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Returns the specified norm of the vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00247">247</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a2ced10f201a9cb6dce2ef873c9aa7452">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a3850ca5faf727961d5d2fc6f1498cc9c" name="a3850ca5faf727961d5d2fc6f1498cc9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3850ca5faf727961d5d2fc6f1498cc9c">&#9670;&nbsp;</a></span>CopyLocalValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::CopyLocalValues </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Sets the local values of one vector equal to another. The sizes must be compatible. </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#af4e373bfd6fd90eb477d7ad97d151f43">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a1bae377ab21d075a224696eec70e1bbe" name="a1bae377ab21d075a224696eec70e1bbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bae377ab21d075a224696eec70e1bbe">&#9670;&nbsp;</a></span>Data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const double * chi_math::ParallelVector::Data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns a direct const pointer to the memory array used internally by the vector to store its owned elements </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a84de156e30a3dde96277fbee9fa0e01f">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a49bc3f83b754f9863b43248d2d96b45a" name="a49bc3f83b754f9863b43248d2d96b45a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49bc3f83b754f9863b43248d2d96b45a">&#9670;&nbsp;</a></span>Data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double * chi_math::ParallelVector::Data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Returns a direct pointer to the memory array used internally by the vector to store its owned elements </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#aed6047221dfdf02c45d2cf5058cfb022">chi_math::ParallelSTLVector</a>.</p>
 
 </div>
 </div>
@@ -404,7 +631,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Return the global size of the parallel vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00059">59</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00057">57</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
@@ -433,98 +660,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Return the size of the locally owned portion of the parallel vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00056">56</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00054">54</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
-<a id="ad5cb2ea24bc5310186d51e7473f7cdce" name="ad5cb2ea24bc5310186d51e7473f7cdce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5cb2ea24bc5310186d51e7473f7cdce">&#9670;&nbsp;</a></span>MakeLocalVector()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; double &gt; chi_math::ParallelVector::MakeLocalVector </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return a vector containing the locally owned data. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00032">32</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
-
-</div>
-</div>
-<a id="ac3b77a99847e1ffa39f80afcc4dd87d1" name="ac3b77a99847e1ffa39f80afcc4dd87d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3b77a99847e1ffa39f80afcc4dd87d1">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double &amp; chi_math::ParallelVector::operator[] </td>
-          <td>(</td>
-          <td class="paramtype">const int64_t&#160;</td>
-          <td class="paramname"><em>local_id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Read/write accessor to the entry at the given local index of the local vector.</p>
-<dl class="section note"><dt>Note</dt><dd>This accessor allows access to all locally stored elements, including any data beyond local_size_ that may exist in derived classes. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00049">49</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
-
-</div>
-</div>
-<a id="ade1f566c81e613bdf79d332fb1fd760d" name="ade1f566c81e613bdf79d332fb1fd760d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade1f566c81e613bdf79d332fb1fd760d">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double chi_math::ParallelVector::operator[] </td>
-          <td>(</td>
-          <td class="paramtype">const int64_t&#160;</td>
-          <td class="paramname"><em>local_id</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Read only accessor to the entry at the given local index of the local vector.</p>
-<dl class="section note"><dt>Note</dt><dd>This accessor allows access to all locally stored elements, including any data beyond local_size_ that may exist in derived classes. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00039">39</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
-
-</div>
-</div>
-<a id="aca98572fc62af64620b6e68c894c9681" name="aca98572fc62af64620b6e68c894c9681"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca98572fc62af64620b6e68c894c9681">&#9670;&nbsp;</a></span>PrintStr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string chi_math::ParallelVector::PrintStr </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Print the local vectors to stings. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00261">261</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
-
-</div>
-</div>
-<a id="ac22fa087e7a7baf5633d76231709e505" name="ac22fa087e7a7baf5633d76231709e505"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac22fa087e7a7baf5633d76231709e505">&#9670;&nbsp;</a></span>Set() <span class="overload">[1/2]</span></h2>
+<a id="ae71dcb83c86594924804ee1fac48cce9" name="ae71dcb83c86594924804ee1fac48cce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71dcb83c86594924804ee1fac48cce9">&#9670;&nbsp;</a></span>MakeClone()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -533,68 +674,350 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_math::ParallelVector::Set </td>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &gt; chi_math::ParallelVector::MakeClone </td>
           <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Creates a copy of the vector datastructures but NOT the values. The values are defaulted to zero. This routine requires no communication. </p>
+
+<p>Implemented in <a class="el" href="../../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html#a7a21097e9ab4b3cd6c478c057322432a">chi_math::GhostedParallelSTLVector</a>, and <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a2cf78dd3bbbe3cf603e842d22e4df10f">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="ad1017998c2226bf984bf6396c6eb73f2" name="ad1017998c2226bf984bf6396c6eb73f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1017998c2226bf984bf6396c6eb73f2">&#9670;&nbsp;</a></span>MakeCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &gt; chi_math::ParallelVector::MakeCopy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Creates a copy of the vector datastructures AND values. This routine requires no communication. </p>
+
+<p>Implemented in <a class="el" href="../../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html#ade3ebb4b38a9a8c01c4cd07be0898d37">chi_math::GhostedParallelSTLVector</a>, and <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#aff5df2d1687b4a8ae82d3f0f8c30b6b1">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a8513bb3775b83e2e775bb8d3f52cf4b7" name="a8513bb3775b83e2e775bb8d3f52cf4b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8513bb3775b83e2e775bb8d3f52cf4b7">&#9670;&nbsp;</a></span>MakeLocalVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; double &gt; chi_math::ParallelVector::MakeLocalVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Set the entries of the locally owned portion of the parallel vector to the given value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00088">88</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p>Return a vector containing the locally owned data. </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#adcdb549d343de17e3487630e00a8092e">chi_math::ParallelSTLVector</a>.</p>
 
 </div>
 </div>
-<a id="aa18744b24026fec250c9b8e52c00849d" name="aa18744b24026fec250c9b8e52c00849d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa18744b24026fec250c9b8e52c00849d">&#9670;&nbsp;</a></span>Set() <span class="overload">[2/2]</span></h2>
+<a id="a9b7ba9c8de90ecd2de30efef7b3fecc5" name="a9b7ba9c8de90ecd2de30efef7b3fecc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b7ba9c8de90ecd2de30efef7b3fecc5">&#9670;&nbsp;</a></span>operator+=()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_math::ParallelVector::Set </td>
+          <td class="memname">virtual void chi_math::ParallelVector::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >In place adding of vectors. The sizes must be compatible. </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a6262e5fe8ec47d6a91376381215bbf44">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a353ed7f093e6a34ee2cb3075246d159b" name="a353ed7f093e6a34ee2cb3075246d159b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a353ed7f093e6a34ee2cb3075246d159b">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double chi_math::ParallelVector::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>local_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Read only accessor to the entry at the given local index of the local vector.</p>
+<dl class="section note"><dt>Note</dt><dd>This accessor allows access to all locally stored elements, including any data beyond local_size_ that may exist in derived classes. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#ac0d6a5d6a1c19fdfbf45af47be7ae0c5">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a608714e2bacd8b33228968d485224df0" name="a608714e2bacd8b33228968d485224df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a608714e2bacd8b33228968d485224df0">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double &amp; chi_math::ParallelVector::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>local_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Read/write accessor to the entry at the given local index of the local vector.</p>
+<dl class="section note"><dt>Note</dt><dd>This accessor allows access to all locally stored elements, including any data beyond local_size_ that may exist in derived classes. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#ab42207505d330193cdb8a174a1e4d1cd">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a82db61fc738cf394c76277abf6369057" name="a82db61fc738cf394c76277abf6369057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82db61fc738cf394c76277abf6369057">&#9670;&nbsp;</a></span>PlusAY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::PlusAY </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Adds a vector multiplied by scalar a, x=x+a*y. Optimized for a=1.0 and -1.0 </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a3671eea1f9309042da8ec2fe06372a6c">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="ae14cf21295f4e9a4763a1731b7766a69" name="ae14cf21295f4e9a4763a1731b7766a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14cf21295f4e9a4763a1731b7766a69">&#9670;&nbsp;</a></span>PrintStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string chi_math::ParallelVector::PrintStr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print the local vectors to stings. </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#accb72b8223f09bdb5fdf988c260e81f3">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a729d2a36c3eddf86e5f015035ed43910" name="a729d2a36c3eddf86e5f015035ed43910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a729d2a36c3eddf86e5f015035ed43910">&#9670;&nbsp;</a></span>Scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::Scale </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Scales a vector by a scalar </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a7759b040b89ed50dfe455ef86ff17a42">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a2604e553c13d50967844b04ac7d6e9ff" name="a2604e553c13d50967844b04ac7d6e9ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2604e553c13d50967844b04ac7d6e9ff">&#9670;&nbsp;</a></span>Set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::Set </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>local_vector</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p >Set the entries of the locally owned portion of the parallel vector to the given STL vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00059">59</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a8a476e8cbf0a00645c3460d9f0d4169d">chi_math::ParallelSTLVector</a>.</p>
 
 </div>
 </div>
-<a id="a41080baafb9d1905c22f415845a2449c" name="a41080baafb9d1905c22f415845a2449c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41080baafb9d1905c22f415845a2449c">&#9670;&nbsp;</a></span>SetValue()</h2>
+<a id="ac4a29beca1dd5ba828a954e5d709cea2" name="ac4a29beca1dd5ba828a954e5d709cea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a29beca1dd5ba828a954e5d709cea2">&#9670;&nbsp;</a></span>Set() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_math::ParallelVector::SetValue </td>
+          <td class="memname">virtual void chi_math::ParallelVector::Set </td>
           <td>(</td>
-          <td class="paramtype">const int64_t&#160;</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Set the entries of the locally owned portion of the parallel vector to the given value. </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#abbdef804a8e5de8176457473787073a4">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="af83afcb70e410240c062f9432568cded" name="af83afcb70e410240c062f9432568cded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af83afcb70e410240c062f9432568cded">&#9670;&nbsp;</a></span>SetValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::SetValue </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>global_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a>&#160;</td>
           <td class="paramname"><em>op_type</em>&#160;</td>
         </tr>
         <tr>
@@ -603,22 +1026,30 @@ Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p >Define a set or add operation for the given global id-value pair</p>
 <p >This routine adds the global id-value pair to the set operation cache, which upon execution of Assemble, communicates the operations to the appropriate process. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00068">68</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a21a39452f983a8ee4efa48672406f163">chi_math::ParallelSTLVector</a>.</p>
 
 </div>
 </div>
-<a id="ae88fa8414c7d4baac3edc4f0f21aece7" name="ae88fa8414c7d4baac3edc4f0f21aece7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae88fa8414c7d4baac3edc4f0f21aece7">&#9670;&nbsp;</a></span>SetValues()</h2>
+<a id="a8cdb36362ad19323c5b5736907f49074" name="a8cdb36362ad19323c5b5736907f49074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cdb36362ad19323c5b5736907f49074">&#9670;&nbsp;</a></span>SetValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void chi_math::ParallelVector::SetValues </td>
+          <td class="memname">virtual void chi_math::ParallelVector::SetValues </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; int64_t &gt; &amp;&#160;</td>
           <td class="paramname"><em>global_ids</em>, </td>
@@ -632,7 +1063,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a>&#160;</td>
           <td class="paramname"><em>op_type</em>&#160;</td>
         </tr>
         <tr>
@@ -641,17 +1072,21 @@ Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p >Group multiple operations into a single call.</p>
 <p >This routine goes through the given global id-value pairs and calls SetValue for each. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html#l00084">84</a> of file <a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a32341cf79cbca8a0dae5c777edbf777b">chi_math::ParallelSTLVector</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Field Documentation</h2>
-<a id="abca09bc90031c20fbddce3c6612900c9" name="abca09bc90031c20fbddce3c6612900c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abca09bc90031c20fbddce3c6612900c9">&#9670;&nbsp;</a></span>add_cache_</h2>
+<a id="ac47ddf16f54df584df7bb61d40a5b61b" name="ac47ddf16f54df584df7bb61d40a5b61b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47ddf16f54df584df7bb61d40a5b61b">&#9670;&nbsp;</a></span>Shift()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -660,20 +1095,26 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae229451b9f073b0218d8d9a51ad9dff2">Operation</a>&gt; chi_math::ParallelVector::add_cache_</td>
+          <td class="memname">virtual void chi_math::ParallelVector::Shift </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Adds a constant scalar value to all the entries of the vector </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00145">145</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a65b4dd616fb673e2fcc4559c272b05a1">chi_math::ParallelSTLVector</a>.</p>
 
 </div>
 </div>
+<h2 class="groupheader">Field Documentation</h2>
 <a id="a5d5eb3858ad197b7e512cb8e360658d4" name="a5d5eb3858ad197b7e512cb8e360658d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d5eb3858ad197b7e512cb8e360658d4">&#9670;&nbsp;</a></span>comm_</h2>
 
@@ -694,31 +1135,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00147">147</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
-
-</div>
-</div>
-<a id="a92706ef725b41cfe2bae42a7cef77fa2" name="a92706ef725b41cfe2bae42a7cef77fa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92706ef725b41cfe2bae42a7cef77fa2">&#9670;&nbsp;</a></span>extents_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;uint64_t&gt; chi_math::ParallelVector::extents_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00139">139</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00178">178</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
@@ -742,7 +1159,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00135">135</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00174">174</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
@@ -766,12 +1183,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00134">134</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00173">173</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
-<a id="a2578565a0b7e6cce711f6681da9c12fa" name="a2578565a0b7e6cce711f6681da9c12fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2578565a0b7e6cce711f6681da9c12fa">&#9670;&nbsp;</a></span>location_id_</h2>
+<a id="a59087611ec6bab62949ae9d31c44e724" name="a59087611ec6bab62949ae9d31c44e724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59087611ec6bab62949ae9d31c44e724">&#9670;&nbsp;</a></span>location_id_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -780,7 +1197,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_math::ParallelVector::location_id_</td>
+          <td class="memname">const int chi_math::ParallelVector::location_id_</td>
         </tr>
       </table>
   </td>
@@ -790,12 +1207,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00137">137</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00176">176</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
-<a id="aafa74326692c5eba6da96683cf755dee" name="aafa74326692c5eba6da96683cf755dee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafa74326692c5eba6da96683cf755dee">&#9670;&nbsp;</a></span>process_count_</h2>
+<a id="a35f5bc475b7020cf13d2dcac9b974ba2" name="a35f5bc475b7020cf13d2dcac9b974ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f5bc475b7020cf13d2dcac9b974ba2">&#9670;&nbsp;</a></span>process_count_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -804,7 +1221,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int chi_math::ParallelVector::process_count_</td>
+          <td class="memname">const int chi_math::ParallelVector::process_count_</td>
         </tr>
       </table>
   </td>
@@ -814,61 +1231,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00138">138</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
-
-</div>
-</div>
-<a id="ab4c9c0e8b1ded7d784eb1647fa1ec3a8" name="ab4c9c0e8b1ded7d784eb1647fa1ec3a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4c9c0e8b1ded7d784eb1647fa1ec3a8">&#9670;&nbsp;</a></span>set_cache_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#ae229451b9f073b0218d8d9a51ad9dff2">Operation</a>&gt; chi_math::ParallelVector::set_cache_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00144">144</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
-
-</div>
-</div>
-<a id="a8776dfdf584fd2014ad29aeff5119a98" name="a8776dfdf584fd2014ad29aeff5119a98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8776dfdf584fd2014ad29aeff5119a98">&#9670;&nbsp;</a></span>values_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;double&gt; chi_math::ParallelVector::values_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d4/d96/parallel__vector_8h_source.html#l00141">141</a> of file <a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00177">177</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>framework/math/ParallelVector/<a class="el" href="../../d4/d96/parallel__vector_8h_source.html">parallel_vector.h</a></li>
-<li>framework/math/ParallelVector/<a class="el" href="../../d7/d18/parallel__vector_8cc_source.html">parallel_vector.cc</a></li>
+<li>framework/math/ParallelVector/<a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a></li>
+<li>framework/math/ParallelVector/<a class="el" href="../../de/de6/_parallel_vector_8cc_source.html">ParallelVector.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

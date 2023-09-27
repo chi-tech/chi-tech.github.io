@@ -106,7 +106,7 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d7c/classchi__physics_1_1_basic_options.html">BasicOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d00/classchi__physics_1_1_constant_time_step_controller.html">ConstantTimeStepController</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc3/classchi__physics_1_1_constant_time_stepper.html">ConstantTimeStepper</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html">FieldFunction</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,7 +132,7 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d3a/classchi__physics_1_1_solver.html">Solver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d81/classchi__physics_1_1_time_step_controller.html">TimeStepController</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d98/classchi__physics_1_1_time_stepper.html">TimeStepper</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -164,6 +164,11 @@ Enumerations</h2></td></tr>
 , <a class="el" href="../../d6/d5f/namespacechi__physics.html#ad03b34f5fd167ff7afde2dfa96ac6312ad3a94694ab7282c52b36b6995abbc0c1">ISOTROPIC_MG_SOURCE</a> = 11
  }</td></tr>
 <tr class="separator:ad03b34f5fd167ff7afde2dfa96ac6312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e6fa33267fddc0b6c278319537704c3"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html#a7e6fa33267fddc0b6c278319537704c3">TimeStepStatus</a> { <a class="el" href="../../d6/d5f/namespacechi__physics.html#a7e6fa33267fddc0b6c278319537704c3ad0749aaba8b833466dfcbb0428e4f89c">SUCCESS</a> = 0
+, <a class="el" href="../../d6/d5f/namespacechi__physics.html#a7e6fa33267fddc0b6c278319537704c3a36fc6065a3e970bc3e6b2e59da52bf2a">FAILURE</a> = 1
+, <a class="el" href="../../d6/d5f/namespacechi__physics.html#a7e6fa33267fddc0b6c278319537704c3a31ba17aa58cdb681423f07ca21a6efc7">NEUTRAL</a> = 2
+ }</td></tr>
+<tr class="separator:a7e6fa33267fddc0b6c278319537704c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -171,8 +176,8 @@ Functions</h2></td></tr>
 <tr class="separator:a9e74ed621ffa4bb09201988b955ed4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4184f70d8d563d6abdb8d9ecc7200a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html#ab4184f70d8d563d6abdb8d9ecc7200a4">RegisterChiObject</a> (chi_physics, <a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html">FieldFunctionGridBased</a>)</td></tr>
 <tr class="separator:ab4184f70d8d563d6abdb8d9ecc7200a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac83929c10bd1614248056b50d46507d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html#ac83929c10bd1614248056b50d46507d9">RegisterChiObject</a> (chi_physics, <a class="el" href="../../d1/d00/classchi__physics_1_1_constant_time_step_controller.html">ConstantTimeStepController</a>)</td></tr>
-<tr class="separator:ac83929c10bd1614248056b50d46507d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949172478306d7ca65c884c5cb97cfec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5f/namespacechi__physics.html#a949172478306d7ca65c884c5cb97cfec">RegisterChiObject</a> (chi_physics, <a class="el" href="../../da/dc3/classchi__physics_1_1_constant_time_stepper.html">ConstantTimeStepper</a>)</td></tr>
+<tr class="separator:a949172478306d7ca65c884c5cb97cfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ae46bc8b7f297ab432b192ea62fec1bc0" name="ae46bc8b7f297ab432b192ea62fec1bc0"></a>
@@ -301,6 +306,35 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7e6fa33267fddc0b6c278319537704c3" name="a7e6fa33267fddc0b6c278319537704c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e6fa33267fddc0b6c278319537704c3">&#9670;&nbsp;</a></span>TimeStepStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="../../d6/d5f/namespacechi__physics.html#a7e6fa33267fddc0b6c278319537704c3">chi_physics::TimeStepStatus</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7e6fa33267fddc0b6c278319537704c3ad0749aaba8b833466dfcbb0428e4f89c" name="a7e6fa33267fddc0b6c278319537704c3ad0749aaba8b833466dfcbb0428e4f89c"></a>SUCCESS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7e6fa33267fddc0b6c278319537704c3a36fc6065a3e970bc3e6b2e59da52bf2a" name="a7e6fa33267fddc0b6c278319537704c3a36fc6065a3e970bc3e6b2e59da52bf2a"></a>FAILURE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7e6fa33267fddc0b6c278319537704c3a31ba17aa58cdb681423f07ca21a6efc7" name="a7e6fa33267fddc0b6c278319537704c3a31ba17aa58cdb681423f07ca21a6efc7"></a>NEUTRAL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d13/_time_stepper_8h_source.html#l00009">9</a> of file <a class="el" href="../../db/d13/_time_stepper_8h_source.html">TimeStepper.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a9e74ed621ffa4bb09201988b955ed4f5" name="a9e74ed621ffa4bb09201988b955ed4f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e74ed621ffa4bb09201988b955ed4f5">&#9670;&nbsp;</a></span>GetPETScConvergedReasonstring()</h2>
@@ -323,8 +357,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac83929c10bd1614248056b50d46507d9" name="ac83929c10bd1614248056b50d46507d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac83929c10bd1614248056b50d46507d9">&#9670;&nbsp;</a></span>RegisterChiObject() <span class="overload">[1/2]</span></h2>
+<a id="a949172478306d7ca65c884c5cb97cfec" name="a949172478306d7ca65c884c5cb97cfec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a949172478306d7ca65c884c5cb97cfec">&#9670;&nbsp;</a></span>RegisterChiObject() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +372,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/d00/classchi__physics_1_1_constant_time_step_controller.html">ConstantTimeStepController</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="../../da/dc3/classchi__physics_1_1_constant_time_stepper.html">ConstantTimeStepper</a>&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>

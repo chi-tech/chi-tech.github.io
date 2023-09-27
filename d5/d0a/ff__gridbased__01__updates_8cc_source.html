@@ -97,27 +97,28 @@ $(document).ready(function(){initNavTree('d5/d0a/ff__gridbased__01__updates_8cc_
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;chi_physics::FieldFunction::UpdateFieldVector: &quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                           <span class="stringliteral">&quot;Attempted update with a vector of insufficient size.&quot;</span>);</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <a class="code hl_variable" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a13e16aaa5233655e34e96b3ad750b6b1">field_vector_</a> = field_vector;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/**Updates the field data with a PETSc vector.*/</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#afbf77d831ecebb196438be62147cb5af">   17</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#adc49fb6be3a3988b44954cdf95a025a4">chi_physics::FieldFunctionGridBased::</a></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><a class="code hl_function" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#adc49fb6be3a3988b44954cdf95a025a4">  UpdateFieldVector</a>(<span class="keyword">const</span> Vec&amp; field_vector)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  PetscInt n;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  VecGetLocalSize(field_vector, &amp;n);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordflow">if</span> (n &lt; field_vector_.size())</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;chi_physics::FieldFunction::UpdateFieldVector: &quot;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                           <span class="stringliteral">&quot;Attempted update with a vector of insufficient size.&quot;</span>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keyword">const</span> <span class="keywordtype">double</span>* x;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  VecGetArrayRead(field_vector, &amp;x);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;n; ++i)</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    field_vector_[i] = x[i];</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  VecRestoreArrayRead(field_vector, &amp;x);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code hl_variable" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a13e16aaa5233655e34e96b3ad750b6b1">field_vector_</a>.size(); ++i)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_variable" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a13e16aaa5233655e34e96b3ad750b6b1">field_vector_</a>[i] = field_vector[i];</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//###################################################################</span><span class="comment"></span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/**Updates the field data with a PETSc vector.*/</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#afbf77d831ecebb196438be62147cb5af">   18</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#adc49fb6be3a3988b44954cdf95a025a4">chi_physics::FieldFunctionGridBased::</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><a class="code hl_function" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#adc49fb6be3a3988b44954cdf95a025a4">  UpdateFieldVector</a>(<span class="keyword">const</span> Vec&amp; field_vector)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  PetscInt n;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  VecGetLocalSize(field_vector, &amp;n);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordflow">if</span> (n &lt; field_vector_.size())</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;chi_physics::FieldFunction::UpdateFieldVector: &quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                           <span class="stringliteral">&quot;Attempted update with a vector of insufficient size.&quot;</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keyword">const</span> <span class="keywordtype">double</span>* x;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  VecGetArrayRead(field_vector, &amp;x);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i=0; i&lt;n; ++i)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    field_vector_[i] = x[i];</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  VecRestoreArrayRead(field_vector, &amp;x);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 <div class="ttc" id="aclasschi__physics_1_1_field_function_grid_based_html_a13e16aaa5233655e34e96b3ad750b6b1"><div class="ttname"><a href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a13e16aaa5233655e34e96b3ad750b6b1">chi_physics::FieldFunctionGridBased::field_vector_</a></div><div class="ttdeci">std::vector&lt; double &gt; field_vector_</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00036">fieldfunction_gridbased.h:36</a></div></div>
 <div class="ttc" id="aclasschi__physics_1_1_field_function_grid_based_html_adc49fb6be3a3988b44954cdf95a025a4"><div class="ttname"><a href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#adc49fb6be3a3988b44954cdf95a025a4">chi_physics::FieldFunctionGridBased::UpdateFieldVector</a></div><div class="ttdeci">void UpdateFieldVector(const std::vector&lt; double &gt; &amp;field_vector)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0a/ff__gridbased__01__updates_8cc_source.html#l00005">ff_gridbased_01_updates.cc:6</a></div></div>
 <div class="ttc" id="afieldfunction__gridbased_8h_html"><div class="ttname"><a href="../../d8/d72/fieldfunction__gridbased_8h.html">fieldfunction_gridbased.h</a></div></div>

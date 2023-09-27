@@ -10,5 +10,6 @@ var modules =
     [ "H Post-Processors", "d9/d81/group__doc___post_processors.html", "d9/d81/group__doc___post_processors" ],
     [ "I Event System", "de/ddb/group__doc___event_system.html", null ],
     [ "X Code modules", "da/da3/group___lua_modules.html", "da/da3/group___lua_modules" ],
-    [ "Z Experimental", "da/dfa/group___doc_experimental.html", "da/dfa/group___doc_experimental" ]
+    [ "Z Experimental", "da/dfa/group___doc_experimental.html", "da/dfa/group___doc_experimental" ],
+    [ "chi_physics.ConstantTimeStepper", "d3/dc8/group__chi__physics_____constant_time_stepper.html", null ]
 ];

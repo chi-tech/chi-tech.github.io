@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ghostedparallelvector_0',['GhostedParallelVector',['../d9/d03/classchi__math_1_1_ghosted_parallel_vector.html',1,'chi_math']]],
+  ['ghostedparallelstlvector_0',['GhostedParallelSTLVector',['../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html',1,'chi_math']]],
   ['ghostinfo_1',['GhostInfo',['../d4/daf/structlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a_1_1_ghost_info.html',1,'lbs::XXPowerIterationKEigenSCDSA']]],
   ['ghostveclocalraw_2',['GhostVecLocalRaw',['../d8/d4e/structchi__math_1_1_p_e_t_sc_utils_1_1_ghost_vec_local_raw.html',1,'chi_math::PETScUtils']]],
   ['globalcellhandler_3',['GlobalCellHandler',['../d7/d24/classchi__mesh_1_1_global_cell_handler.html',1,'chi_mesh']]],

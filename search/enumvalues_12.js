@@ -26,5 +26,6 @@ var searchData=
   ['slicetangent_23',['SLICETANGENT',['../da/db4/namespacechi__mesh_1_1ff__interpolation.html#a49f92e14e4f4b59f46f7a0ba141f355aa9740aff4c8e714ded8459cfb88731bb0',1,'chi_mesh::ff_interpolation']]],
   ['spherical_24',['SPHERICAL',['../dc/d58/namespacechi__math.html#afe9e3188029ef8b07daf8af16eabc6b1a7f7d7e3a21bf7decf99d6fd26848772d',1,'chi_math']]],
   ['string_25',['STRING',['../d5/d1b/namespacechi__data__types.html#acd6a581ad303461c19faf644ae4ab542a63b588d5559f64f89a416e656880b949',1,'chi_data_types::STRING()'],['../dc/d67/namespacechi.html#a94865f8b5b778e6ed8d7258b5e7fb132a63b588d5559f64f89a416e656880b949',1,'chi::STRING()']]],
-  ['suppress_5fwg_5fscatter_26',['SUPPRESS_WG_SCATTER',['../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a747ae7094df6e242dc859a6aec9a203f',1,'lbs']]]
+  ['success_26',['SUCCESS',['../d6/d5f/namespacechi__physics.html#a7e6fa33267fddc0b6c278319537704c3ad0749aaba8b833466dfcbb0428e4f89c',1,'chi_physics']]],
+  ['suppress_5fwg_5fscatter_27',['SUPPRESS_WG_SCATTER',['../d9/d42/namespacelbs.html#a82d24dab89dfe291850d6d18cf1338c6a747ae7094df6e242dc859a6aec9a203f',1,'lbs']]]
 ];

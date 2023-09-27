@@ -331,10 +331,12 @@ template&lt;class R , class T &gt; </div>
 <p >Attempts to retrieve an object of base-type <code>shared_ptr&lt;T&gt;</code> at the given handle. It then attempts to cast it to type <code>shared_ptr&lt;R&gt;</code> and, if successful, will return a reference of type R&amp;. <br  />
 <br  />
 Example usage:</p>
-<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; surf_mesh = chi::GetStackItem&lt;chi_mesh::SurfaceMesh&gt;(</div>
-<div class="line">   chi::surface_mesh_stack, surface_hndl);</div>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; surf_mesh = Chi::GetStackItem&lt;chi_mesh::SurfaceMesh&gt;(</div>
+<div class="line">   <a class="code hl_variable" href="../../d7/dd7/class_chi.html#a8ed25422d8eb407bb9432aeabff2cf20">Chi::object_stack</a>, surface_hndl);</div>
+<div class="line"><span class="comment">// Returns chi_mesh::SurfaceMesh&amp;</span></div>
+<div class="ttc" id="aclass_chi_html_a8ed25422d8eb407bb9432aeabff2cf20"><div class="ttname"><a href="../../d7/dd7/class_chi.html#a8ed25422d8eb407bb9432aeabff2cf20">Chi::object_stack</a></div><div class="ttdeci">static std::vector&lt; ChiObjectPtr &gt; object_stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00096">chi_runtime.h:96</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00182">182</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00183">183</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -382,10 +384,12 @@ template&lt;class T &gt; </div>
 <p >Attempts to obtain object of type <code>shared_ptr&lt;T&gt;</code> at the given handle of a stack ALSO OF TYPE T. <br  />
 <br  />
 Example usage:</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> surf_mesh_ptr = chi::GetStackItemPtr&lt;chi_mesh::SurfaceMesh&gt;(</div>
-<div class="line"> chi::surface_mesh_stack, surf_mesh_hndle, fname);</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> surf_mesh_ptr = <a class="code hl_function" href="../../d7/dd7/class_chi.html#ab804fa46880e7476b0708d8fee2ea9cb">Chi::GetStackItemPtr</a>(</div>
+<div class="line"> <a class="code hl_variable" href="../../d7/dd7/class_chi.html#a8ed25422d8eb407bb9432aeabff2cf20">Chi::object_stack</a>, surf_mesh_hndle, fname);</div>
+<div class="line"><span class="comment">// Returns std::shared_ptr&lt;ChiObject&gt;</span></div>
+<div class="ttc" id="aclass_chi_html_ab804fa46880e7476b0708d8fee2ea9cb"><div class="ttname"><a href="../../d7/dd7/class_chi.html#ab804fa46880e7476b0708d8fee2ea9cb">Chi::GetStackItemPtr</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; &amp; GetStackItemPtr(std::vector&lt; std::shared_ptr&lt; T &gt; &gt; &amp;stack, const size_t handle, const std::string &amp;calling_function_name=&quot;Unknown&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00258">chi_runtime.h:258</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00254">254</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00258">258</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>
@@ -433,10 +437,12 @@ template&lt;class T , class P &gt; </div>
 <p >Attempts to obtain object of type <code>shared_ptr&lt;T&gt;</code> at the given handle of a stack with parent type P. <br  />
 <br  />
 Example usage:</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> surf_mesh_ptr = chi::GetStackItemPtr&lt;chi_mesh::SurfaceMesh&gt;(</div>
-<div class="line"> chi::surface_mesh_stack, surf_mesh_hndle, fname);</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> surf_mesh_ptr =</div>
+<div class="line">  Chi::GetStackItemPtrAsType&lt;chi_mesh::SurfaceMesh&gt;(</div>
+<div class="line">    <a class="code hl_variable" href="../../d7/dd7/class_chi.html#a8ed25422d8eb407bb9432aeabff2cf20">Chi::object_stack</a>, surf_mesh_hndle, fname);</div>
+<div class="line"><span class="comment">// Returns std::shared_ptr&lt;chi_mesh::SurfaceMesh&gt;</span></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00217">217</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/db2/chi__runtime_8h_source.html#l00220">220</a> of file <a class="el" href="../../d3/db2/chi__runtime_8h_source.html">chi_runtime.h</a>.</p>
 
 </div>
 </div>

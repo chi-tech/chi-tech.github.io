@@ -40,7 +40,7 @@ var searchData=
   ['max_5fnum_5fmess_37',['max_num_mess',['../d1/d1d/classchi__mesh_1_1sweep__management_1_1_a_a_h___a_synchronous_communicator.html#a534c45e213eb96b3be3e943e6ad2c772',1,'chi_mesh::sweep_management::AAH_ASynchronousCommunicator']]],
   ['max_5fprecursors_5fper_5fmaterial_5f_38',['max_precursors_per_material_',['../dc/db7/classlbs_1_1_l_b_s_solver.html#ae9b4eea6beb5f7f7487b1cc9fbdf004c',1,'lbs::LBSSolver']]],
   ['max_5ftime_5fsteps_39',['max_time_steps',['../d4/d3b/structlbs_1_1_disc_ord_transient_solver_1_1_options.html#ab05eaf5f9a1ce225abb7ea42a50828b5',1,'lbs::DiscOrdTransientSolver::Options']]],
-  ['max_5ftime_5fsteps_5f_40',['max_time_steps_',['../d9/d3a/classchi__physics_1_1_solver.html#a4e61bac3a585fac0750927827ce6d7e5',1,'chi_physics::Solver']]],
+  ['max_5ftime_5fsteps_5f_40',['max_time_steps_',['../d0/d98/classchi__physics_1_1_time_stepper.html#a3372b282a822eefdabae025e7c9ee680',1,'chi_physics::TimeStepper']]],
   ['maximum_5fiterations_41',['maximum_iterations',['../db/d8f/structchi__math_1_1_linear_solver_1_1_tolerance_options.html#a4f30caeb75a249388f810696de4c98a4',1,'chi_math::LinearSolver::ToleranceOptions::maximum_iterations()'],['../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a3c05e2722fc591f996d437fc16c521cd',1,'chi_math::PETScUtils::PETScSolverSetup::maximum_iterations()']]],
   ['memory_5fbytes_42',['memory_bytes',['../d2/d1b/structchi_1_1_c_s_t_memory.html#a46f4ed227b863f89fbaaf4f210c1924f',1,'chi::CSTMemory']]],
   ['memory_5fgbytes_43',['memory_gbytes',['../d2/d1b/structchi_1_1_c_s_t_memory.html#aad320e497cc4e98a372f348987d8d0bc',1,'chi::CSTMemory']]],

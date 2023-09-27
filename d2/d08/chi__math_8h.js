@@ -8,6 +8,11 @@ var chi__math_8h =
       [ "CYLINDRICAL", "d2/d08/chi__math_8h.html#afe9e3188029ef8b07daf8af16eabc6b1af6840fd287b44b1616267bd19305909a", null ],
       [ "SPHERICAL", "d2/d08/chi__math_8h.html#afe9e3188029ef8b07daf8af16eabc6b1a7f7d7e3a21bf7decf99d6fd26848772d", null ]
     ] ],
+    [ "NormType", "d2/d08/chi__math_8h.html#a76861eaf9507dd58430c460e814289c1", [
+      [ "L1_NORM", "d2/d08/chi__math_8h.html#a76861eaf9507dd58430c460e814289c1a68616ae21712c00705b962f4eff06eaa", null ],
+      [ "L2_NORM", "d2/d08/chi__math_8h.html#a76861eaf9507dd58430c460e814289c1a80485e54c7a3c93a0f74637c6b918ce5", null ],
+      [ "LINF_NORM", "d2/d08/chi__math_8h.html#a76861eaf9507dd58430c460e814289c1a888ba88e94f86b6b428f4a355a5d28b8", null ]
+    ] ],
     [ "SpatialDiscretizationType", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0", [
       [ "UNDEFINED", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0a0db45d2a4141101bdfe48e3314cfbca3", null ],
       [ "FINITE_VOLUME", "d2/d08/chi__math_8h.html#a6849793d0950c05a3e5a26a9ea700cb0aec3041e97b53638eb474d4998174f9ee", null ],

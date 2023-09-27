@@ -91,7 +91,7 @@ var annotated_dup =
       [ "DynamicMatrix", "df/d4b/classchi__math_1_1_dynamic_matrix.html", "df/d4b/classchi__math_1_1_dynamic_matrix" ],
       [ "DynamicVector", "db/d08/classchi__math_1_1_dynamic_vector.html", "db/d08/classchi__math_1_1_dynamic_vector" ],
       [ "FunctionDimAToDimB", "d4/d29/classchi__math_1_1_function_dim_a_to_dim_b.html", "d4/d29/classchi__math_1_1_function_dim_a_to_dim_b" ],
-      [ "GhostedParallelVector", "d9/d03/classchi__math_1_1_ghosted_parallel_vector.html", "d9/d03/classchi__math_1_1_ghosted_parallel_vector" ],
+      [ "GhostedParallelSTLVector", "d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html", "d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector" ],
       [ "GolubFischer", "d7/d89/classchi__math_1_1_golub_fischer.html", "d7/d89/classchi__math_1_1_golub_fischer" ],
       [ "ImplicitEulerTimeIntegration", "da/d13/classchi__math_1_1_implicit_euler_time_integration.html", "da/d13/classchi__math_1_1_implicit_euler_time_integration" ],
       [ "LinearSolver", "dd/d52/classchi__math_1_1_linear_solver.html", "dd/d52/classchi__math_1_1_linear_solver" ],
@@ -99,6 +99,8 @@ var annotated_dup =
       [ "NonLinearFunction", "d6/dc4/classchi__math_1_1_non_linear_function.html", "d6/dc4/classchi__math_1_1_non_linear_function" ],
       [ "NonLinearSolver", "dd/deb/classchi__math_1_1_non_linear_solver.html", "dd/deb/classchi__math_1_1_non_linear_solver" ],
       [ "NonLinearSolverContext", "d2/d14/structchi__math_1_1_non_linear_solver_context.html", "d2/d14/structchi__math_1_1_non_linear_solver_context" ],
+      [ "NonLinearSolverOptions", "dd/d3c/classchi__math_1_1_non_linear_solver_options.html", "dd/d3c/classchi__math_1_1_non_linear_solver_options" ],
+      [ "ParallelSTLVector", "d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html", "d3/de3/classchi__math_1_1_parallel_s_t_l_vector" ],
       [ "ParallelVector", "d0/dcb/classchi__math_1_1_parallel_vector.html", "d0/dcb/classchi__math_1_1_parallel_vector" ],
       [ "PolygonMappingFE_PWL", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l" ],
       [ "PolygonMappingFE_PWL_Cylindrical", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical.html", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical" ],
@@ -223,7 +225,7 @@ var annotated_dup =
       [ "AdjointMGXS", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s" ],
       [ "BasicOption", "d2/dd8/classchi__physics_1_1_basic_option.html", "d2/dd8/classchi__physics_1_1_basic_option" ],
       [ "BasicOptions", "d1/d7c/classchi__physics_1_1_basic_options.html", "d1/d7c/classchi__physics_1_1_basic_options" ],
-      [ "ConstantTimeStepController", "d1/d00/classchi__physics_1_1_constant_time_step_controller.html", "d1/d00/classchi__physics_1_1_constant_time_step_controller" ],
+      [ "ConstantTimeStepper", "da/dc3/classchi__physics_1_1_constant_time_stepper.html", "da/dc3/classchi__physics_1_1_constant_time_stepper" ],
       [ "FieldFunction", "df/de9/classchi__physics_1_1_field_function.html", "df/de9/classchi__physics_1_1_field_function" ],
       [ "FieldFunctionGridBased", "d3/d4a/classchi__physics_1_1_field_function_grid_based.html", "d3/d4a/classchi__physics_1_1_field_function_grid_based" ],
       [ "FieldFunctionInterface", "d9/ddd/classchi__physics_1_1_field_function_interface.html", "d9/ddd/classchi__physics_1_1_field_function_interface" ],
@@ -236,7 +238,7 @@ var annotated_dup =
       [ "ScalarValue", "db/d6e/classchi__physics_1_1_scalar_value.html", "db/d6e/classchi__physics_1_1_scalar_value" ],
       [ "SingleStateMGXS", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s.html", "de/dc9/classchi__physics_1_1_single_state_m_g_x_s" ],
       [ "Solver", "d9/d3a/classchi__physics_1_1_solver.html", "d9/d3a/classchi__physics_1_1_solver" ],
-      [ "TimeStepController", "d4/d81/classchi__physics_1_1_time_step_controller.html", "d4/d81/classchi__physics_1_1_time_step_controller" ]
+      [ "TimeStepper", "d0/d98/classchi__physics_1_1_time_stepper.html", "d0/d98/classchi__physics_1_1_time_stepper" ]
     ] ],
     [ "dfem_diffusion", "dc/dbe/namespacedfem__diffusion.html", [
       [ "Boundary", "dd/d4b/classdfem__diffusion_1_1_boundary.html", "dd/d4b/classdfem__diffusion_1_1_boundary" ],
