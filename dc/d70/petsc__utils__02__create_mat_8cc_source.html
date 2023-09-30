@@ -110,9 +110,9 @@ $(document).ready(function(){initNavTree('dc/d70/petsc__utils__02__create_mat_8c
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">\endcode</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"></span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">   25</a></span>Mat <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">chi_math::PETScUtils::CreateSquareMatrix</a>(int64_t local_size, int64_t global_size)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">   25</a></span><a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695">Mat</a> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">chi_math::PETScUtils::CreateSquareMatrix</a>(int64_t local_size, int64_t global_size)</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  Mat A;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695">Mat</a> A;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  MatCreate(PETSC_COMM_WORLD,&amp;A);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  MatSetType(A,MATMPIAIJ);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  MatSetSizes(A,local_size, local_size,</div>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('dc/d70/petsc__utils__02__create_mat_8c
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment"></span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#acd2c2c48b9007d3effa0a21e05665d50">   58</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">chi_math::PETScUtils::</a></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">CreateSquareMatrix</a>(Mat&amp; A, int64_t local_size, int64_t global_size)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">CreateSquareMatrix</a>(<a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695">Mat</a>&amp; A, int64_t local_size, int64_t global_size)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  MatCreate(PETSC_COMM_WORLD,&amp;A);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  MatSetType(A,MATMPIAIJ);</div>
@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('dc/d70/petsc__utils__02__create_mat_8c
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">\endcode</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a1baca8287da5a48e6d56ba3da4c39bab">   84</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a1baca8287da5a48e6d56ba3da4c39bab">chi_math::PETScUtils::InitMatrixSparsity</a>(</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  Mat &amp;A,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695">Mat</a> &amp;A,</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keyword">const</span> std::vector&lt;int64_t&gt;&amp; nodal_nnz_in_diag,</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keyword">const</span> std::vector&lt;int64_t&gt;&amp; nodal_nnz_off_diag)</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
@@ -194,7 +194,7 @@ $(document).ready(function(){initNavTree('dc/d70/petsc__utils__02__create_mat_8c
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">\endcode</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac20418f18ca4f05d93442a6158bc4a78">  108</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a1baca8287da5a48e6d56ba3da4c39bab">chi_math::PETScUtils::InitMatrixSparsity</a>(</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  Mat &amp;A,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695">Mat</a> &amp;A,</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  int64_t nodal_nnz_in_diag,</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  int64_t nodal_nnz_off_diag)</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>{</div>
@@ -206,6 +206,7 @@ $(document).ready(function(){initNavTree('dc/d70/petsc__utils__02__create_mat_8c
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a1baca8287da5a48e6d56ba3da4c39bab"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a1baca8287da5a48e6d56ba3da4c39bab">chi_math::PETScUtils::InitMatrixSparsity</a></div><div class="ttdeci">void InitMatrixSparsity(Mat &amp;A, const std::vector&lt; int64_t &gt; &amp;nodal_nnz_in_diag, const std::vector&lt; int64_t &gt; &amp;nodal_nnz_off_diag)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d70/petsc__utils__02__create_mat_8cc_source.html#l00084">petsc_utils_02_createMat.cc:84</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ad3c389879eeafb68d9b7540887b883cd"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad3c389879eeafb68d9b7540887b883cd">chi_math::PETScUtils::CreateSquareMatrix</a></div><div class="ttdeci">Mat CreateSquareMatrix(int64_t local_size, int64_t global_size)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d70/petsc__utils__02__create_mat_8cc_source.html#l00025">petsc_utils_02_createMat.cc:25</a></div></div>
+<div class="ttc" id="apetsc__forward__declarations_8h_html_a28b1c75999a6b1553eb6f83787eb8695"><div class="ttname"><a href="../../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695">Mat</a></div><div class="ttdeci">struct _p_Mat * Mat</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc1/petsc__forward__declarations_8h_source.html#l00010">petsc_forward_declarations.h:10</a></div></div>
 <div class="ttc" id="apetsc__utils_8h_html"><div class="ttname"><a href="../../da/d0e/petsc__utils_8h.html">petsc_utils.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

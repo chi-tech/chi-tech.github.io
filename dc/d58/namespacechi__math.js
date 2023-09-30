@@ -71,7 +71,6 @@ var namespacechi__math =
     [ "NonLinearSolverPETSc", "dc/d58/namespacechi__math.html#acb5c88ad845037b70db309711e9cf836", null ],
     [ "QuadraturePointXYZ", "dc/d58/namespacechi__math.html#aad0a5ec86fc2a3bdb8bb158c05935e5c", null ],
     [ "SDMPtr", "dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7", null ],
-    [ "SMDPtr", "dc/d58/namespacechi__math.html#adebeff65d5db71418d1b0e5d21de44dd", null ],
     [ "SpatialDiscretizationPtr", "dc/d58/namespacechi__math.html#aed18279f80ae4b3fc28796abe3da97f4", null ],
     [ "Tensor2N", "dc/d58/namespacechi__math.html#a70284ca276fc295317eee71e23f0df19", null ],
     [ "TensorRN", "dc/d58/namespacechi__math.html#a24af91734cb5a0b5d7375e4b7f732ab3", null ],

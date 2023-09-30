@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('d1/da5/_cell_volume_integral_post_proc
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    <span class="stringliteral">&quot;Attempted to access invalid field&quot;</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    <span class="stringliteral">&quot;function&quot;</span>);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = grid_field_function-&gt;SDM().Grid();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = grid_field_function-&gt;GetSpatialDiscretization().Grid();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">const</span> <span class="keyword">auto</span>* logical_volume_ptr_ = <a class="code hl_function" href="../../d2/dc8/classchi__mesh_1_1_logical_volume_interface.html#a8923c988203a263077892c3d81f71d29">GetLogicalVolume</a>();</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordflow">if</span> (logical_volume_ptr_ == <span class="keyword">nullptr</span>)</div>
@@ -176,10 +176,10 @@ $(document).ready(function(){initNavTree('d1/da5/_cell_volume_integral_post_proc
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    <span class="stringliteral">&quot;function&quot;</span>);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ref_ff = *grid_field_function;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = ref_ff.SDM();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = ref_ff.GetSpatialDiscretization();</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid = sdm.Grid();</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; uk_man = ref_ff.UnkManager();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; uk_man = ref_ff.GetUnknownManager();</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keyword">const</span> <span class="keyword">auto</span> uid = 0;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">const</span> <span class="keyword">auto</span> cid = 0;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>

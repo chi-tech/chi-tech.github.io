@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('d3/d4a/classchi__physics_1_1_field_fun
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle"><div class="title">chi_physics::FieldFunctionGridBased Class Reference</div></div>
 </div><!--header-->
@@ -110,8 +110,6 @@ Inheritance diagram for chi_physics::FieldFunctionGridBased:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a7acfa500303e61035929de7781998c96"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a>, <a class="el" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a7acfa500303e61035929de7781998c96">BoundingBox</a></td></tr>
 <tr class="separator:a7acfa500303e61035929de7781998c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0e4bee1288fcecb59a00dcacab23af"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html">chi_math::VectorGhostCommunicator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a4a0e4bee1288fcecb59a00dcacab23af">VectorGhostCommPtr</a></td></tr>
-<tr class="separator:a4a0e4bee1288fcecb59a00dcacab23af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad132546c692ad5afc703fb1aaa56b705"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::shared_ptr&lt; const <a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html">FieldFunctionGridBased</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#ad132546c692ad5afc703fb1aaa56b705">FFList</a></td></tr>
 <tr class="separator:ad132546c692ad5afc703fb1aaa56b705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -119,23 +117,23 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a653069fe640ade5efab0eec8e3f02115"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a653069fe640ade5efab0eec8e3f02115">FieldFunctionGridBased</a> (const <a class="el" href="../../d8/d4d/classchi_1_1_input_parameters.html">chi::InputParameters</a> &amp;params)</td></tr>
 <tr class="separator:a653069fe640ade5efab0eec8e3f02115"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0f650075e28a49cee2cbe3c9a565ac2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#ac0f650075e28a49cee2cbe3c9a565ac2">FieldFunctionGridBased</a> (const std::string &amp;text_name, <a class="el" href="../../dc/d58/namespacechi__math.html#adebeff65d5db71418d1b0e5d21de44dd">chi_math::SMDPtr</a> &amp;sdm_ptr, <a class="el" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a> unknown)</td></tr>
-<tr class="separator:ac0f650075e28a49cee2cbe3c9a565ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82b63a7980d382f381a46001ca409261"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a82b63a7980d382f381a46001ca409261">FieldFunctionGridBased</a> (const std::string &amp;text_name, <a class="el" href="../../dc/d58/namespacechi__math.html#adebeff65d5db71418d1b0e5d21de44dd">chi_math::SMDPtr</a> &amp;sdm_ptr, <a class="el" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a> unknown, std::vector&lt; double &gt; field_vector)</td></tr>
-<tr class="separator:a82b63a7980d382f381a46001ca409261"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84f5d4d6960a776353c9049ef7ff0529"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a84f5d4d6960a776353c9049ef7ff0529">FieldFunctionGridBased</a> (const std::string &amp;text_name, <a class="el" href="../../dc/d58/namespacechi__math.html#adebeff65d5db71418d1b0e5d21de44dd">chi_math::SMDPtr</a> &amp;sdm_ptr, <a class="el" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a> unknown, double field_value)</td></tr>
-<tr class="separator:a84f5d4d6960a776353c9049ef7ff0529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ed1e4d80175d83d7f128528289b649"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a59ed1e4d80175d83d7f128528289b649">FieldFunctionGridBased</a> (const std::string &amp;text_name, <a class="el" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a> &amp;discretization_ptr, <a class="el" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a> unknown)</td></tr>
+<tr class="separator:a59ed1e4d80175d83d7f128528289b649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c18b3c525738690ab1e661b26205da1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a1c18b3c525738690ab1e661b26205da1">FieldFunctionGridBased</a> (const std::string &amp;text_name, <a class="el" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a> &amp;sdm_ptr, <a class="el" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a> unknown, const std::vector&lt; double &gt; &amp;field_vector)</td></tr>
+<tr class="separator:a1c18b3c525738690ab1e661b26205da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f2d24c69f8fbcbda5cbe251ac8fd07e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a8f2d24c69f8fbcbda5cbe251ac8fd07e">FieldFunctionGridBased</a> (const std::string &amp;text_name, <a class="el" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a> &amp;sdm_ptr, <a class="el" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a> unknown, double field_value)</td></tr>
+<tr class="separator:a8f2d24c69f8fbcbda5cbe251ac8fd07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b6d712899564038d4aa3b2aa19bb2fe"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a9b6d712899564038d4aa3b2aa19bb2fe">~FieldFunctionGridBased</a> ()=default</td></tr>
 <tr class="separator:a9b6d712899564038d4aa3b2aa19bb2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72df9e04ec0e3feddb3f2b2d29f5e8b4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a72df9e04ec0e3feddb3f2b2d29f5e8b4">SDM</a> () const</td></tr>
-<tr class="separator:a72df9e04ec0e3feddb3f2b2d29f5e8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d89fc88f1ed9b08a98caf860109f6d0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a7d89fc88f1ed9b08a98caf860109f6d0">GetSpatialDiscretization</a> () const</td></tr>
+<tr class="separator:a7d89fc88f1ed9b08a98caf860109f6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5342df4a397ca9c4ee3c7a3f456ce674"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a5342df4a397ca9c4ee3c7a3f456ce674">FieldVectorRead</a> () const</td></tr>
 <tr class="separator:a5342df4a397ca9c4ee3c7a3f456ce674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0f4327767e40429b39be55ef9ad9b5c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#aa0f4327767e40429b39be55ef9ad9b5c">FieldVector</a> ()</td></tr>
 <tr class="separator:aa0f4327767e40429b39be55ef9ad9b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc49fb6be3a3988b44954cdf95a025a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#adc49fb6be3a3988b44954cdf95a025a4">UpdateFieldVector</a> (const std::vector&lt; double &gt; &amp;field_vector)</td></tr>
 <tr class="separator:adc49fb6be3a3988b44954cdf95a025a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbf77d831ecebb196438be62147cb5af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#afbf77d831ecebb196438be62147cb5af">UpdateFieldVector</a> (const Vec &amp;field_vector)</td></tr>
+<tr class="memitem:afbf77d831ecebb196438be62147cb5af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#afbf77d831ecebb196438be62147cb5af">UpdateFieldVector</a> (const <a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> &amp;field_vector)</td></tr>
 <tr class="separator:afbf77d831ecebb196438be62147cb5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accd95da3b28a8ea7479f62d610adae78"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#accd95da3b28a8ea7479f62d610adae78">GetGhostedFieldVector</a> () const</td></tr>
 <tr class="separator:accd95da3b28a8ea7479f62d610adae78"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,8 +153,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d8baf88ebc3f4081304634c46391844 inherit pub_methods_classchi__physics_1_1_field_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65786b36ab9956e24a393d70580a4a5f inherit pub_methods_classchi__physics_1_1_field_function"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html#a65786b36ab9956e24a393d70580a4a5f">Unknown</a> () const</td></tr>
 <tr class="separator:a65786b36ab9956e24a393d70580a4a5f inherit pub_methods_classchi__physics_1_1_field_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3e64d64fe2168aa56fbaf723acc0009 inherit pub_methods_classchi__physics_1_1_field_function"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html#ae3e64d64fe2168aa56fbaf723acc0009">UnkManager</a> () const</td></tr>
-<tr class="separator:ae3e64d64fe2168aa56fbaf723acc0009 inherit pub_methods_classchi__physics_1_1_field_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59e8edc0b472e9a116a4b48f1fcb06c inherit pub_methods_classchi__physics_1_1_field_function"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html#ab59e8edc0b472e9a116a4b48f1fcb06c">GetUnknownManager</a> () const</td></tr>
+<tr class="separator:ab59e8edc0b472e9a116a4b48f1fcb06c inherit pub_methods_classchi__physics_1_1_field_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c4cd26be846cf25370c95e45efcbc6f inherit pub_methods_classchi__physics_1_1_field_function"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html#a2c4cd26be846cf25370c95e45efcbc6f">PushOntoStack</a> (std::shared_ptr&lt; <a class="el" href="../../d6/d15/class_chi_object.html">ChiObject</a> &gt; &amp;new_object) override</td></tr>
 <tr class="memdesc:a2c4cd26be846cf25370c95e45efcbc6f inherit pub_methods_classchi__physics_1_1_field_function"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overrides the stack placement so that FieldFunctions go to the field function stack.  <a href="../../df/de9/classchi__physics_1_1_field_function.html#a2c4cd26be846cf25370c95e45efcbc6f">More...</a><br /></td></tr>
 <tr class="separator:a2c4cd26be846cf25370c95e45efcbc6f inherit pub_methods_classchi__physics_1_1_field_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,26 +189,26 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a9829d3200975859bd4a004601d471363"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d58/namespacechi__math.html#adebeff65d5db71418d1b0e5d21de44dd">chi_math::SMDPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a9829d3200975859bd4a004601d471363">sdm_</a></td></tr>
-<tr class="separator:a9829d3200975859bd4a004601d471363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13e16aaa5233655e34e96b3ad750b6b1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a13e16aaa5233655e34e96b3ad750b6b1">field_vector_</a></td></tr>
-<tr class="separator:a13e16aaa5233655e34e96b3ad750b6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a47bf6f54c4fa8cb64d5728c2932f9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a8a47bf6f54c4fa8cb64d5728c2932f9a">sdm_</a></td></tr>
+<tr class="separator:a8a47bf6f54c4fa8cb64d5728c2932f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c753bcb9e07e6abcae7826d974a2c3d"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html">chi_math::GhostedParallelSTLVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a8c753bcb9e07e6abcae7826d974a2c3d">ghosted_field_vector_</a></td></tr>
+<tr class="separator:a8c753bcb9e07e6abcae7826d974a2c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a0a13f8743bb097871299dff5025c33d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a4a0e4bee1288fcecb59a00dcacab23af">VectorGhostCommPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a0a13f8743bb097871299dff5025c33d3">MakeGhostCommunicator</a> ()</td></tr>
-<tr class="separator:a0a13f8743bb097871299dff5025c33d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:ae52f443648f24cf75be933bfb5db000a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#ae52f443648f24cf75be933bfb5db000a">MakeSpatialDiscretization</a> (const <a class="el" href="../../d8/d4d/classchi_1_1_input_parameters.html">chi::InputParameters</a> &amp;params)</td></tr>
+<tr class="separator:ae52f443648f24cf75be933bfb5db000a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231f4277d5a0acac766d90f689ec5c7e"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html">chi_math::GhostedParallelSTLVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a231f4277d5a0acac766d90f689ec5c7e">MakeFieldVector</a> (const <a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a> &amp;discretization, const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;uk_man)</td></tr>
+<tr class="separator:a231f4277d5a0acac766d90f689ec5c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a441ae82bff8a752c3f0816c8d0b635f9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a7acfa500303e61035929de7781998c96">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a441ae82bff8a752c3f0816c8d0b635f9">local_grid_bounding_box_</a></td></tr>
 <tr class="separator:a441ae82bff8a752c3f0816c8d0b635f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a048640b1da0d5eae1acc676e1d7b8b9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a4a0e4bee1288fcecb59a00dcacab23af">VectorGhostCommPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a048640b1da0d5eae1acc676e1d7b8b9a">vector_ghost_communicator_</a> = nullptr</td></tr>
-<tr class="separator:a048640b1da0d5eae1acc676e1d7b8b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00028">28</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00029">29</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a7acfa500303e61035929de7781998c96" name="a7acfa500303e61035929de7781998c96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7acfa500303e61035929de7781998c96">&#9670;&nbsp;</a></span>BoundingBox</h2>
@@ -224,7 +222,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00031">31</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00032">32</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
 
 </div>
 </div>
@@ -239,24 +237,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Static method to export multiple grid-based field functions. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00084">84</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
-
-</div>
-</div>
-<a id="a4a0e4bee1288fcecb59a00dcacab23af" name="a4a0e4bee1288fcecb59a00dcacab23af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a0e4bee1288fcecb59a00dcacab23af">&#9670;&nbsp;</a></span>VectorGhostCommPtr</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html">chi_math::VectorGhostCommunicator</a>&gt; <a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a4a0e4bee1288fcecb59a00dcacab23af">chi_physics::FieldFunctionGridBased::VectorGhostCommPtr</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00032">32</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00078">78</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
 
 </div>
 </div>
@@ -286,12 +269,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >ObjectMaker based constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00036">36</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00050">50</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="ac0f650075e28a49cee2cbe3c9a565ac2" name="ac0f650075e28a49cee2cbe3c9a565ac2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0f650075e28a49cee2cbe3c9a565ac2">&#9670;&nbsp;</a></span>FieldFunctionGridBased() <span class="overload">[2/4]</span></h2>
+<a id="a59ed1e4d80175d83d7f128528289b649" name="a59ed1e4d80175d83d7f128528289b649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59ed1e4d80175d83d7f128528289b649">&#9670;&nbsp;</a></span>FieldFunctionGridBased() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,8 +288,8 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#adebeff65d5db71418d1b0e5d21de44dd">chi_math::SMDPtr</a> &amp;&#160;</td>
-          <td class="paramname"><em>sdm_ptr</em>, </td>
+          <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>discretization_ptr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -323,12 +306,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Creates a field function, filling it with zeros. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00061">61</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00062">62</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a82b63a7980d382f381a46001ca409261" name="a82b63a7980d382f381a46001ca409261"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82b63a7980d382f381a46001ca409261">&#9670;&nbsp;</a></span>FieldFunctionGridBased() <span class="overload">[3/4]</span></h2>
+<a id="a1c18b3c525738690ab1e661b26205da1" name="a1c18b3c525738690ab1e661b26205da1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c18b3c525738690ab1e661b26205da1">&#9670;&nbsp;</a></span>FieldFunctionGridBased() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,7 +325,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#adebeff65d5db71418d1b0e5d21de44dd">chi_math::SMDPtr</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>sdm_ptr</em>, </td>
         </tr>
         <tr>
@@ -354,7 +337,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>field_vector</em>&#160;</td>
         </tr>
         <tr>
@@ -366,12 +349,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Creates a field function with an associated field vector. The field's data vector is set to the incoming field vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00075">75</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00074">74</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
-<a id="a84f5d4d6960a776353c9049ef7ff0529" name="a84f5d4d6960a776353c9049ef7ff0529"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84f5d4d6960a776353c9049ef7ff0529">&#9670;&nbsp;</a></span>FieldFunctionGridBased() <span class="overload">[4/4]</span></h2>
+<a id="a8f2d24c69f8fbcbda5cbe251ac8fd07e" name="a8f2d24c69f8fbcbda5cbe251ac8fd07e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f2d24c69f8fbcbda5cbe251ac8fd07e">&#9670;&nbsp;</a></span>FieldFunctionGridBased() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -385,7 +368,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#adebeff65d5db71418d1b0e5d21de44dd">chi_math::SMDPtr</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>sdm_ptr</em>, </td>
         </tr>
         <tr>
@@ -409,7 +392,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Creates a field function where all the values are assigned to the single supplied value. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00096">96</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00092">92</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -478,10 +461,11 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Evaluates the field function, on a cell, at the specified point. </p>
 
 <p>Reimplemented from <a class="el" href="../../df/de9/classchi__physics_1_1_field_function.html#a3858336ba12fbd5cb81e85c6556f5c41">chi_physics::FieldFunction</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/de6/ff__gridbased__05__values_8cc_source.html#l00089">89</a> of file <a class="el" href="../../d7/de6/ff__gridbased__05__values_8cc_source.html">ff_gridbased_05_values.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/de6/ff__gridbased__05__values_8cc_source.html#l00092">92</a> of file <a class="el" href="../../d7/de6/ff__gridbased__05__values_8cc_source.html">ff_gridbased_05_values.cc</a>.</p>
 
 </div>
 </div>
@@ -520,7 +504,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Export multiple field functions to VTK. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/db3/ff__gridbased__03b__exportvtkwithappend_8cc_source.html#l00017">17</a> of file <a class="el" href="../../d7/db3/ff__gridbased__03b__exportvtkwithappend_8cc_source.html">ff_gridbased_03b_exportvtkwithappend.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/db3/ff__gridbased__03b__exportvtkwithappend_8cc_source.html#l00018">18</a> of file <a class="el" href="../../d7/db3/ff__gridbased__03b__exportvtkwithappend_8cc_source.html">ff_gridbased_03b_exportvtkwithappend.cc</a>.</p>
 
 </div>
 </div>
@@ -529,9 +513,6 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt; double &gt; &amp; chi_physics::FieldFunctionGridBased::FieldVector </td>
@@ -540,14 +521,10 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p >Returns a reference to the locally stored field data. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00077">77</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00119">119</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -556,9 +533,6 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const std::vector&lt; double &gt; &amp; chi_physics::FieldFunctionGridBased::FieldVectorRead </td>
@@ -567,14 +541,10 @@ Private Attributes</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p >Returns a read-only reference to the locally stored field data. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00076">76</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00114">114</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -592,9 +562,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Makes a copy of the locally stored data with ghost access.</p>
 <p >Makes a ghosted version of the field vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d82/ff__gridbased__04__utils_8cc_source.html#l00010">10</a> of file <a class="el" href="../../da/d82/ff__gridbased__04__utils_8cc_source.html">ff_gridbased_04_utils.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d82/ff__gridbased__04__utils_8cc_source.html#l00006">6</a> of file <a class="el" href="../../da/d82/ff__gridbased__04__utils_8cc_source.html">ff_gridbased_04_utils.cc</a>.</p>
 
 </div>
 </div>
@@ -622,7 +593,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns required input parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00016">16</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -653,62 +624,97 @@ Private Attributes</h2></td></tr>
 <p>Returns the component values at requested point. </p>
 <p >Not necessarily an optimal routine to use when repeatedly querying a field function. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/de6/ff__gridbased__05__values_8cc_source.html#l00015">15</a> of file <a class="el" href="../../d7/de6/ff__gridbased__05__values_8cc_source.html">ff_gridbased_05_values.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/de6/ff__gridbased__05__values_8cc_source.html#l00016">16</a> of file <a class="el" href="../../d7/de6/ff__gridbased__05__values_8cc_source.html">ff_gridbased_05_values.cc</a>.</p>
 
 </div>
 </div>
-<a id="a0a13f8743bb097871299dff5025c33d3" name="a0a13f8743bb097871299dff5025c33d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a13f8743bb097871299dff5025c33d3">&#9670;&nbsp;</a></span>MakeGhostCommunicator()</h2>
+<a id="a7d89fc88f1ed9b08a98caf860109f6d0" name="a7d89fc88f1ed9b08a98caf860109f6d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d89fc88f1ed9b08a98caf860109f6d0">&#9670;&nbsp;</a></span>GetSpatialDiscretization()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../d1/db0/classchi__math_1_1_vector_ghost_communicator.html">chi_math::VectorGhostCommunicator</a> &gt; chi_physics::FieldFunctionGridBased::MakeGhostCommunicator </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Private method for creating the ghost communicator. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00113">113</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
-
-</div>
-</div>
-<a id="a72df9e04ec0e3feddb3f2b2d29f5e8b4" name="a72df9e04ec0e3feddb3f2b2d29f5e8b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72df9e04ec0e3feddb3f2b2d29f5e8b4">&#9670;&nbsp;</a></span>SDM()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a> &amp; chi_physics::FieldFunctionGridBased::SDM </td>
+          <td class="memname">const <a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a> &amp; chi_physics::FieldFunctionGridBased::GetSpatialDiscretization </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+</div><div class="memdoc">
+<p >Returns the spatial discretization method. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00107">107</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="a231f4277d5a0acac766d90f689ec5c7e" name="a231f4277d5a0acac766d90f689ec5c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a231f4277d5a0acac766d90f689ec5c7e">&#9670;&nbsp;</a></span>MakeFieldVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html">chi_math::GhostedParallelSTLVector</a> &gt; chi_physics::FieldFunctionGridBased::MakeFieldVector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/d1d/classchi__math_1_1_spatial_discretization.html">chi_math::SpatialDiscretization</a> &amp;&#160;</td>
+          <td class="paramname"><em>discretization</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>uk_man</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Static method for making the ghosted vector for the constructors.</p>
+<p >Private method for creating the field vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00075">75</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00180">180</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
+
+</div>
+</div>
+<a id="ae52f443648f24cf75be933bfb5db000a" name="ae52f443648f24cf75be933bfb5db000a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae52f443648f24cf75be933bfb5db000a">&#9670;&nbsp;</a></span>MakeSpatialDiscretization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a> chi_physics::FieldFunctionGridBased::MakeSpatialDiscretization </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d4d/classchi_1_1_input_parameters.html">chi::InputParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Static method for making the GetSpatialDiscretization for the constructors.</p>
+<p >Private method for creating the spatial discretization method. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html#l00126">126</a> of file <a class="el" href="../../d1/d2f/ff__gridbased__00__constrdestr_8cc_source.html">ff_gridbased_00_constrdestr.cc</a>.</p>
 
 </div>
 </div>
@@ -727,9 +733,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Updates the field vector with a local STL vector.</p>
 <p >Updates the field data with a STL vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d0a/ff__gridbased__01__updates_8cc_source.html#l00005">5</a> of file <a class="el" href="../../d5/d0a/ff__gridbased__01__updates_8cc_source.html">ff_gridbased_01_updates.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d0a/ff__gridbased__01__updates_8cc_source.html#l00009">9</a> of file <a class="el" href="../../d5/d0a/ff__gridbased__01__updates_8cc_source.html">ff_gridbased_01_updates.cc</a>.</p>
 
 </div>
 </div>
@@ -742,21 +749,22 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void chi_physics::FieldFunctionGridBased::UpdateFieldVector </td>
           <td>(</td>
-          <td class="paramtype">const Vec &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> &amp;&#160;</td>
           <td class="paramname"><em>field_vector</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Updates the field vector with a PETSc vector. This only operates locally.</p>
 <p >Updates the field data with a PETSc vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d0a/ff__gridbased__01__updates_8cc_source.html#l00018">18</a> of file <a class="el" href="../../d5/d0a/ff__gridbased__01__updates_8cc_source.html">ff_gridbased_01_updates.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d0a/ff__gridbased__01__updates_8cc_source.html#l00022">22</a> of file <a class="el" href="../../d5/d0a/ff__gridbased__01__updates_8cc_source.html">ff_gridbased_01_updates.cc</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
-<a id="a13e16aaa5233655e34e96b3ad750b6b1" name="a13e16aaa5233655e34e96b3ad750b6b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13e16aaa5233655e34e96b3ad750b6b1">&#9670;&nbsp;</a></span>field_vector_</h2>
+<a id="a8c753bcb9e07e6abcae7826d974a2c3d" name="a8c753bcb9e07e6abcae7826d974a2c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c753bcb9e07e6abcae7826d974a2c3d">&#9670;&nbsp;</a></span>ghosted_field_vector_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -765,7 +773,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;double&gt; chi_physics::FieldFunctionGridBased::field_vector_</td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="../../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html">chi_math::GhostedParallelSTLVector</a>&gt; chi_physics::FieldFunctionGridBased::ghosted_field_vector_</td>
         </tr>
       </table>
   </td>
@@ -775,7 +783,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00036">36</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00098">98</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
 
 </div>
 </div>
@@ -799,12 +807,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00039">39</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00110">110</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
 
 </div>
 </div>
-<a id="a9829d3200975859bd4a004601d471363" name="a9829d3200975859bd4a004601d471363"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9829d3200975859bd4a004601d471363">&#9670;&nbsp;</a></span>sdm_</h2>
+<a id="a8a47bf6f54c4fa8cb64d5728c2932f9a" name="a8a47bf6f54c4fa8cb64d5728c2932f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a47bf6f54c4fa8cb64d5728c2932f9a">&#9670;&nbsp;</a></span>sdm_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -813,7 +821,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d58/namespacechi__math.html#adebeff65d5db71418d1b0e5d21de44dd">chi_math::SMDPtr</a> chi_physics::FieldFunctionGridBased::sdm_</td>
+          <td class="memname"><a class="el" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a> chi_physics::FieldFunctionGridBased::sdm_</td>
         </tr>
       </table>
   </td>
@@ -823,31 +831,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00035">35</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
-
-</div>
-</div>
-<a id="a048640b1da0d5eae1acc676e1d7b8b9a" name="a048640b1da0d5eae1acc676e1d7b8b9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a048640b1da0d5eae1acc676e1d7b8b9a">&#9670;&nbsp;</a></span>vector_ghost_communicator_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a4a0e4bee1288fcecb59a00dcacab23af">VectorGhostCommPtr</a> chi_physics::FieldFunctionGridBased::vector_ghost_communicator_ = nullptr</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00040">40</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00097">97</a> of file <a class="el" href="../../d8/d72/fieldfunction__gridbased_8h_source.html">fieldfunction_gridbased.h</a>.</p>
 
 </div>
 </div>

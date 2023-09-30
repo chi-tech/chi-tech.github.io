@@ -106,10 +106,10 @@ $(document).ready(function(){initNavTree('d2/dc2/chi__ffinter__line__execute_8cc
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>          <span class="keyword">auto</span>&amp; ff_ctx = <a class="code hl_variable" href="../../d5/d14/classchi__mesh_1_1_field_function_interpolation_line.html#afb026ee4930cb5af97cfb5de76111b90">ff_contexts_</a>[ff];</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; ref_ff = *ff_ctx.ref_ff;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm    = ref_ff.SDM();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm    = ref_ff.GetSpatialDiscretization();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; grid   = sdm.Grid();</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; uk_man = ref_ff.UnkManager();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; uk_man = ref_ff.GetUnknownManager();</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">const</span> <span class="keyword">auto</span> uid = 0;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">const</span> <span class="keyword">auto</span> cid = <a class="code hl_variable" href="../../d5/dd4/classchi__mesh_1_1_field_function_interpolation.html#ad76577274b16a7f5f077e610ed74edd2">ref_component_</a>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>

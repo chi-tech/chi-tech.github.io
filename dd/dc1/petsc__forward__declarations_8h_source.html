@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chi-Tech: modules/LinearBoltzmannSolvers/A_LBSSolver/IterativeMethods/nl_keigen_ags_residual_func.h Source File</title>
+<title>Chi-Tech: framework/math/PETScUtils/petsc_forward_declarations.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d4/d25/nl__keigen__ags__residual__func_8h_source.html','../../'); initResizable(); });
+$(document).ready(function(){initNavTree('dd/dc1/petsc__forward__declarations_8h_source.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -83,31 +83,30 @@ $(document).ready(function(){initNavTree('d4/d25/nl__keigen__ags__residual__func
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">nl_keigen_ags_residual_func.h</div></div>
+  <div class="headertitle"><div class="title">petsc_forward_declarations.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/d25/nl__keigen__ags__residual__func_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CHITECH_LBS_NL_KEIGEN_AGS_RESIDUAL_FUNC_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CHITECH_LBS_NL_KEIGEN_AGS_RESIDUAL_FUNC_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;petscsnes.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d9/d42/namespacelbs.html">lbs</a></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>PetscErrorCode <a class="code hl_function" href="../../d9/d42/namespacelbs.html#a1431574e49ca288a5b680e61df51155f">NLKEigenResidualFunction</a>(SNES snes, <a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> phi, <a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> r, <span class="keywordtype">void</span>* ctx);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}<span class="comment">//namespace lbs</span></div>
+<a href="../../dd/dc1/petsc__forward__declarations_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CHITECH_PETSC_FORWARD_DECLARATIONS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CHITECH_PETSC_FORWARD_DECLARATIONS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"></span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/**\file petsc_forward_declarations.h</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * This header file provides convenient forward declarations for common</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * PETSc types. This negates the need to include the bulky PETSc headers.*/</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// NOLINTBEGIN(bugprone-reserved-identifier)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">    9</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>_p_Vec* <a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695">   10</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>_p_Mat* <a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695">Mat</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// NOLINTEND(bugprone-reserved-identifier)</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif </span><span class="comment">//CHITECH_LBS_NL_KEIGEN_AGS_RESIDUAL_FUNC_H</span></div>
-<div class="ttc" id="anamespacelbs_html"><div class="ttname"><a href="../../d9/d42/namespacelbs.html">lbs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d51/acceleration_8cc_source.html#l00009">acceleration.cc:10</a></div></div>
-<div class="ttc" id="anamespacelbs_html_a1431574e49ca288a5b680e61df51155f"><div class="ttname"><a href="../../d9/d42/namespacelbs.html#a1431574e49ca288a5b680e61df51155f">lbs::NLKEigenResidualFunction</a></div><div class="ttdeci">PetscErrorCode NLKEigenResidualFunction(SNES snes, Vec phi, Vec r, void *ctx)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/da8/nl__keigen__ags__residual__func_8cc_source.html#l00014">nl_keigen_ags_residual_func.cc:14</a></div></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif </span><span class="comment">// CHITECH_PETSC_FORWARD_DECLARATIONS_H</span></div>
+<div class="ttc" id="apetsc__forward__declarations_8h_html_a28b1c75999a6b1553eb6f83787eb8695"><div class="ttname"><a href="../../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695">Mat</a></div><div class="ttdeci">struct _p_Mat * Mat</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc1/petsc__forward__declarations_8h_source.html#l00010">petsc_forward_declarations.h:10</a></div></div>
 <div class="ttc" id="apetsc__forward__declarations_8h_html_af0f813347b3f949e0248ebfe5d43f375"><div class="ttname"><a href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a></div><div class="ttdeci">struct _p_Vec * Vec</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc1/petsc__forward__declarations_8h_source.html#l00009">petsc_forward_declarations.h:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_e05d7e2b1ecd646af5bb94391405f3b5.html">modules</a></li><li class="navelem"><a class="el" href="../../dir_7670928a5854b858dbd40f78e1d25c60.html">LinearBoltzmannSolvers</a></li><li class="navelem"><a class="el" href="../../dir_b4a8d416c8fba39c010ca9aedd35ee28.html">A_LBSSolver</a></li><li class="navelem"><a class="el" href="../../dir_d582c185c575f4f6e3fa8cced4298878.html">IterativeMethods</a></li><li class="navelem"><a class="el" href="../../d4/d25/nl__keigen__ags__residual__func_8h.html">nl_keigen_ags_residual_func.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_644e041c3a6521da7b27eba0e4eb2b95.html">framework</a></li><li class="navelem"><a class="el" href="../../dir_2bfd9fb65807176d4c97ac1385bc1e1a.html">math</a></li><li class="navelem"><a class="el" href="../../dir_888637456babb1e9ae6482281bb8bb65.html">PETScUtils</a></li><li class="navelem"><a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html">petsc_forward_declarations.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

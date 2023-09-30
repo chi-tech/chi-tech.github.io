@@ -103,10 +103,10 @@ $(document).ready(function(){initNavTree('df/d4d/petsc__utils__01__create_vec_8c
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"></span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">return x;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">\endcode*/</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ae2ebedf1cd0712f3d6e0b2047c389949">   18</a></span>Vec <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ae2ebedf1cd0712f3d6e0b2047c389949">chi_math::PETScUtils::</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ae2ebedf1cd0712f3d6e0b2047c389949">   18</a></span><a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ae2ebedf1cd0712f3d6e0b2047c389949">chi_math::PETScUtils::</a></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ae2ebedf1cd0712f3d6e0b2047c389949">CreateVector</a>(int64_t local_size, int64_t global_size)</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  Vec x;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> x;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  VecCreate(PETSC_COMM_WORLD,&amp;x);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  VecSetType(x,VECMPI);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  VecSetSizes(x, local_size, global_size);</div>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('df/d4d/petsc__utils__01__create_vec_8c
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">VecSetOption(x,VEC_IGNORE_NEGATIVE_INDICES,PETSC_TRUE);</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">\endcode*/</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a2d6fa9475bbb29adf2f37214886261ee">   40</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ae2ebedf1cd0712f3d6e0b2047c389949">chi_math::PETScUtils::</a></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ae2ebedf1cd0712f3d6e0b2047c389949">CreateVector</a>(Vec&amp; x, int64_t local_size, int64_t global_size)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ae2ebedf1cd0712f3d6e0b2047c389949">CreateVector</a>(<a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a>&amp; x, int64_t local_size, int64_t global_size)</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  VecCreate(PETSC_COMM_WORLD,&amp;x);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  VecSetType(x,VECMPI);</div>
@@ -151,12 +151,12 @@ $(document).ready(function(){initNavTree('df/d4d/petsc__utils__01__create_vec_8c
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment"></span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">return x;</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">\endcode*/</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac9e0215c641f1bb554185f50edbd1de5">   66</a></span>Vec <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac9e0215c641f1bb554185f50edbd1de5">chi_math::PETScUtils::</a></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac9e0215c641f1bb554185f50edbd1de5">   66</a></span><a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> <a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac9e0215c641f1bb554185f50edbd1de5">chi_math::PETScUtils::</a></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><a class="code hl_function" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac9e0215c641f1bb554185f50edbd1de5">CreateVectorWithGhosts</a>(int64_t local_size, int64_t global_size,</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                       int64_t nghosts,</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                       <span class="keyword">const</span> std::vector&lt;int64_t&gt;&amp; ghost_indices)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  Vec x;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_typedef" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> x;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  VecCreateGhost(PETSC_COMM_WORLD,</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                 local_size,</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                 global_size,</div>
@@ -171,6 +171,7 @@ $(document).ready(function(){initNavTree('df/d4d/petsc__utils__01__create_vec_8c
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ac9e0215c641f1bb554185f50edbd1de5"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac9e0215c641f1bb554185f50edbd1de5">chi_math::PETScUtils::CreateVectorWithGhosts</a></div><div class="ttdeci">Vec CreateVectorWithGhosts(int64_t local_size, int64_t global_size, int64_t nghosts, const std::vector&lt; int64_t &gt; &amp;ghost_indices)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4d/petsc__utils__01__create_vec_8cc_source.html#l00066">petsc_utils_01_createVec.cc:67</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ae2ebedf1cd0712f3d6e0b2047c389949"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ae2ebedf1cd0712f3d6e0b2047c389949">chi_math::PETScUtils::CreateVector</a></div><div class="ttdeci">Vec CreateVector(int64_t local_size, int64_t global_size)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d4d/petsc__utils__01__create_vec_8cc_source.html#l00018">petsc_utils_01_createVec.cc:19</a></div></div>
+<div class="ttc" id="apetsc__forward__declarations_8h_html_af0f813347b3f949e0248ebfe5d43f375"><div class="ttname"><a href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a></div><div class="ttdeci">struct _p_Vec * Vec</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc1/petsc__forward__declarations_8h_source.html#l00009">petsc_forward_declarations.h:9</a></div></div>
 <div class="ttc" id="apetsc__utils_8h_html"><div class="ttname"><a href="../../da/d0e/petsc__utils_8h.html">petsc_utils.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

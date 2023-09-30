@@ -139,8 +139,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adc94356e6f0d04a1f074a80b2b45a88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3850ca5faf727961d5d2fc6f1498cc9c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a3850ca5faf727961d5d2fc6f1498cc9c">CopyLocalValues</a> (const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;y)=0</td></tr>
 <tr class="separator:a3850ca5faf727961d5d2fc6f1498cc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785c84859be9ef1874113f96fe08f845"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a785c84859be9ef1874113f96fe08f845">CopyLocalValues</a> (<a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> y)=0</td></tr>
+<tr class="separator:a785c84859be9ef1874113f96fe08f845"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd87a0d7e13f57c761955e67bb66c8ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#afd87a0d7e13f57c761955e67bb66c8ba">BlockCopyLocalValues</a> (const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;y, int64_t y_offset, int64_t local_offset, int64_t num_values)=0</td></tr>
 <tr class="separator:afd87a0d7e13f57c761955e67bb66c8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f50e1d1b25fa5a8aa127c855dc2925a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a8f50e1d1b25fa5a8aa127c855dc2925a">BlockCopyLocalValues</a> (<a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> y, int64_t y_offset, int64_t local_offset, int64_t num_values)=0</td></tr>
+<tr class="separator:a8f50e1d1b25fa5a8aa127c855dc2925a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af83afcb70e410240c062f9432568cded"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#af83afcb70e410240c062f9432568cded">SetValue</a> (int64_t global_id, double value, <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a> op_type)=0</td></tr>
 <tr class="separator:af83afcb70e410240c062f9432568cded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cdb36362ad19323c5b5736907f49074"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html#a8cdb36362ad19323c5b5736907f49074">SetValues</a> (const std::vector&lt; int64_t &gt; &amp;global_ids, const std::vector&lt; double &gt; &amp;values, <a class="el" href="../../dc/d58/namespacechi__math.html#a27c6c2a0ae6ac60e3209556eb1990555">VecOpType</a> op_type)=0</td></tr>
@@ -183,7 +187,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >An abstract implementation of a parallel vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00020">20</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00021">21</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a857befb27f5430f0e7f65af62d70abb9" name="a857befb27f5430f0e7f65af62d70abb9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a857befb27f5430f0e7f65af62d70abb9">&#9670;&nbsp;</a></span>ParallelVector() <span class="overload">[1/3]</span></h2>
@@ -367,7 +371,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="afd87a0d7e13f57c761955e67bb66c8ba" name="afd87a0d7e13f57c761955e67bb66c8ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd87a0d7e13f57c761955e67bb66c8ba">&#9670;&nbsp;</a></span>BlockCopyLocalValues()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afd87a0d7e13f57c761955e67bb66c8ba">&#9670;&nbsp;</a></span>BlockCopyLocalValues() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -414,6 +418,57 @@ Protected Attributes</h2></td></tr>
 <p >Copies a contiguous block of local data (num_values entries) from the source vector (starting at y_offset) to the current vector starting at local_offset. </p>
 
 <p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a8ea0074cb56ca222c5c2e4b4c386fb8c">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a8f50e1d1b25fa5a8aa127c855dc2925a" name="a8f50e1d1b25fa5a8aa127c855dc2925a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f50e1d1b25fa5a8aa127c855dc2925a">&#9670;&nbsp;</a></span>BlockCopyLocalValues() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::BlockCopyLocalValues </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>y_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>local_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>num_values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Copies a contiguous block of local data (num_values entries) from the source vector (starting at y_offset) to the current vector starting at local_offset. PETSc flavor. </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#a9a06ac7509846adfb2db9bb2276aa4c5">chi_math::ParallelSTLVector</a>.</p>
 
 </div>
 </div>
@@ -488,7 +543,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html#a7d2f2bcf361cd259db503f96bc71fed4">chi_math::GhostedParallelSTLVector</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00168">168</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00181">181</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
@@ -522,7 +577,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a3850ca5faf727961d5d2fc6f1498cc9c" name="a3850ca5faf727961d5d2fc6f1498cc9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3850ca5faf727961d5d2fc6f1498cc9c">&#9670;&nbsp;</a></span>CopyLocalValues()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3850ca5faf727961d5d2fc6f1498cc9c">&#9670;&nbsp;</a></span>CopyLocalValues() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,6 +602,35 @@ Protected Attributes</h2></td></tr>
 <p >Sets the local values of one vector equal to another. The sizes must be compatible. </p>
 
 <p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#af4e373bfd6fd90eb477d7ad97d151f43">chi_math::ParallelSTLVector</a>.</p>
+
+</div>
+</div>
+<a id="a785c84859be9ef1874113f96fe08f845" name="a785c84859be9ef1874113f96fe08f845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785c84859be9ef1874113f96fe08f845">&#9670;&nbsp;</a></span>CopyLocalValues() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chi_math::ParallelVector::CopyLocalValues </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a>&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Sets the local values of the vector equal to that of the PETSc vector. The sizes must be compatible. </p>
+
+<p>Implemented in <a class="el" href="../../d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html#afa2c1ae0d7b47cfa82ee168e82badb9d">chi_math::ParallelSTLVector</a>.</p>
 
 </div>
 </div>
@@ -631,7 +715,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Return the global size of the parallel vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00057">57</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00058">58</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
@@ -660,7 +744,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Return the size of the locally owned portion of the parallel vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00054">54</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00055">55</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
@@ -1135,7 +1219,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00178">178</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00191">191</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1243,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00174">174</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00187">187</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1267,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00173">173</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00186">186</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
@@ -1207,7 +1291,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00176">176</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00189">189</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
@@ -1231,7 +1315,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00177">177</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dba/_parallel_vector_8h_source.html#l00190">190</a> of file <a class="el" href="../../da/dba/_parallel_vector_8h_source.html">ParallelVector.h</a>.</p>
 
 </div>
 </div>
