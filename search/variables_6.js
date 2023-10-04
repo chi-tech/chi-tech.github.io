@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['g_5f_0',['g_',['../d6/d19/classlbs_1_1_sweep_chunk.html#a66dd8f7abd69b4dfa6b22d52e02b9c41',1,'lbs::SweepChunk::g_()'],['../dc/d64/classlbs_1_1_source_function.html#adf3d2422102ddcadaf21a8a4c679ef3b',1,'lbs::SourceFunction::g_()']]],
-  ['g_5f_1',['G_',['../d6/d19/classlbs_1_1_sweep_chunk.html#ac8ac105a421e7234ae5879326fa6ac00',1,'lbs::SweepChunk::G_()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a6f18686f89fc989c42c6de9e6a6891d8',1,'chi_diffusion::Solver::G_()']]],
+  ['g_5f_0',['G_',['../d6/d19/classlbs_1_1_sweep_chunk.html#ac8ac105a421e7234ae5879326fa6ac00',1,'lbs::SweepChunk::G_()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a6f18686f89fc989c42c6de9e6a6891d8',1,'chi_diffusion::Solver::G_()']]],
+  ['g_5f_1',['g_',['../d6/d19/classlbs_1_1_sweep_chunk.html#a66dd8f7abd69b4dfa6b22d52e02b9c41',1,'lbs::SweepChunk::g_()'],['../dc/d64/classlbs_1_1_source_function.html#adf3d2422102ddcadaf21a8a4c679ef3b',1,'lbs::SourceFunction::g_()']]],
   ['g_5fmatrix_2',['G_matrix',['../dc/d37/structlbs_1_1_unit_cell_matrices.html#a4894abc478420dd6d333d24506e3c77a',1,'lbs::UnitCellMatrices']]],
   ['gen_5ftime_5f_3',['gen_time_',['../de/d01/classprk_1_1_transient_solver.html#af4e9f80e42c1731757301d3268d9274f',1,'prk::TransientSolver']]],
   ['general_5fdescription_5f_4',['general_description_',['../d8/d4d/classchi_1_1_input_parameters.html#a30d8f4a0d4f4820a0d2c499c4fc91195',1,'chi::InputParameters']]],
@@ -14,7 +14,7 @@ var searchData=
   ['ghost_5fcomm_5f_11',['ghost_comm_',['../d6/dcb/classchi__math_1_1_ghosted_parallel_s_t_l_vector.html#af8bd0895b6f756e9738c993e2c0ccdf5',1,'chi_math::GhostedParallelSTLVector']]],
   ['ghost_5fglobal_5fid_5f2_5flocal_5fmap_12',['ghost_global_id_2_local_map',['../d4/daf/structlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a_1_1_ghost_info.html#aced5b43b2c78bb075166eb328397eaa7',1,'lbs::XXPowerIterationKEigenSCDSA::GhostInfo']]],
   ['ghost_5fids_5f_13',['ghost_ids_',['../d1/db0/classchi__math_1_1_vector_ghost_communicator.html#a4fe84490e8a0854824ae68a3c215b222',1,'chi_math::VectorGhostCommunicator']]],
-  ['ghost_5fnode_5fmapping_5f_14',['ghost_node_mapping_',['../d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#a4f6a0d6ee0ab36042174e303146c976f',1,'chi_math::SpatialDiscretization_PWLC']]],
+  ['ghost_5fnode_5fmapping_5f_14',['ghost_node_mapping_',['../df/d70/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_continuous.html#a04a0dfb61595992013bcd1a8037fcaab',1,'chi_math::spatial_discretization::PieceWiseLinearContinuous']]],
   ['ghost_5fto_5frecv_5fmap_5f_15',['ghost_to_recv_map_',['../d1/d9e/structchi__math_1_1_vector_ghost_communicator_1_1_cached_parallel_data.html#a0b340e463580930503e253fe7c148c1e',1,'chi_math::VectorGhostCommunicator::CachedParallelData']]],
   ['ghosted_5ffield_5fvector_5f_16',['ghosted_field_vector_',['../d3/d4a/classchi__physics_1_1_field_function_grid_based.html#a8c753bcb9e07e6abcae7826d974a2c3d',1,'chi_physics::FieldFunctionGridBased']]],
   ['gi_5f_17',['gi_',['../d6/d32/classchi__diffusion_1_1_solver.html#a684d4d5f3733ee377fefdc140f92f3e3',1,'chi_diffusion::Solver']]],

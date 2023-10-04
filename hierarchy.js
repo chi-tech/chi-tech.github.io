@@ -58,16 +58,11 @@ var hierarchy =
     [ "chi_mesh::CellFace", "db/d1b/classchi__mesh_1_1_cell_face.html", null ],
     [ "lbs::CellLBSView", "d4/d32/classlbs_1_1_cell_l_b_s_view.html", null ],
     [ "chi_math::CellMapping", "d8/d08/classchi__math_1_1_cell_mapping.html", [
-      [ "chi_math::CellFVValues", "d9/d9a/classchi__math_1_1_cell_f_v_values.html", null ],
-      [ "chi_math::CellMappingFE_PWL", "d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l.html", [
-        [ "chi_math::PolygonMappingFE_PWL", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html", [
-          [ "chi_math::PolygonMappingFE_PWL_Cylindrical", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical.html", null ]
-        ] ],
-        [ "chi_math::PolyhedronMappingFE_PWL", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html", null ],
-        [ "chi_math::SlabMappingFE_PWL", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html", [
-          [ "chi_math::SlabMappingFE_PWL_Cylindrical", "d2/d9d/classchi__math_1_1_slab_mapping_f_e___p_w_l___cylindrical.html", null ],
-          [ "chi_math::SlabMappingFE_PWL_Spherical", "d4/dcb/classchi__math_1_1_slab_mapping_f_e___p_w_l___spherical.html", null ]
-        ] ]
+      [ "chi_math::cell_mapping::FiniteVolumeMapping", "d9/dbc/classchi__math_1_1cell__mapping_1_1_finite_volume_mapping.html", null ],
+      [ "chi_math::cell_mapping::PieceWiseLinearBaseMapping", "dc/dfd/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_base_mapping.html", [
+        [ "chi_math::cell_mapping::PieceWiseLinearPolygonMapping", "da/d0b/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_polygon_mapping.html", null ],
+        [ "chi_math::cell_mapping::PieceWiseLinearPolyhedronMapping", "df/dc1/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_polyhedron_mapping.html", null ],
+        [ "chi_math::cell_mapping::PieceWiseLinearSlabMapping", "df/d76/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_slab_mapping.html", null ]
       ] ]
     ] ],
     [ "Chi", "d7/dd7/class_chi.html", null ],
@@ -200,12 +195,12 @@ var hierarchy =
     [ "chi_mesh::ExtrusionLayer", "d6/df6/structchi__mesh_1_1_extrusion_layer.html", null ],
     [ "chi_mesh::Face", "d4/dd2/structchi__mesh_1_1_face.html", null ],
     [ "chi_mesh::sweep_management::FaceNodalMapping", "d7/d1f/structchi__mesh_1_1sweep__management_1_1_face_nodal_mapping.html", null ],
-    [ "chi_math::PolyhedronMappingFE_PWL::FEface_data", "d5/d6a/structchi__math_1_1_polyhedron_mapping_f_e___p_w_l_1_1_f_eface__data.html", null ],
-    [ "chi_math::PolyhedronMappingFE_PWL::FEnodeFaceMap", "d7/d83/structchi__math_1_1_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_face_map.html", null ],
-    [ "chi_math::PolyhedronMappingFE_PWL::FEnodeMap", "dd/d96/structchi__math_1_1_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_map.html", null ],
-    [ "chi_math::PolyhedronMappingFE_PWL::FEnodeSideMap", "d1/df4/structchi__math_1_1_polyhedron_mapping_f_e___p_w_l_1_1_f_enode_side_map.html", null ],
-    [ "chi_math::PolygonMappingFE_PWL::FEside_data2d", "d7/d5b/structchi__math_1_1_polygon_mapping_f_e___p_w_l_1_1_f_eside__data2d.html", null ],
-    [ "chi_math::PolyhedronMappingFE_PWL::FEside_data3d", "da/d21/structchi__math_1_1_polyhedron_mapping_f_e___p_w_l_1_1_f_eside__data3d.html", null ],
+    [ "chi_math::cell_mapping::PieceWiseLinearPolyhedronMapping::FEface_data", "da/d35/structchi__math_1_1cell__mapping_1_1_piece_wise_linear_polyhedron_mapping_1_1_f_eface__data.html", null ],
+    [ "chi_math::cell_mapping::PieceWiseLinearPolyhedronMapping::FEnodeFaceMap", "dd/dfe/structchi__math_1_1cell__mapping_1_1_piece_wise_linear_polyhedron_mapping_1_1_f_enode_face_map.html", null ],
+    [ "chi_math::cell_mapping::PieceWiseLinearPolyhedronMapping::FEnodeMap", "d4/d00/structchi__math_1_1cell__mapping_1_1_piece_wise_linear_polyhedron_mapping_1_1_f_enode_map.html", null ],
+    [ "chi_math::cell_mapping::PieceWiseLinearPolyhedronMapping::FEnodeSideMap", "d7/d42/structchi__math_1_1cell__mapping_1_1_piece_wise_linear_polyhedron_mapping_1_1_f_enode_side_map.html", null ],
+    [ "chi_math::cell_mapping::PieceWiseLinearPolygonMapping::FEside_data2d", "d0/d29/structchi__math_1_1cell__mapping_1_1_piece_wise_linear_polygon_mapping_1_1_f_eside__data2d.html", null ],
+    [ "chi_math::cell_mapping::PieceWiseLinearPolyhedronMapping::FEside_data3d", "d3/d76/structchi__math_1_1cell__mapping_1_1_piece_wise_linear_polyhedron_mapping_1_1_f_eside__data3d.html", null ],
     [ "chi_mesh::FFICellIntersection", "dd/d9c/structchi__mesh_1_1_f_f_i_cell_intersection.html", null ],
     [ "chi_mesh::FFIFaceEdgeIntersection", "d5/d06/structchi__mesh_1_1_f_f_i_face_edge_intersection.html", null ],
     [ "chi_mesh::FieldFunctionContext", "d3/d97/structchi__mesh_1_1_field_function_context.html", null ],
@@ -238,9 +233,6 @@ var hierarchy =
     [ "chi_mesh::GridFaceHistogram", "d1/df6/classchi__mesh_1_1_grid_face_histogram.html", null ],
     [ "chi_math::AngularQuadrature::HarmonicIndices", "d7/d0d/structchi__math_1_1_angular_quadrature_1_1_harmonic_indices.html", null ],
     [ "chi_mesh::sweep_management::AAH_FLUDSCommonData::INCOMING_FACE_INFO", "d5/d34/structchi__mesh_1_1sweep__management_1_1_a_a_h___f_l_u_d_s_common_data_1_1_i_n_c_o_m_i_n_g___f_a_c_e___i_n_f_o.html", null ],
-    [ "chi_math::finite_element::InternalQuadraturePointData", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html", [
-      [ "chi_math::finite_element::FaceQuadraturePointData", "d5/df3/classchi__math_1_1finite__element_1_1_face_quadrature_point_data.html", null ]
-    ] ],
     [ "chi::ParameterBlock::IsBool< T >", "d7/db6/structchi_1_1_parameter_block_1_1_is_bool.html", null ],
     [ "chi_data_types::Varying::IsBool< T >", "d4/d38/structchi__data__types_1_1_varying_1_1_is_bool.html", null ],
     [ "chi_data_types::Varying::IsByteArray< T >", "de/d57/structchi__data__types_1_1_varying_1_1_is_byte_array.html", null ],
@@ -351,13 +343,13 @@ var hierarchy =
     ] ],
     [ "chi_math::SparseMatrix", "de/d51/classchi__math_1_1_sparse_matrix.html", null ],
     [ "chi_math::SpatialDiscretization", "dd/d1d/classchi__math_1_1_spatial_discretization.html", [
-      [ "chi_math::SpatialDiscretization_FE", "d5/d3e/classchi__math_1_1_spatial_discretization___f_e.html", [
-        [ "chi_math::SpatialDiscretization_PWLBase", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html", [
-          [ "chi_math::SpatialDiscretization_PWLC", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html", null ],
-          [ "chi_math::SpatialDiscretization_PWLD", "d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html", null ]
+      [ "chi_math::spatial_discretization::FiniteElementBase", "d6/d89/classchi__math_1_1spatial__discretization_1_1_finite_element_base.html", [
+        [ "chi_math::spatial_discretization::PieceWiseLinearBase", "da/d8c/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_base.html", [
+          [ "chi_math::spatial_discretization::PieceWiseLinearContinuous", "df/d70/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_continuous.html", null ],
+          [ "chi_math::spatial_discretization::PieceWiseLinearDiscontinuous", "d0/d0a/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_discontinuous.html", null ]
         ] ]
       ] ],
-      [ "chi_math::SpatialDiscretization_FV", "d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html", null ]
+      [ "chi_math::spatial_discretization::FiniteVolume", "d0/daf/classchi__math_1_1spatial__discretization_1_1_finite_volume.html", null ]
     ] ],
     [ "chi_mesh::sweep_management::SPDS", "dd/d84/classchi__mesh_1_1sweep__management_1_1_s_p_d_s.html", [
       [ "chi_mesh::sweep_management::SPDS_AdamsAdamsHawkins", "dd/d4f/classchi__mesh_1_1sweep__management_1_1_s_p_d_s___adams_adams_hawkins.html", null ],
@@ -410,7 +402,7 @@ var hierarchy =
     [ "lbs::acceleration::TwoGridCollapsedInfo", "db/d99/structlbs_1_1acceleration_1_1_two_grid_collapsed_info.html", null ],
     [ "mg_diffusion::TwoGridCollapsedInfo", "d6/d5b/structmg__diffusion_1_1_two_grid_collapsed_info.html", null ],
     [ "lbs::UnitCellMatrices", "dc/d37/structlbs_1_1_unit_cell_matrices.html", null ],
-    [ "chi_math::finite_element::UnitIntegralData", "de/d0d/classchi__math_1_1finite__element_1_1_unit_integral_data.html", null ],
+    [ "chi_diffusion::UnitIntegralContainer", "dd/dd0/classchi__diffusion_1_1_unit_integral_container.html", null ],
     [ "chi_math::Unknown", "d8/df3/classchi__math_1_1_unknown.html", null ],
     [ "chi_math::UnknownManager", "d9/da7/classchi__math_1_1_unknown_manager.html", null ],
     [ "chi_mesh::UnpartitionedMesh", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html", null ],
@@ -428,6 +420,9 @@ var hierarchy =
     [ "chi_mesh::VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", [
       [ "chi_mesh::VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", null ],
       [ "chi_mesh::VolumeMesherPredefinedUnpartitioned", "dd/d06/classchi__mesh_1_1_volume_mesher_predefined_unpartitioned.html", null ]
+    ] ],
+    [ "chi_math::finite_element::VolumetricQuadraturePointData", "d5/d45/classchi__math_1_1finite__element_1_1_volumetric_quadrature_point_data.html", [
+      [ "chi_math::finite_element::SurfaceQuadraturePointData", "d5/d27/classchi__math_1_1finite__element_1_1_surface_quadrature_point_data.html", null ]
     ] ],
     [ "vtkNew< T >", "db/ddd/classvtk_new.html", null ],
     [ "vtkSmartPointer< T >", "d5/d8c/classvtk_smart_pointer.html", null ]

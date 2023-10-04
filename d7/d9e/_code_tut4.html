@@ -148,7 +148,7 @@ $(document).ready(function(){initNavTree('d7/d9e/_code_tut4.html','../../'); ini
 </div><!-- fragment --><p> The function <code>MMS_phi</code> is the MS function and the function <code>MMS_q</code> is the RHS function. These functions can be defined anywhere in the input file as long as they are available in the state when solver needs them.</p>
 <h1><a class="anchor" id="CodeTut4Sec3"></a>
 3 Getting guadrature-point real world XYZ</h1>
-<p >Quadrautre-point real-world positions are stored when the <code>qp_data</code> structure is created. They are accessed with the call <code><a class="el" href="../../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#ad9935574d332f19a9863886d1f2079ca">chi_math::finite_element::InternalQuadraturePointData::QPointXYZ</a></code>, taking the quadrature point index as a parameter. </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> qp : qp_data.QuadraturePointIndices())</div>
+<p >Quadrautre-point real-world positions are stored when the <code>qp_data</code> structure is created. They are accessed with the call <code>chi_math::finite_element::InternalQuadraturePointData::QPointXYZ</code>, taking the quadrature point index as a parameter. </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> qp : qp_data.QuadraturePointIndices())</div>
 <div class="line">  cell_rhs[i] += CallLuaXYZFunction(qp_data.QPointXYZ(qp),<span class="stringliteral">&quot;MMS_q&quot;</span>, L) *</div>
 <div class="line">                 qp_data.ShapeValue(i, qp) * qp_data.JxW(qp);</div>
 </div><!-- fragment --><h1><a class="anchor" id="CodeTut4Sec4"></a>
@@ -227,7 +227,7 @@ The complete program</h1>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d98/chi__meshhandler_8h.html">mesh/MeshHandler/chi_meshhandler.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/dfa/pwlc_8h.html">math/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwlc.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;math/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwlc.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../da/d0e/petsc__utils_8h.html">math/PETScUtils/petsc_utils.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;physics/FieldFunction/fieldfunction2.h&quot;</span></div>
@@ -250,7 +250,7 @@ The complete program</h1>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Make SDM</span></div>
 <div class="line">  <span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
-<div class="line">  <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#ac5c32d8c870a1b456c9b7486dc581276">chi_math::SpatialDiscretization_PWLC::New</a>(grid_ptr);</div>
+<div class="line">  <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = chi_math::SpatialDiscretization_PWLC::New(grid_ptr);</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = *sdm_ptr;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; OneDofPerNode = sdm.UNITARY_UNKNOWN_MANAGER;</div>
@@ -494,7 +494,6 @@ The complete program</h1>
 <div class="ttc" id="achi__meshhandler_8h_html"><div class="ttname"><a href="../../df/d98/chi__meshhandler_8h.html">chi_meshhandler.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="achi__tech__main_8cc_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../d4/dca/chi__tech__main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dca/chi__tech__main_8cc_source.html#l00010">chi_tech_main.cc:10</a></div></div>
-<div class="ttc" id="aclasschi__math_1_1_spatial_discretization___p_w_l_c_html_ac5c32d8c870a1b456c9b7486dc581276"><div class="ttname"><a href="../../d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#ac5c32d8c870a1b456c9b7486dc581276">chi_math::SpatialDiscretization_PWLC::New</a></div><div class="ttdeci">static std::shared_ptr&lt; SpatialDiscretization_PWLC &gt; New(const chi_mesh::MeshContinuum &amp;in_grid, finite_element::SetupFlags setup_flags=finite_element::NO_FLAGS_SET, QuadratureOrder qorder=QuadratureOrder::SECOND, CoordinateSystemType in_cs_type=CoordinateSystemType::CARTESIAN)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da8/pwlc__00__constrdestr_8cc_source.html#l00085">pwlc_00_constrdestr.cc:85</a></div></div>
 <div class="ttc" id="aclasschi__math_1_1_unknown_html"><div class="ttname"><a href="../../d8/df3/classchi__math_1_1_unknown.html">chi_math::Unknown</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/unknown__manager_8h_source.html#l00031">unknown_manager.h:32</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_handler_html_aa87887c1a76634cb07134b5faa1e3587"><div class="ttname"><a href="../../d2/d10/classchi__mesh_1_1_mesh_handler.html#aa87887c1a76634cb07134b5faa1e3587">chi_mesh::MeshHandler::GetGrid</a></div><div class="ttdeci">chi_mesh::MeshContinuumPtr &amp; GetGrid() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/chi__meshhandler_8cc_source.html#l00012">chi_meshhandler.cc:12</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a1baca8287da5a48e6d56ba3da4c39bab"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a1baca8287da5a48e6d56ba3da4c39bab">chi_math::PETScUtils::InitMatrixSparsity</a></div><div class="ttdeci">void InitMatrixSparsity(Mat &amp;A, const std::vector&lt; int64_t &gt; &amp;nodal_nnz_in_diag, const std::vector&lt; int64_t &gt; &amp;nodal_nnz_off_diag)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d70/petsc__utils__02__create_mat_8cc_source.html#l00084">petsc_utils_02_createMat.cc:84</a></div></div>
@@ -507,7 +506,6 @@ The complete program</h1>
 <div class="ttc" id="apetsc__forward__declarations_8h_html_a28b1c75999a6b1553eb6f83787eb8695"><div class="ttname"><a href="../../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695">Mat</a></div><div class="ttdeci">struct _p_Mat * Mat</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc1/petsc__forward__declarations_8h_source.html#l00010">petsc_forward_declarations.h:10</a></div></div>
 <div class="ttc" id="apetsc__forward__declarations_8h_html_af0f813347b3f949e0248ebfe5d43f375"><div class="ttname"><a href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a></div><div class="ttdeci">struct _p_Vec * Vec</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dc1/petsc__forward__declarations_8h_source.html#l00009">petsc_forward_declarations.h:9</a></div></div>
 <div class="ttc" id="apetsc__utils_8h_html"><div class="ttname"><a href="../../da/d0e/petsc__utils_8h.html">petsc_utils.h</a></div></div>
-<div class="ttc" id="apwlc_8h_html"><div class="ttname"><a href="../../d3/dfa/pwlc_8h.html">pwlc.h</a></div></div>
 <div class="ttc" id="aquadrature__gausschebyshev_8cc_html_ad46b2ebcd4c426b06cda147ddc1001e7"><div class="ttname"><a href="../../d4/d44/quadrature__gausschebyshev_8cc.html#ad46b2ebcd4c426b06cda147ddc1001e7">uint</a></div><div class="ttdeci">#define uint</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d44/quadrature__gausschebyshev_8cc_source.html#l00009">quadrature_gausschebyshev.cc:9</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->

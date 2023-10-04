@@ -246,9 +246,8 @@ $(document).ready(function(){initNavTree('d4/d4d/_code_tut93.html','../../'); in
 <div class="line">      m_to_ell_em_map.emplace_back(ell,m);</div>
 </div><!-- fragment --><p> The interesting items here includes the <code>scattering_order</code> and the map from linear moment index to harmonic indices, <code>m_to_ell_em_map</code>. See the <a href="https://github.com/doctor-janv/whitepapers/blob/main/ChiTech-LBS-TheoryManual/ChiTech-LBS-TheoryManual_v_1_13.pdf">LBS Whitepaper</a> for the detail of this but in a nutshell... Only some of the harmonics are relevant in certain dimensions.</p>
 <p >Next we build the spatial discretization, which in this case would be a PWLD discretization, and we do this as normal: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
-<div class="line"><a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#a2c47f3d6e3faf4ac1d41f429f4839a0c">chi_math::SpatialDiscretization_PWLD::New</a>(grid_ptr);</div>
+<div class="line"><a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = chi_math::SpatialDiscretization_PWLD::New(grid_ptr);</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = *sdm_ptr;</div>
-<div class="ttc" id="aclasschi__math_1_1_spatial_discretization___p_w_l_d_html_a2c47f3d6e3faf4ac1d41f429f4839a0c"><div class="ttname"><a href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#a2c47f3d6e3faf4ac1d41f429f4839a0c">chi_math::SpatialDiscretization_PWLD::New</a></div><div class="ttdeci">static std::shared_ptr&lt; SpatialDiscretization_PWLD &gt; New(const chi_mesh::MeshContinuum &amp;in_grid, finite_element::SetupFlags setup_flags=finite_element::NO_FLAGS_SET, QuadratureOrder qorder=QuadratureOrder::SECOND, CoordinateSystemType in_cs_type=CoordinateSystemType::CARTESIAN)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dad/pwl__00__constrdestr_8cc_source.html#l00086">pwl_00_constrdestr.cc:86</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ab6754b3179f7dbf965932210273fead7"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a></div><div class="ttdeci">std::shared_ptr&lt; SpatialDiscretization &gt; SDMPtr</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00020">fieldfunction_gridbased.h:19</a></div></div>
 </div><!-- fragment --><p >For the unknown manager and DOF-counts we build an unknown manager as follows: </p><div class="fragment"><div class="line"><a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> phi_uk_man;</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m=0; m&lt;num_moments; ++m)</div>
@@ -739,7 +738,7 @@ The complete program</h1>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">mesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d8/dc8/raytracing_8h.html">mesh/Raytrace/raytracing.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d01/pwl_8h.html">math/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwl.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;math/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwl.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d7/dbf/random__number__generator_8h.html">math/RandomNumberGeneration/random_number_generator.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d81/legendrepoly_8h.html">math/Quadratures/LegendrePoly/legendrepoly.h</a>&quot;</span></div>
 <div class="line"> </div>
@@ -792,7 +791,7 @@ The complete program</h1>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Make SDM</span></div>
 <div class="line">  <span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
-<div class="line">  <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html#a2c47f3d6e3faf4ac1d41f429f4839a0c">chi_math::SpatialDiscretization_PWLD::New</a>(grid_ptr);</div>
+<div class="line">  <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = chi_math::SpatialDiscretization_PWLD::New(grid_ptr);</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = *sdm_ptr;</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_class" href="../../d9/da7/classchi__math_1_1_unknown_manager.html">chi_math::UnknownManager</a> phi_uk_man;</div>
@@ -1106,7 +1105,6 @@ The complete program</h1>
 <div class="ttc" id="achi__meshhandler_8h_html"><div class="ttname"><a href="../../df/d98/chi__meshhandler_8h.html">chi_meshhandler.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
 <div class="ttc" id="alegendrepoly_8h_html"><div class="ttname"><a href="../../d6/d81/legendrepoly_8h.html">legendrepoly.h</a></div></div>
-<div class="ttc" id="apwl_8h_html"><div class="ttname"><a href="../../d4/d01/pwl_8h.html">pwl.h</a></div></div>
 <div class="ttc" id="arandom__number__generator_8h_html"><div class="ttname"><a href="../../d7/dbf/random__number__generator_8h.html">random_number_generator.h</a></div></div>
 <div class="ttc" id="araytracing_8h_html"><div class="ttname"><a href="../../d8/dc8/raytracing_8h.html">raytracing.h</a></div></div>
 </div><!-- fragment --> </div></div><!-- contents -->

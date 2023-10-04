@@ -53,13 +53,20 @@ var annotated_dup =
       [ "BoundaryDirichlet", "de/d2e/classchi__diffusion_1_1_boundary_dirichlet.html", "de/d2e/classchi__diffusion_1_1_boundary_dirichlet" ],
       [ "BoundaryReflecting", "d1/d0c/classchi__diffusion_1_1_boundary_reflecting.html", "d1/d0c/classchi__diffusion_1_1_boundary_reflecting" ],
       [ "BoundaryRobin", "d6/d58/classchi__diffusion_1_1_boundary_robin.html", "d6/d58/classchi__diffusion_1_1_boundary_robin" ],
-      [ "Solver", "d6/d32/classchi__diffusion_1_1_solver.html", "d6/d32/classchi__diffusion_1_1_solver" ]
+      [ "Solver", "d6/d32/classchi__diffusion_1_1_solver.html", "d6/d32/classchi__diffusion_1_1_solver" ],
+      [ "UnitIntegralContainer", "dd/dd0/classchi__diffusion_1_1_unit_integral_container.html", "dd/dd0/classchi__diffusion_1_1_unit_integral_container" ]
     ] ],
     [ "chi_math", "dc/d58/namespacechi__math.html", [
+      [ "cell_mapping", "d4/d9a/namespacechi__math_1_1cell__mapping.html", [
+        [ "FiniteVolumeMapping", "d9/dbc/classchi__math_1_1cell__mapping_1_1_finite_volume_mapping.html", "d9/dbc/classchi__math_1_1cell__mapping_1_1_finite_volume_mapping" ],
+        [ "PieceWiseLinearBaseMapping", "dc/dfd/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_base_mapping.html", "dc/dfd/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_base_mapping" ],
+        [ "PieceWiseLinearPolygonMapping", "da/d0b/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_polygon_mapping.html", "da/d0b/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_polygon_mapping" ],
+        [ "PieceWiseLinearPolyhedronMapping", "df/dc1/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_polyhedron_mapping.html", "df/dc1/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_polyhedron_mapping" ],
+        [ "PieceWiseLinearSlabMapping", "df/d76/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_slab_mapping.html", "df/d76/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_slab_mapping" ]
+      ] ],
       [ "finite_element", "d3/d84/namespacechi__math_1_1finite__element.html", [
-        [ "FaceQuadraturePointData", "d5/df3/classchi__math_1_1finite__element_1_1_face_quadrature_point_data.html", "d5/df3/classchi__math_1_1finite__element_1_1_face_quadrature_point_data" ],
-        [ "InternalQuadraturePointData", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html", "d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data" ],
-        [ "UnitIntegralData", "de/d0d/classchi__math_1_1finite__element_1_1_unit_integral_data.html", "de/d0d/classchi__math_1_1finite__element_1_1_unit_integral_data" ]
+        [ "SurfaceQuadraturePointData", "d5/d27/classchi__math_1_1finite__element_1_1_surface_quadrature_point_data.html", "d5/d27/classchi__math_1_1finite__element_1_1_surface_quadrature_point_data" ],
+        [ "VolumetricQuadraturePointData", "d5/d45/classchi__math_1_1finite__element_1_1_volumetric_quadrature_point_data.html", "d5/d45/classchi__math_1_1finite__element_1_1_volumetric_quadrature_point_data" ]
       ] ],
       [ "functions", "d5/dc1/namespacechi__math_1_1functions.html", [
         [ "LuaDimAToDimB", "dd/dec/classchi__math_1_1functions_1_1_lua_dim_a_to_dim_b.html", "dd/dec/classchi__math_1_1functions_1_1_lua_dim_a_to_dim_b" ],
@@ -75,6 +82,13 @@ var annotated_dup =
         [ "Quadrature", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html", "d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature" ],
         [ "SphericalQuadrilateral", "d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html", "d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral" ]
       ] ],
+      [ "spatial_discretization", "d1/d26/namespacechi__math_1_1spatial__discretization.html", [
+        [ "FiniteElementBase", "d6/d89/classchi__math_1_1spatial__discretization_1_1_finite_element_base.html", "d6/d89/classchi__math_1_1spatial__discretization_1_1_finite_element_base" ],
+        [ "FiniteVolume", "d0/daf/classchi__math_1_1spatial__discretization_1_1_finite_volume.html", "d0/daf/classchi__math_1_1spatial__discretization_1_1_finite_volume" ],
+        [ "PieceWiseLinearBase", "da/d8c/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_base.html", "da/d8c/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_base" ],
+        [ "PieceWiseLinearContinuous", "df/d70/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_continuous.html", "df/d70/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_continuous" ],
+        [ "PieceWiseLinearDiscontinuous", "d0/d0a/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_discontinuous.html", "d0/d0a/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_discontinuous" ]
+      ] ],
       [ "AngularQuadrature", "d8/dd9/classchi__math_1_1_angular_quadrature.html", "d8/dd9/classchi__math_1_1_angular_quadrature" ],
       [ "AngularQuadratureCustom", "d8/dd8/classchi__math_1_1_angular_quadrature_custom.html", "d8/dd8/classchi__math_1_1_angular_quadrature_custom" ],
       [ "AngularQuadratureProdCustom", "db/d47/classchi__math_1_1_angular_quadrature_prod_custom.html", "db/d47/classchi__math_1_1_angular_quadrature_prod_custom" ],
@@ -82,9 +96,7 @@ var annotated_dup =
       [ "AngularQuadratureProdGLC", "d6/d28/classchi__math_1_1_angular_quadrature_prod_g_l_c.html", "d6/d28/classchi__math_1_1_angular_quadrature_prod_g_l_c" ],
       [ "AngularQuadratureProdGLL", "d9/d87/classchi__math_1_1_angular_quadrature_prod_g_l_l.html", "d9/d87/classchi__math_1_1_angular_quadrature_prod_g_l_l" ],
       [ "CDFSampler", "d5/ddf/classchi__math_1_1_c_d_f_sampler.html", "d5/ddf/classchi__math_1_1_c_d_f_sampler" ],
-      [ "CellFVValues", "d9/d9a/classchi__math_1_1_cell_f_v_values.html", "d9/d9a/classchi__math_1_1_cell_f_v_values" ],
       [ "CellMapping", "d8/d08/classchi__math_1_1_cell_mapping.html", "d8/d08/classchi__math_1_1_cell_mapping" ],
-      [ "CellMappingFE_PWL", "d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l.html", "d7/d3f/classchi__math_1_1_cell_mapping_f_e___p_w_l" ],
       [ "CrankNicolsonTimeIntegration", "d7/d51/classchi__math_1_1_crank_nicolson_time_integration.html", "d7/d51/classchi__math_1_1_crank_nicolson_time_integration" ],
       [ "CurvilinearAngularQuadrature", "d9/dc1/classchi__math_1_1_curvilinear_angular_quadrature.html", "d9/dc1/classchi__math_1_1_curvilinear_angular_quadrature" ],
       [ "CylindricalAngularQuadrature", "d8/d60/classchi__math_1_1_cylindrical_angular_quadrature.html", "d8/d60/classchi__math_1_1_cylindrical_angular_quadrature" ],
@@ -102,9 +114,6 @@ var annotated_dup =
       [ "NonLinearSolverOptions", "dd/d3c/classchi__math_1_1_non_linear_solver_options.html", "dd/d3c/classchi__math_1_1_non_linear_solver_options" ],
       [ "ParallelSTLVector", "d3/de3/classchi__math_1_1_parallel_s_t_l_vector.html", "d3/de3/classchi__math_1_1_parallel_s_t_l_vector" ],
       [ "ParallelVector", "d0/dcb/classchi__math_1_1_parallel_vector.html", "d0/dcb/classchi__math_1_1_parallel_vector" ],
-      [ "PolygonMappingFE_PWL", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l.html", "dd/d08/classchi__math_1_1_polygon_mapping_f_e___p_w_l" ],
-      [ "PolygonMappingFE_PWL_Cylindrical", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical.html", "d2/db9/classchi__math_1_1_polygon_mapping_f_e___p_w_l___cylindrical" ],
-      [ "PolyhedronMappingFE_PWL", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l.html", "d5/dfe/classchi__math_1_1_polyhedron_mapping_f_e___p_w_l" ],
       [ "PreconditionerContext", "d6/db8/structchi__math_1_1_preconditioner_context.html", "d6/db8/structchi__math_1_1_preconditioner_context" ],
       [ "ProductQuadrature", "d5/df7/classchi__math_1_1_product_quadrature.html", "d5/df7/classchi__math_1_1_product_quadrature" ],
       [ "Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html", "d3/dbf/classchi__math_1_1_quadrature" ],
@@ -119,16 +128,8 @@ var annotated_dup =
       [ "QuadratureTetrahedron", "d8/d57/classchi__math_1_1_quadrature_tetrahedron.html", "d8/d57/classchi__math_1_1_quadrature_tetrahedron" ],
       [ "QuadratureTriangle", "d0/d61/classchi__math_1_1_quadrature_triangle.html", "d0/d61/classchi__math_1_1_quadrature_triangle" ],
       [ "RandomNumberGenerator", "d9/d55/classchi__math_1_1_random_number_generator.html", "d9/d55/classchi__math_1_1_random_number_generator" ],
-      [ "SlabMappingFE_PWL", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html", "df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l" ],
-      [ "SlabMappingFE_PWL_Cylindrical", "d2/d9d/classchi__math_1_1_slab_mapping_f_e___p_w_l___cylindrical.html", "d2/d9d/classchi__math_1_1_slab_mapping_f_e___p_w_l___cylindrical" ],
-      [ "SlabMappingFE_PWL_Spherical", "d4/dcb/classchi__math_1_1_slab_mapping_f_e___p_w_l___spherical.html", "d4/dcb/classchi__math_1_1_slab_mapping_f_e___p_w_l___spherical" ],
       [ "SparseMatrix", "de/d51/classchi__math_1_1_sparse_matrix.html", "de/d51/classchi__math_1_1_sparse_matrix" ],
       [ "SpatialDiscretization", "dd/d1d/classchi__math_1_1_spatial_discretization.html", "dd/d1d/classchi__math_1_1_spatial_discretization" ],
-      [ "SpatialDiscretization_FE", "d5/d3e/classchi__math_1_1_spatial_discretization___f_e.html", "d5/d3e/classchi__math_1_1_spatial_discretization___f_e" ],
-      [ "SpatialDiscretization_FV", "d0/d9a/classchi__math_1_1_spatial_discretization___f_v.html", "d0/d9a/classchi__math_1_1_spatial_discretization___f_v" ],
-      [ "SpatialDiscretization_PWLBase", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html", "d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base" ],
-      [ "SpatialDiscretization_PWLC", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html", "d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c" ],
-      [ "SpatialDiscretization_PWLD", "d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d.html", "d3/d53/classchi__math_1_1_spatial_discretization___p_w_l_d" ],
       [ "SphericalAngularQuadrature", "de/de3/classchi__math_1_1_spherical_angular_quadrature.html", "de/de3/classchi__math_1_1_spherical_angular_quadrature" ],
       [ "TensorRNX", "d1/dbe/structchi__math_1_1_tensor_r_n_x.html", "d1/dbe/structchi__math_1_1_tensor_r_n_x" ],
       [ "TensorRNX< 2, N, NumberFormat >", "d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4.html", "d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4" ],

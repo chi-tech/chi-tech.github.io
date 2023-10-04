@@ -199,11 +199,10 @@ $(document).ready(function(){initNavTree('d1/d74/_code_tut3.html','../../'); ini
 <div class="ttc" id="anamespacechi__mesh_html_addcd6899961d4c527b02c33708a7941f"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#addcd6899961d4c527b02c33708a7941f">chi_mesh::GetCurrentHandler</a></div><div class="ttdeci">MeshHandler &amp; GetCurrentHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4b/chi__mesh__meshhandler__utils_8cc_source.html#l00013">chi_mesh_meshhandler_utils.cc:13</a></div></div>
 </div><!-- fragment --><h1><a class="anchor" id="CodeTut3Sec3"></a>
 3 Initializing the PWLC Spatial Discretization</h1>
-<p >To gain access to the <code><a class="el" href="../../d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html">chi_math::SpatialDiscretization_PWLC</a></code> class we need to include the header </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/dfa/pwlc_8h.html">math/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwlc.h</a>&quot;</span></div>
-<div class="ttc" id="apwlc_8h_html"><div class="ttname"><a href="../../d3/dfa/pwlc_8h.html">pwlc.h</a></div></div>
+<p >To gain access to the <code>chi_math::SpatialDiscretization_PWLC</code> class we need to include the header </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;math/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwlc.h&quot;</span></div>
 </div><!-- fragment --><p >Next we add the following code </p><div class="fragment"><div class="line"><span class="comment">//============================================= Make SDM</span></div>
 <div class="line"><span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
-<div class="line"><a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#ac5c32d8c870a1b456c9b7486dc581276">chi_math::SpatialDiscretization_PWLC::New</a>(grid_ptr);</div>
+<div class="line"><a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = chi_math::SpatialDiscretization_PWLC::New(grid_ptr);</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = *sdm_ptr;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; OneDofPerNode = sdm.UNITARY_UNKNOWN_MANAGER;</div>
@@ -213,7 +212,6 @@ $(document).ready(function(){initNavTree('d1/d74/_code_tut3.html','../../'); ini
 <div class="line"> </div>
 <div class="line">chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Num local DOFs: &quot;</span> &lt;&lt; num_local_dofs;</div>
 <div class="line">chi::log.Log() &lt;&lt; <span class="stringliteral">&quot;Num globl DOFs: &quot;</span> &lt;&lt; num_globl_dofs;</div>
-<div class="ttc" id="aclasschi__math_1_1_spatial_discretization___p_w_l_c_html_ac5c32d8c870a1b456c9b7486dc581276"><div class="ttname"><a href="../../d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#ac5c32d8c870a1b456c9b7486dc581276">chi_math::SpatialDiscretization_PWLC::New</a></div><div class="ttdeci">static std::shared_ptr&lt; SpatialDiscretization_PWLC &gt; New(const chi_mesh::MeshContinuum &amp;in_grid, finite_element::SetupFlags setup_flags=finite_element::NO_FLAGS_SET, QuadratureOrder qorder=QuadratureOrder::SECOND, CoordinateSystemType in_cs_type=CoordinateSystemType::CARTESIAN)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/da8/pwlc__00__constrdestr_8cc_source.html#l00085">pwlc_00_constrdestr.cc:85</a></div></div>
 <div class="ttc" id="anamespacechi__math_html_ab6754b3179f7dbf965932210273fead7"><div class="ttname"><a href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">chi_math::SDMPtr</a></div><div class="ttdeci">std::shared_ptr&lt; SpatialDiscretization &gt; SDMPtr</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d72/fieldfunction__gridbased_8h_source.html#l00020">fieldfunction_gridbased.h:19</a></div></div>
 </div><!-- fragment --><p >The initialization of the matrices and vectors remain exactly the same as in the Finite Volume tutorial: </p><div class="fragment"><div class="line"><span class="comment">//============================================= Initializes Mats and Vecs</span></div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> n = <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(num_local_dofs);</div>
@@ -272,7 +270,7 @@ $(document).ready(function(){initNavTree('d1/d74/_code_tut3.html','../../'); ini
 <div class="line">  <span class="comment">//</span></div>
 <div class="ttc" id="achi__math_8h_html_a80801c4491f8f4ff54ed012d63d0d48b"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a></div><div class="ttdeci">std::vector&lt; VecDbl &gt; MatDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00013">chi_math.h:13</a></div></div>
 <div class="ttc" id="achi__math_8h_html_acbe69520b2db91355c5ed8d97a218b94"><div class="ttname"><a href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a></div><div class="ttdeci">std::vector&lt; double &gt; VecDbl</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d08/chi__math_8h_source.html#l00012">chi_math.h:12</a></div></div>
-</div><!-- fragment --><p> The first thing we do here, as with any SD, is to grab the relevant cell mapping. After that we immediately create a <code><a class="el" href="../../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html">chi_math::finite_element::InternalQuadraturePointData</a></code> with the line of code </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>  qp_data      = cell_mapping.MakeVolumeQuadraturePointData();</div>
+</div><!-- fragment --><p> The first thing we do here, as with any SD, is to grab the relevant cell mapping. After that we immediately create a <code>chi_math::finite_element::InternalQuadraturePointData</code> with the line of code </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>  qp_data      = cell_mapping.MakeVolumeQuadraturePointData();</div>
 </div><!-- fragment --><p> This data structure contains the shape function values, together with other data, pre-stored per quadrature point.</p>
 <p >Next we create a local cell-matrix and local right-hand-side (RHS) which serve as lightweight proxies before we assemble relevant values into the global matrix and global RHS. </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes = cell_mapping.NumNodes();</div>
 <div class="line"><a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b">MatDbl</a> Acell(num_nodes, <a class="code hl_typedef" href="../../d2/d08/chi__math_8h.html#acbe69520b2db91355c5ed8d97a218b94">VecDbl</a>(num_nodes, 0.0));</div>
@@ -399,7 +397,7 @@ The complete program</h1>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d98/chi__meshhandler_8h.html">mesh/MeshHandler/chi_meshhandler.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d3/dfa/pwlc_8h.html">math/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwlc.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;math/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwlc.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../da/d0e/petsc__utils_8h.html">math/PETScUtils/petsc_utils.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;physics/FieldFunction/fieldfunction2.h&quot;</span></div>
@@ -419,7 +417,7 @@ The complete program</h1>
 <div class="line"> </div>
 <div class="line">  <span class="comment">//============================================= Make SDM</span></div>
 <div class="line">  <span class="keyword">typedef</span> std::shared_ptr&lt;chi_math::SpatialDiscretization&gt; <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a>;</div>
-<div class="line">  <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = <a class="code hl_function" href="../../d4/da5/classchi__math_1_1_spatial_discretization___p_w_l_c.html#ac5c32d8c870a1b456c9b7486dc581276">chi_math::SpatialDiscretization_PWLC::New</a>(grid_ptr);</div>
+<div class="line">  <a class="code hl_typedef" href="../../dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7">SDMPtr</a> sdm_ptr = chi_math::SpatialDiscretization_PWLC::New(grid_ptr);</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; sdm = *sdm_ptr;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; OneDofPerNode = sdm.UNITARY_UNKNOWN_MANAGER;</div>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['h_20post_2dprocessors_0',['H Post-Processors',['../d9/d81/group__doc___post_processors.html',1,'']]],
-  ['h_5f_1',['h_',['../df/dc2/classchi__math_1_1_slab_mapping_f_e___p_w_l.html#a36c7e0f6d878cc3ac70e1e45e3d8023c',1,'chi_math::SlabMappingFE_PWL']]],
+  ['h_5f_1',['h_',['../df/d76/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_slab_mapping.html#ad513823237433d2e3d38545d156ef993',1,'chi_math::cell_mapping::PieceWiseLinearSlabMapping']]],
   ['harmonicindices_2',['HarmonicIndices',['../d7/d0d/structchi__math_1_1_angular_quadrature_1_1_harmonic_indices.html',1,'chi_math::AngularQuadrature::HarmonicIndices'],['../d7/d0d/structchi__math_1_1_angular_quadrature_1_1_harmonic_indices.html#a7ed71fa2fdb34cb3dc992efefebd6b9e',1,'chi_math::AngularQuadrature::HarmonicIndices::HarmonicIndices(unsigned int in_ell, int in_m)'],['../d7/d0d/structchi__math_1_1_angular_quadrature_1_1_harmonic_indices.html#adadf7416fa69064e9cc87ba2b26bfbab',1,'chi_math::AngularQuadrature::HarmonicIndices::HarmonicIndices()=default']]],
   ['has_3',['Has',['../d5/d1c/classchi_1_1_parameter_block.html#a42c63c25dbd4bc024eac6de8c80dc312',1,'chi::ParameterBlock']]],
   ['has_5fneighbor_4',['has_neighbor',['../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af55dac0ed8faa9008c5f13041c2aeddc',1,'chi_mesh::UnpartitionedMesh::LightWeightFace']]],
@@ -24,5 +24,5 @@ var searchData=
   ['hi_5flimit_5f_21',['hi_limit_',['../d4/d8e/classchi__data__types_1_1_allowable_range_high_limit.html#a21dcbc28d493d74de8145e89b47c0d8c',1,'chi_data_types::AllowableRangeHighLimit']]],
   ['hi_5frange_22',['hi_range',['../dd/d6e/classchi__data__types_1_1_allowable_range_low_high_limit.html#a192803a84163394722f0eac1b0e1bcf9',1,'chi_data_types::AllowableRangeLowHighLimit']]],
   ['horizontal_23',['HORIZONTAL',['../dc/d67/namespacechi.html#ad3edc845f0354d5bb0341032da785218a86e5d0d8407ce71f7e2004ef3949894e',1,'chi']]],
-  ['hperpendicular_24',['HPerpendicular',['../df/ddc/classdfem__diffusion_1_1_solver.html#aefa732d6459cad87908b68b49001ec3d',1,'dfem_diffusion::Solver::HPerpendicular()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a88101aaf412022691894491af1eafdd1',1,'chi_diffusion::Solver::HPerpendicular()'],['../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a94f206fae184cf1d028dce227dfb5525',1,'lbs::acceleration::DiffusionMIPSolver::HPerpendicular()']]]
+  ['hperpendicular_24',['HPerpendicular',['../df/ddc/classdfem__diffusion_1_1_solver.html#aefa732d6459cad87908b68b49001ec3d',1,'dfem_diffusion::Solver::HPerpendicular()'],['../d6/d32/classchi__diffusion_1_1_solver.html#af1b0d564a3b7e6b56a11df0fa820d309',1,'chi_diffusion::Solver::HPerpendicular()'],['../d0/d34/classlbs_1_1acceleration_1_1_diffusion_m_i_p_solver.html#a94f206fae184cf1d028dce227dfb5525',1,'lbs::acceleration::DiffusionMIPSolver::HPerpendicular()']]]
 ];

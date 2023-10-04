@@ -10,7 +10,7 @@ var classchi__diffusion_1_1_solver =
     [ "Execute", "d6/d32/classchi__diffusion_1_1_solver.html#a9c851b93398bd7068ea7b7b37f125765", null ],
     [ "ExecuteS", "d6/d32/classchi__diffusion_1_1_solver.html#aaf627359dc9717744e0c8a5d792f66ea", null ],
     [ "GetMaterialProperties", "d6/d32/classchi__diffusion_1_1_solver.html#a2e7969ef0c6fa666d4d9caf58cba65fc", null ],
-    [ "HPerpendicular", "d6/d32/classchi__diffusion_1_1_solver.html#a88101aaf412022691894491af1eafdd1", null ],
+    [ "HPerpendicular", "d6/d32/classchi__diffusion_1_1_solver.html#af1b0d564a3b7e6b56a11df0fa820d309", null ],
     [ "Initialize", "d6/d32/classchi__diffusion_1_1_solver.html#ab1521641f59b5e88b058557924f70840", null ],
     [ "Initialize", "d6/d32/classchi__diffusion_1_1_solver.html#aad1716188335468716e8de4de1e4c033", null ],
     [ "InitializeCommonItems", "d6/d32/classchi__diffusion_1_1_solver.html#ad36245b1ea37348a48a3acdedbc151eb", null ],
@@ -42,6 +42,7 @@ var classchi__diffusion_1_1_solver =
     [ "t_solve_", "d6/d32/classchi__diffusion_1_1_solver.html#a623a8a7833338d30d0083397878f72d6", null ],
     [ "time_assembly_", "d6/d32/classchi__diffusion_1_1_solver.html#aa382325630a4f91a56484e7c578b4164", null ],
     [ "time_solve_", "d6/d32/classchi__diffusion_1_1_solver.html#ac1cd59248240beac8f3b87846b82e8f4", null ],
+    [ "unit_integrals_", "d6/d32/classchi__diffusion_1_1_solver.html#a03d3dadb361da96f7bfdba9cac501583", null ],
     [ "unknown_manager_", "d6/d32/classchi__diffusion_1_1_solver.html#aef411594ca051e7a14a5acc1155c1cf3", null ],
     [ "verbose_info_", "d6/d32/classchi__diffusion_1_1_solver.html#aacb0ec5effe85a8b03ff2b12473038a6", null ],
     [ "x_", "d6/d32/classchi__diffusion_1_1_solver.html#a916eead141055a47f4bdc251ba65da77", null ]

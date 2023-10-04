@@ -1,8 +1,8 @@
 var searchData=
 [
   ['qmomentslocal_0',['QMomentsLocal',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a87e1d7dff468d6aaaa269e8870e37e0d',1,'lbs::LBSSolver::QMomentsLocal() const'],['../dc/db7/classlbs_1_1_l_b_s_solver.html#a278a2eb01d497ebef86570e9eccc5fcb',1,'lbs::LBSSolver::QMomentsLocal()']]],
-  ['qpointsxyz_1',['QPointsXYZ',['../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#adca34add7de533caaf711e409c478529',1,'chi_math::finite_element::InternalQuadraturePointData']]],
-  ['qpointxyz_2',['QPointXYZ',['../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#ad9935574d332f19a9863886d1f2079ca',1,'chi_math::finite_element::InternalQuadraturePointData']]],
+  ['qpointsxyz_1',['QPointsXYZ',['../d5/d45/classchi__math_1_1finite__element_1_1_volumetric_quadrature_point_data.html#ae93fd6252a0bc420995c1534da255600',1,'chi_math::finite_element::VolumetricQuadraturePointData']]],
+  ['qpointxyz_2',['QPointXYZ',['../d5/d45/classchi__math_1_1finite__element_1_1_volumetric_quadrature_point_data.html#ab72e417c7932035e93a50425034ddbac',1,'chi_math::finite_element::VolumetricQuadraturePointData']]],
   ['quadrature_3',['Quadrature',['../d3/dbf/classchi__math_1_1_quadrature.html#ac66ecadbddb0b23ad670429d7eae03c2',1,'chi_math::Quadrature::Quadrature(const chi::InputParameters &amp;params)'],['../d3/dbf/classchi__math_1_1_quadrature.html#ab3a8253b2fe9ac41606512fa918523c8',1,'chi_math::Quadrature::Quadrature(QuadratureOrder in_order)'],['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a9a999c43c61d74a88a6ee458bf7d0a2f',1,'chi_math::SimplifiedLDFESQ::Quadrature::Quadrature()']]],
   ['quadratureconical_4',['QuadratureConical',['../da/d37/classchi__math_1_1_quadrature_conical.html#a2b3b729d776060651d38b362b9032f1a',1,'chi_math::QuadratureConical']]],
   ['quadraturegausschebyshev_5',['QuadratureGaussChebyshev',['../d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev.html#aa5cc197aca4927448b0317f664831944',1,'chi_math::QuadratureGaussChebyshev::QuadratureGaussChebyshev(const chi::InputParameters &amp;params)'],['../d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev.html#a871a5f33b46f579ce1deb0f02fa95fd0',1,'chi_math::QuadratureGaussChebyshev::QuadratureGaussChebyshev(unsigned int N, bool verbose=false)']]],
@@ -10,7 +10,7 @@ var searchData=
   ['quadraturehexahedron_7',['QuadratureHexahedron',['../d2/d67/classchi__math_1_1_quadrature_hexahedron.html#ae481efd974a8ee4730e46cc245306633',1,'chi_math::QuadratureHexahedron']]],
   ['quadraturejacobi_8',['QuadratureJacobi',['../d4/d17/classchi__math_1_1_quadrature_jacobi.html#a1a711bf57299b8385513cbce1b86057f',1,'chi_math::QuadratureJacobi']]],
   ['quadratureline_9',['QuadratureLine',['../d8/d8d/classchi__math_1_1_quadrature_line.html#aa3a46d9c61a82b57f0c8673225d11241',1,'chi_math::QuadratureLine']]],
-  ['quadraturepointindices_10',['QuadraturePointIndices',['../d5/da1/classchi__math_1_1finite__element_1_1_internal_quadrature_point_data.html#a190db7a9d514f528404e5be3b8f33e64',1,'chi_math::finite_element::InternalQuadraturePointData']]],
+  ['quadraturepointindices_10',['QuadraturePointIndices',['../d5/d45/classchi__math_1_1finite__element_1_1_volumetric_quadrature_point_data.html#aac53b3ccb046728568cb06fd47c9d067',1,'chi_math::finite_element::VolumetricQuadraturePointData']]],
   ['quadraturepointphitheta_11',['QuadraturePointPhiTheta',['../dc/d9c/structchi__math_1_1_quadrature_point_phi_theta.html#aeaf25e312b3c603a57ba979c882ee2b7',1,'chi_math::QuadraturePointPhiTheta']]],
   ['quadraturequadrilateral_12',['QuadratureQuadrilateral',['../da/d04/classchi__math_1_1_quadrature_quadrilateral.html#aba41e558c6486b8b835abd62d85f56e8',1,'chi_math::QuadratureQuadrilateral']]],
   ['quadraturessintegral_13',['QuadratureSSIntegral',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a613cf717509698cf629e2e2968ecadb6',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],

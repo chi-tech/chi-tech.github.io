@@ -5,6 +5,7 @@ var namespacechi__diffusion =
     [ "BoundaryReflecting", "d1/d0c/classchi__diffusion_1_1_boundary_reflecting.html", "d1/d0c/classchi__diffusion_1_1_boundary_reflecting" ],
     [ "BoundaryRobin", "d6/d58/classchi__diffusion_1_1_boundary_robin.html", "d6/d58/classchi__diffusion_1_1_boundary_robin" ],
     [ "Solver", "d6/d32/classchi__diffusion_1_1_solver.html", "d6/d32/classchi__diffusion_1_1_solver" ],
+    [ "UnitIntegralContainer", "dd/dd0/classchi__diffusion_1_1_unit_integral_container.html", "dd/dd0/classchi__diffusion_1_1_unit_integral_container" ],
     [ "BoundaryType", "de/d73/namespacechi__diffusion.html#ac4e189795be6769fcad88cf3ebf1d79f", [
       [ "Reflecting", "de/d73/namespacechi__diffusion.html#ac4e189795be6769fcad88cf3ebf1d79fa9ee62873f779acffc647988768156e29", null ],
       [ "Dirichlet", "de/d73/namespacechi__diffusion.html#ac4e189795be6769fcad88cf3ebf1d79fabac152b762896edff34ed668ae1a546f", null ],

@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('d0/dd7/mgd__02a__asemble__rhs__g_8cc_s
 <a href="../../d0/dd7/mgd__02a__asemble__rhs__g_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d1d/mg__diffusion__solver_8h.html">mg_diffusion_solver.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d75/chi__log_8h.html">chi_log.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/dfa/pwlc_8h.html">math/SpatialDiscretization/FiniteElement/PiecewiseLinear/pwlc.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d8d/_piece_wise_linear_continuous_8h.html">math/SpatialDiscretization/FiniteElement/PiecewiseLinear/PieceWiseLinearContinuous.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/db3/chi__meshcontinuum_8h.html">mesh/MeshContinuum/chi_meshcontinuum.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//========================================================== Solve 1g problem</span></div>
@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('d0/dd7/mgd__02a__asemble__rhs__g_8cc_s
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell :  <a class="code hl_variable" href="../../d4/d4c/classmg__diffusion_1_1_solver.html#a988b68501d674a2c468bb856abb3cd34">mg_diffusion::Solver::grid_ptr_</a>-&gt;local_cells)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cell_mapping = sdm.GetCellMapping(cell);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">const</span> <span class="keyword">auto</span>  qp_data      = cell_mapping.MakeVolumeQuadraturePointData();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">const</span> <span class="keyword">auto</span>  qp_data      = cell_mapping.MakeVolumetricQuadraturePointData();</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_nodes   = cell_mapping.NumNodes();</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; xs = <a class="code hl_variable" href="../../d4/d4c/classmg__diffusion_1_1_solver.html#a7e2ae04c1ccdccb016ae9604c42cac3e">matid_to_xs_map</a>.at(cell.material_id_);</div>
@@ -152,6 +152,7 @@ $(document).ready(function(){initNavTree('d0/dd7/mgd__02a__asemble__rhs__g_8cc_s
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">//  cout &lt;&lt; &quot;b=bext[&quot;&lt;&lt;g&lt;&lt;&quot;]+inscattering\n&quot;;</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//  VecView(b, PETSC_VIEWER_STDERR_WORLD);</span></div>
+<div class="ttc" id="a_piece_wise_linear_continuous_8h_html"><div class="ttname"><a href="../../d2/d8d/_piece_wise_linear_continuous_8h.html">PieceWiseLinearContinuous.h</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
 <div class="ttc" id="achi__runtime_8h_html"><div class="ttname"><a href="../../d3/db2/chi__runtime_8h.html">chi_runtime.h</a></div></div>
@@ -165,7 +166,6 @@ $(document).ready(function(){initNavTree('d0/dd7/mgd__02a__asemble__rhs__g_8cc_s
 <div class="ttc" id="aclassmg__diffusion_1_1_solver_html_aeeef84234369c99149ca54e95d64971b"><div class="ttname"><a href="../../d4/d4c/classmg__diffusion_1_1_solver.html#aeeef84234369c99149ca54e95d64971b">mg_diffusion::Solver::bext_</a></div><div class="ttdeci">std::vector&lt; Vec &gt; bext_</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d1d/mg__diffusion__solver_8h_source.html#l00067">mg_diffusion_solver.h:67</a></div></div>
 <div class="ttc" id="aclassmg__diffusion_1_1_solver_html_af879e05c6efbc65236c0d527231fe02d"><div class="ttname"><a href="../../d4/d4c/classmg__diffusion_1_1_solver.html#af879e05c6efbc65236c0d527231fe02d">mg_diffusion::Solver::Assemble_RHS</a></div><div class="ttdeci">void Assemble_RHS(unsigned int g, int64_t iverbose)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/mgd__02a__asemble__rhs__g_8cc_source.html#l00008">mgd_02a_asemble_rhs_g.cc:8</a></div></div>
 <div class="ttc" id="amg__diffusion__solver_8h_html"><div class="ttname"><a href="../../db/d1d/mg__diffusion__solver_8h.html">mg_diffusion_solver.h</a></div></div>
-<div class="ttc" id="apwlc_8h_html"><div class="ttname"><a href="../../d3/dfa/pwlc_8h.html">pwlc.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

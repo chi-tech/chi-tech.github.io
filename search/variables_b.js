@@ -20,7 +20,7 @@ var searchData=
   ['lbs_5fss_5fsolver_5f_17',['lbs_ss_solver_',['../d9/df7/structlbs_1_1_sweep_w_g_s_context.html#a9080aaa96383b16b96f6e452ec5630c8',1,'lbs::SweepWGSContext']]],
   ['lhs_5fsrc_5fscope_5f_18',['lhs_src_scope_',['../dd/ddd/structlbs_1_1_w_g_s_context.html#a47713ad8a6c23af4f4672364172a0d52',1,'lbs::WGSContext']]],
   ['library_5fhandle_5f_19',['library_handle_',['../de/de1/classchi_1_1_plugin.html#a4a909f5c7c328410ec708e3a5b6b47de',1,'chi::Plugin']]],
-  ['line_5fquad_5forder_5farbitrary_5f_20',['line_quad_order_arbitrary_',['../d1/dd0/classchi__math_1_1_spatial_discretization___p_w_l_base.html#a19221443fc1adf7a0fbcfb659f5bc899',1,'chi_math::SpatialDiscretization_PWLBase']]],
+  ['line_5fquad_5forder_5farbitrary_5f_20',['line_quad_order_arbitrary_',['../da/d8c/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_base.html#a383fcd6515a6958e245152f3f989be5e',1,'chi_math::spatial_discretization::PieceWiseLinearBase']]],
   ['lines_5f_21',['lines_',['../dd/d43/classchi__mesh_1_1_surface_mesh.html#a5eb0a9a4a76f38dc3a7a2b2b5292c8b3',1,'chi_mesh::SurfaceMesh']]],
   ['list_5f_22',['list_',['../df/d0b/classchi__data__types_1_1_allowable_range_list.html#ad1a770c4f82ae652f7d8e397f9720c59',1,'chi_data_types::AllowableRangeList']]],
   ['local_5fbase_5fblock_5fsize_5f_23',['local_base_block_size_',['../dd/d1d/classchi__math_1_1_spatial_discretization.html#a93c2ef8237cd2fe73a3d27ea301a338a',1,'chi_math::SpatialDiscretization']]],
