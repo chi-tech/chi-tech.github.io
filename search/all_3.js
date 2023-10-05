@@ -634,7 +634,7 @@ var searchData=
   ['copyonlyphi0_631',['CopyOnlyPhi0',['../d1/ddf/classlbs_1_1_x_x_power_iteration_k_eigen_s_c_d_s_a.html#a5d439214f5f2b0d4155af0a9d61a6fef',1,'lbs::XXPowerIterationKEigenSCDSA']]],
   ['copystlvectortovec_632',['CopySTLvectorToVec',['../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad16be762b55b9e5e8fcf560a1cfb041f',1,'chi_math::PETScUtils']]],
   ['copytoalloctants_633',['CopyToAllOctants',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a585b4a2472ff056bec2ba26db8ccec3e',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],
-  ['copyugridcellsandpoints_634',['CopyUGridCellsAndPoints',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a55d18c2cc3ef2f8c1093a934289bdc3d',1,'chi_mesh::UnpartitionedMesh']]],
+  ['copyugridcellsandpoints_634',['CopyUGridCellsAndPoints',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a7b0339cd3fc572041a34a3e6a2ebdc5d',1,'chi_mesh::UnpartitionedMesh']]],
   ['copyvectorwithunknownscope_635',['CopyVectorWithUnknownScope',['../dd/d1d/classchi__math_1_1_spatial_discretization.html#a7a3255f84a521d4fccfaf9a72b415af3',1,'chi_math::SpatialDiscretization']]],
   ['copyvectostlvector_636',['CopyVecToSTLvector',['../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ab85f7bb28446f6846b2dfe1f6ba45f09',1,'chi_math::PETScUtils']]],
   ['copyvectostlvectorwithghosts_637',['CopyVecToSTLvectorWithGhosts',['../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a258d9873ec6cca45b87620581d973c25',1,'chi_math::PETScUtils']]],

@@ -169,8 +169,8 @@ Protected Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a55d18c2cc3ef2f8c1093a934289bdc3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a55d18c2cc3ef2f8c1093a934289bdc3d">CopyUGridCellsAndPoints</a> (vtkUnstructuredGrid &amp;ugrid, double scale)</td></tr>
-<tr class="separator:a55d18c2cc3ef2f8c1093a934289bdc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0339cd3fc572041a34a3e6a2ebdc5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a7b0339cd3fc572041a34a3e6a2ebdc5d">CopyUGridCellsAndPoints</a> (vtkUnstructuredGrid &amp;ugrid, double scale, int dimension_to_copy)</td></tr>
+<tr class="separator:a7b0339cd3fc572041a34a3e6a2ebdc5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94bd2eddc79e716285e624ce4b9a5cb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a94bd2eddc79e716285e624ce4b9a5cb1">SetMaterialIDsFromList</a> (const std::vector&lt; int &gt; &amp;material_ids)</td></tr>
 <tr class="separator:a94bd2eddc79e716285e624ce4b9a5cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abec294e067fb5b7e6037296e43111495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#abec294e067fb5b7e6037296e43111495">SetBoundaryIDsFromBlocks</a> (std::vector&lt; <a class="el" href="../../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a03af91a600b2998985328c3480286fec">vtkUGridPtrAndName</a> &gt; &amp;bndry_grid_blocks)</td></tr>
@@ -303,7 +303,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00107">107</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00109">109</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -350,7 +350,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00145">145</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00144">144</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -374,8 +374,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a55d18c2cc3ef2f8c1093a934289bdc3d" name="a55d18c2cc3ef2f8c1093a934289bdc3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55d18c2cc3ef2f8c1093a934289bdc3d">&#9670;&nbsp;</a></span>CopyUGridCellsAndPoints()</h2>
+<a id="a7b0339cd3fc572041a34a3e6a2ebdc5d" name="a7b0339cd3fc572041a34a3e6a2ebdc5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b0339cd3fc572041a34a3e6a2ebdc5d">&#9670;&nbsp;</a></span>CopyUGridCellsAndPoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -393,7 +393,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>scale</em>&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension_to_copy</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -438,7 +444,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Creates a raw slab cell from a vtk-line. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html#l00118">118</a> of file <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html">unpartmesh_00c_vtk_cellsvtk2chi.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html#l00205">205</a> of file <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html">unpartmesh_00c_vtk_cellsvtk2chi.cc</a>.</p>
 
 </div>
 </div>
@@ -467,7 +473,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Creates a raw polygon cell from a vtk-polygon. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html#l00066">66</a> of file <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html">unpartmesh_00c_vtk_cellsvtk2chi.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html#l00148">148</a> of file <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html">unpartmesh_00c_vtk_cellsvtk2chi.cc</a>.</p>
 
 </div>
 </div>
@@ -525,7 +531,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Creates a raw point cell from a vtk-vertex. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html#l00165">165</a> of file <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html">unpartmesh_00c_vtk_cellsvtk2chi.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html#l00253">253</a> of file <a class="el" href="../../d8/dc9/unpartmesh__00c__vtk__cellsvtk2chi_8cc_source.html">unpartmesh_00c_vtk_cellsvtk2chi.cc</a>.</p>
 
 </div>
 </div>
@@ -552,7 +558,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00094">94</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00096">96</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -579,7 +585,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00099">99</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00101">101</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -606,7 +612,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00100">100</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00102">102</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -633,7 +639,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00096">96</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00098">98</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -660,7 +666,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00097">97</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00099">99</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -687,7 +693,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00108">108</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00110">110</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -714,7 +720,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00109">109</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00111">111</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -741,7 +747,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00113">113</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00112">112</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -768,7 +774,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00102">102</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00104">104</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -795,7 +801,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00119">119</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00118">118</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -822,7 +828,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00118">118</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00117">117</a> of file <a class="el" href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html">chi_unpartitioned_mesh.h</a>.</p>
 
 </div>
 </div>
@@ -1089,7 +1095,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Set boundary-ids from boundary grid_blocks. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d05/unpartmesh__00d__vtk__copies_8cc_source.html#l00201">201</a> of file <a class="el" href="../../d2/d05/unpartmesh__00d__vtk__copies_8cc_source.html">unpartmesh_00d_vtk_copies.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d05/unpartmesh__00d__vtk__copies_8cc_source.html#l00209">209</a> of file <a class="el" href="../../d2/d05/unpartmesh__00d__vtk__copies_8cc_source.html">unpartmesh_00d_vtk_copies.cc</a>.</p>
 
 </div>
 </div>
@@ -1118,7 +1124,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Set material-ids from list. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d05/unpartmesh__00d__vtk__copies_8cc_source.html#l00190">190</a> of file <a class="el" href="../../d2/d05/unpartmesh__00d__vtk__copies_8cc_source.html">unpartmesh_00d_vtk_copies.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d05/unpartmesh__00d__vtk__copies_8cc_source.html#l00198">198</a> of file <a class="el" href="../../d2/d05/unpartmesh__00d__vtk__copies_8cc_source.html">unpartmesh_00d_vtk_copies.cc</a>.</p>
 
 </div>
 </div>

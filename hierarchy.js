@@ -90,6 +90,7 @@ var hierarchy =
       ] ],
       [ "chi_math::NonLinearSolverOptions", "dd/d3c/classchi__math_1_1_non_linear_solver_options.html", null ],
       [ "chi_math::Quadrature", "d3/dbf/classchi__math_1_1_quadrature.html", [
+        [ "chi_math::PointQuadrature", "d6/dce/classchi__math_1_1_point_quadrature.html", null ],
         [ "chi_math::QuadratureConical", "da/d37/classchi__math_1_1_quadrature_conical.html", null ],
         [ "chi_math::QuadratureGaussChebyshev", "d4/de5/classchi__math_1_1_quadrature_gauss_chebyshev.html", null ],
         [ "chi_math::QuadratureGaussLegendre", "d3/d07/classchi__math_1_1_quadrature_gauss_legendre.html", [
@@ -99,7 +100,8 @@ var hierarchy =
         [ "chi_math::QuadratureJacobi", "d4/d17/classchi__math_1_1_quadrature_jacobi.html", null ],
         [ "chi_math::QuadratureQuadrilateral", "da/d04/classchi__math_1_1_quadrature_quadrilateral.html", null ],
         [ "chi_math::QuadratureTetrahedron", "d8/d57/classchi__math_1_1_quadrature_tetrahedron.html", null ],
-        [ "chi_math::QuadratureTriangle", "d0/d61/classchi__math_1_1_quadrature_triangle.html", null ]
+        [ "chi_math::QuadratureTriangle", "d0/d61/classchi__math_1_1_quadrature_triangle.html", null ],
+        [ "chi_math::QuadratureWedge", "d4/da4/classchi__math_1_1_quadrature_wedge.html", null ]
       ] ],
       [ "chi_math::TimeIntegration", "d8/d2b/classchi__math_1_1_time_integration.html", [
         [ "chi_math::ThetaSchemeTimeIntegration", "df/de8/classchi__math_1_1_theta_scheme_time_integration.html", [

@@ -19,6 +19,8 @@ var searchData=
   ['quadrature_5ftetrahedron_2eh_16',['quadrature_tetrahedron.h',['../d6/da3/quadrature__tetrahedron_8h.html',1,'']]],
   ['quadrature_5ftriangle_2ecc_17',['quadrature_triangle.cc',['../dc/d00/quadrature__triangle_8cc.html',1,'']]],
   ['quadrature_5ftriangle_2eh_18',['quadrature_triangle.h',['../df/d98/quadrature__triangle_8h.html',1,'']]],
-  ['quadraturepointdata_2ecc_19',['QuadraturePointData.cc',['../d6/d54/_quadrature_point_data_8cc.html',1,'']]],
-  ['quadraturepointdata_2eh_20',['QuadraturePointData.h',['../d5/d1b/_quadrature_point_data_8h.html',1,'']]]
+  ['quadrature_5fwedge_2ecc_19',['quadrature_wedge.cc',['../db/da1/quadrature__wedge_8cc.html',1,'']]],
+  ['quadrature_5fwedge_2eh_20',['quadrature_wedge.h',['../da/de7/quadrature__wedge_8h.html',1,'']]],
+  ['quadraturepointdata_2ecc_21',['QuadraturePointData.cc',['../d6/d54/_quadrature_point_data_8cc.html',1,'']]],
+  ['quadraturepointdata_2eh_22',['QuadraturePointData.h',['../d5/d1b/_quadrature_point_data_8h.html',1,'']]]
 ];

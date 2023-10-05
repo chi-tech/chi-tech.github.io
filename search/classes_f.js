@@ -10,5 +10,6 @@ var searchData=
   ['quadraturepointphitheta_7',['QuadraturePointPhiTheta',['../dc/d9c/structchi__math_1_1_quadrature_point_phi_theta.html',1,'chi_math']]],
   ['quadraturequadrilateral_8',['QuadratureQuadrilateral',['../da/d04/classchi__math_1_1_quadrature_quadrilateral.html',1,'chi_math']]],
   ['quadraturetetrahedron_9',['QuadratureTetrahedron',['../d8/d57/classchi__math_1_1_quadrature_tetrahedron.html',1,'chi_math']]],
-  ['quadraturetriangle_10',['QuadratureTriangle',['../d0/d61/classchi__math_1_1_quadrature_triangle.html',1,'chi_math']]]
+  ['quadraturetriangle_10',['QuadratureTriangle',['../d0/d61/classchi__math_1_1_quadrature_triangle.html',1,'chi_math']]],
+  ['quadraturewedge_11',['QuadratureWedge',['../d4/da4/classchi__math_1_1_quadrature_wedge.html',1,'chi_math']]]
 ];

@@ -11,7 +11,7 @@ var classchi__mesh_1_1_unpartitioned_mesh =
     [ "BuildMeshConnectivity", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a636d85ee971e6b9a1bda3bf5c5f5d76b", null ],
     [ "CleanUp", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a6f4827ce476ca6d237f4a3d68c521035", null ],
     [ "ComputeCentroidsAndCheckQuality", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a15c6974be982d4a472272d45bce149a7", null ],
-    [ "CopyUGridCellsAndPoints", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a55d18c2cc3ef2f8c1093a934289bdc3d", null ],
+    [ "CopyUGridCellsAndPoints", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a7b0339cd3fc572041a34a3e6a2ebdc5d", null ],
     [ "CreateCellFromVTKLine", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#a108de01f5e69c66410928134868044bf", null ],
     [ "CreateCellFromVTKPolygon", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ac91ac9efb659eba5be70ddb82b9f81f2", null ],
     [ "CreateCellFromVTKPolyhedron", "d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ae44df63d61bcfb87fb8025e3b8f31365", null ],

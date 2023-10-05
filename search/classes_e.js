@@ -15,12 +15,13 @@ var searchData=
   ['piecewiselinearpolyhedronmapping_12',['PieceWiseLinearPolyhedronMapping',['../df/dc1/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_polyhedron_mapping.html',1,'chi_math::cell_mapping']]],
   ['piecewiselinearslabmapping_13',['PieceWiseLinearSlabMapping',['../df/d76/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_slab_mapping.html',1,'chi_math::cell_mapping']]],
   ['plugin_14',['Plugin',['../de/de1/classchi_1_1_plugin.html',1,'chi']]],
-  ['pointsource_15',['PointSource',['../dc/d4f/classlbs_1_1_point_source.html',1,'lbs']]],
-  ['polyface_16',['PolyFace',['../d4/ddb/structchi__mesh_1_1_poly_face.html',1,'chi_mesh']]],
-  ['postprocessor_17',['PostProcessor',['../d4/d21/classchi_1_1_post_processor.html',1,'chi']]],
-  ['postprocessorprinter_18',['PostProcessorPrinter',['../d4/d26/classchi_1_1_post_processor_printer.html',1,'chi']]],
-  ['ppprintersubscribehelper_19',['PPPrinterSubscribeHelper',['../db/dca/classchi_1_1_p_p_printer_subscribe_helper.html',1,'chi']]],
-  ['preconditionercontext_20',['PreconditionerContext',['../d6/db8/structchi__math_1_1_preconditioner_context.html',1,'chi_math']]],
-  ['precursor_21',['Precursor',['../de/d51/structchi__physics_1_1_multi_group_x_s_1_1_precursor.html',1,'chi_physics::MultiGroupXS']]],
-  ['productquadrature_22',['ProductQuadrature',['../d5/df7/classchi__math_1_1_product_quadrature.html',1,'chi_math']]]
+  ['pointquadrature_15',['PointQuadrature',['../d6/dce/classchi__math_1_1_point_quadrature.html',1,'chi_math']]],
+  ['pointsource_16',['PointSource',['../dc/d4f/classlbs_1_1_point_source.html',1,'lbs']]],
+  ['polyface_17',['PolyFace',['../d4/ddb/structchi__mesh_1_1_poly_face.html',1,'chi_mesh']]],
+  ['postprocessor_18',['PostProcessor',['../d4/d21/classchi_1_1_post_processor.html',1,'chi']]],
+  ['postprocessorprinter_19',['PostProcessorPrinter',['../d4/d26/classchi_1_1_post_processor_printer.html',1,'chi']]],
+  ['ppprintersubscribehelper_20',['PPPrinterSubscribeHelper',['../db/dca/classchi_1_1_p_p_printer_subscribe_helper.html',1,'chi']]],
+  ['preconditionercontext_21',['PreconditionerContext',['../d6/db8/structchi__math_1_1_preconditioner_context.html',1,'chi_math']]],
+  ['precursor_22',['Precursor',['../de/d51/structchi__physics_1_1_multi_group_x_s_1_1_precursor.html',1,'chi_physics::MultiGroupXS']]],
+  ['productquadrature_23',['ProductQuadrature',['../d5/df7/classchi__math_1_1_product_quadrature.html',1,'chi_math']]]
 ];

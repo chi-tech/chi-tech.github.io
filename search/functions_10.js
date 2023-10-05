@@ -15,5 +15,6 @@ var searchData=
   ['quadraturequadrilateral_12',['QuadratureQuadrilateral',['../da/d04/classchi__math_1_1_quadrature_quadrilateral.html#aba41e558c6486b8b835abd62d85f56e8',1,'chi_math::QuadratureQuadrilateral']]],
   ['quadraturessintegral_13',['QuadratureSSIntegral',['../d3/ddf/classchi__math_1_1_simplified_l_d_f_e_s_q_1_1_quadrature.html#a613cf717509698cf629e2e2968ecadb6',1,'chi_math::SimplifiedLDFESQ::Quadrature']]],
   ['quadraturetetrahedron_14',['QuadratureTetrahedron',['../d8/d57/classchi__math_1_1_quadrature_tetrahedron.html#a91bc98e16b8ad0bd646d28ab50ba9e79',1,'chi_math::QuadratureTetrahedron']]],
-  ['quadraturetriangle_15',['QuadratureTriangle',['../d0/d61/classchi__math_1_1_quadrature_triangle.html#ae50c0da1a94308f941ecea6ba665a5ce',1,'chi_math::QuadratureTriangle']]]
+  ['quadraturetriangle_15',['QuadratureTriangle',['../d0/d61/classchi__math_1_1_quadrature_triangle.html#ae50c0da1a94308f941ecea6ba665a5ce',1,'chi_math::QuadratureTriangle']]],
+  ['quadraturewedge_16',['QuadratureWedge',['../d4/da4/classchi__math_1_1_quadrature_wedge.html#ad9f40c6d701bcb4a9ff45b77d35ddd22',1,'chi_math::QuadratureWedge']]]
 ];

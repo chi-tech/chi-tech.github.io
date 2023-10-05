@@ -17,6 +17,10 @@ var dir_576a319e73d9f65c11db5f224c13034e =
     [ "cylindrical_angular_quadrature.h", "df/da7/cylindrical__angular__quadrature_8h.html", [
       [ "chi_math::CylindricalAngularQuadrature", "d8/d60/classchi__math_1_1_cylindrical_angular_quadrature.html", "d8/d60/classchi__math_1_1_cylindrical_angular_quadrature" ]
     ] ],
+    [ "point_quadrature.cc", "d8/d3b/point__quadrature_8cc.html", null ],
+    [ "point_quadrature.h", "d5/d44/point__quadrature_8h.html", [
+      [ "chi_math::PointQuadrature", "d6/dce/classchi__math_1_1_point_quadrature.html", "d6/dce/classchi__math_1_1_point_quadrature" ]
+    ] ],
     [ "quadrature.cc", "d6/d90/quadrature_8cc.html", "d6/d90/quadrature_8cc" ],
     [ "quadrature.h", "d5/d4c/quadrature_8h.html", "d5/d4c/quadrature_8h" ],
     [ "quadrature_gausschebyshev.cc", "d4/d44/quadrature__gausschebyshev_8cc.html", "d4/d44/quadrature__gausschebyshev_8cc" ],
@@ -45,6 +49,10 @@ var dir_576a319e73d9f65c11db5f224c13034e =
     [ "quadrature_triangle.cc", "dc/d00/quadrature__triangle_8cc.html", null ],
     [ "quadrature_triangle.h", "df/d98/quadrature__triangle_8h.html", [
       [ "chi_math::QuadratureTriangle", "d0/d61/classchi__math_1_1_quadrature_triangle.html", "d0/d61/classchi__math_1_1_quadrature_triangle" ]
+    ] ],
+    [ "quadrature_wedge.cc", "db/da1/quadrature__wedge_8cc.html", null ],
+    [ "quadrature_wedge.h", "da/de7/quadrature__wedge_8h.html", [
+      [ "chi_math::QuadratureWedge", "d4/da4/classchi__math_1_1_quadrature_wedge.html", "d4/da4/classchi__math_1_1_quadrature_wedge" ]
     ] ],
     [ "spherical_angular_quadrature.cc", "da/d3b/spherical__angular__quadrature_8cc.html", null ],
     [ "spherical_angular_quadrature.h", "de/d43/spherical__angular__quadrature_8h.html", [
