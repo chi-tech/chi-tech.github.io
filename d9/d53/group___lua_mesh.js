@@ -2,7 +2,7 @@ var group___lua_mesh =
 [
     [ "Domain decomposition", "dd/d63/group___lua_domain_decomposition.html", "dd/d63/group___lua_domain_decomposition" ],
     [ "Logical Volumes", "d9/d32/group___lua_logic_volumes.html", "d9/d32/group___lua_logic_volumes" ],
-    [ "Mesh Generators", "d4/da2/group___mesh_generator.html", "d4/da2/group___mesh_generator" ],
+    [ "Mesh Generators", "da/de7/group__doc___mesh_generators.html", "da/de7/group__doc___mesh_generators" ],
     [ "Mesh Handler", "da/d92/group___lua_mesh_handler.html", "da/d92/group___lua_mesh_handler" ],
     [ "Mesh Macros", "d9/db8/group___lua_mesh_macros.html", "d9/db8/group___lua_mesh_macros" ],
     [ "Mesh Modifiers", "d6/dd1/group___doc_mesh_modifiers.html", "d6/dd1/group___doc_mesh_modifiers" ],

@@ -29,8 +29,10 @@ var searchData=
   ['write_5frestart_5ffile_5fbase_26',['write_restart_file_base',['../dc/dcd/structlbs_1_1_options.html#a070a4952662040fb183b707c6c1e86eb',1,'lbs::Options']]],
   ['write_5frestart_5ffolder_5fname_27',['write_restart_folder_name',['../dc/dcd/structlbs_1_1_options.html#a48df77259dca3b0aa71e3d0c7c95c7e9',1,'lbs::Options']]],
   ['write_5frestart_5finterval_28',['write_restart_interval',['../dc/dcd/structlbs_1_1_options.html#ab6dc21672888168d27932ee95095bb87',1,'lbs::Options']]],
-  ['writefluxmoments_29',['WriteFluxMoments',['../dc/db7/classlbs_1_1_l_b_s_solver.html#acca21193a12ae4acf290f44fb4f02dc1',1,'lbs::LBSSolver']]],
-  ['writegroupsetangularfluxes_30',['WriteGroupsetAngularFluxes',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a5671e0b8dc78065587c73ca10dfe22fa',1,'lbs::LBSSolver']]],
-  ['writepvtufiles_31',['WritePVTUFiles',['../d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f',1,'chi_mesh']]],
-  ['writerestartdata_32',['WriteRestartData',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a882807b22c09218411b061c0f1b4b231',1,'lbs::LBSSolver']]]
+  ['writebinaryvalue_29',['WriteBinaryValue',['../dc/d67/namespacechi.html#ade963dd4aac9ee8302ec3a9200ad159d',1,'chi']]],
+  ['writefluxmoments_30',['WriteFluxMoments',['../dc/db7/classlbs_1_1_l_b_s_solver.html#acca21193a12ae4acf290f44fb4f02dc1',1,'lbs::LBSSolver']]],
+  ['writegroupsetangularfluxes_31',['WriteGroupsetAngularFluxes',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a5671e0b8dc78065587c73ca10dfe22fa',1,'lbs::LBSSolver']]],
+  ['writepvtufiles_32',['WritePVTUFiles',['../d0/d81/namespacechi__mesh.html#a807675dab75b7ae6777ba6503315b65f',1,'chi_mesh']]],
+  ['writerestartdata_33',['WriteRestartData',['../dc/db7/classlbs_1_1_l_b_s_solver.html#a882807b22c09218411b061c0f1b4b231',1,'lbs::LBSSolver']]],
+  ['writesplitmesh_34',['WriteSplitMesh',['../d8/d0a/classchi__mesh_1_1_split_file_mesh_generator.html#ae5aeb6b577f41171db01d7cd70030979',1,'chi_mesh::SplitFileMeshGenerator']]]
 ];

@@ -105,9 +105,9 @@ $(document).ready(function(){initNavTree('d7/d79/_extruder_mesh_generator_8cc_so
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="comment">// clang-format off</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  params.<a class="code hl_function" href="../../d8/d4d/classchi_1_1_input_parameters.html#ac88f01c03520aaf64ae6ead8ea3697ae">SetGeneralDescription</a>(</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="stringliteral">&quot;A collection of parameters defining an extrusion layer.&quot;</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="stringliteral">&quot;A collection of parameters defining an extrusion layer.&quot;</span>);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  params.<a class="code hl_function" href="../../d8/d4d/classchi_1_1_input_parameters.html#a0a281e4d55bf9365efa9f4aa5c85a634">SetDocGroup</a>(<span class="stringliteral">&quot;chi_mesh__ExtruderMeshGenerator&quot;</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  params.<a class="code hl_function" href="../../d8/d4d/classchi_1_1_input_parameters.html#a0a281e4d55bf9365efa9f4aa5c85a634">SetDocGroup</a>(<span class="stringliteral">&quot;doc_MeshGenerators&quot;</span>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  params.<a class="code hl_function" href="../../d8/d4d/classchi_1_1_input_parameters.html#abc29e83c5cb6a5225144eceb13c5aae7">AddOptionalParameter</a>(</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="stringliteral">&quot;h&quot;</span>, 1.0, <span class="stringliteral">&quot;Layer height. Cannot be specified if \&quot;z\&quot; is specified.&quot;</span>);</div>
@@ -214,159 +214,191 @@ $(document).ready(function(){initNavTree('d7/d79/_extruder_mesh_generator_8cc_so
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; template_cells = input_umesh-&gt;GetRawCells();</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_template_vertices = template_vertices.size();</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_define" href="../../db/d42/chi__log__exceptions_8h.html#a36726be6664d4637124c15f474c18504">ChiLogicalErrorIf</a>(template_vertices.empty(), <span class="stringliteral">&quot;Input mesh has no vertices.&quot;</span>);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_define" href="../../db/d42/chi__log__exceptions_8h.html#a36726be6664d4637124c15f474c18504">ChiLogicalErrorIf</a>(template_cells.empty(), <span class="stringliteral">&quot;Input mesh has no cells.&quot;</span>);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="comment">//============================================= Check cells</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; template_cell_ptr : template_cells)</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; template_cell = *template_cell_ptr;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">if</span> (template_cell.type != <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9aecdc92bf56d960b73b02ee40125758bc">chi_mesh::CellType::POLYGON</a>)</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;ExtruderMeshGenerator: &quot;</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                             <span class="stringliteral">&quot;Template cell error. Not of base type POLYGON&quot;</span>);</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="comment">// Check cell not inverted</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; v0 = template_cell.centroid;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; v1 = template_vertices[template_cell.vertex_ids[0]];</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; v2 = template_vertices[template_cell.vertex_ids[1]];</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">auto</span> v01 = v1 - v0;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">auto</span> v02 = v2 - v0;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">if</span> (v01.Cross(v02).Dot(khat) &lt; 0.0)</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Extruder attempting to extrude a template&quot;</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                             <span class="stringliteral">&quot; cell with a normal pointing downward. This&quot;</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                             <span class="stringliteral">&quot; causes erratic behavior and needs to be&quot;</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                             <span class="stringliteral">&quot; corrected.&quot;</span>);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  }</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keyword">auto</span> umesh = std::make_unique&lt;UnpartitionedMesh&gt;();</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="comment">//============================================= Update boundary maps</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="keyword">auto</span>&amp; umesh_bndry_map = umesh-&gt;GetMeshOptions().boundary_id_map;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  umesh_bndry_map = input_umesh-&gt;GetMeshOptions().boundary_id_map;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="keyword">const</span> uint64_t zmax_bndry_id = umesh-&gt;MakeBoundaryID(<a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#aa6f205f8a72cdc612269c11e4d565dbc">top_boundary_name_</a>);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  umesh_bndry_map[zmax_bndry_id] = <a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#aa6f205f8a72cdc612269c11e4d565dbc">top_boundary_name_</a>;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="keyword">const</span> uint64_t zmin_bndry_id = umesh-&gt;MakeBoundaryID(<a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#a57a497103a85661bfc6267f9ed9bbc76">bottom_boundary_name_</a>);</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  umesh_bndry_map[zmin_bndry_id] = <a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#a57a497103a85661bfc6267f9ed9bbc76">bottom_boundary_name_</a>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="comment">//============================================= Setup z-levels</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="keywordtype">double</span> current_z = 0.0;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  std::vector&lt;double&gt; z_levels = {current_z};</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; layer : <a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#aa0b67e4d3f488c1259680f4b4d2cdd19">layers_</a>)</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> dz = layer.height_ / layer.num_sub_layers_;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; layer.num_sub_layers_; ++i)</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      z_levels.push_back(current_z += dz);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  }</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="comment">//============================================= Build vertices</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keyword">typedef</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> Vec3;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="keyword">auto</span>&amp; extruded_vertices = umesh-&gt;GetVertices();</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">double</span> z_level : z_levels)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; template_vertex : template_vertices)</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      extruded_vertices.push_back(</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        Vec3(template_vertex.x, template_vertex.y, z_level));</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="comment">//============================================= Build cells</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="keywordtype">size_t</span> k = 0;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; layer : <a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#aa0b67e4d3f488c1259680f4b4d2cdd19">layers_</a>)</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  {</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">for</span> (uint32_t n = 0; n &lt; layer.num_sub_layers_; ++n)</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    {</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; template_cell : template_cells)</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      {</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="comment">//================================== Determine cell sub-type</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <a class="code hl_enumeration" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9">CellType</a> extruded_subtype;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">switch</span> (template_cell-&gt;sub_type)</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        {</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a9bcd89070cae224dce305f5011659ef4">CellType::TRIANGLE</a>:      extruded_subtype = <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a42bd365c1ecdb0302894b3ff434de056">CellType::WEDGE</a>; <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9ac9736a37691f2901057c38a5490dc10c">CellType::QUADRILATERAL</a>: extruded_subtype = <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a8efa397d080e415a2a4b45794abc1f76">CellType::HEXAHEDRON</a>; <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>          <span class="keywordflow">default</span>:                      extruded_subtype = <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74">CellType::POLYHEDRON</a>;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        }</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="comment">//================================== Create new cell</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keyword">auto</span> new_cell_ptr = <span class="keyword">new</span> <a class="code hl_struct" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">UnpartitionedMesh::LightWeightCell</a>(</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>          <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74">CellType::POLYHEDRON</a>, extruded_subtype);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keyword">auto</span>&amp; new_cell = *new_cell_ptr;</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        new_cell.material_id = template_cell-&gt;material_id;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_template_cells = template_cells.size();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_define" href="../../db/d42/chi__log__exceptions_8h.html#a36726be6664d4637124c15f474c18504">ChiLogicalErrorIf</a>(template_vertices.empty(), <span class="stringliteral">&quot;Input mesh has no vertices.&quot;</span>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <a class="code hl_define" href="../../db/d42/chi__log__exceptions_8h.html#a36726be6664d4637124c15f474c18504">ChiLogicalErrorIf</a>(template_cells.empty(), <span class="stringliteral">&quot;Input mesh has no cells.&quot;</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="comment">//============================================= Check cells</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; template_cell_ptr : template_cells)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; template_cell = *template_cell_ptr;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordflow">if</span> (template_cell.type != <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9aecdc92bf56d960b73b02ee40125758bc">chi_mesh::CellType::POLYGON</a>)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;ExtruderMeshGenerator: &quot;</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                             <span class="stringliteral">&quot;Template cell error. Not of base type POLYGON&quot;</span>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="comment">// Check cell not inverted</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; v0 = template_cell.centroid;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; v1 = template_vertices[template_cell.vertex_ids[0]];</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; v2 = template_vertices[template_cell.vertex_ids[1]];</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">auto</span> v01 = v1 - v0;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">auto</span> v02 = v2 - v0;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">if</span> (v01.Cross(v02).Dot(khat) &lt; 0.0)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Extruder attempting to extrude a template&quot;</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                             <span class="stringliteral">&quot; cell with a normal pointing downward. This&quot;</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                             <span class="stringliteral">&quot; causes erratic behavior and needs to be&quot;</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                             <span class="stringliteral">&quot; corrected.&quot;</span>);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="keyword">auto</span> umesh = std::make_unique&lt;UnpartitionedMesh&gt;();</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="comment">//============================================= Update boundary maps</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keyword">auto</span>&amp; umesh_bndry_map = umesh-&gt;GetMeshOptions().boundary_id_map;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  umesh_bndry_map = input_umesh-&gt;GetMeshOptions().boundary_id_map;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keyword">const</span> uint64_t zmax_bndry_id = umesh-&gt;MakeBoundaryID(<a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#aa6f205f8a72cdc612269c11e4d565dbc">top_boundary_name_</a>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  umesh_bndry_map[zmax_bndry_id] = <a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#aa6f205f8a72cdc612269c11e4d565dbc">top_boundary_name_</a>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keyword">const</span> uint64_t zmin_bndry_id = umesh-&gt;MakeBoundaryID(<a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#a57a497103a85661bfc6267f9ed9bbc76">bottom_boundary_name_</a>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  umesh_bndry_map[zmin_bndry_id] = <a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#a57a497103a85661bfc6267f9ed9bbc76">bottom_boundary_name_</a>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="comment">//============================================= Setup z-levels</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <span class="keywordtype">double</span> current_z = 0.0;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  std::vector&lt;double&gt; z_levels = {current_z};</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; layer : <a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#aa0b67e4d3f488c1259680f4b4d2cdd19">layers_</a>)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> dz = layer.height_ / layer.num_sub_layers_;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; layer.num_sub_layers_; ++i)</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      z_levels.push_back(current_z += dz);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="comment">//============================================= Build vertices</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="keyword">typedef</span> <a class="code hl_struct" href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a> Vec3;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keyword">auto</span>&amp; extruded_vertices = umesh-&gt;GetVertices();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">double</span> z_level : z_levels)</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; template_vertex : template_vertices)</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      extruded_vertices.push_back(</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        Vec3(template_vertex.x, template_vertex.y, z_level));</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="comment">//============================================= Build cells</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keywordtype">size_t</span> k = 0;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; layer : <a class="code hl_variable" href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#aa0b67e4d3f488c1259680f4b4d2cdd19">layers_</a>)</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">for</span> (uint32_t n = 0; n &lt; layer.num_sub_layers_; ++n)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      <span class="keywordtype">size_t</span> tc_counter = 0;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; template_cell : template_cells)</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="comment">//================================== Determine cell sub-type</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <a class="code hl_enumeration" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9">CellType</a> extruded_subtype;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="comment">// clang-format off</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">switch</span> (template_cell-&gt;sub_type)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a9bcd89070cae224dce305f5011659ef4">CellType::TRIANGLE</a>:      extruded_subtype = <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a42bd365c1ecdb0302894b3ff434de056">CellType::WEDGE</a>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9ac9736a37691f2901057c38a5490dc10c">CellType::QUADRILATERAL</a>: extruded_subtype = <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a8efa397d080e415a2a4b45794abc1f76">CellType::HEXAHEDRON</a>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>          <span class="keywordflow">default</span>:                      extruded_subtype = <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74">CellType::POLYHEDRON</a>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        }</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="comment">// clang-format on</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="comment">//================================== Create new cell</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keyword">auto</span> new_cell_ptr = <span class="keyword">new</span> <a class="code hl_struct" href="../../da/d90/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_cell.html">UnpartitionedMesh::LightWeightCell</a>(</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>          <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ac0040cc3dbd19fdbf7d5dc46e61a5ca9a0fc6833ef0fef62f1b80d37303f6dd74">CellType::POLYHEDRON</a>, extruded_subtype);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keyword">auto</span>&amp; new_cell = *new_cell_ptr;</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="comment">//================================== Build vertices</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> tc_num_verts = template_cell-&gt;vertex_ids.size();</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        new_cell.vertex_ids.reserve(2 * tc_num_verts);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> tc_vid : template_cell-&gt;vertex_ids)</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>          new_cell.vertex_ids.push_back(tc_vid + k * num_template_vertices);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        new_cell.material_id = template_cell-&gt;material_id;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="comment">//================================== Build vertices</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> tc_num_verts = template_cell-&gt;vertex_ids.size();</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        new_cell.vertex_ids.reserve(2 * tc_num_verts);</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> tc_vid : template_cell-&gt;vertex_ids)</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>          new_cell.vertex_ids.push_back(tc_vid +</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                                        (k + 1) * num_template_vertices);</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="comment">//================================== Create side faces</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; tc_face : template_cell-&gt;faces)</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        {</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>          <a class="code hl_struct" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">UnpartitionedMesh::LightWeightFace</a> new_face;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>          <span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.resize(4, -1);</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[0] = tc_face.vertex_ids[0] + k * num_template_vertices;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[1] = tc_face.vertex_ids[1] + k * num_template_vertices;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[2] = tc_face.vertex_ids[1] + (k + 1) * num_template_vertices;</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[3] = tc_face.vertex_ids[0] + (k + 1) * num_template_vertices;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>          <span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>          <span class="keywordflow">if</span> (not tc_face.has_neighbor) new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#ad65de51bab1fbce1f5a308a5a19bc2ee">neighbor</a> = tc_face.neighbor;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>          new_cell.vertex_ids.push_back(tc_vid + k * num_template_vertices);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> tc_vid : template_cell-&gt;vertex_ids)</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>          new_cell.vertex_ids.push_back(tc_vid +</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                                        (k + 1) * num_template_vertices);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="comment">//================================== Create side faces</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; tc_face : template_cell-&gt;faces)</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>          <a class="code hl_struct" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">UnpartitionedMesh::LightWeightFace</a> new_face;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>          <span class="comment">// clang-format off</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.resize(4, -1);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[0] = tc_face.vertex_ids[0] + k * num_template_vertices;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[1] = tc_face.vertex_ids[1] + k * num_template_vertices;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[2] = tc_face.vertex_ids[1] + (k + 1) * num_template_vertices;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>[3] = tc_face.vertex_ids[0] + (k + 1) * num_template_vertices;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>          <span class="comment">// clang-format on</span></div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>          new_cell.faces.push_back(std::move(new_face));</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        } <span class="comment">// for tc face</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="comment">//================================== Create top and bottom faces</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="comment">// Top face</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        {</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>          <a class="code hl_struct" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">UnpartitionedMesh::LightWeightFace</a> new_face;</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(template_cell-&gt;vertex_ids.size());</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>          <span class="keywordflow">for</span> (<span class="keyword">auto</span> vid : template_cell-&gt;vertex_ids)</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(vid +</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                                          (k + 1) * num_template_vertices);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>          <span class="keywordflow">if</span> ((k + 1) == z_levels.size()) new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#ad65de51bab1fbce1f5a308a5a19bc2ee">neighbor</a> = zmax_bndry_id;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>          new_cell.faces.push_back(std::move(new_face));</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        }</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <span class="comment">// Bottom face</span></div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>          <a class="code hl_struct" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">UnpartitionedMesh::LightWeightFace</a> new_face;</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(template_cell-&gt;vertex_ids.size());</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>          <span class="keyword">auto</span>&amp; vs = template_cell-&gt;vertex_ids;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>          <span class="keywordflow">for</span> (<span class="keyword">auto</span> vid = vs.rbegin(); vid != vs.rend(); ++vid)</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back((*vid) + k * num_template_vertices);</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>          <span class="keywordflow">if</span> (k == 0) new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#ad65de51bab1fbce1f5a308a5a19bc2ee">neighbor</a> = zmin_bndry_id;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>          new_cell.faces.push_back(std::move(new_face));</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        }</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        umesh-&gt;GetRawCells().push_back(new_cell_ptr);</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      } <span class="comment">// for template cell</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>      ++k;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    } <span class="comment">// for sub-layer n</span></div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  }   <span class="comment">// for layer</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  umesh-&gt;SetAttributes(<a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">DIMENSION_3</a> | <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362aa7f7e30403730af6eefafe7d19bcc8be">EXTRUDED</a>);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>          <span class="keywordflow">if</span> (tc_face.has_neighbor)</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>          {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#ad65de51bab1fbce1f5a308a5a19bc2ee">neighbor</a> = num_template_cells * k + tc_face.neighbor;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af55dac0ed8faa9008c5f13041c2aeddc">has_neighbor</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>          }</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>          {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#ad65de51bab1fbce1f5a308a5a19bc2ee">neighbor</a> = tc_face.neighbor;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af55dac0ed8faa9008c5f13041c2aeddc">has_neighbor</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>          }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>          new_cell.faces.push_back(std::move(new_face));</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        } <span class="comment">// for tc face</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="comment">//================================== Create top and bottom faces</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="comment">// Top face</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>          <a class="code hl_struct" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">UnpartitionedMesh::LightWeightFace</a> new_face;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(template_cell-&gt;vertex_ids.size());</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>          <span class="keywordflow">for</span> (<span class="keyword">auto</span> vid : template_cell-&gt;vertex_ids)</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back(vid +</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                                          (k + 1) * num_template_vertices);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>          <span class="keywordflow">if</span> (k == (z_levels.size()-2))</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>          {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#ad65de51bab1fbce1f5a308a5a19bc2ee">neighbor</a> = zmax_bndry_id;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af55dac0ed8faa9008c5f13041c2aeddc">has_neighbor</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>          }</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>          {</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#ad65de51bab1fbce1f5a308a5a19bc2ee">neighbor</a> = num_template_cells * (k+1) + tc_counter;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af55dac0ed8faa9008c5f13041c2aeddc">has_neighbor</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>          }</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>          new_cell.faces.push_back(std::move(new_face));</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  umesh-&gt;ComputeCentroidsAndCheckQuality();</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  umesh-&gt;BuildMeshConnectivity();</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a>.<a class="code hl_function" href="../../df/dfa/classchi_1_1_chi_log.html#af6279a3e5e14a0801d1f7dd27616be1c">Log0Verbose1</a>()</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    &lt;&lt; <span class="stringliteral">&quot;ExtruderMeshGenerator::GenerateUnpartitionedMesh Done&quot;</span>;</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="keywordflow">return</span> umesh;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>}</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>} <span class="comment">// namespace chi_mesh</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="comment">// Bottom face</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>          <a class="code hl_struct" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">UnpartitionedMesh::LightWeightFace</a> new_face;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>          new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.reserve(template_cell-&gt;vertex_ids.size());</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>          <span class="keyword">auto</span>&amp; vs = template_cell-&gt;vertex_ids;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>          <span class="keywordflow">for</span> (<span class="keyword">auto</span> vid = vs.rbegin(); vid != vs.rend(); ++vid)</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">vertex_ids</a>.push_back((*vid) + k * num_template_vertices);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>          <span class="keywordflow">if</span> (k == 0)</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>          {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#ad65de51bab1fbce1f5a308a5a19bc2ee">neighbor</a> = zmin_bndry_id;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af55dac0ed8faa9008c5f13041c2aeddc">has_neighbor</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>          }</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>          {</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#ad65de51bab1fbce1f5a308a5a19bc2ee">neighbor</a> = num_template_cells * (k-1) + tc_counter;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            new_face.<a class="code hl_variable" href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af55dac0ed8faa9008c5f13041c2aeddc">has_neighbor</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>          }</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>          new_cell.faces.push_back(std::move(new_face));</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        umesh-&gt;GetRawCells().push_back(new_cell_ptr);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        ++tc_counter;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      } <span class="comment">// for template cell</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      ++k;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    } <span class="comment">// for sub-layer n</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  }   <span class="comment">// for layer</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  umesh-&gt;SetAttributes(<a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362af15b5a9461f9a446c9117b100d8e11f2">DIMENSION_3</a> | <a class="code hl_enumvalue" href="../../d0/d81/namespacechi__mesh.html#ad98d4e91589e7fa4e04bd70274068362aa7f7e30403730af6eefafe7d19bcc8be">EXTRUDED</a>);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  umesh-&gt;ComputeCentroidsAndCheckQuality();</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  umesh-&gt;BuildMeshConnectivity();</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a>.<a class="code hl_function" href="../../df/dfa/classchi_1_1_chi_log.html#af6279a3e5e14a0801d1f7dd27616be1c">Log0Verbose1</a>()</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    &lt;&lt; <span class="stringliteral">&quot;ExtruderMeshGenerator::GenerateUnpartitionedMesh Done&quot;</span>;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <span class="keywordflow">return</span> umesh;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>}</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>} <span class="comment">// namespace chi_mesh</span></div>
 <div class="ttc" id="a_chi_object_factory_8h_html"><div class="ttname"><a href="../../d3/ddc/_chi_object_factory_8h.html">ChiObjectFactory.h</a></div></div>
 <div class="ttc" id="a_extruder_mesh_generator_8h_html"><div class="ttname"><a href="../../d0/d80/_extruder_mesh_generator_8h.html">ExtruderMeshGenerator.h</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
@@ -391,7 +423,7 @@ $(document).ready(function(){initNavTree('d7/d79/_extruder_mesh_generator_8cc_so
 <div class="ttc" id="aclasschi__mesh_1_1_extruder_mesh_generator_html_aa0b67e4d3f488c1259680f4b4d2cdd19"><div class="ttname"><a href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#aa0b67e4d3f488c1259680f4b4d2cdd19">chi_mesh::ExtruderMeshGenerator::layers_</a></div><div class="ttdeci">std::vector&lt; ExtrusionLayer &gt; layers_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d80/_extruder_mesh_generator_8h_source.html#l00030">ExtruderMeshGenerator.h:30</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_extruder_mesh_generator_html_aa6f205f8a72cdc612269c11e4d565dbc"><div class="ttname"><a href="../../de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html#aa6f205f8a72cdc612269c11e4d565dbc">chi_mesh::ExtruderMeshGenerator::top_boundary_name_</a></div><div class="ttdeci">const std::string top_boundary_name_</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d80/_extruder_mesh_generator_8h_source.html#l00027">ExtruderMeshGenerator.h:27</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html">chi_mesh::MeshGenerator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0d/_mesh_generator_8h_source.html#l00034">MeshGenerator.h:35</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html_aff0cad710e70324b6bbf4b567aab215f"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#aff0cad710e70324b6bbf4b567aab215f">chi_mesh::MeshGenerator::GetInputParameters</a></div><div class="ttdeci">static chi::InputParameters GetInputParameters()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/da8/_mesh_generator_8cc_source.html#l00019">MeshGenerator.cc:19</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html_aff0cad710e70324b6bbf4b567aab215f"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#aff0cad710e70324b6bbf4b567aab215f">chi_mesh::MeshGenerator::GetInputParameters</a></div><div class="ttdeci">static chi::InputParameters GetInputParameters()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/da8/_mesh_generator_8cc_source.html#l00020">MeshGenerator.cc:20</a></div></div>
 <div class="ttc" id="anamespacechi__data__types_html"><div class="ttname"><a href="../../d5/d1b/namespacechi__data__types.html">chi_data_types</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd9/allowable__range_8h_source.html#l00010">allowable_range.h:11</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html">chi_mesh</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00012">chi_runtime.h:13</a></div></div>
 <div class="ttc" id="anamespacechi__mesh_html_a911bc7045c6abb7978af7d352505f60e"><div class="ttname"><a href="../../d0/d81/namespacechi__mesh.html#a911bc7045c6abb7978af7d352505f60e">chi_mesh::RegisterChiObject</a></div><div class="ttdeci">RegisterChiObject(chi_mesh, BooleanLogicalVolume)</div></div>
@@ -412,6 +444,7 @@ $(document).ready(function(){initNavTree('d7/d79/_extruder_mesh_generator_8cc_so
 <div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face_html"><div class="ttname"><a href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html">chi_mesh::UnpartitionedMesh::LightWeightFace</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00021">chi_unpartitioned_mesh.h:22</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face_html_ad65de51bab1fbce1f5a308a5a19bc2ee"><div class="ttname"><a href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#ad65de51bab1fbce1f5a308a5a19bc2ee">chi_mesh::UnpartitionedMesh::LightWeightFace::neighbor</a></div><div class="ttdeci">uint64_t neighbor</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00025">chi_unpartitioned_mesh.h:25</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face_html_af120a1294b889bba49e810e194fc9f26"><div class="ttname"><a href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af120a1294b889bba49e810e194fc9f26">chi_mesh::UnpartitionedMesh::LightWeightFace::vertex_ids</a></div><div class="ttdeci">std::vector&lt; uint64_t &gt; vertex_ids</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00023">chi_unpartitioned_mesh.h:23</a></div></div>
+<div class="ttc" id="astructchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face_html_af55dac0ed8faa9008c5f13041c2aeddc"><div class="ttname"><a href="../../da/da7/structchi__mesh_1_1_unpartitioned_mesh_1_1_light_weight_face.html#af55dac0ed8faa9008c5f13041c2aeddc">chi_mesh::UnpartitionedMesh::LightWeightFace::has_neighbor</a></div><div class="ttdeci">bool has_neighbor</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d60/chi__unpartitioned__mesh_8h_source.html#l00024">chi_unpartitioned_mesh.h:24</a></div></div>
 <div class="ttc" id="astructchi__mesh_1_1_vector3_html"><div class="ttname"><a href="../../dd/d54/structchi__mesh_1_1_vector3.html">chi_mesh::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d7f/chi__meshvector_8h_source.html#l00018">chi_meshvector.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

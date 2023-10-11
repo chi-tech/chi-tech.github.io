@@ -119,7 +119,8 @@ var hierarchy =
       [ "chi_mesh::MeshGenerator", "de/d1a/classchi__mesh_1_1_mesh_generator.html", [
         [ "chi_mesh::ExtruderMeshGenerator", "de/dd3/classchi__mesh_1_1_extruder_mesh_generator.html", null ],
         [ "chi_mesh::FromFileMeshGenerator", "da/d77/classchi__mesh_1_1_from_file_mesh_generator.html", null ],
-        [ "chi_mesh::OrthogonalMeshGenerator", "d7/d1e/classchi__mesh_1_1_orthogonal_mesh_generator.html", null ]
+        [ "chi_mesh::OrthogonalMeshGenerator", "d7/d1e/classchi__mesh_1_1_orthogonal_mesh_generator.html", null ],
+        [ "chi_mesh::SplitFileMeshGenerator", "d8/d0a/classchi__mesh_1_1_split_file_mesh_generator.html", null ]
       ] ],
       [ "chi_mesh::MeshModifier", "dc/df7/classchi__mesh_1_1_mesh_modifier.html", [
         [ "chi_mesh::SnapToPlaneMeshModifier", "dd/d81/classchi__mesh_1_1_snap_to_plane_mesh_modifier.html", null ]
@@ -358,6 +359,7 @@ var hierarchy =
       [ "lbs::CBC_SPDS", "d7/d50/classlbs_1_1_c_b_c___s_p_d_s.html", null ]
     ] ],
     [ "chi_math::SimplifiedLDFESQ::SphericalQuadrilateral", "d6/dfa/structchi__math_1_1_simplified_l_d_f_e_s_q_1_1_spherical_quadrilateral.html", null ],
+    [ "chi_mesh::SplitFileMeshGenerator::SplitMeshInfo", "dd/d64/structchi__mesh_1_1_split_file_mesh_generator_1_1_split_mesh_info.html", null ],
     [ "chi_mesh::sweep_management::SPLS", "d5/d51/structchi__mesh_1_1sweep__management_1_1_s_p_l_s.html", null ],
     [ "chi_mesh::sweep_management::STDG", "df/dda/structchi__mesh_1_1sweep__management_1_1_s_t_d_g.html", null ],
     [ "std::streambuf", null, [
@@ -418,6 +420,9 @@ var hierarchy =
     [ "chi_math::VectorNX< N, NumberFormat >", "d5/d8e/structchi__math_1_1_vector_n_x.html", null ],
     [ "chi::DirectedGraph::VertexAccessor", "d2/d77/classchi_1_1_directed_graph_1_1_vertex_accessor.html", null ],
     [ "chi_mesh::VertexHandler", "d1/d59/classchi__mesh_1_1_vertex_handler.html", null ],
+    [ "chi_mesh::MeshGenerator::VertexListHelper", "df/de1/structchi__mesh_1_1_mesh_generator_1_1_vertex_list_helper.html", [
+      [ "chi_mesh::MeshGenerator::STLVertexListHelper< T >", "d9/d38/structchi__mesh_1_1_mesh_generator_1_1_s_t_l_vertex_list_helper.html", null ]
+    ] ],
     [ "chi_mesh::VolumeMesher::VOLUME_MESHER_OPTIONS", "d8/dc2/structchi__mesh_1_1_volume_mesher_1_1_v_o_l_u_m_e___m_e_s_h_e_r___o_p_t_i_o_n_s.html", null ],
     [ "chi_mesh::VolumeMesher", "de/df0/classchi__mesh_1_1_volume_mesher.html", [
       [ "chi_mesh::VolumeMesherExtruder", "de/d89/classchi__mesh_1_1_volume_mesher_extruder.html", null ],

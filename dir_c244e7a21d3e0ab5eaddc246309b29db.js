@@ -19,5 +19,7 @@ var dir_c244e7a21d3e0ab5eaddc246309b29db =
     [ "test_modules_LinearBoltzmannSolvers_Transport_Steady_Transport3D_2Unstructured_lua.h", "db/d5c/test__modules___linear_boltzmann_solvers___transport___steady___transport3_d__2_unstructured__lua_8h.html", null ],
     [ "test_modules_LinearBoltzmannSolvers_Transport_Steady_Transport3D_3a_DSA_ortho_lua.h", "d2/d1a/test__modules___linear_boltzmann_solvers___transport___steady___transport3_d__3a___d_s_a__ortho__lua_8h.html", null ],
     [ "test_modules_LinearBoltzmannSolvers_Transport_Steady_Transport3D_4Cycles1_lua.h", "d3/d7e/test__modules___linear_boltzmann_solvers___transport___steady___transport3_d__4_cycles1__lua_8h.html", null ],
-    [ "test_modules_LinearBoltzmannSolvers_Transport_Steady_Transport3D_5Cycles2_lua.h", "d9/dcd/test__modules___linear_boltzmann_solvers___transport___steady___transport3_d__5_cycles2__lua_8h.html", null ]
+    [ "test_modules_LinearBoltzmannSolvers_Transport_Steady_Transport3D_5Cycles2_lua.h", "d9/dcd/test__modules___linear_boltzmann_solvers___transport___steady___transport3_d__5_cycles2__lua_8h.html", null ],
+    [ "test_modules_LinearBoltzmannSolvers_Transport_Steady_Transport3D_6ASplitMesh_lua.h", "d4/d6b/test__modules___linear_boltzmann_solvers___transport___steady___transport3_d__6_a_split_mesh__lua_8h.html", null ],
+    [ "test_modules_LinearBoltzmannSolvers_Transport_Steady_Transport3D_6BSplitMesh_lua.h", "d8/d70/test__modules___linear_boltzmann_solvers___transport___steady___transport3_d__6_b_split_mesh__lua_8h.html", null ]
 ];

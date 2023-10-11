@@ -34,6 +34,7 @@ var dir_c41d1cbb1e78ba295abacda4482bc177 =
     [ "chi_mesh__RPPLogicalVolume.h", "d7/d4f/chi__mesh_____r_p_p_logical_volume_8h.html", null ],
     [ "chi_mesh__SnapToPlaneMeshModifier.h", "d4/d6e/chi__mesh_____snap_to_plane_mesh_modifier_8h.html", null ],
     [ "chi_mesh__SphereLogicalVolume.h", "d9/d45/chi__mesh_____sphere_logical_volume_8h.html", null ],
+    [ "chi_mesh__SplitFileMeshGenerator.h", "d6/ddd/chi__mesh_____split_file_mesh_generator_8h.html", null ],
     [ "chi_mesh__SurfaceMeshLogicalVolume.h", "d0/dcd/chi__mesh_____surface_mesh_logical_volume_8h.html", null ],
     [ "chi_objects__Material.h", "df/dfd/chi__objects_____material_8h.html", null ],
     [ "chi_objects__MaterialProperty.h", "d2/d24/chi__objects_____material_property_8h.html", null ],

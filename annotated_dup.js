@@ -206,6 +206,7 @@ var annotated_dup =
       [ "RPPLogicalVolume", "d4/dea/classchi__mesh_1_1_r_p_p_logical_volume.html", "d4/dea/classchi__mesh_1_1_r_p_p_logical_volume" ],
       [ "SnapToPlaneMeshModifier", "dd/d81/classchi__mesh_1_1_snap_to_plane_mesh_modifier.html", "dd/d81/classchi__mesh_1_1_snap_to_plane_mesh_modifier" ],
       [ "SphereLogicalVolume", "db/d06/classchi__mesh_1_1_sphere_logical_volume.html", "db/d06/classchi__mesh_1_1_sphere_logical_volume" ],
+      [ "SplitFileMeshGenerator", "d8/d0a/classchi__mesh_1_1_split_file_mesh_generator.html", "d8/d0a/classchi__mesh_1_1_split_file_mesh_generator" ],
       [ "SurfaceMesh", "dd/d43/classchi__mesh_1_1_surface_mesh.html", "dd/d43/classchi__mesh_1_1_surface_mesh" ],
       [ "SurfaceMesher", "df/d7e/classchi__mesh_1_1_surface_mesher.html", "df/d7e/classchi__mesh_1_1_surface_mesher" ],
       [ "SurfaceMesherPassthrough", "d3/d2d/classchi__mesh_1_1_surface_mesher_passthrough.html", "d3/d2d/classchi__mesh_1_1_surface_mesher_passthrough" ],

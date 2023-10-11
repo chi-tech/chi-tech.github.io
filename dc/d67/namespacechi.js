@@ -89,6 +89,7 @@ var namespacechi =
     [ "operator\"\"_hash", "dc/d67/namespacechi.html#aed166a4bb5e7d62ad222bbd5089bd62a", null ],
     [ "ParameterBlockTypeName", "dc/d67/namespacechi.html#a8acba8c7242efe8cc66ac529f0bcba05", null ],
     [ "PrintIterationProgress", "dc/d67/namespacechi.html#a70490a378cc0a0c2a95b7446a262bc7d", null ],
+    [ "ReadBinaryValue", "dc/d67/namespacechi.html#a80243ff1ed0c4f22865b53c1f955ae92", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#ab60ce40d0099d0d710b8afeeffbc5783", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#a64908ab453f956f36d9e77acef985d49", null ],
     [ "RegisterChiObject", "dc/d67/namespacechi.html#ae7992d2f9d57fcfcb6093e8c3f9e4465", null ],
@@ -101,6 +102,7 @@ var namespacechi =
     [ "RegisterChiObject", "dc/d67/namespacechi.html#a9db089eeb2b89965016f630f9c94c3c5", null ],
     [ "RegisterChiObjectParametersOnly", "dc/d67/namespacechi.html#aff7f5e3b16b3480f33a1afc0a354c53a", null ],
     [ "RegisterLuaFunction", "dc/d67/namespacechi.html#a427ae5955440fb74c9da535def8b12ec", null ],
+    [ "Sleep", "dc/d67/namespacechi.html#afa4e4cc9b207c0c12d32c49bcd799867", null ],
     [ "StringLTrim", "dc/d67/namespacechi.html#aa6cf7680f830a2854f447c2630e6c811", null ],
     [ "StringRTrim", "dc/d67/namespacechi.html#aeda8c2eb2770d1543c822715d735eb61", null ],
     [ "StringSplit", "dc/d67/namespacechi.html#aaf0ea3aa60fef66e754f0101050a5f71", null ],
@@ -108,5 +110,6 @@ var namespacechi =
     [ "StringTrim", "dc/d67/namespacechi.html#aee7b8228cd67512806649040558a5767", null ],
     [ "StringUpToFirstReverse", "dc/d67/namespacechi.html#a1a2b9ab3ec4633dc3b163df85dfc11c8", null ],
     [ "VectorListHas", "dc/d67/namespacechi.html#ab637b96af60c5711b7e6b4ec0ca38e83", null ],
+    [ "WriteBinaryValue", "dc/d67/namespacechi.html#ade963dd4aac9ee8302ec3a9200ad159d", null ],
     [ "WHITESPACE", "dc/d67/namespacechi.html#a75b6d031b71ff8c8bb8b8828e642e6d9", null ]
 ];
