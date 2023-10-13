@@ -12,5 +12,6 @@ var classchi__mesh_1_1_split_file_mesh_generator =
     [ "num_parts_", "d8/d0a/classchi__mesh_1_1_split_file_mesh_generator.html#af458ae7e71aa8a23e17bd7feddf7e1de", null ],
     [ "read_only_", "d8/d0a/classchi__mesh_1_1_split_file_mesh_generator.html#a3f569d7ca33d33c31815915c57300494", null ],
     [ "split_file_prefix_", "d8/d0a/classchi__mesh_1_1_split_file_mesh_generator.html#a5041191fd15a9daf7d5b582f0770b879", null ],
-    [ "split_mesh_dir_path_", "d8/d0a/classchi__mesh_1_1_split_file_mesh_generator.html#abb905617fe307718ca2c19cd6b3403c5", null ]
+    [ "split_mesh_dir_path_", "d8/d0a/classchi__mesh_1_1_split_file_mesh_generator.html#abb905617fe307718ca2c19cd6b3403c5", null ],
+    [ "verbose_", "d8/d0a/classchi__mesh_1_1_split_file_mesh_generator.html#aca5a07dd5356d78722ccb7fe7b2fe462", null ]
 ];

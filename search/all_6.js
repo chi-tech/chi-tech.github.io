@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['f_0',['f',['../d6/d58/classchi__diffusion_1_1_boundary_robin.html#af3a42c2cb80e6e12e7f638e2ab299162',1,'chi_diffusion::BoundaryRobin::f()'],['../d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html#a89f49f948351af65bddb6cd50c486488',1,'lbs::SweepChunkPWLTransientTheta::Upwinder::f()']]],
-  ['f_1',['F',['../d6/dc4/classchi__math_1_1_non_linear_function.html#a27ce52063512657e7b9c5b0a157feabe',1,'chi_math::NonLinearFunction']]],
+  ['f_0',['F',['../d6/dc4/classchi__math_1_1_non_linear_function.html#a27ce52063512657e7b9c5b0a157feabe',1,'chi_math::NonLinearFunction']]],
+  ['f_1',['f',['../d6/d58/classchi__diffusion_1_1_boundary_robin.html#af3a42c2cb80e6e12e7f638e2ab299162',1,'chi_diffusion::BoundaryRobin::f()'],['../d1/deb/structlbs_1_1_sweep_chunk_p_w_l_transient_theta_1_1_upwinder.html#a89f49f948351af65bddb6cd50c486488',1,'lbs::SweepChunkPWLTransientTheta::Upwinder::f()']]],
   ['f_20interfaces_2',['F Interfaces',['../d5/d87/group___doc_interfaces.html',1,'']]],
   ['f_5findex_3',['f_index',['../d9/d36/structchi__mesh_1_1_edge.html#a953c0cb5897a84adcc5eba6410fccbd5',1,'chi_mesh::Edge']]],
   ['fac_5fdiamond_5fdifference_5f_4',['fac_diamond_difference_',['../d9/dc1/classchi__math_1_1_curvilinear_angular_quadrature.html#a5eb47f0068dadb1ad81aa70f7d733093',1,'chi_math::CurvilinearAngularQuadrature::fac_diamond_difference_()'],['../d9/d2c/classlbs_1_1_sweep_chunk_p_w_l_r_z.html#a163c5d556bcf065f57a9f25e846df973',1,'lbs::SweepChunkPWLRZ::fac_diamond_difference_()']]],

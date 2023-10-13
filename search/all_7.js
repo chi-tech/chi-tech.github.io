@@ -1,8 +1,8 @@
 var searchData=
 [
   ['g_20graphs_0',['G Graphs',['../d6/d21/group___graphs.html',1,'']]],
-  ['g_5f_1',['g_',['../dc/d64/classlbs_1_1_source_function.html#adf3d2422102ddcadaf21a8a4c679ef3b',1,'lbs::SourceFunction::g_()'],['../d6/d19/classlbs_1_1_sweep_chunk.html#a66dd8f7abd69b4dfa6b22d52e02b9c41',1,'lbs::SweepChunk::g_()']]],
-  ['g_5f_2',['G_',['../d6/d32/classchi__diffusion_1_1_solver.html#a6f18686f89fc989c42c6de9e6a6891d8',1,'chi_diffusion::Solver::G_()'],['../d6/d19/classlbs_1_1_sweep_chunk.html#ac8ac105a421e7234ae5879326fa6ac00',1,'lbs::SweepChunk::G_()']]],
+  ['g_5f_1',['G_',['../d6/d32/classchi__diffusion_1_1_solver.html#a6f18686f89fc989c42c6de9e6a6891d8',1,'chi_diffusion::Solver::G_()'],['../d6/d19/classlbs_1_1_sweep_chunk.html#ac8ac105a421e7234ae5879326fa6ac00',1,'lbs::SweepChunk::G_()']]],
+  ['g_5f_2',['g_',['../dc/d64/classlbs_1_1_source_function.html#adf3d2422102ddcadaf21a8a4c679ef3b',1,'lbs::SourceFunction::g_()'],['../d6/d19/classlbs_1_1_sweep_chunk.html#a66dd8f7abd69b4dfa6b22d52e02b9c41',1,'lbs::SweepChunk::g_()']]],
   ['g_5fmatrix_3',['G_matrix',['../dc/d37/structlbs_1_1_unit_cell_matrices.html#a4894abc478420dd6d333d24506e3c77a',1,'lbs::UnitCellMatrices']]],
   ['gauss_5fchebyshev_4',['GAUSS_CHEBYSHEV',['../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791a31fa4c60f7456b3040a332578fdf65f7',1,'chi_math']]],
   ['gauss_5flegendre_5',['GAUSS_LEGENDRE',['../dc/d58/namespacechi__math.html#a7bc75ac743b63d66fa503282e8afa791aedffa437abaf9cf92de7bd895cf5c986',1,'chi_math']]],

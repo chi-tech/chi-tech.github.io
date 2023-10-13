@@ -112,6 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a19ed6c65dcad9ef4396e32cea9c47cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa8d56849834a0e12853166d9129358"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1b/classchi_1_1_timing_block.html#abfa8d56849834a0e12853166d9129358">AverageTime</a> () const</td></tr>
 <tr class="separator:abfa8d56849834a0e12853166d9129358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf581fc5d67bc9830f49c868e762a783"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1b/classchi_1_1_timing_block.html#abf581fc5d67bc9830f49c868e762a783">LastDelta</a> () const</td></tr>
+<tr class="separator:abf581fc5d67bc9830f49c868e762a783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae70147990b10817d6f20fdf95adbf14f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1b/classchi_1_1_timing_block.html#ae70147990b10817d6f20fdf95adbf14f">MakeGraphString</a> ()</td></tr>
 <tr class="separator:ae70147990b10817d6f20fdf95adbf14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -132,6 +134,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a9337e05539b3b29c90ce0033b47797bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a766fe7d2063b9fe1f8a6053bf02afaf1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1b/classchi_1_1_timing_block.html#a766fe7d2063b9fe1f8a6053bf02afaf1">reference_time_</a> = 0.0</td></tr>
 <tr class="separator:a766fe7d2063b9fe1f8a6053bf02afaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a515d20ea4b64324fa48cfa328c81446a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1b/classchi_1_1_timing_block.html#a515d20ea4b64324fa48cfa328c81446a">last_delta_time_</a> = 0.0</td></tr>
+<tr class="separator:a515d20ea4b64324fa48cfa328c81446a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdfdb0b150c86323a0441db24a662722"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="../../d4/d1b/classchi_1_1_timing_block.html">TimingBlock</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d1b/classchi_1_1_timing_block.html#acdfdb0b150c86323a0441db24a662722">children_</a></td></tr>
 <tr class="separator:acdfdb0b150c86323a0441db24a662722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -254,7 +258,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Adds the supplied timing black as a child. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00101">101</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00107">107</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
 
 </div>
 </div>
@@ -299,7 +303,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Used when building the graph, this is a recursive function that adds each entry to a matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00191">191</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00197">197</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
 
 </div>
 </div>
@@ -319,7 +323,27 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the average time per occurence. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00094">94</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00095">95</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
+
+</div>
+</div>
+<a id="abf581fc5d67bc9830f49c868e762a783" name="abf581fc5d67bc9830f49c868e762a783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf581fc5d67bc9830f49c868e762a783">&#9670;&nbsp;</a></span>LastDelta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double chi::TimingBlock::LastDelta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns the last computed time differential. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00102">102</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
 
 </div>
 </div>
@@ -341,7 +365,7 @@ Friends</h2></td></tr>
 <p >Lambda to left pad an entry.</p>
 <p >Lambda to right pad an entry.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00106">106</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00112">112</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
 
 </div>
 </div>
@@ -361,7 +385,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the number of timing section occurrences. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00090">90</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00091">91</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
 
 </div>
 </div>
@@ -421,7 +445,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p >Returns the computed total time over all occurrences. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00092">92</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html#l00093">93</a> of file <a class="el" href="../../d9/dd3/_timing_log_8cc_source.html">TimingLog.cc</a>.</p>
 
 </div>
 </div>
@@ -446,7 +470,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00069">69</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00071">71</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
 
 </div>
 </div>
@@ -471,7 +495,31 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00082">82</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00085">85</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
+
+</div>
+</div>
+<a id="a515d20ea4b64324fa48cfa328c81446a" name="a515d20ea4b64324fa48cfa328c81446a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a515d20ea4b64324fa48cfa328c81446a">&#9670;&nbsp;</a></span>last_delta_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double chi::TimingBlock::last_delta_time_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00084">84</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
 
 </div>
 </div>
@@ -495,7 +543,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00078">78</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00080">80</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
 
 </div>
 </div>
@@ -519,7 +567,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00079">79</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00081">81</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
 
 </div>
 </div>
@@ -543,7 +591,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00081">81</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00083">83</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
 
 </div>
 </div>
@@ -567,7 +615,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00080">80</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/dac/_timing_log_8h_source.html#l00082">82</a> of file <a class="el" href="../../d6/dac/_timing_log_8h_source.html">TimingLog.h</a>.</p>
 
 </div>
 </div>
