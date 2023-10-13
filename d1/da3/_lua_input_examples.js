@@ -9,6 +9,7 @@ var _lua_input_examples =
     [ "test/framework/tutorials/tutorial_91a_pwld.lua", "d0/d4a/test_framework_tutorials_tutorial_91a_pwld_lua.html", null ],
     [ "test/framework/tutorials/fv_test1.lua", "dc/d40/test_framework_tutorials_fv_test1_lua.html", null ],
     [ "test/framework/tutorials/tutorial_06_wdd.lua", "d2/db9/test_framework_tutorials_tutorial_06_wdd_lua.html", null ],
+    [ "test/framework/log/timingblock_test.lua", "de/d9f/test_framework_log_timingblock_test_lua.html", null ],
     [ "test/framework/parameters/params_test_01b.lua", "d8/d17/test_framework_parameters_params_test_01b_lua.html", null ],
     [ "test/framework/parameters/params_test_01c.lua", "d0/d70/test_framework_parameters_params_test_01c_lua.html", null ],
     [ "test/framework/parameters/params_test_00.lua", "d9/dd8/test_framework_parameters_params_test_00_lua.html", null ],

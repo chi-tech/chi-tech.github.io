@@ -36,7 +36,9 @@ var annotated_dup =
       [ "SolverInfoPostProcessor", "d5/dc8/classchi_1_1_solver_info_post_processor.html", "d5/dc8/classchi_1_1_solver_info_post_processor" ],
       [ "SubSetInfo", "d9/dcc/structchi_1_1_sub_set_info.html", "d9/dcc/structchi_1_1_sub_set_info" ],
       [ "SystemWideEventPublisher", "da/d14/classchi_1_1_system_wide_event_publisher.html", "da/d14/classchi_1_1_system_wide_event_publisher" ],
-      [ "Timer", "dc/dea/classchi_1_1_timer.html", "dc/dea/classchi_1_1_timer" ]
+      [ "Timer", "dc/dea/classchi_1_1_timer.html", "dc/dea/classchi_1_1_timer" ],
+      [ "TimingBlock", "d4/d1b/classchi_1_1_timing_block.html", "d4/d1b/classchi_1_1_timing_block" ],
+      [ "TimingLog", "d3/d7f/classchi_1_1_timing_log.html", "d3/d7f/classchi_1_1_timing_log" ]
     ] ],
     [ "chi_data_types", "d5/d1b/namespacechi__data__types.html", [
       [ "AllowableRange", "d2/d18/classchi__data__types_1_1_allowable_range.html", "d2/d18/classchi__data__types_1_1_allowable_range" ],

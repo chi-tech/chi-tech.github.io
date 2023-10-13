@@ -16,5 +16,10 @@ var dir_6e29be0e1ca57cca114fac1c397f3487 =
       [ "chi::DummyStream::DummyStreamBuffer", "de/d4a/structchi_1_1_dummy_stream_1_1_dummy_stream_buffer.html", "de/d4a/structchi_1_1_dummy_stream_1_1_dummy_stream_buffer" ]
     ] ],
     [ "stringstream_color.cc", "df/dbc/stringstream__color_8cc.html", null ],
-    [ "stringstream_color.h", "d6/d2d/stringstream__color_8h.html", "d6/d2d/stringstream__color_8h" ]
+    [ "stringstream_color.h", "d6/d2d/stringstream__color_8h.html", "d6/d2d/stringstream__color_8h" ],
+    [ "TimingLog.cc", "d9/dd3/_timing_log_8cc.html", null ],
+    [ "TimingLog.h", "d6/dac/_timing_log_8h.html", [
+      [ "chi::TimingLog", "d3/d7f/classchi_1_1_timing_log.html", "d3/d7f/classchi_1_1_timing_log" ],
+      [ "chi::TimingBlock", "d4/d1b/classchi_1_1_timing_block.html", "d4/d1b/classchi_1_1_timing_block" ]
+    ] ]
 ];

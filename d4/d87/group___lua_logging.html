@@ -95,6 +95,10 @@ Functions</h2></td></tr>
 <tr class="separator:gac4c23d141fddd0557829e6b5471262ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8139e633fb74f8d739bcfd6badd80376"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d87/group___lua_logging.html#ga8139e633fb74f8d739bcfd6badd80376">chi_lua::chiLog</a> (int LogType, char LogMsg)</td></tr>
 <tr class="separator:ga8139e633fb74f8d739bcfd6badd80376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05f40749634eda16fdd5f5b0b64b6fcb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d87/group___lua_logging.html#ga05f40749634eda16fdd5f5b0b64b6fcb">chi_lua::chiLogProcessEvent</a> (string event_name, string event_operation_name)</td></tr>
+<tr class="separator:ga05f40749634eda16fdd5f5b0b64b6fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc74b0dee292819b605ce2389fc0925e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d87/group___lua_logging.html#gacc74b0dee292819b605ce2389fc0925e">chi_lua::chiLogPrintTimingGraph</a> (int rank)</td></tr>
+<tr class="separator:gacc74b0dee292819b605ce2389fc0925e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -150,7 +154,8 @@ LOG_ALLVERBOSE_0, LOG_ALLVERBOSE_1, LOG_ALLVERBOSE_2<br  />
 Has the same meaning as their LOG_0 counterparts but instead applies to all locations in the parallel context.</p>
 <dl class="section author"><dt>Author</dt><dd>Jan <h3>Usage Examples:</h3>
 </dd></dl>
-<p><a class="el" href="../../d9/d65/test_framework_chi_mesh__read_wavefront_obj1_lua.html">test/framework/chi_mesh/ReadWavefrontObj1.lua</a> <br  />
+<p><a class="el" href="../../de/d9f/test_framework_log_timingblock_test_lua.html">test/framework/log/timingblock_test.lua</a> <br  />
+ <a class="el" href="../../d9/d65/test_framework_chi_mesh__read_wavefront_obj1_lua.html">test/framework/chi_mesh/ReadWavefrontObj1.lua</a> <br  />
  <a class="el" href="../../d1/d4d/test_framework_chi_mesh__logical_volume_lv_sphere_test1_lua.html">test/framework/chi_mesh/LogicalVolume/lv_sphere_test1.lua</a> <br  />
  <a class="el" href="../../db/dd6/test_framework_chi_mesh__logical_volume_lv_rpp_test1_lua.html">test/framework/chi_mesh/LogicalVolume/lv_rpp_test1.lua</a> <br  />
  <a class="el" href="../../d8/d2d/test_modules__d_f_e_m__diffusion_d_diffusion_2_d_2a__dir_b_cs_lua.html">test/modules/DFEM_Diffusion/dDiffusion_2D_2a_DirBCs.lua</a> <br  />
@@ -221,7 +226,70 @@ Has the same meaning as their LOG_0 counterparts but instead applies to all loca
  <a class="el" href="../../d0/d0d/test_modules__linear_boltzmann_solvers__m_g_diffusion__steady__m_i_p_diffusion3_d_1b__ortho_lua.html">test/modules/LinearBoltzmannSolvers/MGDiffusion_Steady/MIPDiffusion3D_1b_Ortho.lua</a> <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02428">2428</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02429">2429</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="gacc74b0dee292819b605ce2389fc0925e" name="gacc74b0dee292819b605ce2389fc0925e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacc74b0dee292819b605ce2389fc0925e">&#9670;&nbsp;</a></span>chiLogPrintTimingGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_lua::chiLogPrintTimingGraph </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rank</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Prints the performance graph. \params rank int Optional argument to print the graph for a specific rank.</p>
+<h3>Usage Examples:</h3>
+<p ><a class="el" href="../../de/d9f/test_framework_log_timingblock_test_lua.html">test/framework/log/timingblock_test.lua</a> <br  />
+ </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02448">2448</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
+
+</div>
+</div>
+<a id="ga05f40749634eda16fdd5f5b0b64b6fcb" name="ga05f40749634eda16fdd5f5b0b64b6fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05f40749634eda16fdd5f5b0b64b6fcb">&#9670;&nbsp;</a></span>chiLogProcessEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double chi_lua::chiLogProcessEvent </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>event_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>event_operation_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Processes the sub-events of a repeating event and converts it to a meaningful value (floating-point).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event_name</td><td>string Required. Name of the event. </td></tr>
+    <tr><td class="paramname">event_operation_name</td><td>string Required. What kind of operation to be applied. See <code><a class="el" href="../../df/dfa/classchi_1_1_chi_log.html#a5a7ac4846d406932164c6e63f50a2426">chi::ChiLog::EventOperation</a></code></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double The processed value. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d47/lua__functions_8c_source.html#l02440">2440</a> of file <a class="el" href="../../d7/d47/lua__functions_8c_source.html">lua_functions.c</a>.</p>
 
 </div>
 </div>

@@ -9,9 +9,11 @@ var searchData=
   ['timeintegration_6',['TimeIntegration',['../d8/d2b/classchi__math_1_1_time_integration.html',1,'chi_math']]],
   ['timer_7',['Timer',['../dc/dea/classchi_1_1_timer.html',1,'chi']]],
   ['timestepper_8',['TimeStepper',['../d0/d98/classchi__physics_1_1_time_stepper.html',1,'chi_physics']]],
-  ['toleranceoptions_9',['ToleranceOptions',['../db/d8f/structchi__math_1_1_linear_solver_1_1_tolerance_options.html',1,'chi_math::LinearSolver']]],
-  ['transientsolver_10',['TransientSolver',['../da/dc0/classlbs_1_1_transient_solver.html',1,'lbs::TransientSolver'],['../de/d01/classprk_1_1_transient_solver.html',1,'prk::TransientSolver']]],
-  ['transientsourcefunction_11',['TransientSourceFunction',['../dc/d71/classlbs_1_1_transient_source_function.html',1,'lbs']]],
-  ['twogridaccelerationinfo_12',['TwoGridAccelerationInfo',['../de/d52/structlbs_1_1_l_b_s_groupset_1_1_two_grid_acceleration_info.html',1,'lbs::LBSGroupset']]],
-  ['twogridcollapsedinfo_13',['TwoGridCollapsedInfo',['../db/d99/structlbs_1_1acceleration_1_1_two_grid_collapsed_info.html',1,'lbs::acceleration::TwoGridCollapsedInfo'],['../d6/d5b/structmg__diffusion_1_1_two_grid_collapsed_info.html',1,'mg_diffusion::TwoGridCollapsedInfo']]]
+  ['timingblock_9',['TimingBlock',['../d4/d1b/classchi_1_1_timing_block.html',1,'chi']]],
+  ['timinglog_10',['TimingLog',['../d3/d7f/classchi_1_1_timing_log.html',1,'chi']]],
+  ['toleranceoptions_11',['ToleranceOptions',['../db/d8f/structchi__math_1_1_linear_solver_1_1_tolerance_options.html',1,'chi_math::LinearSolver']]],
+  ['transientsolver_12',['TransientSolver',['../da/dc0/classlbs_1_1_transient_solver.html',1,'lbs::TransientSolver'],['../de/d01/classprk_1_1_transient_solver.html',1,'prk::TransientSolver']]],
+  ['transientsourcefunction_13',['TransientSourceFunction',['../dc/d71/classlbs_1_1_transient_source_function.html',1,'lbs']]],
+  ['twogridaccelerationinfo_14',['TwoGridAccelerationInfo',['../de/d52/structlbs_1_1_l_b_s_groupset_1_1_two_grid_acceleration_info.html',1,'lbs::LBSGroupset']]],
+  ['twogridcollapsedinfo_15',['TwoGridCollapsedInfo',['../db/d99/structlbs_1_1acceleration_1_1_two_grid_collapsed_info.html',1,'lbs::acceleration::TwoGridCollapsedInfo'],['../d6/d5b/structmg__diffusion_1_1_two_grid_collapsed_info.html',1,'mg_diffusion::TwoGridCollapsedInfo']]]
 ];

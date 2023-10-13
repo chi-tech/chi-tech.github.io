@@ -66,7 +66,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "Chi", "d7/dd7/class_chi.html", null ],
-    [ "chi::ChiLog", "df/dfa/classchi_1_1_chi_log.html", null ],
     [ "chi::ChiMPICommunicatorSet", "df/de1/classchi_1_1_chi_m_p_i_communicator_set.html", null ],
     [ "ChiObject", "d6/d15/class_chi_object.html", [
       [ "chi::GraphPartitioner", "d1/da7/classchi_1_1_graph_partitioner.html", [
@@ -401,6 +400,10 @@ var hierarchy =
     [ "chi_math::TensorRNX< 2, N, NumberFormat >", "d5/d52/structchi__math_1_1_tensor_r_n_x_3_012_00_01_n_00_01_number_format_01_4.html", null ],
     [ "chi::PostProcessor::TimeHistoryEntry", "df/d43/structchi_1_1_post_processor_1_1_time_history_entry.html", null ],
     [ "chi::Timer", "dc/dea/classchi_1_1_timer.html", null ],
+    [ "chi::TimingBlock", "d4/d1b/classchi_1_1_timing_block.html", null ],
+    [ "chi::TimingLog", "d3/d7f/classchi_1_1_timing_log.html", [
+      [ "chi::ChiLog", "df/dfa/classchi_1_1_chi_log.html", null ]
+    ] ],
     [ "chi_math::LinearSolver< MatType, VecType, SolverType >::ToleranceOptions", "db/d8f/structchi__math_1_1_linear_solver_1_1_tolerance_options.html", null ],
     [ "lbs::LBSGroupset::TwoGridAccelerationInfo", "de/d52/structlbs_1_1_l_b_s_groupset_1_1_two_grid_acceleration_info.html", null ],
     [ "lbs::acceleration::TwoGridCollapsedInfo", "db/d99/structlbs_1_1acceleration_1_1_two_grid_collapsed_info.html", null ],

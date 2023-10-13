@@ -35,6 +35,8 @@ var namespacechi =
     [ "SubSetInfo", "d9/dcc/structchi_1_1_sub_set_info.html", "d9/dcc/structchi_1_1_sub_set_info" ],
     [ "SystemWideEventPublisher", "da/d14/classchi_1_1_system_wide_event_publisher.html", "da/d14/classchi_1_1_system_wide_event_publisher" ],
     [ "Timer", "dc/dea/classchi_1_1_timer.html", "dc/dea/classchi_1_1_timer" ],
+    [ "TimingBlock", "d4/d1b/classchi_1_1_timing_block.html", "d4/d1b/classchi_1_1_timing_block" ],
+    [ "TimingLog", "d3/d7f/classchi_1_1_timing_log.html", "d3/d7f/classchi_1_1_timing_log" ],
     [ "PostProcessorPtr", "dc/d67/namespacechi.html#a6b2abbd1e241f9a7884cd56c227a4f21", null ],
     [ "SFXYZV", "dc/d67/namespacechi.html#a35dc06af782b51dc38157c208514178b", null ],
     [ "InputParameterTag", "dc/d67/namespacechi.html#a9355475cc63c20acacdc1328c56ae1d4", [
