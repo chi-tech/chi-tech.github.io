@@ -17,6 +17,7 @@ var classchi__physics_1_1_solver =
     [ "GetTimeStepper", "d9/d3a/classchi__physics_1_1_solver.html#a51dfd0350a26ff0ec4ca44c0978b8595", null ],
     [ "Initialize", "d9/d3a/classchi__physics_1_1_solver.html#a14e95fbc905d9c3b3ebdc89f06e53b29", null ],
     [ "InitTimeStepper", "d9/d3a/classchi__physics_1_1_solver.html#a32f3c9677bc4e111c499828ace145e62", null ],
+    [ "SetProperties", "d9/d3a/classchi__physics_1_1_solver.html#a9df468d20c614fb8a30a96c70da86f78", null ],
     [ "Step", "d9/d3a/classchi__physics_1_1_solver.html#a9fa53f6d47f1a2d8badbfa8c12e1f2ca", null ],
     [ "TextName", "d9/d3a/classchi__physics_1_1_solver.html#a0b087a92fd17788519515b5bd331d87b", null ],
     [ "basic_options_", "d9/d3a/classchi__physics_1_1_solver.html#aa2a45c22166d170285413be221385464", null ],

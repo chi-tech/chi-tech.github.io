@@ -6,6 +6,6 @@ var group___lua_physics =
     [ "Field Operation", "d8/d93/group___doc_field_operation.html", "d8/d93/group___doc_field_operation" ],
     [ "I Timesteppers", "d5/d95/group__doc___time_steppers.html", null ],
     [ "Materials", "d7/d11/group___lua_physics_materials.html", "d7/d11/group___lua_physics_materials" ],
-    [ "Solvers", "dc/d4e/group___lua_solver.html", "dc/d4e/group___lua_solver" ],
+    [ "Solvers", "dd/d4e/group__doc___physics_solver.html", "dd/d4e/group__doc___physics_solver" ],
     [ "Transport Cross Sections", "de/dd8/group___lua_transport_x_ss.html", "de/dd8/group___lua_transport_x_ss" ]
 ];

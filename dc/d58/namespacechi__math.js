@@ -61,6 +61,8 @@ var namespacechi__math =
     [ "AngularQuadraturePtr", "dc/d58/namespacechi__math.html#a637714681be11402efe6c55193c7af1f", null ],
     [ "NonLinearSolverPETSc", "dc/d58/namespacechi__math.html#acb5c88ad845037b70db309711e9cf836", null ],
     [ "QuadraturePointXYZ", "dc/d58/namespacechi__math.html#aad0a5ec86fc2a3bdb8bb158c05935e5c", null ],
+    [ "ScalarScalarFunction", "dc/d58/namespacechi__math.html#a5ccc963637fa88a9c2438a6b5bbf88f6", null ],
+    [ "ScalarXYZTFunction", "dc/d58/namespacechi__math.html#a3c8daaabeaec4e526a4423b93b1fcd85", null ],
     [ "SDMPtr", "dc/d58/namespacechi__math.html#ab6754b3179f7dbf965932210273fead7", null ],
     [ "SpatialDiscretizationPtr", "dc/d58/namespacechi__math.html#aed18279f80ae4b3fc28796abe3da97f4", null ],
     [ "Tensor2N", "dc/d58/namespacechi__math.html#a70284ca276fc295317eee71e23f0df19", null ],

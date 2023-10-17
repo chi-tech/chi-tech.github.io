@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['g_5f_0',['G_',['../d6/d19/classlbs_1_1_sweep_chunk.html#ac8ac105a421e7234ae5879326fa6ac00',1,'lbs::SweepChunk::G_()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a6f18686f89fc989c42c6de9e6a6891d8',1,'chi_diffusion::Solver::G_()']]],
-  ['g_5f_1',['g_',['../d6/d19/classlbs_1_1_sweep_chunk.html#a66dd8f7abd69b4dfa6b22d52e02b9c41',1,'lbs::SweepChunk::g_()'],['../dc/d64/classlbs_1_1_source_function.html#adf3d2422102ddcadaf21a8a4c679ef3b',1,'lbs::SourceFunction::g_()']]],
+  ['g_5f_0',['g_',['../d6/d19/classlbs_1_1_sweep_chunk.html#a66dd8f7abd69b4dfa6b22d52e02b9c41',1,'lbs::SweepChunk::g_()'],['../dc/d64/classlbs_1_1_source_function.html#adf3d2422102ddcadaf21a8a4c679ef3b',1,'lbs::SourceFunction::g_()']]],
+  ['g_5f_1',['G_',['../d6/d19/classlbs_1_1_sweep_chunk.html#ac8ac105a421e7234ae5879326fa6ac00',1,'lbs::SweepChunk::G_()'],['../d6/d32/classchi__diffusion_1_1_solver.html#a6f18686f89fc989c42c6de9e6a6891d8',1,'chi_diffusion::Solver::G_()']]],
   ['g_5fmatrix_2',['G_matrix',['../dc/d37/structlbs_1_1_unit_cell_matrices.html#a4894abc478420dd6d333d24506e3c77a',1,'lbs::UnitCellMatrices']]],
   ['gen_5ftime_5f_3',['gen_time_',['../de/d01/classprk_1_1_transient_solver.html#af4e9f80e42c1731757301d3268d9274f',1,'prk::TransientSolver']]],
   ['general_5fdescription_5f_4',['general_description_',['../d8/d4d/classchi_1_1_input_parameters.html#a30d8f4a0d4f4820a0d2c499c4fc91195',1,'chi::InputParameters']]],

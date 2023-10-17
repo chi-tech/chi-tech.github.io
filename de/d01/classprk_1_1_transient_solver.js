@@ -9,6 +9,7 @@ var classprk_1_1_transient_solver =
     [ "Period", "de/d01/classprk_1_1_transient_solver.html#ac059dcb14e2499bd979c59871b9f2bbd", null ],
     [ "PopulationNew", "de/d01/classprk_1_1_transient_solver.html#a6c8b109ee76553d91e6d2838b2fe5ad7", null ],
     [ "PopulationPrev", "de/d01/classprk_1_1_transient_solver.html#ac011b538ba67cc98ad9be63f48d0f270", null ],
+    [ "SetProperties", "de/d01/classprk_1_1_transient_solver.html#a3c67b1f6cf3ba94d5c63b0dc05f446ed", null ],
     [ "SetRho", "de/d01/classprk_1_1_transient_solver.html#a9c95fef151510961b35aa9d4d0cdcf47", null ],
     [ "SolutionNew", "de/d01/classprk_1_1_transient_solver.html#a9d0a496e0bae9ce1a61d72d46bbd003a", null ],
     [ "SolutionPrev", "de/d01/classprk_1_1_transient_solver.html#af403aef26cedf7fe1aae92ebd51b1293", null ],

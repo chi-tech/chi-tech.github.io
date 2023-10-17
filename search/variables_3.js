@@ -80,7 +80,8 @@ var searchData=
   ['ds_5fedge_77',['ds_edge',['../d6/d39/structchi_1_1_graph_vertex.html#a058cb3d364b5f210649d561e79733bd5',1,'chi::GraphVertex']]],
   ['ds_5fweights_78',['ds_weights',['../d6/d39/structchi_1_1_graph_vertex.html#a969db32776151e68bc547920294f6736',1,'chi::GraphVertex']]],
   ['dt_5f_79',['dt_',['../d0/d98/classchi__physics_1_1_time_stepper.html#ab43acd14d5a43b035cc4b6977f35e912',1,'chi_physics::TimeStepper::dt_()'],['../dc/d71/classlbs_1_1_transient_source_function.html#a516baff937d066476fd72c101326731c',1,'lbs::TransientSourceFunction::dt_()'],['../d6/d7b/classlbs_1_1_disc_ord_transient_solver.html#a7d2167a11ea1e1f6b49fef4742582f80',1,'lbs::DiscOrdTransientSolver::dt_()'],['../d8/da5/classlbs_1_1_sweep_chunk_p_w_l_transient_theta.html#a64921920460eec635cbe7edb1679f61e',1,'lbs::SweepChunkPWLTransientTheta::dt_()']]],
-  ['dummy_5f_80',['dummy_',['../d8/d75/classchi_1_1_log_stream.html#ace4e9c4f0dd840cb8cc671553e1775d8',1,'chi::LogStream']]],
-  ['dummy_5fstream_5f_81',['dummy_stream_',['../df/dfa/classchi_1_1_chi_log.html#a2b500820370a87df14c66144b34882ba',1,'chi::ChiLog']]],
-  ['dump_5fregistry_5f_82',['dump_registry_',['../d8/dd8/class_chi_1_1run__time.html#a849f13532fa57a394909bfe47c4ae6b3',1,'Chi::run_time']]]
+  ['dt_5fmin_5f_80',['dt_min_',['../d0/d98/classchi__physics_1_1_time_stepper.html#a1e5162274609d00c7fb8ae7b99804407',1,'chi_physics::TimeStepper']]],
+  ['dummy_5f_81',['dummy_',['../d8/d75/classchi_1_1_log_stream.html#ace4e9c4f0dd840cb8cc671553e1775d8',1,'chi::LogStream']]],
+  ['dummy_5fstream_5f_82',['dummy_stream_',['../df/dfa/classchi_1_1_chi_log.html#a2b500820370a87df14c66144b34882ba',1,'chi::ChiLog']]],
+  ['dump_5fregistry_5f_83',['dump_registry_',['../d8/dd8/class_chi_1_1run__time.html#a849f13532fa57a394909bfe47c4ae6b3',1,'Chi::run_time']]]
 ];
