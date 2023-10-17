@@ -59,10 +59,10 @@ var _programmer_manual =
     ] ],
     [ "Static Registration", "d0/d6f/_dev_man_static_registration.html", [
       [ "1 The general philosophy of Static Registration", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec1", [
-        [ "Rigging static initialization for object factories or object makers", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec1_1", null ],
-        [ "Implementation in ChiTech", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec1_2", null ]
+        [ "Rigging static initialization for object factories or object makers", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec1_1", null ]
       ] ],
-      [ "2 The InputParameters system", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec2", [
+      [ "2 Implementation in ChiTech: ChiObject and ChiObjectFactory", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec2", null ],
+      [ "3 The InputParameters system", "d0/d6f/_dev_man_static_registration.html#DevManParametersSec3", [
         [ "FAQ1 Documentation-strings (Doc-strings)", "d0/d6f/_dev_man_static_registration.html#DevManParametersSecFAQ1", null ],
         [ "FAQ2 Optional Parameters", "d0/d6f/_dev_man_static_registration.html#DevManParametersSecFAQ2", null ],
         [ "FAQ3 Inheriting parameters from parent objects", "d0/d6f/_dev_man_static_registration.html#DevManParametersSecFAQ3", null ],
