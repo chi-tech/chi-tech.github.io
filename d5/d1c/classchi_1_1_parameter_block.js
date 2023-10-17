@@ -35,6 +35,7 @@ var classchi_1_1_parameter_block =
     [ "operator=", "d5/d1c/classchi_1_1_parameter_block.html#aab4633eea80002510dbcf2478fdda791", null ],
     [ "operator=", "d5/d1c/classchi_1_1_parameter_block.html#a30c74e712b012d3c544a013579f967db", null ],
     [ "Parameters", "d5/d1c/classchi_1_1_parameter_block.html#a94c04499dc854a21ce84641123001b4e", null ],
+    [ "RecursiveDumpToJSON", "d5/d1c/classchi_1_1_parameter_block.html#a3f704250925e0bd57026e853c31618e1", null ],
     [ "RecursiveDumpToString", "d5/d1c/classchi_1_1_parameter_block.html#a7d41a753e8abdcfe8009465402052de8", null ],
     [ "RequireBlockTypeIs", "d5/d1c/classchi_1_1_parameter_block.html#a1c43080e4305118938a593ac4a16f79c", null ],
     [ "RequireParameter", "d5/d1c/classchi_1_1_parameter_block.html#a8d313d21357953d5a953fe93f209e6e6", null ],

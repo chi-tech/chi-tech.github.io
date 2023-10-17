@@ -127,6 +127,8 @@ Functions</h2></td></tr>
 <tr class="separator:a258d9873ec6cca45b87620581d973c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad16be762b55b9e5e8fcf560a1cfb041f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad16be762b55b9e5e8fcf560a1cfb041f">CopySTLvectorToVec</a> (const std::vector&lt; double &gt; &amp;data, <a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> x, size_t N)</td></tr>
 <tr class="separator:ad16be762b55b9e5e8fcf560a1cfb041f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d3ccff2e8afcbb09b9ff21e29f0a481"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a8d3ccff2e8afcbb09b9ff21e29f0a481">CopyParallelVectorToVec</a> (const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;y, <a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> x)</td></tr>
+<tr class="separator:a8d3ccff2e8afcbb09b9ff21e29f0a481"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6018f791e6dd6b11cff9c1b7cce0c277"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277">CopyGlobalVecToSTLvector</a> (<a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> x, const std::vector&lt; int64_t &gt; &amp;global_indices, std::vector&lt; double &gt; &amp;data)</td></tr>
 <tr class="separator:a6018f791e6dd6b11cff9c1b7cce0c277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac31111351b2bffd45dc550de08c1355a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac31111351b2bffd45dc550de08c1355a">CommunicateGhostEntries</a> (<a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a> x)</td></tr>
@@ -154,7 +156,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Communicates ghost entries of a ghost vector. This operation is suitable when only a single vector is communicated. When more than vector is communicated it would be more efficient to "Begin" all the vectors followed by and "End" of each vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00122">122</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00134">134</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>
@@ -190,6 +192,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Copies global values from a PETSc vector to a STL vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00081">81</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+
+</div>
+</div>
+<a id="a8d3ccff2e8afcbb09b9ff21e29f0a481" name="a8d3ccff2e8afcbb09b9ff21e29f0a481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3ccff2e8afcbb09b9ff21e29f0a481">&#9670;&nbsp;</a></span>CopyParallelVectorToVec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chi_math::PETScUtils::CopyParallelVectorToVec </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/dcb/classchi__math_1_1_parallel_vector.html">ParallelVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/dc1/petsc__forward__declarations_8h.html#af0f813347b3f949e0248ebfe5d43f375">Vec</a>&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00069">69</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
@@ -227,7 +259,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00055">55</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00057">57</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>
@@ -270,7 +302,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Copies a PETSc vector to a STL vector. Only the local portion is copied. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00008">8</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00010">10</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>
@@ -313,7 +345,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Copies a PETSc vector to a STL vector. Only the local portion is copied. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00034">34</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00036">36</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>
@@ -389,9 +421,9 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">return</span> setup;</div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_a77fd6feef9f909de887c2533d2ca144c"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a77fd6feef9f909de887c2533d2ca144c">chi_math::PETScUtils::RelativeResidualConvergenceTest</a></div><div class="ttdeci">PetscErrorCode RelativeResidualConvergenceTest(KSP ksp, PetscInt n, PetscReal rnorm, KSPConvergedReason *convergedReason, void *monitordestroy)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00081">petsc_utils_03_createKSP.cc:81</a></div></div>
 <div class="ttc" id="anamespacechi__math_1_1_p_e_t_sc_utils_html_ac0a45299ec491833a2d1f9df3c401e8c"><div class="ttname"><a href="../../dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac0a45299ec491833a2d1f9df3c401e8c">chi_math::PETScUtils::KSPMonitorRelativeToRHS</a></div><div class="ttdeci">PetscErrorCode KSPMonitorRelativeToRHS(KSP ksp, PetscInt n, PetscReal rnorm, void *)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00111">petsc_utils_03_createKSP.cc:111</a></div></div>
-<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html">chi_math::PETScUtils::PETScSolverSetup</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00010">petsc_utils.h:11</a></div></div>
-<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html_a3113df80f416ecf34b66978b8c4d1e0f"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a3113df80f416ecf34b66978b8c4d1e0f">chi_math::PETScUtils::PETScSolverSetup::pc</a></div><div class="ttdeci">PC pc</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00013">petsc_utils.h:13</a></div></div>
-<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html_a498bc88eb4c38a8cef7861daa1238d88"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88">chi_math::PETScUtils::PETScSolverSetup::ksp</a></div><div class="ttdeci">KSP ksp</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00012">petsc_utils.h:12</a></div></div>
+<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html">chi_math::PETScUtils::PETScSolverSetup</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00015">petsc_utils.h:16</a></div></div>
+<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html_a3113df80f416ecf34b66978b8c4d1e0f"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a3113df80f416ecf34b66978b8c4d1e0f">chi_math::PETScUtils::PETScSolverSetup::pc</a></div><div class="ttdeci">PC pc</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00018">petsc_utils.h:18</a></div></div>
+<div class="ttc" id="astructchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup_html_a498bc88eb4c38a8cef7861daa1238d88"><div class="ttname"><a href="../../d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html#a498bc88eb4c38a8cef7861daa1238d88">chi_math::PETScUtils::PETScSolverSetup::ksp</a></div><div class="ttdeci">KSP ksp</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d0e/petsc__utils_8h_source.html#l00017">petsc_utils.h:17</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html#l00035">35</a> of file <a class="el" href="../../de/da1/petsc__utils__03__create_k_s_p_8cc_source.html">petsc_utils_03_createKSP.cc</a>.</p>
 
@@ -638,7 +670,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets a local raw view of a ghost vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00131">131</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00143">143</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>
@@ -891,7 +923,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Gets a local raw view of a ghost vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00148">148</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html#l00160">160</a> of file <a class="el" href="../../dc/de5/petsc__utils__04__vecmanip_8cc_source.html">petsc_utils_04_vecmanip.cc</a>.</p>
 
 </div>
 </div>

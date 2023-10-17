@@ -4,6 +4,7 @@ var namespacechi__math_1_1_p_e_t_sc_utils =
     [ "PETScSolverSetup", "d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup.html", "d1/d25/structchi__math_1_1_p_e_t_sc_utils_1_1_p_e_t_sc_solver_setup" ],
     [ "CommunicateGhostEntries", "dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ac31111351b2bffd45dc550de08c1355a", null ],
     [ "CopyGlobalVecToSTLvector", "dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a6018f791e6dd6b11cff9c1b7cce0c277", null ],
+    [ "CopyParallelVectorToVec", "dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a8d3ccff2e8afcbb09b9ff21e29f0a481", null ],
     [ "CopySTLvectorToVec", "dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ad16be762b55b9e5e8fcf560a1cfb041f", null ],
     [ "CopyVecToSTLvector", "dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#ab85f7bb28446f6846b2dfe1f6ba45f09", null ],
     [ "CopyVecToSTLvectorWithGhosts", "dc/d29/namespacechi__math_1_1_p_e_t_sc_utils.html#a258d9873ec6cca45b87620581d973c25", null ],
