@@ -153,7 +153,8 @@ var hierarchy =
       ] ],
       [ "chi_physics::field_operations::FieldOperation", "d9/d9f/classchi__physics_1_1field__operations_1_1_field_operation.html", [
         [ "chi_physics::field_operations::FieldCopyOperation", "de/d11/classchi__physics_1_1field__operations_1_1_field_copy_operation.html", null ],
-        [ "chi_physics::field_operations::MultiFieldOperation", "de/d28/classchi__physics_1_1field__operations_1_1_multi_field_operation.html", null ]
+        [ "chi_physics::field_operations::MultiFieldOperation", "de/d28/classchi__physics_1_1field__operations_1_1_multi_field_operation.html", null ],
+        [ "chi_physics::field_operations::PartitionerPredicate", "d7/d44/classchi__physics_1_1field__operations_1_1_partitioner_predicate.html", null ]
       ] ],
       [ "lbs::LBSGroupset", "d2/db6/classlbs_1_1_l_b_s_groupset.html", null ]
     ] ],

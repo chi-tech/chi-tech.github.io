@@ -226,7 +226,8 @@ var annotated_dup =
       [ "field_operations", "db/dd3/namespacechi__physics_1_1field__operations.html", [
         [ "FieldCopyOperation", "de/d11/classchi__physics_1_1field__operations_1_1_field_copy_operation.html", "de/d11/classchi__physics_1_1field__operations_1_1_field_copy_operation" ],
         [ "FieldOperation", "d9/d9f/classchi__physics_1_1field__operations_1_1_field_operation.html", "d9/d9f/classchi__physics_1_1field__operations_1_1_field_operation" ],
-        [ "MultiFieldOperation", "de/d28/classchi__physics_1_1field__operations_1_1_multi_field_operation.html", "de/d28/classchi__physics_1_1field__operations_1_1_multi_field_operation" ]
+        [ "MultiFieldOperation", "de/d28/classchi__physics_1_1field__operations_1_1_multi_field_operation.html", "de/d28/classchi__physics_1_1field__operations_1_1_multi_field_operation" ],
+        [ "PartitionerPredicate", "d7/d44/classchi__physics_1_1field__operations_1_1_partitioner_predicate.html", "d7/d44/classchi__physics_1_1field__operations_1_1_partitioner_predicate" ]
       ] ],
       [ "AdjointMGXS", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s.html", "df/d62/classchi__physics_1_1_adjoint_m_g_x_s" ],
       [ "BasicOption", "d2/dd8/classchi__physics_1_1_basic_option.html", "d2/dd8/classchi__physics_1_1_basic_option" ],

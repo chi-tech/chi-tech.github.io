@@ -133,73 +133,93 @@ $(document).ready(function(){initNavTree('dc/d5e/_mesh_generator__01__setupmesh_
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  std::vector&lt;int64_t&gt; cell_pids =</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_variable" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a6ad3702546a92adfa89d1f7eeaa4a29e">partitioner_</a>-&gt;<a class="code hl_function" href="../../d1/da7/classchi_1_1_graph_partitioner.html#acef97255261aa5f12d3805541569d35d">Partition</a>(cell_graph, cell_centroids, num_partitions);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordflow">return</span> cell_pids;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"></span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">/**Executes the partitioner and configures the mesh as a real mesh.*/</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>std::shared_ptr&lt;MeshContinuum&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a31b4d1933d987f43feeac46c3abaf92f">   53</a></span><a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a31b4d1933d987f43feeac46c3abaf92f">MeshGenerator::SetupMesh</a>(std::unique_ptr&lt;UnpartitionedMesh&gt; input_umesh_ptr,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                         <span class="keyword">const</span> std::vector&lt;int64_t&gt;&amp; cell_pids)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="comment">//============================================= Convert mesh</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keyword">auto</span> grid_ptr = <a class="code hl_function" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a75f604e303928e5998314aae3942b71c">chi_mesh::MeshContinuum::New</a>();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  grid_ptr-&gt;GetBoundaryIDMap() =</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    input_umesh_ptr-&gt;GetMeshOptions().boundary_id_map;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">auto</span>&amp; vertex_subs = input_umesh_ptr-&gt;GetVertextCellSubscriptions();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">size_t</span> cell_globl_id = 0;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; raw_cell : input_umesh_ptr-&gt;GetRawCells())</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a1a16e2f59fbf28fbb59765b76bbc7a88">CellHasLocalScope</a>(<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id,</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                          *raw_cell,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                          cell_globl_id,</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                          vertex_subs,</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                          cell_pids))</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keyword">auto</span> cell =</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#acb0937000bcc64aa92b7a6a6336b1c75">SetupCell</a>(*raw_cell,</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                  cell_globl_id,</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                  cell_pids[cell_globl_id],</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                  <a class="code hl_struct" href="../../d9/d38/structchi__mesh_1_1_mesh_generator_1_1_s_t_l_vertex_list_helper.html">STLVertexListHelper</a>(input_umesh_ptr-&gt;GetVertices()));</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keywordflow">for</span> (uint64_t vid : cell-&gt;vertex_ids_)</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        grid_ptr-&gt;vertices.Insert(vid, input_umesh_ptr-&gt;GetVertices()[vid]);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      grid_ptr-&gt;cells.push_back(std::move(cell));</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">delete</span> raw_cell;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    raw_cell = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    ++cell_globl_id;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  } <span class="comment">// for raw_cell</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#ab0feb6dca870ebf9dd55b2a6bb0d96c4">SetGridAttributes</a>(*grid_ptr,</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    input_umesh_ptr-&gt;GetMeshAttributes(),</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    {input_umesh_ptr-&gt;GetMeshOptions().ortho_Nx,</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                     input_umesh_ptr-&gt;GetMeshOptions().ortho_Ny,</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                     input_umesh_ptr-&gt;GetMeshOptions().ortho_Nz});</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  std::vector&lt;size_t&gt; partI_num_cells(num_partitions, 0);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordflow">for</span> (int64_t pid : cell_pids)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    partI_num_cells[pid] += 1;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">size_t</span> max_num_cells = partI_num_cells.front();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordtype">size_t</span> min_num_cells = partI_num_cells.front();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">size_t</span> avg_num_cells = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> count : partI_num_cells)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    max_num_cells = std::max(max_num_cells, count);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    min_num_cells = std::min(min_num_cells, count);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    avg_num_cells += count;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  avg_num_cells /= num_partitions;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_variable" href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a>.<a class="code hl_function" href="../../df/dfa/classchi_1_1_chi_log.html#aebdb78c9c0fddcc0799c4fc570ff1919">Log</a>() &lt;&lt; <span class="stringliteral">&quot;Partitioner num_cells allocated max,min,avg = &quot;</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    &lt;&lt; max_num_cells &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; min_num_cells &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; avg_num_cells;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordflow">return</span> cell_pids;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment"></span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">/**Executes the partitioner and configures the mesh as a real mesh.*/</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>std::shared_ptr&lt;MeshContinuum&gt;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a31b4d1933d987f43feeac46c3abaf92f">   71</a></span><a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a31b4d1933d987f43feeac46c3abaf92f">MeshGenerator::SetupMesh</a>(std::unique_ptr&lt;UnpartitionedMesh&gt; input_umesh_ptr,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                         <span class="keyword">const</span> std::vector&lt;int64_t&gt;&amp; cell_pids)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">//============================================= Convert mesh</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keyword">auto</span> grid_ptr = <a class="code hl_function" href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a75f604e303928e5998314aae3942b71c">chi_mesh::MeshContinuum::New</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  grid_ptr-&gt;GetBoundaryIDMap() =</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    input_umesh_ptr-&gt;GetMeshOptions().boundary_id_map;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keyword">auto</span>&amp; vertex_subs = input_umesh_ptr-&gt;GetVertextCellSubscriptions();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">size_t</span> cell_globl_id = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; raw_cell : input_umesh_ptr-&gt;GetRawCells())</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a1a16e2f59fbf28fbb59765b76bbc7a88">CellHasLocalScope</a>(<a class="code hl_variable" href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a>.location_id,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                          *raw_cell,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                          cell_globl_id,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                          vertex_subs,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                          cell_pids))</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keyword">auto</span> cell =</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#acb0937000bcc64aa92b7a6a6336b1c75">SetupCell</a>(*raw_cell,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                  cell_globl_id,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                  cell_pids[cell_globl_id],</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                  <a class="code hl_struct" href="../../d9/d38/structchi__mesh_1_1_mesh_generator_1_1_s_t_l_vertex_list_helper.html">STLVertexListHelper</a>(input_umesh_ptr-&gt;GetVertices()));</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  grid_ptr-&gt;SetGlobalVertexCount(input_umesh_ptr-&gt;GetVertices().size());</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a9b36ed623c93f85fadaf8e09fe589f6b">ComputeAndPrintStats</a>(*grid_ptr);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordflow">return</span> grid_ptr;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>} <span class="comment">// namespace chi_mesh</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <span class="keywordflow">for</span> (uint64_t vid : cell-&gt;vertex_ids_)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        grid_ptr-&gt;vertices.Insert(vid, input_umesh_ptr-&gt;GetVertices()[vid]);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      grid_ptr-&gt;cells.push_back(std::move(cell));</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">delete</span> raw_cell;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    raw_cell = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    ++cell_globl_id;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  } <span class="comment">// for raw_cell</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#ab0feb6dca870ebf9dd55b2a6bb0d96c4">SetGridAttributes</a>(*grid_ptr,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                    input_umesh_ptr-&gt;GetMeshAttributes(),</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                    {input_umesh_ptr-&gt;GetMeshOptions().ortho_Nx,</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                     input_umesh_ptr-&gt;GetMeshOptions().ortho_Ny,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                     input_umesh_ptr-&gt;GetMeshOptions().ortho_Nz});</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  grid_ptr-&gt;SetGlobalVertexCount(input_umesh_ptr-&gt;GetVertices().size());</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <a class="code hl_function" href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a9b36ed623c93f85fadaf8e09fe589f6b">ComputeAndPrintStats</a>(*grid_ptr);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">return</span> grid_ptr;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>} <span class="comment">// namespace chi_mesh</span></div>
 <div class="ttc" id="a_graph_partitioner_8h_html"><div class="ttname"><a href="../../df/d8e/_graph_partitioner_8h.html">GraphPartitioner.h</a></div></div>
 <div class="ttc" id="a_mesh_generator_8h_html"><div class="ttname"><a href="../../d4/d0d/_mesh_generator_8h.html">MeshGenerator.h</a></div></div>
 <div class="ttc" id="acell_8h_html"><div class="ttname"><a href="../../d0/ddd/cell_8h.html">cell.h</a></div></div>
 <div class="ttc" id="achi__log_8h_html"><div class="ttname"><a href="../../dc/d75/chi__log_8h.html">chi_log.h</a></div></div>
 <div class="ttc" id="achi__log__exceptions_8h_html_a36726be6664d4637124c15f474c18504"><div class="ttname"><a href="../../db/d42/chi__log__exceptions_8h.html#a36726be6664d4637124c15f474c18504">ChiLogicalErrorIf</a></div><div class="ttdeci">#define ChiLogicalErrorIf(condition, message)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d42/chi__log__exceptions_8h_source.html#l00015">chi_log_exceptions.h:15</a></div></div>
 <div class="ttc" id="achi__meshcontinuum_8h_html"><div class="ttname"><a href="../../d0/db3/chi__meshcontinuum_8h.html">chi_meshcontinuum.h</a></div></div>
+<div class="ttc" id="aclass_chi_html_aa828b6df7cb15865c055439973f43884"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aa828b6df7cb15865c055439973f43884">Chi::log</a></div><div class="ttdeci">static chi::ChiLog &amp; log</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00081">chi_runtime.h:81</a></div></div>
 <div class="ttc" id="aclass_chi_html_aedf6bb4f15d835e22e6a347f93e2308c"><div class="ttname"><a href="../../d7/dd7/class_chi.html#aedf6bb4f15d835e22e6a347f93e2308c">Chi::mpi</a></div><div class="ttdeci">static chi::MPI_Info &amp; mpi</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db2/chi__runtime_8h_source.html#l00078">chi_runtime.h:78</a></div></div>
+<div class="ttc" id="aclasschi_1_1_chi_log_html_aebdb78c9c0fddcc0799c4fc570ff1919"><div class="ttname"><a href="../../df/dfa/classchi_1_1_chi_log.html#aebdb78c9c0fddcc0799c4fc570ff1919">chi::ChiLog::Log</a></div><div class="ttdeci">LogStream Log(LOG_LVL level=LOG_0)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1c/chi__log_8cc_source.html#l00035">chi_log.cc:35</a></div></div>
 <div class="ttc" id="aclasschi_1_1_graph_partitioner_html_acef97255261aa5f12d3805541569d35d"><div class="ttname"><a href="../../d1/da7/classchi_1_1_graph_partitioner.html#acef97255261aa5f12d3805541569d35d">chi::GraphPartitioner::Partition</a></div><div class="ttdeci">virtual std::vector&lt; int64_t &gt; Partition(const std::vector&lt; std::vector&lt; uint64_t &gt; &gt; &amp;graph, const std::vector&lt; chi_mesh::Vector3 &gt; &amp;centroids, int number_of_parts)=0</div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_continuum_html_a75f604e303928e5998314aae3942b71c"><div class="ttname"><a href="../../d3/d1c/classchi__mesh_1_1_mesh_continuum.html#a75f604e303928e5998314aae3942b71c">chi_mesh::MeshContinuum::New</a></div><div class="ttdeci">static std::shared_ptr&lt; MeshContinuum &gt; New()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/db3/chi__meshcontinuum_8h_source.html#l00095">chi_meshcontinuum.h:95</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html_a1a16e2f59fbf28fbb59765b76bbc7a88"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a1a16e2f59fbf28fbb59765b76bbc7a88">chi_mesh::MeshGenerator::CellHasLocalScope</a></div><div class="ttdeci">bool CellHasLocalScope(int location_id, const chi_mesh::UnpartitionedMesh::LightWeightCell &amp;lwcell, uint64_t cell_global_id, const std::vector&lt; std::set&lt; uint64_t &gt; &gt; &amp;vertex_subscriptions, const std::vector&lt; int64_t &gt; &amp;cell_partition_ids) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d10/_mesh_generator__02__utils_8cc_source.html#l00035">MeshGenerator_02_utils.cc:35</a></div></div>
-<div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html_a31b4d1933d987f43feeac46c3abaf92f"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a31b4d1933d987f43feeac46c3abaf92f">chi_mesh::MeshGenerator::SetupMesh</a></div><div class="ttdeci">std::shared_ptr&lt; MeshContinuum &gt; SetupMesh(std::unique_ptr&lt; UnpartitionedMesh &gt; input_umesh_ptr, const std::vector&lt; int64_t &gt; &amp;cell_pids)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5e/_mesh_generator__01__setupmesh_8cc_source.html#l00053">MeshGenerator_01_setupmesh.cc:53</a></div></div>
+<div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html_a31b4d1933d987f43feeac46c3abaf92f"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a31b4d1933d987f43feeac46c3abaf92f">chi_mesh::MeshGenerator::SetupMesh</a></div><div class="ttdeci">std::shared_ptr&lt; MeshContinuum &gt; SetupMesh(std::unique_ptr&lt; UnpartitionedMesh &gt; input_umesh_ptr, const std::vector&lt; int64_t &gt; &amp;cell_pids)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5e/_mesh_generator__01__setupmesh_8cc_source.html#l00071">MeshGenerator_01_setupmesh.cc:71</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html_a6ad3702546a92adfa89d1f7eeaa4a29e"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a6ad3702546a92adfa89d1f7eeaa4a29e">chi_mesh::MeshGenerator::partitioner_</a></div><div class="ttdeci">chi::GraphPartitioner * partitioner_</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0d/_mesh_generator_8h_source.html#l00104">MeshGenerator.h:104</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html_a9b36ed623c93f85fadaf8e09fe589f6b"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#a9b36ed623c93f85fadaf8e09fe589f6b">chi_mesh::MeshGenerator::ComputeAndPrintStats</a></div><div class="ttdeci">static void ComputeAndPrintStats(const chi_mesh::MeshContinuum &amp;grid)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/da8/_mesh_generator_8cc_source.html#l00132">MeshGenerator.cc:132</a></div></div>
 <div class="ttc" id="aclasschi__mesh_1_1_mesh_generator_html_ab0feb6dca870ebf9dd55b2a6bb0d96c4"><div class="ttname"><a href="../../de/d1a/classchi__mesh_1_1_mesh_generator.html#ab0feb6dca870ebf9dd55b2a6bb0d96c4">chi_mesh::MeshGenerator::SetGridAttributes</a></div><div class="ttdeci">static void SetGridAttributes(chi_mesh::MeshContinuum &amp;grid, MeshAttributes new_attribs, std::array&lt; size_t, 3 &gt; ortho_cells_per_dimension)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/da8/_mesh_generator_8cc_source.html#l00124">MeshGenerator.cc:124</a></div></div>

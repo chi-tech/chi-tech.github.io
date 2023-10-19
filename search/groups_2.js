@@ -46,5 +46,6 @@ var searchData=
   ['chi_5fphysics_2econstanttimestepper_43',['chi_physics.ConstantTimeStepper',['../d3/dc8/group__chi__physics_____constant_time_stepper.html',1,'']]],
   ['chi_5fphysics_2efield_5foperations_2efieldcopyoperation_44',['chi_physics.field_operations.FieldCopyOperation',['../d1/d21/group__chi__physics____field__operations_____field_copy_operation.html',1,'']]],
   ['chi_5fphysics_2efield_5foperations_2emultifieldoperation_45',['chi_physics.field_operations.MultiFieldOperation',['../dc/df7/group__chi__physics____field__operations_____multi_field_operation.html',1,'']]],
-  ['chi_5fphysics_2efieldfunctiongridbased_46',['chi_physics.FieldFunctionGridBased',['../df/da9/group__chi__physics_____field_function_grid_based.html',1,'']]]
+  ['chi_5fphysics_2efield_5foperations_2epartitionerpredicate_46',['chi_physics.field_operations.PartitionerPredicate',['../d1/dea/group__chi__physics____field__operations_____partitioner_predicate.html',1,'']]],
+  ['chi_5fphysics_2efieldfunctiongridbased_47',['chi_physics.FieldFunctionGridBased',['../df/da9/group__chi__physics_____field_function_grid_based.html',1,'']]]
 ];

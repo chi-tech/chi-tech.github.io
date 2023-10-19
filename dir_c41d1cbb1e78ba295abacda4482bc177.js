@@ -42,6 +42,7 @@ var dir_c41d1cbb1e78ba295abacda4482bc177 =
     [ "chi_physics__ConstantTimeStepper.h", "d9/dc6/chi__physics_____constant_time_stepper_8h.html", null ],
     [ "chi_physics__field_operations__FieldCopyOperation.h", "d3/de3/chi__physics____field__operations_____field_copy_operation_8h.html", null ],
     [ "chi_physics__field_operations__MultiFieldOperation.h", "d7/d07/chi__physics____field__operations_____multi_field_operation_8h.html", null ],
+    [ "chi_physics__field_operations__PartitionerPredicate.h", "d7/d30/chi__physics____field__operations_____partitioner_predicate_8h.html", null ],
     [ "chi_physics__FieldFunctionGridBased.h", "db/d04/chi__physics_____field_function_grid_based_8h.html", null ],
     [ "lbs__BoundaryOptionsBlock.h", "d7/de1/lbs_____boundary_options_block_8h.html", null ],
     [ "lbs__DiffusionDFEMSolver.h", "d6/d58/lbs_____diffusion_d_f_e_m_solver_8h.html", null ],
