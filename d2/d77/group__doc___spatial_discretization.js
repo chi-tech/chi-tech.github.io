@@ -6,6 +6,45 @@ var group__doc___spatial_discretization =
       [ "GetQuadratureOrder", "d6/d89/classchi__math_1_1spatial__discretization_1_1_finite_element_base.html#a26ddf0206ec9e9627d2838f8f29d46dc", null ],
       [ "q_order_", "d6/d89/classchi__math_1_1spatial__discretization_1_1_finite_element_base.html#aa7387bbafe9700b75517e0e264309373", null ]
     ] ],
+    [ "chi_math::spatial_discretization::LagrangeBase", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html", [
+      [ "LagrangeBase", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html#a6d9dcb872aef0160632ca62bfa07f903", null ],
+      [ "CreateCellMappings", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html#acf4730003ecd2de7d313fd1cd25043bc", null ],
+      [ "hex_quad_order_arbitrary_", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html#a17ecd729e74d66a9d8d1475beeeba3b0", null ],
+      [ "line_quad_order_arbitrary_", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html#a22d37430eead1c5370d6a57463d21d2a", null ],
+      [ "point_quadrature_", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html#aadfacb8e3fa84fe7369f8b98cceeaf8b", null ],
+      [ "quad_quad_order_arbitrary_", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html#a12ba26d35283c2cd00b615c3aa222133", null ],
+      [ "tet_quad_order_arbitrary_", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html#a6723f9251d920ab12afd7b2a2ff8ea54", null ],
+      [ "tri_quad_order_arbitrary_", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html#ae52fd981bc7fea5f6cb263f9c92c4f52", null ],
+      [ "wedge_quad_order_arbitrary_", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html#ac41c1724fdd5c7b7b3153d810f32648f", null ]
+    ] ],
+    [ "chi_math::spatial_discretization::LagrangeContinuous", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html", [
+      [ "LagrangeContinuous", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#a754e021fbbe5284efe52361a577c8a4f", null ],
+      [ "BuildSparsityPattern", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#a98dd10367f638a34797c2c001d6fcc93", null ],
+      [ "GetGhostDOFIndices", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#a53204f0e63235bef270aa4a86506680b", null ],
+      [ "GetNumGhostDOFs", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#a2497365b8dbfa90f03aed1b2c8d6fc04", null ],
+      [ "MapDOF", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#af83c1cc81318065935eb36b001172011", null ],
+      [ "MapDOF", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#ad4e0512d1984e8f95d40d10741430a8f", null ],
+      [ "MapDOFLocal", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#a38806891914336526b62443dd5ddb394", null ],
+      [ "MapDOFLocal", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#a9f0722c80f722f4254556dd50827f0a2", null ],
+      [ "New", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#a251cb7275c6f5bb9df0f64c030f78bcf", null ],
+      [ "OrderNodes", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#a8ee2f104e7113d59636af3b754751b6f", null ],
+      [ "ghost_node_mapping_", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#a3593545a539b3725ab7155516d15395b", null ],
+      [ "node_mapping_", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html#a0d47a87e841d85739c8b160610ba19a1", null ]
+    ] ],
+    [ "chi_math::spatial_discretization::LagrangeDiscontinuous", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html", [
+      [ "LagrangeDiscontinuous", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a19d5ae4605f4daf35a751fbb1dccec21", null ],
+      [ "BuildSparsityPattern", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a5ec02f8a0f25c1bb28531d69af40bc34", null ],
+      [ "GetGhostDOFIndices", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#af11389844a02b2e15b74d78668c0a80d", null ],
+      [ "GetNumGhostDOFs", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a69f998442b52e3da5f605917dc479a23", null ],
+      [ "MapDOF", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a154886256163c469e4b2acb1e199d361", null ],
+      [ "MapDOF", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a6547b0184462378d9075486bf0a8c29d", null ],
+      [ "MapDOFLocal", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a8aa30040f200203f323210b5cf6ed795", null ],
+      [ "MapDOFLocal", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a2c43b0acf8aea257639b3a18b5f87c1a", null ],
+      [ "New", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a86a30d46c68470af0697ff2a4345357a", null ],
+      [ "OrderNodes", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a0b20524fc4dfbb257bb4b36f831735f2", null ],
+      [ "cell_local_block_address_", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a20e8a4cc691ce2cbbbdadb63a38efcca", null ],
+      [ "neighbor_cell_block_address_", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html#a8207a96532d3604e28474541cfe19b2c", null ]
+    ] ],
     [ "chi_math::spatial_discretization::PieceWiseLinearBase", "da/d8c/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_base.html", [
       [ "PieceWiseLinearBase", "da/d8c/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_base.html#ac9f57f5c1655a38593b77994ed384114", null ],
       [ "CreateCellMappings", "da/d8c/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_base.html#ad5f4c88ed5b5fa81faccf55a0ef58d0b", null ],

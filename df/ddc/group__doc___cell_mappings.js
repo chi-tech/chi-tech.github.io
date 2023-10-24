@@ -1,5 +1,33 @@
 var group__doc___cell_mappings =
 [
+    [ "chi_math::CellMapping", "d8/d08/classchi__math_1_1_cell_mapping.html", [
+      [ "VandAFunction", "d8/d08/classchi__math_1_1_cell_mapping.html#a70fc061067e4841ce10e697e75858aa6", null ],
+      [ "~CellMapping", "d8/d08/classchi__math_1_1_cell_mapping.html#a132c92e0abce7e21a8fd71529141310a", null ],
+      [ "CellMapping", "d8/d08/classchi__math_1_1_cell_mapping.html#a2fffb8ae9062bbc7816d40942797f8da", null ],
+      [ "CellVolume", "d8/d08/classchi__math_1_1_cell_mapping.html#a1c4b2020dcc708edfde62a12fc8808bc", null ],
+      [ "ComputeCellVolumeAndAreas", "d8/d08/classchi__math_1_1_cell_mapping.html#a53e36b221bdaa9bc1fd04c2e50b3eaf0", null ],
+      [ "FaceArea", "d8/d08/classchi__math_1_1_cell_mapping.html#a7b30d82025b4cb1e18d5e39c91c9f3ad", null ],
+      [ "GetFaceNodeMappings", "d8/d08/classchi__math_1_1_cell_mapping.html#a243ae6d10f4fbe122342af65b60b48cb", null ],
+      [ "GetNodeLocations", "d8/d08/classchi__math_1_1_cell_mapping.html#ae2c99a81ed16a5d13a8bcb61a6975ef1", null ],
+      [ "GradShapeValue", "d8/d08/classchi__math_1_1_cell_mapping.html#ac89b7c494efec654c6f29900774fc4e4", null ],
+      [ "GradShapeValues", "d8/d08/classchi__math_1_1_cell_mapping.html#a1ee8f94676f8408e7655cb49402be708", null ],
+      [ "MakeSurfaceQuadraturePointData", "d8/d08/classchi__math_1_1_cell_mapping.html#ab7a3dde5c78699fa619470a429cae2b4", null ],
+      [ "MakeVolumetricQuadraturePointData", "d8/d08/classchi__math_1_1_cell_mapping.html#a5941c9988bb34a5da785856fd61c1144", null ],
+      [ "MapFaceNode", "d8/d08/classchi__math_1_1_cell_mapping.html#a280e17ab3e62bea7caf9b5219ad4c60c", null ],
+      [ "NumFaceNodes", "d8/d08/classchi__math_1_1_cell_mapping.html#ae07606936efe156b752e139a43c14260", null ],
+      [ "NumNodes", "d8/d08/classchi__math_1_1_cell_mapping.html#a6809460aa9d92037fbf0bf18b76c9946", null ],
+      [ "ReferenceCell", "d8/d08/classchi__math_1_1_cell_mapping.html#ae2abc78bcce03aa06b96b02416959436", null ],
+      [ "ReferenceGrid", "d8/d08/classchi__math_1_1_cell_mapping.html#a2a136af05581f7582473fefc1620425e", null ],
+      [ "ShapeValue", "d8/d08/classchi__math_1_1_cell_mapping.html#a7ff3323d6a12556d95dbaf6a48cac9b5", null ],
+      [ "ShapeValues", "d8/d08/classchi__math_1_1_cell_mapping.html#a50116a099ed9021229818057a1d6e6ce", null ],
+      [ "areas_", "d8/d08/classchi__math_1_1_cell_mapping.html#ade1a72dc964c9315c8c0958ed9a82391", null ],
+      [ "cell_", "d8/d08/classchi__math_1_1_cell_mapping.html#afe826aad18eb77ccb726f4f5a679a89a", null ],
+      [ "face_node_mappings_", "d8/d08/classchi__math_1_1_cell_mapping.html#a47ff5ece9a2cbd654eee1994140f1f5d", null ],
+      [ "node_locations_", "d8/d08/classchi__math_1_1_cell_mapping.html#a78cca18f5d98971d10e4bebbf2dd0b0b", null ],
+      [ "num_nodes_", "d8/d08/classchi__math_1_1_cell_mapping.html#aa196c7b4859f4162210952083e2de3b1", null ],
+      [ "ref_grid_", "d8/d08/classchi__math_1_1_cell_mapping.html#a9d0dfba43b989283a49238415e45bbad", null ],
+      [ "volume_", "d8/d08/classchi__math_1_1_cell_mapping.html#a89041f0966d416eadd1546cdf7743916", null ]
+    ] ],
     [ "chi_math::cell_mapping::FiniteVolumeMapping", "d9/dbc/classchi__math_1_1cell__mapping_1_1_finite_volume_mapping.html", [
       [ "FiniteVolumeMapping", "d9/dbc/classchi__math_1_1cell__mapping_1_1_finite_volume_mapping.html#a951af5de922d6bc1996150131ec994c3", null ],
       [ "GradShapeValue", "d9/dbc/classchi__math_1_1cell__mapping_1_1_finite_volume_mapping.html#a6bf849e00d4cf705addf974444db334a", null ],
@@ -8,6 +36,80 @@ var group__doc___cell_mappings =
       [ "MakeVolumetricQuadraturePointData", "d9/dbc/classchi__math_1_1cell__mapping_1_1_finite_volume_mapping.html#a354032d575a913053cfc7897c6b15d5e", null ],
       [ "ShapeValue", "d9/dbc/classchi__math_1_1cell__mapping_1_1_finite_volume_mapping.html#a311b018252e2fec2f84936b27023f904", null ],
       [ "ShapeValues", "d9/dbc/classchi__math_1_1cell__mapping_1_1_finite_volume_mapping.html#a957ed8fcdf4fbce2f8d0dabbd63ac656", null ]
+    ] ],
+    [ "chi_math::cell_mapping::LagrangeHexMapping", "d6/d23/classchi__math_1_1cell__mapping_1_1_lagrange_hex_mapping.html", [
+      [ "LagrangeHexMapping", "d6/d23/classchi__math_1_1cell__mapping_1_1_lagrange_hex_mapping.html#ae1e4965018b52e83aac8f35d90da6068", null ],
+      [ "FaceToElementQPointConversion", "d6/d23/classchi__math_1_1cell__mapping_1_1_lagrange_hex_mapping.html#aa7e7b2b9c246638db0facab4c5f95447", null ],
+      [ "RefFaceJacobianDeterminantAndNormal", "d6/d23/classchi__math_1_1cell__mapping_1_1_lagrange_hex_mapping.html#a4aae05f3e6cb3830a6f3ec01b44c08de", null ],
+      [ "RefGradShape", "d6/d23/classchi__math_1_1cell__mapping_1_1_lagrange_hex_mapping.html#ad1a83a5523e319505be810abe476d8cc", null ],
+      [ "RefJacobian", "d6/d23/classchi__math_1_1cell__mapping_1_1_lagrange_hex_mapping.html#a7c8a2a82fe4ac0b3b66ce8226e1f6010", null ],
+      [ "RefShape", "d6/d23/classchi__math_1_1cell__mapping_1_1_lagrange_hex_mapping.html#a25a7d448cf03a2d5daa538bb6c9510e7", null ]
+    ] ],
+    [ "chi_math::cell_mapping::LagrangeQuadMapping", "d9/df6/classchi__math_1_1cell__mapping_1_1_lagrange_quad_mapping.html", [
+      [ "LagrangeQuadMapping", "d9/df6/classchi__math_1_1cell__mapping_1_1_lagrange_quad_mapping.html#a486e5b2145953869e22d543fa26587a3", null ],
+      [ "FaceToElementQPointConversion", "d9/df6/classchi__math_1_1cell__mapping_1_1_lagrange_quad_mapping.html#a9bd842f62bf19aeb123639004551862b", null ],
+      [ "RefFaceJacobianDeterminantAndNormal", "d9/df6/classchi__math_1_1cell__mapping_1_1_lagrange_quad_mapping.html#ae55a373bbf483f9a515965b59bef133a", null ],
+      [ "RefGradShape", "d9/df6/classchi__math_1_1cell__mapping_1_1_lagrange_quad_mapping.html#ad9ba8959a8315b0ea24c8bf28f3cff03", null ],
+      [ "RefJacobian", "d9/df6/classchi__math_1_1cell__mapping_1_1_lagrange_quad_mapping.html#a3fbc7ee6e5d698d54cd2fb9efa9025f2", null ],
+      [ "RefShape", "d9/df6/classchi__math_1_1cell__mapping_1_1_lagrange_quad_mapping.html#afb9937d529b481003f384717307aa52d", null ]
+    ] ],
+    [ "chi_math::cell_mapping::LagrangeSlabMapping", "df/d7c/classchi__math_1_1cell__mapping_1_1_lagrange_slab_mapping.html", [
+      [ "LagrangeSlabMapping", "df/d7c/classchi__math_1_1cell__mapping_1_1_lagrange_slab_mapping.html#a7d44b21616ce808775d8c46afffcc39d", null ],
+      [ "FaceToElementQPointConversion", "df/d7c/classchi__math_1_1cell__mapping_1_1_lagrange_slab_mapping.html#a6070db530cfe09a97c3489f40e58c24c", null ],
+      [ "RefFaceJacobianDeterminantAndNormal", "df/d7c/classchi__math_1_1cell__mapping_1_1_lagrange_slab_mapping.html#a903ac20e31e59366ca5c09e98a5b7fcc", null ],
+      [ "RefGradShape", "df/d7c/classchi__math_1_1cell__mapping_1_1_lagrange_slab_mapping.html#a391489400610216ff8c6ab564289a8b5", null ],
+      [ "RefJacobian", "df/d7c/classchi__math_1_1cell__mapping_1_1_lagrange_slab_mapping.html#a83ef57ec16e565ae7bd28aeeee583277", null ],
+      [ "RefShape", "df/d7c/classchi__math_1_1cell__mapping_1_1_lagrange_slab_mapping.html#a28041aae64b90d7a80d760a950cf2893", null ]
+    ] ],
+    [ "chi_math::cell_mapping::LagrangeTetMapping", "d7/db9/classchi__math_1_1cell__mapping_1_1_lagrange_tet_mapping.html", [
+      [ "LagrangeTetMapping", "d7/db9/classchi__math_1_1cell__mapping_1_1_lagrange_tet_mapping.html#a2d6678f3adfcc0ebb71c4300cf5f7b6c", null ],
+      [ "FaceToElementQPointConversion", "d7/db9/classchi__math_1_1cell__mapping_1_1_lagrange_tet_mapping.html#a0460d9603412ab0798b7ee16151d60b6", null ],
+      [ "RefFaceJacobianDeterminantAndNormal", "d7/db9/classchi__math_1_1cell__mapping_1_1_lagrange_tet_mapping.html#a130efd1129bb976d33a97b5d51211038", null ],
+      [ "RefGradShape", "d7/db9/classchi__math_1_1cell__mapping_1_1_lagrange_tet_mapping.html#a44c2598029603fd1cd65914b4aa86a67", null ],
+      [ "RefJacobian", "d7/db9/classchi__math_1_1cell__mapping_1_1_lagrange_tet_mapping.html#ab37ce7c499ee0a1e68227e0478f913c0", null ],
+      [ "RefShape", "d7/db9/classchi__math_1_1cell__mapping_1_1_lagrange_tet_mapping.html#ada0ad294f7a7fe2fb6a1f08cab8f5d9b", null ]
+    ] ],
+    [ "chi_math::cell_mapping::LagrangeTriangleMapping", "d4/d8d/classchi__math_1_1cell__mapping_1_1_lagrange_triangle_mapping.html", [
+      [ "LagrangeTriangleMapping", "d4/d8d/classchi__math_1_1cell__mapping_1_1_lagrange_triangle_mapping.html#aacbabfa22594ec65d29775b669ac8679", null ],
+      [ "FaceToElementQPointConversion", "d4/d8d/classchi__math_1_1cell__mapping_1_1_lagrange_triangle_mapping.html#a24f1059c164b3ca892f60c93a09acc85", null ],
+      [ "RefFaceJacobianDeterminantAndNormal", "d4/d8d/classchi__math_1_1cell__mapping_1_1_lagrange_triangle_mapping.html#af767ddbe5a8fb1ec3c12e6ff84ecc1f4", null ],
+      [ "RefGradShape", "d4/d8d/classchi__math_1_1cell__mapping_1_1_lagrange_triangle_mapping.html#a14d9be538917fb6d6990b0bc5089fe6a", null ],
+      [ "RefJacobian", "d4/d8d/classchi__math_1_1cell__mapping_1_1_lagrange_triangle_mapping.html#a3f1f4d474a487c8bebc2f154d4a3e56c", null ],
+      [ "RefShape", "d4/d8d/classchi__math_1_1cell__mapping_1_1_lagrange_triangle_mapping.html#a0bdbac71a4660e86fc7724588ccb85fa", null ]
+    ] ],
+    [ "chi_math::cell_mapping::LagrangeWedgeMapping", "d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html", [
+      [ "LagrangeWedgeMapping", "d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html#af731bbc2ac778cc4d40458dfa4504aab", null ],
+      [ "FaceToElementQPointConversion", "d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html#ab0b34678ea2f9fbe5eb5840997ff71ba", null ],
+      [ "GetSurfaceQuadrature", "d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html#a4f29eb7ab7f9de45059579f92de93751", null ],
+      [ "RefFaceJacobianDeterminantAndNormal", "d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html#aba841a24e757e3cf5218205045532285", null ],
+      [ "RefGradShape", "d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html#a6d994d52d37ca2171c25a7e3e0de6159", null ],
+      [ "RefJacobian", "d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html#a03241597ee0c08ca29425c9b53719693", null ],
+      [ "RefShape", "d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html#abd0c7163b9872d524444386984b0faeb", null ],
+      [ "aux_surface_quadrature_", "d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html#a6fcc65bd4882b8b95f821a49888ee0d0", null ]
+    ] ],
+    [ "chi_math::cell_mapping::LagrangeBaseMapping", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html", [
+      [ "MatDbl", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#acaa9bb83ebd2bb00f27b7dad38442210", null ],
+      [ "Vec3", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#ab6c1f13bd739540683e0d64e718888b2", null ],
+      [ "VecDbl", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a2ffe6cb7bd36f97ed692137f8466a058", null ],
+      [ "LagrangeBaseMapping", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a5aac386465579f470143374cd2ca5ec7", null ],
+      [ "FaceToElementQPointConversion", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#ad3e48117eec321d3a8cc46c1951efa75", null ],
+      [ "GetSurfaceQuadrature", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a6b73378299816aa1ddd10408f856b0bf", null ],
+      [ "GetVertexLocations", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a162bedeb19ca8d476b520746881b0013", null ],
+      [ "GradShapeValue", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#abc2b4b2c0213393c81a7375213f19816", null ],
+      [ "GradShapeValues", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a5420123fc3ecd74ecdcd0406e2ac98e5", null ],
+      [ "MakeFaceNodeMapping", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a89616ef8bf179c7d51dfc7686a03898c", null ],
+      [ "MakeSurfaceQuadraturePointData", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a68acc79a7a188db4c3c06820891ace77", null ],
+      [ "MakeVolumetricQuadraturePointData", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a95ed3c5e36c247c4c2f81bab027cd115", null ],
+      [ "MapWorldXYZToNaturalXYZ", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#ae1d404a3f17b64ce7f38fca18af55795", null ],
+      [ "RefFaceJacobianDeterminantAndNormal", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a7967e491d3c79db5a859d8857ff35b20", null ],
+      [ "RefGradShape", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a04b334cf204b2c3288f49caad4fbec01", null ],
+      [ "RefJacobian", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a9bdd274a0ffe242c58fb198b1dab478c", null ],
+      [ "RefShape", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a1a4f821060a828fdf2877aa10f739ddb", null ],
+      [ "ShapeValue", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#ab4c9ffe5b2267780f7069efda1d89984", null ],
+      [ "ShapeValues", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#aae3a3b28c70e79029969d096bb5c419b", null ],
+      [ "WorldXYZToNaturalMappingHelper", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a1a71428c2be0baca3ff5f1b454944067", null ],
+      [ "surface_quadrature_", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#abe4e109838b6548dd41269cb99c03153", null ],
+      [ "volume_quadrature_", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#a4faf3bd64eb717a7517e91ef02149752", null ]
     ] ],
     [ "chi_math::cell_mapping::PieceWiseLinearPolygonMapping", "da/d0b/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_polygon_mapping.html", [
       [ "FEside_data2d", "d0/d29/structchi__math_1_1cell__mapping_1_1_piece_wise_linear_polygon_mapping_1_1_f_eside__data2d.html", [

@@ -59,6 +59,14 @@ var hierarchy =
     [ "lbs::CellLBSView", "d4/d32/classlbs_1_1_cell_l_b_s_view.html", null ],
     [ "chi_math::CellMapping", "d8/d08/classchi__math_1_1_cell_mapping.html", [
       [ "chi_math::cell_mapping::FiniteVolumeMapping", "d9/dbc/classchi__math_1_1cell__mapping_1_1_finite_volume_mapping.html", null ],
+      [ "chi_math::cell_mapping::LagrangeBaseMapping", "d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html", [
+        [ "chi_math::cell_mapping::LagrangeHexMapping", "d6/d23/classchi__math_1_1cell__mapping_1_1_lagrange_hex_mapping.html", null ],
+        [ "chi_math::cell_mapping::LagrangeQuadMapping", "d9/df6/classchi__math_1_1cell__mapping_1_1_lagrange_quad_mapping.html", null ],
+        [ "chi_math::cell_mapping::LagrangeSlabMapping", "df/d7c/classchi__math_1_1cell__mapping_1_1_lagrange_slab_mapping.html", null ],
+        [ "chi_math::cell_mapping::LagrangeTetMapping", "d7/db9/classchi__math_1_1cell__mapping_1_1_lagrange_tet_mapping.html", null ],
+        [ "chi_math::cell_mapping::LagrangeTriangleMapping", "d4/d8d/classchi__math_1_1cell__mapping_1_1_lagrange_triangle_mapping.html", null ],
+        [ "chi_math::cell_mapping::LagrangeWedgeMapping", "d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html", null ]
+      ] ],
       [ "chi_math::cell_mapping::PieceWiseLinearBaseMapping", "dc/dfd/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_base_mapping.html", [
         [ "chi_math::cell_mapping::PieceWiseLinearPolygonMapping", "da/d0b/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_polygon_mapping.html", null ],
         [ "chi_math::cell_mapping::PieceWiseLinearPolyhedronMapping", "df/dc1/classchi__math_1_1cell__mapping_1_1_piece_wise_linear_polyhedron_mapping.html", null ],
@@ -289,7 +297,9 @@ var hierarchy =
     [ "chi::MPI_Info", "d1/d0b/classchi_1_1_m_p_i___info.html", null ],
     [ "lbs::acceleration::Multigroup_D_and_sigR", "d6/d81/structlbs_1_1acceleration_1_1_multigroup___d__and__sig_r.html", null ],
     [ "chi_data_types::NDArray< T >", "d2/d5d/classchi__data__types_1_1_n_d_array.html", null ],
-    [ "chi_math::NonLinearFunction", "d6/dc4/classchi__math_1_1_non_linear_function.html", null ],
+    [ "chi_math::NonLinearFunction", "d6/dc4/classchi__math_1_1_non_linear_function.html", [
+      [ "chi_math::cell_mapping::WorldXYZToNaturalMappingHelper", "d5/d7a/classchi__math_1_1cell__mapping_1_1_world_x_y_z_to_natural_mapping_helper.html", null ]
+    ] ],
     [ "chi_math::NonLinearSolver< MatType, VecType, SolverType >", "dd/deb/classchi__math_1_1_non_linear_solver.html", [
       [ "lbs::NLKEigenvalueAGSSolver< MatType, VecType, SolverType >", "d0/d0b/classlbs_1_1_n_l_k_eigenvalue_a_g_s_solver.html", null ]
     ] ],
@@ -347,6 +357,10 @@ var hierarchy =
     [ "chi_math::SparseMatrix", "de/d51/classchi__math_1_1_sparse_matrix.html", null ],
     [ "chi_math::SpatialDiscretization", "dd/d1d/classchi__math_1_1_spatial_discretization.html", [
       [ "chi_math::spatial_discretization::FiniteElementBase", "d6/d89/classchi__math_1_1spatial__discretization_1_1_finite_element_base.html", [
+        [ "chi_math::spatial_discretization::LagrangeBase", "db/db0/classchi__math_1_1spatial__discretization_1_1_lagrange_base.html", [
+          [ "chi_math::spatial_discretization::LagrangeContinuous", "dc/d50/classchi__math_1_1spatial__discretization_1_1_lagrange_continuous.html", null ],
+          [ "chi_math::spatial_discretization::LagrangeDiscontinuous", "d5/dd9/classchi__math_1_1spatial__discretization_1_1_lagrange_discontinuous.html", null ]
+        ] ],
         [ "chi_math::spatial_discretization::PieceWiseLinearBase", "da/d8c/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_base.html", [
           [ "chi_math::spatial_discretization::PieceWiseLinearContinuous", "df/d70/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_continuous.html", null ],
           [ "chi_math::spatial_discretization::PieceWiseLinearDiscontinuous", "d0/d0a/classchi__math_1_1spatial__discretization_1_1_piece_wise_linear_discontinuous.html", null ]

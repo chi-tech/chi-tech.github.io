@@ -1,5 +1,6 @@
 var dir_59264390ea453e8e308f113319f062a2 =
 [
+    [ "Lagrange", "dir_b80850c9d1fa40d9315233e1c108e43e.html", "dir_b80850c9d1fa40d9315233e1c108e43e" ],
     [ "PiecewiseLinear", "dir_64a84ee5e32fd88bcbdbeb1c793e0aaa.html", "dir_64a84ee5e32fd88bcbdbeb1c793e0aaa" ],
     [ "FiniteElementBase.cc", "d3/d69/_finite_element_base_8cc.html", null ],
     [ "FiniteElementBase.h", "d3/da3/_finite_element_base_8h.html", null ],

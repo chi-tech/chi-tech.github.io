@@ -1,7 +1,7 @@
 var searchData=
 [
   ['mat_0',['Mat',['../dd/dc1/petsc__forward__declarations_8h.html#a28b1c75999a6b1553eb6f83787eb8695',1,'petsc_forward_declarations.h']]],
-  ['matdbl_1',['MatDbl',['../dd/dd0/classchi__diffusion_1_1_unit_integral_container.html#aaeab005e5ce8adf8b8afaf69af65c0cd',1,'chi_diffusion::UnitIntegralContainer::MatDbl()'],['../d9/d42/namespacelbs.html#a4a3e22efb57341f6d4dbc8a784bfe0fc',1,'lbs::MatDbl()'],['../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b',1,'MatDbl():&#160;chi_math.h']]],
+  ['matdbl_1',['MatDbl',['../dd/dd0/classchi__diffusion_1_1_unit_integral_container.html#aaeab005e5ce8adf8b8afaf69af65c0cd',1,'chi_diffusion::UnitIntegralContainer::MatDbl()'],['../d9/d42/namespacelbs.html#a4a3e22efb57341f6d4dbc8a784bfe0fc',1,'lbs::MatDbl()'],['../d2/d08/chi__math_8h.html#a80801c4491f8f4ff54ed012d63d0d48b',1,'MatDbl():&#160;chi_math.h'],['../d8/d11/classchi__math_1_1cell__mapping_1_1_lagrange_base_mapping.html#acaa9bb83ebd2bb00f27b7dad38442210',1,'chi_math::cell_mapping::LagrangeBaseMapping::MatDbl()']]],
   ['matdim_2',['MatDim',['../df/d4b/classchi__math_1_1_dynamic_matrix.html#acf4cb31837382c570c8acb8698ec1f78',1,'chi_math::DynamicMatrix']]],
   ['materialptr_3',['MaterialPtr',['../d6/d5f/namespacechi__physics.html#ab6460275cc07ff17d5c0ccfab1c08a60',1,'chi_physics']]],
   ['matid2xsmap_4',['MatID2XSMap',['../d2/d51/classlbs_1_1acceleration_1_1_diffusion_solver.html#ad4b5572c0e4536a292c448736942509a',1,'lbs::acceleration::DiffusionSolver']]],

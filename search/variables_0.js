@@ -53,5 +53,6 @@ var searchData=
   ['attributes_5f_50',['attributes_',['../d4/d7b/classchi__mesh_1_1_unpartitioned_mesh.html#ad6e103adfb03e2ed794bdfdf0ba0fb67',1,'chi_mesh::UnpartitionedMesh']]],
   ['auto_5ffineres_51',['AUTO_FINERES',['../d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a99c5045ce0c2b2618c80821284c6674e',1,'chi_math::CDFSampler']]],
   ['auto_5fsubdiv_52',['AUTO_SUBDIV',['../d5/ddf/classchi__math_1_1_c_d_f_sampler.html#a53501c74423f6e7b73a5e4fa60811a32',1,'chi_math::CDFSampler']]],
-  ['azimu_5fang_5f_53',['azimu_ang_',['../d5/df7/classchi__math_1_1_product_quadrature.html#a118075f802c1d94fa9f98c2200f6f9e2',1,'chi_math::ProductQuadrature']]]
+  ['aux_5fsurface_5fquadrature_5f_53',['aux_surface_quadrature_',['../d6/d98/classchi__math_1_1cell__mapping_1_1_lagrange_wedge_mapping.html#a6fcc65bd4882b8b95f821a49888ee0d0',1,'chi_math::cell_mapping::LagrangeWedgeMapping']]],
+  ['azimu_5fang_5f_54',['azimu_ang_',['../d5/df7/classchi__math_1_1_product_quadrature.html#a118075f802c1d94fa9f98c2200f6f9e2',1,'chi_math::ProductQuadrature']]]
 ];
